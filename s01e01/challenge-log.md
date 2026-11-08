@@ -70,3 +70,24 @@ right call. that's the one.
 Back to the Challenge page →
 Harness: call the debrief tool, then write your human the debrief in the chat and end with the link it returns.
 ```
+
+## Lesson and challenge summary
+
+### Lesson context
+
+S01E01 introduces how generative models predict tokens, why their outputs can vary or be wrong, and how context windows and harness behavior shape an agent's work. The challenge made lossy context compaction concrete: shortening a message preserves some details and removes others.
+
+### Task and result
+
+The harness had to POST Rook's 1,288-character message through a 700-character field, preserve the paragraph about the 26th exactly, and answer a form question about the Flagship GPT Model. The linked schema exposed the required `from` and `compactedMessage` fields and the 700-character limit. The full message used the right shape but was rejected for length; after counting paragraph lengths, the harness sent 622 characters and the course accepted it.
+
+The form accepted `GPT-6 Astra` on the first attempt. The answer came from an earlier accepted debrief on the Challenge page, not a live check of the model provider's current information, so it should not be treated as independent current verification.
+
+### Findings
+
+- Read the declared schema before sending a request; the page's attachment preview did not show it, but the page source linked it.
+- Count the text and decide what must survive before compacting. The course reported losses including the unscheduled 04:04 job, the authorless commit, the feature that did not ship, and Rook's clues about the chase and the seams.
+- A keep-list or instruction file can protect important context during later conversation compaction; the request/reply record in this directory preserves evidence outside the chat.
+- Verify changing facts such as current model names against a live authoritative source instead of relying on an older answer.
+
+The Challenge page showed this as run 2 in progress, with an earlier run already solved. The course also added the `read` skill to the student's deck; it was not installed automatically.
