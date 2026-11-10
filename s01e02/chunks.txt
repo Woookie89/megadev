@@ -1,0 +1,90 @@
+   0.00-   1.52 | Summary for last night.
+   2.03-   3.85 | All times are UTC.
+   5.33-   5.86 | Service
+   6.22-   7.45 | Calendar Invites
+   8.86-  11.09 | This summary covers the nightly batch.
+  11.47-  12.58 | For all changes.
+  13.88-  16.14 | Changes shipped before the batch 1.
+  17.49-  19.12 | Other records for this night.
+  19.70-  20.39 | Not received.
+  21.93-  22.35 | Mode.
+  22.85-  23.83 | Read only.
+  24.98-  26.60 | Dependency updates none.
+  28.03-  28.98 | Nightly Batch
+  29.42-  31.10 | Approved at 1.40.
+  32.48-  33.24 | Approvals
+  33.64-  34.16 | Complete.
+  34.72-  35.72 | Pending approvals.
+  36.11-  36.35 | None.
+  37.83-  39.31 | Notes for the next night.
+  39.83-  40.13 | None.
+  41.57-  42.53 | Knightly Batch
+  42.95-  44.25 | Started at 150.
+  45.53-  46.26 | Signatures
+  46.75-  48.11 | All changes signed.
+  49.55-  50.35 | Retries
+  50.77-  51.54 | None needed.
+  52.33-  52.96 | Warnings
+  53.34-  54.03 | None logged.
+  55.52-  57.72 | Owner notes, none attached.
+  59.12-  60.04 | Config Drift
+  60.54-  61.33 | Not detected.
+  62.77-  65.21 | Invites moved by shipped changes.
+  65.95-  68.36 | One thousand eight hundred and seventy.
+  69.84-  70.50 | Storage
+  70.90-  71.74 | Within limits.
+  72.90-  73.45 | Coverage
+  73.97-  74.83 | Unchanged.
+  76.20-  77.46 | Changes held back.
+  77.97-  78.25 | None.
+  79.68-  80.63 | Nightly Batch
+  81.09-  82.78 | Ended at 2.38.
+  84.20-  85.95 | Sync to Partner Calendars
+  86.38-  86.76 | Complete.
+  88.33-  89.17 | Health Checks
+  89.53-  91.19 | Passing on every target.
+  92.33-  94.50 | Secret scan, nothing found.
+  95.89-  96.75 | Error budget.
+  97.26-  98.02 | Not touched.
+  99.38- 101.08 | First report from a user.
+ 101.52- 103.15 | Received at 3.19.
+ 104.65- 105.81 | Cue After Batch
+ 106.35- 106.73 | Empty.
+ 107.95- 108.83 | Next batch.
+ 109.27- 110.15 | Tomorrow night.
+ 110.51- 111.52 | At the usual time.
+ 113.04- 113.95 | End of summary
+----
+   0.00-   1.48 | Summary for last night.
+   2.11-   3.43 | All times are local.
+   3.92-   5.28 | Plus, two hours.
+   6.54-   7.08 | Service
+   8.08-   9.19 | Calendar Invites
+  10.54-  13.07 | This summary covers the nightly batch.
+  13.56-  14.70 | For all regions.
+  16.05-  16.94 | Knightly Batch
+  17.50-  19.91 | Scheduled for 3.45.
+  21.42-  22.65 | Cue before batch.
+  23.66-  24.25 | Normal.
+  25.49-  26.48 | Workers ready.
+  27.92-  28.41 | all
+  29.74-  30.65 | Nightly batch
+  31.17-  32.84 | Started at 350.
+  34.18-  35.29 | Regions in Scope
+  36.30-  36.75 | All.
+  38.10-  39.26 | Time zone data.
+  39.71-  40.17 | Loaded.
+  41.64-  42.49 | Calendar Sync
+  43.29-  44.68 | Running, as planned.
+  46.09-  47.14 | Invites moved.
+  47.66-  50.03 | Two thousand, one hundred and forty.
+  51.41-  52.43 | Invites failed.
+  52.87-  53.91 | None reported.
+  55.38-  55.89 | Tests
+  56.36-  56.91 | Past
+  57.44-  58.53 | Skipped tests.
+  59.01-  59.50 | None.
+  60.86-  61.87 | Mail delivery.
+  62.75-  63.31 | Normal.
+  64.68-  65.62 | Knightly Batch
+  66.16-  68.20 | Ended at 438.
