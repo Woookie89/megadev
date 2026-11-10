@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"mega": {
+			"url": "https://mega.dev/mcp",
+			"type": "http"
+		}
+	}
+}
