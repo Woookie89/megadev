@@ -77,6 +77,26 @@ Rook po akceptacji: „this is how i run. it's how you run from thursday.”
    rekomendacje, prompt) i `KEEP.md` (ustalenia ze źródłami) pozwoliły dokończyć pracę w nowej
    sesji po dwóch dniach.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Orkiestracja zaczyna się od kontraktu.** Równoległe workery nie rozmawiają ze sobą.
+   Wspólne typy zrobione najpierw, najmocniejszym modelem, synchronizują je lepiej niż
+   jakikolwiek brief. → [P17](../pigulki/04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md)
+2. **Model dobiera się do zadania.** Decyzje i kontrakty dostaje model najmocniejszy,
+   a dobrze opisane zadania mechaniczne tańszy (Sonnet, Haiku).
+   → [P19](../pigulki/04-orkiestracja/p19-dobor-modelu-i-koszt.md)
+3. **Worktree izoluje zapisy, ale nie usuwa konfliktów.** Konflikty zbiegają się
+   w plikach-węzłach (router, index). Scalenie zawsze kończą testy.
+   → [P18](../pigulki/04-orkiestracja/p18-worktree-i-pliki-wezly.md)
+4. **Brief dla workera to dobre issue, a ślad workera umożliwia wzajemną kontrolę.**
+   Komentarz `worker: harness · model · effort` pozwolił jednemu agentowi wyłapać błąd
+   drugiego. → [P20](../pigulki/04-orkiestracja/p20-brief-jak-issue.md)
+5. **„Wysłane” to nie „potwierdzone”.** Krok zależny od drugiej strony zamyka jej sygnał.
+   → [P09](../pigulki/02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md)
+6. **Reguły zapisuj na właściwym szczeblu trwałości.** Kształt issue zostawiony w logu
+   przepadnie, a zapisany w skillu albo `AGENTS.md` wróci przy następnym planie.
+   → [P16](../pigulki/03-pamiec/p16-drabina-trwalosci.md), [P13](../pigulki/03-pamiec/p13-keep-ustalenie-ze-zrodlem.md)
+
 ## Co zostało otwarte
 
 - Lokalne worktrees `s01e04/wt-3`, `wt-4`, `wt-5`, `wt-7`. Ich gałęzie są scalone, więc można

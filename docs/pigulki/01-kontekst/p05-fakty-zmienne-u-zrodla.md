@@ -1,0 +1,20 @@
+# P05 · Fakty zmienne potwierdzaj u źródła, nie z pamięci modelu
+
+> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E01, S02E03
+
+**Zasada.** Nazwy modeli, wersje bibliotek, ceny i specyfikacje zmieniają się szybciej niż
+dane treningowe. Model poda je pewnym tonem, nawet gdy są nieaktualne.
+
+**Przypadek.** S01E01: odpowiedź „GPT-6 Astra” została przyjęta, ale pochodziła z cudzego
+debriefu, a nie od dostawcy, więc nie jest niezależnym potwierdzeniem. S02E03: przed
+napisaniem serwera MCP harness pobrał aktualną specyfikację (rewizja 2026-07-28), bo różni
+się od poprzedniej (bez `initialize`, inne nagłówki).
+
+**Stosuj.**
+- Przy pytaniu o bibliotekę, API albo CLI sięgnij po aktualną dokumentację (Context7, spec,
+  changelog).
+- W logu zapisz, skąd fakt pochodzi i z jakiej daty.
+
+---
+
+← [P04](p04-pobrany-plik-to-kopia-z-dnia.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P06](../02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md) →

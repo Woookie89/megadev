@@ -64,6 +64,22 @@ wysłany. Run 2 stoi na kroku 2, a ticket ze startu wygasł 9.11.2026 o 23:50Z.
 5. **Dowody trzymaj poza gitem.** `proofs.log` z pełnymi tokenami jest ignorowany
    (`*.log`), a `challenge.log` maskuje ticket.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Model widzi tylko tekst, więc każda konwersja do tekstu jest stratna.** Mowa, wideo
+   i PDF przechodzą przez inny model (Whisper, OCR), który też zgaduje. Jego wynik to szkic
+   z typowymi klasami błędów: homofony, liczby, zmyślone słowa.
+   → [P02](../pigulki/01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md)
+2. **Mniejsze kawałki dają dokładniejszy wynik.** Dotyczy to nie tylko transkrypcji. Modele
+   gubią szczegóły w długim wejściu, więc dzielenie pracy na fragmenty to ogólna technika
+   poprawy jakości.
+3. **Praca wielosesyjna wymaga pliku przekazania z terminami.** Tickety i receipty wygasają,
+   a nowa sesja tego nie wie. `HANDOFF.md` ze stanem, pułapkami i promptem to minimum.
+   → [P12](../pigulki/03-pamiec/p12-czat-nie-jest-pamiecia.md)
+4. **Luka w pamięci to „nie znaleziono”, a nie miejsce na domysł.** Transkrypty sesji
+   wygasają (domyślnie po 30 dniach), więc to, co ma przetrwać, musi trafić do repo.
+   → [P15](../pigulki/03-pamiec/p15-pytaj-przeszle-sesje.md)
+
 ## Co zostało otwarte
 
 - Rekord nocy (krok 2) i pytanie z nowej sesji (krok 3) w runie 2. Kurs zalicza wyzwanie

@@ -72,6 +72,25 @@ Rook po akceptacji: „not mine. i've run that log a thousand times. never read 
 6. **Model zawodzi chwilowo.** Jeden błąd 503 kosztował rundę. Ponawianie, model zapasowy
    i selfcheck przed claimem chronią limit pytań recenzenta.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Agent bez człowieka to serwis, nie rozmowa.** Musi odpowiadać szybko (202), pracować
+   w tle, ignorować duplikaty i działać, gdy sesja harnessu jest zamknięta.
+   → [P22](../pigulki/05-agent-bez-czlowieka/p22-czat-to-nie-host.md)
+2. **Prompt injection przychodzi z danych.** Issue od obcego wyglądało jak polecenie.
+   Obrona w głąb to traktowanie danych jako danych plus najmniejsze uprawnienia, żeby
+   przekonany model i tak nie miał czym zaszkodzić.
+   → [P28](../pigulki/06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P30](../pigulki/06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md)
+3. **Każde żądanie musi się przedstawić.** Podpis, czas i id sprawdza kod, zanim cokolwiek
+   dotrze do modelu. → [P31](../pigulki/06-bezpieczenstwo/p31-uwierzytelnione-zadania.md)
+4. **Agent piszący testy musi pokazać czerwony wynik przed zielonym.** Inaczej nie wiadomo,
+   czy test dotyka błędu. → [P08](../pigulki/02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md)
+5. **Awarie dostawcy to codzienność.** Ponawianie, model zapasowy, selfcheck przed użyciem
+   limitowanych prób i logi dostępne dla samego harnessu.
+   → [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md), [P27](../pigulki/05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md)
+6. **Źródło prawdy czytaj na żywo.** Plik planu to kopia, która się starzeje, a tracker jest
+   aktualny. → [P23](../pigulki/05-agent-bez-czlowieka/p23-stan-poza-procesem.md)
+
 ## Co zostało otwarte
 
 - Niezatwierdzona lokalna zmiana w `rig/src/host/app.ts` (tryby `selfcheck-pulse`

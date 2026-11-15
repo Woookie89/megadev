@@ -1,0 +1,17 @@
+# P09 · Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu
+
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S01E04
+
+**Zasada.** „Wysłane” i „potwierdzone” to dwa różne stany. Sprzątanie zależy od
+potwierdzenia, nie od wysyłki.
+
+**Przypadek.** S01E04: harness zamknął issue #8 zaraz po wysłaniu linku recenzentowi. Kurs:
+„you closed #8 before the reviewer looked.” Odmowa, ponowne otwarcie, zamknięcie dopiero po
+potwierdzeniu.
+
+**Stosuj.** W planie zapisuj kroki zewnętrzne jako „czeka na X” z jawnym sygnałem
+zakończenia. Kroki za nim blokuj tym sygnałem.
+
+---
+
+← [P08](p08-test-najpierw-czerwony.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P10](p10-sprawdz-z-zewnatrz.md) →

@@ -39,6 +39,22 @@ Harness wyciął pięć akapitów: obserwacje o nieznanym systemie, roczny pośc
 4. **Sprawdzaj zmienne fakty na bieżąco.** Wcześniejsza odpowiedź pomogła w formularzu, ale nazwy aktualnych modeli należy potwierdzać w bieżącym, wiarygodnym źródle.
 5. **Zachowuj ślady poza rozmową.** Angielski dziennik `s01e01/challenge-log.md` zawiera tekst źródłowy i wymiany z kursem; jednorazowe tokeny są zamaskowane.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Kompakcja to decyzja o tym, co przepada.** To samo dzieje się przy `/compact`, przy
+   streszczeniu dla podagenta i przy każdym podsumowaniu sesji. Model tnie to, co wygląda na
+   ozdobnik, a nie wie, co będzie ważne później. Chroń treść listą „do zachowania”
+   zapisaną poza rozmową. → [P01](../pigulki/01-kontekst/p01-kompakcja-jest-stratna.md)
+2. **Kontrakt odbiorcy jest ważniejszy niż domysł modelu.** Agent, który zgaduje pola API,
+   marnuje próby. Taki schemat zwykle gdzieś leży (źródło strony, OpenAPI, przykład), więc
+   najpierw go szukaj. → [P06](../pigulki/02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md)
+3. **Wiedza modelu ma datę.** Nazwy modeli, wersje i ceny trzeba potwierdzać u źródła, bo
+   model poda nieaktualną wartość tym samym pewnym tonem.
+   → [P05](../pigulki/01-kontekst/p05-fakty-zmienne-u-zrodla.md)
+4. **Log poza rozmową to pamięć, która przeżyje sesję.** Pełny tekst źródłowy w
+   `challenge-log.md` pozwala odtworzyć, co zostało wycięte i dlaczego.
+   → [P12](../pigulki/03-pamiec/p12-czat-nie-jest-pamiecia.md)
+
 Strona wyzwania pokazywała aktywny run 2 oraz wcześniejszy rozwiązany run. Użytkownik zalogował się w udostępnionej przeglądarce, przejrzał plan cięć i pozwolił kontynuować. Debrief zapisano na [stronie wyzwania](https://hq.mega.dev/challenges/somebody-slow#debrief).
 
 Kurs dodał do talii użytkownika umiejętność `read`. Pomaga znajdować kontrakty przed wysyłką, skracać tekst z listą treści do zachowania i sprawdzać aktualne nazwy modeli; nie została automatycznie zainstalowana.

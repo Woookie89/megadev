@@ -53,6 +53,27 @@ Rozwiązane w drugim podejściu (po „Start over”), czwartym zgłoszeniem. Re
 4. **Dowody pobieraj przed podpisaniem pracy.** Najpierw `start-challenge` i `ticket`, potem strona.
 5. **Uprawnienia agenta też są częścią setupu.** Tryb auto może zablokować publiczne akcje mimo zgody użytkownika. Warto ustawić reguły uprawnień dla `gh` z góry.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Źródło to nie widok.** Agent czyta surowe pliki, a człowiek i oceniający patrzą na
+   wyrenderowaną stronę. Gdy te dwa się różnią, liczy się widok odbiorcy.
+   → [P03](../pigulki/01-kontekst/p03-zrodlo-to-nie-widok.md)
+2. **Odczyt źródła starzeje się w trakcie pracy.** Agent buduje godzinę na jednym odczycie,
+   a świat się zmienia. Ponowne pobranie przed „gotowe” powinno być stałym krokiem.
+   → [P04](../pigulki/01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md)
+3. **Płynny tekst to nie źródło.** Każde twierdzenie agenta (liczba, ID, cytat) powinno
+   wskazywać, skąd pochodzi. Bez tego nie da się go sprawdzić.
+   → [P13](../pigulki/03-pamiec/p13-keep-ustalenie-ze-zrodlem.md)
+4. **Niejednoznaczne słowo w wymaganiach rozstrzygnij, zanim na nim zbudujesz.** „Your
+   signature” znaczyło coś innego, niż podpowiadał zdrowy rozsądek.
+   → [P06](../pigulki/02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md)
+5. **Brakujące narzędzie można zbudować, a potem trzeba je utrwalić.** Chromium przez CDP
+   było mostem. Skill `github-cli-routine` to rutyna, która przeszła do kolejnych wyzwań.
+   → [P37](../pigulki/08-harness/p37-brakujace-narzedzie.md), [P38](../pigulki/08-harness/p38-skill-to-rutyna.md)
+6. **Uprawnienia harnessu ustaw przed zadaniem.** Zgoda człowieka nie wystarczy, jeśli tryb
+   uprawnień blokuje akcję. Wąska reguła z góry jest lepsza niż przełączanie trybu w trakcie.
+   → [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)
+
 ## Co zostało w harnessie
 
 - **Render kb:** folder `render/` w repo buduje eksport kb do samodzielnych plików HTML (`npm ci && npm run build`).

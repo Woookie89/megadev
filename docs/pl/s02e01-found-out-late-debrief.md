@@ -55,6 +55,26 @@ part. i found out late.”
    `rook-loop`, część done-check) wymusza ponowny odczyt przed zakończeniem. Instalację hooka
    zatwierdza człowiek.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Pętla agenta kończy się, gdy model przestaje wołać narzędzia, a nie gdy praca jest
+   skończona.** Koniec musi wyznaczać zewnętrzne sprawdzenie: hook `Stop`, `./verify`, test.
+   → [P07](../pigulki/02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md)
+2. **Każda pętla potrzebuje wyjścia.** Warunek sukcesu, limit i widoczny plik stanu.
+   `stop_gate.py` ma `MAX_BLOCKS = 3`. Pętla Ralph z tego dnia nie miała ani warunku, ani
+   limitu. → [P24](../pigulki/05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md)
+3. **Ponowny odczyt źródeł przed „gotowe” to zasada, nie ostrożność.** Inne zespoły
+   i agenci pracowali równolegle i dopisali decyzje po pierwszym odczycie.
+   → [P04](../pigulki/01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md)
+4. **Decyzje zespołu zapisuj jak ADR-y: jedna na wiersz, ze źródłem.** Późniejsza decyzja
+   zastępuje tylko swój zakres. → [P14](../pigulki/03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)
+5. **Archeologia sesji to umiejętność.** Wiedza zespołu pracującego z agentami siedzi
+   w transkryptach różnych harnessów i podagentów. Trzeba umieć je przeszukać.
+   → [P15](../pigulki/03-pamiec/p15-pytaj-przeszle-sesje.md)
+6. **Hook zmienia zachowanie harnessu, więc instaluje go człowiek.** Blokada uprawnień
+   przy hooku to zabezpieczenie, a nie przeszkoda.
+   → [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)
+
 ## Co zostało otwarte
 
 - Magazyn nie został uruchomiony. Do tego trzeba włączyć Docker Desktop, uruchomić `npm install`

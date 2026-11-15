@@ -79,6 +79,26 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
 6. **Klucze tylko w `.env`.** Użytkownik wpisywał klucze sam, `.env` jest w `.gitignore`,
    a filtr wycina klucze z każdej odpowiedzi i z logu.
 
+## Czego to uczy o pracy z AI i agentami
+
+1. **Instrukcja w prompcie to prośba, a `if` w kodzie to gwarancja.** Autoryzację, wybór
+   wejść i filtr wyjścia robi kod, zanim model cokolwiek zobaczy. Model, który nie widzi
+   obcej wiadomości, nie może jej posłuchać. Tabelę „decyduje kod / decyduje model” warto
+   narysować dla każdego agenta. → [P29](../pigulki/06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md)
+2. **Oceniający widzi kolejność zdarzeń, nie intencje.** Restart w złym momencie wyglądał
+   jak posłuszeństwo obcemu. → [P26](../pigulki/05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md)
+3. **Odpowiedź modelu trzeba walidować przed wysłaniem.** Odmowa i pusta odpowiedź to tryby
+   awarii, które obsługuje ponowienie albo model zapasowy, a nie tekst zastępczy.
+   → [P11](../pigulki/02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md)
+4. **Narzędzia serwerowe dostawcy mają własne ograniczenia.** Własne narzędzie działa
+   u każdego dostawcy i daje log, którym można udowodnić, że wartość nie jest zmyślona.
+   → [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md)
+5. **Tryb próbny przed wystawieniem agenta na świat.** `--dry` wykryłby obie awarie przed
+   pierwszą rundą. → [P10](../pigulki/02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)
+6. **Stan agenta poza procesem, sekrety poza czatem.** Etykiety w skrzynce przeżywają
+   restart. Klucze wpisuje człowiek, a filtr wycina je z wyjścia.
+   → [P23](../pigulki/05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P32](../pigulki/06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md)
+
 ## Co zostało otwarte
 
 - **Host.** Agent działa jako proces `node` uruchomiony z sesji Claude Code i kończy się razem
