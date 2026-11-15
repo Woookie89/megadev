@@ -1,0 +1,17 @@
+# 1. Context: the model knows only what reaches it
+
+A model has no access to the world. It has only its context window: the text (and images)
+the harness put into it. Anything not there does not exist for the model. Anything there
+that is stale or distorted, the model takes as true.
+
+| Pill | Principle | Episodes |
+| --- | --- | --- |
+| [P01](p01-compaction-is-lossy.md) | Compaction is lossy, and you decide what gets lost | S01E01 |
+| [P02](p02-conversion-to-text-is-lossy.md) | Context is text, and every conversion to text is lossy | S01E02 |
+| [P03](p03-source-is-not-the-view.md) | The source is not the view | S01E03 |
+| [P04](p04-a-download-is-a-dated-copy.md) | A download is a dated copy | S01E03, S02E01 |
+| [P05](p05-check-changing-facts-at-source.md) | Check changing facts at the source, not in the model's memory | S01E01, S02E03 |
+
+---
+
+[← all pills](../README.md)

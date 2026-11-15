@@ -1,0 +1,14 @@
+# 8. The harness as a toolkit
+
+A harness (Claude Code, Codex) is a model plus tools, skills, instruction files, hooks and
+permissions. The result depends on the kit as much as on the model.
+
+| Pill | Principle | Episodes |
+| --- | --- | --- |
+| [P37](p37-missing-tool.md) | A missing tool: build a bridge, then make it permanent | S01E03 |
+| [P38](p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03 |
+| [P39](p39-mcp-contract-for-strangers.md) | An MCP server is a contract for a stranger client (S02E03, in progress) | S02E03 |
+
+---
+
+[← all pills](../README.md)
