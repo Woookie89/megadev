@@ -1,0 +1,17 @@
+{
+  "name": "stock-5-reorder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:up": "docker compose up -d --wait",
+    "db:push": "drizzle-kit push",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.0"
+  }
+}

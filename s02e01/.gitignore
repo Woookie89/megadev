@@ -1,0 +1,7 @@
+log.md
+dl/
+sessions/
+receipts.local
+work/
+tools/*.local.json
+tools/*.local
