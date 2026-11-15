@@ -12,7 +12,8 @@ i wyłączyć.
 - Artefakt „loop” z talii kursu: pętla z widocznym plikiem stanu i trzema wyjściami.
 - Kontrprzykład z tego repo: pętla Ralph uruchomiona 15.11 („rób dopóki nie zwróci solved”)
   ma w `s02e01/.claude/ralph-loop.local.md` wpisane `completion_promise: null`
-  i `max_iterations: 0`, czyli bez warunku i bez limitu. Plik nadal ma `active: true`.
+  i `max_iterations: 0`, czyli bez warunku i bez limitu. Plik miał `active: true`
+  jeszcze po rozwiązaniu obu wyzwań i został usunięty ręcznie 15.11.2026.
 
 **Stosuj.** Przy `/ralph-loop` i `/loop` zawsze podaj warunek końca (completion promise albo
 komendę) i limit iteracji. Po zakończeniu sprawdź, czy plik stanu jest wyłączony.

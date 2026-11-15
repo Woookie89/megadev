@@ -8,8 +8,8 @@ w plikach, które wszyscy muszą dotknąć (router, index, config).
 **Przypadek.** S01E04: merge #3 i #4 zatrzymał się na konflikcie w tym samym pliku aplikacji
 (rejestracja tras). Harness scalił go ręcznie, a przed pushem uruchomił typecheck i 25
 testów. MEGA Assessment (T19): równoległe sesje kursowe dzieliły jedno drzewo robocze, więc
-nieśledzone pliki z kilku wątków mieszały się. Widać to w `git status`, gdzie leżą jeszcze
-`s01e04/wt-3`…`wt-7`.
+nieśledzone pliki z kilku wątków mieszały się. Worktrees `s01e04/wt-3`…`wt-7` leżały
+w repo jeszcze tydzień po scaleniu, aż do sprzątania 15.11.2026.
 
 **Stosuj.**
 - Pliki-węzły przypisz jednemu workerowi albo zaplanuj ich scalenie.

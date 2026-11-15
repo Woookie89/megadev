@@ -99,8 +99,8 @@ Rook po akceptacji: „this is how i run. it's how you run from thursday.”
 
 ## Co zostało otwarte
 
-- Lokalne worktrees `s01e04/wt-3`, `wt-4`, `wt-5`, `wt-7`. Ich gałęzie są scalone, więc można
-  je usunąć.
+- ~~Lokalne worktrees `s01e04/wt-3`, `wt-4`, `wt-5`, `wt-7`.~~ Usunięte 15.11.2026 razem
+  z lokalnymi gałęziami `issue-*` (były scalone do `main`).
 - Repo na GitHubie i strona na Netlify są nadal publiczne.
 - Kurs dodał do talii artefakt „rig” (zestaw do konfiguracji repo dla agentów). Nie został
   zainstalowany.
