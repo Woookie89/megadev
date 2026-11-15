@@ -1,0 +1,11 @@
+{
+  "name": "s02e02-mail-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node agent.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.8.0"
+  }
+}
