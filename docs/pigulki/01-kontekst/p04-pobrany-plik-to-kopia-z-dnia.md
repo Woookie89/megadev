@@ -2,6 +2,10 @@
 
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E03, S02E01
 
+> **Lekcje:**
+> - S01E03 · Tworzenie systemów wiedzy → rozdział „Cel baz wiedzy” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) · [oryginał EN: „Purpose of the knowledge bases”](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases)
+> - S02E01 · Prymitywy agentowe → rozdział „Kontekst i pamięć” — [po polsku](../../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć) · [oryginał EN: „Context and Memory”](../../s02e01-agentic-primitives.md#context-and-memory)
+
 **Zasada.** Świat pracuje dalej, gdy agent pracuje. Przed ogłoszeniem „gotowe” pobierz źródła
 jeszcze raz i porównaj z tym, co już przeczytano.
 

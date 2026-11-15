@@ -2,6 +2,10 @@
 
 > Rozdział [3. Pamięć poza czatem](README.md) · epizody: S01E02, S02E01
 
+> **Lekcje:**
+> - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
+> - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
+
 **Zasada.** Gdy odpowiedź jest w dawnej sesji, przeszukaj sesje i cytuj `plik:linia`.
 „Nie znaleziono” to też wynik, który trzeba podać, a nie lukę do zapełnienia z pamięci.
 

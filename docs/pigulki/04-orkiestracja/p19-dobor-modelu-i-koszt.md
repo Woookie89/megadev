@@ -2,6 +2,9 @@
 
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S01E05, S02E02
 
+> **Lekcje:**
+> - S01E04 · Praca z harnessami AI → rozdział „Ustawienia” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#ustawienia) · [oryginał EN: „Settings”](../../s01e04-working-with-ai-harnesses.md#settings)
+
 **Zasada.** Logika, kontrakty i decyzje dostają najmocniejszy model. Mechaniczne, dobrze
 opisane zadania dostają tańszy. Agent bez nadzoru dostaje limit wywołań i budżetu.
 

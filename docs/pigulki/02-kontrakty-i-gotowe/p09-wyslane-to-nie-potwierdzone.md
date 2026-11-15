@@ -2,6 +2,9 @@
 
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S01E04
 
+> **Lekcje:**
+> - S01E04 · Praca z harnessami AI → rozdział „Harnessy” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#harnessy) · [oryginał EN: „Harnesses”](../../s01e04-working-with-ai-harnesses.md#harnesses)
+
 **Zasada.** „Wysłane” i „potwierdzone” to dwa różne stany. Sprzątanie zależy od
 potwierdzenia, nie od wysyłki.
 

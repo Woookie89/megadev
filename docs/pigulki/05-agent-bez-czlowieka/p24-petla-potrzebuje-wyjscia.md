@@ -2,6 +2,9 @@
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S02E01
 
+> **Lekcje:**
+> - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
+
 **Zasada.** Każda pętla agenta ma trzy rzeczy: warunek sukcesu (komenda, która to
 sprawdza), limit (iteracje, czas, budżet) i plik stanu, który człowiek może przeczytać
 i wyłączyć.

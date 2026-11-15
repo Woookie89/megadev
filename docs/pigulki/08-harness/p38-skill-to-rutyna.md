@@ -2,6 +2,10 @@
 
 > Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03
 
+> **Lekcje:**
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Projektowanie i generowanie umiejętności” — [po polsku](../../pl/s01e02-steering-models-through-context.md#projektowanie-i-generowanie-umiejętności) · [oryginał EN: „Designing and generating skills”](../../s01e02-steering-models-through-context.md#designing-and-generating-skills)
+> - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Wykonywalny Markdown a kod” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) · [oryginał EN: „Executable Markdown vs Code”](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code)
+
 **Zasada.** Gdy coś robisz drugi raz, zapisz to jako skill: kroki, zasady zgody, przykłady.
 
 **Przypadek.** `github-cli-routine` (S01E03): utwórz, podlinkuj, zamknij z powodem. Karty

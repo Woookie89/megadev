@@ -2,6 +2,10 @@
 
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E02
 
+> **Lekcje:**
+> - S01E01 · Mechanika działania generatywnej AI → rozdział „Mechanika dużych modeli językowych” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych) · [oryginał EN: „Mechanics of Large Language Models”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models)
+> - S01E03 · Tworzenie systemów wiedzy → rozdział „Cel baz wiedzy” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) · [oryginał EN: „Purpose of the knowledge bases”](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases)
+
 **Zasada.** Mowa, wideo, PDF czy zrzut ekranu trzeba najpierw przetłumaczyć na tekst.
 Tłumacz (Whisper, OCR, parser) to też model, który się myli.
 

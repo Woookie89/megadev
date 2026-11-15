@@ -2,6 +2,10 @@
 
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02
 
+> **Lekcje:**
+> - S02E05 · Niezawodność agentów → rozdział „Ewaluacja” — [po polsku](../../pl/s02e05-agent-reliability.md#ewaluacja) · [oryginał EN: „Evaluation”](../../s02e05-agent-reliability.md#evaluation)
+> - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Jakość” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#jakość) · [oryginał EN: „Quality”](../../s01e05-building-workflows-not-tool-stacks.md#quality)
+
 **Zasada.** Zanim oddasz coś odbiorcy z limitem prób, zrób test dymny z jego perspektywy.
 
 **Przypadek.**

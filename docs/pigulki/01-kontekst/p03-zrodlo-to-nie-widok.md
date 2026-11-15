@@ -2,6 +2,10 @@
 
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E03
 
+> **Lekcje:**
+> - S01E03 · Tworzenie systemów wiedzy → rozdział „Poza Markdownem” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#poza-markdownem) · [oryginał EN: „Beyond Markdown”](../../s01e03-building-knowledge-systems.md#beyond-markdown)
+> - S01E03 · Tworzenie systemów wiedzy → rozdział „Pliki tekstowe i platformy chmurowe” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#pliki-tekstowe-i-platformy-chmurowe) · [oryginał EN: „Text Files and Cloud Platforms”](../../s01e03-building-knowledge-systems.md#text-files-and-cloud-platforms)
+
 **Zasada.** Surowy plik jest dla AI, a wyrenderowany widok jest dla człowieka i dla tego, kto
 ocenia. Jeśli liczy się to, co ktoś zobaczy, wyrenderuj i patrz.
 

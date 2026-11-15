@@ -2,6 +2,10 @@
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02
 
+> **Lekcje:**
+> - S02E02 · Budowanie agenta → rozdział „Dostawcy i konfiguracja” — [po polsku](../../pl/s02e02-building-an-agent.md#dostawcy-i-konfiguracja) · [oryginał EN: „Providers and configuration”](../../s02e02-building-an-agent.md#providers-and-configuration)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
+
 **Zasada.** Błędy chwilowe (429, 5xx), odmowy i blokady narzędzi po stronie dostawcy to
 normalne zdarzenia, a nie wyjątki.
 

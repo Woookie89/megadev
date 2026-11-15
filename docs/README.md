@@ -13,6 +13,7 @@ przed pracą i przejdź całą listę kontrolną.
 | `docs/pl/sXXeYY-<temat>.md`, `docs/pl/sXXeYY-transcript.md` | To samo po polsku. |
 | `docs/pl/sXXeYY-<slug>-debrief.md` | Zapis przebiegu wyzwania: co się stało i czego to uczy. |
 | [`docs/pigulki/`](pigulki/README.md) | **Pigułki wiedzy** o pracy z AI i agentami, zebrane ze wszystkich wyzwań. Jedna pigułka w jednym pliku, rozdziały jako foldery, do tego szablony, wzorce pracy i słowniczek. |
+| [`docs/pills/`](pills/README.md) | To samo po angielsku: te same numery pigułek i ten sam układ, angielskie nazwy plików. |
 | [`docs/challenges.md`](challenges.md) | Indeks wyzwań ze statusami. |
 | `docs/challenges/`, `docs/challenges-original/` | Opisy wyzwań: własnymi słowami i oryginalne z serwera MCP kursu. |
 
@@ -85,14 +86,34 @@ pigulki/
 - [ ] Zasada jest nowa: nowy plik `pNN-<slug>.md` w folderze rozdziału.
   - Numer kolejny po ostatnim, bez przenumerowywania starych.
   - Nagłówek `# PNN · <zasada>`, pod nim linia `> Rozdział … · epizody: …`.
+  - Pod nią **obowiązkowy** blok lekcji (patrz niżej).
   - Sekcje: **Zasada** / **Dlaczego** / **Przypadek** / **Stosuj**.
   - Na dole nawigacja: poprzednia, rozdział, wszystkie pigułki, następna. Popraw też
     link „następna” w poprzedniej pigułce.
 - [ ] Dodaj wiersz w tabeli rozdziału (`0N-…/README.md`) i w `pigulki/README.md`
-      (sekcja „Wszystkie pigułki” i „Indeks epizodów”).
+      (sekcje „Wszystkie pigułki”, „Indeks lekcji” i „Indeks epizodów”).
 - [ ] Jeśli zmienia się któraś z „Dziesięciu zasad na jeden ekran”, zaktualizuj tabelę.
 - [ ] Zaktualizuj datę „Stan na” w `pigulki/README.md`.
-- [ ] Sprawdź, czy wszystkie względne linki w `docs/` prowadzą do istniejących plików.
+- [ ] **Zrób to samo w `docs/pills/` po angielsku**: ten sam numer, angielski slug, układ
+      Principle / Why / Case / Apply, blok `> **Lessons:**`.
+- [ ] Sprawdź, czy każdy względny link w `docs/` prowadzi do istniejącego pliku i istniejącego
+      nagłówka (kotwica `#…`).
+
+#### Blok lekcji w pigułce
+
+Każda pigułka wskazuje lekcje, z których pochodzi: epizod, tytuł lekcji, **rozdział lekcji**
+(nagłówek `##` w notatkach) oraz link do wersji polskiej i do oryginału angielskiego, oba
+z kotwicą do tego rozdziału. Rozdział wybieraj po treści: zajrzyj, co faktycznie mówi, a nie
+tylko po tytule. Notatki EN i PL mają te same rozdziały w tej samej kolejności.
+
+```markdown
+> **Lekcje:**
+> - S01E04 · Praca z harnessami AI → rozdział „Harnessy” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#harnessy) · [oryginał EN: „Harnesses”](../../s01e04-working-with-ai-harnesses.md#harnesses)
+```
+
+Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
+`docs/sXXeYY-<temat>.md`. Wyjątek: oryginał S01E01 jest w
+`s01e01/s01e01-mechanics-behind-generative-ai.md`.
 
 ### 4. Zaktualizuj indeks wyzwań
 
@@ -104,6 +125,8 @@ pigulki/
 
 - [ ] Ustal, czy to nowa zasada, czy nowy przypadek istniejącej (patrz krok 3 wyżej).
 - [ ] Każde twierdzenie ma źródło: plik, log, sesja (`plik:linia`) albo raport.
+- [ ] Pigułka wskazuje lekcję i jej rozdział, z linkami PL i EN (blok lekcji wyżej).
+- [ ] Zmiana trafia do obu wersji: `docs/pigulki/` i `docs/pills/`.
 - [ ] Pisz tak, żeby pigułka dała się zrozumieć bez czytania debriefu.
 
 ## „Przejrzyj wszystko od początku”

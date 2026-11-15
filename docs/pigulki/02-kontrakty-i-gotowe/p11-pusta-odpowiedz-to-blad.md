@@ -2,6 +2,10 @@
 
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02
 
+> **Lekcje:**
+> - S02E05 · Niezawodność agentów → rozdział „Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec” — [po polsku](../../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) · [oryginał EN: „Guardrails: preventing the unpreventable”](../../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
+
 **Zasada.** Odpowiedź modelu waliduj przed wysłaniem: czy jest, czy ma wymagany format.
 Gdy nie ma, ponów albo zmień model. Nie wysyłaj tekstu zastępczego.
 

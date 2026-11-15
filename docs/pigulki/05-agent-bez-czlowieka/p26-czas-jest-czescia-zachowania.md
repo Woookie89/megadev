@@ -2,6 +2,9 @@
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S02E02
 
+> **Lekcje:**
+> - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
+
 **Zasada.** Oceniający (człowiek, kurs, monitoring) widzi kolejność zdarzeń, nie intencje
 agenta.
 

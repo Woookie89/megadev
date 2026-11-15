@@ -2,6 +2,10 @@
 
 > Rozdział [3. Pamięć poza czatem](README.md) · epizody: S01E01, S01E02
 
+> **Lekcje:**
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Jak działa kontekst?” — [po polsku](../../pl/s01e02-steering-models-through-context.md#jak-działa-kontekst) · [oryginał EN: „How does the context work?”](../../s01e02-steering-models-through-context.md#how-does-the-context-work)
+> - S02E01 · Prymitywy agentowe → rozdział „Kontekst i pamięć” — [po polsku](../../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć) · [oryginał EN: „Context and Memory”](../../s02e01-agentic-primitives.md#context-and-memory)
+
 **Zasada.** Gdy praca przechodzi do nowej sesji, zostaw plik przekazania: stan, co zrobione
 (ze źródłem), co zostało, pułapki, terminy ważności, gotowe komendy i prompt do wklejenia.
 

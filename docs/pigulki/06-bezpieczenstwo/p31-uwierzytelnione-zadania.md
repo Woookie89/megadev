@@ -2,6 +2,10 @@
 
 > Rozdział [6. Bezpieczeństwo: granica zaufania należy do kodu](README.md) · epizody: S01E05
 
+> **Lekcje:**
+> - S02E03 · Możliwości agentów → rozdział „Model Context Protocol” — [po polsku](../../pl/s02e03-agentic-capabilities.md#model-context-protocol) · [oryginał EN: „Model Context Protocol”](../../s02e03-agentic-capabilities.md#model-context-protocol)
+> - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Bezpieczeństwo systemu” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) · [oryginał EN: „System security”](../../s01e05-building-workflows-not-tool-stacks.md#system-security)
+
 **Przypadek.**
 - S01E05: podpis, znacznik czasu i id sprawdzane przy każdym żądaniu (Standard Webhooks).
   Niepodpisany POST dostaje 401.

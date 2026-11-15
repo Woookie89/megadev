@@ -2,6 +2,10 @@
 
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S01E01, S01E03
 
+> **Lekcje:**
+> - S01E01 · Mechanika działania generatywnej AI → rozdział „Mechanika dużych modeli językowych” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych) · [oryginał EN: „Mechanics of Large Language Models”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
+
 **Zasada.** Zanim wyślesz cokolwiek do API, formularza albo oceniającego, znajdź jego
 kontrakt: schemat, przykład odpowiedzi, opis pól. Zgadywanie kosztuje próby.
 

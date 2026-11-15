@@ -2,6 +2,9 @@
 
 > Rozdział [3. Pamięć poza czatem](README.md) · epizody: S02E01
 
+> **Lekcje:**
+> - S01E03 · Tworzenie systemów wiedzy → rozdział „Szerszy kontekst” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#szerszy-kontekst) · [oryginał EN: „Broader context”](../../s01e03-building-knowledge-systems.md#broader-context)
+
 **Zasada.** Plan zapisuj jako tabelę: obszar, decyzja, źródło (sesja i czas). Nowa decyzja
 zastępuje tylko to, czego dotyczy.
 

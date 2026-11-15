@@ -2,6 +2,10 @@
 
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04
 
+> **Lekcje:**
+> - S02E04 · Współpraca wielu agentów → rozdział „Orkiestracja” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#orkiestracja) · [oryginał EN: „Orchestration”](../../s02e04-multi-agent-collaboration.md#orchestration)
+> - S02E04 · Współpraca wielu agentów → rozdział „Architektury wieloagentowe” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe) · [oryginał EN: „Multi-agent architectures”](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures)
+
 **Zasada.** Wspólne fundamenty (typy, interfejsy, format danych) zrób najpierw, po kolei,
 najmocniejszym modelem. Dopiero potem rozdziel resztę na równoległe workery.
 

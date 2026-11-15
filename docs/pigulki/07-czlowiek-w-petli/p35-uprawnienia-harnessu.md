@@ -2,6 +2,10 @@
 
 > Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E03, S02E01, MEGA Assessment
 
+> **Lekcje:**
+> - S01E04 · Praca z harnessami AI → rozdział „Harnessy” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#harnessy) · [oryginał EN: „Harnesses”](../../s01e04-working-with-ai-harnesses.md#harnesses)
+> - S02E03 · Możliwości agentów → rozdział „Personalizacja” — [po polsku](../../pl/s02e03-agentic-capabilities.md#personalizacja) · [oryginał EN: „Personalization”](../../s02e03-agentic-capabilities.md#personalization)
+
 **Zasada.** Reguły uprawnień ustaw przed zadaniem, wąsko, pod konkretne komendy. Nie
 przełączaj całego trybu na szeroki w trakcie pracy.
 

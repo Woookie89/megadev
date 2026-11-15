@@ -2,6 +2,10 @@
 
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E01, S02E03
 
+> **Lekcje:**
+> - S01E01 · Mechanika działania generatywnej AI → rozdział „Warto wiedzieć o LLM-ach” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#warto-wiedzieć-o-llm-ach) · [oryginał EN: „Things worth knowing about LLMs”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#things-worth-knowing-about-llms)
+> - S02E02 · Budowanie agenta → rozdział „Projektowanie narzędzi” — [po polsku](../../pl/s02e02-building-an-agent.md#projektowanie-narzędzi) · [oryginał EN: „Designing tools”](../../s02e02-building-an-agent.md#designing-tools)
+
 **Zasada.** Nazwy modeli, wersje bibliotek, ceny i specyfikacje zmieniają się szybciej niż
 dane treningowe. Model poda je pewnym tonem, nawet gdy są nieaktualne.
 
