@@ -42,6 +42,7 @@ Kurs przyjmuje implementację zgodną z ustalonymi decyzjami.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 15.11.2026 | rozwiązane 19:04:56Z, [zapis przebiegu](../pl/s02e01-found-out-late-debrief.md) |
 
 ## Materiały i załączniki
 

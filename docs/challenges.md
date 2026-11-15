@@ -15,6 +15,7 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 > **Stan z 13 listopada 2026.** Statusy dotyczą zalogowanego konta i mogą się
 > zmienić. „HQ” to status z listy wyzwań HQ, a „MCP” to flaga `solved` z serwera
 > MCP kursu. Przy S01E02 te źródła się różnią: szczegóły są w pliku wyzwania.
+> S02E01 i S02E02 zaktualizowano 15.11.2026 po rozwiązaniu (zapis przebiegu w `pl/`).
 
 ## Week 1 — Core
 
@@ -34,8 +35,8 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 
 | Kod | Tytuł | Data | Status HQ / MCP | Strona HQ |
 | --- | --- | --- | --- | --- |
-| S02E01 | [found out late](challenges/S02E01_found-out-late.md) | 2.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/found-out-late) |
-| S02E02 | [nobody asked](challenges/S02E02_nobody-asked.md) | 3.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/nobody-asked) |
+| S02E01 | [found out late](challenges/S02E01_found-out-late.md) | 2.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/found-out-late) |
+| S02E02 | [nobody asked](challenges/S02E02_nobody-asked.md) | 3.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/nobody-asked) |
 | S02E03 | [schema first](challenges/S02E03_schema-first.md) | 4.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/schema-first) |
 | S02E04 | [two places](challenges/S02E04_two-places.md) | 5.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/two-places) |
 | S02E05 | [while you're away](challenges/S02E05_while-youre-away.md) | 6.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/while-youre-away) |

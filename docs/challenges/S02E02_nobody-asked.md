@@ -43,6 +43,7 @@ Runda jest zaliczona, gdy agent odpowie na wiadomość kursu w tym samym wątku,
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 15.11.2026 | rozwiązane 20:54:47Z, [zapis przebiegu](../pl/s02e02-nobody-asked-debrief.md) |
 
 ## Materiały i załączniki
 
