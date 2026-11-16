@@ -3,7 +3,7 @@
 > Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S02E04
 
 > **Lessons:**
-> - S01E02 · Steering Models Through Context → chapter "Subagents and Workers" — [original (EN)](../../s01e02-steering-models-through-context.md#subagents-and-workers) · [Polish: „Podagenci i wykonawcy”](../../pl/s01e02-steering-models-through-context.md#podagenci-i-wykonawcy)
+> - S01E02 · Steering Models Through Context → chapter "Subagents and Workers" — [original (EN)](../../s01e02-steering-models-through-context.md#subagents-and-workers) · [Polish: „Podagenci i workery”](../../pl/s01e02-steering-models-through-context.md#podagenci-i-workery)
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agent architectures" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures) · [Polish: „Architektury wieloagentowe”](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe)
 
 **Principle.** A worker does not inherit the conversation. The brief must contain

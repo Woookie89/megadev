@@ -5,7 +5,7 @@ Możemy dziś budować rzeczy w ułamku czasu i przy ułamku wysiłku, których 
 ## Plan
 
 - Złożoność: szybsze dostarczanie, szybszy przyrost długu technicznego, ludzie i procesy, wykorzystanie AI, by nadążyć
- - Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, umiejętności o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
+ - Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, skille o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
  - Jakość: samodzielna weryfikacja, środowisko agenta, zasady, prymitywy, utrzymywanie systemu
  - Agenci zdalni: maszyna zdalna, harmonogramy i wyzwalacze, dostęp z urządzeń mobilnych, sekrety
  - Przepływy działające w tle: codzienne briefy, nocne kontrole, przeglądy, synchronizacja dokumentacji, monitorowanie, wnioski produktowe, samodoskonalenie
@@ -32,9 +32,9 @@ Problemy, które tu widzimy, nie są nowe i mamy już na nie pewne odpowiedzi. N
 
 ## Wykonywalny Markdown a kod
 
-Umiejętności można postrzegać jako pliki **wykonywalnego Markdowna**. Biorąc pod uwagę, co agenci potrafią zrobić nawet na podstawie prostego zestawu instrukcji, można śmiało powiedzieć, że **wiele produktów może składać się z jednego pliku .md**.
+Skille można postrzegać jako pliki **wykonywalnego Markdowna**. Biorąc pod uwagę, co agenci potrafią zrobić nawet na podstawie prostego zestawu instrukcji, można śmiało powiedzieć, że **wiele produktów może składać się z jednego pliku .md**.
 
-Wiedząc, jak działają modele językowe i że ich zachowanie jest **niedeterministyczne**, trudno sobie wyobrazić procesy biznesowe zbudowane w ten sposób. A jednak już się to dzieje: osoby nietechniczne używają umiejętności w codziennej pracy, a niektóre z nich zbudowały w ten sposób zautomatyzowane przepływy.
+Wiedząc, jak działają modele językowe i że ich zachowanie jest **niedeterministyczne**, trudno sobie wyobrazić procesy biznesowe zbudowane w ten sposób. A jednak już się to dzieje: osoby nietechniczne używają skilli w codziennej pracy, a niektóre z nich zbudowały w ten sposób zautomatyzowane przepływy.
 
 Na przykład agent połączony z internetem i potrafiący pisać kod może z łatwością:
 
@@ -58,26 +58,26 @@ A jednak jako programiści dostrzegamy wiele problemów związanych z tym podej�
 - **debugowanie:** gdy coś pójdzie nie tak, trudno ustalić, co dokładnie zawiodło, dlaczego i jak to naprawić
 - **utrzymanie:** zmiany w przepływie pracy trudno testować i kontrolować, a my nie potrafimy wiarygodnie stwierdzić, która modyfikacja poprawiła, a która pogorszyła wynik
 
-Mimo to **to działa** w wielu zastosowaniach... a w innych nie zadziała. Zamiast więc to ignorować lub wyśmiewać, możemy zastanowić się, jak rozwinąć to podejście i nauczyć się rozpoznawać sytuacje, w których wystarczą nam umiejętności i agent.
+Mimo to **to działa** w wielu zastosowaniach... a w innych nie zadziała. Zamiast więc to ignorować lub wyśmiewać, możemy zastanowić się, jak rozwinąć to podejście i nauczyć się rozpoznawać sytuacje, w których wystarczą nam skille i agent.
 
-![Umiejętność w Markdownie działa za pośrednictwem agenta. skill.md przekazuje instrukcje agentowi. Agent wysyła każdy krok do Model API i otrzymuje odpowiedź, a każdy przebieg przynosi wynik. Pokazano cztery przykładowe przebiegi; wynik przebiegu 3 jest błędny. Pod każdym elementem czerwonym tekstem wymieniono jego problemy: przy skill.md widnieje „rozwój (zmiany trudno testować)”. Przy agencie: „koszt (za każdym razem zaczyna od zera)” i „debugowanie (brak jasnego śladu tego, co zawiodło)”. Przy Model API: „szybkość (powolne, może w ogóle nie skończyć)”. Przy wynikach: „niezawodność (każdy przebieg daje inny wynik)”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.png)
+![Skill w Markdownie działa za pośrednictwem agenta. skill.md przekazuje instrukcje agentowi. Agent wysyła każdy krok do Model API i otrzymuje odpowiedź, a każdy przebieg przynosi wynik. Pokazano cztery przykładowe przebiegi; wynik przebiegu 3 jest błędny. Pod każdym elementem czerwonym tekstem wymieniono jego problemy: przy skill.md widnieje „rozwój (zmiany trudno testować)”. Przy agencie: „koszt (za każdym razem zaczyna od zera)” i „debugowanie (brak jasnego śladu tego, co zawiodło)”. Przy Model API: „szybkość (powolne, może w ogóle nie skończyć)”. Przy wynikach: „niezawodność (każdy przebieg daje inny wynik)”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.html)
 
 Na chwilę **zapomnijmy o wszystkich ograniczeniach** i skupmy się na tym, co naprawdę jest dobre: jak możemy wykorzystać to podejście i rozwinąć je dzięki naszej wiedzy oraz temu, co potrafią dziś modele. A konkretnie:
 
-- **Elastyczność:** umiejętności można łatwo **łączyć** nie tylko z innymi umiejętnościami, ale też z narzędziami i jednorazowymi skryptami pisanymi przez agentów. Aby łatwo je łączyć, każda umiejętność musi jednak mieć jeden zakres odpowiedzialności.
-- **Tryb kodu:** najnowsze modele bez problemu piszą kod, zwłaszcza gdy mówimy o niewielkich aplikacjach o ograniczonym zakresie, które można łatwo uruchomić, ale także [**zapisać i ponownie wykorzystać!**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/skill-vs-saved-script) Skrypt można zapisać jako zależność umiejętności lub wdrożyć w Cloudflare, by można go było uruchamiać z dowolnego miejsca (jeśli ma odpowiednie uprawnienia), w reakcji na zdarzenia zewnętrzne, harmonogramy lub działania innych agentów.
+- **Elastyczność:** skille można łatwo **łączyć** nie tylko z innymi skillami, ale też z narzędziami i jednorazowymi skryptami pisanymi przez agentów. Aby łatwo je łączyć, każdy skill musi jednak mieć jeden zakres odpowiedzialności.
+- **Tryb kodu:** najnowsze modele bez problemu piszą kod, zwłaszcza gdy mówimy o niewielkich aplikacjach o ograniczonym zakresie, które można łatwo uruchomić, ale także [**zapisać i ponownie wykorzystać!**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/skill-vs-saved-script) Skrypt można zapisać jako zależność skilla lub wdrożyć w Cloudflare, by można go było uruchamiać z dowolnego miejsca (jeśli ma odpowiednie uprawnienia), w reakcji na zdarzenia zewnętrzne, harmonogramy lub działania innych agentów.
 - **Możliwości:** agenci mogą mieć dedykowane narzędzia do konkretnych zadań, ale możemy je też **uogólniać**, aby [agent mógł rozwiązywać problemy, do których nie został wcześniej przygotowany](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/primitives-vs-bespoke-tools). Uogólnione narzędzia można następnie wykorzystać do **personalizacji**. Innymi słowy, zamiast narzędzia „tworzącego reklamy na Facebooka” mamy narzędzie o nazwie **generate_creation**, które można wyspecjalizować na potrzeby reklam na Facebooku.
-- **Ewaluacja:** nie potrafimy wiarygodnie przewidzieć, jak zmiany w umiejętności wpłyną na wynik, ale możemy poprosić AI o wygenerowanie [**syntetycznych scenariuszy**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/synthetic-skill-eval) i użyć narzędzi takich jak [Promptfoo](https://www.promptfoo.dev/), by wychwycić trendy i ogólne zmiany w zachowaniu.
+- **Ewaluacja:** nie potrafimy wiarygodnie przewidzieć, jak zmiany w skillu wpłyną na wynik, ale możemy poprosić AI o wygenerowanie [**syntetycznych scenariuszy**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/synthetic-skill-eval) i użyć narzędzi takich jak [Promptfoo](https://www.promptfoo.dev/), by wychwycić trendy i ogólne zmiany w zachowaniu.
 
-![Diagram przepływu przedstawiający przykład codziennego briefingu. Plik umiejętności daily-brief.md zawiera elastyczne instrukcje tekstowe i przekazuje je agentowi. Agent ponownie wykorzystuje zapisany skrypt i specjalizuje uogólnione narzędzie generate_creation. Oba znajdują się w ramce „Niezawodny kod”. Syntetyczne scenariusze testują zmiany w umiejętności. Nazwa pliku i briefing to przykładowe wartości.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.png)
+![Diagram przepływu przedstawiający przykład codziennego briefingu. Plik skilla daily-brief.md zawiera elastyczne instrukcje tekstowe i przekazuje je agentowi. Agent ponownie wykorzystuje zapisany skrypt i specjalizuje uogólnione narzędzie generate_creation. Oba znajdują się w ramce „Niezawodny kod”. Syntetyczne scenariusze testują zmiany w skillu. Nazwa pliku i briefing to przykładowe wartości.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.html)
 
 Dobra wiadomość jest taka, że projektowanie abstrakcji i uogólnionej logiki znamy już **z programowania**. Teraz dochodzi tylko jeden ważny element: agent, który przejmuje wiele zadań, które kiedyś musieliśmy budować ręcznie.
 
-Najlepszym ćwiczeniem byłoby stworzenie **zestawu możliwości** i **umiejętności**, które pomagają nam w codziennym życiu i pracy. Powinny być dla nas dostępne **zawsze**, ale działać również w tle. Zamiast jednak **budować każde narzędzie ręcznie**, stworzylibyśmy **system**, który pozwala agentom generować narzędzia i zarządzać nimi za nas. I właśnie tu zaczyna się zabawa.
+Najlepszym ćwiczeniem byłoby stworzenie **zestawu możliwości** i **skilli**, które pomagają nam w codziennym życiu i pracy. Powinny być dla nas dostępne **zawsze**, ale działać również w tle. Zamiast jednak **budować każde narzędzie ręcznie**, stworzylibyśmy **system**, który pozwala agentom generować narzędzia i zarządzać nimi za nas. I właśnie tu zaczyna się zabawa.
 
 ![Diagram z trzema kolumnami. Po lewej jest „Ty”, pośrodku „Agenci”. Po prawej ramka „Twoje narzędzia”, która zawiera „Codzienny briefing”, „Sortowanie skrzynki odbiorczej” i „Monitor wdrożeń”. Pod nimi znajduje się ramka „Twój system” z czterema polami: „Baza wiedzy (twoje notatki i fakty)”, „Kontekst globalny (cele, zasady, preferencje)”, „Prymitywy (wielokrotnego użytku elementy składowe)” i „Struktura pracy (pilnuje, by agenci trzymali się zadania)”. Czerwona strzałka z etykietą „buduj i udoskonalaj” prowadzi od „Ty” do „Twój system”. Nieopisane strzałki prowadzą z każdego pola systemu do agentów. Strzałki prowadzą od agentów do każdego narzędzia; jedna z nich ma etykietę „tworzy i utrzymuje”. Strzałka z etykietą „używaj” biegnie nad agentami od „Ty” do „Twoje narzędzia”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-6/frame.png)
 
@@ -106,7 +106,7 @@ Biorąc pod uwagę wszystko, czego dotąd się nauczyliśmy, musimy stale ulepsz
 Dotąd omawialiśmy takie elementy jak:
 
 - **Kontekst globalny i lokalny**, dostępny zarówno na naszej maszynie, jak i zdalnie, aby można go było łatwo udostępniać zespołowi
-- **Umiejętności i generatory**, tworzone i zarządzane dzięki **nawykom, które rozwijamy**, ale też dzięki **rutynom** [analizującym historię](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/session-mining) i różne źródła, takie jak systemy śledzenia zgłoszeń, logi CI/CD itd., by proponować nowe umiejętności i optymalizować istniejące, a także archiwizować te, które nie są już potrzebne
+- **Skille i generatory**, tworzone i zarządzane dzięki **nawykom, które rozwijamy**, ale też dzięki **rutynom** [analizującym historię](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/session-mining) i różne źródła, takie jak systemy śledzenia zgłoszeń, logi CI/CD itd., by proponować nowe skille i optymalizować istniejące, a także archiwizować te, które nie są już potrzebne
 - **Baza wiedzy**, dostępna **zdalnie** i łatwo osiągalna dla wszystkich agentów, przy czym — jak już omawialiśmy — jej zawartością mogą zarządzać tylko dedykowani agenci
 - **Śledzenie zadań** w dowolnej postaci — specyfikacje funkcji, opisy zgłoszeń, ADR-y czy cokolwiek, co pozwala agentowi wiedzieć, **co budujemy, co już zbudowaliśmy i co zamierzamy zbudować**
 - **Stos narzędzi**, który sam system rozwija jako własne narzędzia **MCP / CLI**, zgodnie z tymi samymi zasadami i z wykorzystaniem wspólnych prymitywów oraz bazy wiedzy

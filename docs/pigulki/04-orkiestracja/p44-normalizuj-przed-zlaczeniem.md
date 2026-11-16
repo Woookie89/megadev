@@ -43,4 +43,4 @@ job: two sources, two frames of reference — normalize before joining.”
 
 ---
 
-← [P43](p43-przekaz-skill-z-zadaniem.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P45](../05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md) →
+← [P43](p43-przekaz-skill-z-zadaniem.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P45](../05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) →

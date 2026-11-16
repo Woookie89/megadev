@@ -3,7 +3,7 @@
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: MEGA Assessment
 
 > **Lekcje:**
-> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Podagenci i wykonawcy” — [po polsku](../../pl/s01e02-steering-models-through-context.md#podagenci-i-wykonawcy) · [oryginał EN: „Subagents and Workers”](../../s01e02-steering-models-through-context.md#subagents-and-workers)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Podagenci i workery” — [po polsku](../../pl/s01e02-steering-models-through-context.md#podagenci-i-workery) · [oryginał EN: „Subagents and Workers”](../../s01e02-steering-models-through-context.md#subagents-and-workers)
 > - S01E01 · Mechanika działania generatywnej AI → rozdział „Uogólnione sterowanie” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#uogólnione-sterowanie) · [oryginał EN: „Generalized Steering”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#generalized-steering)
 
 **Zasada.** Niezależne pytania (kilka usług, dokumentacja i kod) zlecaj podagentom.

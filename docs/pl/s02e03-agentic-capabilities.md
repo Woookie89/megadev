@@ -9,11 +9,11 @@ Biorąc pod uwagę, jak szybko rozwijają się najbardziej zaawansowane modele, 
 - **Personalizacja:** instrukcje globalne, jawne wczytywanie, zakres, konwencje, wskazówki
 - **Model Context Protocol:** serwer i klient, narzędzia, zasoby, odkrywanie, konfiguracja, kompromisy między CLI a API, bezpieczeństwo, hosting i utrzymanie
 - **Projektowanie własnego MCP:** planowanie integracji, kształtowanie narzędzi, wdrażanie
-- **Umiejętności i narzędzia:** procedury, odkrywanie, stopniowe wczytywanie, materiały pomocnicze i skrypty, rozszerzone narzędzia, możliwości wielokrotnego użytku
+- **Skille i narzędzia:** procedury, odkrywanie, stopniowe wczytywanie, materiały pomocnicze i skrypty, rozszerzone narzędzia, możliwości wielokrotnego użytku
 
 ## Personalizacja
 
-Personalizacja często odbywa się za pomocą **własnych instrukcji** (takich jak AGENTS.md), **umiejętności** i **narzędzi**, ale wiemy, że można ją też realizować przez modyfikacje środowiska agenta, rozszerzenia i piaskownice.
+Personalizacja często odbywa się za pomocą **własnych instrukcji** (takich jak AGENTS.md), **skilli** i **narzędzi**, ale wiemy, że można ją też realizować przez modyfikacje środowiska agenta, rozszerzenia i sandboxy.
 
 Przyjrzyjmy się najpierw bliżej [agents.md](https://agents.md/#examples) i niektórym przykładom. Znajdziemy wśród nich bardzo szczegółowe instrukcje, a nawet listę kroków, których agent ma przestrzegać. Nawet na stronie można znaleźć taki przykład:
 
@@ -41,7 +41,7 @@ Następnie możemy wspólnie z agentem omówić projekt i ustalić, jakie hooki 
 
 Takie podejście do uogólniania i iteracyjnej optymalizacji środowiska agenta można stosować wszędzie tam, gdzie pracujemy z agentami — zarówno podczas projektowania ich od podstaw, jak i pracy z istniejącymi rozwiązaniami.
 
-Uogólnianie to umiejętność, którą programiści już posiadają, ale teraz musimy stosować ją zarówno do logiki deterministycznej, jak i niedeterministycznej. Ta druga jest zupełnie nowa i pod wieloma względami sprzeczna z tym, co już wiemy. Wymagany poziom uogólnienia jest jeszcze wyższy w przypadku instrukcji stanowiących **rdzeń agenta**, ponieważ muszą być **rozszerzane** o profile użytkowników, zasoby i umiejętności.
+Uogólnianie to umiejętność, którą programiści już posiadają, ale teraz musimy stosować ją zarówno do logiki deterministycznej, jak i niedeterministycznej. Ta druga jest zupełnie nowa i pod wieloma względami sprzeczna z tym, co już wiemy. Wymagany poziom uogólnienia jest jeszcze wyższy w przypadku instrukcji stanowiących **rdzeń agenta**, ponieważ muszą być **rozszerzane** o profile użytkowników, zasoby i skille.
 
 W praktyce musimy pamiętać o różnicy między **instrukcjami podstawowymi** a **personalizacją profilu użytkownika**, ponieważ instrukcje podstawowe są często **rozszerzane** przez inne elementy, ale nie powinny być nadpisywane.
 
@@ -54,7 +54,7 @@ Myśląc o dobrych instrukcjach dla agenta, możemy rozważyć:
 - **Dynamiczne granice:** modele mają domyślnie pewne zachowania, takie jak konieczność potwierdzania przez użytkownika niektórych rodzajów działań. Jak dowiedzieliśmy się w **S02E02**, są jednak sytuacje, na przykład praca agentów działających w tle, w których modele powinny tego unikać. Zachowanie agenta można w praktyce ukierunkować za pomocą **dynamicznie wstrzykiwanych** informacji o bieżącym kliencie. Agent będzie wtedy zachowywać się inaczej, gdy użytkownik rozmawia z nim przez aplikację mobilną, a inaczej, gdy uruchomi go harmonogram.
 - **Zachowanie domyślne:** za każdym razem, gdy chcemy, aby model zachowywał się inaczej niż zwykle, musimy mu to polecić. Na razie jednak samo umieszczenie instrukcji w prompcie systemowym nie wystarcza. Trzeba ją też powtarzać w toku interakcji za pomocą hooków.
 - **Preferencje:** nawet najbardziej inteligentne modele nie znają naszych osobistych preferencji ani kontekstu, który może wpływać na sposób wykonania pracy. Musimy nauczyć się przekazywać im te informacje bez nadmiernego ograniczania agentów, aby nadal miały **przestrzeń** do znalezienia najlepszego sposobu realizacji zadań.
-- **Rozszerzalność:** warto zadać sobie pytanie: „Jak nasze zasady będą działać, jeśli na przykład umiejętności wprowadzą nowe zachowania?”.
+- **Rozszerzalność:** warto zadać sobie pytanie: „Jak nasze zasady będą działać, jeśli na przykład skille wprowadzą nowe zachowania?”.
 
 Chociaż instrukcje dla modelu są dziś często generowane, nadal musimy pamiętać o uogólnianiu. Jest ono ważne nie tylko przy **rozszerzaniu instrukcji środowiska agenta**, ale również przy **rozszerzaniu narzędzi**, aby agent mógł korzystać z nich w spersonalizowany sposób.
 
@@ -102,7 +102,7 @@ Początkowo Model Context Protocol uznawano za chwilowy trend, a wkrótce potem 
 
 MCP to nie tylko narzędzia. Upraszcza też autoryzację, umożliwia udostępnianie **zasobów** (takich jak pliki) i **promptów**, a nawet obsługuje **sampling**, dzięki któremu serwer może poprosić host o wywołanie LLM-a. Obsługa tych funkcji różni się jednak zależnie od klienta, o czym warto pamiętać.
 
-Obecnie protokół leży u podstaw niemal każdej integracji dostępnej w popularnych środowiskach agentów. Jednocześnie bardzo się rozwinął, między innymi w kierunku **[bezstanowych serwerów MCP](https://modelcontextprotocol.io/seps/2575-stateless-mcp)**, **[umiejętności przez MCP](https://modelcontextprotocol.io/extensions/overview#skills-over-mcp)** oraz **[zdarzeń (wersja robocza)](https://github.com/modelcontextprotocol/experimental-ext-triggers-events/blob/main/docs/design-sketch-proposal.md)**.
+Obecnie protokół leży u podstaw niemal każdej integracji dostępnej w popularnych środowiskach agentów. Jednocześnie bardzo się rozwinął, między innymi w kierunku **[bezstanowych serwerów MCP](https://modelcontextprotocol.io/seps/2575-stateless-mcp)**, **[skille przez MCP](https://modelcontextprotocol.io/extensions/overview#skills-over-mcp)** oraz **[zdarzeń (wersja robocza)](https://github.com/modelcontextprotocol/experimental-ext-triggers-events/blob/main/docs/design-sketch-proposal.md)**.
 
 Aby utworzyć pierwszy serwer, możemy zacząć od wybrania [SDK](https://modelcontextprotocol.io/docs/2026-07-28/sdk) i poproszenia agenta AI o wygenerowanie go. Warto też dołączyć jako wzorzec [ten szablon TypeScript](https://github.com/iceener/streamable-mcp-server-template), który opracowuję na własny użytek. Serwer MCP można hostować na naszym VPS-ie lub w Cloudflare — zależnie od preferencji. Wystarczy udostępnić adres, z którym połączy się środowisko agenta.
 
@@ -118,7 +118,7 @@ Najciekawsze są tu dwa ostatnie punkty, bo mogą sprawić, że serwery MCP będ
 
 ## Projektowanie własnego MCP
 
-Współczesne agenty potrafią zbudować cały serwer MCP i go wdrożyć, jeśli wskażemy dokumentację usługi, dla której ma powstać. Naszym zadaniem jest ułatwienie im tego procesu (na przykład przez wspomniany szablon), zwiększenie jego niezawodności i **dostosowanie go do naszych potrzeb**. AI nie domyśli się, że możemy chcieć wielu serwerów ani jakie preferujemy końcowe kształty MCP, w tym jakie **umiejętności** chcemy dodać, by rozszerzyć narzędzia.
+Współczesne agenty potrafią zbudować cały serwer MCP i go wdrożyć, jeśli wskażemy dokumentację usługi, dla której ma powstać. Naszym zadaniem jest ułatwienie im tego procesu (na przykład przez wspomniany szablon), zwiększenie jego niezawodności i **dostosowanie go do naszych potrzeb**. AI nie domyśli się, że możemy chcieć wielu serwerów ani jakie preferujemy końcowe kształty MCP, w tym jakie **skille** chcemy dodać, by rozszerzyć narzędzia.
 
 Jednym z najlepszych sposobów rozpoczęcia pracy nad serwerami MCP jest zbudowanie takiego **dla zabawy** — niekoniecznie do pracy lub dla klientów, lecz po prostu dla siebie. Powinien to być serwer, który po połączeniu z wybranym przez nas środowiskiem stanie się częścią codziennego życia. Przykładem może być **Spotify**. Początkowo może się to wydawać głupie — po co serwer MCP do odtwarzania muzyki? W praktyce istnieje wiele powodów:
 
@@ -165,39 +165,39 @@ Podsumowując, proces wygląda następująco:
 5. **Iteracje:** iterowanie nad kształtem MCP wymaga czasu, zwłaszcza gdy mamy wiele serwerów. Możemy poradzić sobie z tym za pomocą **kontekstu globalnego / mapy**, z której agenty będą korzystać do zarządzania MCP i oceny zmian.
 6. **Wdrożenie:** jak wspomnieliśmy, najłatwiej wdrożyć MCP na Cloudflare Workers, ale możemy też hostować je na własnym VPS-ie i udostępnić pod subdomeną. Niezależnie od wybranej opcji agentom trzeba przekazać, jak uzyskać dostęp do instancji, odczytywać ich dzienniki i monitorować potencjalne problemy.
 
-## Umiejętności i narzędzia
+## Skille i narzędzia
 
-Do tej pory omawialiśmy głównie umiejętności jako sposób na uniknięcie powtarzania tych samych instrukcji i dostosowanie zachowania agenta do naszych preferencji. Powinno już być jasne, że chcemy unikać umiejętności mówiących agentowi **dokładnie, co ma zrobić**, bo ograniczałoby to jego naturalne możliwości. Wyjątkiem są **procedury**, które mogą zawierać dokładne kroki do wykonania. Ponieważ kroki te są specyficzne dla naszego przypadku, model trzeba po prostu o nich poinformować.
+Do tej pory omawialiśmy głównie skille jako sposób na uniknięcie powtarzania tych samych instrukcji i dostosowanie zachowania agenta do naszych preferencji. Powinno już być jasne, że chcemy unikać skilli mówiących agentowi **dokładnie, co ma zrobić**, bo ograniczałoby to jego naturalne możliwości. Wyjątkiem są **procedury**, które mogą zawierać dokładne kroki do wykonania. Ponieważ kroki te są specyficzne dla naszego przypadku, model trzeba po prostu o nich poinformować.
 
-Chcemy teraz skupić się na **łączeniu** umiejętności z narzędziami, opierając się na dogłębnym zrozumieniu tego, jak środowiska agentów obsługują oba te elementy, oraz na naszej wiedzy o **uogólnianiu instrukcji**. Dzięki temu ukierunkowanie pozostanie na tyle łagodne i elastyczne, by agent mógł osiągać najlepsze rezultaty w każdej sytuacji.
+Chcemy teraz skupić się na **łączeniu** skilli z narzędziami, opierając się na dogłębnym zrozumieniu tego, jak środowiska agentów obsługują oba te elementy, oraz na naszej wiedzy o **uogólnianiu instrukcji**. Dzięki temu ukierunkowanie pozostanie na tyle łagodne i elastyczne, by agent mógł osiągać najlepsze rezultaty w każdej sytuacji.
 
-Obecnie najlepszym sposobem na tworzenie **narzędzi rozszerzonych o umiejętności** jest użycie **[rozszerzenia skills](https://modelcontextprotocol.io/seps/2640-skills-extension)** dla MCP. Serwer może wtedy udostępniać zarówno narzędzia, jak i umiejętności, a środowisko agenta pokaże modelowi ich nazwy i opisy, aby mógł on **odkryć i wczytać je w razie potrzeby**.
+Obecnie najlepszym sposobem na tworzenie **narzędzi rozszerzonych o skille** jest użycie **[rozszerzenia skills](https://modelcontextprotocol.io/seps/2640-skills-extension)** dla MCP. Serwer może wtedy udostępniać zarówno narzędzia, jak i skille, a środowisko agenta pokaże modelowi ich nazwy i opisy, aby mógł on **odkryć i wczytać je w razie potrzeby**.
 
-![Diagram pionowy. U góry ramka Środowisko agenta zawiera Agenta, a pod nim klienta MCP. Agent wywołuje narzędzie przez klienta. Poniżej środowiska, poza nim, ramka serwera MCP zawiera obok siebie Narzędzie i Umiejętność. Klient uruchamia narzędzie. Przerywana czerwona linia do umiejętności ma etykietę „nie wczytano”. Linia od umiejętności do narzędzia ma etykietę „wskazuje, jak używać”.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-10/frame.png)
+![Diagram pionowy. U góry ramka Środowisko agenta zawiera Agenta, a pod nim klienta MCP. Agent wywołuje narzędzie przez klienta. Poniżej środowiska, poza nim, ramka serwera MCP zawiera obok siebie Narzędzie i Skill. Klient uruchamia narzędzie. Przerywana czerwona linia do skilla ma etykietę „nie wczytano”. Linia od skilla do narzędzia ma etykietę „wskazuje, jak używać”.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-10/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-10/frame.html)
 
-Załóżmy, że mamy narzędzie do **generowania obrazów**, które korzysta z API [Replicate](https://replicate.com/home). Narzędzie może też udostępniać zestaw umiejętności opisujących różne style, takie jak sztuka koncepcyjna, sztuka pikselowa, realistyczne zdjęcia czy kreskówki. Aby zwiększyć niezawodność takiej konfiguracji, [opis narzędzia powinien informować, że można użyć z nim umiejętności, a każda umiejętność powinna wskazywać narzędzie, z którym może współpracować](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/tool-skill-links). **Nie oznacza to jednak**, że zawsze trzeba ich używać razem. Instrukcje mogą dopuszczać użycie każdego z tych elementów osobno.
+Załóżmy, że mamy narzędzie do **generowania obrazów**, które korzysta z API [Replicate](https://replicate.com/home). Narzędzie może też udostępniać zestaw skilli opisujących różne style, takie jak sztuka koncepcyjna, sztuka pikselowa, realistyczne zdjęcia czy kreskówki. Aby zwiększyć niezawodność takiej konfiguracji, [opis narzędzia powinien informować, że można użyć z nim skilli, a każdy skill powinien wskazywać narzędzie, z którym może współpracować](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/tool-skill-links). **Nie oznacza to jednak**, że zawsze trzeba ich używać razem. Instrukcje mogą dopuszczać użycie każdego z tych elementów osobno.
 
-![Jeden serwer MCP zawiera narzędzie do generowania obrazów oraz zestaw umiejętności dotyczących stylów: sztuka koncepcyjna, sztuka pikselowa, realistyczne zdjęcia i kreskówki. Łączą je dwie czerwone linie. Opis narzędzia mówi, że można użyć go z umiejętnością dotyczącą stylu. Każda umiejętność wskazuje, że można jej użyć z narzędziem do generowania obrazów. Nad serwerem agent otrzymuje prośbę o użycie narzędzia z jednej strony i umiejętności z drugiej. Z dowolnego punktu wejścia agent znajduje odniesienie do drugiego elementu. Nazwy umiejętności są przykładami z tekstu.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-11/frame.png)
+![Jeden serwer MCP zawiera narzędzie do generowania obrazów oraz zestaw skilli dotyczących stylów: sztuka koncepcyjna, sztuka pikselowa, realistyczne zdjęcia i kreskówki. Łączą je dwie czerwone linie. Opis narzędzia mówi, że można użyć go ze skillem dotyczącym stylu. Każdy skill wskazuje, że można go użyć z narzędziem do generowania obrazów. Nad serwerem agent otrzymuje prośbę o użycie narzędzia z jednej strony i skilla z drugiej. Z dowolnego punktu wejścia agent znajduje odniesienie do drugiego elementu. Nazwy skilli są przykładami z tekstu.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-11/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-11/frame.html)
 
-Następnym krokiem jest **łączenie umiejętności** za pomocą „umiejętności-routerów”. Załóżmy, że serwer udostępnia zestaw narzędzi do obróbki obrazów, wideo i dźwięku oraz umiejętności wskazujące, jak stylizować każdy z tych rodzajów treści. Umiejętności mogą też odsyłać do siebie nawzajem, dzięki czemu przez MCP można udostępniać zaawansowane przepływy pracy.
+Następnym krokiem jest **łączenie skilli** za pomocą „skilli-routerów”. Załóżmy, że serwer udostępnia zestaw narzędzi do obróbki obrazów, wideo i dźwięku oraz skille wskazujące, jak stylizować każdy z tych rodzajów treści. Skille mogą też odsyłać do siebie nawzajem, dzięki czemu przez MCP można udostępniać zaawansowane przepływy pracy.
 
-![Diagram umiejętności-routerów na jednym serwerze MCP. U góry agent otrzymuje przykładową prośbę: „Stwórz zwiastun w stylu sztuki pikselowej z retro ścieżką dźwiękową”. Czerwona linia prowadzi od agenta do umiejętności Ruter, jedynego elementu w czerwonej ramce. Ruter i trzy grupy (Obraz, Wideo i Dźwięk) znajdują się w ramce serwera MCP. Każda grupa ma narzędzie na dole i umiejętności stylizacji nad nim. Cienkie linie łączą każde narzędzie z jego umiejętnościami. Umiejętności grupy Obraz to sztuka pikselowa, sztuka koncepcyjna, realistyczne zdjęcie i kreskówka. Umiejętności grupy Wideo to animacja i styl filmowy. Umiejętności grupy Dźwięk to retro, muzyka ambientowa i lektor. Czerwone linie prowadzą od rutera do sztuki pikselowej, animacji i retro. Neutralne strzałki łączą sztukę pikselową z animacją, a animację z retro, tworząc przepływ pracy. Cienka, przerywana linia z etykietą „można pominąć ruter” prowadzi od agenta bezpośrednio do narzędzia Obraz. Nazwy umiejętności, prośba i wybory routera są przykładami. Retro to przykładowa umiejętność dźwiękowa dodana na potrzeby tej prośby.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-12/frame.png)
+![Diagram skilli-routerów na jednym serwerze MCP. U góry agent otrzymuje przykładową prośbę: „Stwórz zwiastun w stylu sztuki pikselowej z retro ścieżką dźwiękową”. Czerwona linia prowadzi od agenta do skilla Ruter, jedynego elementu w czerwonej ramce. Ruter i trzy grupy (Obraz, Wideo i Dźwięk) znajdują się w ramce serwera MCP. Każda grupa ma narzędzie na dole i skille stylizacji nad nim. Cienkie linie łączą każde narzędzie z jego skillami. Skille grupy Obraz to sztuka pikselowa, sztuka koncepcyjna, realistyczne zdjęcie i kreskówka. Skille grupy Wideo to animacja i styl filmowy. Skille grupy Dźwięk to retro, muzyka ambientowa i lektor. Czerwone linie prowadzą od rutera do sztuki pikselowej, animacji i retro. Neutralne strzałki łączą sztukę pikselową z animacją, a animację z retro, tworząc przepływ pracy. Cienka, przerywana linia z etykietą „można pominąć ruter” prowadzi od agenta bezpośrednio do narzędzia Obraz. Nazwy skilli, prośba i wybory routera są przykładami. Retro to przykładowy skill dźwiękowy dodany na potrzeby tej prośby.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-12/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-12/frame.html)
 
-Wniosek jest taki: projektując agenta, warto utrzymać jego rdzeń prostym i elastycznym, a następnie wyspecjalizować go za pomocą **narzędzi i umiejętności MCP**. Celem nie jest uczenie agenta dokładnie, jak ma wykonywać zadania. Zamiast tego zapewniamy mu możliwości, by sam znalazł najlepszy sposób ich wykorzystania, albo procedury, których może przestrzegać.
+Wniosek jest taki: projektując agenta, warto utrzymać jego rdzeń prostym i elastycznym, a następnie wyspecjalizować go za pomocą **narzędzi i skilli MCP**. Celem nie jest uczenie agenta dokładnie, jak ma wykonywać zadania. Zamiast tego zapewniamy mu możliwości, by sam znalazł najlepszy sposób ich wykorzystania, albo procedury, których może przestrzegać.
 
-## Wnioski
+## Najważniejsze wnioski
 
 Powinno być już jasne, że **uogólnianie** to jedna z najważniejszych umiejętności, które trzeba rozwijać, jeśli chcemy budować dobre agenty. Uogólnianie musi być jednak „wbudowane” również w samych agentów. Innymi słowy, należy unikać przekazywania im dokładnych procedur. Zostawmy im trochę przestrzeni na dostosowanie się, aby mogły znaleźć najlepszy sposób realizacji zadania.
 
-Uogólnianie powinno pojawiać się nie tylko w promptach, ale również w sposobie projektowania **narzędzi i umiejętności agentowych**, serwerów MCP oraz narzędzi CLI.
+Uogólnianie powinno pojawiać się nie tylko w promptach, ale również w sposobie projektowania **narzędzi i skilli agentowych**, serwerów MCP oraz narzędzi CLI.
 
-Jest też oczywiste, że co do zasady dobry agent powinien działać w dedykowanej piaskownicy z nieograniczonym dostępem do systemu plików i wykonywania kodu. Umożliwia to zaawansowane zarządzanie kontekstem, ponieważ agent może wykorzystać swoje naturalne umiejętności pisania kodu i korzystania z terminala. Dzięki nim może łatwo uzyskiwać dostęp do historii sesji, wyników narzędzi i wygenerowanych artefaktów.
+Jest też oczywiste, że co do zasady dobry agent powinien działać w dedykowanym sandboxie z nieograniczonym dostępem do systemu plików i wykonywania kodu. Umożliwia to zaawansowane zarządzanie kontekstem, ponieważ agent może wykorzystać swoje naturalne umiejętności pisania kodu i korzystania z terminala. Dzięki nim może łatwo uzyskiwać dostęp do historii sesji, wyników narzędzi i wygenerowanych artefaktów.
 
 Z drugiej strony w niektórych przypadkach agent potrzebuje jedynie łatwego dostępu tylko do odczytu do dokumentów oraz ograniczonego środowiska wykonawczego. To od nas zależy, która ścieżka lepiej pasuje do danego zastosowania.
 

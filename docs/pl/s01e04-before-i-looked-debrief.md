@@ -18,7 +18,7 @@ Zespół przekazał repo `rig-handover` z planem „morning digest”. Trzeba by
 1. rozbić plan na issues (każde zaczyna się od `Source: plan.md § <n>` i ma etykietę
    `plan:morning-digest`);
 2. zbudować funkcję: stronę i JSON digestu za daną noc oraz linki na tablicy;
-3. dać recenzentowi publiczny link do kopii strony w HTML, ze znacznikiem pasa (`LANE_MARKER`);
+3. dać recenzentowi publiczny link do kopii strony w HTML, ze znacznikiem lane, czyli toru (`LANE_MARKER`);
 4. po recenzji wgrać stronę bez znacznika pod ten sam link i zamknąć plan.
 
 ## Wynik

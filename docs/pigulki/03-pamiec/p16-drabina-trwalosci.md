@@ -3,7 +3,7 @@
 > Rozdział [3. Pamięć poza czatem](README.md) · epizody: S01E04, MEGA Assessment
 
 > **Lekcje:**
-> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Personalizacja uprzęży” — [po polsku](../../pl/s01e02-steering-models-through-context.md#personalizacja-uprzęży) · [oryginał EN: „Harness Personalization”](../../s01e02-steering-models-through-context.md#harness-personalization)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Personalizacja harnessu” — [po polsku](../../pl/s01e02-steering-models-through-context.md#personalizacja-harnessu) · [oryginał EN: „Harness Personalization”](../../s01e02-steering-models-through-context.md#harness-personalization)
 > - S02E03 · Możliwości agentów → rozdział „Personalizacja” — [po polsku](../../pl/s02e03-agentic-capabilities.md#personalizacja) · [oryginał EN: „Personalization”](../../s02e03-agentic-capabilities.md#personalization)
 
 **Zasada.** Ta sama reguła może żyć na różnych szczeblach. Im wyżej, tym mniej zależy od

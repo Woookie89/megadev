@@ -23,7 +23,7 @@
 | tryb headless (`claude -p`) | Claude Code uruchomiony bez interfejsu: dostaje prompt, pracuje sam i wypisuje wynik. |
 | routine | Zadanie Claude Code uruchamiane w chmurze Anthropic (claude.ai/code): jednorazowo, według harmonogramu albo po zdarzeniu. |
 | sandbox | Odizolowane środowisko, w którym działa agent. Ma tylko te pliki, narzędzia i dostęp do sieci, które mu udostępniono. |
-| allowlista | Lista dozwolonych domen (albo komend). Wszystko spoza niej jest blokowane ([P45](05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)). |
+| allowlista | Lista dozwolonych domen (albo komend). Wszystko spoza niej jest blokowane ([P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)). |
 
 ---
 

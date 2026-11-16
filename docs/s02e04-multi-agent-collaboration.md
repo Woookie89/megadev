@@ -117,10 +117,10 @@ An interaction can be handled in a few ways: polling, server-sent events, or pus
 Let's say we have a research agent that needs some information from a second agent. The interaction goes like this:
 
 1. Agent A discovers Agent B's card and learns about its capabilities.
-   2. Agent A sends Agent B a message containing all the information it has.
-   3. Agent B needs one more detail. It pauses the task in the input-required state and asks a question.
-   4. Agent A sends the answer with the same task ID.
-   5. Agent B completes the task and returns the results.
+2. Agent A sends Agent B a message containing all the information it has.
+3. Agent B needs one more detail. It pauses the task in the input-required state and asks a question.
+4. Agent A sends the answer with the same task ID.
+5. Agent B completes the task and returns the results.
 
 And below we have a possible representation of that exchange. It is also worth cloning [this repository](https://github.com/a2aproject/a2a-samples/tree/main/samples) and chat about included samples with our agent, to explore available patterns. 
 

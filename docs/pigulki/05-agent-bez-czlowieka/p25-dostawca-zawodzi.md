@@ -1,4 +1,4 @@
-# P25 · Dostawca modelu zawodzi, więc projektuj na to
+# P25 · Dostawca modelu bywa zawodny: uwzględnij to w projekcie
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02
 

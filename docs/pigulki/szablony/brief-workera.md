@@ -23,7 +23,7 @@ commit: <sha>
 
 Pola `Skill`, `Reach` i `Way home` doszły po S02E04:
 [P43](../04-orkiestracja/p43-przekaz-skill-z-zadaniem.md),
-[P45](../05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md).
+[P45](../05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md).
 
 ---
 

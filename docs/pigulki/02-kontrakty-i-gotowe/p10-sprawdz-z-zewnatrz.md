@@ -9,7 +9,7 @@
 **Zasada.** Zanim oddasz coś odbiorcy z limitem prób, zrób test dymny (smoke test) z jego perspektywy.
 
 **Przypadek.**
-- S01E04: harness pobrał publiczny link przez HTTPS i potwierdził tytuł i znacznik pasa
+- S01E04: harness pobrał publiczny link przez HTTPS i potwierdził tytuł i znacznik lane, czyli toru
   (`LANE_MARKER`).
 - S01E05: podpisany selfcheck hosta testował oba modele, nie zużywając pytań recenzenta.
 - S02E02: tryb `node agent.mjs --dry "<treść maila>"` albo jeden mail testowy przed podaniem

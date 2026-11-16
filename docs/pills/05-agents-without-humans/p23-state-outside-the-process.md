@@ -4,7 +4,7 @@
 
 > **Lessons:**
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
-> - S02E02 · Building an Agent → chapter "Workflows and long-horizon tasks" — [original (EN)](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks) · [Polish: „Przepływy pracy i zadania długoterminowe”](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długoterminowe)
+> - S02E02 · Building an Agent → chapter "Workflows and long-horizon tasks" — [original (EN)](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks) · [Polish: „Przepływy pracy i zadania długookresowe”](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długookresowe)
 
 **Principle.** Agent state lives in an outside system, not in process memory. Project state
 is read from the source of truth, not from a copy in a file.

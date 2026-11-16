@@ -32,7 +32,7 @@ z człowiekiem: nie możesz go o nic zapytać. Czego nie ma w źródłach, to pi
 3. Indeksy: README rozdziału, `pigulki/README.md` i `pills/README.md` (wszystkie pigułki,
    indeks lekcji, indeks epizodów, data „Stan na”), status w `docs/challenges.md` i w
    `docs/challenges/SXXEYY_<slug>.md`.
-4. Sprawdzenie linków: `node .agents/skills/zadanie/scripts/check-links.mjs docs`.
+4. Sprawdzenie linków: `node .agents/skills/mega-task/scripts/check-links.mjs docs`.
    Napraw każdy zepsuty link, który sam dodałeś.
 
 ## Zasady

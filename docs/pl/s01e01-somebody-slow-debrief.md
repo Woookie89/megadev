@@ -57,4 +57,4 @@ Harness wyciął pięć akapitów: obserwacje o nieznanym systemie, roczny pośc
 
 Strona wyzwania pokazywała aktywny run 2 oraz wcześniejszy rozwiązany run. Użytkownik zalogował się w udostępnionej przeglądarce, przejrzał plan cięć i pozwolił kontynuować. Debrief zapisano na [stronie wyzwania](https://hq.mega.dev/challenges/somebody-slow#debrief).
 
-Kurs dodał do talii użytkownika umiejętność `read`. Pomaga znajdować kontrakty przed wysyłką, skracać tekst z listą treści do zachowania i sprawdzać aktualne nazwy modeli; nie została automatycznie zainstalowana.
+Kurs dodał do talii użytkownika skill `read`. Pomaga znajdować kontrakty przed wysyłką, skracać tekst z listą treści do zachowania i sprawdzać aktualne nazwy modeli; nie została automatycznie zainstalowana.

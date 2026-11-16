@@ -3,7 +3,7 @@
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S02E04
 
 > **Lekcje:**
-> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Podagenci i wykonawcy” — [po polsku](../../pl/s01e02-steering-models-through-context.md#podagenci-i-wykonawcy) · [oryginał EN: „Subagents and Workers”](../../s01e02-steering-models-through-context.md#subagents-and-workers)
+> - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Podagenci i workery” — [po polsku](../../pl/s01e02-steering-models-through-context.md#podagenci-i-workery) · [oryginał EN: „Subagents and Workers”](../../s01e02-steering-models-through-context.md#subagents-and-workers)
 > - S02E04 · Współpraca wielu agentów → rozdział „Architektury wieloagentowe” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe) · [oryginał EN: „Multi-agent architectures”](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures)
 
 **Zasada.** Worker nie dziedziczy rozmowy. Brief musi zawierać wszystko, czego worker nie
@@ -20,7 +20,7 @@ S02E04: brief każdego workera miał jedno zadanie, nazwę i wersję skilla, jed
 oddania wyniku: zakończ pracę wiadomością ze znacznikiem `JOB2_SUBMIT_REPLY:` (zdalnie `JOB1_SUBMIT_REPLY:`)
 i całą odpowiedzią `submit`. Oba workery oddały wynik za pierwszym razem, a główny agent
 o nic nie dopytywał ([P43](p43-przekaz-skill-z-zadaniem.md),
-[P45](../05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)).
+[P45](../05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)).
 
 **Stosuj.** Szablon w [Dodatku A3](../szablony/brief-workera.md).
 

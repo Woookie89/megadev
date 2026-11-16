@@ -8,7 +8,7 @@ albo kosztują.
 | --- | --- | --- |
 | [P33](p33-prawa-decyzyjne.md) | Podział praw decyzyjnych jest jawny | S01E03, S01E04, MEGA Assessment |
 | [P34](p34-zgoda-ma-zakres.md) | Zgoda ma zakres | S01E04 |
-| [P35](p35-uprawnienia-harnessu.md) | Uprawnienia harnessu są częścią setupu: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, MEGA Assessment |
+| [P35](p35-uprawnienia-harnessu.md) | Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, MEGA Assessment |
 | [P36](p36-pokaz-plan-przed-publikacja.md) | Pokaż plan, zanim opublikujesz | S01E04 |
 
 ---

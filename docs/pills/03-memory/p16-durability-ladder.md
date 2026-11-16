@@ -3,7 +3,7 @@
 > Chapter [3. Memory outside the chat](README.md) · episodes: S01E04, MEGA Assessment
 
 > **Lessons:**
-> - S01E02 · Steering Models Through Context → chapter "Harness Personalization" — [original (EN)](../../s01e02-steering-models-through-context.md#harness-personalization) · [Polish: „Personalizacja uprzęży”](../../pl/s01e02-steering-models-through-context.md#personalizacja-uprzęży)
+> - S01E02 · Steering Models Through Context → chapter "Harness Personalization" — [original (EN)](../../s01e02-steering-models-through-context.md#harness-personalization) · [Polish: „Personalizacja harnessu”](../../pl/s01e02-steering-models-through-context.md#personalizacja-harnessu)
 > - S02E03 · Agentic Capabilities → chapter "Personalization" — [original (EN)](../../s02e03-agentic-capabilities.md#personalization) · [Polish: „Personalizacja”](../../pl/s02e03-agentic-capabilities.md#personalizacja)
 
 **Principle.** The same rule can live on different rungs. The higher it is, the less it

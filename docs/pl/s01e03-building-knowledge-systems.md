@@ -6,7 +6,7 @@ Zaczynajmy!
 
 ## Plan
 
-- Formaty: Markdown, HTML, mdx i svx, komponenty, poziomy szczegółowości, artefakty i umiejętności
+- Formaty: Markdown, HTML, mdx i svx, komponenty, poziomy szczegółowości, artefakty i skille
 - Bazy stawiające agentów na pierwszym miejscu: agenci a ludzie, pomosty do istniejących narzędzi, LLM tworzy i utrzymuje bazę
 - Wyszukiwanie: grep i ripgrep, wyszukiwanie semantyczne, trafność a podobieństwo, modele decyzyjne, wyszukiwanie hybrydowe
 - Docieranie do kontekstu: kontekst globalny, kontekst projektu, metadane, struktura wybierana przez agenta
@@ -70,11 +70,11 @@ Jest to szczególnie przydatne w przypadku złożonych zagadnień, które najpie
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-6/frame.html)
 
-Agenci potrafią dziś całkiem sprawnie korzystać z `.svx`, ale warto poświęcić trochę czasu na przygotowanie konfiguracji, która jeszcze bardziej im to ułatwi. Przykład znajdziesz w [repozytorium skills](https://github.com/overment/skills/tree/main/skills/explainer), gdzie umiejętność `explainer` to nie tylko prompt. Zawiera również szablony i logikę ułatwiające agentowi przygotowywanie **spójnych** wizualizacji. Taka umiejętność działa najlepiej z **najnowocześniejszymi modelami (SOTA)**.
+Agenci potrafią dziś całkiem sprawnie korzystać z `.svx`, ale warto poświęcić trochę czasu na przygotowanie konfiguracji, która jeszcze bardziej im to ułatwi. Przykład znajdziesz w [repozytorium skills](https://github.com/overment/skills/tree/main/skills/explainer), gdzie skill `explainer` to nie tylko prompt. Zawiera również szablony i logikę ułatwiające agentowi przygotowywanie **spójnych** wizualizacji. Taki skill działa najlepiej z **najnowocześniejszymi modelami (SOTA)**.
 
-Umiejętność `explainer` może być **inspiracją** do tworzenia umiejętności w różnych wyspecjalizowanych obszarach: objaśniania zgłoszeń, raportów aktywności, ogólnych decyzji architektonicznych i innych — dostosowanych do projektów, nad którymi pracujemy. Wniosek jest taki, że **artefakty i umiejętności mogą stać się częścią naszej bazy wiedzy** i powinny **ukierunkowywać model** na wyniki zgodne z naszymi potrzebami, nie ograniczając jego możliwości.
+Skill `explainer` może być **inspiracją** do tworzenia skilli w różnych wyspecjalizowanych obszarach: objaśniania zgłoszeń, raportów aktywności, ogólnych decyzji architektonicznych i innych — dostosowanych do projektów, nad którymi pracujemy. Wniosek jest taki, że **artefakty i skille mogą stać się częścią naszej bazy wiedzy** i powinny **ukierunkowywać model** na wyniki zgodne z naszymi potrzebami, nie ograniczając jego możliwości.
 
-![Diagram przepływu. Ramka Baza wiedzy zawiera dwa pola: Struktura, treść (Markdown, HTML, .svx) oraz Szablony, wskazówki (umiejętności, artefakty). Struktura i treść dostarczają modelowi treści. Szablony i wskazówki ukierunkowują model — ten element zaznaczono na czerwono. Model jest ukierunkowany, ale nieograniczony, i dostarcza spersonalizowane, pożądane i spójne wyniki.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.png)
+![Diagram przepływu. Ramka Baza wiedzy zawiera dwa pola: Struktura, treść (Markdown, HTML, .svx) oraz Szablony, wskazówki (skille, artefakty). Struktura i treść dostarczają modelowi treści. Szablony i wskazówki ukierunkowują model — ten element zaznaczono na czerwono. Model jest ukierunkowany, ale nieograniczony, i dostarcza spersonalizowane, pożądane i spójne wyniki.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.html)
 
@@ -149,14 +149,14 @@ Ponieważ modele **myślą podczas generowania tokenów**, a **zawartość konte
 
 Omówienie tych technik baz wiedzy może pomóc nam lepiej je zrozumieć, ale naszym celem nie jest **samodzielne budowanie systemu**, tylko **kształtowanie środowiska, w którym agenci tworzą bazę wiedzy**.
 
-Przykładem może być [umiejętność knowledge](https://github.com/overment/skills/tree/main/skills/knowledge), która w uogólniony sposób buduje strukturę bazy wiedzy:
+Przykładem może być [skill knowledge](https://github.com/overment/skills/tree/main/skills/knowledge), która w uogólniony sposób buduje strukturę bazy wiedzy:
 
 1. **Określenie celu:** kilka pytań, które musimy sobie zadać w związku z bazą wiedzy.
 2. **Zbudowanie kontekstu:** agent musi ustalić najbardziej użyteczne metody i ogólne zasady.
 3. **Zainicjowanie struktury:** agent musi iterować nad początkową strukturą i relacjami między dokumentami, wypróbowując kilka różnych podejść.
 4. **Zainicjowanie szablonów:** trzeba określić formę dokumentów — niekoniecznie jako listę sztywnych sekcji, lecz raczej jako ogólne wskazówki dotyczące wyboru najlepszej struktury dla danej notatki.
-5. **Napisanie instrukcji:** na tym etapie agent musi utworzyć umiejętność pracy z bazą wiedzy.
-6. **Przetestowanie:** korzystając z subagentów lub osobnych sesji, agent musi użyć umiejętności, sprawdzić, jak działa baza wiedzy, i wspólnie z nami ustalić, co można poprawić.
+5. **Napisanie instrukcji:** na tym etapie agent musi utworzyć skill do pracy z bazą wiedzy.
+6. **Przetestowanie:** korzystając z subagentów lub osobnych sesji, agent musi użyć skilla, sprawdzić, jak działa baza wiedzy, i wspólnie z nami ustalić, co można poprawić.
 
 Warto zrozumieć, że **po podaniu początkowych wymagań** powyższy proces może przebiegać **automatycznie**, aż LLM uzna, że jest gotowy. Co jeszcze ważniejsze, **proces może uruchamiać się automatycznie** w miarę rozrastania się bazy wiedzy, aby ulepszać jej strukturę. Modyfikowanie bazy zawierającej tysiące notatek nie będzie łatwe nawet dla AI, ale i tak może ona zrobić znacznie więcej, niż potrafilibyśmy bez niej.
 
@@ -222,7 +222,7 @@ Załóżmy, że chcemy mieć osobistą bazę wiedzy przeznaczoną wyłącznie dl
 - **Samodoskonalenie:** baza powinna rozwijać się niemal autonomicznie, bez tego, żebyśmy musieli cokolwiek sprawdzać lub zmieniać, przeglądając pliki. Każda interakcja z nami musi odbywać się za pośrednictwem agenta lub agentów.
 - **Prostota:** baza wiedzy może łatwo stać się odrębnym systemem, ale jak dotąd najlepszym podejściem jest **zachowanie prostoty** i poleganie wyłącznie na **rozwijających się możliwościach agentów i harnessów**, zamiast walczyć z ich słabościami.
 
-W zależności od naszych potrzeb może pojawić się więcej zasad. Następnie możemy użyć wspomnianej wcześniej `knowledge skill`, by nadać bazie wiedzy początkową strukturę oraz utworzyć umiejętność zarządzania nią. Poniżej przedstawiono wygenerowaną umiejętność.
+W zależności od naszych potrzeb może pojawić się więcej zasad. Następnie możemy użyć wspomnianej wcześniej `knowledge skill`, by nadać bazie wiedzy początkową strukturę oraz utworzyć skill do zarządzania nią. Poniżej przedstawiono wygenerowany skill.
 
 ![Karta zatytułowana „personal-agi-kb skill” z trzema poziomami. U góry pole SKILL.md wymienia przeznaczenie bazy, zasady wraz z uzasadnieniem oraz wskazuje, którą notatkę otworzyć dla danego zadania. Cienkie linie prowadzą od niego do sześciu notatek referencyjnych: map, flow, intake, search, upkeep i structure log — każda z krótkim opisem roli. Na dole znajdują się dwa skrypty: check.ts sprawdza łącza i pola, a kb.ts obsługuje identyfikatory, zapytania i przebudowywane strony. Pionowa skala po prawej oznacza poziomy: zawsze czytane, otwierane w razie potrzeby oraz uruchamiane, a nie czytane. Pod kartą napis: osąd w notatkach, mechanika w skryptach.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-21/frame.png)
 
@@ -234,6 +234,6 @@ Poniżej znajduje się **ogólna struktura** „osobistej bazy wiedzy AGI”, ob
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-22/frame.html)
 
-## Wnioski
+## Najważniejsze wnioski
 
 Nawet w dobie AI bazy wiedzy „łatwo zacząć, trudno opanować”, ale nie powinno nas to powstrzymywać. Osobista baza wiedzy to jedna z najlepszych rzeczy, których możemy spróbować, bo pomoże nam odkrywać wiele możliwości, ale też napotkać problemy — nie tylko po stronie AI, lecz także w otaczającym je środowisku, ponieważ wiele aplikacji i usług wciąż nie jest gotowych na erę AI.

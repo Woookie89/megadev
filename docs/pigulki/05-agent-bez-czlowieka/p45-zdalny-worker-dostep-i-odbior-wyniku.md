@@ -1,4 +1,4 @@
-# P45 · Zdalny worker: zaplanuj drogę tam i z powrotem
+# P45 · Zdalny worker: zaplanuj dostęp i odbiór wyniku
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S02E04
 

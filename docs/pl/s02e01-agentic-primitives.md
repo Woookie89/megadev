@@ -65,7 +65,7 @@ Interakcje z agentem zapisują się w wątku, który może obejmować wiele sesj
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-7/frame.html)
 
 **Trwałość danych:**
-Wątek to nie jedyna rzecz, którą harness musi przechowywać. Są też załączniki, wygenerowane artefakty, skrypty, umiejętności, uprawnienia, połączenia, integracje, niestandardowe narzędzia i wiele więcej. Z perspektywy programisty nie ma w tym nic ciekawego, dopóki nie uwzględnimy, że **agenci muszą mieć możliwość zarządzania tym wszystkim**.
+Wątek to nie jedyna rzecz, którą harness musi przechowywać. Są też załączniki, wygenerowane artefakty, skrypty, skille, uprawnienia, połączenia, integracje, niestandardowe narzędzia i wiele więcej. Z perspektywy programisty nie ma w tym nic ciekawego, dopóki nie uwzględnimy, że **agenci muszą mieć możliwość zarządzania tym wszystkim**.
 
 Na przykład wygenerowane obrazy lub artefakty powinny być dostępne agentowi, aby mógł do nich wrócić przy kolejnych zadaniach. Jeśli dana integracja wymaga dodatkowego uprawnienia, agent powinien móc pokazać nam ustawienia, w których możemy je przyznać.
 
@@ -75,7 +75,7 @@ Na przykład wygenerowane obrazy lub artefakty powinny być dostępne agentowi, 
 
 Jest tu pewien haczyk, związany z **wyjściem poza kontekst pojedynczego użytkownika**. Przyzwyczailiśmy się do tego, że agenci mogą swobodnie korzystać z systemu plików na naszym Macu lub PC. Gdy jednak wyjdziemy poza ten zakres i pozwolimy agentom pracować dla zespołu lub użytkowników na produkcji, bez sandboxów i odpowiedniego zarządzania uprawnieniami sytuacja znacznie się komplikuje.
 
-![Agent po lewej łączy się z trzema ramkami trwałych elementów. Ramki pokazują trzy poziomy dostępu. „Agent odczytuje” zawiera wątki i załączniki. „Agent tworzy i edytuje” zawiera artefakty, skrypty, umiejętności i niestandardowe narzędzia; ta ramka jest czerwona. „Agent prosi, użytkownik przyznaje” zawiera uprawnienia, połączenia i integracje. Grupowanie elementów na poziomy jest przykładowe.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.png)
+![Agent po lewej łączy się z trzema ramkami trwałych elementów. Ramki pokazują trzy poziomy dostępu. „Agent odczytuje” zawiera wątki i załączniki. „Agent tworzy i edytuje” zawiera artefakty, skrypty, skille i niestandardowe narzędzia; ta ramka jest czerwona. „Agent prosi, użytkownik przyznaje” zawiera uprawnienia, połączenia i integracje. Grupowanie elementów na poziomy jest przykładowe.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.html)
 
@@ -117,7 +117,7 @@ Wszystkie te elementy można uznać za rdzeń logiki harnessu. Razem dobrze poka
 Jeśli ta wiedza wydaje się zbędna osobom, które nie będą budować własnego agenta, rozważmy następujące kwestie:
 
 - nie możemy mieć bardzo długiego pliku AGENTS.md, bo model zignoruje jego większość, a opóźnienie i koszt wzrosną, dopóki zawartość nie zostanie zbuforowana
-- umiejętności również muszą być krótkie, a czasem trzeba je **aktywować ponownie** wiele razy z powodu kompakcji kontekstu
+- skille również muszą być krótkie, a czasem trzeba je **aktywować ponownie** wiele razy z powodu kompakcji kontekstu
 - jeśli to możliwe, powinniśmy zadbać, by wątek był **jak najkrótszy**, albo przynajmniej utrzymać agenta **wyspecjalizowanego** w określonych zadaniach
 - możemy oczekiwać, że agent znajdzie informacje potrzebne do wykonania zadania, ale powinniśmy mu to ułatwić i pamiętać, że informacje te mogą zniknąć wskutek kompresji albo po prostu zostać zignorowane przez model
 
@@ -230,7 +230,7 @@ Interakcje agenta ze światem zewnętrznym można zaimplementować na wiele spos
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-26/frame.html)
 
-- **Możliwość ponownego użycia:** wiemy, że umiejętności mogą zawierać skrypty, które agent **wykorzystuje ponownie**, by nie wykonywać ręcznie tego samego zadania. To samo dotyczy narzędzi, jeśli pozwolimy agentowi nimi zarządzać. Nie chodzi jednak tylko o to, by agent **tworzył narzędzia**, ale także o połączenie ich z innymi możliwościami, takimi jak **dostępne integracje**, **magazyny wartości** lub **inne pakiety**.
+- **Możliwość ponownego użycia:** wiemy, że skille mogą zawierać skrypty, które agent **wykorzystuje ponownie**, by nie wykonywać ręcznie tego samego zadania. To samo dotyczy narzędzi, jeśli pozwolimy agentowi nimi zarządzać. Nie chodzi jednak tylko o to, by agent **tworzył narzędzia**, ale także o połączenie ich z innymi możliwościami, takimi jak **dostępne integracje**, **magazyny wartości** lub **inne pakiety**.
 
 ![Pionowy diagram. Agent u góry tworzy pakiet. Pakiet zawiera logikę. Linie prowadzą od logiki do trzech możliwości: integracji, magazynów wartości i innych pakietów. Linie importu w logice są przykładem.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-27/frame.png)
 

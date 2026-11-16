@@ -191,7 +191,7 @@ uruchomienia routine).
    tylko zaplanowaną drogą.** Sandbox w chmurze ma własną sieć, własne konektory i własne
    uprawnienia. Wynik nie wraca sam: trzeba z góry wiedzieć, skąd go odebrać. Przyda się
    przy CI, routine, agentach na serwerze i każdej pracy puszczonej w tle.
-   → [P45](../pigulki/05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)
+   → [P45](../pigulki/05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)
 4. **Worker dostaje tylko narzędzia swojego zadania.** Jeden serwer MCP na workera, żadnych
    konektorów w chmurze, krótka lista zgód. Pamiętaj jednak, że lista zgód nie usuwa
    wbudowanych narzędzi, robi to dopiero `--tools`.

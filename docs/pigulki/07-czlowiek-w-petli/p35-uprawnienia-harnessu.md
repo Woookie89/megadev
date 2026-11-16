@@ -1,4 +1,4 @@
-# P35 · Uprawnienia harnessu są częścią setupu: zawężaj, nie poszerzaj
+# P35 · Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj
 
 > Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E03, S02E01, S02E03, MEGA Assessment
 

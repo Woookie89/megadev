@@ -3,7 +3,7 @@
 > Chapter [4. Orchestration: many agents, one result](README.md) · episodes: MEGA Assessment
 
 > **Lessons:**
-> - S01E02 · Steering Models Through Context → chapter "Subagents and Workers" — [original (EN)](../../s01e02-steering-models-through-context.md#subagents-and-workers) · [Polish: „Podagenci i wykonawcy”](../../pl/s01e02-steering-models-through-context.md#podagenci-i-wykonawcy)
+> - S01E02 · Steering Models Through Context → chapter "Subagents and Workers" — [original (EN)](../../s01e02-steering-models-through-context.md#subagents-and-workers) · [Polish: „Podagenci i workery”](../../pl/s01e02-steering-models-through-context.md#podagenci-i-workery)
 > - S01E01 · Mechanics Behind Generative AI → chapter "Generalized Steering" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#generalized-steering) · [Polish: „Uogólnione sterowanie”](../../pl/s01e01-mechanics-behind-generative-ai.md#uogólnione-sterowanie)
 
 **Principle.** Send independent questions (several services; docs and code) to subagents.

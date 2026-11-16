@@ -4,7 +4,7 @@
 
 > **Lessons:**
 > - S01E01 · Mechanics Behind Generative AI → chapter "Mechanics of Large Language Models" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models) · [Polish: „Mechanika dużych modeli językowych”](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych)
-> - S01E01 · Mechanics Behind Generative AI → chapter "Platforms and Harnesses" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#platforms-and-harnesses) · [Polish: „Platformy i uprzęże”](../../pl/s01e01-mechanics-behind-generative-ai.md#platformy-i-uprzęże)
+> - S01E01 · Mechanics Behind Generative AI → chapter "Platforms and Harnesses" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#platforms-and-harnesses) · [Polish: „Platformy i harnessy”](../../pl/s01e01-mechanics-behind-generative-ai.md#platformy-i-harnessy)
 > - S01E02 · Steering Models Through Context → chapter "How does the context work?" — [original (EN)](../../s01e02-steering-models-through-context.md#how-does-the-context-work) · [Polish: „Jak działa kontekst?”](../../pl/s01e02-steering-models-through-context.md#jak-działa-kontekst)
 
 **Principle.** Every cut (a conversation summary, `/compact`, a field limit, a summary for
