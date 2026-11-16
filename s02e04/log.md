@@ -71,3 +71,6 @@
 - local worker's tool set was NOT only mcp__job + Skill: --allowedTools only pre-approves; built-ins (Read, Write, WebFetch…) stayed in context (init listed them). Worker used only Skill, ToolSearch and job tools. Source: code.claude.com/docs/en/cli-reference ("To restrict which tools are available, use --tools instead").
 - run.sh now adds `--tools "Skill"` for next runs (not re-run).
 - docs by megadev-docs: docs/pl/s02e04-two-places-debrief.md, pills P43–P45 (PL+EN), updates P20/P30/P32/P42, templates, indexes, challenges status. Link check: 1 known exception (docs/README.md example).
+
+## 2026-11-16 crew skill installed
+- artifact install b72fc24a6ef8: human "TAK" -> first into project .claude/skills/crew (= .agents/skills/crew via junction); then human: "tak: instaluję globalnie i usuwam kopię z projektu" -> copied to ~/.claude/skills/crew, 6/6 sha256 OK, self-test ok; project copy removed.
