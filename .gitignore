@@ -344,3 +344,4 @@ $RECYCLE.BIN/
 # local secrets (challenges)
 *secrets.local*
 receipts.local
+.claude/skills
