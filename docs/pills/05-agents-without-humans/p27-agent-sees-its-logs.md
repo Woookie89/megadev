@@ -1,6 +1,6 @@
 # P27 · The agent must see its own logs
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03, S02E05
 
 > **Lessons:**
 > - S02E05 · Agent Reliability → chapter "Observability in agentic systems" — [original (EN)](../../s02e05-agent-reliability.md#observability-in-agentic-systems) · [Polish: „Obserwowalność w systemach agentowych”](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych)
@@ -15,6 +15,13 @@ made up and to rebuild the timeline of the failure. S02E03: the harness installe
 CLI (the human logged it in through the browser) and read the `mcp-home` logs itself. They
 showed that the course came in through a Client ID Metadata Document and which tools it
 called. Nobody had to paste logs.
+
+S02E05: the status log for the course was built from the JSON lines the agent wrote at each
+event (`received`, `notified`, `owner_answered`, `replied`), with ISO times and an offset.
+The 12 lines agreed with the course's times and passed on the first send. Those lines lived
+only in process memory and the Render logs, though, not in a file. The course: "A log is
+believable only when it is written per event, with offsets, and agrees with times someone
+else kept."
 
 **Apply.** Logs reachable from the CLI, a selfcheck endpoint, a timestamped log of every
 agent action.

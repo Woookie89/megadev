@@ -1,6 +1,6 @@
 # P22 · Czat to nie host
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02, S02E05
 
 > **Lekcje:**
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Dostęp zdalny” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny) · [oryginał EN: „Getting remote”](../../s01e05-building-workflows-not-tool-stacks.md#getting-remote)
@@ -14,6 +14,10 @@ harnessu.
   z tym samym id pomija (idempotencja).
 - S02E02 (otwarte): agent poczty działa jako proces `node` uruchomiony z sesji Claude Code
   i kończy się razem z nią.
+- S02E05: agent działa jako darmowy web service na Renderze i co 4 minuty sam wywołuje swój
+  publiczny adres `/health`, więc host nie zasypia. Zamknięcie laptopa niczego nie zmieniło.
+  Kurs: „The session is not the service: an agent that must answer at any hour lives where it
+  stays up.”
 
 ---
 

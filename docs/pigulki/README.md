@@ -1,6 +1,6 @@
 # Pigułki wiedzy: praca z AI i agentami
 
-Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S02E04)
+Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S02E05)
 oraz z lokalnego MEGA Assessment. Jedna pigułka to jeden plik i jedna zasada, ułożona tak:
 
 - **Zasada**: co robić.
@@ -14,7 +14,7 @@ Przebiegi wyzwań są w debriefach `docs/pl/*-debrief.md`, a teoria lekcji w not
 Każda pigułka wskazuje też lekcje (z rozdziałem), z których pochodzi: oryginał po angielsku
 i polskie tłumaczenie. Wersja angielska pigułek: [docs/pills/](../pills/README.md).
 
-Stan na 16.11.2026.
+Stan na 17.11.2026.
 
 ## Jak korzystać
 
@@ -61,6 +61,7 @@ Stan na 16.11.2026.
 | [P09](02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md) | Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu | S01E04 |
 | [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03 |
 | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
+| [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
 
 ### [3. Pamięć poza czatem](03-pamiec/README.md)
 
@@ -88,20 +89,21 @@ Stan na 16.11.2026.
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
-| [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md) | Czat to nie host | S01E05, S02E02 |
-| [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md) | Stan trzymaj tam, gdzie przetrwa restart, a źródło prawdy czytaj na żywo | S01E05, S02E02, S02E03 |
+| [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md) | Czat to nie host | S01E05, S02E02, S02E05 |
+| [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md) | Stan trzymaj tam, gdzie przetrwa restart, a źródło prawdy czytaj na żywo | S01E05, S02E02, S02E03, S02E05 |
 | [P24](05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md) | Pętla potrzebuje wyjścia: warunku, limitu i widocznego stanu | S02E01 |
 | [P25](05-agent-bez-czlowieka/p25-dostawca-zawodzi.md) | Dostawca modelu bywa zawodny: uwzględnij to w projekcie | S01E05, S02E02 |
 | [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md) | Czas jest częścią zachowania | S02E02 |
-| [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03 |
+| [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03, S02E05 |
 | [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) | Zdalny worker: zaplanuj dostęp i odbiór wyniku | S02E04 |
+| [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md) | Drogę do człowieka testuj z miejsca, w którym działa agent | S02E05 |
 
 ### [6. Bezpieczeństwo: granica zaufania należy do kodu](06-bezpieczenstwo/README.md)
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
-| [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md) | Tekst w danych to dane, nie polecenia | S01E05 |
-| [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md) | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość | S02E02 |
+| [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md) | Tekst w danych to dane, nie polecenia | S01E05, S02E05 |
+| [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md) | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość | S02E02, S02E05 |
 | [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md) | Najmniejsze uprawnienia, zadeklarowane jawnie | S01E05, S02E04 |
 | [P31](06-bezpieczenstwo/p31-uwierzytelnione-zadania.md) | Każde żądanie uwierzytelnione, każde wyjście ograniczone | S01E05 |
 | [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md) | Sekrety nigdy przez czat | S02E02, S02E04 |
@@ -114,6 +116,7 @@ Stan na 16.11.2026.
 | [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) | Zgoda ma zakres | S01E04 |
 | [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md) | Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, MEGA Assessment |
 | [P36](07-czlowiek-w-petli/p36-pokaz-plan-przed-publikacja.md) | Pokaż plan, zanim opublikujesz | S01E04 |
+| [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) | Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi | S02E05 |
 
 ### [8. Harness jako zestaw narzędzi](08-harness/README.md)
 
@@ -158,8 +161,8 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S01E04 | Praca z harnessami AI | [Ustawienia](../pl/s01e04-working-with-ai-harnesses.md#ustawienia) | [Settings](../s01e04-working-with-ai-harnesses.md#settings) | [P19](04-orkiestracja/p19-dobor-modelu-i-koszt.md) |
 | S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Wykonywalny Markdown a kod](../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) | [Executable Markdown vs Code](../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) | [P38](08-harness/p38-skill-to-rutyna.md) |
 | S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Jakość](../pl/s01e05-building-workflows-not-tool-stacks.md#jakość) | [Quality](../s01e05-building-workflows-not-tool-stacks.md#quality) | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md) |
-| S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Dostęp zdalny](../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny) | [Getting remote](../s01e05-building-workflows-not-tool-stacks.md#getting-remote) | [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md) |
-| S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Bezpieczeństwo systemu](../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) | [System security](../s01e05-building-workflows-not-tool-stacks.md#system-security) | [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P31](06-bezpieczenstwo/p31-uwierzytelnione-zadania.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md) |
+| S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Dostęp zdalny](../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny) | [Getting remote](../s01e05-building-workflows-not-tool-stacks.md#getting-remote) | [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md), [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md) |
+| S01E05 | Tworzenie przepływów pracy, a nie stosów narzędzi | [Bezpieczeństwo systemu](../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) | [System security](../s01e05-building-workflows-not-tool-stacks.md#system-security) | [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P31](06-bezpieczenstwo/p31-uwierzytelnione-zadania.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) |
 | S02E01 | Prymitywy agentowe | [Pętla agenta](../pl/s02e01-agentic-primitives.md#pętla-agenta) | [Agentic Loop](../s02e01-agentic-primitives.md#agentic-loop) | [P07](02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md), [P15](03-pamiec/p15-pytaj-przeszle-sesje.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P24](05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md), [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) |
 | S02E01 | Prymitywy agentowe | [Kontekst i pamięć](../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć) | [Context and Memory](../s02e01-agentic-primitives.md#context-and-memory) | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md), [P12](03-pamiec/p12-czat-nie-jest-pamiecia.md) |
 | S02E02 | Budowanie agenta | [Architektura](../pl/s02e02-building-an-agent.md#architektura) | [Architecture](../s02e02-building-an-agent.md#architecture) | [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md) |
@@ -175,9 +178,9 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S02E04 | Współpraca wielu agentów | [Współpraca wieloagentowa](../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) | [Multi-agentic collaboration](../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) | [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) |
 | S02E04 | Współpraca wielu agentów | [Orkiestracja](../pl/s02e04-multi-agent-collaboration.md#orkiestracja) | [Orchestration](../s02e04-multi-agent-collaboration.md#orchestration) | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) |
 | S02E04 | Współpraca wielu agentów | [Najważniejsze wnioski](../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski) | [Takeaways](../s02e04-multi-agent-collaboration.md#takeaways) | [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md) |
-| S02E05 | Niezawodność agentów | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md) |
+| S02E05 | Niezawodność agentów | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) |
 | S02E05 | Niezawodność agentów | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [P15](03-pamiec/p15-pytaj-przeszle-sesje.md), [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) |
-| S02E05 | Niezawodność agentów | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) |
+| S02E05 | Niezawodność agentów | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) |
 <!-- lessons:end -->
 
 ## Indeks epizodów
@@ -193,6 +196,7 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S02E02 | [nobody asked](../pl/s02e02-nobody-asked-debrief.md) | budowanie agenta | [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P25](05-agent-bez-czlowieka/p25-dostawca-zawodzi.md), [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md) |
 | S02E03 | [schema first](../pl/s02e03-schema-first-debrief.md) | możliwości agentów, MCP | [P05](01-kontekst/p05-fakty-zmienne-u-zrodla.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md), [P38](08-harness/p38-skill-to-rutyna.md), [P39](08-harness/p39-mcp-kontrakt-dla-klienta.md), [P40](08-harness/p40-wynik-ma-budzet.md), [P41](08-harness/p41-blad-mowi-co-poprawic.md), [P42](08-harness/p42-duze-bajty-obok-modelu.md) |
 | S02E04 | [two places](../pl/s02e04-two-places-debrief.md) | współpraca wielu agentów | [P20](04-orkiestracja/p20-brief-jak-issue.md), [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md), [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md), [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) |
+| S02E05 | [while you're away](../pl/s02e05-while-youre-away-debrief.md) | niezawodność agentów | [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) |
 | — | MEGA Assessment | twoje wzorce pracy | [rozdział 9](wzorce-pracy.md) |
 
 ## Jak dopisać pigułkę

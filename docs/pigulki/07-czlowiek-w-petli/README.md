@@ -10,6 +10,7 @@ albo kosztują.
 | [P34](p34-zgoda-ma-zakres.md) | Zgoda ma zakres | S01E04 |
 | [P35](p35-uprawnienia-harnessu.md) | Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, MEGA Assessment |
 | [P36](p36-pokaz-plan-przed-publikacja.md) | Pokaż plan, zanim opublikujesz | S01E04 |
+| [P47](p47-zgoda-kanalem-wlasciciela.md) | Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi | S02E05 |
 
 ---
 

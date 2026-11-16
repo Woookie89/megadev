@@ -12,6 +12,7 @@ that it got it.
 | [P09](p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04 |
 | [P10](p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02 |
 | [P11](p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
+| [P48](p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
 
 ---
 

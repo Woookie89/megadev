@@ -50,4 +50,4 @@ handoff planned the way home.”
 
 ---
 
-← [P44](../04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P44](../04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P46](p46-testuj-droge-z-hosta-agenta.md) →

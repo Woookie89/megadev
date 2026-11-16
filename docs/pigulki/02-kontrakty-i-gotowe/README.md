@@ -12,6 +12,7 @@ sprawdzić, że to dostała.
 | [P09](p09-wyslane-to-nie-potwierdzone.md) | Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu | S01E04 |
 | [P10](p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03 |
 | [P11](p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
+| [P48](p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
 
 ---
 

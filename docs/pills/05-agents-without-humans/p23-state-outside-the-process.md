@@ -1,6 +1,6 @@
 # P23 · Keep state where it survives a restart; read the source of truth live
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02, S02E03
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02, S02E03, S02E05
 
 > **Lessons:**
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
@@ -17,6 +17,13 @@ is read from the source of truth, not from a copy in a file.
 - S02E03: Render's free web service has no disk and sleeps after 15 minutes. Postgres holds
   the notes, files and OAuth tokens, so they survived a deploy, a night and a cold start. The
   course came back hours later and found its data.
+- S02E05: the agent kept held acts and reply addresses (`replyUrl`) only in process memory.
+  An env var change on Render started a deploy on its own, and the restart wiped the first
+  held ask. Deploying a fix inside the try window lost the reply address of the held
+  `rotate_key`. The fix was operational: `replyUrl` in the event log, no deploys inside the
+  window, the new signing key only in the running process, with no env var change. The state
+  itself still lives in memory. The course: "Never redeploy inside the window, because held
+  asks live in memory." See also [P26](p26-timing-is-behavior.md).
 
 ---
 

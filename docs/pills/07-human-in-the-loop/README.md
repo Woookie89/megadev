@@ -10,6 +10,7 @@ irreversible, public or cost money.
 | [P34](p34-consent-has-scope.md) | Consent has a scope | S01E04 |
 | [P35](p35-harness-permissions.md) | Harness permissions are part of the setup: narrow them, don't widen them | S01E03, S02E01, MEGA Assessment |
 | [P36](p36-show-the-plan-first.md) | Show the plan before you publish | S01E04 |
+| [P47](p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
 
 ---
 

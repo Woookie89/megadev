@@ -46,6 +46,8 @@ Kurs przyjmuje pełną próbę obsłużoną przez agenta pod nieobecność użyt
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 16.11.2026 | rozwiązane 23:05:37Z, 1 odrzucona próba na żywo („Round 2: no_action_lines”), [zapis przebiegu](../pl/s02e05-while-youre-away-debrief.md) |
+| Serwer MCP kursu (`list-challenges`, `solved`) | 17.11.2026 | `true` |
 
 ## Materiały i załączniki
 

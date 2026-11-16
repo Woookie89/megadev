@@ -25,6 +25,8 @@
 | sandbox | Odizolowane środowisko, w którym działa agent. Ma tylko te pliki, narzędzia i dostęp do sieci, które mu udostępniono. |
 | allowlista | Lista dozwolonych domen (albo komend). Wszystko spoza niej jest blokowane ([P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)). |
 | lane (tor) | Znacznik, który kurs przydziela uczestnikowi na starcie wyzwania (`laneMarker`). W S01E04 trafiał do `.env` jako `LANE_MARKER` i musiał być widoczny na opublikowanej stronie ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
+| free / gated | Podział akcji agenta w S02E05: akcję free agent wykonuje sam, akcję gated wstrzymuje do zgody właściciela ([P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md)). |
+| IP wyjściowe (egress IP) | Adres, z którego serwer łączy się z internetem. Darmowe hosty dzielą go z wieloma klientami, więc limit liczony per IP mogą wyczerpać inni ([P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)). |
 
 ---
 

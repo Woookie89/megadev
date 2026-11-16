@@ -249,17 +249,16 @@ ten log żyje w pamięci i w logach Rendera, a nie w pliku. Brakujących narzęd
 ## Co zostało otwarte
 
 - **Serwis na Renderze.** Darmowy web service `s02e05-away`
-  (<https://s02e05-away-k6ij.onrender.com>, Frankfurt) nadal działa. Samodzielny ping co
-  4 minuty nie pozwala mu zasnąć, więc zużywa darmowe godziny instancji. Zmienne środowiskowe:
-  `NTFY_TOPIC`, `ADMIN_TOKEN`, `NTFY_TOKEN`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID` i
-  `SIGNING_KEY`. Ta ostatnia ma stary klucz z pierwszej rejestracji, a aktualny jest tylko
-  w pamięci procesu, więc po restarcie agent nie zweryfikuje nowych wiadomości kursu. Decyzja
-  o uśpieniu albo usunięciu należy do użytkownika.
+  (<https://s02e05-away-k6ij.onrender.com>, Frankfurt) został **wstrzymany** 16.11.2026 na
+  prośbę użytkownika („wstrzymaj na razie render”). Wznowienie: `POST /v1/services/<id>/resume`.
+  Zmienne środowiskowe: `NTFY_TOPIC`, `ADMIN_TOKEN`, `NTFY_TOKEN`, `TELEGRAM_TOKEN`,
+  `TELEGRAM_CHAT_ID` i `SIGNING_KEY`. Ta ostatnia ma stary klucz z pierwszej rejestracji, więc
+  po wznowieniu trzeba ustawić klucz z nowej rejestracji (`POST /admin/key` albo zmienna, ale
+  nie w trakcie okna).
 - **Repo.** Prywatne `Woookie89/s02e05-away`, bez sekretów. Aplikacja Render na GitHubie ma do
-  niego dostęp. `README.md` agenta opisuje jeszcze pierwszą wersję (ntfy jako ping,
-  odpowiedzi `HELD …` i `NOT DONE`).
-- **Bot w Telegramie** `@wookie_away_bot` na koncie użytkownika. Usuwa się go komendą
-  `/deletebot` u `@BotFather`.
+  niego dostęp. `README.md` agenta opisuje wersję końcową (Telegram, linie `DONE:`/`HOLD:`).
+- **Bot w Telegramie** `@wookie_away_bot` na koncie użytkownika zostaje na kolejne wyzwania
+  (decyzja użytkownika: „bota zostaw”). Usuwa się go komendą `/deletebot` u `@BotFather`.
 - **Konto ntfy.sh** użytkownika z tokenem dostępu i temat zasubskrybowany na telefonie.
 - **Uśpione na prośbę użytkownika:** `mcp-home` (web service) i `mcp-home-db` (darmowy
   Postgres) z S02E03. Wznowienie: `POST /v1/services/<id>/resume` i
