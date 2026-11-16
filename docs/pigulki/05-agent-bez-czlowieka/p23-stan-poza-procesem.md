@@ -1,6 +1,6 @@
 # P23 · Stan trzymaj tam, gdzie przetrwa restart, a źródło prawdy czytaj na żywo
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02, S02E03
 
 > **Lekcje:**
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
@@ -14,6 +14,9 @@ projektu czytaj ze źródła prawdy, a nie z kopii w pliku.
   niczego nie gubi.
 - S01E05: `plan.md` twierdził, że #12 jest wydane, a tracker pokazywał je jako otwarte.
   Pulse czyta tracker przy każdym pingu. Plan to nie tracker.
+- S02E03: darmowy web service na Renderze nie ma dysku i usypia się po 15 minutach. Notatki,
+  pliki i tokeny OAuth trzyma Postgres, więc przetrwały deploy, noc i zimny start. Kurs wrócił
+  po kilku godzinach i znalazł swoje dane.
 
 ---
 

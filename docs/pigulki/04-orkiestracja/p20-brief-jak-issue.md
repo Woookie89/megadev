@@ -1,6 +1,6 @@
 # P20 · Brief dla workera jest jak dobre issue
 
-> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04
+> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S02E04
 
 > **Lekcje:**
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Podagenci i wykonawcy” — [po polsku](../../pl/s01e02-steering-models-through-context.md#podagenci-i-wykonawcy) · [oryginał EN: „Subagents and Workers”](../../s01e02-steering-models-through-context.md#subagents-and-workers)
@@ -14,6 +14,13 @@ widzi: źródło, zakres, „gotowe, gdy”, blokady i warunki stopu.
 <model> · <effort>` / `commit: <sha>`. Dzięki temu śladowi agent od #7 zauważył, że w
 komentarzu do #4 wpisano zły model (`haiku-4.5` zamiast `haiku-5.5`). Workery mogą
 sprawdzać się nawzajem, jeśli zostawiają ślad.
+
+S02E04: brief każdego workera miał jedno zadanie, nazwę i wersję skilla, jedyne narzędzia
+(serwer MCP zadania), limit prób („retry at most once after fixing what it names”) i drogę
+powrotu: zakończ wiadomością z markerem `JOB2_SUBMIT_REPLY:` (zdalnie `JOB1_SUBMIT_REPLY:`)
+i całą odpowiedzią `submit`. Oba workery oddały wynik za pierwszym razem, a główny agent
+o nic nie dopytywał ([P43](p43-przekaz-skill-z-zadaniem.md),
+[P45](../05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)).
 
 **Stosuj.** Szablon w [Dodatku A3](../szablony/brief-workera.md).
 

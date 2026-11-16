@@ -7,11 +7,12 @@ odrzucenie obcego, zatrzymanie się), musi być w kodzie.
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P22](p22-czat-to-nie-host.md) | Czat to nie host | S01E05, S02E02 |
-| [P23](p23-stan-poza-procesem.md) | Stan trzymaj tam, gdzie przetrwa restart, a źródło prawdy czytaj na żywo | S01E05, S02E02 |
+| [P23](p23-stan-poza-procesem.md) | Stan trzymaj tam, gdzie przetrwa restart, a źródło prawdy czytaj na żywo | S01E05, S02E02, S02E03 |
 | [P24](p24-petla-potrzebuje-wyjscia.md) | Pętla potrzebuje wyjścia: warunku, limitu i widocznego stanu | S02E01 |
 | [P25](p25-dostawca-zawodzi.md) | Dostawca modelu zawodzi, więc projektuj na to | S01E05, S02E02 |
 | [P26](p26-czas-jest-czescia-zachowania.md) | Czas jest częścią zachowania | S02E02 |
-| [P27](p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05 |
+| [P27](p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03 |
+| [P45](p45-zdalny-worker-droga-tam-i-z-powrotem.md) | Zdalny worker: zaplanuj drogę tam i z powrotem | S02E04 |
 
 ---
 

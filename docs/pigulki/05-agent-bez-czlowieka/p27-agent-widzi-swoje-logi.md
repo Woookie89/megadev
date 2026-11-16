@@ -1,6 +1,6 @@
 # P27 · Agent musi widzieć własne logi
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03
 
 > **Lekcje:**
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
@@ -11,7 +11,10 @@ wtedy kurierem logów.
 **Przypadek.** S01E05: przyczynę (test writer poddał się po 503) harness znalazł dopiero
 w logach Rendera wklejonych przez użytkownika. S02E02: lokalny `log.md` zapisywał każde
 `received`, `replied`, `ignored` i `fetch_url`. To pozwoliło potwierdzić, że wartość nie
-jest zmyślona, i odtworzyć oś czasu porażki.
+jest zmyślona, i odtworzyć oś czasu porażki. S02E03: harness zainstalował Render CLI
+(człowiek zalogował je w przeglądarce) i sam przeczytał logi `mcp-home`. Zobaczył w nich,
+że kurs wszedł przez Client ID Metadata Document i które narzędzia wołał. Nikt nie musiał
+wklejać logów.
 
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.
 

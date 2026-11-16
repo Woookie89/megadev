@@ -1,6 +1,6 @@
 # P10 · Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca
 
-> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02, S02E03
 
 > **Lekcje:**
 > - S02E05 · Niezawodność agentów → rozdział „Ewaluacja” — [po polsku](../../pl/s02e05-agent-reliability.md#ewaluacja) · [oryginał EN: „Evaluation”](../../s02e05-agent-reliability.md#evaluation)
@@ -13,6 +13,9 @@
 - S01E05: podpisany selfcheck hosta testował oba modele, nie zużywając pytań recenzenta.
 - S02E02: tryb `node agent.mjs --dry "<treść maila>"` albo jeden mail testowy przed podaniem
   adresu kursowi wykryłby odmowę modelu i blokadę czytnika przed pierwszą rundą.
+- S02E03: po odmowie za rozmiar wyniku harness pobrał klip kalibracyjny kursu i zmierzył
+  poprawkę lokalnie (822 B przy limicie 1024 B), zanim zrobił deploy. Druga runda przeszła.
+  Wcześniej przeszedł całą ścieżkę OAuth na żywym adresie skryptem udającym obcego klienta.
 
 **Stosuj.** Każdy agent i serwis dostaje tryb próbny (`--dry`, `selfcheck`), który przechodzi
 całą ścieżkę bez skutków ubocznych.
