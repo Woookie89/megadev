@@ -4,7 +4,7 @@
 
 > **Lessons:**
 > - S01E02 · Steering Models Through Context → chapter "Tool use under the hood" — [original (EN)](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood) · [Polish: „Narzędzia od podszewki”](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki)
-> - S02E03 · Agentic Capabilities → chapter "Skills & Tools" — [original (EN)](../../s02e03-agentic-capabilities.md#skills--tools) · [Polish: „Umiejętności i narzędzia”](../../pl/s02e03-agentic-capabilities.md#umiejętności-i-narzędzia)
+> - S02E03 · Agentic Capabilities → chapter "Skills & Tools" — [original (EN)](../../s02e03-agentic-capabilities.md#skills--tools) · [Polish: „Skille i narzędzia”](../../pl/s02e03-agentic-capabilities.md#skille-i-narzędzia)
 
 **Principle.** When the harness lacks a tool, build a workaround from what is on the
 machine. Then replace it with a permanent tool, and write down the environment's traps.

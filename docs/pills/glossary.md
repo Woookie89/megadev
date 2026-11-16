@@ -22,6 +22,7 @@
 | routine | A Claude Code job run in Anthropic's cloud (claude.ai/code): once, on a schedule or on an event. |
 | sandbox | An isolated place where an agent runs. It has only the files, tools and network access it was given. |
 | allowlist | A list of allowed domains (or commands). Everything else is blocked ([P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md)). |
+| lane | A marker the course gives a student when a challenge starts (`laneMarker`). In S01E04 it went into `.env` as `LANE_MARKER` and had to show on the published page ([P10](02-contracts-and-done/p10-check-from-outside.md)). |
 
 ---
 
