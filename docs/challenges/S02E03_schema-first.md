@@ -43,6 +43,7 @@ Kurs wywołuje serwer jako niezalogowany użytkownik i wszystkie kontrole przech
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 16.11.2026 | rozwiązane 06:39:52Z, [zapis przebiegu](../pl/s02e03-schema-first-debrief.md) |
 
 ## Materiały i załączniki
 

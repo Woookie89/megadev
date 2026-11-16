@@ -1,6 +1,6 @@
 # P35 · Harness permissions are part of the setup: narrow them, don't widen them
 
-> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, MEGA Assessment
+> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, S02E03, MEGA Assessment
 
 > **Lessons:**
 > - S01E04 · Working with AI Harnesses → chapter "Harnesses" — [original (EN)](../../s01e04-working-with-ai-harnesses.md#harnesses) · [Polish: „Harnessy”](../../pl/s01e04-working-with-ai-harnesses.md#harnessy)
@@ -14,6 +14,9 @@ switch the whole mode to a broad one in the middle of the work.
 - S02E01: the permission check blocked adding the `Stop` hook.
 - MEGA Assessment (T14, weakness): the whole permission mode was widened mid-task instead
   of adding one rule.
+- S02E03: the auto-mode classifier blocked `claude mcp add --scope user` and writing a skill to
+  `~/.claude/skills/`, despite the human's consent. The harness did not look for a way
+  around it. It gave the command, and the human ran it.
 
 **Apply.** Add, for example, an `ask` rule for `gh repo create` in `settings.json` up front
 (the `update-config` skill) instead of changing the mode. A hook changes how the harness

@@ -42,6 +42,7 @@ Kurs przyjmuje odpowiedź złożoną z wyników obu workerów.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 16.11.2026 | rozwiązane 11:38:58Z, pierwszy claim, 0 odmów, [zapis przebiegu](../pl/s02e04-two-places-debrief.md) |
 
 ## Materiały i załączniki
 

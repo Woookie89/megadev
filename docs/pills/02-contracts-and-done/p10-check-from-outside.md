@@ -1,6 +1,6 @@
 # P10 · Check the result from outside, the way the recipient will see it
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S02E02
+> Chapter [2. Contracts and "done"](README.md) · episodes: S02E02, S02E03
 
 > **Lessons:**
 > - S02E05 · Agent Reliability → chapter "Evaluation" — [original (EN)](../../s02e05-agent-reliability.md#evaluation) · [Polish: „Ewaluacja”](../../pl/s02e05-agent-reliability.md#ewaluacja)
@@ -17,6 +17,10 @@ smoke test from their side.
 - S02E02: a `node agent.mjs --dry "<mail text>"` mode or one test mail before giving the
   address to the course would have caught the model refusal and the blocked page reader
   before round one.
+- S02E03: after the refusal for result size, the harness downloaded the course's calibration
+  clip and measured the fix locally (822 B against a 1024 B limit) before it deployed. The
+  second round passed. Earlier it walked the whole OAuth path on the live address with a
+  script posing as a stranger client.
 
 **Apply.** Every agent and service gets a dry mode (`--dry`, `selfcheck`) that runs the
 whole path without side effects.

@@ -1,6 +1,6 @@
 # P23 · Keep state where it survives a restart; read the source of truth live
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02, S02E03
 
 > **Lessons:**
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
@@ -14,6 +14,9 @@ is read from the source of truth, not from a copy in a file.
   restart loses nothing.
 - S01E05: `plan.md` claimed #12 had shipped, while the tracker showed it open. Pulse reads
   the tracker on every ping. A plan is not a tracker.
+- S02E03: Render's free web service has no disk and sleeps after 15 minutes. Postgres holds
+  the notes, files and OAuth tokens, so they survived a deploy, a night and a cold start. The
+  course came back hours later and found its data.
 
 ---
 
