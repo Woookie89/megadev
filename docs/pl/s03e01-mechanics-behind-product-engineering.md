@@ -2,7 +2,7 @@
 
 Nawet gdyby rozwój modeli językowych zatrzymał się dzisiaj, można rozsądnie stwierdzić, że nie ma już powrotu do ręcznego kodowania i że możemy zbudować praktycznie wszystko, co chcemy. Ale **nie wszystko**, zwłaszcza biorąc pod uwagę to, czego nauczyliśmy się o budowaniu systemów produkcyjnych, które muszą być niezawodne i wydajne. Zmieniło się to, że **nasza rola nie polega już na pisaniu kodu. A skoro nie na tym, to na czym?**
 
-Gdy spojrzymy na otaczające nas oprogramowanie, zobaczymy, że AI potrafi odtworzyć większość jego funkcji dość łatwo, nawet przez inżynierię wsteczną. Ale zbudowanie całego produktu właściwie nie jest czymś, co da się „vibe codować” kilkoma promptami, a nawet flotą agentów. Chodzi bowiem nie tylko o pisanie kodu, projektowanie architektury, rozumienie biznesu czy podejmowanie pojedynczych decyzji. **Chodzi o to, by robić to wszystko dobrze i we właściwym czasie.**
+Gdy spojrzymy na otaczające nas oprogramowanie, zobaczymy, że AI potrafi odtworzyć większość jego funkcji dość łatwo, nawet przez inżynierię wsteczną. Ale dobre zbudowanie całego produktu nie jest czymś, co da się „vibe codować” kilkoma promptami, a nawet flotą agentów. Chodzi bowiem nie tylko o pisanie kodu, projektowanie architektury, rozumienie biznesu czy podejmowanie pojedynczych decyzji. **Chodzi o to, by robić to wszystko dobrze i we właściwym czasie.**
 
 I tu zaczyna się inżynieria produktu.
 
@@ -28,7 +28,7 @@ Wszystko razem daje nam dobry produkt, którego nie da się łatwo sklonować. B
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s03e01/artifacts/lesson/figure-1/frame.html)
 
-Dla każdego, kto zna już budowanie produktów nie tylko od strony inżynierskiej, to wszystko może nie brzmieć jak nowość. Jest jednak różnica: **tempo** i **zdolność adaptacji**. Oba muszą osiągnąć poziomy niespotykane dotąd, nie tylko w generowaniu kodu, ale w każdym aspekcie rozwoju produktu. Dziś dodanie nowej funkcji do produktu może być szybkie, ale dodanie **właściwej funkcji, dobrze zrobionej**, to zupełnie inna gra.
+Dla każdego, kto zna już budowanie produktów nie tylko od strony inżynierskiej, to wszystko może nie brzmieć jak nowość. Jest jednak różnica: **tempo** i **zdolność adaptacji**. Oba muszą osiągnąć poziomy niespotykane dotąd, nie tylko w generowaniu kodu, ale w każdym aspekcie rozwoju produktu. Dziś dodanie nowej funkcji do produktu może być szybkie, ale dodanie **właściwej funkcji, dobrze zrobionej**, to zupełnie inna sprawa.
 
 Jest kilka powodów, a jednym z nich jest to, że **agenci stają się pośrednikiem między użytkownikami a aplikacjami**. Jednym z przykładów jest **Google Search**, z którego wielu z nas korzysta dziś przez agentów, a nie bezpośrednio. Innym przykładem jest ffmpeg, narzędzie, którego agenci często używają, nawet nam o tym nie mówiąc. To samo dotyczy [Sentry](https://sentry.io/welcome/), [Resend](https://resend.com/), [Parallel](https://parallel.ai/), [Kitesurf](https://blog.cloudflare.com/kitesurf/), [e2b](https://e2b.dev/), [AgentMail](https://www.agentmail.to/), [1Password](https://1password.com/) i wielu, wielu innych. A wszystko to są usługi i narzędzia, których nie da się łatwo wygenerować.
 
@@ -56,7 +56,7 @@ W **S02E02** rozmawialiśmy o prymitywach agentowych, uogólnionych klockach bud
 
 Decyzja o prymitywie **Subskrypcje** wydaje się w tym przypadku oczywista. Ale jeśli przyjrzymy się bliżej takim elementom jak **uprawnienia, kierowanie, deduplikacja, filtrowanie i wybudzanie** oraz temu, że ten jeden prymityw obsługuje nie tylko komunikatory, ale wiele rodzajów źródeł, staje się jasne, że ten, kto go wymyślił, **dokładnie wiedział, jak wygląda szerszy obraz całego produktu**. Sądząc po takiej decyzji architektonicznej, miał też chyba spore doświadczenie inżynierskie.
 
-Choć uogólnianie w inżynierii oprogramowania nie jest niczym nowym, łatwo sobie wyobrazić, że ta funkcja zaczęła się od prośby o **integrację naszej aplikacji z e-mailem i kalendarzem**. Bez szerszego kontekstu my, jako inżynierowie, moglibyśmy przewidzieć, że integracji będzie więcej niż jedna, i zbudować jakąś bramę i adaptery. Choć by to działało, byłaby to pułapka w porównaniu z prymitywem **Subskrypcje**, ponieważ zamknęłaby nam drogę do innych rodzajów kompozycji.
+Choć uogólnianie w inżynierii oprogramowania nie jest niczym nowym, łatwo sobie wyobrazić, że ta funkcja zaczęła się od prośby o **integrację naszej aplikacji z e-mailem i kalendarzem**. Bez szerszego kontekstu my, jako inżynierowie, moglibyśmy przewidzieć, że integracji będzie więcej niż jedna, i zbudować jakąś bramę i adaptery. Choć takie rozwiązanie by działało, byłoby pułapką w porównaniu z prymitywem **Subskrypcje**, ponieważ zamknęłaby nam drogę do innych rodzajów kompozycji.
 
 ![Jedna prośba o funkcję, „zintegruj naszą aplikację z e-mailem i kalendarzem”, rozdziela się na dwie ścieżki w czterech kolumnach: tydzień 1, miesiąc 2, miesiąc 4 i po 4 miesiącach. Na ścieżce wyniku pracy brama rośnie z 2 do 4 i do 6 adapterów (e-mail, kalendarz, Slack, przeglądy PR, alerty, harmonogramy). Każdy krok zajmuje 3, potem 5, potem 8 dni, co daje 6 adapterów do utrzymania i łącznie 16 dni. Na ścieżce rezultatu jedno pudełko Subskrypcje tej samej wielkości obsługuje 2, potem 4, potem 6 wyzwalaczy przez subscribe(trigger) / wake(event). Kroki zajmują 4 dni, potem 1 dzień, potem 0 dni, ponieważ agent dodaje ostatnie źródła w czasie działania. Łącznie to 1 prymityw i 5 dni. Produktem jest aplikacja agentowa, a wszystkie wartości są przykładami.](https://hq.mega.dev/figures/s03e01/artifacts/lesson/figure-4/frame.png)
 
@@ -91,7 +91,7 @@ Jako inżynierowie wiemy, jak tworzyć dobre oprogramowanie. Pod wieloma względ
 
 Choć AI potrafi pisać lepszy kod niż większość programistów, nasza wiedza, doświadczenie i wiele naszych umiejętności nadal się przydaje, zwłaszcza jeśli rozumiemy, jak inżynieria zmienia się z powodu nowych możliwości, które wszyscy mamy.
 
-Zgodnie z definicją inżyniera produktu musimy znaleźć sposób, by pracować znacznie szerzej. Oznacza to sięganie do innych obszarów produktu i biznesu albo zagłębianie się w niskopoziomowe szczegóły, a nawet technologie, których nie znamy. I choć może to brzmieć niezwykle trudno, większość wiedzy, której potrzebujemy, jest o jeden prompt stąd. Musimy tylko nauczyć się eksplorować **nieznane niewiadome**.
+Zgodnie z definicją inżyniera produktu musimy znaleźć sposób, by pracować znacznie szerzej. Oznacza to sięganie do innych obszarów produktu i biznesu albo zagłębianie się w niskopoziomowe szczegóły, a nawet technologie, których nie znamy. I choć może to brzmieć niezwykle trudno, od większości potrzebnej wiedzy dzieli nas jeden prompt. Musimy tylko nauczyć się eksplorować **nieznane niewiadome**.
 
 ![Macierz dwa na dwa. Kolumny: wiemy to, nie wiemy tego. Wiersze: jesteśmy tego świadomi, nie jesteśmy tego świadomi. Cztery komórki to znane znane, znane nieznane, nieznane znane i nieznane nieznane. Nieznane nieznane, w prawej dolnej komórce, są zaznaczone na czerwono.](https://hq.mega.dev/figures/s03e01/artifacts/lesson/figure-7/frame.png)
 
@@ -131,9 +131,9 @@ Dźwignia, której szukamy, zwłaszcza gdy chcemy przejść od pracy bezpośredn
 
 - **Telemetria:** trudno ulepszać rzeczy, których nie mierzymy, a agenci muszą otrzymywać szczegółowe informacje o aktywności użytkowników i o wszystkim, co uznamy za przydatne dla nich.
 - **Opinie użytkowników:** jeśli to możliwe, powinniśmy szukać bezpośredniego kontaktu z użytkownikami przez czat supportu, rozmowy lub spotkania osobiste. Niezwykle użyteczny kontekst pochodzi z analizy zgłoszeń błędów i próśb o funkcje, ale także z transkrypcji rozmów z ludźmi, którzy nigdy nie zostali naszymi klientami.
-- **Kontekst biznesowy:** znalezienie właściwych prymitywów i ich właściwego kształtu wymaga głębokiego zrozumienia celów biznesowych, jego kierunku, wyzwań, a nawet wniosków z rynku.
+- **Kontekst biznesowy:** znalezienie właściwych prymitywów i ich właściwego kształtu wymaga głębokiego zrozumienia celów biznesu, jego kierunku, wyzwań, a nawet wniosków z rynku.
 - **Analityka produktowa:** telemetria nie jest jedynym źródłem cennych informacji o użytkownikach. Product managerowie mogą mieć wiedzę o profilach użytkowników, podobnych produktach lub szeroką perspektywę całego produktu.
-- **Środowisko agenta:** wszystko, co omawialiśmy w **S01E05**, skonfigurowane na zdalnych maszynach lub w chmurze. Bez tego myślenie o autonomii trzeba odłożyć, dopóki kompletne środowisko i niezbędne szczegóły dające agentom swobodę nie będą na miejscu.
+- **Środowisko agenta:** wszystko, co omawialiśmy w **S01E05**, skonfigurowane na zdalnych maszynach lub w chmurze. Bez tego myślenie o autonomii trzeba odłożyć, dopóki kompletne środowisko i niezbędne szczegóły dające agentom swobodę nie będą gotowe.
 - **Laboratoria:** warto wyrobić sobie nawyk **tworzenia prostych laboratoriów** do zabawy pomysłami i iterowania koncepcji. Mogą to być aplikacje HTML i CSS, nad którymi pracujemy przez agentów. Dzięki temu szybko zrozumiemy funkcję, którą chcemy zbudować, i będziemy mogli dzielić się koncepcjami z innymi. Jest to podobne do artefaktów dostępnych na przykład w Claude, ale laboratorium jest wbudowane w aplikację, którą budujemy.
 - **Kanał beta:** warto rozważyć kanały beta lub wersje nightly aplikacji, w których aktualizacje są częste, a funkcje mogą się pojawiać i znikać. Jest to szczególnie przydatne w fazie skalowania procesu rozwoju.
 

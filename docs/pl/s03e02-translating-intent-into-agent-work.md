@@ -40,14 +40,14 @@ Zarówno reguły, jak i zasady wskazują ten sam kierunek, ale reguła może by�
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-2/frame.html)
 
-Obok zasad warto rozważyć powiedzenie agentowi o **powodzie** stojącym za intencją. Daje to dodatkową warstwę cennego kontekstu, który pozwala agentowi zobaczyć szerszy obraz tego, co chcemy osiągnąć, a jednocześnie zostawia mu dość miejsca, by kierować się ku najlepszemu możliwemu rozwiązaniu. Jednocześnie powód pomaga agentowi **zrozumieć dynamiczne granice**, które mogą wpływać na jego zachowanie.
+Oprócz zasad warto podać agentowi **powód** stojący za intencją. Daje to dodatkową warstwę cennego kontekstu, który pozwala agentowi zobaczyć szerszy obraz tego, co chcemy osiągnąć, a jednocześnie zostawia mu dość miejsca, by kierować się ku najlepszemu możliwemu rozwiązaniu. Jednocześnie powód pomaga agentowi **zrozumieć dynamiczne granice**, które mogą wpływać na jego zachowanie.
 
 Wyobraźmy sobie, że mamy agenta z dostępem do kontekstu o ludziach w naszym zespole. Chcemy, by komunikował się otwarcie w wiadomościach bezpośrednich, ale nie ujawniał zbędnych szczegółów na kanałach zespołu. Mamy więc:
 
 - **Zasada:** dziel się informacjami tylko z osobami, których dotyczą.
 - **Powód:** ludzie dzielą się rzeczami z agentem tylko wtedy, gdy ufają, że zachowa je w odpowiednim miejscu.
 
-W tej konfiguracji możemy oczekiwać, że agent zachowa się tak, iż wiadomości bezpośrednie ujawnią wszystkie szczegóły, a kanał zespołu ukryje je. A jeśli agent zauważy, że na niektórych kanałach mogą być **goście** spoza organizacji, odpowiednio się dostosuje.
+W tej konfiguracji możemy oczekiwać, że agent w wiadomościach bezpośrednich poda wszystkie szczegóły, a na kanale zespołu je ukryje. A jeśli agent zauważy, że na niektórych kanałach mogą być **goście** spoza organizacji, odpowiednio się dostosuje.
 
 ![Blok na górze zawiera zasadę „Dziel się informacjami tylko z osobami, których dotyczą” i jej powód „Ludzie dzielą się rzeczami z agentem tylko wtedy, gdy ufają, że zachowa je w odpowiednim miejscu.” Linia biegnie w dół do przerywanej pigułki „Zmienna: kto może czytać kanał” i rozdziela się na trzy panele. Wiadomość bezpośrednia: jedna osoba; agent mówi „Masz wizytę u lekarza o 14:00, więc przesunąłem przegląd na 16:00.” (Pełny kontekst). Kanał zespołu: cztery osoby; agent mówi „Adam jest niedostępny od 14:00 do 15:00. Przegląd przesuwa się na 16:00.” (Fakt, bez powodu). Kanał z gośćmi: cztery osoby i dwie przerywane postacie gości; agent mówi „Przegląd przesuwa się na 16:00.” (Tylko to, czego potrzebują goście). Dymki robią się mniejsze od lewej do prawej.](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-3/frame.png)
 
@@ -57,7 +57,7 @@ To tylko przykład, ale najważniejsze jest to, że **zasady i powody** pozwalaj
 
 ## Kontekst produktu
 
-Agenci kodujący natywnie wiedzą, jak eksplorować bazę kodu, ale bardzo mało wiedzą o wszystkim, czego nie da się odczytać z kodu: zewnętrznych usługach, platformach, narzędziach i wewnętrznych bazach wiedzy. Co więcej, z samego kodu mogą dowiedzieć się tylko o **bieżącym stanie** produktu. Mają niewielkie pojęcie o jego kierunku, o tym, nad czym zespół już pracuje, ani o tym, czy trzeba uwzględnić jakieś strategiczne decyzje biznesowe.
+Agenci kodujący natywnie wiedzą, jak eksplorować bazę kodu, ale bardzo mało wiedzą o wszystkim, czego nie da się odczytać z kodu: zewnętrznych usługach, platformach, narzędziach i wewnętrznych bazach wiedzy. Co więcej, z samego kodu mogą dowiedzieć się tylko o **bieżącym stanie** produktu. Mają niewielkie pojęcie o jego kierunku, o tym, nad czym zespół już pracuje, i o tym, czy trzeba uwzględnić jakieś strategiczne decyzje biznesowe.
 
 Naszym celem jest sprawić, by agent „nauczył się”, jak eksplorować kontekst wykraczający poza kod i jak podejmować decyzje zgodne z wizją produktu i celami biznesowymi. Pytanie brzmi: jak to osiągnąć?
 
@@ -98,7 +98,7 @@ Sposobem, by stwierdzić, czy zmiana, którą chcemy wprowadzić, obejmuje wszys
 [Otwórz ilustrację](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-6/frame.html)
 
 **Grafy i diagramy:**
-Rozumowanie na podstawie wielu dokumentów obejmujących szeroki zakres tematów jest łatwiejsze, gdy możemy z łatwością przełączać się między pojęciami wysokiego poziomu a szczegółami niskiego poziomu. Można to osiągnąć za pomocą grafów warstwowych lub ich wariantów, budowanych przez agentów jako strony HTML przechowujące stan, tak by agent mógł go odczytać i szybko zrozumieć nasze bieżące skupienie. Takie struktury najlepiej **projektuje** flota agentów, która wspólnie dopasuje **framework** grafu do typu posiadanych danych. Warto kilka razy iterować nad frameworkiem, aż jego kształt będzie wystarczająco dobry, by użyć go więcej niż raz.
+Rozumowanie na podstawie wielu dokumentów obejmujących szeroki zakres tematów jest łatwiejsze, gdy możemy z łatwością przełączać się między pojęciami wysokiego poziomu a szczegółami niskiego poziomu. Można to osiągnąć za pomocą grafów warstwowych lub ich wariantów, budowanych przez agentów jako strony HTML przechowujące stan, tak by agent mógł go odczytać i szybko zrozumieć, na czym się teraz skupiamy. Takie struktury najlepiej **projektuje** flota agentów, która wspólnie dopasuje **framework** grafu do typu posiadanych danych. Warto kilka razy iterować nad frameworkiem, aż jego kształt będzie wystarczająco dobry, by użyć go więcej niż raz.
 
 ![Przykładowy rysunek. Po lewej: graf bazy kodu o nazwie Alice, pokazany w trzech panelach o rosnącym przybliżeniu. Panel Zakład pokazuje 14 modułów, z zaznaczonym „Desktop host”. Panel Moduł wymienia 14 miejsc Desktop host, z zaznaczonym „Caller factory”. Panel Miejsce pokazuje Caller factory jako okrągły węzeł z 7 połączeniami i 1 krokiem podróży. Każdy panel ma przerywane kopie za sobą dla pozostałych soczewek (Miejsca 88, Prace 457, Podróże 4, Dni 27). Linie wywołań biegną od każdego zaznaczonego elementu do następnego panelu. Strzałka pod panelami prowadzi od pojęć wysokiego poziomu do szczegółów niskiego poziomu. Po prawej: karta stanu strony z fokusem (soczewka Miejsca, przybliżenie miejsce, ścieżka Zakład / Desktop host / Caller factory). Linia łączy kartę z węzłem. Kropka agenta czyta kartę i odpowiada na „Co tego dotyka?” słowami „Caller factory: 7 połączeń, 1 podróż, 26 elementów pracy.” Wszystkie nazwy i liczby są wartościami przykładowymi.](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-7/frame.png)
 
@@ -139,7 +139,7 @@ Definiując, jak praca agenta zostanie udowodniona, musimy wziąć pod uwagę:
 - **Definicja sukcesu:** agent musi wiedzieć, co dla nas oznacza sukces, bo bez tej definicji może pójść za daleko albo nie dość daleko. Dobrymi przykładami zbytniej gorliwości są feature flagi, backfille czy funkcje bezpieczeństwa, które agenci często budują domyślnie, ponieważ nie wiedzą, że w szerszym kontekście produktu są one nieistotne.
 - **Definicja porażki:** agent musi wiedzieć, kiedy zebrane dowody, mimo dobrej jakości, powinny zostać uznane za porażkę. To, że często zależy to od kontekstu, utrudnia zgadywanie.
 
-Robienie tego wszystkiego jest trudne i pochłania wiele zasobów, nie tylko na zbudowanie, ale też na powtarzanie. Dlatego część tego procesu musi być poświęcona **wyodrębnianiu uogólnionych narzędzi i skilli**, które można użyć ponownie. Co ważniejsze, **wszystko, co da się zweryfikować deterministycznie**, powinno być obsłużone przez kod, chyba że mamy solidny powód, by zrobić inaczej.
+Robienie tego wszystkiego jest trudne i pochłania wiele zasobów, nie tylko na zbudowanie, ale też na powtarzanie. Dlatego część tego procesu musi być poświęcona **wyodrębnianiu uogólnionych narzędzi i skilli**, których można użyć ponownie. Co ważniejsze, **wszystko, co da się zweryfikować deterministycznie**, powinno być obsłużone przez kod, chyba że mamy solidny powód, by zrobić inaczej.
 
 ## Najważniejsze wnioski
 

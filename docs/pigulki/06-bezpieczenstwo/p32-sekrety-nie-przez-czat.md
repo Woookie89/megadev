@@ -17,7 +17,7 @@ konfigurację MCP do pliku `mcp.secrets.local.json`, ignorowanego przez git. W c
 jest tylko w prompcie routine, widocznym dla właściciela, i w zmiennej `JOB_URL`, nigdy
 w repo. Prompt i log przebiegu routine przechowują go jednak do wygaśnięcia (około 24 h).
 
-**Stosuj.** Commituj tylko `.env.example`. Redakcja sekretów na wyjściu agenta, nie tylko
+**Stosuj.** Commituj tylko `.env.example`. Maskowanie sekretów na wyjściu agenta, nie tylko
 na wejściu.
 
 ---

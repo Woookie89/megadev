@@ -12,9 +12,9 @@ ocenia. Jeśli liczy się to, co ktoś zobaczy, wyrenderuj i patrz.
 **Dlaczego.** W nowoczesnych bazach wiedzy (MDX, `.svx`) tekst i liczby są osobno: tekst
 pisze człowiek, liczby liczy komponent z danych. Tekst się starzeje, a komponent nie.
 
-**Przypadek.** S01E03: tekst strony #4471 mówił „jeden problem”, a tabela na zrenderowanej
+**Przypadek.** S01E03: tekst strony #4471 mówił „jeden problem”, a tabela na wyrenderowanej
 stronie pokazywała dwie przyczyny i przypis o trzeciej. Własna analiza dała `parser` = 374
-i kurs ją odrzucił. Desk liczy według swojego widoku, czyli 379. Debrief kursu: „Raw content
+i kurs ją odrzucił. Desk wsparcia z wyzwania liczy według swojego widoku, czyli 379. Debrief kursu: „Raw content
 is for the AI, the rendered view is for you: render it and look.”
 
 **Stosuj.**

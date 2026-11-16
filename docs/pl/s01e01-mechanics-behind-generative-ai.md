@@ -53,7 +53,7 @@ Komunikując się z LLM-ami przez API, możemy kontrolować parametry takie jak 
 
 **Konfabulacje (lub halucynacje):** Modele generatywne są trenowane na ogromnych, ale ograniczonych zbiorach danych i generują wyniki na podstawie prawdopodobieństw. Ich wiedza nie obejmuje wszystkiego i jest ograniczona w czasie — nazywamy to **granicą wiedzy**. Zachowanie modelu zależy też w dużym stopniu od dostępnego kontekstu i zadania. W rezultacie **modele popełniają błędy**, a praca z nimi nie polega na pewności, lecz na **zwiększaniu szans na uzyskanie oczekiwanych wyników**. Warto przeczytać [Why language models hallucinate](https://openai.com/index/why-language-models-hallucinate/). Warto wiedzieć, że nie mamy rozwiązania, które całkowicie eliminuje konfabulacje.
 
-Uruchom [Confabulation probe](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/confabulation-probe), aby zapytać „Opowiedz mi o Alice” bez kontekstu, a potem z dwoma różnymi kontekstami. Odpowiedź bez kontekstu może się zmieniać, ale ścisłe halucynacje zdarzają się dziś rzadko i wynikają głównie z błędnego lub brakującego kontekstu.
+Uruchom [Confabulation probe](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/confabulation-probe), aby zapytać „Opowiedz mi o Alice” bez kontekstu, a potem z dwoma różnymi kontekstami. Odpowiedź bez kontekstu może się zmieniać, ale halucynacje w ścisłym sensie zdarzają się dziś rzadko i wynikają głównie z błędnego lub brakującego kontekstu.
 
 ![Przykład: trzy osoby mają na myśli różne Alice: przyjaciółkę, projekt i postać z książki. Każda z nich wysyła ten sam prompt: „Opowiedz mi o Alice”. Model dostaje tylko ten prompt i odpowiada: „Alice to dziewczynka, która podąża za królikiem do Krainy Czarów”. W przypadku przyjaciółki i projektu odpowiedź jest błędna. W przypadku postaci z książki jest przypadkowo poprawna.](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-4/frame.png)
 
@@ -71,7 +71,7 @@ Istnieją jednak przesłanki, że rozumowanie nie działa dokładnie tak, jak mo
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-5/frame.html)
 
-Nie mówimy tu wyłącznie o teorii, lecz o podstawach generatywnej AI, jakie znamy z ostatnich kilku lat. Większość tych mechanizmów pozostała niezmienna od premiery ChatGPT w listopadzie 2022 roku i nadal jest przydatna, niezależnie od tego, czy pracujemy z agentami, budujemy uprzęże czy tworzymy agentów od podstaw.
+Nie mówimy tu wyłącznie o teorii, lecz o podstawach generatywnej AI, jakie znamy z ostatnich kilku lat. Większość tych mechanizmów pozostała niezmienna od premiery ChatGPT w listopadzie 2022 roku i nadal jest przydatna, niezależnie od tego, czy pracujemy z agentami, budujemy uprzęże (ang. harness) czy tworzymy agentów od podstaw.
 
 ## Mechanika dużych modeli językowych
 
@@ -135,7 +135,7 @@ Aby zobaczyć, jak to działa, uruchom [Structured output](https://github.com/ME
 
 **Tryb kodu:** Wywoływanie funkcji wymaga umieszczenia wszystkich schematów w kontekście, by model mógł zdecydować, którego narzędzia użyć. Wiemy jednak, że okno kontekstu ma ograniczenia, a dołączanie tych wszystkich informacji jest marnotrawstwem, jeśli interakcja ich nie wymaga. Jednocześnie najnowsze modele bardzo dobrze piszą kod.
 
-Prowadzi nas to do scenariusza, w którym model otrzymuje tylko **dwa narzędzia, na przykład „find” i „execute”**. To wystarcza, by agenci **pisali kod** przy użyciu **dostępnych możliwości**. Pod niemal każdym względem jest to wydajniejsze od wywoływania funkcji, ale trudniej wdrożyć to na produkcji, ponieważ kod trzeba wykonywać w piaskownicach, takich jak [Daytona](https://www.daytona.io/) lub [Cloudflare](https://developers.cloudflare.com/agents/tools/codemode/). W przypadku agentów programistycznych działających na naszych komputerach jest to często dużo łatwiejsze, bo uruchamiają skrypty lokalnie.
+Prowadzi nas to do scenariusza, w którym model otrzymuje tylko **dwa narzędzia, na przykład „find” i „execute”**. To wystarcza, by agenci **pisali kod** przy użyciu **dostępnych możliwości**. Pod niemal każdym względem jest to wydajniejsze od wywoływania funkcji, ale trudniej wdrożyć to na produkcji, ponieważ kod trzeba wykonywać w piaskownicach (ang. sandbox), takich jak [Daytona](https://www.daytona.io/) lub [Cloudflare](https://developers.cloudflare.com/agents/tools/codemode/). W przypadku agentów programistycznych działających na naszych komputerach jest to często dużo łatwiejsze, bo uruchamiają skrypty lokalnie.
 
 Różnicę widać w przykładzie [Code mode](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/code-mode), gdzie to samo zadanie uruchamiamy dwa razy: raz z 30 narzędziami funkcyjnymi, a raz tylko z `find` i `execute`. W naszych uruchomieniach domyślnego zadania wywoływanie funkcji zużywało około 2300 z 3000 tokenów wejściowych na schematy narzędzi. Spróbuj też zapytać „Kim jestem?” — zadanie wymagające jednego wywołania może kosztować więcej w trybie kodu.
 
@@ -143,7 +143,7 @@ Różnicę widać w przykładzie [Code mode](https://github.com/MEGA-DOT-DEV/exa
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-10/frame.html)
 
-LLM-y nie mogą fizycznie wchodzić w interakcje ze swoim otoczeniem, a ilość informacji, które mogą przetworzyć, jest ściśle ograniczona. Mogą jednak zwracać ustrukturyzowane dane, których użyjemy do wywoływania API. Dzięki temu możemy szybko przejść z interakcji z AI „od odpowiedzi do działania”. Widzimy to już w narzędziach agentowych takich jak Claude Code, Devin, Hermes i Grok Bot.
+LLM-y nie mogą fizycznie wchodzić w interakcje ze swoim otoczeniem, a ilość informacji, które mogą przetworzyć, jest ściśle ograniczona. Mogą jednak zwracać ustrukturyzowane dane, których użyjemy do wywoływania API. Dzięki temu interakcja z AI może szybko przejść „od odpowiedzi do działania”. Widzimy to już w narzędziach agentowych takich jak Claude Code, Devin, Hermes i Grok Bot.
 
 **Agenci:** Niektóre definicje mówią, że **agenci to po prostu pętle wywołań LLM**. Minimalnego agenta można zaimplementować w ten sposób, ale budowanie agentów staje się dużo bardziej skomplikowane, gdy muszą działać niezawodnie i wykonywać zadania rozciągnięte w czasie. Omówimy to szczegółowo w drugim tygodniu, więc na razie zapamiętajmy, że **agent to pętla, w której model decyduje, czy użyć narzędzia i kontynuować zadanie, czy odpowiedzieć tekstem, co kończy pętlę i zwraca odpowiedź**.
 
@@ -153,7 +153,7 @@ LLM-y nie mogą fizycznie wchodzić w interakcje ze swoim otoczeniem, a ilość 
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-25/frame.html)
 
-**CLI / MCP:** agenci mogą otrzymywać natywne narzędzia udostępniane przez uprząż, ale mogą też korzystać ze znanych narzędzi CLI, które najlepiej sprawdzają się **lokalnie**. W produkcji znacznie lepszym rozwiązaniem jest **MCP** (Model Context Protocol). Jest powszechnie używany i obsługiwany przez niemal wszystkie narzędzia, takie jak Claude, ChatGPT, Grok Bot i inne. Na razie wystarczy wiedzieć, że CLI / MCP mogą łatwo rozszerzyć możliwości agenta, [udostępniając mu **narzędzia**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/mcp-tool-bridge), z których korzysta przez wywoływanie funkcji albo tryb kodu. Dobrym przykładem jest bardzo popularny [Playwright MCP](https://playwright.dev/docs/getting-started-mcp), który pozwala agentowi wchodzić w interakcje z przeglądarką.
+**CLI / MCP:** agenci mogą otrzymywać natywne narzędzia udostępniane przez uprząż, ale mogą też korzystać ze znanych narzędzi CLI, które najlepiej sprawdzają się **lokalnie**. Na produkcji znacznie lepszym rozwiązaniem jest **MCP** (Model Context Protocol). Jest powszechnie używany i obsługiwany przez niemal wszystkie narzędzia, takie jak Claude, ChatGPT, Grok Bot i inne. Na razie wystarczy wiedzieć, że CLI / MCP mogą łatwo rozszerzyć możliwości agenta, [udostępniając mu **narzędzia**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/mcp-tool-bridge), z których korzysta przez wywoływanie funkcji albo tryb kodu. Dobrym przykładem jest bardzo popularny [Playwright MCP](https://playwright.dev/docs/getting-started-mcp), który pozwala agentowi wchodzić w interakcje z przeglądarką.
 
 ![Diagram przepływu. Po lewej CLI i MCP udostępniają narzędzia. MCP może też udostępniać zasoby i umiejętności. Narzędzia trafiają do agenta, który korzysta z nich przez wywoływanie funkcji lub tryb kodu. Czerwona ramka wokół tych dwóch mechanizmów pokazuje, że pozostają takie same niezależnie od źródła narzędzi.](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-26/frame.png)
 
@@ -179,7 +179,7 @@ Na przykład:
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-14/frame.html)
 
-- **Umiejętności** to pliki (lub foldery) zawierające instrukcje, a czasem skrypty, które mają ukierunkowywać model na określone zachowania. Po włączeniu często pozostają w kontekście aż do usunięcia podczas kompakcji albo rozpoczęcia nowego wątku. Model może też sam uruchomić umiejętność, ale wybiera ją wyłącznie na podstawie jej nazwy i opisu, ponieważ nie da się jednocześnie wczytać wszystkich umiejętności do kontekstu.
+- **Umiejętności** (ang. skills) to pliki (lub foldery) zawierające instrukcje, a czasem skrypty, które mają ukierunkowywać model na określone zachowania. Po włączeniu często pozostają w kontekście aż do usunięcia podczas kompakcji albo rozpoczęcia nowego wątku. Model może też sam uruchomić umiejętność, ale wybiera ją wyłącznie na podstawie jej nazwy i opisu, ponieważ nie da się jednocześnie wczytać wszystkich umiejętności do kontekstu.
 
   Przykład [Skill selection](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/skill-selection) pokazuje sześć umiejętności dodanych do kontekstu wyłącznie jako nazwy i opisy, użytych w 15 testowych żądaniach. Większość zadań kończy się powodzeniem, ale w niektórych umiejętność **nie jest wybierana wtedy, kiedy powinna, albo zostaje wybrana niepotrzebnie**.
 
@@ -215,7 +215,7 @@ Z technicznego punktu widzenia można sprawdzić, który model jest w danym mome
 
 Pracując z AI, niemal zawsze chcemy korzystać z **najlepszych dostępnych modeli**, choć są zadania, które chcemy zautomatyzować lub uruchamiać na dużą skalę. Wtedy warto sprawdzić, czy możemy obniżyć ustawienia rozumowania albo przejść na mniejszy model.
 
-Aby uniknąć uzależnienia od dostawcy, omówimy konfigurację niezależną od uprzęży, z narzędziami ściśle niezwiązanymi z konkretnym dostawcą. W przypadku największych laboratoriów niezależność od uprzęży i dostawcy jest niemal tym samym, ponieważ każde z nich ma własną uprząż, na przykład Codex od OpenAI lub Claude Code od Anthropic. Zamiast Codex proponujemy na przykład pracę z [Pi](https://pi.dev/), [OpenCode](https://opencode.ai/) lub narzędziami takimi jak [T3 Code](https://t3.codes/) czy [Superset](https://superset.sh/).
+Aby uniknąć uzależnienia od dostawcy, omówimy konfigurację niezależną od uprzęży, z narzędziami, które nie są ściśle związane z konkretnym dostawcą. W przypadku największych laboratoriów niezależność od uprzęży i dostawcy jest niemal tym samym, ponieważ każde z nich ma własną uprząż, na przykład Codex od OpenAI lub Claude Code od Anthropic. Zamiast Codex proponujemy na przykład pracę z [Pi](https://pi.dev/), [OpenCode](https://opencode.ai/) lub narzędziami takimi jak [T3 Code](https://t3.codes/) czy [Superset](https://superset.sh/).
 
 ## Uogólnione sterowanie
 
@@ -223,7 +223,7 @@ Być może znasz techniki promptowania takie jak chain of thought, few-shot prom
 
 Ostatnio rozpowszechniło się przekonanie, że nie tylko nie potrzebujemy dodatkowego sterowania modelem, ale że może ono przynieść więcej szkody niż pożytku. Jest w tym trochę prawdy, ale rzeczywistość nie jest aż tak prosta. Nadal możemy chcieć ukierunkowywać model — nie przez precyzyjne instrukcje, których ma przestrzegać, lecz przez naprowadzanie go na określone zachowania. Na przykład:
 
-- **Różne perspektywy:** Możemy zadać AI zestaw pytań i poczekać na wyniki. Możemy też zadać to samo pytanie kilku modelom, a następnie połączyć odpowiedzi. Inną możliwością jest poproszenie modelu o uruchomienie kilku **podagentów** (często w osobnych wątkach) i przydzielenie im różnych części zadania. Wykorzystuje to fakt, że modele „myślą”, generując tokeny, a każdy token zależy od tego, co go poprzedza.
+- **Różne perspektywy:** Możemy zadać AI zestaw pytań i poczekać na wyniki. Możemy też zadać to samo pytanie kilku modelom, a następnie połączyć odpowiedzi. Inną możliwością jest poproszenie modelu o uruchomienie kilku **podagentów** (ang. subagents; często w osobnych wątkach) i przydzielenie im różnych części zadania. Wykorzystuje to fakt, że modele „myślą”, generując tokeny, a każdy token zależy od tego, co go poprzedza.
 
   Uruchom [Ask models](https://github.com/MEGA-DOT-DEV/examples/tree/main/tools/ask-models), aby jednocześnie wysłać jedno pytanie do kilku modeli i połączyć odpowiedzi w odrębne perspektywy. Jeśli chodzi o podagentów, otwórz [Subagents as tools](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/subagents-as-tools): w moich testach jeden podagent na umowę poprawnie wypełnił 79–80 z 80 pól, podczas gdy pojedynczy agent analizujący wszystkie szesnaście umów — 75–79. Twoje wyniki mogą się różnić.
 
@@ -263,4 +263,4 @@ Jak wspominałem, **ta lekcja ma dać Ci szeroki, ogólny obraz podstawowych mec
 
 Omówione dziś tematy można uznać za **podstawy generatywnej AI**. Modele rozwijały się głównie dzięki skalowaniu, a nie fundamentalnym zmianom architektury, dlatego ta wiedza pozostaje w przybliżeniu aktualna.
 
-Jak w przypadku każdej technologii, z którą zetknęliśmy się w pracy, warto poznać szczegóły i zdobyć przynajmniej podstawową wiedzę o tym, co dzieje się pod maską. Dzięki temu możemy **rozumować od podstaw o pracy z agentami i ich budowaniu** oraz łatwiej odróżniać zwykły szum medialny od rzeczywistej wartości.
+Jak w przypadku każdej technologii, z którą zetknęliśmy się w pracy, warto poznać szczegóły i zdobyć przynajmniej podstawową wiedzę o tym, co dzieje się pod maską. Dzięki temu możemy **opierać myślenie o pracy z agentami i ich budowaniu na podstawowych zasadach** oraz łatwiej odróżniać zwykły szum medialny od rzeczywistej wartości.

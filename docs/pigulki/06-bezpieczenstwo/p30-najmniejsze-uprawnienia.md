@@ -7,17 +7,19 @@
 > - S02E02 · Budowanie agenta → rozdział „Architektura” — [po polsku](../../pl/s02e02-building-an-agent.md#architektura) · [oryginał EN: „Architecture”](../../s02e02-building-an-agent.md#architecture)
 
 **Zasada.** Agent dostaje tylko te prawa, których potrzebuje. Nawet gdy model da się
-przekonać, nie ma czym wykonać szkody.
+przekonać, nie ma czym wyrządzić szkody.
 
-**Przypadek.** S01E05: `/.well-known/mega-pulse.json` dawał pulse tylko `answer`, a test
-writerowi tylko `test`. Przykład z kursu dawał też `comment`, `label` i `close`. Gdyby model
+**Przypadek.** S01E05: `/.well-known/mega-pulse.json` dawał agentowi pulse tylko `answer`,
+a agentowi test writer tylko `test`. Przykład z kursu dawał też `comment`, `label` i `close`. Gdyby model
 posłuchał issue #14, i tak nie mógłby zamknąć #12.
 
 S02E04: lokalny worker miał jeden serwer MCP, tylko z linkiem swojego zadania
 (`--strict-mcp-config`), a bez pytania mógł wołać tylko `mcp__job` i `Skill`. Routine
-w chmurze: zero konektorów, `allowed_tools` Bash i Read. Init lokalnego workera wymieniał
-jednak też wbudowane narzędzia (Bash, Write, WebFetch i inne). `--allowedTools` zatwierdza
-z góry, ale nie usuwa reszty, więc lista zgód to nie lista narzędzi. Dokumentacja CLI to potwierdza: narzędzia usuwa dopiero `--tools` (np. `--tools "Skill"`), a `--allowedTools` tylko omija pytanie o zgodę ([cli-reference](https://code.claude.com/docs/en/cli-reference)).
+w chmurze: żadnych konektorów, `allowed_tools` Bash i Read. Na starcie lokalny worker
+zgłaszał jednak też wbudowane narzędzia (Bash, Write, WebFetch i inne). `--allowedTools`
+tylko zwalnia wymienione narzędzia z pytania o zgodę, ale nie usuwa pozostałych. Zestaw
+narzędzi zawęża dopiero `--tools`, np. `--tools "Skill"`
+([dokumentacja CLI](https://code.claude.com/docs/en/cli-reference)).
 
 **Stosuj.** Obrona w głąb: filtr wejścia ([P29](p29-granica-zaufania-w-kodzie.md)) i wąskie narzędzia (P30) naraz.
 

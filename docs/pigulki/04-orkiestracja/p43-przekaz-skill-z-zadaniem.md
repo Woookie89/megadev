@@ -7,35 +7,39 @@
 > - S02E04 · Współpraca wielu agentów → rozdział „Najważniejsze wnioski” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski) · [oryginał EN: „Takeaways”](../../s02e04-multi-agent-collaboration.md#takeaways)
 
 **Zasada.** Delegowanie to praca, która wychodzi z głównego agenta: worker ma własny
-kontekst i własne połączenie z narzędziami. Skill, który mówi, *jak* zrobić zadanie, musi
-trafić do workera razem z nim. Skill przeczytany przez głównego agenta to nie skill użyty przez
-workera.
+kontekst i własne połączenie z narzędziami. Skill, który opisuje, *jak* wykonać zadanie,
+trzeba przekazać workerowi razem z zadaniem. To, że główny agent przeczytał skill, nie
+znaczy, że worker go zna.
 
-**Dlaczego.** Agenci nie dzielą wątków. Worker widzi tylko to, co dostał w briefie i co
-załaduje jego harness. Narzędzie mówi, *co* da się zrobić. Bez procedury worker zrobi to,
-co oczywiste: przeszuka domyślny zakres, przeczyta wszystkie pola, odda surowy zrzut.
-Skill zamienia ten zrzut w kształt, którego potrzebuje następny czytelnik.
+**Dlaczego.** Agenci nie widzą nawzajem swoich rozmów. Worker wie tylko to, co dostał
+w briefie, i to, co wczyta jego harness. Opis narzędzia mówi, *co* da się zrobić, ale nie
+*jak*. Bez procedury worker zrobi to, co najprostsze: przeszuka domyślny zakres, przeczyta
+wszystkie pola i odda surowe dane. Dopiero skill sprawia, że wynik ma postać, której
+potrzebuje następny odbiorca.
 
 **Przypadek.** S02E04: dwa zadania kursu, dwa skille, dwa workery.
 
-- Lokalny `claude -p` miał `voice-to-memo` w `.claude/skills/` swojego katalogu, a prompt
-  kazał go wczytać i podał wersję 1. Notatki wyszły w kształcie skilla: jedna na
-  zdarzenie, z `@m:ss`, także powtórzenia (11 notatek).
-- Routine w chmurze klonowała prywatne repo, w którym leżał tylko `incident-lookup`.
-  Worker najpierw porównał tę kopię ze skillem z linku zadania, a potem przeszukał
-  `ops/live` zamiast domyślnego archiwum i nie przeczytał pola `crew`.
+- Lokalny worker (`claude -p`) miał skill `voice-to-memo` w folderze `.claude/skills/`
+  swojego katalogu, a prompt kazał go wczytać i podał wersję 1. Notatki miały format
+  opisany w skillu: jedna na zdarzenie, z momentem w nagraniu (`@m:ss`), także dla
+  powtórzeń. Razem 11 notatek.
+- Worker w chmurze (routine w claude.ai/code) pobrał prywatne repo, w którym był tylko skill
+  `incident-lookup`. Najpierw porównał tę kopię ze skillem udostępnionym pod linkiem
+  zadania. Potem szukał w zakresie `ops/live` zamiast w domyślnym archiwum i nie czytał
+  pola `crew` z nazwiskami załogi.
 
 Kurs: „A tool says what; a skill says how. The skill has to travel with the job — a skill
-the main agent read is not one the worker used.” Oba `submit` przeszły za pierwszym razem.
+the main agent read is not one the worker used.” Kurs przyjął wyniki obu workerów
+(`submit`) za pierwszym razem.
 
 **Stosuj.**
 
-- Skill kładź tam, skąd harness workera go ładuje: `.claude/skills/` w jego katalogu,
-  w repo, które sklonuje, w obrazie CI.
-- W briefie podaj nazwę skilla i wersję. Gdy kurs albo zespół serwuje skill u źródła,
-  worker ma porównać swoją kopię z oryginałem.
-- Główny agent nie streszcza skilla workerowi własnymi słowami. Streszczenie gubi
-  właśnie te reguły, które odróżniają procedurę od rzeczy oczywistej.
+- Umieść skill tam, skąd wczyta go harness workera: w `.claude/skills/` jego katalogu,
+  w repo, które pobierze, albo w obrazie CI.
+- W briefie podaj nazwę i wersję skilla. Jeśli skill jest też dostępny u źródła (np. na
+  serwerze kursu), niech worker porówna z nim swoją kopię.
+- Nie streszczaj workerowi skilla własnymi słowami. Streszczenie gubi akurat te reguły,
+  które odróżniają procedurę od tego, co oczywiste.
 - Szablon briefu z polem na skill: [A3](../szablony/brief-workera.md).
 
 ---

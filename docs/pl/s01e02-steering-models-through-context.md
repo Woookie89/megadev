@@ -36,14 +36,14 @@ Większość uprzęży i narzędzi agentowych pozwala konfigurować następując
 
 - **Podstawowy plik:** AGENTS.md jest często wczytywany na początku interakcji. Zawiera ogólny kontekst i przydatne omówienie projektu, a także może odsyłać do dokumentów opisujących moduły lub funkcje, których nie da się wywnioskować z samego kodu. Może zawierać również preferencje, na przykład konwencje i reguły specyficzne dla projektu. Warto pamiętać, że [AGENTS.md pomaga agentom, ale nie gwarantuje, że będą przestrzegać każdej reguły.](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/agents-md-onboarding)
 - **Pamięć:** Można ją zaimplementować na wiele sposobów. Nawet jeden agent może dysponować wieloma sposobami przechowywania różnych rodzajów pamięci dostępnych także w kolejnych wątkach. Wspomnienia często są wyodrębniane automatycznie w trakcie interakcji albo na wyraźną prośbę użytkownika.
-- **Konfiguracja:** Większość uprzęży dąży do samoobsługowej konfiguracji, więc agenci mają dostęp do ustawień i dokumentacji. Możemy dzięki temu **rozmawiać z agentem o nim samym** i znajdować najlepsze dla siebie ustawienia. W pewnym momencie agent może też sam zdecydować, które ustawienia najlepiej pasują do danego zadania, i odpowiednio je zmienić. Warto o tym pamiętać, bo nasz przepływ pracy staje się bardziej dynamiczny niż kiedykolwiek.
+- **Konfiguracja:** Większość uprzęży zmierza do tego, by konfigurowały się same, więc agenci mają dostęp do ustawień i dokumentacji. Możemy dzięki temu **rozmawiać z agentem o nim samym** i znajdować najlepsze dla siebie ustawienia. W pewnym momencie agent może też sam zdecydować, które ustawienia najlepiej pasują do danego zadania, i odpowiednio je zmienić. Warto o tym pamiętać, bo nasz przepływ pracy staje się bardziej dynamiczny niż kiedykolwiek.
 - **Baza wiedzy:** Często jest to zbiór plików niezwiązany ściśle z konkretną uprzężą. Zawiera informacje o produkcie i procesach, dzięki którym agent może lepiej pracować i podejmować trafniejsze decyzje. Przydaje się także użytkownikom, ich agentom i innym członkom zespołu, zwłaszcza gdy użyjemy Astro lub Next do przekształcenia dokumentów w witrynę.
 - **Umiejętności**, o których wspominaliśmy, to foldery zawierające plik SKILL.md oraz opcjonalne skrypty opisujące agentom konkretny proces. Są wczytywane podczas interakcji i stanowią jeden z najbardziej elastycznych sposobów **kształtowania zachowania agenta** zgodnie z naszymi preferencjami. Ponieważ umiejętności to często zwykłe pliki, mogą odsyłać do innych umiejętności, które agent może zdecydować się wczytać. Możemy też mieć „umiejętności tworzenia umiejętności”, dzięki którym agenci mogą dynamicznie się „uczyć”.
 - **CLI / MCP:** Omówimy je później, ale oba rozwiązania rozszerzają możliwości agenta i pozwalają mu wchodzić w interakcje ze światem zewnętrznym.
 
 Ponadto niektóre uprzęże pozwalają nam **zarządzać ich instancjami**, a także **tworzyć rozszerzenia**, które dzięki hookom mogą dołączać naszą logikę do niemal każdej części interakcji. Co najlepsze, **AI może zbudować je za nas.** Mimo to nadal musimy wiedzieć, co da się zbudować i kiedy naprawdę potrzebujemy czegoś więcej niż domyślnej konfiguracji.
 
-**Uwaga:** nie każdą uprząż można konfigurować samodzielnie. Jeśli to możliwe, spróbuj przejść na narzędzie, które daje taką możliwość, na przykład Pi, OpenCode, Claude Code lub inną uprząż.
+**Uwaga:** nie każda uprząż potrafi konfigurować się sama. Jeśli to możliwe, spróbuj przejść na narzędzie, które daje taką możliwość, na przykład Pi, OpenCode, Claude Code lub inną uprząż.
 
 ![Uprząż agentowa przedstawiona jako system komponentów. Model, pętla agentowa i wątek tworzą cykl. Wątek ogranicza okno kontekstu. Kontekst globalny i pamięć zasilają wątek. Pętla uruchamia narzędzia i wywołuje hooki. Za pomocą narzędzi agent edytuje system plików zawierający kontekst globalny, pamięć, hooki i ustawienia narzędzi, dzięki czemu może konfigurować własną uprząż.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-3/frame.png)
 
@@ -178,7 +178,7 @@ OSTRZEŻENIE: **modele mogą popełniać błędy** albo dać się **oszukać** i
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-13/frame.html)
 
-**Odpowiedź:** Po wygenerowaniu ładunku przez model uprząż go wykonuje i zwraca wynik modelowi, który decyduje, co zrobić dalej. Musimy jednak pamiętać, że **wszystko, co zwraca narzędzie**, staje się częścią kontekstu, a więc wpływa na zachowanie modelu. Wyjątkiem jest sytuacja, gdy wynik jest zbyt duży i uprząż zapisuje go do pliku. Agent może wtedy odczytać tylko jego część.
+**Odpowiedź:** Po wygenerowaniu ładunku przez model uprząż wykonuje wywołanie i zwraca wynik modelowi, który decyduje, co zrobić dalej. Musimy jednak pamiętać, że **wszystko, co zwraca narzędzie**, staje się częścią kontekstu, a więc wpływa na zachowanie modelu. Wyjątkiem jest sytuacja, gdy wynik jest zbyt duży i uprząż zapisuje go do pliku. Agent może wtedy odczytać tylko jego część.
 
 ![Pionowy diagram przepływu. Model wywołuje narzędzie, a uprząż je uruchamia. Wynik, który nie jest zbyt duży, trafia bezpośrednio do kontekstu modelu. Zbyt duży wynik trafia do pliku. Agent analizuje plik za pomocą wywołań narzędzi, podobnie jak w pierwszym kroku, a do kontekstu może dotrzeć tylko część jego zawartości. Ostatnia ścieżka jest oznaczona na czerwono.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-15/frame.png)
 
@@ -190,7 +190,7 @@ Patrząc na powyższy przepływ żądania i odpowiedzi, możemy dostrzec wiele p
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-16/frame.html)
 
-**Błędy:** Jeśli coś pójdzie nie tak, uprząż nie powinna zawsze zgłaszać wyjątku. Zamiast tego powinna przekazać modelowi szczegóły błędu. Dzięki temu agent może **odzyskać sprawność po błędzie** albo poprosić użytkownika o pomoc.
+**Błędy:** Jeśli coś pójdzie nie tak, uprząż nie powinna zawsze zgłaszać wyjątku. Zamiast tego powinna przekazać modelowi szczegóły błędu. Dzięki temu agent może **poradzić sobie z błędem** albo poprosić użytkownika o pomoc.
 
 ![Pionowy przepływ jednej interakcji z agentem. Kontekst zawiera prompt systemowy, definicje narzędzi i wiadomość użytkownika. Agent wywołuje narzędzie, które zwraca błąd. Błąd wraca do agenta i jest zaznaczony na czerwono. Agent wysyła poprawione wywołanie i przekazuje użytkownikowi odpowiedź końcową. Z boku znajduje się błąd systemowy, na przykład problem z połączeniem z LLM-em — to jedyny rodzaj błędu przekazywany użytkownikowi. Nazwy narzędzi, ścieżki i tekst błędu są przykładami.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-17/frame.png)
 
@@ -201,7 +201,7 @@ Podsumowując, na razie musimy wiedzieć, że:
 - Agenci muszą znać dostępne narzędzia i możliwości. Wymaga to udostępnienia im z góry schematów narzędzi albo umożliwienia ich odkrywania.
 - Agenci coraz częściej polegają na programistycznym użyciu narzędzi. Innymi słowy, piszą kod pozwalający wchodzić w interakcję ze środowiskiem za pomocą dostępnych możliwości lub bezpośrednio przez API.
 - Wiedza bazowa i dostępny kontekst wpływają na wybór narzędzi. Ładunki żądań mogą być weryfikowane, ale modele mogą halucynować wartości, co w skrajnych przypadkach może prowadzić do wycieków danych lub incydentów związanych z bezpieczeństwem.
-- Odpowiedzi narzędzi mogą zawierać dodatkowe wskazówki pomagające agentowi odzyskać sprawność po błędach, lepiej eksplorować dostępne dane lub zdecydować, co zrobić dalej.
+- Odpowiedzi narzędzi mogą zawierać dodatkowe wskazówki pomagające agentowi poradzić sobie z błędami, lepiej eksplorować dostępne dane lub zdecydować, co zrobić dalej.
 
 ## Podagenci i wykonawcy
 
@@ -215,7 +215,7 @@ Z technicznego punktu widzenia podagent jest jednym z natywnych narzędzi: możn
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-18/frame.html)
 
-**Wykonawcy:** z definicji wykonawca również jest podagentem, ale działa w osobnym procesie, na przykład w drugiej karcie Claude Code. Uruchamia go i zarządza nim inny agent, który otrzymuje także powiadomienie o ukończeniu zadania. Wykonawcę może uruchomić również deterministyczne zdarzenie, takie jak harmonogram lub webhook.
+**Wykonawcy** (ang. workers): z definicji wykonawca również jest podagentem, ale działa w osobnym procesie, na przykład w drugiej karcie Claude Code. Uruchamia go i zarządza nim inny agent, który otrzymuje także powiadomienie o ukończeniu zadania. Wykonawcę może uruchomić również deterministyczne zdarzenie, takie jak harmonogram lub webhook.
 
 ![Diagram przepływu. Agent koordynujący uruchamia dwóch wykonawców. Każdy działa we własnej ramce procesu, a pierwsza ramka jest czerwona. Przerywane linie prowadzą od każdego wykonawcy do agenta: wykonawca informuje agenta o postępach, błędach i wyniku. Ustawienia wykonawców są przykładowe.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-19/frame.png)
 
@@ -241,7 +241,7 @@ Wkrótce dowiemy się więcej o zaawansowanych, ale nadal prostych przepływach 
 - podagenci / wykonawcy mogą być **zdefiniowani z góry** albo **tworzeni dynamicznie**
 - podagenci / wykonawcy służą głównie **zarządzaniu kontekstem**, koncentracją i wydajnością
 - podagentami / wykonawcami może zarządzać człowiek, ale też inny agent lub skrypt
-- najłatwiej zacząć korzystanie z podagentów, **prosząc model**, by rozwiązał zadanie przez dynamiczne utworzenie podagentów i podzielenie pracy na mniejsze kroki
+- najłatwiej zacząć korzystać z podagentów, **prosząc model**, by rozwiązał zadanie przez dynamiczne utworzenie podagentów i podzielenie pracy na mniejsze kroki
 
 ## Najważniejsze wnioski
 

@@ -12,9 +12,9 @@ jeszcze raz i porównaj z tym, co już przeczytano.
 **Dlaczego.** Agent czyta źródło raz, na początku. Potem przez godzinę buduje na tym odczycie.
 Im dłuższa praca, tym większa szansa, że źródło się zmieniło.
 
-**Przypadek.** S01E03: aktualizacja desku pojawiła się na stronie dopiero po kroku 1. S02E01:
-archiwum sesji urosło po pierwszym odczycie. Późny podagent zmienił obraz i port Postgresa,
-a kolejna sesja nazwę bazy. Kurs: „Something changed since your check-in. Check again.”
+**Przypadek.** S01E03: aktualizacja od desku wsparcia pojawiła się na stronie dopiero po kroku 1. S02E01:
+archiwum sesji urosło po pierwszym odczycie. Dopisana później sesja podagenta zmieniła obraz
+i port Postgresa, a jeszcze późniejsza sesja nazwę bazy. Kurs: „Something changed since your check-in. Check again.”
 
 **Stosuj.**
 - Ostatni krok przed claimem, PR-em albo raportem to ponowne pobranie źródeł i diff.

@@ -11,7 +11,7 @@
 
 ## Cel
 
-Product potrzebuje publicznej strony statusu na noc. Wymagania przysłało sześć osób,
+Zespół produktu potrzebuje publicznej strony statusu na noc. Wymagania przysłało sześć osób,
 każda w innej formie. Trzeba złożyć z nich jedną listę wymagań z odwołaniami do źródeł,
 a potem zbudować i wdrożyć stronę zgodną z tą listą.
 

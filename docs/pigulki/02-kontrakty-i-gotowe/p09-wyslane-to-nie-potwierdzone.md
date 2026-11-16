@@ -13,7 +13,7 @@ potwierdzenia, nie od wysyłki.
 potwierdzeniu.
 
 **Stosuj.** W planie zapisuj kroki zewnętrzne jako „czeka na X” z jawnym sygnałem
-zakończenia. Kroki za nim blokuj tym sygnałem.
+zakończenia. Kroki, które po nim następują, wstrzymaj do nadejścia tego sygnału.
 
 ---
 

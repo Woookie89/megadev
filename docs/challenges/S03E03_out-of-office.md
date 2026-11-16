@@ -12,13 +12,13 @@
 ## Cel
 
 API produktu do planowania jest dostarczone jako projekt startowy. Przez około 20 minut
-product i support otwierają issues w trackerze kursu, gdy użytkownika nie ma. Agent ma
-sam podejmować każde issue, wdrażać zmiany na żywy adres HTTPS, pytać użytkownika tylko
+zespół produktu i support otwierają issues w trackerze kursu, gdy użytkownika nie ma. Agent ma
+sam brać każde issue, wdrażać zmiany na własny, działający adres HTTPS, pytać użytkownika tylko
 o decyzje należące do niego i prowadzić dziennik wdrożeń.
 
 ## Role
 
-- **Użytkownik:** dostarcza potrzebne logowania i klucze oraz odpowiada na pytania na
+- **Użytkownik:** daje harnessowi dostęp do kont i klucze, o które poprosi, oraz odpowiada na pytania na
   stronie rundy. Nie zmienia kodu.
 - **Harness:** przygotowuje agenta na wybranym hostingu. Agent odbiera i realizuje issues
   według skilla triage.
@@ -33,7 +33,7 @@ o decyzje należące do niego i prowadzić dziennik wdrożeń.
 
 - Użytkownik nie zmienia kodu.
 - Agent pyta tylko o decyzje, które należą do użytkownika.
-- Tracker kursu symuluje środowisko pracy. Runda nie dotyka kont zespołu użytkownika.
+- Tracker kursu symuluje środowisko pracy. Runda nie korzysta z kont zespołu użytkownika.
 
 ## Kryterium ukończenia
 

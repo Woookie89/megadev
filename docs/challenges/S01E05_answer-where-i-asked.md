@@ -11,7 +11,7 @@
 
 ## Cel
 
-Trzeba naprawić to, co zostało otwarte w kursowym projekcie rig, i uruchomić agenta na
+Trzeba naprawić to, co jest jeszcze otwarte w kursowym projekcie rig, i uruchomić agenta na
 wybranym hostingu. Agent sam odpowiada recenzentowi kursu, gdy ten zapyta o stan rigu.
 Drugi agent pisze test dla otwartego błędu.
 

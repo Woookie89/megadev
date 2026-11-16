@@ -8,8 +8,8 @@ Blocked by: <#issue | nic>
 Suggested worker: <model> · <effort>
 Context you don't have: <rzeczy z rozmowy, których worker nie widzi>
 Skill: <nazwa · wersja · skąd harness workera go załaduje>
-Reach: <sieć i narzędzia, które worker ma w swoim miejscu>
-Way home: <gdzie i w jakim kształcie wraca wynik i dowód>
+Reach: <sieć i narzędzia, które worker ma w swoim środowisku>
+Way home: <gdzie i w jakiej postaci wraca wynik i dowód>
 Stop and report if: <warunki stopu>
 ```
 

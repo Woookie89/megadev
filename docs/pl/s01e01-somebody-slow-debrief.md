@@ -4,7 +4,7 @@ Ten wpis łączy temat lekcji S01E01 z praktycznym wyzwaniem „somebody slow”
 
 ## Temat lekcji
 
-Lekcja omawia przewidywanie kolejnych tokenów, niedeterministyczność i ograniczenia modeli, a także okna kontekstu, narzędzia oraz zachowanie uprzęży. Wyzwanie pokazało praktyczny skutek kompakcji kontekstu: skrócenie tekstu zachowuje część informacji, ale inne może bezpowrotnie usunąć.
+Lekcja omawia przewidywanie kolejnych tokenów, niedeterministyczność i ograniczenia modeli, a także okna kontekstu, narzędzia oraz zachowanie harnessu. Wyzwanie pokazało praktyczny skutek kompakcji kontekstu: skrócenie tekstu zachowuje część informacji, ale inne może bezpowrotnie usunąć.
 
 ## Zadanie i wynik
 

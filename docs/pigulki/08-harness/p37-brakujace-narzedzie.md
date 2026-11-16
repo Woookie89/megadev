@@ -14,7 +14,7 @@ Potem zamień je na trwałe narzędzie, a pułapki środowiska zapisz.
   i sterował nim przez puppeteer-core, a człowiek zalogował się w tym oknie. Na stałe:
   Playwright MCP.
 - S01E02: ffmpeg i faster-whisper. Pułapki: PyAV nie działał z biblioteką, a ffmpeg ze
-  skryptu bez `-nostdin` wisiał.
+  skryptu bez `-nostdin` się zawieszał.
 
 **Stosuj.** Pułapki środowiska wpisuj do sekcji „Can run” w KEEP, żeby następna sesja ich
 nie odkrywała od nowa.

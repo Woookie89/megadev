@@ -28,7 +28,7 @@ W życiu prywatnym szybki wzrost złożoności również utrudnia ogarnięcie ws
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-2/frame.html)
 
-Problemy, które tu widzimy, nie są nowe i mamy już na nie pewne odpowiedzi. Zmieniło się tempo oraz nowe możliwości, które odkrywamy, a które wcześniej nie były tak łatwo dostępne jak dziś. Innymi słowy: **musimy używać AI, żeby nadążyć za AI**.
+Problemy, które tu widzimy, nie są nowe i mamy już na nie pewne odpowiedzi. Nowe jest tempo, a także możliwości, które odkrywamy, a które wcześniej nie były tak łatwo dostępne jak dziś. Innymi słowy: **musimy używać AI, żeby nadążyć za AI**.
 
 ## Wykonywalny Markdown a kod
 
@@ -111,7 +111,7 @@ Dotąd omawialiśmy takie elementy jak:
 - **Śledzenie zadań** w dowolnej postaci — specyfikacje funkcji, opisy zgłoszeń, ADR-y czy cokolwiek, co pozwala agentowi wiedzieć, **co budujemy, co już zbudowaliśmy i co zamierzamy zbudować**
 - **Stos narzędzi**, który sam system rozwija jako własne narzędzia **MCP / CLI**, zgodnie z tymi samymi zasadami i z wykorzystaniem wspólnych prymitywów oraz bazy wiedzy
 
-Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **skonfigurowanie maszyny zdalnej, takiej jak VPS lub komputer PC/Mac**, albo przynajmniej udostępnienie agentów w GitHub Actions runnerze lub za pomocą rutyn Claude/Devin.
+Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **skonfigurowanie maszyny zdalnej, takiej jak VPS lub komputer PC/Mac**, albo przynajmniej udostępnienie agentów w runnerze GitHub Actions lub za pomocą rutyn Claude/Devin.
 
 ![Lokalny komputer stacjonarny łączy się z dużą ramką „Maszyna zdalna: VPS lub PC/Mac”. Znajdują się w niej dwie ramki. Czerwona ramka „Ty nadajesz kształt” zawiera „Prymitywy”, „Zasady” i „Środowisko” oraz etykietę „niewiele rzeczy, o których pamiętasz”. Strzałka z etykietą „wyznacza kierunek” prowadzi z niej do ramki „Agent buduje”. Ramka ta zawiera „Narzędzia”, „Zarządzaj”, „Wykonuj pracę” i „Weryfikuj” oraz etykietę „duże zaufanie, nie musisz o tym pamiętać”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-9/frame.png)
 
@@ -129,7 +129,7 @@ Proces konfiguracji wygląda w przybliżeniu tak:
 
 - Kupno VPS-a
 - Przejście przez przewodnik razem z agentem
-- Wykonanie czynności, o które poprosi agent, takich jak autoryzacja Tailscale, logowanie do Pi (opcjonalne) parowanie Moshi i konfiguracja GitHub Apps
+- Wykonanie czynności, o które poprosi agent, takich jak autoryzacja Tailscale, logowanie do Pi, (opcjonalnie) parowanie Moshi i konfiguracja GitHub Apps
 
 Dzięki temu otrzymujemy **agenta Pi pracującego na repozytorium GitHub** oraz sposób, by agenci działający na naszym komputerze mogli kontrolować **agentów zdalnych**. Przy obecnym stanie AI konfiguracja powinna być prosta nawet dla osoby bez doświadczenia z VPS-ami, choć obejmuje kilka kroków i może zająć godzinę lub dwie.
 
@@ -154,8 +154,8 @@ A oto kroki, które wykonasz **wspólnie z agentami:**
 - **AI:** Zabezpiecz SSH i zaporę sieciową (publicznie dostępny tylko port 22). Zainstaluj Limen, Node, Herdr, Tailscale, GitHub CLI, acl i powiązane pakiety. Zainstaluj pi jako użytkownik worker (nie jako root).
 - **Ty:** Zatwierdź Tailscale, gdy AI poda link. Z laptopa połącz się z seat przez SSH i zaloguj do GitHub CLI (`gh`) oraz pi. Nie wykonuj tych logowań z innego VPS-a.
 - **AI:** Sklonuj projekt przez HTTPS i uruchom `limen init`.
-- **Ty:** Zdecyduj, co zatwierdzić w commicie. Ten krok zależy od projektu, nad którym chcesz pracować.
-- **Ty + AI:** Otwórz Herdr remote dla seat. AI uruchomi koordynator i małe zadanie smoke test. Na chwilę zamknij pokrywę laptopa, a potem sprawdź, czy zadanie się zakończyło i karta Herdr nadal jest otwarta.
+- **Ty:** Zdecyduj, co trafi do commita. Ten krok zależy od projektu, nad którym chcesz pracować.
+- **Ty + AI:** Otwórz Herdr remote dla seat. AI uruchomi koordynatora i małe zadanie typu smoke test. Na chwilę zamknij pokrywę laptopa, a potem sprawdź, czy zadanie się zakończyło i karta Herdr nadal jest otwarta.
 - **Ty + AI:** Sparuj Moshi Hooks na seat (Settings → Hooks, nie Easy Pair) albo skonfiguruj ntfy, aby telefon powiadamiał Cię, kiedy agent będzie Cię potrzebował. Webhooki Grok Bot nie są tu domyślną opcją.
 - **AI:** Włącz codzienny timer prune. Raz dziennie uruchamia on `limen prune` i usuwa worktree zakończonych zadań, by dysk VPS-a się nie zapełnił. To nie jest timer GitHub doorbell.
 - AI (opcjonalnie): Przetestuj Tailscale Serve przy użyciu krótkiego podglądu lokalnego.
@@ -205,7 +205,7 @@ To od nas zależy, które z tych przepływów pracy mają sens w naszym przypadk
 
 Agenci zdalni otwierają wiele możliwości, ale wiążą się też z wieloma zagrożeniami. Możemy zwiększać autonomię systemu, ale musimy pamiętać o ryzyku **błędów** i ataków z zewnątrz. Wiemy już, że **prompt injection** może nakłonić agentów do działań, których nie powinni podejmować; problem ten nadal nie został rozwiązany.
 
-Problem staje się poważniejszy, gdy system zyskuje więcej możliwości — gdy podłączamy kalendarz, konta Gmail, komunikatory, a w przyszłości także nasze urządzenia i karty kredytowe. Agent czytający złośliwy e-mail, stronę internetową lub inną wiadomość może pozyskać wszystkie te informacje.
+Problem staje się poważniejszy, gdy system zyskuje więcej możliwości — gdy podłączamy kalendarz, konta Gmail, komunikatory, a w przyszłości także nasze urządzenia i karty kredytowe. Wszystkie te informacje mogą wyciec przez agenta, który przeczyta złośliwy e-mail, stronę internetową lub inną wiadomość.
 
 ![Diagram przepływu. Po lewej ramka „Niezaufane dane wejściowe” zawiera złośliwy e-mail, stronę internetową i dowolną wiadomość. Czerwone linie prowadzą z tych źródeł do agenta. Agent łączy się z Gmail, Kalendarzem, komunikatorami oraz kartą kredytową i urządzeniami, znajdującymi się w ramce „Dostęp do usług”. Z Gmail prowadzi linia do wycieku danych. Z karty kredytowej i urządzeń prowadzi linia do wymuszonego działania. Ukryte instrukcje są przykładami.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-13/frame.png)
 

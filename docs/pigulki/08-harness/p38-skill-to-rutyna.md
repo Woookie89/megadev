@@ -12,7 +12,7 @@
 z talii kursu: `read` (S01E01), `rig` (S01E04), `loop` (S02E01), `hands` (S02E03). Żadna
 nie została zainstalowana automatycznie, bo instalacja to decyzja człowieka. `hands`
 harness najpierw rozpakował do katalogu tymczasowego i sprawdził sumy SHA-256 wszystkich
-6 plików. Skrypt przejrzał w miejscach, które uruchamiają procesy. Folder do `~/.claude/skills/`
+6 plików. Skrypt przejrzał pod kątem miejsc, które uruchamiają procesy. Folder do `~/.claude/skills/`
 skopiował człowiek.
 
 ---

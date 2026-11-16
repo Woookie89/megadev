@@ -17,7 +17,7 @@ wywoła go jako obca osoba.
 
 ## Role
 
-- **Użytkownik:** otwiera link połączenia i daje kursowi dostęp do serwera.
+- **Użytkownik:** otwiera link do połączenia podany przez harness i daje kursowi dostęp do serwera.
 - **Harness:** buduje, wdraża i udostępnia serwer z wymaganymi narzędziami.
 
 ## Wymagania

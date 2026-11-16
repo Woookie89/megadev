@@ -7,8 +7,8 @@ i materiały. Pełne instrukcje, materiały i aktualny status są na stronach
 [HQ MEGA](https://hq.mega.dev/challenges).
 
 Osobny zestaw [challenges-original/](challenges-original/) zawiera oryginalne
-angielskie opisy i punkty startu z serwera MCP kursu, przepisane dosłownie.
-Nie jest to pełna treść stron HQ.
+angielskie teksty stron HQ (odczyt 14.11.2026) i punkty startu z serwera MCP kursu,
+przepisane dosłownie.
 
 Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 
@@ -61,5 +61,5 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
   Dane przeniesiono do plików wyzwań.
 - Serwer MCP kursu (`list-challenges`, 13.11.2026): opisy, sposób startu i flaga
   `solved`.
-- Wykaz załączników jest pełny tylko tam, gdzie notatki z HQ go podawały
-  (S01E01, S01E03). Przy pozostałych wyzwaniach pliki opisują go jako nieodczytany.
+- Strony HQ (14.11.2026, zalogowana sesja, tylko odczyt): statusy State i wykazy
+  załączników w plikach wyzwań.

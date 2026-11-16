@@ -6,8 +6,8 @@
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Jakość” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#jakość) · [oryginał EN: „Quality”](../../s01e05-building-workflows-not-tool-stacks.md#quality)
 
-**Zasada.** Z góry wiadomo, co decyduje człowiek. Agent przy tych decyzjach proponuje
-z rekomendacją i czeka.
+**Zasada.** Z góry wiadomo, o czym decyduje człowiek. Agent przy tych decyzjach przedstawia
+propozycję z rekomendacją i czeka.
 
 **Przypadek.** W MEGA człowiek decydował o kontach (AgentMail, Netlify, Render), publicznym
 repo, kluczach i wydatkach, wyborze hosta, sposobie zamknięcia ticketów (S01E03) i podziale

@@ -13,7 +13,7 @@
 
 Zespół przekazuje mały serwis z planem, notatkami i skillem, który musi działać w Twoim
 harnessie. Trzeba założyć nowe repozytorium z szablonu kursu, rozpisać plan na issues,
-zbudować serwis agentami i wysłać recenzentowi publiczny link do wersji HTML strony.
+zbudować serwis z pomocą agentów i wysłać recenzentowi publiczny link do wersji HTML strony.
 
 ## Role
 
@@ -33,7 +33,7 @@ zbudować serwis agentami i wysłać recenzentowi publiczny link do wersji HTML 
 ## Ograniczenia
 
 - Każde działanie poza maszyną wymaga osobnej zgody użytkownika.
-- Na nowym koncie GitHub trzeba przechodzić kroki ostrożnie.
+- Na nowym koncie GitHub kolejne kroki trzeba wykonywać ostrożnie.
 - Recenzent nie odpowiada od razu.
 
 ## Kryterium ukończenia

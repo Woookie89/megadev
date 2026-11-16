@@ -28,7 +28,7 @@ Kurs przyjął rozwiązanie 15.11.2026 o 19:04:56Z, po dwóch odmowach. Obowiąz
 ## Przebieg
 
 1. Pierwszy plan łączył obraz, port i dialekt w jednym wierszu. Kurs odpowiedział: „Your plan
-   doesn't say which image version.” Harness rozbił plan na jeden wiersz na decyzję.
+   doesn't say which image version.” Harness rozbił plan tak, żeby każda decyzja miała własny wiersz.
 2. Druga odmowa brzmiała: „Something changed since your check-in. Check again.” Archiwum sesji
    urosło już po pierwszym odczycie. Harness pobrał je ponownie i znalazł dwie późne sesje:
    podagenta, który zmienił obraz i port, oraz sesję, która zmieniła nazwę bazy.
@@ -61,14 +61,14 @@ part. i found out late.”
    skończona.** Koniec musi wyznaczać zewnętrzne sprawdzenie: hook `Stop`, `./verify`, test.
    → [P07](../pigulki/02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md)
 2. **Każda pętla potrzebuje wyjścia.** Warunek sukcesu, limit i widoczny plik stanu.
-   `stop_gate.py` ma `MAX_BLOCKS = 3`. Pętla Ralph z tego dnia nie miała ani warunku, ani
+   `stop_gate.py` ma `MAX_BLOCKS = 3`. Pętla Ralph (`/ralph-loop`) z tego dnia nie miała ani warunku, ani
    limitu. → [P24](../pigulki/05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md)
 3. **Ponowny odczyt źródeł przed „gotowe” to zasada, nie ostrożność.** Inne zespoły
    i agenci pracowali równolegle i dopisali decyzje po pierwszym odczycie.
    → [P04](../pigulki/01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md)
 4. **Decyzje zespołu zapisuj jak ADR-y: jedna na wiersz, ze źródłem.** Późniejsza decyzja
    zastępuje tylko swój zakres. → [P14](../pigulki/03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)
-5. **Archeologia sesji to umiejętność.** Wiedza zespołu pracującego z agentami siedzi
+5. **Archeologia sesji to umiejętność.** Wiedza zespołu pracującego z agentami jest zapisana
    w transkryptach różnych harnessów i podagentów. Trzeba umieć je przeszukać.
    → [P15](../pigulki/03-pamiec/p15-pytaj-przeszle-sesje.md)
 6. **Hook zmienia zachowanie harnessu, więc instaluje go człowiek.** Blokada uprawnień

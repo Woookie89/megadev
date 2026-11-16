@@ -15,7 +15,7 @@ przed pracą i przejdź całą listę kontrolną.
 | [`docs/pigulki/`](pigulki/README.md) | **Pigułki wiedzy** o pracy z AI i agentami, zebrane ze wszystkich wyzwań. Jedna pigułka w jednym pliku, rozdziały jako foldery, do tego szablony, wzorce pracy i słowniczek. |
 | [`docs/pills/`](pills/README.md) | To samo po angielsku: te same numery pigułek i ten sam układ, angielskie nazwy plików. |
 | [`docs/challenges.md`](challenges.md) | Indeks wyzwań ze statusami. |
-| `docs/challenges/`, `docs/challenges-original/` | Opisy wyzwań: własnymi słowami i oryginalne z serwera MCP kursu. |
+| `docs/challenges/`, `docs/challenges-original/` | Opisy wyzwań: własnymi słowami i oryginalne ze stron HQ i serwera MCP kursu. |
 
 Materiały robocze wyzwań (logi, KEEP, HANDOVER, kod) są w folderach `sXXeYY/` w katalogu
 głównym repo, nie w `docs/`.

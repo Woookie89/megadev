@@ -12,7 +12,7 @@ przełączaj całego trybu na szeroki w trakcie pracy.
 **Przypadek.**
 - S01E03: tryb auto dwa razy zablokował utworzenie publicznego repo mimo zgody człowieka.
 - S02E01: kontrola uprawnień zablokowała dodanie hooka `Stop`.
-- MEGA Assessment (T14, słaba strona): w trakcie zadania poszerzony został cały tryb
+- MEGA Assessment (T14, słaba strona): w trakcie zadania poszerzono cały tryb
   uprawnień, zamiast dodać jedną regułę.
 - S02E03: klasyfikator trybu auto zablokował `claude mcp add --scope user` i zapis skilla
   do `~/.claude/skills/`, mimo zgody człowieka. Harness nie szukał obejścia. Podał komendę,

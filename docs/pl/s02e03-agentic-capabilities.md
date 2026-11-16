@@ -78,7 +78,7 @@ Można to przedstawić następująco:
 
 W praktyce najbardziej interesuje nas tworzenie serwerów MCP, które pozwalają popularnym środowiskom agentów uzyskiwać dostęp do naszych usług lub urządzeń. Rzadko tworzy się hosty/klientów MCP, ale aby budować dobre serwery MCP, musimy rozumieć działanie całego protokołu.
 
-Poniżej znajduje się minimalny przykład serwera MCP. Ma on **nazwę**, której środowisko agenta używa, by poinformować agenta, do czego służy serwer. Dalej mamy **narzędzia (schemat i funkcję zwrotną)**, którymi zarządza środowisko agenta. Jak wiemy, schemat może być od razu pokazany agentowi, ale częściej prezentuje się go w minimalnej postaci, na przykład jako same **nazwę i opis**.
+Poniżej znajduje się minimalny przykład serwera MCP. Ma on **nazwę**, której środowisko agenta używa, by poinformować agenta, do czego służy serwer. Dalej mamy **narzędzia (schemat i funkcję zwrotną)**, którymi zarządza środowisko agenta. Jak wiemy, schemat może być od razu pokazany agentowi, ale częściej prezentuje się go w minimalnej postaci, na przykład jako samą **nazwę i opis**.
 
 ![Opisany komentarzami kod źródłowy serwera MCP math-server w TypeScript, korzystającego z Streamable HTTP. Notatki obok kodu wskazują poszczególne elementy: importy, fabrykę handlera, narzędzie add, adapter oraz zabezpieczenia localhost, kontrolę żądań i wywołanie listen. Czerwona ramka wyróżnia fabrykę handlera, która dla każdego żądania tworzy nowy McpServer z narzędziem add. Aby kod zmieścił się w ramce, użyto dwuspacjowych wcięć, podzielono kilka długich wierszy, a komentarze źródłowe zastąpiono notatkami.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-4/frame.png)
 
@@ -98,9 +98,9 @@ Aby zobaczyć pełny obraz, poniżej przedstawiamy **klienta MCP**, który łąc
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-5/frame.html)
 
-Początkowo Model Context Protocol uznawano za chwilowy trend, a wkrótce potem za rozwiązanie gorsze od CLI, które lepiej sprawdzało się **w kontekście pojedynczego użytkownika**. Głównym problemem MCP było wczytywanie przez środowiska agentów wszystkich narzędzi do kontekstu **z góry**, przez co nawet jeden serwer udostępniający 50–90 narzędzi rozrastał kontekst, zanim agent otrzymał jakąkolwiek wiadomość. Dziś mamy jednak tryb kodu, więc możemy wczytać nawet [2500 narzędzi](https://x.com/Cloudflare/status/2024847784914882945?s=20).
+Początkowo Model Context Protocol uznawano za chwilowy trend, a wkrótce potem za rozwiązanie gorsze od CLI, które lepiej sprawdzało się **w kontekście pojedynczego użytkownika**. Głównym problemem MCP było wczytywanie przez środowiska agentów wszystkich narzędzi do kontekstu **z góry**, przez co nawet jeden serwer udostępniający 50–90 narzędzi zapychał kontekst, zanim agent otrzymał jakąkolwiek wiadomość. Dziś mamy jednak tryb kodu, więc możemy wczytać nawet [2500 narzędzi](https://x.com/Cloudflare/status/2024847784914882945?s=20).
 
-MCP to nie tylko narzędzia. Upraszcza też autoryzację, umożliwia udostępnianie **zasobów** (takich jak pliki) i **promptów**, a nawet obsługuje **sampling**, dzięki któremu serwer może poprosić host o wywołanie LLM. Obsługa tych funkcji różni się jednak zależnie od klienta, o czym warto pamiętać.
+MCP to nie tylko narzędzia. Upraszcza też autoryzację, umożliwia udostępnianie **zasobów** (takich jak pliki) i **promptów**, a nawet obsługuje **sampling**, dzięki któremu serwer może poprosić host o wywołanie LLM-a. Obsługa tych funkcji różni się jednak zależnie od klienta, o czym warto pamiętać.
 
 Obecnie protokół leży u podstaw niemal każdej integracji dostępnej w popularnych środowiskach agentów. Jednocześnie bardzo się rozwinął, między innymi w kierunku **[bezstanowych serwerów MCP](https://modelcontextprotocol.io/seps/2575-stateless-mcp)**, **[umiejętności przez MCP](https://modelcontextprotocol.io/extensions/overview#skills-over-mcp)** oraz **[zdarzeń (wersja robocza)](https://github.com/modelcontextprotocol/experimental-ext-triggers-events/blob/main/docs/design-sketch-proposal.md)**.
 
@@ -193,11 +193,11 @@ Wniosek jest taki: projektując agenta, warto utrzymać jego rdzeń prostym i el
 
 ## Wnioski
 
-Powinno być już jasne, że **uogólnianie** to jedna z najważniejszych umiejętności, które trzeba rozwijać, jeśli chcemy budować dobre agenty. Uogólnianie musi być jednak „wbudowane” również w samych agentach. Innymi słowy, należy unikać przekazywania im dokładnych procedur. Zostawmy im trochę przestrzeni na dostosowanie się, aby mogły znaleźć najlepszy sposób realizacji zadania.
+Powinno być już jasne, że **uogólnianie** to jedna z najważniejszych umiejętności, które trzeba rozwijać, jeśli chcemy budować dobre agenty. Uogólnianie musi być jednak „wbudowane” również w samych agentów. Innymi słowy, należy unikać przekazywania im dokładnych procedur. Zostawmy im trochę przestrzeni na dostosowanie się, aby mogły znaleźć najlepszy sposób realizacji zadania.
 
 Uogólnianie powinno pojawiać się nie tylko w promptach, ale również w sposobie projektowania **narzędzi i umiejętności agentowych**, serwerów MCP oraz narzędzi CLI.
 
-Jest też oczywiste, że ogólnie dobry agent powinien działać w dedykowanej piaskownicy z nieograniczonym dostępem do systemu plików i wykonywania kodu. Umożliwia to zaawansowane zarządzanie kontekstem, ponieważ agent może wykorzystać swoje naturalne umiejętności pisania kodu i korzystania z terminala. Dzięki nim może łatwo uzyskiwać dostęp do historii sesji, wyników narzędzi i wygenerowanych artefaktów.
+Jest też oczywiste, że co do zasady dobry agent powinien działać w dedykowanej piaskownicy z nieograniczonym dostępem do systemu plików i wykonywania kodu. Umożliwia to zaawansowane zarządzanie kontekstem, ponieważ agent może wykorzystać swoje naturalne umiejętności pisania kodu i korzystania z terminala. Dzięki nim może łatwo uzyskiwać dostęp do historii sesji, wyników narzędzi i wygenerowanych artefaktów.
 
 Z drugiej strony w niektórych przypadkach agent potrzebuje jedynie łatwego dostępu tylko do odczytu do dokumentów oraz ograniczonego środowiska wykonawczego. To od nas zależy, która ścieżka lepiej pasuje do danego zastosowania.
 

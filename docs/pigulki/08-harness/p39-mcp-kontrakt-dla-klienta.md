@@ -27,14 +27,14 @@ i sesje), więc kontrakt trzeba pisać pod aktualną specyfikację, a nie pod pa
 4. Zaczekał, aż człowiek wpuści go hasłem właściciela.
 5. Wywołał `server/discover`, `tools/list` i narzędzia według ich schematów.
 
-Żadne pytanie nie było potrzebne. Serwer obsługiwał obie ery protokołu, a każdy wynik
+Żadne pytanie nie było potrzebne. Serwer obsługiwał obie wersje protokołu (sprzed rewizji 2026-07-28 i nową), a każdy wynik
 sprawdzał względem `outputSchema` przed wysłaniem.
 
 **Stosuj.**
 
 - Zanim napiszesz kod, przeczytaj aktualną specyfikację i changelog
   ([P05](../01-kontekst/p05-fakty-zmienne-u-zrodla.md)).
-- Opublikuj komplet discovery:
+- Opublikuj komplet metadanych, po których klient sam znajdzie drogę (discovery):
   - metadane zasobu z `authorization_servers` i `resource_documentation`,
   - metadane serwera autoryzacji z PKCE `S256`,
   - Client ID Metadata Document jako zalecaną rejestrację, a DCR jako awaryjną.

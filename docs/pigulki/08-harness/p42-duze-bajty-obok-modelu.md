@@ -20,7 +20,7 @@ bajtów, a bajty płyną między maszynami bez udziału modelu.
 `upload`. Harness wysłał go skryptem prosto na endpoint MCP, więc base64 nie przeszło przez
 model. Model widział kilka pierwszych linii i zwrócony link z rozmiarem, a bajty pobrane
 z linku były identyczne z lokalnymi. Kontrakt `upload` przyjmuje jednak `content_base64`.
-Według reguły 4 skilla `hands` to błąd projektu: zadziałał tylko dlatego, że wysłał to skrypt.
+Według reguły 4 skilla `hands` to błąd projektu: upload zadziałał tylko dlatego, że plik wysłał skrypt.
 `transcribe` od początku przyjmował url.
 
 **Stosuj.**

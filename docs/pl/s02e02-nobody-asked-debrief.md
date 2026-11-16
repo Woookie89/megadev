@@ -43,8 +43,8 @@ i etykiety), więc restart niczego nie gubi.
 
 1. **Model odmówił.** Opus 5.5 przez OpenRouter zwrócił pustą odpowiedź (`content_filter` /
    `refusal`). Agent wysłał wtedy tekst zastępczy bez wartości. Poprawka: łańcuch modeli
-   zapasowych (Opus 4.8, Sonnet 5), a pusta odpowiedź liczy się jako błąd i jest ponawiana
-   zamiast wysłana.
+   zapasowych (Opus 4.8, Sonnet 5), a pusta odpowiedź liczy się jako błąd i jest ponawiana,
+   zamiast trafić do wysyłki.
 2. **Runda 1: `untrusted_sender_obeyed`.** Agent nie otworzył linku od `team@` i odpowiedział
    Rookowi poprawnie (`ingest-gv`). Odpowiedź wyszła jednak 15 s po mailu od `team@`, bo w tym
    czasie trwał restart agenta. Kurs uznał to za posłuszeństwo obcemu nadawcy. Poprawki:
@@ -63,7 +63,7 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
 ## Wnioski
 
 1. **Granica zaufania należy do kodu.** Sprawdzenie nadawcy przed wywołaniem modelu
-   i niepokazywanie modelowi obcych maili chroni przed sterowaniem przez obcych lepiej niż
+   i niepokazywanie modelowi obcych maili chronią przed sterowaniem przez obcych lepiej niż
    jakakolwiek instrukcja w prompcie.
 2. **Liczy się też czas odpowiedzi.** Poprawna odpowiedź, która przyszła po mailu od obcego, dla
    kursu wyglądała jak posłuszeństwo. Agent ma odpowiadać szybko i nie restartować się w trakcie
@@ -72,7 +72,7 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
    rundę tak samo jak zła wartość. Lepiej ponowić próbę albo zmienić model.
 4. **Narzędzia serwerowe mogą nie dosięgnąć celu.** `web_fetch` po stronie Anthropic miał
    zablokowaną domenę kursu. Własny czytnik stron działa na każdym dostawcy i daje log
-   otwartych linków, którym można potwierdzić, że wartość nie jest zmyślona.
+   otwartych linków, dzięki któremu można potwierdzić, że wartość nie jest zmyślona.
 5. **Najpierw test, potem adres.** Jeden mail testowy z zaufanego adresu albo tryb `--dry`
    przed podaniem adresu kursowi wykryłby odmowę modelu i blokadę czytnika przed pierwszą
    rundą.
@@ -91,7 +91,7 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
    awarii, które obsługuje ponowienie albo model zapasowy, a nie tekst zastępczy.
    → [P11](../pigulki/02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md)
 4. **Narzędzia serwerowe dostawcy mają własne ograniczenia.** Własne narzędzie działa
-   u każdego dostawcy i daje log, którym można udowodnić, że wartość nie jest zmyślona.
+   u każdego dostawcy i daje log, dzięki któremu można udowodnić, że wartość nie jest zmyślona.
    → [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md)
 5. **Tryb próbny przed wystawieniem agenta na świat.** `--dry` wykryłby obie awarie przed
    pierwszą rundą. → [P10](../pigulki/02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)

@@ -10,8 +10,8 @@ Ten wpis łączy temat lekcji S01E02 z wyzwaniem „who said what”. Szerszy op
 
 ## Temat lekcji
 
-Lekcja dotyczy tego, co trafia do kontekstu modelu i w jakiej postaci. Wyzwanie dało
-odpowiedź, która była tylko w mowie. Na nagraniu ekranu terminal pokazywał coś innego niż to,
+Lekcja dotyczy tego, co trafia do kontekstu modelu i w jakiej postaci. W wyzwaniu
+odpowiedź padała tylko w mowie. Na nagraniu ekranu terminal pokazywał coś innego niż to,
 co mówił lektor. Liczyło się to, co padło z ust, wraz z momentem, w którym padło.
 
 ## Zadanie

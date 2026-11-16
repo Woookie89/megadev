@@ -4,14 +4,14 @@ Ten wpis łączy temat lekcji S01E03 z wyzwaniem „what it shows”. Szerszy op
 
 ## Temat lekcji
 
-Lekcja dotyczy baz wiedzy, które czytają i utrzymują agenci: Markdown, HTML i `.svx` z komponentami, metadane we frontmatterze, rekordy decyzji (ADR), właściciele stron i daty przeglądu. Wyzwanie dało taką bazę jako eksport kodu: strony `.svx`, a liczby liczone przez komponenty Svelte z danych JSON. Najważniejsza lekcja: **źródło strony i strona po zrenderowaniu mówią co innego**. Tekst strony incydentu #4471 mówi „jeden problem”, a jej własna tabela pokazuje dwie przyczyny i przypis o trzeciej.
+Lekcja dotyczy baz wiedzy, które czytają i utrzymują agenci: Markdown, HTML i `.svx` z komponentami, metadane we frontmatterze, rekordy decyzji (ADR), właściciele stron i daty przeglądu. Wyzwanie dostarczyło taką bazę jako eksport kodu: strony `.svx`, w których liczby liczą komponenty Svelte z danych JSON. Najważniejsza lekcja: **źródło strony i strona po zrenderowaniu mówią co innego**. Tekst strony incydentu #4471 mówi „jeden problem”, a jej własna tabela pokazuje dwie przyczyny i przypis o trzeciej.
 
 ## Zadanie
 
 Desk wsparcia scalił 412 zgłoszeń o datach w jeden ticket #4471 i oznaczył go jako znany. Trzeba było:
 
 1. znaleźć w #4471 osobne problemy i założyć jeden ticket (issue na GitHubie) na każdy, z liczbą zgłoszeń;
-2. dodać do kb podpisaną stronę o tych problemach (plik `.svx` i jej wygląd „tak, jak widzi ją desk”);
+2. dodać do kb (bazy wiedzy) podpisaną stronę o tych problemach (plik `.svx` i jej wygląd „tak, jak widzi ją desk”);
 3. zamknąć tickety, gdy desk skończy pracę nad #4471, i wysłać repo do kursu.
 
 ## Wynik
@@ -28,7 +28,7 @@ Rozwiązane w drugim podejściu (po „Start over”), czwartym zgłoszeniem. Re
 
 1. **Czytaj treść zgłoszeń, a nie tylko tagi.** Reguła desku (decyzja 0001) łączy zgłoszenia po temacie i „nikt nie musi czytać treści”. `causes.ts` przypisuje przyczynę po tenancie i kanale. Dopiero treść pokazuje, że 5 zgłoszeń to przesunięcie o dzień, a nie zamiana dnia z miesiącem. Desk sam to zauważył (`desk-notes.json`), ale zostawił je w przypisie pod `parser`.
 2. **Liczby bierz z widoku desku.** Pierwsza wersja liczyła `parser` jako 374 (bez tych 5) i kurs ją odrzucił: „The desk counts with its own view, as it was exported.” Widok desku to tabela `CauseTable` na zrenderowanej stronie, czyli `parser` 379. Ticket #1 dostał 379 z notą, że 5 z nich śledzi #3.
-3. **Zamykaj tickety według tego, co faktycznie naprawiono.** Po kroku pierwszym trzeba było ponownie wczytać stronę Challenge, bo dopiero wtedy pojawiła się aktualizacja desku. Poprawka parsera naprawia zamianę dnia z miesiącem, ale nie przesunięcie o dzień. Dlatego #3 zostaje otwarty. Run 1 miał tylko dwa tickety i zamknął wszystko, więc kurs go odrzucił: „closed, but not the way the course expects”.
+3. **Zamykaj tickety według tego, co faktycznie naprawiono.** Po kroku pierwszym trzeba było ponownie wczytać stronę wyzwania, bo dopiero wtedy pojawiła się aktualizacja desku. Poprawka parsera naprawia zamianę dnia z miesiącem, ale nie przesunięcie o dzień. Dlatego #3 zostaje otwarty. Run 1 miał tylko dwa tickety i zamknął wszystko, więc kurs go odrzucił: „closed, but not the way the course expects”.
 4. **Podpis strony to `ticket` ze `start-challenge`.** README kb mówi o „your signature”. Kurs przyjmuje tylko token z `start-challenge`, wpisany dosłownie jako `signature:` we frontmatterze. Podpis nazwą z GitHuba został odrzucony.
 
 ## Przebieg (skrót)
@@ -58,7 +58,7 @@ Rozwiązane w drugim podejściu (po „Start over”), czwartym zgłoszeniem. Re
 1. **Źródło to nie widok.** Agent czyta surowe pliki, a człowiek i oceniający patrzą na
    wyrenderowaną stronę. Gdy te dwa się różnią, liczy się widok odbiorcy.
    → [P03](../pigulki/01-kontekst/p03-zrodlo-to-nie-widok.md)
-2. **Odczyt źródła starzeje się w trakcie pracy.** Agent buduje godzinę na jednym odczycie,
+2. **Odczyt źródła starzeje się w trakcie pracy.** Agent przez godzinę pracuje na jednym odczycie,
    a świat się zmienia. Ponowne pobranie przed „gotowe” powinno być stałym krokiem.
    → [P04](../pigulki/01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md)
 3. **Płynny tekst to nie źródło.** Każde twierdzenie agenta (liczba, ID, cytat) powinno
@@ -67,8 +67,8 @@ Rozwiązane w drugim podejściu (po „Start over”), czwartym zgłoszeniem. Re
 4. **Niejednoznaczne słowo w wymaganiach rozstrzygnij, zanim na nim zbudujesz.** „Your
    signature” znaczyło coś innego, niż podpowiadał zdrowy rozsądek.
    → [P06](../pigulki/02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md)
-5. **Brakujące narzędzie można zbudować, a potem trzeba je utrwalić.** Chromium przez CDP
-   było mostem. Skill `github-cli-routine` to rutyna, która przeszła do kolejnych wyzwań.
+5. **Brakujące narzędzie można zbudować, a potem trzeba je utrwalić.** Chromium sterowane przez CDP
+   (Chrome DevTools Protocol) było rozwiązaniem doraźnym. Skill `github-cli-routine` to rutyna, która przeszła do kolejnych wyzwań.
    → [P37](../pigulki/08-harness/p37-brakujace-narzedzie.md), [P38](../pigulki/08-harness/p38-skill-to-rutyna.md)
 6. **Uprawnienia harnessu ustaw przed zadaniem.** Zgoda człowieka nie wystarczy, jeśli tryb
    uprawnień blokuje akcję. Wąska reguła z góry jest lepsza niż przełączanie trybu w trakcie.
@@ -102,13 +102,13 @@ Baza wiedzy (kb) desku wsparcia przyszła jako pliki źródłowe. Jej strona inc
 
 #### Co się stało
 
-Twój harness miał rozbić ticket wsparcia #4471, 412 zgłoszeń o datach, na osobne tickety GitHub, każdy z liczbą zgłoszeń, i dodać podpisaną stronę kb. Czytanie treści zgłoszeń ujawniło trzeci problem, przesunięcia o jeden dzień, więc ten ticket został otwarty, gdy desk zamknął #4471. Ty zalogowałeś przeglądarkę, odblokowałeś publiczne repo i wybrałeś sposób zamknięcia ticketów.
+Twój harness miał rozbić ticket wsparcia #4471, 412 zgłoszeń o datach, na osobne tickety GitHub, każdy z liczbą zgłoszeń, i dodać podpisaną stronę kb. Czytanie treści zgłoszeń ujawniło trzeci problem, przesunięcia o jeden dzień, więc ten ticket został otwarty, gdy desk zamknął #4471. Ty zalogowałeś się w przeglądarce, odblokowałeś publiczne repo i wybrałeś sposób zamknięcia ticketów.
 
 #### Co pokazało to wyzwanie
 
 **1. Zrenderowany widok (The rendered view)** — najpierw poszło źle
 
-Twój harness najpierw policzył `parser` jako 374, z własnego uruchomienia reguł kb plus notatek desku, więc kurs to odrzucił. Wskazówka desku wskazała jego własny widok, a tabela desku na zrenderowanej stronie pokazała 379, więc ticket #1 dostał tę liczbę.
+Twój harness najpierw policzył `parser` jako 374, stosując samodzielnie reguły kb i notatki desku, więc kurs to odrzucił. Wskazówka desku odsyłała do jego własnego widoku, a tabela desku na zrenderowanej stronie pokazała 379, więc ticket #1 dostał tę liczbę.
 
 *Dlaczego to ważne:* surowa treść jest dla AI, zrenderowany widok jest dla ciebie: wyrenderuj i popatrz.
 

@@ -81,7 +81,7 @@ Warto wręcz **[zapytać model o jego zachowanie](https://github.com/MEGA-DOT-DE
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e05/artifacts/lesson/figure-7/frame.html)
 
-Na poprzednich lekcjach omawialiśmy, jak agenci mogą odczytywać historię **rozmowy** i uczyć się z niej. Tutaj może być podobnie, ale dostępny kontekst może być znacznie bogatszy dzięki metadanym i dodatkowemu kontekstowi produktu (takim jak profil użytkownika, jego plan subskrypcyjny itp.). Pozwala nam to uzyskać wartościowe informacje nie tylko o logice, lecz także o samym produkcie, w tym o doświadczeniu użytkownika i pomysłach na optymalizację modelu biznesowego.
+Na poprzednich lekcjach omawialiśmy, jak agenci mogą odczytywać historię **rozmowy** i uczyć się z niej. Tutaj może być podobnie, ale dostępny kontekst może być znacznie bogatszy dzięki metadanym i dodatkowemu kontekstowi produktu (np. profilowi użytkownika, jego planowi subskrypcyjnemu itp.). Pozwala nam to uzyskać wartościowe informacje nie tylko o logice, lecz także o samym produkcie, w tym o doświadczeniu użytkownika i pomysłach na optymalizację modelu biznesowego.
 
 Przede wszystkim autorefleksja może skupiać się na **optymalizacji** i **wykrywaniu problemów**. Jej wyniki można następnie przekształcić w plan i przekazać agentom działającym w chmurze, które przeprowadzą eksperymenty i wdrożą usprawnienia. Ma to znaczenie, ponieważ:
 
@@ -91,7 +91,7 @@ Przede wszystkim autorefleksja może skupiać się na **optymalizacji** i **wykr
 - zużycie tokenów może wzrosnąć bez naszej wiedzy,
 - metryki jakości i opinie użytkowników mogą dostarczyć cennych informacji.
 
-Wszystko to, połączone z systemem agentowym, który potrafi **weryfikować własną pracę** i iterować za pomocą **samowspółzawodnictwa (self-play)**, może stać się nieocenionym źródłem kontekstu, zwłaszcza jeśli pochodzi ze środowiska produkcyjnego. Musimy jednak uważać, aby nie dołączać danych, których nie chcemy wysyłać do modelu.
+Wszystko to, połączone z systemem agentowym, który potrafi **weryfikować własną pracę** i iterować metodą **self-play** (gry z samym sobą), może stać się nieocenionym źródłem kontekstu, zwłaszcza jeśli pochodzi ze środowiska produkcyjnego. Musimy jednak uważać, aby nie dołączać danych, których nie chcemy wysyłać do modelu.
 
 Jak zatem **zapewnić właściwą obserwowalność**?
 

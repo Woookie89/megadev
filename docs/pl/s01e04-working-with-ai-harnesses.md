@@ -68,7 +68,7 @@ Załóżmy, że wybieramy **Pi** jako nasz główny harness. Dzięki temu zobacz
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-5/frame.html)
 
-Kolejnym potrzebnym komponentem jest [Herdr](https://herdr.dev/), który pozwala nam **łatwo zarządzać instancjami Pi** i **utrzymywać je przy życiu nawet po zamknięciu terminala**. To ważny krok w kierunku trwałych agentów gotowych do podejmowania zadań wymagających długotrwałej pracy. Połączenie Pi z Herdr ma jeszcze jedną zaletę: oba narzędzia mogą **niemal całkowicie zarządzać sobą samodzielnie**. Zamiast samodzielnie je konfigurować, możemy więc **porozmawiać z agentami** o dostępnych ustawieniach i wspólnie ustalić najlepszą konfigurację dla naszych potrzeb.
+Kolejnym potrzebnym komponentem jest [Herdr](https://herdr.dev/), który pozwala nam **łatwo zarządzać instancjami Pi** i **utrzymywać je przy życiu nawet po zamknięciu terminala**. To ważny krok w kierunku trwałych agentów gotowych do podejmowania zadań wymagających długotrwałej pracy. Połączenie Pi z Herdr ma jeszcze jedną zaletę: oba narzędzia mogą **niemal całkowicie zarządzać sobą same**. Zamiast konfigurować je sami, możemy więc **porozmawiać z agentami** o dostępnych ustawieniach i wspólnie ustalić najlepszą konfigurację dla naszych potrzeb.
 
 ![Zagnieżdżone pola, każde na całą szerokość pola nadrzędnego. Zewnętrzne pole to Serwer Herdr, zaznaczony na czerwono: zarządza procesami i działa nawet wtedy, gdy żadne okno nie jest otwarte. Wewnątrz znajduje się Obszar roboczy (jeden projekt) z etykietą „wymaga udziału człowieka”. Obszar roboczy zawiera Kartę, będącą układem paneli, a nie procesem. Karta zawiera trzy Panele. Każdy Panel to prawdziwy terminal z jednym agentem. Pierwszy agent pracuje (działa), drugi jest zablokowany (czeka na człowieka), a trzeci zakończył pracę (ale jego wynik nie został jeszcze sprawdzony). Pod polami tekst: zamknięcie okna pozostawia agentów działających, zatrzymanie serwera kończy ich pracę.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.png)
 
@@ -92,7 +92,7 @@ Warto też spróbować **uruchomić Herdr**, uruchomić w nim **Pi** i poprosić
 4. Wysyła do niej prompt
 5. Czeka na zakończenie pracy workera i odczytuje jego wynik
 
-Mówimy o **uruchomieniu workera**, który technicznie działa podobnie jak **subagent**, z tą różnicą, że worker jest w pełni interaktywny, można go dowolnie konfigurować, może mieć własne hooki i może być uruchamiany **w tle** w odpowiedzi na zdarzenie zewnętrzne. Dzięki temu **jeden agent może orkiestrwać pracę wielu workerów**, które działają nawet po zamknięciu terminala, bo uruchomione są w Herdr.
+Mówimy o **uruchomieniu workera**, który technicznie działa podobnie jak **subagent**, z tą różnicą, że worker jest w pełni interaktywny, można go dowolnie konfigurować, może mieć własne hooki i może być uruchamiany **w tle** w odpowiedzi na zdarzenie zewnętrzne. Dzięki temu **jeden agent może orkiestrować pracę wielu workerów**, które działają nawet po zamknięciu terminala, bo uruchomione są w Herdr.
 
 ![Diagram sekwencji z czterema uczestnikami: Użytkownik, Koordynator, Herdr i Worker. Użytkownik zleca zadanie Koordynatorowi. Koordynator wysyła do Herdr cztery polecenia: herdr tab create, herdr agent start, herdr agent prompt i herdr agent read. Herdr uruchamia Pi na nowej karcie, wpisuje zadanie Workerowi i odczytuje ekran Workera. Herdr przekazuje tekst z ekranu Koordynatorowi, a Koordynator przekazuje odpowiedź użytkownikowi. Nie ma strzałki od Workera do żadnego innego uczestnika. Polecenie „herdr agent read” jest zaznaczone na czerwono.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-7/frame.png)
 
@@ -110,7 +110,7 @@ Jest tu jednak pewien haczyk: samo uruchamianie workerów nie wystarczy. Potrzeb
 - Piaskownic i mechanizmów zapobiegających niepożądanym działaniom agentów
 - Własnego VPS-a lub fizycznego urządzenia dla agentów, gdy zajdzie taka potrzeba
 - Własnych kont agentów i wszystkiego, co jest potrzebne do interakcji z aplikacją
-- Hooków obsługujących interakcje z systemem na różnych etapach
+- Hooków, które wspierają agentów na różnych etapach interakcji z systemem
 - Przydatności systemu w zespole, w którym każdy członek ma własnych agentów
 - Monitorowania i ewaluacji systemu, by w niektórych przypadkach mógł się doskonalić
 

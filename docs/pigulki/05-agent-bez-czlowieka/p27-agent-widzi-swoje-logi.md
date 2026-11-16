@@ -13,7 +13,8 @@ w logach Rendera wklejonych przez użytkownika. S02E02: lokalny `log.md` zapisyw
 `received`, `replied`, `ignored` i `fetch_url`. To pozwoliło potwierdzić, że wartość nie
 jest zmyślona, i odtworzyć oś czasu porażki. S02E03: harness zainstalował Render CLI
 (człowiek zalogował je w przeglądarce) i sam przeczytał logi `mcp-home`. Zobaczył w nich,
-że kurs wszedł przez Client ID Metadata Document i które narzędzia wołał. Nikt nie musiał
+że kurs zarejestrował się przez Client ID Metadata Document (jeden ze sposobów rejestracji
+klienta OAuth) i które narzędzia wołał. Nikt nie musiał
 wklejać logów.
 
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.

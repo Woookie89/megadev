@@ -1,6 +1,6 @@
 # S03E05 · Produkty, które uczą się po wydaniu
 
-Kiedy funkcja trafia na produkcję, zwykle dwukrotnie sprawdzamy, czy wszystko poszło dobrze. W zależności od budowanego systemu jego zachowanie jest logowane albo po to, by monitorować stabilność, albo po to, by dostarczać wniosków zespołom produktowym czy marketingowym. W obu przypadkach rzadko zwracamy większą uwagę na te logi, dopóki coś się nie zepsuje.
+Kiedy funkcja trafia na produkcję, zwykle jeszcze raz sprawdzamy, czy wszystko poszło dobrze. W zależności od budowanego systemu jego zachowanie jest logowane albo po to, by monitorować stabilność, albo po to, by dostarczać wniosków zespołom produktowym czy marketingowym. W obu przypadkach rzadko zwracamy większą uwagę na te logi, dopóki coś się nie zepsuje.
 
 Może to sugerować, że wystarczy, by agenci weryfikowali zmiany po wdrożeniu i ewentualnie ustawili jakieś alerty lub skanery wykrywające anomalie. Ale na tym etapie kursu MEGA możemy zrobić znacznie więcej.
 
@@ -51,7 +51,7 @@ Jak zawsze, dobrze jest zacząć od małej rzeczy, na przykład od **przechwycen
 - **Sygnał:** webhook z narzędzia supportu lub **wewnętrznego** kanału komunikacji otwiera zgłoszenie ze słowami samego użytkownika, metadanymi pomagającymi zidentyfikować użytkownika i identyfikatorem żądania. Ważna uwaga: **źródło musi być tu zaufane, aby uniknąć prompt injection.**
 - **Triaż:** zgłoszenie musi zostać zidentyfikowane i opisane przez agenta, który także je kategoryzuje, wzbogaca, usuwa duplikaty itd. W niektórych przypadkach agent może poprosić człowieka o pomoc.
 - **Ustalenie:** agent przygotowuje ustalenie, które może zawierać kroki odtworzenia, kryteria akceptacji itp. Może też zawierać dowody, że problem istnieje.
-- **Agent w chmurze:** gdy ustalenie zostanie zaakceptowane, rutyna je podejmuje, wdraża poprawkę i zbiera dowody.
+- **Agent w chmurze:** gdy ustalenie zostanie zaakceptowane, rutyna je przejmuje, wdraża poprawkę i zbiera dowody.
 - **Dowód:** końcowy raport pokazujący różnice w systemie oraz dowody, że problem zniknął.
 - **Merge:** merge uruchamia bramki jakości i wszystkie kontrole wymagane przed wdrożeniem.
 - **Odpowiedź:** po zakończeniu pracy ostatnim krokiem jest powiadomienie źródła, a odpowiedź może w razie potrzeby zawierać szczegóły dotyczące problemu.
@@ -121,7 +121,7 @@ Przykład pochodzi znów z projektu Kenta, w którym [Sentry](https://sentry.io/
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s03e05/artifacts/lesson/figure-8/frame.html)
 
-Oba przykłady pokazują, że agenci mogą nie rozwiązać niektórych problemów od razu. Powodem nie jest brak inteligencji. Część problemów można rozwiązać dopiero w dłuższym horyzoncie czasowym i wymagają one połączenia kropek między historycznymi zmianami a kontekstem, który nie jest dostępny wyłącznie w kodzie.
+Oba przykłady pokazują, że agenci mogą nie rozwiązać niektórych problemów od razu. Powodem nie jest brak inteligencji. Część problemów można rozwiązać dopiero w dłuższym horyzoncie czasowym i wymagają one powiązania historycznych zmian z kontekstem, który nie jest dostępny wyłącznie w kodzie.
 
 Myśląc o syntezie, znów musimy myśleć o tym, by **umożliwić agentowi dynamiczne poruszanie się po jego środowisku**. Możemy wtedy tworzyć narzędzia MCP lub CLI, które łączą go z wewnętrznymi narzędziami i źródłami danych. W ten sposób nie ma potrzeby ręcznego tworzenia przepływów pracy, ponieważ agenci mogą zarządzać nimi sami.
 
@@ -162,11 +162,11 @@ W projekcie Kenta ten proces jest opisany jako **[pętla ciągłego doskonalenia
 
 Jednym z przykładów **pętli sprzężenia zwrotnego** jest **[dziennik tarć](https://github.com/kody-hq/kody/blob/main/docs/contributing/friction-log.md)** (friction log). Ilekroć repozytorium przeszkadza agentowi (lub człowiekowi) i zdarza się to więcej niż raz, zgłasza on issue z etykietą `friction`, które opisuje, co się stało, co chciał osiągnąć, jak to odtworzyć i ile to kosztowało.
 
-Następnie, raz dziennie, zaplanowane zadanie podejmuje otwarte zgłoszenia tarć i uruchamia agenta w chmurze, który albo naprawia je w pull requeście, albo odkłada je dla Kenta z krótkim podsumowaniem i rekomendowaną poprawką.
+Następnie, raz dziennie, zaplanowane zadanie zbiera otwarte zgłoszenia tarć i uruchamia agenta w chmurze, który albo naprawia je w pull requeście, albo odkłada je dla Kenta z krótkim podsumowaniem i rekomendowaną poprawką.
 
-Aby lepiej to zrozumieć, spójrzmy na coś, co naprawdę mu się przydarzyło. Pewnego ranka agent w chmurze wysyłał pull request i potrzebował tokena CLI. Gdy o niego poprosił, system odmówił, ponieważ osiągnięto limit aktywnych tokenów. Prawie wszystkie z nich zostały pozostawione przez innych agentów, bo każdy nowy agent w chmurze tworzy własny token. Agent obszedł problem, unieważniając trzy stare tokeny, ale zamiast o tym zapomnieć, zgłosił **[zgłoszenie tarcia](https://github.com/kody-hq/kody/issues/2966)**.
+Aby lepiej to zrozumieć, spójrzmy na coś, co naprawdę mu się przydarzyło. Pewnego ranka agent w chmurze wysyłał pull request i potrzebował tokena CLI. Gdy o niego poprosił, system odmówił, ponieważ osiągnięto limit aktywnych tokenów. Prawie wszystkie z nich zostały pozostawione przez innych agentów, bo każdy nowy agent w chmurze tworzy własny token. Agent obszedł problem, unieważniając trzy stare tokeny, ale zamiast o tym zapomnieć, założył **[zgłoszenie tarcia](https://github.com/kody-hq/kody/issues/2966)**.
 
-Następny codzienny przegląd podjął to zgłoszenie i znalazł przyczynę źródłową. Nie wdrożył poprawki, ponieważ zmiany w autoryzacji to decyzja Kenta. Odłożył więc zgłoszenie i zostawił mu podsumowanie z rekomendowaną poprawką. **[Poprawka została wdrożona tego samego dnia](https://github.com/kody-hq/kody/pull/2986)**, około dziesięciu godzin po tym, jak agent po raz pierwszy natknął się na problem. W tym samym pull requeście **[rekord decyzji](https://github.com/kody-hq/kody/blob/main/docs/contributing/decisions/0056-cli-credential-bootstrap.md)** dostał datowaną notatkę wyjaśniającą nową regułę i powód zmiany. Dzięki temu następny agent pracujący z tokenami przeczyta regułę, zamiast ponownie odkrywać problem. Agenci zauważyli problem, zapisali go i zbadali. Jedyna rola Kenta to jedna decyzja, która go wymagała.
+Następny codzienny przegląd przejął to zgłoszenie i znalazł przyczynę źródłową. Nie wdrożył poprawki, ponieważ zmiany w autoryzacji to decyzja Kenta. Odłożył więc zgłoszenie i zostawił mu podsumowanie z rekomendowaną poprawką. **[Poprawka została wdrożona tego samego dnia](https://github.com/kody-hq/kody/pull/2986)**, około dziesięciu godzin po tym, jak agent po raz pierwszy natknął się na problem. W tym samym pull requeście **[rekord decyzji](https://github.com/kody-hq/kody/blob/main/docs/contributing/decisions/0056-cli-credential-bootstrap.md)** dostał datowaną notatkę wyjaśniającą nową regułę i powód zmiany. Dzięki temu następny agent pracujący z tokenami przeczyta regułę, zamiast ponownie odkrywać problem. Agenci zauważyli problem, zapisali go i zbadali. Rola Kenta ograniczyła się do jednej decyzji, która wymagała jego udziału.
 
 Ale pętla nie jest domknięta, gdy poprawka zostaje wdrożona. Jest domknięta, gdy pierwotny sygnał zostanie zmierzony ponownie i ucichnie, tak jak w przykładzie z przyczyną źródłową w sekcji Synteza dzisiejszej lekcji. To samo dotyczy **eksperymentów**: Kent umieszcza zmianę za feature flagą, a gdy metryka pokazuje, że zmiana jest lepsza, wdraża ją dla wszystkich i **usuwa flagę** — i to jest ważna lekcja.
 

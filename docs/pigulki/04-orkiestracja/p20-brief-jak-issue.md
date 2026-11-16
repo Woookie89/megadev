@@ -16,8 +16,8 @@ komentarzu do #4 wpisano zły model (`haiku-4.5` zamiast `haiku-5.5`). Workery m
 sprawdzać się nawzajem, jeśli zostawiają ślad.
 
 S02E04: brief każdego workera miał jedno zadanie, nazwę i wersję skilla, jedyne narzędzia
-(serwer MCP zadania), limit prób („retry at most once after fixing what it names”) i drogę
-powrotu: zakończ wiadomością z markerem `JOB2_SUBMIT_REPLY:` (zdalnie `JOB1_SUBMIT_REPLY:`)
+(serwer MCP zadania), limit prób („retry at most once after fixing what it names”) i sposób
+oddania wyniku: zakończ pracę wiadomością ze znacznikiem `JOB2_SUBMIT_REPLY:` (zdalnie `JOB1_SUBMIT_REPLY:`)
 i całą odpowiedzią `submit`. Oba workery oddały wynik za pierwszym razem, a główny agent
 o nic nie dopytywał ([P43](p43-przekaz-skill-z-zadaniem.md),
 [P45](../05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)).

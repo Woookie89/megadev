@@ -10,7 +10,7 @@
 systemu. Bez tego o końcu decyduje raport samego agenta.
 
 **Dlaczego.** Pętla agenta (S02E01) kończy się, gdy model przestaje prosić o narzędzia.
-Modele mają skłonność do ogłaszania sukcesu, a zmęczony kontekst tylko ją wzmacnia.
+Modele mają skłonność do ogłaszania sukcesu, a długi, zapełniony kontekst tylko ją wzmacnia.
 Zewnętrzne sprawdzenie nie ma tej skłonności.
 
 **Przypadek.** S02E01: dwie odmowy przed rozwiązaniem. Harness napisał `stop_gate.py`, który

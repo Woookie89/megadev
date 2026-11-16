@@ -11,8 +11,8 @@
 
 ## Cel
 
-Do produktu do planowania stale napływają prośby od supportu, klientów, product,
-analityki i finansów. Trzeba przeprowadzić ich triage w trackerze produktu. Każde otwarte
+Do produktu do planowania stale napływają prośby od supportu, klientów, zespołu
+produktu, analityki i finansów. Trzeba przeprowadzić ich triage w trackerze produktu. Każde otwarte
 issue ma być gotowe dla agenta albo oznaczone jako wymagające decyzji człowieka.
 
 ## Role

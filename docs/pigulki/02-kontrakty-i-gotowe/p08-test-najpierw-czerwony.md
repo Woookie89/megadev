@@ -12,7 +12,7 @@ z poprawką.
 **Dlaczego.** Test napisany po poprawce często sprawdza to, co kod już robi, a nie błąd. Bez
 czerwonego wyniku nie wiadomo, czy test w ogóle dotyka błędu.
 
-**Przypadek.** S01E05: test writer uruchamiał szkic na kodzie bez poprawki (czerwony),
+**Przypadek.** S01E05: agent test writer (pisze testy do zgłoszonych błędów) uruchamiał szkic testu na kodzie bez poprawki (czerwony),
 potem z poprawką (zielony). Błąd #12: wiersz z właścicielem „—” znikał z digestu.
 
 **Stosuj.** W briefie dla agenta piszącego testy wymagaj obu wyników w raporcie.

@@ -11,7 +11,7 @@ i wyłączyć.
 
 **Przypadek.**
 - `stop_gate.py` (S02E01): `MAX_BLOCKS = 3` i zasada „źródło, które się nie ładuje, nie jest
-  powodem do pętlenia”.
+  powodem, żeby kręcić się w pętli”.
 - Artefakt „loop” z talii kursu: pętla z widocznym plikiem stanu i trzema wyjściami.
 - Kontrprzykład z tego repo: pętla Ralph uruchomiona 15.11 („rób dopóki nie zwróci solved”)
   ma w `s02e01/.claude/ralph-loop.local.md` wpisane `completion_promise: null`

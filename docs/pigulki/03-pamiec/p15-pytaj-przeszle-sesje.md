@@ -7,13 +7,13 @@
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
 
 **Zasada.** Gdy odpowiedź jest w dawnej sesji, przeszukaj sesje i cytuj `plik:linia`.
-„Nie znaleziono” to też wynik, który trzeba podać, a nie lukę do zapełnienia z pamięci.
+„Nie znaleziono” to też wynik, który trzeba podać, a nie luka do zapełnienia z pamięci.
 
 **Przypadek.**
 - S02E01: decyzje były rozrzucone po sesjach Claude Code, Codex i wątkach podagentów. Jeden
   skrypt (`s02e01/work/dump.py`) czytał wszystkie formaty, więc nic nie umknęło.
-- S01E02: recall pokazał, że sesji z runu 1 nie ma w archiwum. Debrief został oznaczony jako
-  niepełny, zamiast dopowiadać przebieg.
+- S01E02: recall pokazał, że sesji z pierwszego przebiegu (run 1) nie ma w archiwum. Debrief
+  oznaczono jako niepełny, zamiast dopowiadać przebieg.
 
 **Stosuj.** Skill rook-loop (recall). Wszystko, co ma żyć dłużej niż 30 dni, przenieś do
 plików w repo.

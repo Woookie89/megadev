@@ -15,7 +15,15 @@
 | najmniejsze uprawnienia | Agent ma tylko te prawa, których potrzebuje ([P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md)). |
 | idempotencja | Powtórzenie tego samego żądania nie zmienia wyniku (deduplikacja po id). |
 | ticket / receipt | Dowody kursu: ticket ze startu wyzwania, receipt za przyjęty krok. Mają terminy ważności. |
-| claim | Zgłoszenie rozwiązania do kursu. Odmowa zwraca powód. |
+| claim | Zgłoszenie rozwiązania do kursu. Przy odmowie kurs zwykle nie podaje powodu. |
+| debrief | Omówienie wyzwania po rozwiązaniu: przebieg, decyzje i wnioski. Kurs publikuje swój na stronie wyzwania, a repo ma własne w `docs/pl/*-debrief.md`. |
+| Rook | Postać z fabuły kursu MEGA.dev. Jej krótkie komentarze do kroków wyzwań cytujemy w oryginale, po angielsku. |
+| brief | Zlecenie dla innego agenta: zadanie, kryterium „gotowe”, skill, dostępy i sposób oddania wyniku ([P20](04-orkiestracja/p20-brief-jak-issue.md)). |
+| worker | Agent, któremu główny agent zleca jedno zadanie. Ma własny kontekst i własne narzędzia ([P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md)). |
+| tryb headless (`claude -p`) | Claude Code uruchomiony bez interfejsu: dostaje prompt, pracuje sam i wypisuje wynik. |
+| routine | Zadanie Claude Code uruchamiane w chmurze Anthropic (claude.ai/code): jednorazowo, według harmonogramu albo po zdarzeniu. |
+| sandbox | Odizolowane środowisko, w którym działa agent. Ma tylko te pliki, narzędzia i dostęp do sieci, które mu udostępniono. |
+| allowlista | Lista dozwolonych domen (albo komend). Wszystko spoza niej jest blokowane ([P45](05-agent-bez-czlowieka/p45-zdalny-worker-droga-tam-i-z-powrotem.md)). |
 
 ---
 

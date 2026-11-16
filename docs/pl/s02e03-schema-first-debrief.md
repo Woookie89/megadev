@@ -56,7 +56,8 @@ Użytkownik:
 
 1. **Research przed kodem.** Harness przeczytał specyfikację i jej changelog. Aktualna jest
    rewizja 2026-07-28: bez `initialize` i bez sesji, z `server/discover`, nowymi kodami błędów
-   (`-32020`, `-32022`) i polami `ttlMs`/`cacheScope`. Serwer powstał więc jako dwuerowy.
+   (`-32020`, `-32022`) i polami `ttlMs`/`cacheScope`. Serwer powstał więc tak, żeby obsługiwał
+   i tę rewizję, i starsze.
    Transkrypcję harness oparł na `/audio/transcriptions` w OpenRouter, które zwraca segmenty
    z czasami.
 2. **Budowa i testy lokalne.** 24 testy przeszły, a prawdziwa transkrypcja mowy wygenerowanej
@@ -64,7 +65,7 @@ Użytkownik:
    rzeczy:
    - CSP `form-action` zablokowałby przekierowanie po zgodzie,
    - kod `-32001` należy do zakresu legacy,
-   - limit błędnych haseł per IP dało się obejść, więc doszedł limit globalny.
+   - limit błędnych haseł na adres IP dało się obejść, więc doszedł limit globalny.
 3. **Deploy.** Użytkownik założył Blueprint. Harness przeszedł całą ścieżkę na żywym adresie
    jako obcy klient: rejestracja, zgoda, token, discover, upload i transkrypcja.
 4. **Pierwszy claim.** „The course found your server. First save the note with your memo tool.”
@@ -90,14 +91,14 @@ Użytkownik:
 8. **Notatka kursu.** „The check passed. The course left a new note on your server.”
    Najnowsza notatka kursu miała kod `6hmjn2j2`. Kurs odpowiedział: „The note is right. The
    course will come back later.”
-9. **Czekanie.** „Claim again later: the course looks when that claim comes in”, po 11 348 s.
+9. **Czekanie.** „Claim again later: the course looks when that claim comes in”, z `retryAfter` 11 348 s.
    Ciągły keep-alive okazał się zbędny, więc harness go wyłączył. Na prośbę użytkownika
    harness zainstalował Render CLI (v2.34.0, suma kontrolna sprawdzona), a użytkownik
    zalogował je w przeglądarce. Przez API harness wstrzymał oba serwisy `rig-pulse`.
 10. **Rozwiązane.** Rano harness obudził uśpiony host (zimny start 22 s) i dopiero wtedy
     wysłał claim. Wynik: `solved`.
 
-Na arkuszu debriefu kursu: „your harness saw it first. check it anyway.” — rook, oraz wpis
+W debriefie kursu: „your harness saw it first. check it anyway.” — rook, oraz wpis
 z historii WAKE: `04:04:04  job ended   exit: 0`. Nagrodą jest karta `hands` („everything
 i touch, i touch with these. schema first.”). Użytkownik zainstalował ją w
 `~/.claude/skills/hands/` (v1451720afc1f), a harness sprawdził sumy 6 plików.
@@ -106,13 +107,13 @@ i touch, i touch with these. schema first.”). Użytkownik zainstalował ją w
 
 1. **Kurs ocenił to, co dostaje model.** Protokół, logowanie i schematy przeszły od razu.
    Odmowa dotyczyła rozmiaru wyniku i jakości błędów, czyli tego, za co agent płaci
-   kontekstem i z czego poprawia kolejne wywołanie.
+   kontekstem i na podstawie czego poprawia kolejne wywołanie.
 2. **Pomiar na danych oceniającego oszczędził rundę.** Klip kalibracyjny był publiczny.
    Lokalny pomiar (822 B) przed deployem dał pewność, że druga runda przejdzie.
 3. **Wynik wysłany dwa razy kosztuje dwa razy.** Pole `text` powtarzało segmenty, a blok
    tekstowy powtarzał cały JSON. Specyfikacja tylko zaleca (SHOULD) kopię JSON-a w tekście,
    a budżet bajtów tego zalecenia nie zostawił.
-4. **Dwuerowość nic nie kosztowała, a chroniła.** Kurs mówił nowym protokołem, ale starsi
+4. **Obsługa obu rewizji nic nie kosztowała, a chroniła.** Kurs mówił nowym protokołem, ale starsi
    klienci dalej działają przez `initialize`.
 5. **Duży plik poszedł skryptem, nie przez model.** Kontrakt `upload` przyjmuje jednak base64.
    Według reguły 4 skilla `hands` to błąd projektu, który przeszedł tylko dzięki skryptowi.
@@ -134,7 +135,7 @@ i touch, i touch with these. schema first.”). Użytkownik zainstalował ją w
    i zabiera miejsce na myślenie. Zwracaj tylko to, czego agent użyje w następnym kroku,
    i tylko raz. → [P40](../pigulki/08-harness/p40-wynik-ma-budzet.md)
 3. **Błąd narzędzia to instrukcja dla modelu.** Model poprawia następne wywołanie tylko
-   z tego, co przeczyta w błędzie. Błąd ma nazwać złą wartość, powiedzieć, co z nią nie tak,
+   na podstawie tego, co przeczyta w błędzie. Błąd ma nazwać złą wartość, powiedzieć, co z nią nie tak,
    i co wysłać zamiast niej.
    → [P41](../pigulki/08-harness/p41-blad-mowi-co-poprawic.md)
 4. **Duże bajty idą obok modelu, nie przez niego.** Plik, audio i długi log przekazuj jako

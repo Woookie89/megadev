@@ -10,7 +10,7 @@
 (ze źródłem), co zostało, pułapki, terminy ważności, gotowe komendy i prompt do wklejenia.
 
 **Dlaczego.** Nowa sesja zaczyna od zera. Bez pliku albo zgaduje, albo odtwarza to, co już
-ustalono. Często też powtarza wykluczone już ślepe uliczki.
+ustalono. Często też wchodzi w ślepe uliczki, które już wykluczono.
 
 **Przypadek.**
 - S01E02, `HANDOFF.md`: proces transkrypcji zostawiony w tle, z opisem, jak sprawdzić, czy

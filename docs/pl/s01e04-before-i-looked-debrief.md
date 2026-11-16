@@ -18,8 +18,8 @@ Zespół przekazał repo `rig-handover` z planem „morning digest”. Trzeba by
 1. rozbić plan na issues (każde zaczyna się od `Source: plan.md § <n>` i ma etykietę
    `plan:morning-digest`);
 2. zbudować funkcję: stronę i JSON digestu za daną noc oraz linki na tablicy;
-3. dać recenzentowi publiczny link do kopii strony w HTML, z markerem pasa (`LANE_MARKER`);
-4. po recenzji wgrać stronę bez markera pod ten sam link i zamknąć plan.
+3. dać recenzentowi publiczny link do kopii strony w HTML, ze znacznikiem pasa (`LANE_MARKER`);
+4. po recenzji wgrać stronę bez znacznika pod ten sam link i zamknąć plan.
 
 ## Wynik
 
@@ -53,7 +53,7 @@ Numer #6 zajął PR Dependabota, którego harness nie ruszał.
 3. Harness zamknął #8 zaraz po wysłaniu linku. Kurs odrzucił claim: „you closed #8 before the
    reviewer looked.” Harness otworzył #8 ponownie i zamknął je dopiero wtedy, gdy kurs
    potwierdził, że recenzent obejrzał stronę.
-4. Po zgodzie użytkownika strona bez markera trafiła pod ten sam link (#9). Claim: solved.
+4. Po zgodzie użytkownika strona bez znacznika trafiła pod ten sam link (#9). Claim: solved.
 5. Agent od #7 zauważył, że w komentarzu zamykającym #4 harness wpisał zły model
    (`haiku-4.5` zamiast `haiku-5.5`), i komentarz poprawiono.
 
@@ -69,7 +69,7 @@ Rook po akceptacji: „this is how i run. it's how you run from thursday.”
 3. **Równoległe worktrees zbiegają się w jednym pliku.** Konflikt merge'a trzeba przewidzieć,
    a po scaleniu uruchomić testy przed pushem.
 4. **Sprawdź publiczny link przez HTTPS przed claimem.** Harness pobrał stronę i potwierdził
-   tytuł i marker, a plik konfiguracyjny hosta zwracał 404.
+   tytuł i znacznik, a plik konfiguracyjny hosta zwracał 404.
 5. **Zatwierdzony kształt zapisz poza czatem.** Kształt issue i komendy Netlify zostały tylko
    w issues, logu i `HANDOVER.md`. Należą do skilla albo `AGENTS.md`, inaczej przy kolejnym
    planie przepadną.
@@ -91,7 +91,7 @@ Rook po akceptacji: „this is how i run. it's how you run from thursday.”
 4. **Brief dla workera to dobre issue, a ślad workera umożliwia wzajemną kontrolę.**
    Komentarz `worker: harness · model · effort` pozwolił jednemu agentowi wyłapać błąd
    drugiego. → [P20](../pigulki/04-orkiestracja/p20-brief-jak-issue.md)
-5. **„Wysłane” to nie „potwierdzone”.** Krok zależny od drugiej strony zamyka jej sygnał.
+5. **„Wysłane” to nie „potwierdzone”.** Krok zależny od drugiej strony zamykaj dopiero na jej sygnał.
    → [P09](../pigulki/02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md)
 6. **Reguły zapisuj na właściwym szczeblu trwałości.** Kształt issue zostawiony w logu
    przepadnie, a zapisany w skillu albo `AGENTS.md` wróci przy następnym planie.

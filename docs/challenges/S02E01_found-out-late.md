@@ -24,7 +24,7 @@ naprawdę uzgodniono, napisać obowiązujący plan i zbudować opisany w nim skl
 ## Wymagania
 
 Kont i kluczy nie podano w źródłach odczytanych w tej sesji. Potrzebne jest środowisko
-lokalne zdolne uruchomić sklep. Zależności wskazuje harness w trakcie pracy.
+lokalne, w którym da się uruchomić sklep. Zależności wskazuje harness w trakcie pracy.
 
 ## Ograniczenia
 

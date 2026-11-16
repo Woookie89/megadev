@@ -15,7 +15,13 @@
 | least privilege | The agent has only the rights it needs ([P30](06-security/p30-least-privilege.md)). |
 | idempotency | Repeating the same request does not change the result (dedup by id). |
 | ticket / receipt | Course proofs: a ticket from starting a challenge, a receipt for an accepted step. They expire. |
-| claim | Submitting a solution to the course. A refusal comes with a reason. |
+| claim | Submitting a solution to the course. A refusal usually does not say why. |
+| brief | A job handed to another agent: the task, what done means, the skill, the access and how the result comes back ([P20](04-orchestration/p20-brief-like-an-issue.md)). |
+| worker | An agent the main agent gives one job to. It has its own context and its own tools ([P43](04-orchestration/p43-skill-travels-with-the-job.md)). |
+| headless mode (`claude -p`) | Claude Code run without its interface: it takes a prompt, works alone and prints the result. |
+| routine | A Claude Code job run in Anthropic's cloud (claude.ai/code): once, on a schedule or on an event. |
+| sandbox | An isolated place where an agent runs. It has only the files, tools and network access it was given. |
+| allowlist | A list of allowed domains (or commands). Everything else is blocked ([P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md)). |
 
 ---
 

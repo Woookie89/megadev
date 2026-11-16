@@ -10,9 +10,10 @@ opisane zadania dostają tańszy. Agent bez nadzoru dostaje limit wywołań i bu
 
 **Przypadek.**
 - S01E04: każde issue miało pole „Suggested worker” (strongest albo cheaper).
-- S01E05: z darmowego Gemini na OpenRouter, potem przez rachunek na DeepSeek. Dzienny limit
-  15 wywołań modelu.
-- S02E02: kilka centów na mail na Opus 5.5 i brak limitu wydatków (zostało otwarte).
+- S01E05: przejście z darmowego klucza Gemini na OpenRouter, a potem, ze względu na rachunek,
+  na modele DeepSeek. Dzienny limit 15 wywołań modelu.
+- S02E02: jeden mail na Opus 5.5 kosztuje kilka centów, a limitu wydatków brak (sprawa
+  otwarta).
 
 ---
 

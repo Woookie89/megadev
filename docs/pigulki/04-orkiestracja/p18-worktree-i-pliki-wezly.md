@@ -7,7 +7,7 @@
 > - S02E04 · Współpraca wielu agentów → rozdział „Współpraca wieloagentowa” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) · [oryginał EN: „Multi-agentic collaboration”](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration)
 
 **Zasada.** Równoległe zapisy wymagają osobnych checkoutów. Konflikty i tak pojawią się
-w plikach, które wszyscy muszą dotknąć (router, index, config).
+w plikach, które wszyscy muszą zmienić (router, index, config).
 
 **Przypadek.** S01E04: merge #3 i #4 zatrzymał się na konflikcie w tym samym pliku aplikacji
 (rejestracja tras). Harness scalił go ręcznie, a przed pushem uruchomił typecheck i 25

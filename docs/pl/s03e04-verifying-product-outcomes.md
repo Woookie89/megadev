@@ -1,6 +1,6 @@
 # S03E04 · Weryfikacja rezultatów produktu
 
-Skalowanie wieloagentowego rozwoju i popychanie go w stronę autonomii bez wcześniejszego zbudowania zaufania nie zadziała i należy tego unikać, nawet jeśli oznacza to spowolnienie rozwoju na jakiś czas. Trzeba jasno powiedzieć, że **agenci chętnie i szybko zbudują niewłaściwe rzeczy**. Obejmuje to odpływanie od wymagań, ale też kończenie pracy za wcześnie lub za późno. Co więcej, w wielu przypadkach takie zachowanie nie będzie w gruncie rzeczy błędne. Po prostu nie będzie zgodne z naszymi oczekiwaniami i procesami specyficznymi dla naszego produktu.
+Skalowanie wieloagentowego rozwoju i popychanie go w stronę autonomii bez wcześniejszego zbudowania zaufania nie zadziała i należy tego unikać, nawet jeśli oznacza to spowolnienie rozwoju na jakiś czas. Trzeba jasno powiedzieć, że **agenci chętnie i szybko zbudują niewłaściwe rzeczy**. Obejmuje to odchodzenie od wymagań, ale też kończenie pracy za wcześnie lub za późno. Co więcej, w wielu przypadkach takie zachowanie nie będzie w gruncie rzeczy błędne. Po prostu nie będzie zgodne z naszymi oczekiwaniami i procesami specyficznymi dla naszego produktu.
 
 Podobnie jak w innych obszarach rozwoju produktu AI-native, weryfikacja rezultatów również musi w dużej mierze opierać się na agentach. Ale w zależności od naszych preferencji i cech produktu możemy zbudować weryfikację wokół mechanizmów, które pozwolą nam **zrozumieć i zobaczyć rezultaty**.
 
@@ -54,10 +54,10 @@ Dla kontekstu: **aplikacja to współdzielone środowisko uruchomieniowe z dwoma
 
 Jak pokazuje diagram, agent ma **„laboratorium agentowe”**. To głównie zestaw skryptów CLI, które pozwalają mu **używać przeglądarki** do testowania wersji webowej albo **uruchamiać instancję aplikacji desktopowej**. Dostępne narzędzia pozwalają mu klikać, pisać, załączać pliki, robić zrzuty ekranu i nagrywać krótkie filmy. Wyniki tych interakcji trafiają do tymczasowego folderu.
 
-Brzmi to prosto, ale cała rzecz tkwi w szczegółach:
+Brzmi to prosto, ale diabeł tkwi w szczegółach:
 
 - Jest limit liczby przeglądarek lub instancji, które mogę mieć w danym momencie otwarte do debugowania, bo CPU i RAM się wyczerpują, zwłaszcza podczas testów, lintowania i kompilacji (w moim przypadku Rust).
-- Każda instancja dostaje własne konto i przestrzeń roboczą, więc agenci sobie nie przeszkadzają. Mogą wybierać ziarna (seeds) profili, by testować różne konfiguracje. Jest też specjalny tryb do testowania procesu autoryzacji [Clerk](https://clerk.com/) i funkcji związanych z synchronizacją w chmurze.
+- Każda instancja dostaje własne konto i przestrzeń roboczą, więc agenci sobie nie przeszkadzają. Mogą wybierać dane startowe (seeds) dla profili, by testować różne konfiguracje. Jest też specjalny tryb do testowania procesu autoryzacji [Clerk](https://clerk.com/) i funkcji związanych z synchronizacją w chmurze.
 - Jest ujednolicony interfejs logowania, więc agenci mogą mierzyć wszystko, co dotyczy przepływu danych, interfejsu użytkownika i wydajności.
 - Aplikacji desktopowej nie da się testować na VPS-ie. Nie może też działać bezpośrednio na moim laptopie, bo kradłaby fokus okien, przerywała mi pisanie i tak dalej. Działa więc wewnątrz [VMPal](https://vmpal.com/?lang=en).
 - Laboratorium używa klipów z przeglądarki i klipów z Maca do nagrywania krótkich filmów.
@@ -111,7 +111,7 @@ System diffy mogą być przydatne nie tylko dla nas, ale też dla naszych agent�
 
 ## Przegląd
 
-Nawet jeśli przestaniemy patrzeć na kod, nie znaczy to, że powinniśmy przestać o niego dbać, zwłaszcza jeśli chodzi o organizację, spójność, złe wzorce, wydajność i problemy z bezpieczeństwem. Wszystkim tym można, i należy, zająć się z pomocą agentów. Dobrym przykładem jest [ten pull request](https://github.com/kody-hq/kody/pull/2931), który ma komentarze od [Bugbota](https://cursor.com/docs/bugbot), [CodeRabbita](https://www.coderabbit.ai/) i [Devina](https://devin.ai). Mimo to nasza własna aplikacja również może obsługiwać takie przeglądy (omawialiśmy to w **S01E05**).
+Nawet jeśli przestaniemy patrzeć na kod, nie znaczy to, że powinniśmy przestać o niego dbać, zwłaszcza jeśli chodzi o organizację, spójność, złe wzorce, wydajność i problemy z bezpieczeństwem. Wszystkim tym można, i należy, zająć się z pomocą agentów. Dobrym przykładem jest [ten pull request](https://github.com/kody-hq/kody/pull/2931), który ma komentarze od [Bugbota](https://cursor.com/docs/bugbot), [CodeRabbita](https://www.coderabbit.ai/) i [Devina](https://devin.ai). Takie przeglądy może zresztą obsługiwać również nasza własna aplikacja (omawialiśmy to w **S01E05**).
 
 Choć dzisiejsze modele radzą sobie bardzo przyzwoicie z ogólnymi przeglądami i ulepszeniami kodu, łatwo zauważyć, że często **naciskają za mocno albo za słabo**. Ponadto, ponieważ przeglądy wykonują **osobni agenci**, zmiany wprowadzone przez jednego agenta mogą łatwo zostać nadpisane przez innego. Wszystkie te problemy można rozwiązać właściwym kontekstem, który zawiera **zasady** i **źródła**, ale też **granice**, takie jak **macierz wykonalności** wspomniana w **S03E01**. Poniżej przykład przepływu przeglądu, jaki możemy mieć.
 
@@ -127,7 +127,7 @@ Etap przeglądu może obejmować działania wykraczające poza kod. Agentów mo�
 - **Sprawdzenie rezultatu:** agenci mogą tworzyć nowe harmonogramy do monitorowania nowej funkcjonalności na produkcji albo do jej przeglądu po pewnym czasie, abyśmy mogli zobaczyć, jak funkcja została przyjęta.
 - **Ulepszenia:** przegląd może skupiać się na badaniu, jak można ulepszyć funkcję, a to badanie może sięgać daleko poza produkt, w wiedzę o rynku, alternatywne narzędzia, biblioteki i tak dalej.
 
-Podobne pomysły możemy burzyć mózgów z agentami i w zespole. Ale główna idea polega na tym, by myśleć o dźwigni, jaką możemy uzyskać dzięki agentom pracującym w tle. Dobrze wykonane, te działania mogą drastycznie poprawić jakość całego produktu, a jak pokazuje przykład z churnem i upsellem, wpłynąć także na wyniki biznesowe!
+Podobne pomysły możemy wypracować w burzy mózgów z agentami i w zespole. Ale główna idea polega na tym, by myśleć o dźwigni, jaką możemy uzyskać dzięki agentom pracującym w tle. Jeśli zrobimy to dobrze, te działania mogą drastycznie poprawić jakość całego produktu, a jak pokazuje przykład z churnem i upsellem, wpłynąć także na wyniki biznesowe!
 
 ## Bramki jakości
 

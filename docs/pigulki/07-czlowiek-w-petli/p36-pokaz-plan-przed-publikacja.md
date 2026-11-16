@@ -6,7 +6,7 @@
 > - S01E01 · Mechanika działania generatywnej AI → rozdział „Platformy i uprzęże” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#platformy-i-uprzęże) · [oryginał EN: „Platforms and Harnesses”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#platforms-and-harnesses)
 
 **Zasada.** Przy pracy z publicznymi skutkami agent najpierw pokazuje plan albo podział
-i nic nie publikuje do zatwierdzenia.
+i niczego nie publikuje przed zatwierdzeniem.
 
 **Przypadek.** S01E04, skill `plan-to-issues`: zatrzymaj się, pokaż tabelę podziału, nic nie
 publikuj. MEGA Assessment (mocna strona): fazy rozpoznanie → rekomendacja → budowa,

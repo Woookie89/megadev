@@ -12,14 +12,14 @@
 ## Cel
 
 Agent ma pracować pod nieobecność użytkownika. Trzeba przenieść go do sandboxa na stale
-działającej maszynie, dać mu sposób powiadamiania telefonu i zarejestrować kanał, przez
+działającej maszynie, dać mu sposób wysyłania powiadomień na telefon i zarejestrować kanał, przez
 który pisze kurs. Część wiadomości agent obsługuje sam. Inne wymagają użytkownika i kodu,
 który zna tylko on.
 
 ## Role
 
 - **Użytkownik:** ustala, co agent robi sam, a co wymaga zgody, i podaje kod potrzebny do
-  działań z jego udziałem. Wybiera okno 15–30 minut, które zaczyna się w ciągu 15 minut,
+  działań z jego udziałem. Wybiera okno czasowe 15–30 minut, które zaczyna się w ciągu 15 minut,
   i ma przy sobie telefon.
 - **Harness:** przygotowuje agenta, który pod nieobecność użytkownika obsługuje wiadomości
   kursu na jednym kanale.
@@ -27,7 +27,7 @@ który zna tylko on.
 ## Wymagania
 
 - Agent, który odczytuje i obsługuje wybrany kanał.
-- Bezpłatny sposób powiadamiania telefonu.
+- Bezpłatny sposób wysyłania powiadomień na telefon.
 - Około 1,5 godziny na całość.
 
 ## Ograniczenia

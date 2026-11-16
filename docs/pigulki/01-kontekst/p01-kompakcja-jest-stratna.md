@@ -11,7 +11,8 @@
 podagenta) wyrzuca treść. Zanim skrócisz, spisz, co musi przetrwać.
 
 **Dlaczego.** Model, który skraca, nie wie, co okaże się ważne później. Tnie to, co wygląda na
-ozdobnik, a ozdobnik bywa sednem. Rook po akceptacji skrótu: „you kept it. most don't. the
+ozdobnik, a ozdobnik bywa sednem. Rook (postać z fabuły kursu, zob.
+[słowniczek](../slowniczek.md)) po akceptacji skrótu: „you kept it. most don't. the
 rest you decided for me.”
 
 **Przypadek.** S01E01: wiadomość miała 1288 znaków, a limit pola 700. Chroniony akapit

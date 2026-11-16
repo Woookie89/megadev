@@ -13,7 +13,7 @@
 
 Dział wsparcia zebrał 412 zgłoszeń o datach w jednym tickecie (`#4471`) i oznaczył go jako
 znany problem. Trzeba rozdzielić ten zbiór na osobne problemy, dla każdego założyć
-zgłoszenie z liczbą raportów, których dotyczy, i dodać stronę o tych problemach do bazy
+osobny ticket z liczbą zgłoszeń, których dotyczy, i dodać stronę o tych problemach do bazy
 wiedzy dostarczonej jako eksport.
 
 ## Role
@@ -21,7 +21,7 @@ wiedzy dostarczonej jako eksport.
 - **Użytkownik:** przekazuje harnessowi eksport bazy wiedzy i zatwierdza działania na
   GitHubie.
 - **Harness:** analizuje zgłoszenia, zakłada publiczne repozytorium albo używa wskazanego,
-  tworzy w nim zgłoszenia i dopisuje podpisaną stronę do bazy wiedzy.
+  tworzy w nim tickety i dopisuje podpisaną stronę do bazy wiedzy.
 
 ## Wymagania
 
@@ -36,7 +36,7 @@ wiedzy dostarczonej jako eksport.
 
 ## Kryterium ukończenia
 
-Kurs przyjmuje zgłoszenia (po jednym na problem, z liczbą raportów) i stronę w bazie wiedzy.
+Kurs przyjmuje tickety (po jednym na problem, z liczbą zgłoszeń) i stronę w bazie wiedzy.
 
 ## Status (migawka)
 

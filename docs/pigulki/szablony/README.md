@@ -1,6 +1,6 @@
 # Szablony
 
-Gotowe kształty do skopiowania. Pigułki odsyłają tu tam, gdzie zasada ma konkretną formę.
+Gotowe kształty do skopiowania. Pigułki odsyłają do nich tam, gdzie zasada ma konkretną formę.
 
 | Szablon |
 | --- |

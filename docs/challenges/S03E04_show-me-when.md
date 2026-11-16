@@ -12,15 +12,15 @@
 ## Cel
 
 Tablica incydentów produktu do planowania ma plan i cztery gotowe issues. Trzeba je
-zrealizować, wdrożyć tablicę na własny adres HTTPS i wysłać nagranie z krótkim raportem,
-które pokazują, że tablica działa. Product czyta raport i odpowiada. Wtedy trzeba
+zrealizować, wdrożyć tablicę na własny adres HTTPS i wysłać nagranie oraz krótki raport,
+które pokazują, że tablica działa. Zespół produktu czyta raport i odpowiada. Wtedy trzeba
 przygotować nową wersję i udowodnić, że działa.
 
 ## Role
 
-- **Użytkownik:** dostarcza logowania potrzebne do publikacji tablicy i nagrania.
-- **Harness:** buduje, wdraża, nagrywa działanie i wysyła raport. Po odpowiedzi product
-  przygotowuje i sprawdza kolejną wersję.
+- **Użytkownik:** daje harnessowi dostęp do kont potrzebnych do publikacji tablicy i nagrania.
+- **Harness:** buduje, wdraża, nagrywa działanie i wysyła raport. Po odpowiedzi zespołu
+  produktu przygotowuje i sprawdza kolejną wersję.
 
 ## Wymagania
 
@@ -31,7 +31,7 @@ przygotować nową wersję i udowodnić, że działa.
 ## Ograniczenia
 
 - Dowodem działania jest nagranie i raport, a nie samo wdrożenie.
-- Druga część zależy od odpowiedzi product.
+- Druga część zależy od odpowiedzi zespołu produktu.
 
 ## Kryterium ukończenia
 

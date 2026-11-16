@@ -10,7 +10,7 @@
 - S01E05: podpis, znacznik czasu i id sprawdzane przy każdym żądaniu (Standard Webhooks).
   Niepodpisany POST dostaje 401.
 - S02E02: `fetch_url` blokuje adresy lokalne i prywatne (ochrona przed SSRF).
-- S02E03 (w toku): serwer MCP z OAuth i Protected Resource Metadata.
+- S02E03: serwer MCP z OAuth i Protected Resource Metadata (metadanymi chronionego zasobu).
 
 ---
 

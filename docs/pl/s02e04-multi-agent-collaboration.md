@@ -1,8 +1,8 @@
 # S02E04 · Współpraca wielu agentów
 
-W **S01E02** wspomnieliśmy o podagentach i workerach (oddzielnych instancjach) jako świetnym sposobie na odciążenie głównego wątku od wymagających zadań, dzięki czemu model może skupić się na głównym celu. Teraz czas pójść o krok dalej i przyjrzeć się temu, jak agenci mogą współpracować w zespołach, komunikować się ze sobą, wymieniać zasoby i korzystać ze swoich możliwości.
+W **S01E02** wspomnieliśmy o podagentach i workerach (oddzielnych instancjach) jako świetnym sposobie na odciążenie głównego wątku od wymagających zadań, dzięki czemu model może skupić się na głównym celu. Teraz czas pójść o krok dalej i przyjrzeć się temu, jak agenci mogą współpracować w zespołach, komunikować się ze sobą, wymieniać zasoby i korzystać nawzajem ze swoich możliwości.
 
-Systemy wieloagentowe są przydatne zarówno dla pojedynczego użytkownika pracującego z całym zespołem agentów, jak i dla całych produktów oraz organizacji, które chcą wymieniać informacje i korzystać ze swoich usług. Zespoły agentów mogą też wspólnie pracować nad złożonymi problemami, takimi jak zaawansowana analiza produktu, refaktoryzacja czy wdrażanie i testowanie całych funkcji. Systemy wieloagentowe mogą również poprawiać wyniki, gdy zadania zyskują na specjalizacji lub odizolowaniu kontekstu.
+Systemy wieloagentowe są przydatne zarówno dla pojedynczego użytkownika pracującego z całym zespołem agentów, jak i dla całych produktów oraz organizacji, które chcą wymieniać informacje i korzystać nawzajem ze swoich usług. Zespoły agentów mogą też wspólnie pracować nad złożonymi problemami, takimi jak zaawansowana analiza produktu, refaktoryzacja czy wdrażanie i testowanie całych funkcji. Systemy wieloagentowe mogą również poprawiać wyniki, gdy zadania zyskują na specjalizacji lub odizolowaniu kontekstu.
 
 ## Plan
 
@@ -117,10 +117,10 @@ Interakcję można obsłużyć na kilka sposobów: przez odpytywanie, zdarzenia 
 Załóżmy, że agent badawczy potrzebuje informacji od drugiego agenta. Interakcja przebiega następująco:
 
 1. Agent A odnajduje kartę agenta B i poznaje jego możliwości.
-   2. Agent A wysyła do agenta B wiadomość zawierającą wszystkie posiadane informacje.
-   3. Agent B potrzebuje jeszcze jednego szczegółu. Wstrzymuje zadanie w stanie wymagającym danych wejściowych i zadaje pytanie.
-   4. Agent A wysyła odpowiedź z tym samym identyfikatorem zadania.
-   5. Agent B kończy zadanie i zwraca wyniki.
+2. Agent A wysyła do agenta B wiadomość zawierającą wszystkie posiadane informacje.
+3. Agent B potrzebuje jeszcze jednego szczegółu. Wstrzymuje zadanie w stanie wymagającym danych wejściowych i zadaje pytanie.
+4. Agent A wysyła odpowiedź z tym samym identyfikatorem zadania.
+5. Agent B kończy zadanie i zwraca wyniki.
 
 Poniżej przedstawiono możliwy sposób reprezentacji tej wymiany. Warto też sklonować [to repozytorium](https://github.com/a2aproject/a2a-samples/tree/main/samples) i porozmawiać z agentem o dołączonych przykładach, aby poznać dostępne wzorce.
 
@@ -231,7 +231,7 @@ Poziom autonomii zależy tu od firmy, ale wyraźnie widać, że niektóre etapy 
 
 ## Najważniejsze wnioski
 
-Zbierzmy teraz to w całość, łącząc z dotychczasową wiedzą:
+Zbierzmy to teraz w całość, łącząc z dotychczasową wiedzą:
 
 - **Agenci:** nawet jeśli pojedynczy agent mógłby obsłużyć cały proces, podział obowiązków między agentów daje nam kontrolę nad **ich kontekstem, możliwościami i uprawnieniami**, a także nad **współbieżnością, konfliktami i strukturą**.
 - **Prymitywy:** dobrze dobrane, uogólnione elementy składowe zapewniają elastyczność zarówno w kodzie, jak i w czasie działania. Dzięki nim można łatwo rozszerzać możliwości całego systemu przy minimalnych zmianach w kodzie.

@@ -13,8 +13,8 @@ projektu czytaj ze źródła prawdy, a nie z kopii w pliku.
 - S02E02: stan w AgentMail (wątki i etykiety `replied`, `ignored`, `failed`), więc restart
   niczego nie gubi.
 - S01E05: `plan.md` twierdził, że #12 jest wydane, a tracker pokazywał je jako otwarte.
-  Pulse czyta tracker przy każdym pingu. Plan to nie tracker.
-- S02E03: darmowy web service na Renderze nie ma dysku i usypia się po 15 minutach. Notatki,
+  Agent pulse czyta tracker przy każdym pingu. Plan to nie tracker.
+- S02E03: darmowy web service na Renderze nie ma dysku i zasypia po 15 minutach. Notatki,
   pliki i tokeny OAuth trzyma Postgres, więc przetrwały deploy, noc i zimny start. Kurs wrócił
   po kilku godzinach i znalazł swoje dane.
 
