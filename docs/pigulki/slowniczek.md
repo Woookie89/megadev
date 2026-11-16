@@ -2,7 +2,7 @@
 
 | Termin | Znaczenie |
 | --- | --- |
-| harness | Program, który owija model: narzędzia, pliki instrukcji, skille, hooki, uprawnienia. Tu Claude Code i Codex. |
+| harness (w transkryptach: uprząż) | Program, który owija model: narzędzia, pliki instrukcji, skille, hooki, uprawnienia. Tu Claude Code i Codex. |
 | okno kontekstu | Wszystko, co model widzi w jednym wywołaniu. Poza nim model nic nie wie. |
 | kompakcja | Skrócenie rozmowy, gdy kontekst się zapełnia. Stratna ([P01](01-kontekst/p01-kompakcja-jest-stratna.md)). |
 | pętla agenta | Model woła narzędzie, dostaje wynik, decyduje dalej, aż przestanie wołać narzędzia. |
