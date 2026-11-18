@@ -3,6 +3,7 @@
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E01
 
 > **Lekcje:**
+>
 > - S01E01 · Mechanika działania generatywnej AI → rozdział „Mechanika dużych modeli językowych” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych) · [oryginał EN: „Mechanics of Large Language Models”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models)
 > - S01E01 · Mechanika działania generatywnej AI → rozdział „Platformy i harnessy” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#platformy-i-harnessy) · [oryginał EN: „Platforms and Harnesses”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#platforms-and-harnesses)
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Jak działa kontekst?” — [po polsku](../../pl/s01e02-steering-models-through-context.md#jak-działa-kontekst) · [oryginał EN: „How does the context work?”](../../s01e02-steering-models-through-context.md#how-does-the-context-work)
@@ -20,6 +21,7 @@ przetrwał dosłownie (622 znaki), ale kurs wskazał 10 utraconych fragmentów, 
 slow” (tytuł wyzwania) i „ask me anything”.
 
 **Stosuj.**
+
 - Przed długą sesją albo `/compact` dodaj do `CLAUDE.md` lub pliku przekazania sekcję „do
   zachowania”.
 - Pełne źródło trzymaj poza rozmową (log), żeby skrót dało się odtworzyć.

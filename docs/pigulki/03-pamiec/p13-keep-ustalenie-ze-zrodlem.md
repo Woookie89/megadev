@@ -3,6 +3,7 @@
 > Rozdział [3. Pamięć poza czatem](README.md) · epizody: S01E04
 
 > **Lekcje:**
+>
 > - S01E03 · Tworzenie systemów wiedzy → rozdział „Cel baz wiedzy” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) · [oryginał EN: „Purpose of the knowledge bases”](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases)
 
 **Zasada.** Ustalenia zapisuj po jednym w linii, w formacie

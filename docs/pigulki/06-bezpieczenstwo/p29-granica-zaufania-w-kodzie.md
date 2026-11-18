@@ -3,6 +3,7 @@
 > Rozdział [6. Bezpieczeństwo: granica zaufania należy do kodu](README.md) · epizody: S02E02, S02E05
 
 > **Lekcje:**
+>
 > - S02E05 · Niezawodność agentów → rozdział „Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec” — [po polsku](../../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) · [oryginał EN: „Guardrails: preventing the unpreventable”](../../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable)
 > - S02E04 · Współpraca wielu agentów → rozdział „Współpraca wieloagentowa” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) · [oryginał EN: „Multi-agentic collaboration”](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration)
 

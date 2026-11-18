@@ -3,6 +3,7 @@
 > Chapter [6. Security: the trust boundary belongs to code](README.md) · episodes: S02E02, S02E05
 
 > **Lessons:**
+>
 > - S02E05 · Agent Reliability → chapter "Guardrails: preventing the unpreventable" — [original (EN)](../../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) · [Polish: „Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec”](../../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec)
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agentic collaboration" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) · [Polish: „Współpraca wieloagentowa”](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa)
 

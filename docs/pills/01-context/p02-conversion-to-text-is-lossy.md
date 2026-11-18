@@ -3,6 +3,7 @@
 > Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E02
 
 > **Lessons:**
+>
 > - S01E01 · Mechanics Behind Generative AI → chapter "Mechanics of Large Language Models" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models) · [Polish: „Mechanika dużych modeli językowych”](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych)
 > - S01E03 · Building Knowledge Systems → chapter "Purpose of the knowledge bases" — [original (EN)](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases) · [Polish: „Cel baz wiedzy”](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy)
 
@@ -17,6 +18,7 @@ something else. Whisper `large-v3` dropped "Warnings / None logged", wrote "Knig
 "Nightly" and "cue" for "queue", and added a non-existent "memory." at the end.
 
 **Apply.**
+
 - A transcript is a draft, not a record.
 - Shorter chunks give more accurate text (phrase by phrase instead of the whole file).
 - A record checked word for word needs manual correction of known error classes:

@@ -3,6 +3,7 @@
 > Chapter [3. Memory outside the chat](README.md) · episodes: S01E01, S01E02
 
 > **Lessons:**
+>
 > - S01E02 · Steering Models Through Context → chapter "How does the context work?" — [original (EN)](../../s01e02-steering-models-through-context.md#how-does-the-context-work) · [Polish: „Jak działa kontekst?”](../../pl/s01e02-steering-models-through-context.md#jak-działa-kontekst)
 > - S02E01 · Agentic Primitives → chapter "Context and Memory" — [original (EN)](../../s02e01-agentic-primitives.md#context-and-memory) · [Polish: „Kontekst i pamięć”](../../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć)
 
@@ -14,6 +15,7 @@ paste.
 what was settled, often walking down dead ends that were already ruled out.
 
 **Case.**
+
 - S01E02, `HANDOFF.md`: a transcription process left running in the background, with how
   to tell whether it finished and what to do if not; the list of known Whisper errors; the
   expiry dates of the ticket and receipts.

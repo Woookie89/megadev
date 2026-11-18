@@ -3,6 +3,7 @@
 > Chapter [6. Security: the trust boundary belongs to code](README.md) · episodes: S01E05, S02E04
 
 > **Lessons:**
+>
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agent architectures" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures) · [Polish: „Architektury wieloagentowe”](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe)
 > - S02E02 · Building an Agent → chapter "Architecture" — [original (EN)](../../s02e02-building-an-agent.md#architecture) · [Polish: „Architektura”](../../pl/s02e02-building-an-agent.md#architektura)
 

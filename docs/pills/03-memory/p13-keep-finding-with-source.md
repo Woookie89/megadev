@@ -3,6 +3,7 @@
 > Chapter [3. Memory outside the chat](README.md) · episodes: S01E04
 
 > **Lessons:**
+>
 > - S01E03 · Building Knowledge Systems → chapter "Purpose of the knowledge bases" — [original (EN)](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases) · [Polish: „Cel baz wiedzy”](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy)
 
 **Principle.** Write findings one per line, as

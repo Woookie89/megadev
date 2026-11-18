@@ -3,6 +3,7 @@
 > Rozdział [6. Bezpieczeństwo: granica zaufania należy do kodu](README.md) · epizody: S01E05, S02E04
 
 > **Lekcje:**
+>
 > - S02E04 · Współpraca wielu agentów → rozdział „Architektury wieloagentowe” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe) · [oryginał EN: „Multi-agent architectures”](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures)
 > - S02E02 · Budowanie agenta → rozdział „Architektura” — [po polsku](../../pl/s02e02-building-an-agent.md#architektura) · [oryginał EN: „Architecture”](../../s02e02-building-an-agent.md#architecture)
 

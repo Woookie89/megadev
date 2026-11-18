@@ -3,17 +3,18 @@
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S02E04
 
 > **Lekcje:**
+>
 > - S02E04 · Współpraca wielu agentów → rozdział „Agent2Agent” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#agent2agent) · [oryginał EN: „Agent2Agent”](../../s02e04-multi-agent-collaboration.md#agent2agent)
 > - S02E04 · Współpraca wielu agentów → rozdział „Najważniejsze wnioski” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski) · [oryginał EN: „Takeaways”](../../s02e04-multi-agent-collaboration.md#takeaways)
 
 **Zasada.** Delegowanie to praca, która wychodzi z głównego agenta: worker ma własny
-kontekst i własne połączenie z narzędziami. Skill, który opisuje, *jak* wykonać zadanie,
+kontekst i własne połączenie z narzędziami. Skill, który opisuje, _jak_ wykonać zadanie,
 trzeba przekazać workerowi razem z zadaniem. To, że główny agent przeczytał skill, nie
 znaczy, że worker go zna.
 
 **Dlaczego.** Agenci nie widzą nawzajem swoich rozmów. Worker wie tylko to, co dostał
-w briefie, i to, co wczyta jego harness. Opis narzędzia mówi, *co* da się zrobić, ale nie
-*jak*. Bez procedury worker zrobi to, co najprostsze: przeszuka domyślny zakres, przeczyta
+w briefie, i to, co wczyta jego harness. Opis narzędzia mówi, _co_ da się zrobić, ale nie
+_jak_. Bez procedury worker zrobi to, co najprostsze: przeszuka domyślny zakres, przeczyta
 wszystkie pola i odda surowe dane. Dopiero skill sprawia, że wynik ma postać, której
 potrzebuje następny odbiorca.
 

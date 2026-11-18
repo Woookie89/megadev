@@ -5,10 +5,10 @@ Wiemy już, że jakość wyników LLM-a w dużej mierze zależy od dostępnego m
 ## Plan
 
 - Harness: co widzi agent, AGENTS.md, pamięć, konfiguracja, rozszerzenia, hooki, samodoskonalenie
- - Kontekst: zarządzanie kontekstem, limity kontekstu, optymalizacje harnessu, uwaga, stosowanie się do instrukcji, brakujący kontekst, krótkie wątki, strefa dobrej skuteczności
- - Skille: nazwa i opis, wybór, zakres, długość, skille-routery, zasady, dynamiczne zasoby, kotwice semantyczne, samodzielne sterowanie, generowanie
- - Narzędzia: natywne i niestandardowe, odkrywanie, żądania, prompt injection, wyniki, duże wyniki, wskazówki, błędy
- - Podagenci: narzędzia, rozwidlenia wątków, ustawienia, szablony, skille a podagenci, workery, orkiestracja
+- Kontekst: zarządzanie kontekstem, limity kontekstu, optymalizacje harnessu, uwaga, stosowanie się do instrukcji, brakujący kontekst, krótkie wątki, strefa dobrej skuteczności
+- Skille: nazwa i opis, wybór, zakres, długość, skille-routery, zasady, dynamiczne zasoby, kotwice semantyczne, samodzielne sterowanie, generowanie
+- Narzędzia: natywne i niestandardowe, odkrywanie, żądania, prompt injection, wyniki, duże wyniki, wskazówki, błędy
+- Podagenci: narzędzia, rozwidlenia wątków, ustawienia, szablony, skille a podagenci, workery, orkiestracja
 
 Agent potrzebuje czasu, by dokończyć zadanie. Uruchamiamy więc kolejnego, a potem jeszcze jednego. Nagle bez przerwy przełączamy się między agentami, podejmujemy mnóstwo decyzji i próbujemy nadążać za tym, co się dzieje. Szybko odbiera nam to energię, więc zaczynamy akceptować wszystko, co sugerują agenci. Ponieważ brakuje im kontekstu i dobrego zrozumienia tego, co budujemy, szybko otrzymujemy kiepskie rezultaty. Poświęcamy jeszcze więcej czasu na ich poprawianie, ale rzadko to pomaga. Frustrujemy się i często wracamy do starych sposobów tworzenia oprogramowania.
 

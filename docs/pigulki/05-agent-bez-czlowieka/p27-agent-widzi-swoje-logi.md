@@ -3,6 +3,7 @@
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03, S02E05
 
 > **Lekcje:**
+>
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
 
 **Zasada.** Jeśli harness nie widzi logów serwisu, nie zdiagnozuje go. Człowiek staje się

@@ -3,6 +3,7 @@
 > Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03
 
 > **Lekcje:**
+>
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
 > - S02E03 · Możliwości agentów → rozdział „Skille i narzędzia” — [po polsku](../../pl/s02e03-agentic-capabilities.md#skille-i-narzędzia) · [oryginał EN: „Skills & Tools”](../../s02e03-agentic-capabilities.md#skills--tools)
 
@@ -10,6 +11,7 @@
 Potem zamień je na trwałe narzędzie, a pułapki środowiska zapisz.
 
 **Przypadek.**
+
 - S01E03: brak przeglądarki. Harness uruchomił zainstalowane Chromium z portem debugowania
   i sterował nim przez puppeteer-core, a człowiek zalogował się w tym oknie. Na stałe:
   Playwright MCP.

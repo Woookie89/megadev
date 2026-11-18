@@ -3,6 +3,7 @@
 > Chapter [2. Contracts and "done"](README.md) · episodes: S02E02, S02E03
 
 > **Lessons:**
+>
 > - S02E05 · Agent Reliability → chapter "Evaluation" — [original (EN)](../../s02e05-agent-reliability.md#evaluation) · [Polish: „Ewaluacja”](../../pl/s02e05-agent-reliability.md#ewaluacja)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Quality" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#quality) · [Polish: „Jakość”](../../pl/s01e05-building-workflows-not-tool-stacks.md#jakość)
 
@@ -10,6 +11,7 @@
 smoke test from their side.
 
 **Case.**
+
 - S01E04: the harness fetched the public link over HTTPS and confirmed the title and the
   marker.
 - S01E05: a signed host selfcheck tested both models without spending the reviewer's

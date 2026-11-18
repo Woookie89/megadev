@@ -3,6 +3,7 @@
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E02
 
 > **Lekcje:**
+>
 > - S01E01 · Mechanika działania generatywnej AI → rozdział „Mechanika dużych modeli językowych” — [po polsku](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych) · [oryginał EN: „Mechanics of Large Language Models”](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models)
 > - S01E03 · Tworzenie systemów wiedzy → rozdział „Cel baz wiedzy” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) · [oryginał EN: „Purpose of the knowledge bases”](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases)
 
@@ -17,6 +18,7 @@ Whisper `large-v3` zgubił „Warnings / None logged”, zapisał „Knightly”
 „cue” zamiast „queue” i dopisał na końcu nieistniejące „memory.”.
 
 **Stosuj.**
+
 - Transkrypcja to szkic, nie zapis.
 - Krótsze kawałki dają dokładniejszy wynik (fraza po frazie zamiast całości naraz).
 - Zapis sprawdzany słowo w słowo wymaga ręcznej korekty znanych klas błędów: homofonów,

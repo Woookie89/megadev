@@ -3,6 +3,7 @@
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S02E04
 
 > **Lekcje:**
+>
 > - S02E04 · Współpraca wielu agentów → rozdział „Współpraca wieloagentowa” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) · [oryginał EN: „Multi-agentic collaboration”](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration)
 > - S02E04 · Współpraca wielu agentów → rozdział „Orkiestracja” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#orkiestracja) · [oryginał EN: „Orchestration”](../../s02e04-multi-agent-collaboration.md#orchestration)
 

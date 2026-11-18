@@ -3,6 +3,7 @@
 > Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S02E02
 
 > **Lessons:**
+>
 > - S02E05 · Agent Reliability → chapter "Observability in agentic systems" — [original (EN)](../../s02e05-agent-reliability.md#observability-in-agentic-systems) · [Polish: „Obserwowalność w systemach agentowych”](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych)
 
 **Principle.** A grader (a person, the course, monitoring) sees the order of events, not the

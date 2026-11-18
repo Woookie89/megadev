@@ -3,6 +3,7 @@
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E01, MEGA Assessment
 
 > **Lekcje:**
+>
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 > - S02E03 · Możliwości agentów → rozdział „Personalizacja” — [po polsku](../../pl/s02e03-agentic-capabilities.md#personalizacja) · [oryginał EN: „Personalization”](../../s02e03-agentic-capabilities.md#personalization)
 
@@ -19,6 +20,7 @@ nieprzeczytane. MEGA Assessment: T06 (sprawdzalne kryteria akceptacji) to najsł
 (38%).
 
 **Stosuj.**
+
 - Każde zlecenie kończ zdaniem „gotowe, gdy …”, np. „gotowe, gdy `pytest` jest zielony
   i logowanie przechodzi w prawdziwej przeglądarce”.
 - W pętlach użyj `./verify` (rook-loop, done-check) albo hooka `Stop`.

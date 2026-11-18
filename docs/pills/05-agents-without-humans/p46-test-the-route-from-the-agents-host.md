@@ -3,6 +3,7 @@
 > Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S02E05
 
 > **Lessons:**
+>
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Getting remote" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#getting-remote) · [Polish: „Dostęp zdalny”](../../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny)
 
 **Principle.** Every route the agent uses to reach a human or another service (a phone push,

@@ -1,16 +1,16 @@
 # S01E05 · Building Workflows, Not Tool Stacks
 
-We can now build things in a fraction of the time and with a fraction of the effort required just a few months ago. Yet shipping to production is still as slow and demanding as ever. You might conclude that AI is best suited to greenfield projects and small, single-user tools. But even those quickly become hard to manage, AI or not. Something doesn't add up, so the real question is: **why?** 
+We can now build things in a fraction of the time and with a fraction of the effort required just a few months ago. Yet shipping to production is still as slow and demanding as ever. You might conclude that AI is best suited to greenfield projects and small, single-user tools. But even those quickly become hard to manage, AI or not. Something doesn't add up, so the real question is: **why?**
 
 ## Outline
 
 - Complexity: faster shipping, faster debt, people and processes, using AI to keep up
- - Workflows: executable markdown, limits of agent-only workflows, single-purpose skills, reusable scripts, generalized tools, synthetic evaluation
- - Quality: self-verification, the agent's environment, principles, primitives, maintaining the system
- - Remote agents: remote machine, schedules and triggers, mobile access, secrets
- - Background workflows: daily briefs, nightly checks, reviews, docs sync, monitoring, product insights, self-improvement
- - Security: prompt injection, jailbreaks, layered defenses, irreversible actions
- - Business: deterministic vs. non-deterministic logic, human direction, simplification, earned trust
+- Workflows: executable markdown, limits of agent-only workflows, single-purpose skills, reusable scripts, generalized tools, synthetic evaluation
+- Quality: self-verification, the agent's environment, principles, primitives, maintaining the system
+- Remote agents: remote machine, schedules and triggers, mobile access, secrets
+- Background workflows: daily briefs, nightly checks, reviews, docs sync, monitoring, product insights, self-improvement
+- Security: prompt injection, jailbreaks, layered defenses, irreversible actions
+- Business: deterministic vs. non-deterministic logic, human direction, simplification, earned trust
 
 ## Speed of complexity growth
 
@@ -22,7 +22,7 @@ The simple answer to the question is that **we move faster now**, and that appli
 
 There's one more thing that slows the process down: everything related to people, and also business processes. It's getting harder to keep up with the changes, and they arrive so quickly that businesses don't have enough time to see how they affect users and figure out what to do next.
 
-And in a personal context, when complexity grows fast, it gets hard to keep track of everything related to the tools we've built. On top of that, agents keep asking us about things they can't do without us, and they break here and there, which takes even more of our attention and energy. 
+And in a personal context, when complexity grows fast, it gets hard to keep track of everything related to the tools we've built. On top of that, agents keep asking us about things they can't do without us, and they break here and there, which takes even more of our attention and energy.
 
 ![Diagram. On the left is a box labeled You. On the right, a small box labeled Your work sits above a large frame labeled Your system. The frame holds two tool boxes, Scripts and Integrations, and three agent boxes: Inbox agent, Notes agent and Sync agent. A thin arrow labeled "less time" goes from You to Your work. A thick red arrow labeled "most of your time" goes from You to Your system. Below it, thin arrows go back to You from Inbox agent, labeled "stuck", and from Notes agent, labeled "waits for you". Sync agent has a dashed outline and the note "fails silently". No arrow comes from Sync agent.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-2/frame.png)
 
@@ -34,9 +34,9 @@ The problems we're seeing here aren't new, and we already have some answers to t
 
 Skills may be seen as **executable markdown** files. When we consider what agents can do with even a simple set of instructions, it's fair to say that **many products may be a single .md file**.
 
-Now, given what we know about language models and their **non-deterministic** behavior, it's hard to imagine business processes built this way. But it's already happening, as non-technical people use skills in their daily work and some of them have built automated workflows this way. 
+Now, given what we know about language models and their **non-deterministic** behavior, it's hard to imagine business processes built this way. But it's already happening, as non-technical people use skills in their daily work and some of them have built automated workflows this way.
 
-For example, an agent connected to the internet that can write code can easily: 
+For example, an agent connected to the internet that can write code can easily:
 
 - send us a personalized daily newsletter
 - use a text-to-speech API to make a spoken daily brief
@@ -103,7 +103,7 @@ Considering what we've learned so far, we need to keep iterating on **the envir
 
 Now, **the principles** aren't about a single file that defines what we want, but about **everything** that makes the agent behave the way we want without us having to repeat similar actions again and again. This requires work upfront, but also the habit of **maintaining the system as we work**. If the first part is done well, the second is much easier.
 
-So far we have discussed components such as: 
+So far we have discussed components such as:
 
 - **Global & local context** available both on our machine and remotely, so it can be easily shared with a team
 - **Skills & generators** that are created and managed thanks to the **habits we develop**, but also to **routines** that [scan the history](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/session-mining) and various sources, such as issue trackers, CI/CD logs etc., to suggest new skills and optimize existing ones, including archiving those that aren't needed anymore
@@ -111,7 +111,7 @@ So far we have discussed components such as:
 - **Issue tracking** in any form - feature specs, issue descriptions, ADRs or anything that lets the agent know **what we build, what was built and what we're about to build**
 - **Tool stack** that the system itself develops as its own **MCP / CLI** tools, following the same principles and using the shared primitives and knowledge base
 
-Now we need to put all this together, and the last missing piece is to **set up a remote machine, like a VPS or a PC/Mac**, or at least make agents available on a GitHub Actions runner or through Claude/Devin routines. 
+Now we need to put all this together, and the last missing piece is to **set up a remote machine, like a VPS or a PC/Mac**, or at least make agents available on a GitHub Actions runner or through Claude/Devin routines.
 
 ![A local desktop box connects down to a large frame named Remote machine: VPS or PC/Mac. Inside it are two frames. The red frame, You shape, holds Primitives, Principles and Environment and is marked "few things, kept in mind". A line labeled guides goes from it to the frame The agent builds. That frame holds Tools, Manage, Do the work and Verify and is marked "high trust, kept off your mind".](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-9/frame.png)
 
@@ -121,9 +121,9 @@ Now we need to put all this together, and the last missing piece is to **set up 
 
 **NOTE:** the next section covers setting up a VPS with Tailscale, Pi and Herdr. It's **entirely optional**, and you can skip it because Cursor and Devin already offer remote agents out of the box. Whichever option you choose, what you need is **remote agents that can run on a schedule or be triggered by an external event**.
 
-The guide is available here: https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md
+The guide is available here: <https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md>
 
-**[Limen](https://github.com/overment/limen)**, which we discussed in the previous lessons, includes a guide to setting up a VPS so that **Pi and Herdr** are available on our server. Our AI agents can follow it to set up the machine **together with us**. It also describes how to set up **GitHub Apps**, which make the agents available in Issues and Pull Requests on selected repositories. 
+**[Limen](https://github.com/overment/limen)**, which we discussed in the previous lessons, includes a guide to setting up a VPS so that **Pi and Herdr** are available on our server. Our AI agents can follow it to set up the machine **together with us**. It also describes how to set up **GitHub Apps**, which make the agents available in Issues and Pull Requests on selected repositories.
 
 The setup process roughly looks like this:
 
@@ -163,13 +163,13 @@ And here are the steps you'll go through **with the agents:**
 - **You:** Create a GitHub App. Install it on the project repository. Pass the App ID and PEM; the AI places the PEM as a root-only file on the server.
 - **You + AI:** Run the doorbell installer. Connect the App (`limen github connect`). Enable the poller when the doctor check is clean. Test with `@limen` on a PR Conversation tab. Note: a green doctor result does not prove the App is installed on the repo.
 
-And again, **even if this list above feels like dark magic, the agents will guide you through every step**. The final setup looks like this: 
+And again, **even if this list above feels like dark magic, the agents will guide you through every step**. The final setup looks like this:
 
 ![A frame named "Tailnet (private)" with a red outline holds Desktop (agents, Herdr), Phone (Moshi or ntfy) and a VPS container (Ubuntu LTS) with Pi agents, Limen and Herdr. Desktop controls agents on the VPS. The phone has remote access to the VPS, and the VPS asks for you on the phone. Only one arrow leaves the frame: Pi agents picks jobs and opens PRs on the GitHub repo (Issues, Pull requests).](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-11/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-11/frame.html)
 
-We can interact with this system simply by chatting with Pi on our local machine. We can also log in to the VPS and chat with the agents there from our desktop or phone. It works fine, although we might also consider choosing Grok Bot - bots can be asked to join our Tailscale network and manage remote agents for us. 
+We can interact with this system simply by chatting with Pi on our local machine. We can also log in to the VPS and chat with the agents there from our desktop or phone. It works fine, although we might also consider choosing Grok Bot - bots can be asked to join our Tailscale network and manage remote agents for us.
 
 ![A Tailscale network frame holds two frames. On the left, "Desktop or phone" holds You and Grok Bot, joined by a "chat" line. On the right, "VPS" holds one Pi agent. A line labeled "manages" goes from Grok Bot, marked red, to the Pi agent.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-12/frame.png)
 
@@ -211,7 +211,7 @@ The problem gets bigger when our system becomes more capable - when we connect o
 
 [Open figure](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-13/frame.html)
 
-There are two terms we need to understand about LLM security: 
+There are two terms we need to understand about LLM security:
 
 - **Prompt injection:** An attack that tries to make an LLM-based system treat untrusted input as authoritative instructions, overriding its intended task or higher-priority instructions. The input may come directly from a user or be hidden in content the system reads, such as a web page or document. The goal might be to expose private data, manipulate an answer, or trigger an unauthorized action.
 - **Jailbreak:** An attack that tries to bypass a model’s safety constraints, causing it to produce content or perform behavior it would normally refuse. This often involves adversarial prompts, role-play, or a carefully constructed conversation.
@@ -222,11 +222,11 @@ There are two terms we need to understand about LLM security:
 
 [Open figure](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-14/frame.html)
 
-The best material on prompt injection comes from Pliny the Liberator and his GitHub repository: **[L1B3RT4S](https://github.com/elder-plinius/L1B3RT4S)**. WARNING: following instructions from this repository may get your account blocked! 
+The best material on prompt injection comes from Pliny the Liberator and his GitHub repository: **[L1B3RT4S](https://github.com/elder-plinius/L1B3RT4S)**. WARNING: following instructions from this repository may get your account blocked!
 
-On his X profile, Pliny shows that every single model currently available is vulnerable to these kinds of attacks. But Matthew Berman once challenged Pliny to break into his system and managed to fend off all the attacks, though Pliny’s attempts were quite simple. Nonetheless, [Berman’s article](https://x.com/MatthewBerman/status/2030423565355676100) on his defense mechanisms is worth reading. 
+On his X profile, Pliny shows that every single model currently available is vulnerable to these kinds of attacks. But Matthew Berman once challenged Pliny to break into his system and managed to fend off all the attacks, though Pliny’s attempts were quite simple. Nonetheless, [Berman’s article](https://x.com/MatthewBerman/status/2030423565355676100) on his defense mechanisms is worth reading.
 
-His defenses include: 
+His defenses include:
 
 - **Deterministic sanitizer**: removes invisible and token-heavy Unicode, converts lookalike letters to Latin, decodes base64, hex and HTML entities, limits input by tokens and flags jailbreak patterns.
 - **Frontier scanner**: The strongest LLM scores risk from 0 to 100: review at 35, block at 70. If the scanner fails, it blocks high-risk sources.
@@ -240,12 +240,12 @@ But despite all these mechanisms, the lesson here is that **wherever we use an L
 
 The idea of running agents in the background may be interesting, but it may also raise concerns about **costs**, **quality**, and **reliability**, as well as its **actual value**. With the help of AI, it is easy to set up routines and triggers that wake agents to produce work nobody will read or implement, or that we find useless.
 
-That's a real problem, and there is no single answer to it, although there are some directions we may consider, like: 
+That's a real problem, and there is no single answer to it, although there are some directions we may consider, like:
 
 - **Balance deterministic and non-deterministic logic:** we do know that agents can write code and set deterministic schedules and triggers that will invoke logic that runs without an LLM or uses one only sparingly.
 - **Human engagement:** while agents can take care of quality, reliability, order and security, humans have to remain responsible for the direction and the most important decisions - although even this should be supported by AI. This setup, at least for now, increases the chance that we'll build **the right thing**.
-- **Hack away the unessential:** it's easy to add something to the system, but both humans and AI have to actively work on **simplification** and **removal** - in fact this needs to be a higher priority than adding things. 
-- **Trust earned, not given:** as mentioned, agents can be trusted **only** if they can verify their own work through actual observations and self-testing. In fact, the entire system has to be optimized for this, because our goal is to **ensure quality even when development moves at a pace of a few thousand PRs a month**. 
+- **Hack away the unessential:** it's easy to add something to the system, but both humans and AI have to actively work on **simplification** and **removal** - in fact this needs to be a higher priority than adding things.
+- **Trust earned, not given:** as mentioned, agents can be trusted **only** if they can verify their own work through actual observations and self-testing. In fact, the entire system has to be optimized for this, because our goal is to **ensure quality even when development moves at a pace of a few thousand PRs a month**.
 
 As programmers, we can think about workflows built on **our knowledge** of system design and on what we now know about generative AI and the available tools. And even if our perspective may be too narrow to tell whether a given solution will help the business, we still may want to **explore and show what's possible**.
 

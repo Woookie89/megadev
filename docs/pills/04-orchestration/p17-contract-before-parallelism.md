@@ -3,6 +3,7 @@
 > Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04
 
 > **Lessons:**
+>
 > - S02E04 · Multi-Agent Collaboration → chapter "Orchestration" — [original (EN)](../../s02e04-multi-agent-collaboration.md#orchestration) · [Polish: „Orkiestracja”](../../pl/s02e04-multi-agent-collaboration.md#orkiestracja)
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agent architectures" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures) · [Polish: „Architektury wieloagentowe”](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe)
 
@@ -13,7 +14,8 @@ order, with the strongest model. Only then split the rest across parallel worker
 that keeps them in sync. Without it, each invents its own.
 
 **Case.** S01E04: #1 (types) and #2 (log reader) in the main session, then #3, #4, #5 and
-#7 on Sonnet and Haiku subagents, each in its own worktree.
+
+# 7 on Sonnet and Haiku subagents, each in its own worktree
 
 ---
 

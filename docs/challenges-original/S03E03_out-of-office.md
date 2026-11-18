@@ -96,7 +96,7 @@ Kent C. Dodds
 **Week 3**\
 Mon 9 Nov – Fri 13 Nov
 
-|  |  |  |  |
+| | | | |
 | --- | --- | --- | --- |
 | S03E01 | Mon 9 Nov | status for the night | Open |
 | S03E02 | Tue 10 Nov | nothing ships unmarked | Open |

@@ -3,6 +3,7 @@
 > Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S02E04
 
 > **Lessons:**
+>
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agent architectures" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agent-architectures) · [Polish: „Architektury wieloagentowe”](../../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe)
 > - S02E04 · Multi-Agent Collaboration → chapter "Agent2Agent" — [original (EN)](../../s02e04-multi-agent-collaboration.md#agent2agent) · [Polish: „Agent2Agent”](../../pl/s02e04-multi-agent-collaboration.md#agent2agent)
 

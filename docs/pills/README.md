@@ -133,7 +133,6 @@ As of 17.11.2026.
   trust boundary, pre-handoff checklist, debrief section.
 - [Glossary](glossary.md)
 
-
 <!-- lessons:start -->
 ## Lesson index
 

@@ -3,6 +3,7 @@
 > Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S02E03
 
 > **Lekcje:**
+>
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
 > - S02E02 · Budowanie agenta → rozdział „Projektowanie narzędzi” — [po polsku](../../pl/s02e02-building-an-agent.md#projektowanie-narzędzi) · [oryginał EN: „Designing tools”](../../s02e02-building-an-agent.md#designing-tools)
 > - S02E03 · Możliwości agentów → rozdział „Projektowanie własnego MCP” — [po polsku](../../pl/s02e03-agentic-capabilities.md#projektowanie-własnego-mcp) · [oryginał EN: „Designing a custom MCP”](../../s02e03-agentic-capabilities.md#designing-a-custom-mcp)

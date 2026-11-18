@@ -3,6 +3,7 @@
 > Chapter [7. Human in the loop](README.md) · episodes: S02E05
 
 > **Lessons:**
+>
 > - S02E05 · Agent Reliability → chapter "Guardrails: preventing the unpreventable" — [original (EN)](../../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) · [Polish: „Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec”](../../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "System security" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#system-security) · [Polish: „Bezpieczeństwo systemu”](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu)
 

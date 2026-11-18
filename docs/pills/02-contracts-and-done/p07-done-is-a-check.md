@@ -3,6 +3,7 @@
 > Chapter [2. Contracts and "done"](README.md) · episodes: S02E01, MEGA Assessment
 
 > **Lessons:**
+>
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
 > - S02E03 · Agentic Capabilities → chapter "Personalization" — [original (EN)](../../s02e03-agentic-capabilities.md#personalization) · [Polish: „Personalizacja”](../../pl/s02e03-agentic-capabilities.md#personalizacja)
 
@@ -18,6 +19,7 @@ which fetches the list of sources before the work ends and sends the agent back 
 is unread. MEGA Assessment: T06 (verifiable acceptance criteria) is the weakest trait (38%).
 
 **Apply.**
+
 - End every request with "done when …", e.g. "done when `pytest` is green and sign-in works
   in a real browser".
 - In loops, use `./verify` (rook-loop, done-check) or a `Stop` hook.

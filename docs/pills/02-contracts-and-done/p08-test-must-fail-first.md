@@ -3,6 +3,7 @@
 > Chapter [2. Contracts and "done"](README.md) · episodes: S01E05
 
 > **Lessons:**
+>
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Quality" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#quality) · [Polish: „Jakość”](../../pl/s01e05-building-workflows-not-tool-stacks.md#jakość)
 > - S02E05 · Agent Reliability → chapter "Evaluation" — [original (EN)](../../s02e05-agent-reliability.md#evaluation) · [Polish: „Ewaluacja”](../../pl/s02e05-agent-reliability.md#ewaluacja)
 

@@ -3,6 +3,7 @@
 > Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E01
 
 > **Lessons:**
+>
 > - S01E01 · Mechanics Behind Generative AI → chapter "Mechanics of Large Language Models" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#mechanics-of-large-language-models) · [Polish: „Mechanika dużych modeli językowych”](../../pl/s01e01-mechanics-behind-generative-ai.md#mechanika-dużych-modeli-językowych)
 > - S01E01 · Mechanics Behind Generative AI → chapter "Platforms and Harnesses" — [original (EN)](../../../s01e01/s01e01-mechanics-behind-generative-ai.md#platforms-and-harnesses) · [Polish: „Platformy i harnessy”](../../pl/s01e01-mechanics-behind-generative-ai.md#platformy-i-harnessy)
 > - S01E02 · Steering Models Through Context → chapter "How does the context work?" — [original (EN)](../../s01e02-steering-models-through-context.md#how-does-the-context-work) · [Polish: „Jak działa kontekst?”](../../pl/s01e02-steering-models-through-context.md#jak-działa-kontekst)
@@ -19,6 +20,7 @@ paragraph survived word for word (622 characters), but the course listed 10 lost
 fragments, among them "somebody slow" (the challenge title) and "ask me anything".
 
 **Apply.**
+
 - Before a long session or `/compact`, add a "keep" section to `CLAUDE.md` or the handover
   file.
 - Keep the full source outside the conversation (a log), so the cut can be rebuilt.

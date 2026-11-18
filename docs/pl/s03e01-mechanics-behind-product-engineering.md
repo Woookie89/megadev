@@ -123,7 +123,7 @@ Prymitywy, odpowiedzialność, lepsza architektura, właściwe zarządzanie kont
 
 Ale to wszystko może być bezużyteczne... jeśli zbudujemy niewłaściwą rzecz.
 
-W książce [Getting Real](https://basecamp.com/gettingreal) jest świetny cytat: „*najlepsi projektanci i najlepsi programiści to nie ci z najlepszymi umiejętnościami czy najzwinniejszymi palcami (...), lecz ci, którzy potrafią określić, **co po prostu nie ma znaczenia.** Tam osiąga się prawdziwe zyski*”.
+W książce [Getting Real](https://basecamp.com/gettingreal) jest świetny cytat: „_najlepsi projektanci i najlepsi programiści to nie ci z najlepszymi umiejętnościami czy najzwinniejszymi palcami (...), lecz ci, którzy potrafią określić, **co po prostu nie ma znaczenia.** Tam osiąga się prawdziwe zyski_”.
 
 Ta książka została napisana w 2006 roku, ale ten fragment pozostaje aktualny i staje się jeszcze ważniejszy, bo dziś możemy szybko poruszać się w złym kierunku. I choć teraz łatwo jest po prostu usunąć kod, nie możemy łatwo wycofać rzeczy, które już trafiły do użytkowników, bo tu chodzi o **ich zaufanie.**
 

@@ -3,6 +3,7 @@
 > Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04
 
 > **Lekcje:**
+>
 > - S01E04 · Praca z harnessami AI → rozdział „Harnessy” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#harnessy) · [oryginał EN: „Harnesses”](../../s01e04-working-with-ai-harnesses.md#harnesses)
 > - S02E04 · Współpraca wielu agentów → rozdział „Współpraca wieloagentowa” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) · [oryginał EN: „Multi-agentic collaboration”](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration)
 
@@ -16,6 +17,7 @@ nieśledzone pliki z kilku wątków mieszały się. Worktrees `s01e04/wt-3`…`w
 w repo jeszcze tydzień po scaleniu, aż do sprzątania 15.11.2026.
 
 **Stosuj.**
+
 - Pliki-węzły przypisz jednemu workerowi albo zaplanuj ich scalenie.
 - Po każdym merge'u uruchom testy.
 - Po zakończeniu sprzątnij worktrees (`git worktree remove`).

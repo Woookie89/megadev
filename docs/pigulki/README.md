@@ -136,7 +136,6 @@ Stan na 17.11.2026.
   granica zaufania, lista przed oddaniem, sekcja debriefu.
 - [Słowniczek](slowniczek.md)
 
-
 <!-- lessons:start -->
 ## Indeks lekcji
 

@@ -3,6 +3,7 @@
 > Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S02E01
 
 > **Lessons:**
+>
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
 
 **Principle.** Every agent loop has three things: a success condition (a command that
@@ -10,6 +11,7 @@ checks it), a limit (iterations, time, budget) and a state file a human can read
 off.
 
 **Case.**
+
 - `stop_gate.py` (S02E01): `MAX_BLOCKS = 3` and the rule "a source that does not load is not
   a reason to loop".
 - The "loop" artifact from the course deck: a loop with a visible state file and three

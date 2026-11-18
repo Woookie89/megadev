@@ -28,7 +28,7 @@ If we think about it, there are many similar sources of signal that may be usefu
 
 Signal sources vary from product to product, so we first need to identify them, working with both the team and agents, because:
 
-- the team can tell us which tools they work with, how they use them, what they're missing, etc. They can also tell us if there's anything they'd like to be informed about and what they'd expect from those updates. 
+- the team can tell us which tools they work with, how they use them, what they're missing, etc. They can also tell us if there's anything they'd like to be informed about and what they'd expect from those updates.
 - agents can help us figure out how to match the team's workflows with what the tools offer, which other services could be useful, and how to integrate them. For tasks like this, we may want to use the "Deep Research" modes available in ChatGPT, Gemini or Grok, or simply ask our coding agent to manage the research using subagents.
 
 The result of this work should give us information about **business needs** and how they can be addressed from a **technical standpoint**, but also about **how this information can help our agents** either make better decisions or help us make them.
@@ -93,9 +93,9 @@ If we look at the process from a broad perspective, we can see it through these 
 - **Report:** when the agent decides to, it may leave a note or send a report with details about the run. This note or report should be available in later runs.
 - **Management:** agents should be able to manage the schedules, modify them, or turn them off, but the level of their permissions depends on us.
 
-The architecture will vary, but its core components will likely include several areas from the list above. To make it **flexible** and manageable for the agent, we need to pick the right primitives. For example: a **Subscription** that wakes the agent, an **Integration** that gives access to the data source, a **Skill** for repeating similar workflows, a **Document** for managing knowledge, a **Journal** for recording what happened in each run, and a **Channel** for communicating with humans or other agents. 
+The architecture will vary, but its core components will likely include several areas from the list above. To make it **flexible** and manageable for the agent, we need to pick the right primitives. For example: a **Subscription** that wakes the agent, an **Integration** that gives access to the data source, a **Skill** for repeating similar workflows, a **Document** for managing knowledge, a **Journal** for recording what happened in each run, and a **Channel** for communicating with humans or other agents.
 
-Below we have a general visualization of the entire flow. 
+Below we have a general visualization of the entire flow.
 
 ![Timeline of one released feature that an agent observes on its own for 30 days, in six columns from left to right: Release (Day 0), Setup (Day 0), Verification (Day 1), Wake-up (Days 7–21), Report (Day 21) and Management (Days 22–30). It has four lanes. Team: ships the feature, approves the setup (or the agent checks alone), reads the report, and sets the limits of what the agent may change. Agent: saves the agreement and evidence, writes the setup, runs it once on last week's data, adds a daily check for unsubscribes, and turns the observation off on day 30. Background runs: four runs in Wake-up (Mon, Mon, Event, Mon) with the example readings 9% back, 14% back, unsubscribes up and 18% back, then one run sends a report: matches, but doesn't fit. Documents: Agreement and Evidence; Instruction, Skills, an optional Script and Triggers; a Note after each of the first three runs; a Report; and Triggers updated. The Triggers document starts each run, and a red line under all documents says that every run reads them. The feature, numbers and days are examples that continue the weekly email example.](https://hq.mega.dev/figures/s03e05/artifacts/lesson/figure-6/frame.png)
 
@@ -105,7 +105,7 @@ Below we have a general visualization of the entire flow.
 
 Observation alone can give us useful signals, but it rarely leads directly to a particular action. These signals need processing, and we often have to consider them alongside other signals. We also want each agent to stay focused on a single thing. That's partly to avoid "context bloat", but also because of permissions and cost optimization.
 
-One example of synthesis comes from Kent's project and is shown in the figure below. It was created by his agent, and the most important part is that **Kent didn't ask for it directly**. The feature was a security change that closed a gap: "packages" that users publish, and that other people and their agents can run, could use credentials that the packages never declared. 
+One example of synthesis comes from Kent's project and is shown in the figure below. It was created by his agent, and the most important part is that **Kent didn't ask for it directly**. The feature was a security change that closed a gap: "packages" that users publish, and that other people and their agents can run, could use credentials that the packages never declared.
 
 The agent's plan, which Kent approved, put the change behind a flag and set one condition: **the flag goes on only when a scan of production is clean.** The same morning, right after the release, the agent ran that scan and found 211 packages from 89 owners that needed manual changes. So the flag stayed off, and Kent got the data he needed for his decision.
 
@@ -129,8 +129,8 @@ When thinking about synthesis, we again need to think about **making it possible
 
 Considering what we've discussed so far, it should be clear that agents will need to make many decisions without us. How many? It depends on us, but also **on the agents** and on the principles and rules we give them. When thinking about it, we may consider things such as:
 
-- **Strict barriers:** with agents, there is almost no reason not to have CI/CD workflows, and when we have them, we may set strict rules that agents can't override and that deterministically block their changes from deployment. Similar barriers may be set through the scope of tools and the context exposed to agents. That's why we often avoid working with a single agent and instead spawn agents depending on the task. 
-- **Agreement:** after finishing work, agents should check the result against the initial agreement. The agreement may also include a section with clear expectations, in the form of principles, that say when the agent may contact us. Contact may also be allowed **before finishing the task**, for example, if something goes wrong or the agent simply needs more context. 
+- **Strict barriers:** with agents, there is almost no reason not to have CI/CD workflows, and when we have them, we may set strict rules that agents can't override and that deterministically block their changes from deployment. Similar barriers may be set through the scope of tools and the context exposed to agents. That's why we often avoid working with a single agent and instead spawn agents depending on the task.
+- **Agreement:** after finishing work, agents should check the result against the initial agreement. The agreement may also include a section with clear expectations, in the form of principles, that say when the agent may contact us. Contact may also be allowed **before finishing the task**, for example, if something goes wrong or the agent simply needs more context.
 - **Reversibility:** agents may be steered so that they are allowed to make decisions that are easy to reverse or whose potential mistakes are cheap to fix. In fact, preparing the system to be able to easily reverse changes may increase our trust in agents.
 - **Preferences:** lastly, we may have personal preferences about where and when we want to be called. For example, the agent may be allowed to reach us through different channels depending on how urgent the situation is.
 
@@ -140,7 +140,7 @@ Sometimes things go wrong despite the checks, the principles and even manual ver
 
 ## Feedback Loops
 
-The final element of "products that learn after release" is a **feedback loop**. Its purpose is to make the system "smarter" over time and help it "learn" from its mistakes. 
+The final element of "products that learn after release" is a **feedback loop**. Its purpose is to make the system "smarter" over time and help it "learn" from its mistakes.
 
 By now, we already have most of the pieces a feedback loop needs. We've discussed the global context, such as the product vision, feature maps, and decision records, along with various types of journals that track anything agents can't infer just from the codebase and the available tools (such as repo history).
 
@@ -160,7 +160,7 @@ Where the outcome goes depends on what the agent learned, and each type of knowl
 
 In Kent's project, this process is described as **[the continuous improvement loop](https://github.com/kody-hq/kody/blob/main/docs/contributing/harness-engineering.md)**: **define intent → build → check → capture what was learned → promote repeated guidance into enforcement.** The last step is the most interesting one: when the same mistake happens again, it gets encoded as a guardrail, such as a lint rule, a type check or a test.
 
-One example of **a feedback loop** is a **[friction log](https://github.com/kody-hq/kody/blob/main/docs/contributing/friction-log.md)**. Whenever the repo gets in the way of an agent (or a human) and it happens more than once, they file an issue labeled `friction` that says what happened, what they wanted to achieve, how to reproduce it and what it cost. 
+One example of **a feedback loop** is a **[friction log](https://github.com/kody-hq/kody/blob/main/docs/contributing/friction-log.md)**. Whenever the repo gets in the way of an agent (or a human) and it happens more than once, they file an issue labeled `friction` that says what happened, what they wanted to achieve, how to reproduce it and what it cost.
 
 Then, once a day, a scheduled job picks up the open friction issues and starts a cloud agent that either fixes them in a pull request or parks them for Kent with a short summary and a recommended fix.
 

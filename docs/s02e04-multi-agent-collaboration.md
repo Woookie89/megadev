@@ -13,11 +13,11 @@ Multi-agent systems are useful both for a single user working with a whole team 
 
 ## Multi-agent architectures
 
-The idea of multi-agent systems isn't new. It goes back well before the ChatGPT release, to the 1970s and 1980s and [distributed artificial intelligence](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence), and most of those concepts can be combined with the language models we have today. 
+The idea of multi-agent systems isn't new. It goes back well before the ChatGPT release, to the 1970s and 1980s and [distributed artificial intelligence](https://en.wikipedia.org/wiki/Distributed_artificial_intelligence), and most of those concepts can be combined with the language models we have today.
 
-What's curious is that even last year we could still argue about the efficiency of multi-agent systems, especially for the most complex tasks. But around mid-2026, LLMs became great at interagent communication and handoffs. That opens up new possibilities and new challenges: handling the context of a single agent isn't easy, and now we need to figure out how to manage many of them. We may also expect that harnesses will evolve towards this, and we have early examples such as [Claude Managed Agents](https://platform.claude.com/workspaces/default/agent-quickstart). 
+What's curious is that even last year we could still argue about the efficiency of multi-agent systems, especially for the most complex tasks. But around mid-2026, LLMs became great at interagent communication and handoffs. That opens up new possibilities and new challenges: handling the context of a single agent isn't easy, and now we need to figure out how to manage many of them. We may also expect that harnesses will evolve towards this, and we have early examples such as [Claude Managed Agents](https://platform.claude.com/workspaces/default/agent-quickstart).
 
-Below is an example of **research** performed by multiple agents. Each agent tackles the problem from a different perspective, and they **collaborate** to compare results and learn from each other. The whole fleet is set up **dynamically**, and in this case the lead agent controls the entire workflow - including spawning and closing each worker. 
+Below is an example of **research** performed by multiple agents. Each agent tackles the problem from a different perspective, and they **collaborate** to compare results and learn from each other. The whole fleet is set up **dynamically**, and in this case the lead agent controls the entire workflow - including spawning and closing each worker.
 
 ![Example multi-agent research in two waves, from top to bottom. A lead agent sends one question to wave 1, where a tech agent, a cost agent and a risk agent research it and compare results with each other. Wave 2, with the cost agent and the tech agent, researches deeper and compares again. The results come back as a report. The agent roles are examples.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-1/frame.png)
 
@@ -26,7 +26,7 @@ Below is an example of **research** performed by multiple agents. Each agent tac
 Agents in the graph above each have their own context, and we already know the mechanics behind it. But from our perspective, we also need to manage the broader context of the entire workflow, through which the agents communicate and the lead agent manages the rest. Besides context, in multi-agent systems we need to define the **scope, capabilities, and permissions** of each agent. That's why we need to decide which architecture we want to build for our use case.
 
 **Single Agents:**
-This may be counterintuitive, but a system built around one agent can still be multi-agent when several instances of that agent run that share the same resources and capabilities. This brings the opportunities and challenges typical of multi-agent systems. 
+This may be counterintuitive, but a system built around one agent can still be multi-agent when several instances of that agent run that share the same resources and capabilities. This brings the opportunities and challenges typical of multi-agent systems.
 
 ![A timeline of one agent on a schedule, from 06:00 to 08:00. Instance 1 does the daily research from 06:00 to 07:30. Instance 2 starts the daily brief at 07:00. A red line shows that the brief reads the shared files at 07:00, while they still hold the old research. The new research lands at 07:30. The times are an example.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-2/frame.png)
 
@@ -48,7 +48,7 @@ Subagents are a delegation mechanism, but we can give them a structure that impr
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-4/frame.html)
 
-**Team:** 
+**Team:**
 Hierarchical structure implies connections between coordinators and leaders. But we may want a **team of agents** with specific roles, working toward a goal through a **shared workspace**. Every worker can communicate with the others, so there is no need for coordinators or leaders, although they may exist as well.
 
 ![A shared workspace at the top holds the goal of the team. Three agents, A, B and C, each with an own role, sit below it. Each agent reads from and writes to the shared workspace. Lines join every agent with the other two agents, so they exchange messages directly, with no coordinator or leader.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-5/frame.png)
@@ -62,13 +62,13 @@ A group of agents can decide for itself which agent or agents should take part i
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-7/frame.html)
 
-In general, multi-agent architectures are about addressing the limitations of current models in areas such as context windows or instruction following. This may suggest that as models get better, the value of these architectures will drop. But we can also think about them in terms of **increasing efficiency** through parallelism, which unlocks both speed and diversity of exploration. All this, together with environments that let agents empirically verify the results of their work, opens up incredible possibilities. 
+In general, multi-agent architectures are about addressing the limitations of current models in areas such as context windows or instruction following. This may suggest that as models get better, the value of these architectures will drop. But we can also think about them in terms of **increasing efficiency** through parallelism, which unlocks both speed and diversity of exploration. All this, together with environments that let agents empirically verify the results of their work, opens up incredible possibilities.
 
 ![A top-to-bottom flow. An open-ended problem goes to three agents in parallel. The agents share results with each other and send results to the environment. The environment verifies them and calls external services. A failed result goes to the error step, and a red dashed line goes back to the agent so that it recovers and tries again. Verified results become the best answer.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-6/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-6/frame.html)
 
-Also, agents may collaborate not only within our environment, but also with agents created by others, and this is one of the most important aspects to keep in mind when thinking about agents. In such scenarios, we may want to **expose some capabilities** to others while securing the rest. 
+Also, agents may collaborate not only within our environment, but also with agents created by others, and this is one of the most important aspects to keep in mind when thinking about agents. In such scenarios, we may want to **expose some capabilities** to others while securing the rest.
 
 Thanks to multi-agent architectures, we can work with hundreds or even thousands of agents at the same time. As we know from experience, working with just a few agents can be tricky. So we need to figure out how to cooperate with entire fleets, especially in terms of reliability, cost control, and speed.
 
@@ -82,7 +82,7 @@ It's worth keeping in mind that **errors can propagate across agents**. We need
 
 Agents have to work together freely, but in most cases we don't want them to share their internals. The reason may be context management, specialization, our internal policies or **the fact that the second agent does not belong to us**. At the same time they need to be able to discover each other and understand what may be expected from the given agent.
 
-Let's say I have a personal agent that has access to my services, devices and resources. At the same time, I want you to be able to ask it for something without it revealing my personal details or giving you access to the apps I use. 
+Let's say I have a personal agent that has access to my services, devices and resources. At the same time, I want you to be able to ask it for something without it revealing my personal details or giving you access to the apps I use.
 
 We have two agents below trying to schedule a meeting. The problem is one of them revealed personal details about the calendar entries. And that's not the only issue, as with this configuration the first agent may ask the second agent to remove the calendar entries, and the second agent will comply.
 
@@ -104,7 +104,7 @@ The A2A protocol is based on the idea that every agent introduces itself with a 
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-12/frame.html)
 
-Agents share only the most important information, so they don't share **threads**. That means the communication has to include **everything that's needed**, including the necessary context. And that context may be more than just text: it can also be structured data, such as file references. 
+Agents share only the most important information, so they don't share **threads**. That means the communication has to include **everything that's needed**, including the necessary context. And that context may be more than just text: it can also be structured data, such as file references.
 
 The communication happens over HTTP(S) requests and often follows the JSON-RPC format, so messages contain properties such as **jsonrpc, id, method and params**. An example envelope is shown below.
 
@@ -122,19 +122,19 @@ Let's say we have a research agent that needs some information from a second age
 4. Agent A sends the answer with the same task ID.
 5. Agent B completes the task and returns the results.
 
-And below we have a possible representation of that exchange. It is also worth cloning [this repository](https://github.com/a2aproject/a2a-samples/tree/main/samples) and chat about included samples with our agent, to explore available patterns. 
+And below we have a possible representation of that exchange. It is also worth cloning [this repository](https://github.com/a2aproject/a2a-samples/tree/main/samples) and chat about included samples with our agent, to explore available patterns.
 
 ![A2A exchange between Agent A (Research Agent) and Agent B (Weather Agent). Discovery: Agent A sends HTTP GET to https://weather.example.com/.well-known/agent-card.json, and Agent B returns the Agent Card with the rain-forecast skill and a JSON-RPC endpoint (the /a2a URL is an example). Then four JSON-RPC 2.0 messages: SendMessage with role ROLE\_USER and "Will it rain in Wrocław on Saturday?"; a result.task task-abc123 in context ctx-1 with state TASK\_STATE\_INPUT\_REQUIRED and the agent question "Which hours do you need?", without an artifact; a second SendMessage with taskId task-abc123, contextId ctx-1 and "14:00 to 18:00."; and result.task task-abc123 in state TASK\_STATE\_COMPLETED with the artifact rain-forecast: "Saturday 14:00–18:00 in Wrocław: 20% chance of rain, no rain expected." Red marks the TASK\_STATE\_INPUT\_REQUIRED state and the taskId in the second request: they continue the same task.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-14/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-14/frame.html)
 
-Regardless of whether A2A becomes part of our system, it is still worth exploring its concepts as they may be valuable for building custom multi-agentic systems. One of them is concurrency. While A2A does not solve this completely, it comes with ideas such as: 
+Regardless of whether A2A becomes part of our system, it is still worth exploring its concepts as they may be valuable for building custom multi-agentic systems. One of them is concurrency. While A2A does not solve this completely, it comes with ideas such as:
 
 - **Multitasking:** the agent can handle multiple independent tasks at once, each with its own ID and state.
 - **Multiple Streams:** allows multiple clients to subscribe to the results of the same task. Events are broadcast to all active streams in the same order. Closing one stream does not affect the others.
 - **Task ID management:** IDs are generated by the server, not the client to avoid collisions.
 
-But in practice, there are many more challenges and issues, so let's explore some of them. 
+But in practice, there are many more challenges and issues, so let's explore some of them.
 
 ## Multi-agentic collaboration
 
@@ -142,35 +142,35 @@ The latest models are getting really good at [long-horizon tasks](https://metr.o
 
 Although I don't have answers to all the questions we're facing in our work, it's worth keeping the following in mind:
 
-**Structure:** 
+**Structure:**
 Agents can easily navigate complex structures, but it's still worth keeping things **as simple as possible** and **agentic-first**. It's also worth deciding whether humans will ever read the documents in their original form, because even today most people interact with content through their agents. The structure has to natively address any requirements related to security and permission management as those aspects need to be handled by deterministic logic, and not agents alone.
 
 ![A horizontal diagram. A solid arrow goes from the pill "People" to the pill "Agents". A solid arrow goes from "Agents" into the Permissions gate. A dashed line labeled "rarely" goes from "People" over "Agents" and down into the top of the same gate. The gate is the left wall of a frame named "Structure". It shows a red lock, the label "Permissions" and the word "code". One arrow goes from the gate to the tree workspace/ with documents/, knowledge/ and skills/. Nothing else enters the frame.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-11/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-11/frame.html)
 
-**Contracts:** 
+**Contracts:**
 Following A2A, we may want unified contracts for documents, folders, communication, reports and activity logs. This structure opens the way to **deterministic lookups**, validators and health checks. In some cases, we may want to consider **graph databases**.
 
 ![Three example contracts side by side. A message is a JSON envelope. A folder is a fixed tree. A document has frontmatter. All three use the example task ID t-42. Lines go from each contract to one red part: deterministic lookups and validators. The field values are examples.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-15/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-15/frame.html)
 
-**Management:** 
+**Management:**
 Manager roles in multi-agent systems are crucial and worth the effort to get right. Once managers properly understand both the broad and the narrow context of the project, they can make useful decisions for other agents. So instead of all the agents accessing resources directly, they contact the agents responsible for managing those resources.
 
 ![Diagram of a multi-agent harness. Agent A and Agent B have two-way arrows to the Manager of resources. Agent C has a two-way arrow to the Manager of tools. Both managers sit in a red group named Managers. Each manager has a queue of agent chips, an empty slot and a list of rules. A two-way arrow labelled resolve conflicts joins the two managers. Global context of the project points down into Managers. Each manager has a one-way arrow to its asset: Resources or Tools. A dashed two-way line joins a Human, when needed, to Managers. Workers never reach resources or tools directly.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-16/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-16/frame.html)
 
-**Self-healing:** 
+**Self-healing:**
 The entire system has to be built so that it can observe its own behavior, access nearly every type of log and activity data, and, in some cases, modify its own logic. Self-healing activities are crucial and may account for as much as 40-60% of all the work the system does. In practice, this means that most of our focus needs to be on shaping the mechanics that agents need for nearly autonomous development we can trust.
 
 ![A bar shows that self-healing activities take 40–60% of all system activities, and other activities take the rest. Below the bar, a loop shows how self-healing works: the system logic leads to "Observe own behavior", then "Read logs and activities", then "Access nearly all resources". In some cases, this leads to "Modify own logic", which goes back to the system logic.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-17/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-17/frame.html)
 
-**Activity tracking:** 
+**Activity tracking:**
 Track everything that happens within the system with platforms such as [Axiom](https://axiom.co) and/or [PostHog](https://posthog.com/). In fact, observability is **critical** because we're dealing with non-deterministic logic whose behavior cannot be clearly explained or 'debugged' from the code alone. Observability logic has to be wired natively into the system, so we don't just log standalone events but keep all of them contextual. That way, it's possible to track the entire interaction between all the agents involved.
 
 ![Two panels side by side. Left, in grey, a frame named Standalone holds five log lines in mixed order with no links: 12:01:04 tool\_call, 12:01:02 llm\_response, 12:01:07 error, 12:01:03 tool\_call, 12:01:05 llm\_response. Right, a red frame named Contextual holds a trace waterfall. A tree on the left reads: trace 7f3a, then Agent A with tool\_call and Agent B, Agent B with llm\_response and Agent C, and Agent C with error. Each row has a timeline bar on the right. Each child bar sits inside its parent's span, and thin red lines join each parent to its children. Only the error bar is filled red. The bar positions are example values. An arrow goes down from the Contextual frame to a dashed box named Axiom / PostHog.](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-18/frame.png)
@@ -190,21 +190,21 @@ At this point, it should be clear that building multi-agent systems is demanding
 
 Working directly with agents makes us responsible for managing their work, helping them figure out issues, and steering their actions toward a bigger goal. For agents to operate on their own, most of these activities need to be translated into the system features we've discussed so far. But in the real world, the outcomes need to be **reliable** enough to be predictable (which may be achieved in many ways).
 
-Let's say we want agents to handle the publication process for YouTube videos. Such a process may consist of many steps, such as: 
+Let's say we want agents to handle the publication process for YouTube videos. Such a process may consist of many steps, such as:
 
-- editing raw recordings, cleaning up and mastering the audio, 
-- generating captions and translated subtitles, 
-- getting a title, a description, tags and chapter markers, 
-- designing a couple of thumbnails to iterate on, 
-- checking copyright, music licenses and sponsorship disclosures, 
-- setting up end screens, cards and playlists, cutting Shorts and clips, 
-- drafting social media posts, a community post and a newsletter, 
-- scheduling the release, writing a pinned comment, 
+- editing raw recordings, cleaning up and mastering the audio,
+- generating captions and translated subtitles,
+- getting a title, a description, tags and chapter markers,
+- designing a couple of thumbnails to iterate on,
+- checking copyright, music licenses and sponsorship disclosures,
+- setting up end screens, cards and playlists, cutting Shorts and clips,
+- drafting social media posts, a community post and a newsletter,
+- scheduling the release, writing a pinned comment,
 - and, after release, tracking comments and analytics to adjust the title and thumbnail.
 
-That's a lot! And regardless of the LLMs' native capabilities, the chance of getting everything right **every time we publish a video** is low, as most of those steps depend on **our own strategy, preferences and procedures**. Additionally, nearly every step may present an edge case that has to be resolved by either a well-trained agent or a human. 
+That's a lot! And regardless of the LLMs' native capabilities, the chance of getting everything right **every time we publish a video** is low, as most of those steps depend on **our own strategy, preferences and procedures**. Additionally, nearly every step may present an edge case that has to be resolved by either a well-trained agent or a human.
 
-The entire process not only has to be reliable, but also consistent and continuously improved, so lessons from the past must affect the system's current behavior. 
+The entire process not only has to be reliable, but also consistent and continuously improved, so lessons from the past must affect the system's current behavior.
 
 But based on what we've learned so far, it should be clear that the goal isn't to **create a system for video publication** but to **build primitives (generalized building blocks)** that let the system adjust to the current situation. That includes modifying the process or even **handling a different process** that may share similar primitives.
 
@@ -212,11 +212,11 @@ But based on what we've learned so far, it should be clear that the goal isn't t
 
 [Open figure](https://hq.mega.dev/figures/s02e04/artifacts/lesson/figure-20/frame.html)
 
-The difference from classic systems or automation workflows should be clearly visible here, because with AI, we gain **flexibility** at the cost of **control**. The problem is that control is often crucial in business processes. For example, we may not want to let the agent post public comments under our name. 
+The difference from classic systems or automation workflows should be clearly visible here, because with AI, we gain **flexibility** at the cost of **control**. The problem is that control is often crucial in business processes. For example, we may not want to let the agent post public comments under our name.
 
-The first lesson here is that **when we need 100% certainty, we can't rely on LLMs** (although [a million-step task has been solved with zero errors](https://arxiv.org/pdf/2511.09030)). 
+The first lesson here is that **when we need 100% certainty, we can't rely on LLMs** (although [a million-step task has been solved with zero errors](https://arxiv.org/pdf/2511.09030)).
 
-The second lesson is that **not every action in a business process requires certainty**, which means all we need to do is find the right balance between agentic logic and deterministic code. In our example we may think of this as follows: 
+The second lesson is that **not every action in a business process requires certainty**, which means all we need to do is find the right balance between agentic logic and deterministic code. In our example we may think of this as follows:
 
 - video editing can be done with [DaVinci MCP](https://x.com/The_Alex/status/2097847043796725924?s=20) and an agent
 - thumbnails can be generated through [Replicate](http://replicate.com/) or with a custom AI image-generation tool

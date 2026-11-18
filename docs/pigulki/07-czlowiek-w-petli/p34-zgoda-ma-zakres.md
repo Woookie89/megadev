@@ -3,6 +3,7 @@
 > Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04
 
 > **Lekcje:**
+>
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 
 **Zasada.** „Tak” obejmuje nazwany zestaw akcji w nazwanym miejscu. Wszystko poza nim wymaga

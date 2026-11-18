@@ -3,6 +3,7 @@
 > Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E03
 
 > **Lessons:**
+>
 > - S01E03 · Building Knowledge Systems → chapter "Beyond Markdown" — [original (EN)](../../s01e03-building-knowledge-systems.md#beyond-markdown) · [Polish: „Poza Markdownem”](../../pl/s01e03-building-knowledge-systems.md#poza-markdownem)
 > - S01E03 · Building Knowledge Systems → chapter "Text Files and Cloud Platforms" — [original (EN)](../../s01e03-building-knowledge-systems.md#text-files-and-cloud-platforms) · [Polish: „Pliki tekstowe i platformy chmurowe”](../../pl/s01e03-building-knowledge-systems.md#pliki-tekstowe-i-platformy-chmurowe)
 
@@ -19,6 +20,7 @@ rendered page showed two causes and a footnote about a third. Our own analysis g
 debrief: "Raw content is for the AI, the rendered view is for you: render it and look."
 
 **Apply.**
+
 - Build and look at a knowledge base with components before you quote it.
 - Take numbers that someone will compare against their view from that view. Explain a
   mismatch in a note instead of quietly "fixing" it.

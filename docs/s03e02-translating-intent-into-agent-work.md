@@ -23,7 +23,7 @@ Based on [two months of my interactions with agents](https://cloud.overment.com/
 
 [Open figure](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-1/frame.html)
 
-Most of what I do comes down to **describing intent** and **giving feedback**. Agents rarely receive exact instructions telling them what to do. In fact, they follow **principles**, not rules, because it gives them more space to make decisions that would be hard to predict, for example: 
+Most of what I do comes down to **describing intent** and **giving feedback**. Agents rarely receive exact instructions telling them what to do. In fact, they follow **principles**, not rules, because it gives them more space to make decisions that would be hard to predict, for example:
 
 - **Rule:** Keep answers under 100 words.
 - **Principle:** Respect the reader's attention. Every sentence should earn its place.
@@ -40,9 +40,9 @@ Both rules and principles point in the same direction, but the rule may be too s
 
 [Open figure](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-2/frame.html)
 
-Along with principles, it's worth considering telling the agent about **the reason** behind the intent. This brings an additional layer of valuable context that lets the agent see the bigger picture of what we want to achieve, while still leaving it enough room to steer itself toward the best possible solution. At the same time, the reason helps the agent **understand dynamic boundaries** that may affect its behavior. 
+Along with principles, it's worth considering telling the agent about **the reason** behind the intent. This brings an additional layer of valuable context that lets the agent see the bigger picture of what we want to achieve, while still leaving it enough room to steer itself toward the best possible solution. At the same time, the reason helps the agent **understand dynamic boundaries** that may affect its behavior.
 
-Let's imagine we have an agent with access to context about the people on our team. We want it to communicate openly in direct messages, but not reveal unnecessary details on team channels. So we have: 
+Let's imagine we have an agent with access to context about the people on our team. We want it to communicate openly in direct messages, but not reveal unnecessary details on team channels. So we have:
 
 - **Principle:** Share information only with the people it concerns.
 - **Reason:** People share things with the agent only when they trust it to keep them in the right place.
@@ -59,9 +59,9 @@ And that's just an example, but the main point is that **principles and reasons*
 
 Coding agents natively know how to explore a codebase, but they know very little about anything that cannot be read from the code: external services, platforms, tools and internal knowledge bases. What's more, from code alone they can only learn about the **current state** of a product. They have little idea of its direction, what the team is already working on, or whether there are any strategic business decisions to consider.
 
-Our goal is to make the agent "learn" how to explore context beyond code and how to make decisions that are aligned with product vision and business objectives. The question is: how can we achieve this? 
+Our goal is to make the agent "learn" how to explore context beyond code and how to make decisions that are aligned with product vision and business objectives. The question is: how can we achieve this?
 
-In [Kent's repository](https://github.com/kody-hq/kody/tree/main/docs/contributing/decisions) there's literally a folder named **decisions** that holds very simple documents that follow the same format, ADR (Architecture Decision Record), and contain information about the decision Kent made, what the context was, and the reason behind it. All those files are entirely managed by agents, but their content comes from interactions with him. 
+In [Kent's repository](https://github.com/kody-hq/kody/tree/main/docs/contributing/decisions) there's literally a folder named **decisions** that holds very simple documents that follow the same format, ADR (Architecture Decision Record), and contain information about the decision Kent made, what the context was, and the reason behind it. All those files are entirely managed by agents, but their content comes from interactions with him.
 
 ![Two aligned columns. Left: a decisions/ folder of identically formatted record files, then one record card with five rows: Number · Title · Status · Date, Context, Decision, Consequences, and a dashed Exit criterion row tagged "added, dated". Right: for each left item, a thin gray line leads to a red agent dot and the question the agent no longer has to ask, with what it does instead. Bottom: a loop of four nodes – owner explains a choice, agent writes the record, next agent reads it before coding, change fits or a new record replaces the old one – and back to the start.](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-4/frame.png)
 
@@ -83,7 +83,7 @@ By default, when we think about delegating technical tasks to someone, a detaile
 
 To shape an agreement, we first need to gather as many resources as possible. Not because we want to read them all, but because we want our agents to have more context. This way, we can use not only knowledge that comes from our experience, but also knowledge that goes beyond our current competence. And this process doesn't have to rely on conversation alone. We can also use various "one-off" interactive documents and even mini-apps to make it easier for us to understand **what we have, what we want, and whether our agreement reflects this**.
 
-**Visuals:** 
+**Visuals:**
 Since Opus 5.5, models have shown an outstanding ability to represent context visually. One of the best examples is the [Anatomy](https://skills.wheresryan.sh/anatomy) skill, which may not be that useful for our work but perfectly shows what these models are capable of. Another example we may want to try is the [**/show-me** skill from HumanLayer](https://x.com/dexhorthy/status/2087569590268391897?s=20), which was created specifically for **visual conversations** instead of walls of text.
 
 ![Diagram: one coding topic, adding a "Run skill" button to a session page, shown two ways. Left, "Wall of text": a tall message bubble with a red agent dot and 14 gray lines, with an arrow to the right. Right, "Visual conversation": six tiles in three columns. "What we have" holds a file tree and a call tree. "What we want" holds pseudocode and a UI sketch with an accent "Run skill" button and "Skill result" card. "Does the agreement match?" holds a diff with two accent "+" lines and a flow of four boxes. A dashed pill reads "Principle: pick the smallest view that makes the point clear."](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-5/frame.png)
@@ -91,14 +91,14 @@ Since Opus 5.5, models have shown an outstanding ability to represent context vi
 [Open figure](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-5/frame.html)
 
 **Comparisons:**
-The way to tell whether the change we want to make covers everything we need is to present it as a **side-by-side comparison**. The comparison may take the form of synthetic visuals of the back-end logic, **screenshots** of the app, or even actual components generated from the design system or Storybook. One of the examples from my projects [shows one of the iterations](https://cloud.overment.com/settings-1792679861.html) of the app's settings screen, and it was created based on its **design system**, so the components are **interactive**. 
+The way to tell whether the change we want to make covers everything we need is to present it as a **side-by-side comparison**. The comparison may take the form of synthetic visuals of the back-end logic, **screenshots** of the app, or even actual components generated from the design system or Storybook. One of the examples from my projects [shows one of the iterations](https://cloud.overment.com/settings-1792679861.html) of the app's settings screen, and it was created based on its **design system**, so the components are **interactive**.
 
 ![A three-by-three comparison of one change to a settings screen: the app now handles an API key that the provider refuses. The left column names three forms: back-end logic, a screenshot and design-system components. Each form has its question. The two columns on the right compare "Now" and "Proposed". Back-end logic: the proposed handler has four new red lines. They check the key with the provider and, if the provider refuses it, show the problem, keep the field open and return. Screenshot: the same grayscale Settings window, with OpenAI, Anthropic and Gemini rows. In the proposed window the OpenAI row has a red dot, the text "OpenAI didn't accept the key." and a red-outlined field, "Paste a new key". Design-system components: a 2×2 grid of state cards. These are REST, NO KEY and NOT ANSWERING, plus an empty dashed slot. In the proposed grid, the empty slot holds a red dashed "KEY REFUSED" card. A cursor points at its field.](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-6/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-6/frame.html)
 
 **Graphs and diagrams:**
-Reasoning over many documents covering a wide range of topics is easier when we can easily switch between high-level concepts and low-level details. This can be achieved with layered graphs or their variants, built by agents as HTML pages that hold state, so the agent can read it and quickly understand our current focus. Structures like this are best **designed** by a fleet of agents that will collaboratively work on matching **a framework** for the graph with the type of data we have. It's worth iterating on the framework a couple of times until its shape is good enough to reuse more than once. 
+Reasoning over many documents covering a wide range of topics is easier when we can easily switch between high-level concepts and low-level details. This can be achieved with layered graphs or their variants, built by agents as HTML pages that hold state, so the agent can read it and quickly understand our current focus. Structures like this are best **designed** by a fleet of agents that will collaboratively work on matching **a framework** for the graph with the type of data we have. It's worth iterating on the framework a couple of times until its shape is good enough to reuse more than once.
 
 ![Example figure. Left: a codebase graph named Alice, shown in three panels of increasing zoom. The Plant panel shows 14 modules, with "Desktop host" marked. The Module panel lists the 14 places of Desktop host, with "Caller factory" marked. The Place panel shows Caller factory as a round node with 7 connections and 1 journey step. Each panel has dashed copies behind it for the other lenses (Places 88, Work 457, Journeys 4, Days 27). Callout lines run from each marked element to the next panel. An arrow under the panels goes from high-level concepts to low-level details. Right: a page-state card with the focus (lens Places, zoom place, path Plant / Desktop host / Caller factory). A line connects the card to the node. An agent dot reads the card and answers "What touches this?" with "Caller factory: 7 connections, 1 journey, 26 work items." All names and numbers are example values.](https://hq.mega.dev/figures/s03e02/artifacts/lesson/figure-7/frame.png)
 
@@ -113,7 +113,7 @@ And lastly, there's the concept of **a lab**, which can be a single HTML file, a
 
 Regardless of which tool we use, the goal is to discover blind spots, possible edge cases, second-order effects (knock-on effects of the change) and hidden opportunities. This moves us toward systems thinking: **instead of looking at a feature or issue in isolation, we want to understand how it connects to the rest of the product.** The tools above make the system visible, so that we and our agents can see which parts a change touches, and what it sets in motion, before the work starts.
 
-A tool alone isn't enough to work out a proper agreement, especially because we're not talking about a single, comprehensive plan here, but about **a set of tasks.** A lead agent will receive them and manage the work of other agents to deliver the results. 
+A tool alone isn't enough to work out a proper agreement, especially because we're not talking about a single, comprehensive plan here, but about **a set of tasks.** A lead agent will receive them and manage the work of other agents to deliver the results.
 
 We may also use techniques related to **generalized steering**, mentioned in **S01E01**, such as **self-querying**, along with **meta-questions** and various forms of **tree of thoughts**. In other words, we should focus on finding ways to steer the agent so that it both loads the model's base knowledge and explores the available context. For example:
 
@@ -122,7 +122,7 @@ We may also use techniques related to **generalized steering**, mentioned in **S
 - **Splitting & merging:** when exploring context, don't go straight to the end result. Instead, steer toward **broad exploration**, then **unify the relevant results**, and repeat this a couple of times. This is a form of 'tree of thoughts', which we can modify however we like.
 - **Using mental models:** while exploring context, ask the agent to use mental models such as Occam's Razor, First-Principles Thinking, Second-Order Thinking or Inversion. This often improves the quality of the end result.
 
-In simple terms, we need to stay curious and play with the agent to get the results we're happy with. And when we feel comfortable with the process and extract some principles along the way, we may want to let agents self-play. 
+In simple terms, we need to stay curious and play with the agent to get the results we're happy with. And when we feel comfortable with the process and extract some principles along the way, we may want to let agents self-play.
 
 ## Evaluation
 
@@ -131,19 +131,19 @@ Reaching agreement on scope, desired outcome, and boundaries is not everything. 
 When defining how the agent's work will be proven, we need to consider:
 
 - **Model capabilities:** models are great at writing code, using tools and finding patterns in multimodal data. They can also combine these capabilities to test features in dynamic scenarios and gather evidence of their work in the form of logs, measurements, screenshots and videos.
-- **Model limitations:** models struggle with details, keeping track of many variables and instructions, staying consistent and 'aware' of anything that is not currently within their context. 
+- **Model limitations:** models struggle with details, keeping track of many variables and instructions, staying consistent and 'aware' of anything that is not currently within their context.
 - **Resources:** running models costs money and time, and requires hardware if evaluation needs to manage processes, compilation, sandboxes or emulation. So it's not in our interest to verify everything, only what really matters.
 - **Tools we do have:** we may have linters, type checkers, compilers, unit tests, development environments, test accounts and even dedicated machines agents can use to run the tests.
 - **Tools we do need:** if anything prevents the agent from verifying its own work, we first need to design and generate tools for it to use. This may include configuring test environments or even machines using platforms such as [agentcomputer](https://www.agentcomputer.ai/) or [Browserbase](http://browserbase.com/).
 - **Metrics:** evaluation needs metrics and evidence that accurately reflect reality. For example, when testing a UI, having an LLM analyze screenshots isn't enough because it struggles to see the details, so measurements need to be taken in code. Also, if the feature affects the database, the records' mutation history may reveal potential issues.
 - **Definition of success:** the agent must know what success means to us, because without that definition, the agent may push too far or not far enough. Good examples of going too far are feature flags, backfills, or security features that agents often build by default because they aren't aware that these features are irrelevant in the broader context of the product.
-- **Definition of failure:** the agent must know when the gathered evidence, despite its good quality, should count as a failure. The fact that this often depends on context makes it hard to guess. 
+- **Definition of failure:** the agent must know when the gathered evidence, despite its good quality, should count as a failure. The fact that this often depends on context makes it hard to guess.
 
 Doing all this is difficult and takes a lot of resources, not only to build but also to repeat. That's why part of this process has to be dedicated to **extracting generalized tools and skills** that can be reused. Even more importantly, **anything that can be verified deterministically** should be handled through code, unless we have a solid reason to do otherwise.
 
 ## Takeaways
 
-Today, translating intent into agent work isn't about telling the agent exactly what to do, but about **expanding its tool stack and its "understanding," and adjusting its environment**, while also **using the model's knowledge** and native agentic capabilities to do this. 
+Today, translating intent into agent work isn't about telling the agent exactly what to do, but about **expanding its tool stack and its "understanding," and adjusting its environment**, while also **using the model's knowledge** and native agentic capabilities to do this.
 
 Doing all this is hard because agents are limited in many ways, their contact with the environment is constrained, and many factors beyond code need to be considered to get the right work done, and done right. Moreover, we need to manage pace, quality, scale, progress and our own energy.
 

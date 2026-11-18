@@ -231,7 +231,7 @@ Theo Browne
 **Week 1**\
 Mon 26 Oct – Fri 30 Oct
 
-|  |  |  |  |
+| | | | |
 | --- | --- | --- | --- |
 | S01E01 | Mon 26 Oct | somebody slow | Solved |
 | S01E02 | Tue 27 Oct | who said what | Solved |

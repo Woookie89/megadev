@@ -3,6 +3,7 @@
 > Chapter [3. Memory outside the chat](README.md) · episodes: S02E01
 
 > **Lessons:**
+>
 > - S01E03 · Building Knowledge Systems → chapter "Broader context" — [original (EN)](../../s01e03-building-knowledge-systems.md#broader-context) · [Polish: „Szerszy kontekst”](../../pl/s01e03-building-knowledge-systems.md#szerszy-kontekst)
 
 **Principle.** Write a plan as a table: area, decision, source (session and time). A new

@@ -3,6 +3,7 @@
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02, S02E03, S02E05
 
 > **Lekcje:**
+>
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 > - S02E02 · Budowanie agenta → rozdział „Przepływy pracy i zadania długookresowe” — [po polsku](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długookresowe) · [oryginał EN: „Workflows and long-horizon tasks”](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks)
 
@@ -10,6 +11,7 @@
 projektu czytaj ze źródła prawdy, a nie z kopii w pliku.
 
 **Przypadek.**
+
 - S02E02: stan w AgentMail (wątki i etykiety `replied`, `ignored`, `failed`), więc restart
   niczego nie gubi.
 - S01E05: `plan.md` twierdził, że #12 jest wydane, a tracker pokazywał je jako otwarte.

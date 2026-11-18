@@ -3,6 +3,7 @@
 > Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E05
 
 > **Lekcje:**
+>
 > - S02E05 · Niezawodność agentów → rozdział „Ewaluacja” — [po polsku](../../pl/s02e05-agent-reliability.md#ewaluacja) · [oryginał EN: „Evaluation”](../../s02e05-agent-reliability.md#evaluation)
 
 **Zasada.** Zestaw testów ma wyglądać jak to, co przychodzi naprawdę: tyle samo próśb

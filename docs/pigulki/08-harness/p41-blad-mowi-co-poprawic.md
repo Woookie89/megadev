@@ -3,6 +3,7 @@
 > Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S02E03
 
 > **Lekcje:**
+>
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Narzędzia od podszewki” — [po polsku](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki) · [oryginał EN: „Tool use under the hood”](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood)
 > - S02E03 · Możliwości agentów → rozdział „Projektowanie własnego MCP” — [po polsku](../../pl/s02e03-agentic-capabilities.md#projektowanie-własnego-mcp) · [oryginał EN: „Designing a custom MCP”](../../s02e03-agentic-capabilities.md#designing-a-custom-mcp)
 
@@ -19,9 +20,9 @@ często nie docierają do modelu wcale, bo harness pokazuje je użytkownikowi.
 Oceniał: „the tool error does not name the url; a helpful one names it and says what is
 wrong with it”. Po poprawce:
 
-- „https://hq.mega.dev/login is not a supported audio file (type "text/html"). Use wav, mp3,
+- „<https://hq.mega.dev/login> is not a supported audio file (type "text/html"). Use wav, mp3,
   m4a, ogg, webm, flac or aac.”
-- „Could not download the audio at https://hq.mega.dev/media/s02e03/missing.mp3: download
+- „Could not download the audio at <https://hq.mega.dev/media/s02e03/missing.mp3>: download
   answered HTTP 404.”
 
 **Stosuj.**

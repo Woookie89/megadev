@@ -3,6 +3,7 @@
 > Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S02E04
 
 > **Lessons:**
+>
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agentic collaboration" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) · [Polish: „Współpraca wieloagentowa”](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa)
 > - S02E04 · Multi-Agent Collaboration → chapter "Orchestration" — [original (EN)](../../s02e04-multi-agent-collaboration.md#orchestration) · [Polish: „Orkiestracja”](../../pl/s02e04-multi-agent-collaboration.md#orkiestracja)
 

@@ -3,6 +3,7 @@
 > Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E03, S02E01
 
 > **Lekcje:**
+>
 > - S01E03 · Tworzenie systemów wiedzy → rozdział „Cel baz wiedzy” — [po polsku](../../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) · [oryginał EN: „Purpose of the knowledge bases”](../../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases)
 > - S02E01 · Prymitywy agentowe → rozdział „Kontekst i pamięć” — [po polsku](../../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć) · [oryginał EN: „Context and Memory”](../../s02e01-agentic-primitives.md#context-and-memory)
 
@@ -17,6 +18,7 @@ archiwum sesji urosło po pierwszym odczycie. Dopisana później sesja podagenta
 i port Postgresa, a jeszcze późniejsza sesja nazwę bazy. Kurs: „Something changed since your check-in. Check again.”
 
 **Stosuj.**
+
 - Ostatni krok przed claimem, PR-em albo raportem to ponowne pobranie źródeł i diff.
 - Zautomatyzuj to bramką przy wyjściu (patrz [P07](../02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md), [P24](../05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md)).
 

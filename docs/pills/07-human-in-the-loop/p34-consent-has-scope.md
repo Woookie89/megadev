@@ -3,6 +3,7 @@
 > Chapter [7. Human in the loop](README.md) · episodes: S01E04
 
 > **Lessons:**
+>
 > - S02E01 · Agentic Primitives → chapter "Agentic Loop" — [original (EN)](../../s02e01-agentic-primitives.md#agentic-loop) · [Polish: „Pętla agenta”](../../pl/s02e01-agentic-primitives.md#pętla-agenta)
 
 **Principle.** A "yes" covers a named set of actions in a named place. Anything outside it

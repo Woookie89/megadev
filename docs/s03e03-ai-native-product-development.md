@@ -1,12 +1,12 @@
 # S03E03 · AI-Native Product Development
 
-Agents can handle both "[greenfield](https://en.wikipedia.org/wiki/Greenfield_project)" and "[brownfield](https://en.wikipedia.org/wiki/Brownfield_\(software_development\))" projects almost natively. Without any special setup, they can answer questions and make changes with some degree of accuracy. But in both cases, moving fast with agents while also ensuring quality and alignment with business needs takes additional work. We've already seen many of the reasons for this, so now we'll look in detail at how our system can **heal itself**, **recover from issues** and **get better over time**. 
+Agents can handle both "[greenfield](https://en.wikipedia.org/wiki/Greenfield_project)" and "[brownfield](https://en.wikipedia.org/wiki/Brownfield_\(software_development\))" projects almost natively. Without any special setup, they can answer questions and make changes with some degree of accuracy. But in both cases, moving fast with agents while also ensuring quality and alignment with business needs takes additional work. We've already seen many of the reasons for this, so now we'll look in detail at how our system can **heal itself**, **recover from issues** and **get better over time**.
 
 The lessons so far have shown how agents' capabilities can expand through tools and knowledge, giving them a higher degree of autonomy. This lets them take care of things we normally have to keep in mind or are constantly asked about. The problem with this is that over time, the system gets overloaded: some tools are no longer needed, and old documents turn into noise. That's a problem, because **"no document is better than the wrong one"**.
 
 Another reason we may want **meta-workflows** for maintaining a system is that agents will often face the same problems during their work. When this happens to us, we remember it for next time. Agents need something similar so they can build and adjust their skills or create tools.
 
-Having all this makes the product AI-native. In practice, however, we may want to start small, because building everything takes time, and we don't yet know what everything includes. 
+Having all this makes the product AI-native. In practice, however, we may want to start small, because building everything takes time, and we don't yet know what everything includes.
 
 ## Outline
 
@@ -23,7 +23,7 @@ Scenarios like that happen all the time, and they're not limited to the codebase
 
 The problem is that we don't know the exact state of the map, or which variables we'll need to consider to improve it. But we already know that in such cases we should define **principles**, **scope**, and the **schedule or trigger**. Everything else should be left for an agent to figure out. The agent should also have access to the history of its actions, so it won't repeat the same mistakes and the system will actually "learn".
 
-And to be clear, we're not talking about a codebase map or anything an agent can easily find. We're talking about context that isn't obvious from the code alone. It's more like **a set of documents** explaining the features: their role, how to interact with them, how to verify them, and what's worth keeping in mind about them. 
+And to be clear, we're not talking about a codebase map or anything an agent can easily find. We're talking about context that isn't obvious from the code alone. It's more like **a set of documents** explaining the features: their role, how to interact with them, how to verify them, and what's worth keeping in mind about them.
 
 ![On the left, a frame named Feature Map holds three small documents of the same shape: checkout.md, search.md and notifications.md. A dashed line goes from checkout.md to the open checkout.md on the right. The open document has four sections of equal height: Role, How to get there, How to verify, and Keep in mind. "Keep in mind" is the one red section. Below, a strip has two rows. "Found by reading the code" has faded chips: routes, components, folder layout. "Written in the Feature Map" has solid chips: how to get there, how to verify, and a red chip, what to keep in mind. The feature names and the section text are examples.](https://hq.mega.dev/figures/s03e03/artifacts/lesson/figure-1/frame.png)
 
@@ -31,7 +31,7 @@ And to be clear, we're not talking about a codebase map or anything an agent can
 
 Lauren Tan described the **Feature Map** concept in relation to her agent skills for verification ([generate](https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md), [maintain](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md)). She uses them with Cursor Cloud Agents that run on a daily schedule. The two skills generate small files that describe the areas of her apps she wants her agents to understand. That's exactly what we need in production systems, where changing the behavior of one feature may have a non-obvious impact on another.
 
-So our role here focuses mainly on crafting and iterating skills, but also on **initializing maps**, because a map's initial shape directly affects its reliability and usefulness, and it shapes the improvements agents make to it later. 
+So our role here focuses mainly on crafting and iterating skills, but also on **initializing maps**, because a map's initial shape directly affects its reliability and usefulness, and it shapes the improvements agents make to it later.
 
 As a result, Feature Maps improve how agents go through the exploration phase, and not only that. Having this context also makes them better at implementing features and verifying them afterward. The example below shows how it may work in practice: **in a music player app, solving a bug with playlists may affect queues**. That's easy to miss, but thanks to the feature map, the agent takes care of it.
 
@@ -49,7 +49,7 @@ Having a Feature Map along with the principles discussed in **S03E02** makes con
 
 [Open figure](https://hq.mega.dev/figures/s03e03/artifacts/lesson/figure-3/frame.html)
 
-Discussing features is also a perfect moment for subagents or workers, because it is in our interest to keep the main thread focused on the most important aspects and also interactive. In the background, agents may focus on research, or on updating the graphs, visualizations or labs we discussed in **S03E02**. 
+Discussing features is also a perfect moment for subagents or workers, because it is in our interest to keep the main thread focused on the most important aspects and also interactive. In the background, agents may focus on research, or on updating the graphs, visualizations or labs we discussed in **S03E02**.
 
 But now we can push this **much further**, because agents can translate our intent into high-quality plans and apply, to some extent, a "common sense" that comes from "understanding" the system and the relationships between its components. And the best part is that the longer we work on the system, the better this process becomes, because the available context keeps improving.
 
@@ -70,7 +70,7 @@ AI-native product development reduces, and sometimes eliminates, many of the pro
 In practice, however, there are many things we need to take care of.
 
 **Research:**
-Before AI, product development mostly depended on our current skills and what we were willing to learn in a reasonable amount of time. For example, if we were fluent in the JavaScript ecosystem, we rarely decided to build something in Rust. The same went for libraries (such as Three.js) or areas (such as functional programming) that were simply too demanding to grasp. But now these barriers are either gone or much easier to overcome. 
+Before AI, product development mostly depended on our current skills and what we were willing to learn in a reasonable amount of time. For example, if we were fluent in the JavaScript ecosystem, we rarely decided to build something in Rust. The same went for libraries (such as Three.js) or areas (such as functional programming) that were simply too demanding to grasp. But now these barriers are either gone or much easier to overcome.
 
 This way, research and exploration have become part of our job. And the fact that AI can use almost any tool flawlessly does not mean there is no need for us to understand how it works. In fact, it's the opposite, but instead of learning everything, we need to dig down only as far as the task requires, and **we need to learn how to recognize that point** and build tools and workflows that will help us with it.
 
@@ -85,12 +85,12 @@ As engineers, part of our job was to manage things like architecture, documentat
 
 [Open figure](https://hq.mega.dev/figures/s03e03/artifacts/lesson/figure-6/frame.html)
 
-Doing this requires us to apply everything we've learned so far, but also to shift the way we think about and look at our work. That's because before AI, our default solution to a problem was fixing it ourselves. With AI, it's often telling an agent to fix it. But what we're trying to figure out is **how to make an agent aware of the issue and able to respond to it properly.** 
+Doing this requires us to apply everything we've learned so far, but also to shift the way we think about and look at our work. That's because before AI, our default solution to a problem was fixing it ourselves. With AI, it's often telling an agent to fix it. But what we're trying to figure out is **how to make an agent aware of the issue and able to respond to it properly.**
 
 **Ecosystem:**
 Let's say we're familiar with [Axiom](https://axiom.co/) but know very little about [Datadog](https://www.datadoghq.com/) and [Better Stack](https://betterstack.com/). If our product needed observability, Axiom would be the obvious choice for us, even if its alternatives offered better features. Before AI, understanding and adapting to an entirely new platform took effort we rarely chose to make.
 
-With agents on our side, we can have a report within an hour that compares our options and clearly explains their features in a way tailored to us, including a map of the architecture and the effort needed to integrate each option. This can be applied to literally every single service. 
+With agents on our side, we can have a report within an hour that compares our options and clearly explains their features in a way tailored to us, including a map of the architecture and the effort needed to integrate each option. This can be applied to literally every single service.
 
 For example, below is the stack we use at mega.dev and MEGA HQ. We chose its components not because of our personal preferences or experience, but because of business opportunities and organizational factors. I'm not saying the stack is perfect, but even if any of its components needed to change, AI would make that effortless, especially thanks to good architectural decisions that keep integrations simple.
 
@@ -103,13 +103,13 @@ Even though we can generate personalized software today, there's often no point 
 **Schedules:**
 AI-native product development brings challenges because many agents may work simultaneously. This quickly reveals that the tools we use **weren't built for that**, as agents spawn processes and run tests, compilers, or entire sandboxes and virtual machines. Suddenly, even 128 GB of RAM in a maxed-out MacBook is not enough.
 
-The moment we start noticing that we're running out of resources (CPU, GPU, RAM, or storage), the first thing we can do is **ask agents for an audit** that identifies bottlenecks. Depending on the stack, the audit may find one-off solutions we can implement right away, or issues that need to be handled on a schedule, such as checking for stale processes or pruning leftovers. In some cases it is worth considering adding queues or throttling for the most demanding processes, such as compilation. 
+The moment we start noticing that we're running out of resources (CPU, GPU, RAM, or storage), the first thing we can do is **ask agents for an audit** that identifies bottlenecks. Depending on the stack, the audit may find one-off solutions we can implement right away, or issues that need to be handled on a schedule, such as checking for stale processes or pruning leftovers. In some cases it is worth considering adding queues or throttling for the most demanding processes, such as compilation.
 
 ![Three charts that share one left edge. The first chart shows RAM over one workday from 09:00 to 18:00. Without schedules, compilation spikes sit on a base that rises every hour. From about 15:00, the spikes hit the limit, with the note "Swap, crashes, slow agents". With schedules, the spikes are lower and wider, and a stale-process stop every hour keeps the base flat. A bracket at 18:00 marks the gap between the two bases as leftover processes. The second chart shows disk use over one week. Without schedules, the line climbs like a staircase and reaches the limit on Friday, marked "Full disk". With schedules, a nightly prune makes a sawtooth that drops back to the same low level every night. The third chart shows six compilations in one hour. Without a queue, they all run at once near 0 min. With a queue, 2 at a time, they run one after another across the hour. A pill states the principle: schedule the cleanup and queue the peaks before we buy more hardware. The shapes of the curves are examples, not measured data.](https://hq.mega.dev/figures/s03e03/artifacts/lesson/figure-8/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s03e03/artifacts/lesson/figure-8/frame.html)
 
-When optimization isn't enough, instead of buying additional hardware, we may consider **cloud agents** ([Codex](https://learn.chatgpt.com/docs/cloud), [Claude Code](https://code.claude.com/docs/en/claude-code-on-the-web), etc.). They don't offer as much flexibility as a VPS or a physical machine, but scale very well. 
+When optimization isn't enough, instead of buying additional hardware, we may consider **cloud agents** ([Codex](https://learn.chatgpt.com/docs/cloud), [Claude Code](https://code.claude.com/docs/en/claude-code-on-the-web), etc.). They don't offer as much flexibility as a VPS or a physical machine, but scale very well.
 
 Besides optimization, schedules are useful for system monitoring focused on anomalies, user behavior and security issues. These days, such schedules are a **critical part of the system**, as we may expect **constant attacks** that come not from dumb bots we can reliably fight off, but from **dynamic agents** that will look for a way into our system. It's worth considering skills such as **[security-audit](https://github.com/cloudflare/security-audit-skill)** and a proper [Sentry](https://sentry.io/) setup that reports issues directly to agents.
 

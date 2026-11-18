@@ -5,12 +5,12 @@ Możemy dziś budować rzeczy w ułamku czasu i przy ułamku wysiłku, których 
 ## Plan
 
 - Złożoność: szybsze dostarczanie, szybszy przyrost długu technicznego, ludzie i procesy, wykorzystanie AI, by nadążyć
- - Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, skille o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
- - Jakość: samodzielna weryfikacja, środowisko agenta, zasady, prymitywy, utrzymywanie systemu
- - Agenci zdalni: maszyna zdalna, harmonogramy i wyzwalacze, dostęp z urządzeń mobilnych, sekrety
- - Przepływy działające w tle: codzienne briefy, nocne kontrole, przeglądy, synchronizacja dokumentacji, monitorowanie, wnioski produktowe, samodoskonalenie
- - Bezpieczeństwo: prompt injection, jailbreaki, wielowarstwowe zabezpieczenia, nieodwracalne działania
- - Biznes: logika deterministyczna i niedeterministyczna, kierunek wyznaczany przez ludzi, upraszczanie, zaufanie zdobywane w działaniu
+- Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, skille o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
+- Jakość: samodzielna weryfikacja, środowisko agenta, zasady, prymitywy, utrzymywanie systemu
+- Agenci zdalni: maszyna zdalna, harmonogramy i wyzwalacze, dostęp z urządzeń mobilnych, sekrety
+- Przepływy działające w tle: codzienne briefy, nocne kontrole, przeglądy, synchronizacja dokumentacji, monitorowanie, wnioski produktowe, samodoskonalenie
+- Bezpieczeństwo: prompt injection, jailbreaki, wielowarstwowe zabezpieczenia, nieodwracalne działania
+- Biznes: logika deterministyczna i niedeterministyczna, kierunek wyznaczany przez ludzi, upraszczanie, zaufanie zdobywane w działaniu
 
 ## Tempo wzrostu złożoności
 
@@ -121,7 +121,7 @@ Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **sk
 
 **UWAGA:** następna sekcja opisuje konfigurację VPS z Tailscale, Pi i Herdr. Jest **całkowicie opcjonalna**; możesz ją pominąć, ponieważ Cursor i Devin już oferują agentów zdalnych od razu. Niezależnie od wybranej opcji potrzebujesz **agentów zdalnych, których można uruchamiać według harmonogramu lub w reakcji na zdarzenie zewnętrzne**.
 
-Przewodnik jest dostępny tutaj: https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md
+Przewodnik jest dostępny tutaj: <https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md>
 
 **[Limen](https://github.com/overment/limen)**, omawiany w poprzednich lekcjach, zawiera przewodnik konfiguracji VPS, dzięki której **Pi i Herdr** będą dostępne na naszym serwerze. Nasi agenci AI mogą przejść przez konfigurację maszyny **razem z nami**. Przewodnik opisuje również konfigurację **GitHub Apps**, dzięki którym agenci będą dostępni w Issues i Pull Requests wybranych repozytoriów.
 

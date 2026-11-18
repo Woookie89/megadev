@@ -3,6 +3,7 @@
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S02E01
 
 > **Lekcje:**
+>
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 
 **Zasada.** Każda pętla agenta ma trzy rzeczy: warunek sukcesu (komenda, która to
@@ -10,6 +11,7 @@ sprawdza), limit (iteracje, czas, budżet) i plik stanu, który człowiek może 
 i wyłączyć.
 
 **Przypadek.**
+
 - `stop_gate.py` (S02E01): `MAX_BLOCKS = 3` i zasada „źródło, które się nie ładuje, nie jest
   powodem, żeby kręcić się w pętli”.
 - Artefakt „loop” z talii kursu: pętla z widocznym plikiem stanu i trzema wyjściami.

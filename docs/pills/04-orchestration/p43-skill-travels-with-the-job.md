@@ -3,15 +3,16 @@
 > Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S02E04
 
 > **Lessons:**
+>
 > - S02E04 · Multi-Agent Collaboration → chapter "Agent2Agent" — [original (EN)](../../s02e04-multi-agent-collaboration.md#agent2agent) · [Polish: „Agent2Agent”](../../pl/s02e04-multi-agent-collaboration.md#agent2agent)
 > - S02E04 · Multi-Agent Collaboration → chapter "Takeaways" — [original (EN)](../../s02e04-multi-agent-collaboration.md#takeaways) · [Polish: „Najważniejsze wnioski”](../../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski)
 
 **Principle.** Delegation means the work leaves the main agent: the worker has its own
-context and its own connection to the tools. The skill that says *how* to do the job has
+context and its own connection to the tools. The skill that says _how_ to do the job has
 to travel with it. A skill the main agent read is not a skill the worker used.
 
 **Why.** Agents don't share threads. A worker sees only its brief and what its own harness
-loads. A tool says *what* can be done. Without the procedure the worker does the obvious
+loads. A tool says _what_ can be done. Without the procedure the worker does the obvious
 thing: it searches the default scope, reads every field, hands back a raw dump. The skill
 turns that dump into the shape the next reader needs.
 

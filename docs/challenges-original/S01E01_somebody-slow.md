@@ -165,7 +165,7 @@ A run that is not clean is OK, but its result shows what you learned, not what t
 
 What each run showed, with the harness and model that solved it.
 
-|  | Run 1 | Run 2 |
+| | Run 1 | Run 2 |
 | --- | --- | --- |
 | Harness | Claude Code (mega-challenge) | Visual Studio Code |
 | Model | — | — |
@@ -361,7 +361,7 @@ Theo Browne
 **Week 1**\
 Mon 26 Oct – Fri 30 Oct
 
-|  |  |  |  |
+| | | | |
 | --- | --- | --- | --- |
 | S01E01 | Mon 26 Oct | somebody slow | You're here |
 | S01E02 | Tue 27 Oct | who said what | Solved |

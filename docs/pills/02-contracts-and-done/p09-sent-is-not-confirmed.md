@@ -3,6 +3,7 @@
 > Chapter [2. Contracts and "done"](README.md) · episodes: S01E04
 
 > **Lessons:**
+>
 > - S01E04 · Working with AI Harnesses → chapter "Harnesses" — [original (EN)](../../s01e04-working-with-ai-harnesses.md#harnesses) · [Polish: „Harnessy”](../../pl/s01e04-working-with-ai-harnesses.md#harnessy)
 
 **Principle.** "Sent" and "confirmed" are two different states. Cleanup depends on the

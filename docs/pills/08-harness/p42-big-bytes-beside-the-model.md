@@ -3,6 +3,7 @@
 > Chapter [8. The harness as a toolkit](README.md) · episodes: S02E03
 
 > **Lessons:**
+>
 > - S01E02 · Steering Models Through Context → chapter "Tool use under the hood" — [original (EN)](../../s01e02-steering-models-through-context.md#tool-use-under-the-hood) · [Polish: „Narzędzia od podszewki”](../../pl/s01e02-steering-models-through-context.md#narzędzia-od-podszewki)
 > - S02E03 · Agentic Capabilities → chapter "Model Context Protocol" — [original (EN)](../../s02e03-agentic-capabilities.md#model-context-protocol) · [Polish: „Model Context Protocol”](../../pl/s02e03-agentic-capabilities.md#model-context-protocol)
 

@@ -89,7 +89,7 @@ Angie Jones
 **Week 2**\
 Mon 2 Nov – Fri 6 Nov
 
-|  |  |  |  |
+| | | | |
 | --- | --- | --- | --- |
 | S02E01 | Mon 2 Nov | found out late | You're here |
 | S02E02 | Tue 3 Nov | nobody asked | Open |

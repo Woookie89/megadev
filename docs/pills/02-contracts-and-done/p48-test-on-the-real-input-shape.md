@@ -3,6 +3,7 @@
 > Chapter [2. Contracts and "done"](README.md) · episodes: S02E05
 
 > **Lessons:**
+>
 > - S02E05 · Agent Reliability → chapter "Evaluation" — [original (EN)](../../s02e05-agent-reliability.md#evaluation) · [Polish: „Ewaluacja”](../../pl/s02e05-agent-reliability.md#ewaluacja)
 
 **Principle.** The test set looks like what really comes in: as many asks per message, the

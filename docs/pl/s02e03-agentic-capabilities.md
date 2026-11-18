@@ -84,7 +84,7 @@ Poniżej znajduje się minimalny przykład serwera MCP. Ma on **nazwę**, które
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-4/frame.html)
 
-Powyższy kod wystarczy, by przekazać agentowi adres serwera MCP (w tym przypadku http://127.0.0.1:3000/mcp) i poprosić go o połączenie. W ten sposób udostępniamy agentowi zdefiniowane narzędzie **add**, a on sam decyduje, kiedy go użyć. Jeśli je wywoła, środowisko agenta **poprosi serwer** o wykonanie funkcji zwrotnej przypisanej do wybranego narzędzia.
+Powyższy kod wystarczy, by przekazać agentowi adres serwera MCP (w tym przypadku <http://127.0.0.1:3000/mcp>) i poprosić go o połączenie. W ten sposób udostępniamy agentowi zdefiniowane narzędzie **add**, a on sam decyduje, kiedy go użyć. Jeśli je wywoła, środowisko agenta **poprosi serwer** o wykonanie funkcji zwrotnej przypisanej do wybranego narzędzia.
 
 Jak pokazuje poniższy graf, mechanizm jest taki sam jak w przypadku narzędzi natywnych. Różnica polega na tym, że **schemat** pochodzi z serwera MCP, który na żądanie **wykonuje funkcję zwrotną**.
 
@@ -112,7 +112,7 @@ Podczas tworzenia serwera MCP warto pamiętać o omówionych w **S02E02** zasada
 - Można ustawić **instrukcje serwera**, choć większość środowisk agentów je ignoruje lub skraca. Mimo to warto je dodać, aby krótko wyjaśnić agentowi, jak skutecznie korzystać z serwera.
 - Serwery MCP mogą być używane wewnętrznie do łatwego współdzielenia integracji i wiedzy między agentami.
 - **Ewaluacje:** testuj serwer w popularnych środowiskach agentów, aby sprawdzić, jak zmiany logiki i kształtu narzędzi wpływają na zachowanie. Jak zawsze, warto dążyć do automatyzacji tego procesu.
-- **MCP** może nie tylko udostępniać narzędzia, lecz także stać się **warstwą możliwości** agenta, która będzie podążać za użytkownikiem i jego środowiskami agentów. Opisałem tę koncepcję tutaj: https://mega.dev/wrong-about-mcps — w skrócie MCP może udostępniać narzędzia do pracy z **prymitywami**, które obejmują pamięć, integracje, logikę deterministyczną i wiele więcej.
+- **MCP** może nie tylko udostępniać narzędzia, lecz także stać się **warstwą możliwości** agenta, która będzie podążać za użytkownikiem i jego środowiskami agentów. Opisałem tę koncepcję tutaj: <https://mega.dev/wrong-about-mcps> — w skrócie MCP może udostępniać narzędzia do pracy z **prymitywami**, które obejmują pamięć, integracje, logikę deterministyczną i wiele więcej.
 
 Najciekawsze są tu dwa ostatnie punkty, bo mogą sprawić, że serwery MCP będą niezwykle użyteczne. Warto też rozważyć tworzenie nie jednego, lecz wielu serwerów. Z tym wiąże się koncepcja kontekstu globalnego, dzięki któremu nasze agenty programistyczne będą wiedzieć nie tylko o naszym serwerze MCP, ale również o wszystkich pozostałych.
 
