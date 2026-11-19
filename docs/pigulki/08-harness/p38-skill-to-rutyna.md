@@ -40,7 +40,9 @@ kiedy budować, odmówić i pytać właściciela (tabela), jak wygląda linia sh
 robić nigdy. Runner wkładał cały skill do promptu. Kurs zapisał to jako zdobyte T1: „Your triage
 skill, grown to run alone: per issue, read what is in force, ask the owner only what is open,
 build the answer, log it once it is live.” Lekcja z rundy (rekordy w każdej turze) trafiła na
-razie tylko do kodu runnera, a nie do skilla. Karty „bet” z talii kursu nie zainstalowano.
+razie tylko do kodu runnera, a nie do skilla. Kartę „bet” z talii kursu (skill do rekordów
+decyzji) harness zainstalował 20.11.2026, na prośbę użytkownika, w `~/.claude/skills/bet`
+(wersja 5597ebd80849, 6 plików, sumy SHA-256 zgodne z kursem, sprawdzenia skilla przechodzą).
 
 ---
 

@@ -121,7 +121,9 @@ the agent puts to them; everything else the agent decides from the written rules
 2. The whole issue thread: the newest owner answer (`/answer <n>`) and any course comment win
    over the opening text.
 3. The decision records on the tracker, and the repo's research notes: evidence of what users
-   actually do beats what an issue says they want.
+   actually do beats what an issue says they want. The runner puts the full text of every record
+   into each turn, so the model never has to remember to fetch them. An accepted record binds:
+   what it forbids is declined, even when the contract would call it an additive read.
 4. The code it will touch, and the tests.
 
 ### Pick up first, decide second

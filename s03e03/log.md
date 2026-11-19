@@ -40,3 +40,5 @@
 - Secrets: s03e03/agent/config.secrets.local.json (tracker token + round receipt + feed; git-ignored; expire ~2026-11-26). OpenRouter key stays in s02e02/.env (key limit $5, ~$3.8 left).
 - Skill: .agents/skills/triage section 5 "Running alone" (not committed).
 - Open: course record 0006 (unsigned) and agent's 0007 have no "supersedes" field.
+- 2026-11-19T23:06Z human: "dawaj tak dla skilla" -> artifact bet v5597ebd80849 installed to ~/.claude/skills/bet (plain folder); 6/6 sha256 match; check on examples/decline.md ok, template lists what to fill, --self-test ok. Undo: delete ~/.claude/skills/bet.
+- 2026-11-19T12:00:52Z (added later) harness live check of #4+#5 together: /incidents?status=open&since=2026-11-11T02:00:00Z -> 1 incident (INC-9250, open, 02:05Z). Skill triage section 5 now states 'records in every turn; an accepted record binds'.

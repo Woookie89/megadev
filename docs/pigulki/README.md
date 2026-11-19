@@ -14,7 +14,7 @@ Przebiegi wyzwań są w debriefach `docs/pl/*-debrief.md`, a teoria lekcji w not
 Każda pigułka wskazuje też lekcje (z rozdziałem), z których pochodzi: oryginał po angielsku
 i polskie tłumaczenie. Wersja angielska pigułek: [docs/pills/](../pills/README.md).
 
-Stan na 19.11.2026.
+Stan na 20.11.2026.
 
 ## Jak korzystać
 

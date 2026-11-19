@@ -42,7 +42,9 @@ owner (a table), what a ship-log line looks like, and what never to do. The runn
 skill in the prompt. The course counted it as gained, T1: "Your triage skill, grown to run alone:
 per issue, read what is in force, ask the owner only what is open, build the answer, log it once
 it is live." The lesson of the round (records in every turn) so far lives only in the runner's
-code, not in the skill. The course deck's "bet" card was not installed.
+code, not in the skill. On 20.11.2026, at the user's request, the harness installed the course
+deck's "bet" card (a skill for decision records) in `~/.claude/skills/bet` (version 5597ebd80849,
+6 files, SHA-256 matching the course, the skill's checks pass).
 
 ---
 

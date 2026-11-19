@@ -11,7 +11,7 @@ Every pill also names the course lessons (and their chapters) it comes from, wit
 original English notes and the Polish translation. Polish version of the pills:
 [docs/pigulki/](../pigulki/README.md). Challenge debriefs are in Polish, in `docs/pl/*-debrief.md`.
 
-As of 19.11.2026.
+As of 20.11.2026.
 
 ## How to use
 
