@@ -44,4 +44,4 @@ tests stayed in scratch files, not in `test/test.mjs`.
 
 ---
 
-← [P47](../07-human-in-the-loop/p47-approval-over-the-owners-channel.md) · [chapter](README.md) · [all pills](../README.md)
+← [P47](../07-human-in-the-loop/p47-approval-over-the-owners-channel.md) · [chapter](README.md) · [all pills](../README.md) · [P49](../07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) →

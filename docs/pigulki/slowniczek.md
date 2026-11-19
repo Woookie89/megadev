@@ -26,6 +26,11 @@
 | allowlista | Lista dozwolonych domen (albo komend). Wszystko spoza niej jest blokowane ([P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)). |
 | lane (tor) | Znacznik, który kurs przydziela uczestnikowi na starcie wyzwania (`laneMarker`). W S01E04 trafiał do `.env` jako `LANE_MARKER` i musiał być widoczny na opublikowanej stronie ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
 | free / gated | Podział akcji agenta w S02E05: akcję free agent wykonuje sam, akcję gated wstrzymuje do zgody właściciela ([P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md)). |
+| tag wymagania | Krótki identyfikator jednego wymagania, np. `R-K8L`. W S03E01 każdy tag dostawał źródło: plik i miejsce w nim (sekundę nagrania albo obszar obrazu) ([P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md)). |
+| pytanie do właściciela (`ownerQuestion`) | Jedno pytanie, które nazywa obie strony sprzeczności. Agent je zadaje, a rozstrzyga właściciel produktu ([P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md)). |
+| contact sheet | Jeden obraz z wieloma klatkami nagrania w siatce, np. jedna klatka na sekundę. Pozwala zobaczyć, co było na ekranie, bez oglądania całości ([P02](01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md)). |
+| canvas | Element strony, na którym skrypt rysuje piksele. Narysowanego tekstu nie ma w HTML, więc trzeba go odczytać ze zrzutu ekranu ([P03](01-kontekst/p03-zrodlo-to-nie-widok.md)). |
+| subdomena `workers.dev` | Adres konta w Cloudflare Workers (`<nazwa>.workers.dev`). Rejestruje się ją raz na konto, przed pierwszym publicznym wdrożeniem ([P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)). |
 | IP wyjściowe (egress IP) | Adres, z którego serwer łączy się z internetem. Darmowe hosty dzielą go z wieloma klientami, więc limit liczony per IP mogą wyczerpać inni ([P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)). |
 
 ---

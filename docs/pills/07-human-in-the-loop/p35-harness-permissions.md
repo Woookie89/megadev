@@ -1,6 +1,6 @@
 # P35 · Harness permissions are part of the setup: narrow them, don't widen them
 
-> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, S02E03, MEGA Assessment
+> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, S02E03, S03E01, MEGA Assessment
 
 > **Lessons:**
 >
@@ -19,10 +19,18 @@ switch the whole mode to a broad one in the middle of the work.
 - S02E03: the auto-mode classifier blocked `claude mcp add --scope user` and writing a skill to
   `~/.claude/skills/`, despite the human's consent. The harness did not look for a way
   around it. It gave the command, and the human ran it.
+- S03E01: `wrangler deploy` failed because the Cloudflare account had no `workers.dev`
+  subdomain. The harness tried to register one through the API with the wrangler token,
+  and the classifier refused ("[Destructive or Unwanted Actions]"). The harness did not
+  look for a way around it. The dashboard link from wrangler led to a 404, so the human
+  ran `npx wrangler@4 deploy` interactively in their own terminal and chose the subdomain.
+  The page was ready at about 08:40 UTC and deployed at 10:44:51 UTC. The course's advice:
+  set up the host account and subdomain before the build.
 
 **Apply.** Add, for example, an `ask` rule for `gh repo create` in `settings.json` up front
 (the `update-config` skill) instead of changing the mode. A hook changes how the harness
-behaves, so the human approves it.
+behaves, so the human approves it. When the classifier refuses an account change, give
+the human one exact, tested command instead of a link or another road to the same place.
 
 ---
 

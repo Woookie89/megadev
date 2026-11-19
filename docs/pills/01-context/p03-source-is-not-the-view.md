@@ -1,6 +1,6 @@
 # P03 · The source is not the view
 
-> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E03
+> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E03, S03E01
 
 > **Lessons:**
 >
@@ -19,11 +19,19 @@ rendered page showed two causes and a footnote about a third. Our own analysis g
 `parser` = 374, and the course refused it. The desk counts by its own view: 379. Course
 debrief: "Raw content is for the AI, the rendered view is for you: render it and look."
 
+S03E01: one source of requirements was a live board, "tram 3 board", reachable only on
+the challenge page after signing in. The board drew its text, so its code had nothing to
+read. The harness rendered it in Chromium, driven over the Chrome DevTools Protocol, saved
+a screenshot and read requirement R-X2M from it: "read by tram 3 boards". The course
+question "The board draws it": right the first time.
+
 **Apply.**
 
 - Build and look at a knowledge base with components before you quote it.
 - Take numbers that someone will compare against their view from that view. Explain a
   mismatch in a note instead of quietly "fixing" it.
+- A page that draws its content (canvas, a chart, a map) does not have it in its HTML.
+  Render it in a browser, save a timed screenshot and read the screenshot.
 
 ---
 

@@ -1,6 +1,6 @@
 # Knowledge pills: working with AI and agents
 
-Textbook-style notes collected from the MEGA.dev challenges (S01E01–S02E05) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
+Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E01) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
 
 - **Principle**: what to do.
 - **Why**: the mechanism, i.e. why it is so with models, agents or the harness.
@@ -11,7 +11,7 @@ Every pill also names the course lessons (and their chapters) it comes from, wit
 original English notes and the Polish translation. Polish version of the pills:
 [docs/pigulki/](../pigulki/README.md). Challenge debriefs are in Polish, in `docs/pl/*-debrief.md`.
 
-As of 17.11.2026.
+As of 19.11.2026.
 
 ## How to use
 
@@ -43,8 +43,8 @@ As of 17.11.2026.
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P01](01-context/p01-compaction-is-lossy.md) | Compaction is lossy, and you decide what gets lost | S01E01 |
-| [P02](01-context/p02-conversion-to-text-is-lossy.md) | Context is text, and every conversion to text is lossy | S01E02 |
-| [P03](01-context/p03-source-is-not-the-view.md) | The source is not the view | S01E03 |
+| [P02](01-context/p02-conversion-to-text-is-lossy.md) | Context is text, and every conversion to text is lossy | S01E02, S03E01 |
+| [P03](01-context/p03-source-is-not-the-view.md) | The source is not the view | S01E03, S03E01 |
 | [P04](01-context/p04-a-download-is-a-dated-copy.md) | A download is a dated copy | S01E03, S02E01 |
 | [P05](01-context/p05-check-changing-facts-at-source.md) | Check changing facts at the source, not in the model's memory | S01E01, S02E03 |
 
@@ -56,9 +56,10 @@ As of 17.11.2026.
 | [P07](02-contracts-and-done/p07-done-is-a-check.md) | "Done" is set by a check, not by a feeling that the work is over | S02E01, MEGA Assessment |
 | [P08](02-contracts-and-done/p08-test-must-fail-first.md) | A test that was never red proves nothing | S01E05 |
 | [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04 |
-| [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03 |
+| [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01 |
 | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
 | [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
+| [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01 |
 
 ### [3. Memory outside the chat](03-memory/README.md)
 
@@ -109,18 +110,19 @@ As of 17.11.2026.
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
-| [P33](07-human-in-the-loop/p33-decision-rights.md) | Decision rights are explicit | S01E03, S01E04, MEGA Assessment |
+| [P33](07-human-in-the-loop/p33-decision-rights.md) | Decision rights are explicit | S01E03, S01E04, S03E01, MEGA Assessment |
 | [P34](07-human-in-the-loop/p34-consent-has-scope.md) | Consent has a scope | S01E04 |
-| [P35](07-human-in-the-loop/p35-harness-permissions.md) | Harness permissions are part of the setup: narrow them, don't widen them | S01E03, S02E01, S02E03, MEGA Assessment |
+| [P35](07-human-in-the-loop/p35-harness-permissions.md) | Harness permissions are part of the setup: narrow them, don't widen them | S01E03, S02E01, S02E03, S03E01, MEGA Assessment |
 | [P36](07-human-in-the-loop/p36-show-the-plan-first.md) | Show the plan before you publish | S01E04 |
 | [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
+| [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01 |
 
 ### [8. The harness as a toolkit](08-harness/README.md)
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P37](08-harness/p37-missing-tool.md) | A missing tool: build a bridge, then make it permanent | S01E03 |
-| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03 |
+| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03, S03E01 |
 | [P39](08-harness/p39-mcp-contract-for-strangers.md) | An MCP server is a contract for a stranger client | S02E03 |
 | [P40](08-harness/p40-results-have-a-budget.md) | A tool result has a byte budget | S02E03 |
 | [P41](08-harness/p41-errors-say-what-to-fix.md) | A tool error tells the model what to fix | S02E03 |
@@ -177,6 +179,10 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S02E05 | Agent Reliability | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md), [P29](06-security/p29-trust-boundary-in-code.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) |
 | S02E05 | Agent Reliability | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [P15](03-memory/p15-ask-past-sessions.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) |
 | S02E05 | Agent Reliability | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [P08](02-contracts-and-done/p08-test-must-fail-first.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) |
+| S03E01 | Mechanics Behind Product Engineering | [The Shift](../s03e01-mechanics-behind-product-engineering.md#the-shift) | [Zmiana](../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
+| S03E01 | Mechanics Behind Product Engineering | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [P33](07-human-in-the-loop/p33-decision-rights.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) |
+| S03E01 | Mechanics Behind Product Engineering | [Judgment](../s03e01-mechanics-behind-product-engineering.md#judgment) | [Osąd](../pl/s03e01-mechanics-behind-product-engineering.md#osąd) | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) |
+| S03E01 | Mechanics Behind Product Engineering | [Leverage](../s03e01-mechanics-behind-product-engineering.md#leverage) | [Dźwignia](../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
 <!-- lessons:end -->
 
 ## Episode index
@@ -195,6 +201,7 @@ The debriefs are in Polish only.
 | S02E03 | [schema first](../pl/s02e03-schema-first-debrief.md) | agentic capabilities, MCP | [P05](01-context/p05-check-changing-facts-at-source.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P23](05-agents-without-humans/p23-state-outside-the-process.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P35](07-human-in-the-loop/p35-harness-permissions.md), [P38](08-harness/p38-skill-is-a-routine.md), [P39](08-harness/p39-mcp-contract-for-strangers.md), [P40](08-harness/p40-results-have-a-budget.md), [P41](08-harness/p41-errors-say-what-to-fix.md), [P42](08-harness/p42-big-bytes-beside-the-model.md) |
 | S02E04 | [two places](../pl/s02e04-two-places-debrief.md) | multi-agent collaboration | [P20](04-orchestration/p20-brief-like-an-issue.md), [P30](06-security/p30-least-privilege.md), [P32](06-security/p32-secrets-never-in-chat.md), [P43](04-orchestration/p43-skill-travels-with-the-job.md), [P44](04-orchestration/p44-normalize-before-joining.md), [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md) |
 | S02E05 | [while you're away](../pl/s02e05-while-youre-away-debrief.md) | agent reliability | [P22](05-agents-without-humans/p22-chat-is-not-a-host.md), [P23](05-agents-without-humans/p23-state-outside-the-process.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P29](06-security/p29-trust-boundary-in-code.md), [P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md), [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) |
+| S03E01 | [status for the night](../pl/s03e01-status-for-the-night-debrief.md) | product engineering | [P02](01-context/p02-conversion-to-text-is-lossy.md), [P03](01-context/p03-source-is-not-the-view.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P35](07-human-in-the-loop/p35-harness-permissions.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
 | — | MEGA Assessment | your working patterns | [chapter 9](work-patterns.md) |
 
 ## How to add a pill

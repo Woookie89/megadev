@@ -45,4 +45,4 @@ na żywo zostały w plikach tymczasowych, a nie w `test/test.mjs`.
 
 ---
 
-← [P47](../07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P47](../07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P49](../07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) →

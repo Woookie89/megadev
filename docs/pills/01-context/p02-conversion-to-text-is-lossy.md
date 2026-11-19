@@ -1,6 +1,6 @@
 # P02 · Context is text, and every conversion to text is lossy
 
-> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E02
+> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E02, S03E01
 
 > **Lessons:**
 >
@@ -17,6 +17,13 @@ short phrases, and in silence they can add a word nobody said.
 something else. Whisper `large-v3` dropped "Warnings / None logged", wrote "Knightly" for
 "Nightly" and "cue" for "queue", and added a non-existent "memory." at the end.
 
+S03E01: in a screen recording, requirement R-H4L ("all times UTC") was only on screen,
+from about 14.5 to 24 s, and nobody said it. The transcript alone did not have it. An
+ffmpeg contact sheet (one frame per second, a 5×6 grid) laid next to the transcript found
+it. In the voice memo the tags were spelled out and came out like "RK4, M", so the
+harness checked every tag clip again with a second, larger model. The course question
+"Said is not shown": right the first time.
+
 **Apply.**
 
 - A transcript is a draft, not a record.
@@ -24,6 +31,8 @@ something else. Whisper `large-v3` dropped "Warnings / None logged", wrote "Knig
 - A record checked word for word needs manual correction of known error classes:
   homophones, numbers (digits or words), hallucinations at the end of a recording.
 - Word timestamps let you go back to an exact spot and transcribe it again.
+- Read a video two ways: the sound and the frames. Silence in a recording often means
+  something shown on screen.
 
 ---
 

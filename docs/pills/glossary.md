@@ -24,6 +24,11 @@
 | allowlist | A list of allowed domains (or commands). Everything else is blocked ([P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md)). |
 | lane | A marker the course gives a student when a challenge starts (`laneMarker`). In S01E04 it went into `.env` as `LANE_MARKER` and had to show on the published page ([P10](02-contracts-and-done/p10-check-from-outside.md)). |
 | free / gated | The split of the agent's acts in S02E05: a free act the agent does alone, a gated act it holds until the owner approves ([P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md)). |
+| requirement tag | A short id for one requirement, e.g. `R-K8L`. In S03E01 every tag got a source: the file and the spot in it (a second in a recording or a region of an image) ([P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md)). |
+| owner question (`ownerQuestion`) | One question that names both sides of a conflict. The agent asks it; the product owner decides ([P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md)). |
+| contact sheet | One image with many frames of a recording in a grid, e.g. one frame per second. It shows what was on screen without watching the whole video ([P02](01-context/p02-conversion-to-text-is-lossy.md)). |
+| canvas | A page element a script draws pixels on. Drawn text is not in the HTML, so you read it from a screenshot ([P03](01-context/p03-source-is-not-the-view.md)). |
+| `workers.dev` subdomain | The account's address on Cloudflare Workers (`<name>.workers.dev`). You register it once per account, before the first public deploy ([P35](07-human-in-the-loop/p35-harness-permissions.md)). |
 | egress IP | The address a server uses to reach the internet. Free hosts share it with many customers, so a per-IP quota can be used up by others ([P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md)). |
 
 ---

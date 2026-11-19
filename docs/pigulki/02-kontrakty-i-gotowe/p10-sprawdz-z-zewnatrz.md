@@ -1,6 +1,6 @@
 # P10 · Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca
 
-> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02, S02E03
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E02, S02E03, S03E01
 
 > **Lekcje:**
 >
@@ -20,6 +20,10 @@
   poprawkę lokalnie (822 B przy limicie 1024 B), zanim zrobił deploy. Druga runda przeszła.
   Wcześniej przeszedł całą ścieżkę OAuth na wdrożonym, publicznym adresie skryptem udającym
   obcego klienta.
+- S03E01: ten sam `test.mjs` (15 sprawdzeń, po jednym na wymaganie) działał lokalnie i na
+  wdrożonym adresie z prawdziwym feedem. Claim poszedł dopiero po 15/15 z zewnątrz, po
+  odczekaniu ok. 2,5 minuty na certyfikat TLS nowej subdomeny
+  ([P50](p50-wymaganie-ma-adres-i-test.md)).
 
 **Stosuj.** Każdy agent i serwis dostaje tryb próbny (`--dry`, `selfcheck`), który przechodzi
 całą ścieżkę bez skutków ubocznych.

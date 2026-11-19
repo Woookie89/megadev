@@ -1,6 +1,6 @@
 # P38 · Skill to rutyna, która przeżyła jedno użycie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01
 
 > **Lekcje:**
 >
@@ -15,6 +15,13 @@ nie została zainstalowana automatycznie, bo instalacja to decyzja człowieka. `
 harness najpierw rozpakował do katalogu tymczasowego i sprawdził sumy SHA-256 wszystkich
 6 plików. Skrypt przejrzał pod kątem miejsc, które uruchamiają procesy. Folder do `~/.claude/skills/`
 skopiował człowiek.
+
+S03E01: kurs wymagał własnego skilla w zasięgu użytkownika, wysłanego razem z listą
+wymagań. Harness, za zgodą użytkownika, zapisał `capture` w
+`~/.agents/skills/capture/SKILL.md` i podlinkował go do `~/.claude/skills/capture`. Skill
+mówi, jak czytać każdy rodzaj pliku (dźwięk, wideo, obraz, PDF, bieżąca strona), jak
+cytować miejsce i że sprzeczności rozstrzyga właściciel. Kurs zapisał go w toolboxie jako
+narzędzie zdobyte w trakcie (T1).
 
 ---
 

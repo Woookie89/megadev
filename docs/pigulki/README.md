@@ -1,6 +1,6 @@
 # Pigułki wiedzy: praca z AI i agentami
 
-Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S02E05)
+Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S03E01)
 oraz z lokalnego MEGA Assessment. Jedna pigułka to jeden plik i jedna zasada, ułożona tak:
 
 - **Zasada**: co robić.
@@ -14,7 +14,7 @@ Przebiegi wyzwań są w debriefach `docs/pl/*-debrief.md`, a teoria lekcji w not
 Każda pigułka wskazuje też lekcje (z rozdziałem), z których pochodzi: oryginał po angielsku
 i polskie tłumaczenie. Wersja angielska pigułek: [docs/pills/](../pills/README.md).
 
-Stan na 17.11.2026.
+Stan na 19.11.2026.
 
 ## Jak korzystać
 
@@ -46,8 +46,8 @@ Stan na 17.11.2026.
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P01](01-kontekst/p01-kompakcja-jest-stratna.md) | Kompakcja jest stratna i to ty decydujesz, co przepada | S01E01 |
-| [P02](01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md) | Kontekst to tekst, a każda konwersja do tekstu jest stratna | S01E02 |
-| [P03](01-kontekst/p03-zrodlo-to-nie-widok.md) | Źródło to nie widok | S01E03 |
+| [P02](01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md) | Kontekst to tekst, a każda konwersja do tekstu jest stratna | S01E02, S03E01 |
+| [P03](01-kontekst/p03-zrodlo-to-nie-widok.md) | Źródło to nie widok | S01E03, S03E01 |
 | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md) | Pobrany plik to kopia z danego dnia | S01E03, S02E01 |
 | [P05](01-kontekst/p05-fakty-zmienne-u-zrodla.md) | Fakty zmienne potwierdzaj u źródła, nie z pamięci modelu | S01E01, S02E03 |
 
@@ -59,9 +59,10 @@ Stan na 17.11.2026.
 | [P07](02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md) | „Gotowe” wyznacza sprawdzenie, a nie poczucie końca | S02E01, MEGA Assessment |
 | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md) | Test, który nigdy nie był czerwony, niczego nie dowodzi | S01E05 |
 | [P09](02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md) | Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu | S01E04 |
-| [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03 |
+| [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03, S03E01 |
 | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
 | [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
+| [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01 |
 
 ### [3. Pamięć poza czatem](03-pamiec/README.md)
 
@@ -112,18 +113,19 @@ Stan na 17.11.2026.
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
-| [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md) | Podział praw decyzyjnych jest jawny | S01E03, S01E04, MEGA Assessment |
+| [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md) | Podział praw decyzyjnych jest jawny | S01E03, S01E04, S03E01, MEGA Assessment |
 | [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) | Zgoda ma zakres | S01E04 |
-| [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md) | Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, MEGA Assessment |
+| [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md) | Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj | S01E03, S02E01, S02E03, S03E01, MEGA Assessment |
 | [P36](07-czlowiek-w-petli/p36-pokaz-plan-przed-publikacja.md) | Pokaż plan, zanim opublikujesz | S01E04 |
 | [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) | Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi | S02E05 |
+| [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) | Sprzeczne źródła nie wygrywają rangą: rozstrzyga właściciel, a do jego odpowiedzi budujesz tylko to, co pewne | S03E01 |
 
 ### [8. Harness jako zestaw narzędzi](08-harness/README.md)
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P37](08-harness/p37-brakujace-narzedzie.md) | Brakujące narzędzie: zbuduj most, potem go utrwal | S01E03 |
-| [P38](08-harness/p38-skill-to-rutyna.md) | Skill to rutyna, która przeżyła jedno użycie | S01E03, S02E03 |
+| [P38](08-harness/p38-skill-to-rutyna.md) | Skill to rutyna, która przeżyła jedno użycie | S01E03, S02E03, S03E01 |
 | [P39](08-harness/p39-mcp-kontrakt-dla-klienta.md) | Serwer MCP to kontrakt dla obcego klienta | S02E03 |
 | [P40](08-harness/p40-wynik-ma-budzet.md) | Wynik narzędzia ma budżet bajtów | S02E03 |
 | [P41](08-harness/p41-blad-mowi-co-poprawic.md) | Błąd narzędzia mówi modelowi, co poprawić | S02E03 |
@@ -180,6 +182,10 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S02E05 | Niezawodność agentów | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) |
 | S02E05 | Niezawodność agentów | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [P15](03-pamiec/p15-pytaj-przeszle-sesje.md), [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) |
 | S02E05 | Niezawodność agentów | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) |
+| S03E01 | Mechanika inżynierii produktu | [Zmiana](../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) | [The Shift](../s03e01-mechanics-behind-product-engineering.md#the-shift) | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) |
+| S03E01 | Mechanika inżynierii produktu | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) |
+| S03E01 | Mechanika inżynierii produktu | [Osąd](../pl/s03e01-mechanics-behind-product-engineering.md#osąd) | [Judgment](../s03e01-mechanics-behind-product-engineering.md#judgment) | [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) |
+| S03E01 | Mechanika inżynierii produktu | [Dźwignia](../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) | [Leverage](../s03e01-mechanics-behind-product-engineering.md#leverage) | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) |
 <!-- lessons:end -->
 
 ## Indeks epizodów
@@ -196,6 +202,7 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S02E03 | [schema first](../pl/s02e03-schema-first-debrief.md) | możliwości agentów, MCP | [P05](01-kontekst/p05-fakty-zmienne-u-zrodla.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md), [P38](08-harness/p38-skill-to-rutyna.md), [P39](08-harness/p39-mcp-kontrakt-dla-klienta.md), [P40](08-harness/p40-wynik-ma-budzet.md), [P41](08-harness/p41-blad-mowi-co-poprawic.md), [P42](08-harness/p42-duze-bajty-obok-modelu.md) |
 | S02E04 | [two places](../pl/s02e04-two-places-debrief.md) | współpraca wielu agentów | [P20](04-orkiestracja/p20-brief-jak-issue.md), [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md), [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md), [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) |
 | S02E05 | [while you're away](../pl/s02e05-while-youre-away-debrief.md) | niezawodność agentów | [P22](05-agent-bez-czlowieka/p22-czat-to-nie-host.md), [P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) |
+| S03E01 | [status for the night](../pl/s03e01-status-for-the-night-debrief.md) | inżynieria produktu | [P02](01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md), [P03](01-kontekst/p03-zrodlo-to-nie-widok.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md), [P38](08-harness/p38-skill-to-rutyna.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) |
 | — | MEGA Assessment | twoje wzorce pracy | [rozdział 9](wzorce-pracy.md) |
 
 ## Jak dopisać pigułkę

@@ -1,6 +1,6 @@
 # P02 · Kontekst to tekst, a każda konwersja do tekstu jest stratna
 
-> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E02
+> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E02, S03E01
 
 > **Lekcje:**
 >
@@ -17,6 +17,13 @@ gubią krótkie frazy, a na ciszy potrafią dopisać słowo, którego nie było.
 Whisper `large-v3` zgubił „Warnings / None logged”, zapisał „Knightly” zamiast „Nightly”,
 „cue” zamiast „queue” i dopisał na końcu nieistniejące „memory.”.
 
+S03E01: w nagraniu ekranu wymaganie R-H4L („all times UTC”) było tylko na ekranie, od ok.
+14,5 do 24 s, i nikt go nie wypowiedział. Sama transkrypcja go nie dała. Znalazł je
+contact sheet z ffmpeg (jedna klatka na sekundę, siatka 5×6) ułożony obok transkrypcji.
+W notatce głosowej tagi były literowane i wychodziły w rodzaju „RK4, M”, więc harness
+sprawdził każdy wycinek z tagiem drugim, większym modelem. Pytanie kursu „Said is not
+shown”: dobrze od razu.
+
 **Stosuj.**
 
 - Transkrypcja to szkic, nie zapis.
@@ -24,6 +31,8 @@ Whisper `large-v3` zgubił „Warnings / None logged”, zapisał „Knightly”
 - Zapis sprawdzany słowo w słowo wymaga ręcznej korekty znanych klas błędów: homofonów,
   liczb (cyfry czy słowa), halucynacji na końcu nagrania.
 - Znaczniki czasu słów pozwalają wrócić do konkretnego miejsca i przepisać je ponownie.
+- Wideo czytaj dwiema drogami: dźwięk i klatki. Cisza w nagraniu często oznacza coś
+  pokazanego na ekranie.
 
 ---
 

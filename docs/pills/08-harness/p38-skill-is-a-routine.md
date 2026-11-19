@@ -1,6 +1,6 @@
 # P38 · A skill is a routine that survived its first use
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01
 
 > **Lessons:**
 >
@@ -15,6 +15,13 @@ course deck: `read` (S01E01), `rig` (S01E04), `loop` (S02E01), `hands` (S02E03).
 installed automatically, because installing is the human's decision. For `hands` the harness
 first unpacked the files into a temporary folder and checked the SHA-256 of all 6 files. It
 read the script where it starts processes. The human copied the folder to `~/.claude/skills/`.
+
+S03E01: the course asked for a skill of our own in user scope, sent along with the
+requirements list. With the human's consent, the harness wrote `capture` to
+`~/.agents/skills/capture/SKILL.md` and linked it from `~/.claude/skills/capture`. The
+skill says how to read each kind of file (audio, video, image, PDF, live page), how to
+cite the spot, and that the owner settles conflicts. The course put it in the toolbox as
+gained during the solve (T1).
 
 ---
 

@@ -1,6 +1,6 @@
 # P10 · Check the result from outside, the way the recipient will see it
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S02E02, S02E03
+> Chapter [2. Contracts and "done"](README.md) · episodes: S02E02, S02E03, S03E01
 
 > **Lessons:**
 >
@@ -23,6 +23,10 @@ smoke test from their side.
   clip and measured the fix locally (822 B against a 1024 B limit) before it deployed. The
   second round passed. Earlier it walked the whole OAuth path on the live address with a
   script posing as a stranger client.
+- S03E01: the same `test.mjs` (15 checks, one per requirement) ran locally and against the
+  deployed address with the real feed. The claim went out only after 15/15 from outside,
+  after a wait of about 2.5 minutes for the new subdomain's TLS certificate
+  ([P50](p50-a-requirement-has-an-address-and-a-test.md)).
 
 **Apply.** Every agent and service gets a dry mode (`--dry`, `selfcheck`) that runs the
 whole path without side effects.

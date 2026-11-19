@@ -42,6 +42,9 @@ Kurs przyjmuje najpierw listę wymagań, a potem wdrożoną stronę.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 19.11.2026 | rozwiązane 10:47:33Z, oba kroki przy pierwszej próbie, bez odmów; podpowiedzi włączone, nieużyte; [zapis przebiegu](../pl/s03e01-status-for-the-night-debrief.md) |
+| Serwer MCP kursu (`list-challenges`, `solved`) | 19.11.2026 | `true` |
+| Strona zbudowana w wyzwaniu | 19.11.2026 | Cloudflare Worker `status-for-the-night` **zatrzymany** na prośbę użytkownika (`workers_dev: false`, adres zwraca 404); Worker i kod zostały na koncie, włączenie opisuje zapis przebiegu |
 
 ## Materiały i załączniki
 
