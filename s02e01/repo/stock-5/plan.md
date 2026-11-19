@@ -1,5 +1,5 @@
 | Area | Choice | Source (session id + time) |
-|------|--------|----------------------------|
+| ------ | -------- | ---------------------------- |
 | Job store | Postgres in Docker (replaces the SQLite file `data/reorder.db`, which hit `SQLITE_BUSY` once four workers wrote at once) | 019a35d2-7c41-7e08-a3f1-5b9e2d6c4a10 · proposed 2026-10-30T14:48:12Z, approved 2026-10-30T14:50:03Z |
 | Image | `postgres:17`, pinned (the image the shared CI runner keeps cached; `postgres:16` pull is refused there). Same image locally and on CI | c41e7b02-93d5-4f6a-8e21-7a0b5d3f9c64 (subagent agent-a5c0e3d19b72f4e60) · decided 2026-11-15T18:26:04Z, applied 2026-11-15T18:26:24Z; supersedes 019a35d2-7c41-7e08-a3f1-5b9e2d6c4a10 · 2026-10-30T14:48:12Z |
 | Port | Host port `5441` → container `5432` (5432 is taken on the shared CI runner). Same port locally and on CI | c41e7b02-93d5-4f6a-8e21-7a0b5d3f9c64 (subagent agent-a5c0e3d19b72f4e60) · decided 2026-11-15T18:26:04Z, applied 2026-11-15T18:26:24Z; supersedes 019a35d2-7c41-7e08-a3f1-5b9e2d6c4a10 · 2026-10-30T14:48:12Z |

@@ -1,7 +1,7 @@
 # S01E04 "before i looked" — handover (2026-11-09 → next session)
 
 Read [KEEP.md](KEEP.md) first (sourced findings), then [challenge-log.md](challenge-log.md) (course replies).
-Repo clone: [s01e04-rig-handover/](s01e04-rig-handover/) · GitHub: https://github.com/Woookie89/s01e04-rig-handover
+Repo clone: [s01e04-rig-handover/](s01e04-rig-handover/) · GitHub: <https://github.com/Woookie89/s01e04-rig-handover>
 
 ## Where we stopped
 
@@ -18,7 +18,7 @@ The plan-to-issues skill is at step 3: the split table below was shown to the hu
 Label on all: `plan:morning-digest`. Source: plan.md sections, read in the clone.
 
 | # | Title | Source | Done when | Blocked by | Worker model |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 1 | Digest types: `DigestRow` + `readNight` signature | § 1 | typecheck passes, committed on main | — | strongest |
 | 2 | Run log reader | § 1 | reader tests pass on 2026-10-28 (5 jobs, 1 bad line) | #1 | strongest |
 | 3 | Digest page `GET /digest/:night` | § 2a | `/digest/2026-10-28` renders locally | #1 start · #2 done | cheaper |

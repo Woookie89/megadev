@@ -20,6 +20,7 @@ found: npx at C:\Program Files\nodejs\npx.cmd
 <!-- keep:can-run:end -->
 
 ## Findings
+
 - S01E04 challenge uuid is c0000000-0000-4000-8000-0000005e01e4; the only proof handed so far is laneMarker = sstj-gtro (goes to .env as LANE_MARKER); no ticket was given · source: challenge-log.md:7 · how: read
 - Claim answer shape is {repo: owner/name, preview: public https link}, same answer every call · source: challenge-log.md:16 · how: read
 - Every issue must open with `Source: plan.md § <n>` and carry label plan:morning-digest · source: challenge-log.md:15 · how: read
@@ -40,13 +41,16 @@ found: npx at C:\Program Files\nodejs\npx.cmd
 - S01E04 solved 2026-11-11; debrief saved; issues #1-#5, #7-#9 closed; preview without marker · source: challenge-log.md:end · how: read
 
 ## Receipts
+
 command: corepack enable pnpm
+
 ```
 \u{1b}[31m\u{1b}[1mInternal Error\u{1b}[22m\u{1b}[39m: EPERM: operation not permitted, open 'C:\Program Files\nodejs\pnpm'
 Error: EPERM: operation not permitted, open 'C:\Program Files\nodejs\pnpm'
 ```
 
 command: corepack pnpm install / corepack pnpm test / corepack pnpm typecheck (tail)
+
 ```
 Done in 2.2s using pnpm v12.18.0
  Test Files  1 passed (1)
@@ -55,25 +59,28 @@ $ tsc --noEmit
 ```
 
 command: git status --short (in s01e04-rig-handover)
+
 ```
 ?? pnpm-lock.yaml
 ```
 
 command: gh label list -R Woookie89/s01e04-rig-handover --limit 50
+
 ```
-accessibility	Barrier affecting people with disabilities	#f143ab
-bug	Something isn't working	#d73a4a
-documentation	Improvements or additions to documentation	#0075ca
-duplicate	This issue or pull request already exists	#cfd3d7
-enhancement	New feature or request	#a2eeef
-good first issue	Good for newcomers	#7057ff
-help wanted	Extra attention is needed	#008672
-invalid	This doesn't seem right	#e4e669
-question	Further information is requested	#d876e3
-wontfix	This will not be worked on	#ffffff
+accessibility Barrier affecting people with disabilities #f143ab
+bug Something isn't working #d73a4a
+documentation Improvements or additions to documentation #0075ca
+duplicate This issue or pull request already exists #cfd3d7
+enhancement New feature or request #a2eeef
+good first issue Good for newcomers #7057ff
+help wanted Extra attention is needed #008672
+invalid This doesn't seem right #e4e669
+question Further information is requested #d876e3
+wontfix This will not be worked on #ffffff
 ```
 
 command: node count script over runs/2026-10-28.jsonl
+
 ```
 lines 16 byLine {"ok":10,"retry":4,"fail":1,"bad":1} jobs 5 byLastStatus {"ok":4,"retry":0,"fail":1}
 ```

@@ -14,7 +14,7 @@ Stan na: 2026-11-09 ok. 00:15 UTC (01:15 czasu PL).
 4. **Oba raporty przyjęte (HTTP 200, receipt dostany):**
 
    | nagranie | pytanie | finding | offset (s) |
-   |---|---|---|---|
+   | --- | --- | --- | --- |
    | video | How many invites moved? | `1870` | `65.95` |
    | audio | How many invites moved? | `2140` | `47.66` |
 

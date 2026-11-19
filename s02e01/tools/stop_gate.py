@@ -7,6 +7,7 @@ seen.local.json. Anything listed now that is not in seen -> block with the names
   python stop_gate.py          # hook mode (stdin = hook JSON)
   python stop_gate.py --mark   # record the current listings as read
 """
+
 import json
 import sys
 import urllib.request
@@ -43,17 +44,27 @@ def main():
     except Exception:
         return  # a source that does not load is not a reason to loop
     seen = json.loads(SEEN.read_text()) if SEEN.exists() else {}
-    new = [f"{src}: {n}" for src, names in now.items() for n in names if n not in seen.get(src, [])]
+    new = [
+        f"{src}: {n}"
+        for src, names in now.items()
+        for n in names
+        if n not in seen.get(src, [])
+    ]
     blocks = int(counter.read_text()) if counter.exists() else 0
     if not new or blocks >= MAX_BLOCKS:
         counter.unlink(missing_ok=True)
         return
     counter.write_text(str(blocks + 1))
-    print(json.dumps({
-        "decision": "block",
-        "reason": "Sources changed since you last read them. Read these, update the work if they change "
-                  "a decision, then run `python s02e01/tools/stop_gate.py --mark`: " + "; ".join(new),
-    }))
+    print(
+        json.dumps(
+            {
+                "decision": "block",
+                "reason": "Sources changed since you last read them. Read these, update the work if they change "
+                "a decision, then run `python s02e01/tools/stop_gate.py --mark`: "
+                + "; ".join(new),
+            }
+        )
+    )
 
 
 if __name__ == "__main__":

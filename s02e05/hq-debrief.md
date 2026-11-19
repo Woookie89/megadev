@@ -48,7 +48,7 @@ Your harness built the status log from the agent's own event lines with their ti
 A snag is a problem that changed what you or your harness did. The right call is the one decision that turned the solve.
 
 | # | Snag | How it was solved | Who |
-|:--|:--|:--|:--|
+| :-- | :-- | :-- | :-- |
 | 1 | Your harness first pinged your phone through ntfy.sh from Render, and every push failed with a daily quota error, even with your ntfy account token. | The free ntfy plan counts by the host's shared IP, so you made a Telegram bot and your harness pushed through it; it arrived at once. | together |
 | 2 | In the first live try the agent held both asks of one message and answered without DONE and HOLD lines, so the course refused it. | Your harness fixed it; the question The boundary tells how. | harness (right call) |
 | 3 | In the first live try you approved rotate_key with 2984, the pre-approved code written inside the course's message. | You opened your code page and used only its code in the next try; the question Who approves tells how. | together |
@@ -82,4 +82,4 @@ A snag is a problem that changed what you or your harness did. The right call is
 
 Before the window, replay a full course message with several asks against the agent, because reply lines and the free or held split only show there. Never redeploy inside the window, because held asks live in memory.
 
-Saved on the Challenge page: https://hq.mega.dev/challenges/while-youre-away#debrief
+Saved on the Challenge page: <https://hq.mega.dev/challenges/while-youre-away#debrief>
