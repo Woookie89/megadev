@@ -1,6 +1,6 @@
 # P38 · A skill is a routine that survived its first use
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01, S03E02
 
 > **Lessons:**
 >
@@ -22,6 +22,17 @@ requirements list. With the human's consent, the harness wrote `capture` to
 skill says how to read each kind of file (audio, video, image, PDF, live page), how to
 cite the spot, and that the owner settles conflicts. The course put it in the toolbox as
 gained during the solve (T1).
+
+S03E02: the `triage` skill in `.agents/skills/triage/SKILL.md` (project scope;
+`.claude/skills` is a junction to `.agents/skills`, so `check-lane` answered "The harness
+already loads the repo's skills"). Four steps: collect everything, decide each request by a
+table of questions, write the issue in the tracker's format, check with a script. After it
+settled a conflict and a withdrawal, the harness added two rules the run had taught it:
+conflicting requests are one `needs-human` issue with both ids, and a later request can
+withdraw an earlier one. The course recorded the skill as T1: "A triage skill of your own:
+requests in, a marked tracker out — each decision citing the fact behind it." After the solve,
+at the user's request, the harness installed the course deck's "ask" card in
+`~/.claude/skills/ask/` (9 files, SHA-256 matching the course).
 
 ---
 

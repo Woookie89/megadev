@@ -14,6 +14,7 @@ odrzucenie obcego, zatrzymanie się), musi być w kodzie.
 | [P27](p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03, S02E05 |
 | [P45](p45-zdalny-worker-dostep-i-odbior-wyniku.md) | Zdalny worker: zaplanuj dostęp i odbiór wyniku | S02E04 |
 | [P46](p46-testuj-droge-z-hosta-agenta.md) | Drogę do człowieka testuj z miejsca, w którym działa agent | S02E05 |
+| [P52](p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md) | Źródło, które wciąż się zapełnia: przebuduj wynik przy każdym nowym wejściu, a koniec wyznacza cisza, nie zegar | S03E02 |
 
 ---
 

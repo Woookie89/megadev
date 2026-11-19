@@ -44,4 +44,4 @@ right the first time.
 
 ---
 
-← [P49](../07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) · [chapter](README.md) · [all pills](../README.md)
+← [P49](../07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) · [chapter](README.md) · [all pills](../README.md) · [P51](../07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) →

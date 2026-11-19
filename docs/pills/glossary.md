@@ -29,6 +29,10 @@
 | contact sheet | One image with many frames of a recording in a grid, e.g. one frame per second. It shows what was on screen without watching the whole video ([P02](01-context/p02-conversion-to-text-is-lossy.md)). |
 | canvas | A page element a script draws pixels on. Drawn text is not in the HTML, so you read it from a screenshot ([P03](01-context/p03-source-is-not-the-view.md)). |
 | `workers.dev` subdomain | The account's address on Cloudflare Workers (`<name>.workers.dev`). You register it once per account, before the first public deploy ([P35](07-human-in-the-loop/p35-harness-permissions.md)). |
+| triage | Deciding each request against what is already in the tracker and the rules: merge it, close it with a reason, file a new issue, or hand it to a person ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
+| `agent-ready` / `needs-human` | The two marks of an open issue in S03E02: an agent ships it alone (with an `Allowed by AUT-1` line), or it waits for a person to decide (a question with options, a recommendation and a reason) ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
+| `blocked-by` | An issue field: the issues that must be done first. These dependencies set the order of work, not urgency ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
+| cursor poller | A script that asks a channel for new items every few seconds, passing the cursor (`since`) from the previous reply, so it gets only what came after ([P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md)). |
 | egress IP | The address a server uses to reach the internet. Free hosts share it with many customers, so a per-IP quota can be used up by others ([P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md)). |
 
 ---

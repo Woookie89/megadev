@@ -44,4 +44,4 @@ dobrze od razu.
 
 ---
 
-← [P49](../07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P49](../07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P51](../07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) →

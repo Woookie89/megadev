@@ -1,6 +1,6 @@
 # P38 · Skill to rutyna, która przeżyła jedno użycie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01, S03E02
 
 > **Lekcje:**
 >
@@ -22,6 +22,16 @@ wymagań. Harness, za zgodą użytkownika, zapisał `capture` w
 mówi, jak czytać każdy rodzaj pliku (dźwięk, wideo, obraz, PDF, bieżąca strona), jak
 cytować miejsce i że sprzeczności rozstrzyga właściciel. Kurs zapisał go w toolboxie jako
 narzędzie zdobyte w trakcie (T1).
+
+S03E02: skill `triage` w `.agents/skills/triage/SKILL.md` (zasięg projektu; `.claude/skills`
+to junction do `.agents/skills`, więc `check-lane` odpowiedział „The harness already loads
+the repo's skills”). Cztery kroki: zbierz wszystko, rozstrzygnij każde zgłoszenie według
+tabeli pytań, napisz issue w formacie trackera, sprawdź skryptem. Po rozwiązaniu sprzeczności
+i wycofania harness dopisał do skilla dwie reguły, które wynikły z przebiegu: sprzeczne prośby
+to jedno issue `needs-human` z oboma id, a późniejsze zgłoszenie może wycofać wcześniejsze.
+Kurs zapisał skill jako T1: „A triage skill of your own: requests in, a marked tracker out —
+each decision citing the fact behind it.” Kartę „ask” z talii kursu harness zainstalował po
+rozwiązaniu, na prośbę użytkownika, w `~/.claude/skills/ask/` (9 plików, sumy SHA-256 zgodne z kursem).
 
 ---
 

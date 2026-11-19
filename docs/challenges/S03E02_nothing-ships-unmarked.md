@@ -41,6 +41,8 @@ Kurs przyjmuje tracker po triage i skill triage.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 19.11.2026 | rozwiązane 11:15:02Z przy pierwszej próbie, bez odmów; tracker w plikach Markdown (32 issue) i skill `triage`; [zapis przebiegu](../pl/s03e02-nothing-ships-unmarked-debrief.md) |
+| Serwer MCP kursu (`list-challenges`, `solved`) | 19.11.2026 | `true` |
 
 ## Materiały i załączniki
 

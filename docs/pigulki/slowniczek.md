@@ -31,6 +31,10 @@
 | contact sheet | Jeden obraz z wieloma klatkami nagrania w siatce, np. jedna klatka na sekundę. Pozwala zobaczyć, co było na ekranie, bez oglądania całości ([P02](01-kontekst/p02-konwersja-do-tekstu-jest-stratna.md)). |
 | canvas | Element strony, na którym skrypt rysuje piksele. Narysowanego tekstu nie ma w HTML, więc trzeba go odczytać ze zrzutu ekranu ([P03](01-kontekst/p03-zrodlo-to-nie-widok.md)). |
 | subdomena `workers.dev` | Adres konta w Cloudflare Workers (`<nazwa>.workers.dev`). Rejestruje się ją raz na konto, przed pierwszym publicznym wdrożeniem ([P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)). |
+| triage | Rozstrzygnięcie każdego zgłoszenia wobec tego, co już jest w trackerze i w regułach: scalić, zamknąć z powodem, założyć nowe issue albo oddać człowiekowi ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
+| `agent-ready` / `needs-human` | Dwa znaczniki otwartego issue w S03E02: agent zrobi je sam (z linią `Allowed by AUT-1`) albo czeka ono na decyzję człowieka (pytanie z opcjami, rekomendacją i powodem) ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
+| `blocked-by` | Pole issue: lista issue, które muszą być zrobione wcześniej. Kolejność pracy wyznaczają te zależności, a nie pilność ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
+| poller z kursorem | Skrypt, który co kilka sekund pyta kanał o nowe wpisy, podając kursor (`since`) z poprzedniej odpowiedzi, więc dostaje tylko to, co przyszło potem ([P52](05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md)). |
 | IP wyjściowe (egress IP) | Adres, z którego serwer łączy się z internetem. Darmowe hosty dzielą go z wieloma klientami, więc limit liczony per IP mogą wyczerpać inni ([P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)). |
 
 ---

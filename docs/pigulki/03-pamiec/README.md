@@ -8,7 +8,7 @@ Wszystko, co ma przetrwać, musi trafić do pliku.
 | --- | --- | --- |
 | [P12](p12-czat-nie-jest-pamiecia.md) | Czat nie jest pamięcią: przekazanie pracy zapisuj w pliku | S01E01, S01E02 |
 | [P13](p13-keep-ustalenie-ze-zrodlem.md) | KEEP: jedna linia, jedno ustalenie, ze źródłem i sposobem | S01E04 |
-| [P14](p14-jedna-decyzja-jeden-wiersz.md) | Jedna decyzja to jeden wiersz, a późniejsza nadpisuje tylko swój zakres | S02E01 |
+| [P14](p14-jedna-decyzja-jeden-wiersz.md) | Jedna decyzja to jeden wiersz, a późniejsza nadpisuje tylko swój zakres | S02E01, S03E02 |
 | [P15](p15-pytaj-przeszle-sesje.md) | Pytaj przeszłe sesje zamiast zgadywać i czytaj je wszystkie | S01E02, S02E01 |
 | [P16](p16-drabina-trwalosci.md) | Drabina trwałości: im ważniejsza reguła, tym wyżej ją zapisz | S01E04, MEGA Assessment |
 

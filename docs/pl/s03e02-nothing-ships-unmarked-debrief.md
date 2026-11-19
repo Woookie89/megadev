@@ -221,8 +221,9 @@ arkuszu jest też linia fabuły: „04:04  ticket closed   merged by: tove   by:
 - **Pytania dla ludzi produktu, nie dla użytkownika.** IN-1210/IN-4203 (format dat w CSV),
   IN-6480/IN-9975 (wydarzenia całodniowe w feedzie), SCHED-4486 (usuwanie wpisów audytu).
 - **Karta z talii.** Kurs dodał do talii artefakt „ask” od Rooka (skill do wywiadu i zbierania
-  dowodów). Log z chwili rozwiązania mówi „not installed”. Przy pisaniu tego wpisu istniał już
-  folder `~/.claude/skills/ask/` z czasem utworzenia 19.11.2026 11:21 UTC. Kto i za czyją zgodą
-  go zainstalował: w logu nie znaleziono.
+  dowodów). W chwili rozwiązania nie był zainstalowany. Później użytkownik poprosił o instalację
+  („jak są globalnie to dawaj”, „to tam instaluj gdzie inne”), więc harness zainstalował go
+  19.11.2026 o 11:21 UTC w `~/.claude/skills/ask/`, obok innych artefaktów kursu. Sumy SHA-256
+  wszystkich 9 plików zgadzają się z kursem, a sprawdzarka skilla przechodzi. Wpis jest w logu S03E02.
 
 Debrief jest na [stronie wyzwania](https://hq.mega.dev/challenges/nothing-ships-unmarked#debrief).

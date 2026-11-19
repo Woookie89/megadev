@@ -16,7 +16,7 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 > zmienić. „HQ” to status z listy wyzwań HQ, a „MCP” to flaga `solved` z serwera
 > MCP kursu. Przy S01E02 te źródła się różnią: szczegóły są w pliku wyzwania.
 > S02E01 i S02E02 zaktualizowano 15.11.2026, S02E03 i S02E04 16.11.2026, S02E05 17.11.2026,
-> a S03E01 19.11.2026, po rozwiązaniu (zapis przebiegu w `pl/`).
+> a S03E01 i S03E02 19.11.2026, po rozwiązaniu (zapisy przebiegu w `pl/`).
 
 ## Week 1 — Core
 
@@ -49,7 +49,7 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 | Kod | Tytuł | Data | Status HQ / MCP | Strona HQ |
 | --- | --- | --- | --- | --- |
 | S03E01 | [status for the night](challenges/S03E01_status-for-the-night.md) | 9.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/status-for-the-night) |
-| S03E02 | [nothing ships unmarked](challenges/S03E02_nothing-ships-unmarked.md) | 10.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/nothing-ships-unmarked) |
+| S03E02 | [nothing ships unmarked](challenges/S03E02_nothing-ships-unmarked.md) | 10.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/nothing-ships-unmarked) |
 | S03E03 | [out of office](challenges/S03E03_out-of-office.md) | 11.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/out-of-office) |
 | S03E04 | [show me when](challenges/S03E04_show-me-when.md) | 12.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/show-me-when) |
 | S03E05 | [what came back](challenges/S03E05_what-came-back.md) | 13.11 | otwarte / `false` | [link](https://hq.mega.dev/challenges/what-came-back) |
