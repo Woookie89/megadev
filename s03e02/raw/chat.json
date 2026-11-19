@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "IN-8160",
+      "from": "product",
+      "text": "typo on the settings page: 'Calender'. should be 'Calendar'."
+    },
+    {
+      "id": "IN-9280",
+      "from": "product",
+      "text": "rename 'group slot' to 'class' everywhere on the booking page. it reads friendlier."
+    },
+    {
+      "id": "IN-3046",
+      "from": "analytics",
+      "text": "the CSV export breaks when a client name has a comma in it. the columns shift by one from there."
+    },
+    {
+      "id": "IN-7094",
+      "from": "product",
+      "text": "make the confirm button on the booking page just say 'OK'. shorter is cleaner. i want it this week.",
+      "seenAt": "2026-11-19T10:56:31.845Z"
+    },
+    {
+      "id": "IN-5342",
+      "from": "product",
+      "text": "forget the 'class' rename from earlier this week. the clinics hated it in the survey. it stays 'group slot'.",
+      "seenAt": "2026-11-19T10:59:32.753Z"
+    }
+  ],
+  "cursor": "wEuik2FxRXfCtbCe.dM3aADSIwYgTV7AxMl9_mL0bmeqrd_KNLsI51xFM8HNaU8ZHIG6hqeR4lu2j8fgXjOQLqspdpNjZH-9nSBDIezwCC71_PCeVmg.Vbj9tl_udh17XGvFOGCUwA"
+}

@@ -1,0 +1,24 @@
+== pack/memo.m4a (47.1s)
+[  0.00-  3.72] Quick one for the night status page. This is on call.
+   words: Quick@0.00 one@0.52 for@0.80 the@1.02 night@1.12 status@1.30 page.@1.72 This@2.62 is@2.86 on@3.04 call.@3.32
+[  5.60- 16.28] RK4, M. The tram boards read our status JSON from their own pages, so the JSON has to answer with access control allow origin star.
+   words: RK4,@5.60 M.@6.80 The@7.82 tram@7.90 boards@8.18 read@8.56 our@8.88 status@9.04 JSON@9.42 from@9.92 their@10.28 own@10.44 pages,@10.66 so@11.20 the@11.88 JSON@12.00 has@12.42 to@12.86 answer@13.02 with@13.40 access@13.66 control@14.04 allow@14.60 origin@15.02 star.@15.70
+[ 18.74- 24.50] RH8X. Every status JSON carries updated at in UTC ending in Z.
+   words: RH8X.@18.74 Every@20.04 status@20.26 JSON@20.64 carries@21.28 updated@21.72 at@22.28 in@22.56 UTC@22.80 ending@23.34 in@24.00 Z.@24.24
+[ 27.26- 31.74] RZ5L, and the page heading says status for the night. Those exact words.
+   words: RZ5L,@27.26 and@28.18 the@28.28 page@28.40 heading@28.68 says@28.98 status@29.24 for@29.64 the@29.90 night.@30.00 Those@30.76 exact@30.86 words.@31.30
+[ 34.56- 42.30] RL5Z. One more on the JSON. Cache control max age 60 seconds or less. The boards pull it that often.
+   words: RL5Z.@34.56 One@35.60 more@35.84 on@36.10 the@36.28 JSON.@36.38 Cache@37.46 control@37.74 max@38.18 age@38.58 60@38.98 seconds@39.42 or@39.80 less.@39.98 The@40.78 boards@40.88 pull@41.20 it@41.60 that@41.76 often.@41.90
+[ 43.64- 46.36] That's all from me. The rest is in the spec.
+   words: That's@43.64 all@44.22 from@44.40 me.@44.60 The@45.22 rest@45.32 is@45.66 in@45.88 the@46.02 spec.@46.12
+== pack/recording.mp4 (27.1s)
+[  0.00-  4.36] Okay, I'm sharing my screen. This is the draft for tonight's status page.
+   words: Okay,@0.00 I'm@0.76 sharing@0.92 my@1.22 screen.@1.50 This@2.30 is@2.48 the@2.60 draft@2.74 for@2.98 tonight's@3.22 status@3.70 page.@3.96
+[  6.82- 12.56] RZ2K. Every line gets its own row on the page tram 3 included. The boards care about that one.
+   words: RZ2K.@6.82 Every@7.82 line@8.08 gets@8.34 its@8.58 own@8.76 row@8.96 on@9.14 the@9.28 page@9.38 tram@9.68 3@10.00 included.@10.32 The@11.28 boards@11.36 care@11.60 about@11.88 that@12.10 one.@12.36
+[ 13.98- 14.84] Hold on.
+   words: Hold@13.98 on.@14.50
+[ 19.70- 22.88] Right, that's product. The rest is on call and the spec.
+   words: Right,@19.70 that's@20.36 product.@20.56 The@21.38 rest@21.46 is@21.68 on@21.82 call@21.98 and@22.26 the@22.48 spec.@22.60
+[ 24.32- 26.34] Ping me if something doesn't add up.
+   words: Ping@24.32 me@24.84 if@25.00 something@25.14 doesn't@25.46 add@25.94 up.@26.10

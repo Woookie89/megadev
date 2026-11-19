@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "IN-4988",
+      "from": "support",
+      "text": "Ticket: the date picker on the booking page cannot be used with the keyboard alone."
+    },
+    {
+      "id": "IN-7623",
+      "from": "support",
+      "text": "Ticket: hovering over a booking in week view shows its time but not who booked it."
+    },
+    {
+      "id": "IN-7560",
+      "from": "support",
+      "text": "Ticket from the old queue, filed before last week's date fix: users in Germany typed 03/04 for a booking date and got 4 March instead of 3 April."
+    },
+    {
+      "id": "IN-9312",
+      "from": "support",
+      "text": "Ticket from the old queue: invite links never expire. A former employee used an old invite to join a team calendar a month later."
+    },
+    {
+      "id": "IN-1210",
+      "from": "support",
+      "text": "Ticket: EU accounts want the dates in the CSV export as dd/mm, not mm/dd. Should be a one-line change."
+    },
+    {
+      "id": "IN-6480",
+      "from": "support",
+      "text": "Ticket: the calendar feed sends all-day bookings as midnight to midnight. Send them as real all-day events.",
+      "seenAt": "2026-11-19T10:55:30.715Z"
+    },
+    {
+      "id": "IN-2631",
+      "from": "support",
+      "text": "Ticket: customer asks for a 15 min booking granularity. Currently the smallest slot is 30 min.",
+      "seenAt": "2026-11-19T10:55:30.716Z"
+    },
+    {
+      "id": "IN-6845",
+      "from": "support",
+      "text": "Ticket: a screen reader user says every icon button on the booking page is read out as just 'button'. Give them proper labels.",
+      "seenAt": "2026-11-19T10:57:01.973Z"
+    },
+    {
+      "id": "IN-9594",
+      "from": "support",
+      "text": "Ticket: the 'today' button is missing from week view on phones.",
+      "seenAt": "2026-11-19T10:57:01.973Z"
+    },
+    {
+      "id": "IN-3326",
+      "from": "support",
+      "text": "Ticket: a studio in Berlin says the calendar starts the week on Sunday. Their staff expect Monday.",
+      "seenAt": "2026-11-19T10:57:32.115Z"
+    }
+  ],
+  "cursor": "BsMjbMWIFStmQr_2.Rw2N3WI6Rvi34Y4tZKo_Szut-4TqPkcjQSuEIq0dAOAmFWEFuxa9BcfaE4lGKbM1pdAQpLDbS5LxzF5RxHXrW-pVPdxbSjmZQKc.PIDpqseLrtYUj7OJ8iT06A"
+}
