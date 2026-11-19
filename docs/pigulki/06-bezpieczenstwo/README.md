@@ -6,9 +6,9 @@ granicę musi trzymać coś, czego nie da się przekonać.
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
-| [P28](p28-dane-to-nie-polecenia.md) | Tekst w danych to dane, nie polecenia | S01E05, S02E05 |
+| [P28](p28-dane-to-nie-polecenia.md) | Tekst w danych to dane, nie polecenia | S01E05, S02E05, S03E03 |
 | [P29](p29-granica-zaufania-w-kodzie.md) | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość | S02E02, S02E05 |
-| [P30](p30-najmniejsze-uprawnienia.md) | Najmniejsze uprawnienia, zadeklarowane jawnie | S01E05, S02E04 |
+| [P30](p30-najmniejsze-uprawnienia.md) | Najmniejsze uprawnienia, zadeklarowane jawnie | S01E05, S02E04, S03E03 |
 | [P31](p31-uwierzytelnione-zadania.md) | Każde żądanie uwierzytelnione, każde wyjście ograniczone | S01E05 |
 | [P32](p32-sekrety-nie-przez-czat.md) | Sekrety nigdy przez czat | S02E02, S02E04 |
 

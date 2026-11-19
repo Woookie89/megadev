@@ -1,6 +1,6 @@
 # P38 · Skill to rutyna, która przeżyła jedno użycie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01, S03E02
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01, S03E02, S03E03
 
 > **Lekcje:**
 >
@@ -32,6 +32,15 @@ to jedno issue `needs-human` z oboma id, a późniejsze zgłoszenie może wycofa
 Kurs zapisał skill jako T1: „A triage skill of your own: requests in, a marked tracker out —
 each decision citing the fact behind it.” Kartę „ask” z talii kursu harness zainstalował po
 rozwiązaniu, na prośbę użytkownika, w `~/.claude/skills/ask/` (9 plików, sumy SHA-256 zgodne z kursem).
+
+S03E03: ten sam skill `triage` dostał sekcję 5 „Running alone”, bo teraz czytał go agent bez
+człowieka. Sekcja mówi, co czytać przed każdą decyzją (`AGENTS.md` i kontrakt, cały wątek
+issue, rekordy decyzji i research, kod i testy), że komentarz odbioru pisze kod, a nie model,
+kiedy budować, odmówić i pytać właściciela (tabela), jak wygląda linia ship logu i czego nie
+robić nigdy. Runner wkładał cały skill do promptu. Kurs zapisał to jako zdobyte T1: „Your triage
+skill, grown to run alone: per issue, read what is in force, ask the owner only what is open,
+build the answer, log it once it is live.” Lekcja z rundy (rekordy w każdej turze) trafiła na
+razie tylko do kodu runnera, a nie do skilla. Karty „bet” z talii kursu nie zainstalowano.
 
 ---
 

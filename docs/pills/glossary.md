@@ -34,6 +34,11 @@
 | `blocked-by` | An issue field: the issues that must be done first. These dependencies set the order of work, not urgency ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
 | cursor poller | A script that asks a channel for new items every few seconds, passing the cursor (`since`) from the previous reply, so it gets only what came after ([P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md)). |
 | egress IP | The address a server uses to reach the internet. Free hosts share it with many customers, so a per-IP quota can be used up by others ([P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md)). |
+| decision record | A short entry for one product decision in a fixed format (like an ADR): the ask, options, a recommendation, the cost of being wrong, a reopen threshold, the decision. It has a status (`proposed`, `accepted`) and the owner's signature. It binds only once accepted and signed ([P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md)). |
+| reopen threshold | A field of a decision record: the evidence that would reopen the decision, e.g. user behaviour or a written legal need. Without it the agent does not reopen the decision ([P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md)). |
+| ship log / ship line | The delivery log on the S03E03 tracker: one line per issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` only after the change is read from the live address ([P10](02-contracts-and-done/p10-check-from-outside.md)). |
+| rehearsal (mock tracker) | A run of the agent against a local fake tracker and feed, with a dry deploy, before the real round. In S03E03 it caught a host bug but not the record mistake, because it had no such issue ([P54](01-context/p54-the-agent-decides-from-what-it-is-given.md)). |
+| supervisor | A separate process that watches a background agent: it restarts it after every exit and stops when a flag file is removed ([P23](05-agents-without-humans/p23-state-outside-the-process.md)). |
 
 ---
 

@@ -11,6 +11,7 @@ that is stale or distorted, the model takes as true.
 | [P03](p03-source-is-not-the-view.md) | The source is not the view | S01E03, S03E01 |
 | [P04](p04-a-download-is-a-dated-copy.md) | A download is a dated copy | S01E03, S02E01 |
 | [P05](p05-check-changing-facts-at-source.md) | Check changing facts at the source, not in the model's memory | S01E01, S02E03 |
+| [P54](p54-the-agent-decides-from-what-it-is-given.md) | An agent decides only from what it is given: put every rule source in its context from the first turn | S03E03 |
 
 ---
 

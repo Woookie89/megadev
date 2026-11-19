@@ -48,4 +48,4 @@ test where."
 
 ---
 
-← [P52](../05-agents-without-humans/p52-rebuild-on-every-arrival.md) · [chapter](README.md) · [all pills](../README.md)
+← [P52](../05-agents-without-humans/p52-rebuild-on-every-arrival.md) · [chapter](README.md) · [all pills](../README.md) · [P54](../01-context/p54-the-agent-decides-from-what-it-is-given.md) →

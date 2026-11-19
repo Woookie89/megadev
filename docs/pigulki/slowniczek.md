@@ -36,6 +36,11 @@
 | `blocked-by` | Pole issue: lista issue, które muszą być zrobione wcześniej. Kolejność pracy wyznaczają te zależności, a nie pilność ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
 | poller z kursorem | Skrypt, który co kilka sekund pyta kanał o nowe wpisy, podając kursor (`since`) z poprzedniej odpowiedzi, więc dostaje tylko to, co przyszło potem ([P52](05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md)). |
 | IP wyjściowe (egress IP) | Adres, z którego serwer łączy się z internetem. Darmowe hosty dzielą go z wieloma klientami, więc limit liczony per IP mogą wyczerpać inni ([P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)). |
+| rekord decyzji (decision record) | Krótki zapis jednej decyzji produktu w stałym formacie (jak ADR): prośba, opcje, rekomendacja, koszt pomyłki, próg ponownego otwarcia, decyzja. Ma status (`proposed`, `accepted`) i podpis właściciela. Wiąże dopiero przyjęty i podpisany ([P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md)). |
+| próg ponownego otwarcia (reopen threshold) | Pole rekordu decyzji: dowód, który pozwala wrócić do decyzji, np. zachowanie użytkowników albo pisemna potrzeba prawna. Bez niego agent nie otwiera decyzji na nowo ([P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md)). |
+| ship log / ship line | Dziennik wdrożeń w trackerze S03E03: jedna linia na issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` wolno wpisać dopiero po odczycie zmiany z adresu na żywo ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
+| próba na makiecie (rehearsal, mock tracker) | Przebieg agenta na lokalnej atrapie trackera i feedu, z wdrożeniem na sucho, przed prawdziwą rundą. W S03E03 wykryła błąd hosta, ale nie błąd z rekordem, bo nie miała takiego issue ([P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)). |
+| supervisor | Osobny proces, który pilnuje agenta w tle: uruchamia go ponownie po każdym wyjściu i kończy pracę, gdy zniknie plik-flaga ([P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md)). |
 
 ---
 

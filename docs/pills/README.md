@@ -1,6 +1,6 @@
 # Knowledge pills: working with AI and agents
 
-Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E02) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
+Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E03) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
 
 - **Principle**: what to do.
 - **Why**: the mechanism, i.e. why it is so with models, agents or the harness.
@@ -47,6 +47,7 @@ As of 19.11.2026.
 | [P03](01-context/p03-source-is-not-the-view.md) | The source is not the view | S01E03, S03E01 |
 | [P04](01-context/p04-a-download-is-a-dated-copy.md) | A download is a dated copy | S01E03, S02E01 |
 | [P05](01-context/p05-check-changing-facts-at-source.md) | Check changing facts at the source, not in the model's memory | S01E01, S02E03 |
+| [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md) | An agent decides only from what it is given: put every rule source in its context from the first turn | S03E03 |
 
 ### [2. Contracts and "done"](02-contracts-and-done/README.md)
 
@@ -56,7 +57,7 @@ As of 19.11.2026.
 | [P07](02-contracts-and-done/p07-done-is-a-check.md) | "Done" is set by a check, not by a feeling that the work is over | S02E01, MEGA Assessment |
 | [P08](02-contracts-and-done/p08-test-must-fail-first.md) | A test that was never red proves nothing | S01E05 |
 | [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04 |
-| [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01 |
+| [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
 | [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
 | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01 |
@@ -92,7 +93,7 @@ As of 19.11.2026.
 | [P24](05-agents-without-humans/p24-a-loop-needs-an-exit.md) | A loop needs an exit: a condition, a limit and visible state | S02E01 |
 | [P25](05-agents-without-humans/p25-providers-fail.md) | Model providers fail, so design for it | S01E05, S02E02 |
 | [P26](05-agents-without-humans/p26-timing-is-behavior.md) | Timing is part of behavior | S02E02 |
-| [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) | The agent must see its own logs | S01E05, S02E03, S02E05 |
+| [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) | The agent must see its own logs | S01E05, S02E03, S02E05, S03E03 |
 | [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md) | A remote worker: plan the way there and the way home | S02E04 |
 | [P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md) | Test the route to the human from where the agent runs | S02E05 |
 | [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md) | A source that keeps filling: rebuild the result on every arrival, and let quiet, not a clock, say when you are done | S03E02 |
@@ -101,9 +102,9 @@ As of 19.11.2026.
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
-| [P28](06-security/p28-data-is-not-instructions.md) | Text in data is data, not instructions | S01E05, S02E05 |
+| [P28](06-security/p28-data-is-not-instructions.md) | Text in data is data, not instructions | S01E05, S02E05, S03E03 |
 | [P29](06-security/p29-trust-boundary-in-code.md) | Code holds the trust boundary before the model sees the message | S02E02, S02E05 |
-| [P30](06-security/p30-least-privilege.md) | Least privilege, declared explicitly | S01E05, S02E04 |
+| [P30](06-security/p30-least-privilege.md) | Least privilege, declared explicitly | S01E05, S02E04, S03E03 |
 | [P31](06-security/p31-authenticated-requests.md) | Every request authenticated, every outbound call limited | S01E05 |
 | [P32](06-security/p32-secrets-never-in-chat.md) | Secrets never go through the chat | S02E02, S02E04 |
 
@@ -118,13 +119,14 @@ As of 19.11.2026.
 | [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
 | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01 |
 | [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02 |
+| [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) | Only a signed record binds: an unsigned one is evidence, and the open call goes to the owner with options and a recommendation | S03E03 |
 
 ### [8. The harness as a toolkit](08-harness/README.md)
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P37](08-harness/p37-missing-tool.md) | A missing tool: build a bridge, then make it permanent | S01E03 |
-| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03, S03E01, S03E02 |
+| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03, S03E01, S03E02, S03E03 |
 | [P39](08-harness/p39-mcp-contract-for-strangers.md) | An MCP server is a contract for a stranger client | S02E03 |
 | [P40](08-harness/p40-results-have-a-budget.md) | A tool result has a byte budget | S02E03 |
 | [P41](08-harness/p41-errors-say-what-to-fix.md) | A tool error tells the model what to fix | S02E03 |
@@ -183,12 +185,15 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S02E05 | Agent Reliability | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [P15](03-memory/p15-ask-past-sessions.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) |
 | S02E05 | Agent Reliability | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [P08](02-contracts-and-done/p08-test-must-fail-first.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) |
 | S03E01 | Mechanics Behind Product Engineering | [The Shift](../s03e01-mechanics-behind-product-engineering.md#the-shift) | [Zmiana](../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
-| S03E01 | Mechanics Behind Product Engineering | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [P33](07-human-in-the-loop/p33-decision-rights.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) |
+| S03E01 | Mechanics Behind Product Engineering | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [P33](07-human-in-the-loop/p33-decision-rights.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E01 | Mechanics Behind Product Engineering | [Judgment](../s03e01-mechanics-behind-product-engineering.md#judgment) | [Osąd](../pl/s03e01-mechanics-behind-product-engineering.md#osąd) | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) |
 | S03E01 | Mechanics Behind Product Engineering | [Leverage](../s03e01-mechanics-behind-product-engineering.md#leverage) | [Dźwignia](../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
-| S03E02 | Translating Intent into Agent Work | [Product context](../s03e02-translating-intent-into-agent-work.md#product-context) | [Kontekst produktu](../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) | [P14](03-memory/p14-one-decision-one-row.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) |
+| S03E02 | Translating Intent into Agent Work | [Product context](../s03e02-translating-intent-into-agent-work.md#product-context) | [Kontekst produktu](../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) | [P14](03-memory/p14-one-decision-one-row.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E02 | Translating Intent into Agent Work | [Requirements and decomposition](../s03e02-translating-intent-into-agent-work.md#requirements-and-decomposition) | [Wymagania i dekompozycja](../pl/s03e02-translating-intent-into-agent-work.md#wymagania-i-dekompozycja) | [P20](04-orchestration/p20-brief-like-an-issue.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) |
 | S03E02 | Translating Intent into Agent Work | [Evaluation](../s03e02-translating-intent-into-agent-work.md#evaluation) | [Ewaluacja](../pl/s03e02-translating-intent-into-agent-work.md#ewaluacja) | [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
+| S03E03 | AI-Native Product Development | [Planning](../s03e03-ai-native-product-development.md#planning) | [Planowanie](../pl/s03e03-ai-native-product-development.md#planowanie) | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
+| S03E03 | AI-Native Product Development | [Execution](../s03e03-ai-native-product-development.md#execution) | [Wykonanie](../pl/s03e03-ai-native-product-development.md#wykonanie) | [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md) |
+| S03E03 | AI-Native Product Development | [Feedback](../s03e03-ai-native-product-development.md#feedback) | [Informacja zwrotna](../pl/s03e03-ai-native-product-development.md#informacja-zwrotna) | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P30](06-security/p30-least-privilege.md) |
 <!-- lessons:end -->
 
 ## Episode index
@@ -209,6 +214,7 @@ The debriefs are in Polish only.
 | S02E05 | [while you're away](../pl/s02e05-while-youre-away-debrief.md) | agent reliability | [P22](05-agents-without-humans/p22-chat-is-not-a-host.md), [P23](05-agents-without-humans/p23-state-outside-the-process.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P29](06-security/p29-trust-boundary-in-code.md), [P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md), [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) |
 | S03E01 | [status for the night](../pl/s03e01-status-for-the-night-debrief.md) | product engineering | [P02](01-context/p02-conversion-to-text-is-lossy.md), [P03](01-context/p03-source-is-not-the-view.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P35](07-human-in-the-loop/p35-harness-permissions.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
 | S03E02 | [nothing ships unmarked](../pl/s03e02-nothing-ships-unmarked-debrief.md) | translating intent into agent work | [P04](01-context/p04-a-download-is-a-dated-copy.md), [P07](02-contracts-and-done/p07-done-is-a-check.md), [P14](03-memory/p14-one-decision-one-row.md), [P20](04-orchestration/p20-brief-like-an-issue.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
+| S03E03 | [out of office](../pl/s03e03-out-of-office-debrief.md) | AI-native product development | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P30](06-security/p30-least-privilege.md), [P38](08-harness/p38-skill-is-a-routine.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | — | MEGA Assessment | your working patterns | [chapter 9](work-patterns.md) |
 
 ## How to add a pill

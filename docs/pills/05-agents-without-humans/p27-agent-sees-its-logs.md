@@ -1,10 +1,11 @@
 # P27 · The agent must see its own logs
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03, S02E05
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03, S02E05, S03E03
 
 > **Lessons:**
 >
 > - S02E05 · Agent Reliability → chapter "Observability in agentic systems" — [original (EN)](../../s02e05-agent-reliability.md#observability-in-agentic-systems) · [Polish: „Obserwowalność w systemach agentowych”](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych)
+> - S03E03 · AI-Native Product Development → chapter "Feedback" — [original (EN)](../../s03e03-ai-native-product-development.md#feedback) · [Polish: „Informacja zwrotna”](../../pl/s03e03-ai-native-product-development.md#informacja-zwrotna)
 
 **Principle.** If the harness cannot see the service's logs, it cannot diagnose it. The
 human becomes a log courier.
@@ -24,8 +25,17 @@ only in process memory and the Render logs, though, not in a file. The course: "
 believable only when it is written per event, with offsets, and agrees with times someone
 else kept."
 
+S03E03: the harness watched an agent that delivered issues on its own. The first monitor,
+`tail -F` on `run.log`, showed nothing, because on Windows it did not see lines appended by
+another process. There was no error, only silence. The harness replaced it with a poller of the
+tracker itself (`events.mjs`, every 30 s): one line per new issue, label, owner comment, close,
+ship-log line, record signature and runner restart. After the switch the harness spotted the
+wrong CSV export 12 s after its ship-log line and fixed the agent before the round ended
+([P54](../01-context/p54-the-agent-decides-from-what-it-is-given.md)).
+
 **Apply.** Logs reachable from the CLI, a selfcheck endpoint, a timestamped log of every
-agent action.
+agent action. A monitor for a background agent reads the source of truth (the tracker, the API),
+not another process's log file. When a monitor stays silent, test it with an event it must show.
 
 ---
 

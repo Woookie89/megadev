@@ -47,6 +47,8 @@ przyjmuje.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 19.11.2026 | rozwiązane 12:03:48Z przy pierwszej próbie, bez odmów; runda 11:42–12:03 UTC, 6 issues (3 wdrożone na żywo, 3 odrzucone), agent jako lokalny proces Node, API na Cloudflare Workers; [zapis przebiegu](../pl/s03e03-out-of-office-debrief.md) |
+| Serwer MCP kursu (`list-challenges`, `solved`) | 19.11.2026 | `true` |
 
 ## Materiały i załączniki
 

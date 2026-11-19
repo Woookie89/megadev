@@ -1,6 +1,6 @@
 # P38 · A skill is a routine that survived its first use
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01, S03E02
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01, S03E02, S03E03
 
 > **Lessons:**
 >
@@ -33,6 +33,16 @@ withdraw an earlier one. The course recorded the skill as T1: "A triage skill of
 requests in, a marked tracker out — each decision citing the fact behind it." After the solve,
 at the user's request, the harness installed the course deck's "ask" card in
 `~/.claude/skills/ask/` (9 files, SHA-256 matching the course).
+
+S03E03: the same `triage` skill got a section 5, "Running alone", because now an agent with no
+person watching read it. It says what to read before every decision (`AGENTS.md` and the
+contract, the whole issue thread, the decision records and the research, the code and tests),
+that code posts the pickup comment and the model does not, when to build, decline or ask the
+owner (a table), what a ship-log line looks like, and what never to do. The runner put the whole
+skill in the prompt. The course counted it as gained, T1: "Your triage skill, grown to run alone:
+per issue, read what is in force, ask the owner only what is open, build the answer, log it once
+it is live." The lesson of the round (records in every turn) so far lives only in the runner's
+code, not in the skill. The course deck's "bet" card was not installed.
 
 ---
 

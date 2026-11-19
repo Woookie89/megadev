@@ -11,6 +11,7 @@ tam jest, ale jest nieaktualne albo przekłamane, model weźmie za prawdę.
 | [P03](p03-zrodlo-to-nie-widok.md) | Źródło to nie widok | S01E03, S03E01 |
 | [P04](p04-pobrany-plik-to-kopia-z-dnia.md) | Pobrany plik to kopia z danego dnia | S01E03, S02E01 |
 | [P05](p05-fakty-zmienne-u-zrodla.md) | Fakty zmienne potwierdzaj u źródła, nie z pamięci modelu | S01E01, S02E03 |
+| [P54](p54-agent-decyduje-z-tego-co-dostal.md) | Agent decyduje tylko z tego, co dostał: każde źródło reguł daj mu w kontekście od pierwszej tury | S03E03 |
 
 ---
 

@@ -11,7 +11,7 @@ odrzucenie obcego, zatrzymanie się), musi być w kodzie.
 | [P24](p24-petla-potrzebuje-wyjscia.md) | Pętla potrzebuje wyjścia: warunku, limitu i widocznego stanu | S02E01 |
 | [P25](p25-dostawca-zawodzi.md) | Dostawca modelu bywa zawodny: uwzględnij to w projekcie | S01E05, S02E02 |
 | [P26](p26-czas-jest-czescia-zachowania.md) | Czas jest częścią zachowania | S02E02 |
-| [P27](p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03, S02E05 |
+| [P27](p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03, S02E05, S03E03 |
 | [P45](p45-zdalny-worker-dostep-i-odbior-wyniku.md) | Zdalny worker: zaplanuj dostęp i odbiór wyniku | S02E04 |
 | [P46](p46-testuj-droge-z-hosta-agenta.md) | Drogę do człowieka testuj z miejsca, w którym działa agent | S02E05 |
 | [P52](p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md) | Źródło, które wciąż się zapełnia: przebuduj wynik przy każdym nowym wejściu, a koniec wyznacza cisza, nie zegar | S03E02 |

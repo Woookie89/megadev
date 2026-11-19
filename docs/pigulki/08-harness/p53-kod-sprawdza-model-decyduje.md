@@ -49,4 +49,4 @@ what to test where.”
 
 ---
 
-← [P52](../05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P52](../05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) →

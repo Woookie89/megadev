@@ -13,6 +13,7 @@ albo kosztują.
 | [P47](p47-zgoda-kanalem-wlasciciela.md) | Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi | S02E05 |
 | [P49](p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) | Sprzeczne źródła nie wygrywają rangą: rozstrzyga właściciel, a do jego odpowiedzi budujesz tylko to, co pewne | S03E01 |
 | [P51](p51-granice-autonomii-wyznacza-regula.md) | Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id | S03E02 |
+| [P55](p55-wiaze-tylko-podpisany-rekord.md) | Wiąże tylko podpisany rekord: niepodpisany to dowód, a otwartą decyzję oddajesz właścicielowi z opcjami i rekomendacją | S03E03 |
 
 ---
 

@@ -1,10 +1,11 @@
 # P27 · Agent musi widzieć własne logi
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03, S02E05
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03, S02E05, S03E03
 
 > **Lekcje:**
 >
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
+> - S03E03 · Rozwój produktu w duchu AI-native → rozdział „Informacja zwrotna” — [po polsku](../../pl/s03e03-ai-native-product-development.md#informacja-zwrotna) · [oryginał EN: „Feedback”](../../s03e03-ai-native-product-development.md#feedback)
 
 **Zasada.** Jeśli harness nie widzi logów serwisu, nie zdiagnozuje go. Człowiek staje się
 wtedy kurierem logów.
@@ -25,7 +26,17 @@ razem. Te linie żyły jednak tylko w pamięci procesu i w logach Rendera, a nie
 „A log is believable only when it is written per event, with offsets, and agrees with times
 someone else kept.”
 
+S03E03: harness śledził agenta, który sam dostarczał issues. Pierwszy monitor, `tail -F` na
+`run.log`, niczego nie pokazał, bo na Windowsie nie widział dopisków robionych przez inny
+proces. Nie było błędu, tylko cisza. Harness zastąpił go pollerem samego trackera
+(`events.mjs`, co 30 s): jedna linia na nowe issue, etykietę, komentarz właściciela,
+zamknięcie, linię ship logu, podpis rekordu i restart runnera. Po tej zamianie harness
+zauważył błędne wdrożenie eksportu CSV 12 s po jego linii w ship logu i poprawił agenta, zanim
+runda się skończyła ([P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)).
+
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.
+Monitor agenta w tle czyta źródło prawdy (tracker, API), a nie plik logu innego procesu.
+Monitor, który milczy, sprawdź zdarzeniem, które na pewno powinien pokazać.
 
 ---
 
