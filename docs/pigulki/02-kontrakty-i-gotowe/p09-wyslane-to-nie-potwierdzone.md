@@ -1,6 +1,6 @@
 # P09 · Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu
 
-> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S01E04
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S01E04, S03E04
 
 > **Lekcje:**
 >
@@ -13,8 +13,17 @@ potwierdzenia, nie od wysyłki.
 „you closed #8 before the reviewer looked.” Odmowa, ponowne otwarcie, zamknięcie dopiero po
 potwierdzeniu.
 
+S03E04: po raporcie z kroku 1 kurs podał tylko, kiedy produkt odpowie („They answer around
+2026-11-19T23:20:40.625Z”). README startera dawało dwie drogi odbioru: mail do skrzynki agenta,
+jeśli ją zbudowano, albo `resume-challenge`. Harness nie miał skrzynki. Czekał w tej samej
+sesji do podanej godziny i o 23:20:47 UTC wywołał `resume-challenge`. Kurs uznał samodzielny
+odbiór odpowiedzi (T2) za niezdobyty: „Give your agent an inbox or a resume step, so it picks
+up product's answer when it arrives.”
+
 **Stosuj.** W planie zapisuj kroki zewnętrzne jako „czeka na X” z jawnym sygnałem
-zakończenia. Kroki, które po nim następują, wstrzymaj do nadejścia tego sygnału.
+zakończenia. Kroki, które po nim następują, wstrzymaj do nadejścia tego sygnału. Gdy
+odpowiedź może przyjść później, niż trwa sesja, odbiór zrób osobnym krokiem: skrzynka,
+webhook albo zaplanowane wznowienie o podanej godzinie.
 
 ---
 

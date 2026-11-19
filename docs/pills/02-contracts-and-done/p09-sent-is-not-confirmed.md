@@ -1,6 +1,6 @@
 # P09 · A step that waits on the other side closes when they confirm
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S01E04
+> Chapter [2. Contracts and "done"](README.md) · episodes: S01E04, S03E04
 
 > **Lessons:**
 >
@@ -13,8 +13,17 @@ confirmation, not on sending.
 Course: "you closed #8 before the reviewer looked." Refusal, reopen, close only after the
 confirmation.
 
+S03E04: after the step-one report, the course said only when product would answer ("They
+answer around 2026-11-19T23:20:40.625Z"). The README offered two ways to get the answer: mail
+to an agent inbox, if you built one, or `resume-challenge`. The harness had no inbox. It waited
+in the same session until that time and called `resume-challenge` at 23:20:47 UTC. The course
+marked "picked up alone" (T2) as not gained: "Give your agent an inbox or a resume step, so it
+picks up product's answer when it arrives."
+
 **Apply.** In a plan, write outside steps as "waiting on X" with an explicit completion
-signal. Block the steps after it on that signal.
+signal. Block the steps after it on that signal. When the answer comes later than the
+session may last, make picking it up a step of its own: an inbox, a webhook or a scheduled
+resume at the stated time.
 
 ---
 

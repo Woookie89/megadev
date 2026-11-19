@@ -65,4 +65,4 @@ jedno: rekordy 0006 i 0007 dotyczą tej samej prośby, ale żaden nie ma pola �
 
 ---
 
-← [P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P56](../02-kontrakty-i-gotowe/p56-gotowe-to-zaobserwowany-rezultat.md) →

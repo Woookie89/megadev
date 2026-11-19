@@ -41,6 +41,11 @@
 | ship log / ship line | Dziennik wdrożeń w trackerze S03E03: jedna linia na issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` wolno wpisać dopiero po odczycie zmiany z adresu na żywo ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
 | próba na makiecie (rehearsal, mock tracker) | Przebieg agenta na lokalnej atrapie trackera i feedu, z wdrożeniem na sucho, przed prawdziwą rundą. W S03E03 wykryła błąd hosta, ale nie błąd z rekordem, bo nie miała takiego issue ([P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)). |
 | supervisor | Osobny proces, który pilnuje agenta w tle: uruchamia go ponownie po każdym wyjściu i kończy pracę, gdy zniknie plik-flaga ([P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md)). |
+| replay (sprawdzarka kursu) | Skrypt kursu, który używa wdrożonej strony jak człowiek (patrzy, celuje, klika po chwili) i drukuje wynik jako JSON. W S03E04 litery nonce wybierały sprawdzenia, a wynik szedł do claimu kroku 2 ([P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md)). |
+| render po kluczu (keyed render) | Odświeżenie listy, które rozpoznaje wiersze po id: wiersze już widoczne zostają w DOM, dochodzą tylko nowe, a zmienia się tylko to, co się zmieniło. Przeciwieństwo przebudowy całej listy przez `innerHTML`, przy której lista mruga ([P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md)). |
+| blok `evidence` | Blok JSON na końcu raportu z dowodem w polach: przepływ, moment `mm:ss`, `expected` (co miało się stać), `got` (co się stało), sha buildu, link do nagrania i receipt ([P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md)). |
+| stempel buildu (build sha) | Skrót commitu wpisany w stronę (`<meta name="build">`, stopka), żeby nagranie i dowód mówiły, który build pokazują. W S03E04 to ostatni commit, który zmienił `app/` ([P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md)). |
+| system diff | Zestawienie dla człowieka: co zmieniło się w zachowaniu, UX i danych względem planu, jakie decyzje zapadły i jakie czekają. W S03E04 obowiązkowa sekcja raportu kroku 2 ([P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md)). |
 
 ---
 

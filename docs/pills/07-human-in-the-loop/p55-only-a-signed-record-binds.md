@@ -63,4 +63,4 @@ stayed open: records 0006 and 0007 cover the same ask, but neither has a "supers
 
 ---
 
-← [P54](../01-context/p54-the-agent-decides-from-what-it-is-given.md) · [chapter](README.md) · [all pills](../README.md)
+← [P54](../01-context/p54-the-agent-decides-from-what-it-is-given.md) · [chapter](README.md) · [all pills](../README.md) · [P56](../02-contracts-and-done/p56-done-is-an-observed-outcome.md) →

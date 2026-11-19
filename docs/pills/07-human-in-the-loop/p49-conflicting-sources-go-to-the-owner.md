@@ -1,11 +1,12 @@
 # P49 · Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled
 
-> Chapter [7. Human in the loop](README.md) · episodes: S03E01
+> Chapter [7. Human in the loop](README.md) · episodes: S03E01, S03E04
 
 > **Lessons:**
 >
 > - S03E01 · Mechanics Behind Product Engineering → chapter "Ownership" — [original (EN)](../../s03e01-mechanics-behind-product-engineering.md#ownership) · [Polish: „Odpowiedzialność”](../../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność)
 > - S03E01 · Mechanics Behind Product Engineering → chapter "Judgment" — [original (EN)](../../s03e01-mechanics-behind-product-engineering.md#judgment) · [Polish: „Osąd”](../../pl/s03e01-mechanics-behind-product-engineering.md#osąd)
+> - S03E04 · Verifying Product Outcomes → chapter "System Diff" — [original (EN)](../../s03e04-verifying-product-outcomes.md#system-diff) · [Polish: „System diff”](../../pl/s03e04-verifying-product-outcomes.md#system-diff)
 
 **Principle.** When two sources say different things, or real data breaks a requirement, the
 agent does not pick a side and does not fill the gap. It writes down both sides with their
@@ -36,6 +37,18 @@ the dates: "dates day first, 05/10, the way the night shift writes them. R-L3K h
 goes." Scope and author got no answer, so the page shows every feed record as it came and has
 no author column. Rook: "you built what was agreed. the rest went back as questions."
 
+S03E04 showed the same rule with a bug instead of two documents. Two requirements of the board
+plan, R1 (new incidents live at the top) and R4 (refresh every 2 s), together moved the list
+under the pointer, and Ack took the wrong incident. Every honest fix changed a plan line, so
+the harness changed nothing. It sent product the evidence (flow `ack-incident`, moment 00:17,
+expected INC-6755, got INC-3647, `file:line`) and four options, recommending a "N new" bar with
+an undo. Product chose something else: "New incidents stay live at the top and Ack stays on the
+row, but Ack asks to confirm, and the confirm names the incident id." The harness built only
+that and wrote the change and its reason into R2 in `plan.md`. Course: "When the honest fix
+breaks a plan line, the plan is wrong too. That is the owner's call, made from your evidence:
+flow, time, which row." The lesson's system diff ends the same way: the agent shows the answer
+and the decisions with a recommended option, and we decide.
+
 **Apply.**
 
 - One conflict is one entry: the tag, the other side (a tag or a record id), the question to
@@ -47,6 +60,9 @@ no author column. Rook: "you built what was agreed. the rest went back as questi
   ([P11](../02-contracts-and-done/p11-empty-answer-is-an-error.md)).
 - Write the owner's answer down with its date and source. It settles only what was asked
   ([P14](../03-memory/p14-one-decision-one-row.md)).
+- When the fix for a bug changes a requirement, it is a conflict too: send the evidence and
+  options, and build only the option the owner picks, even when it is not your recommendation
+  ([P57](../02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md)).
 - Agree up front who decides what ([P33](p33-decision-rights.md)).
 
 ---

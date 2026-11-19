@@ -1,6 +1,6 @@
 # Knowledge pills: working with AI and agents
 
-Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E03) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
+Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E04) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
 
 - **Principle**: what to do.
 - **Why**: the mechanism, i.e. why it is so with models, agents or the harness.
@@ -56,11 +56,14 @@ As of 20.11.2026.
 | [P06](02-contracts-and-done/p06-contract-first.md) | Contract first, then send | S01E01, S01E03 |
 | [P07](02-contracts-and-done/p07-done-is-a-check.md) | "Done" is set by a check, not by a feeling that the work is over | S02E01, MEGA Assessment |
 | [P08](02-contracts-and-done/p08-test-must-fail-first.md) | A test that was never red proves nothing | S01E05 |
-| [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04 |
+| [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04, S03E04 |
 | [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
 | [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
 | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01 |
+| [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md) | "Done" is an observed outcome: check the product the way a person uses it, in time and on a recording | S03E04 |
+| [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md) | A proof names its build and its moment: what should happen, what happened, on which build and at which second | S03E04 |
+| [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) | The recipient's checker is a spec: read it before the first build | S03E04 |
 
 ### [3. Memory outside the chat](03-memory/README.md)
 
@@ -117,7 +120,7 @@ As of 20.11.2026.
 | [P35](07-human-in-the-loop/p35-harness-permissions.md) | Harness permissions are part of the setup: narrow them, don't widen them | S01E03, S02E01, S02E03, S03E01, MEGA Assessment |
 | [P36](07-human-in-the-loop/p36-show-the-plan-first.md) | Show the plan before you publish | S01E04 |
 | [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
-| [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01 |
+| [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01, S03E04 |
 | [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02 |
 | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) | Only a signed record binds: an unsigned one is evidence, and the open call goes to the owner with options and a recommendation | S03E03 |
 
@@ -194,6 +197,10 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S03E03 | AI-Native Product Development | [Planning](../s03e03-ai-native-product-development.md#planning) | [Planowanie](../pl/s03e03-ai-native-product-development.md#planowanie) | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E03 | AI-Native Product Development | [Execution](../s03e03-ai-native-product-development.md#execution) | [Wykonanie](../pl/s03e03-ai-native-product-development.md#wykonanie) | [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md) |
 | S03E03 | AI-Native Product Development | [Feedback](../s03e03-ai-native-product-development.md#feedback) | [Informacja zwrotna](../pl/s03e03-ai-native-product-development.md#informacja-zwrotna) | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P30](06-security/p30-least-privilege.md) |
+| S03E04 | Verifying Product Outcomes | [Acceptance](../s03e04-verifying-product-outcomes.md#acceptance) | [Akceptacja](../pl/s03e04-verifying-product-outcomes.md#akceptacja) | [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md), [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
+| S03E04 | Verifying Product Outcomes | [Verification](../s03e04-verifying-product-outcomes.md#verification) | [Weryfikacja](../pl/s03e04-verifying-product-outcomes.md#weryfikacja) | [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md) |
+| S03E04 | Verifying Product Outcomes | [System Diff](../s03e04-verifying-product-outcomes.md#system-diff) | [System diff](../pl/s03e04-verifying-product-outcomes.md#system-diff) | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md) |
+| S03E04 | Verifying Product Outcomes | [Quality Gates](../s03e04-verifying-product-outcomes.md#quality-gates) | [Bramki jakości](../pl/s03e04-verifying-product-outcomes.md#bramki-jakości) | [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
 <!-- lessons:end -->
 
 ## Episode index
@@ -215,6 +222,7 @@ The debriefs are in Polish only.
 | S03E01 | [status for the night](../pl/s03e01-status-for-the-night-debrief.md) | product engineering | [P02](01-context/p02-conversion-to-text-is-lossy.md), [P03](01-context/p03-source-is-not-the-view.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P35](07-human-in-the-loop/p35-harness-permissions.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
 | S03E02 | [nothing ships unmarked](../pl/s03e02-nothing-ships-unmarked-debrief.md) | translating intent into agent work | [P04](01-context/p04-a-download-is-a-dated-copy.md), [P07](02-contracts-and-done/p07-done-is-a-check.md), [P14](03-memory/p14-one-decision-one-row.md), [P20](04-orchestration/p20-brief-like-an-issue.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
 | S03E03 | [out of office](../pl/s03e03-out-of-office-debrief.md) | AI-native product development | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P30](06-security/p30-least-privilege.md), [P38](08-harness/p38-skill-is-a-routine.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
+| S03E04 | [show me when](../pl/s03e04-show-me-when-debrief.md) | verifying product outcomes | [P06](02-contracts-and-done/p06-contract-first.md), [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md), [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
 | — | MEGA Assessment | your working patterns | [chapter 9](work-patterns.md) |
 
 ## How to add a pill

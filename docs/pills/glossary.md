@@ -39,6 +39,11 @@
 | ship log / ship line | The delivery log on the S03E03 tracker: one line per issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` only after the change is read from the live address ([P10](02-contracts-and-done/p10-check-from-outside.md)). |
 | rehearsal (mock tracker) | A run of the agent against a local fake tracker and feed, with a dry deploy, before the real round. In S03E03 it caught a host bug but not the record mistake, because it had no such issue ([P54](01-context/p54-the-agent-decides-from-what-it-is-given.md)). |
 | supervisor | A separate process that watches a background agent: it restarts it after every exit and stops when a flag file is removed ([P23](05-agents-without-humans/p23-state-outside-the-process.md)). |
+| replay (the course's checker) | A course script that uses the deployed page like a person (looks, aims, clicks a moment later) and prints a JSON result. In S03E04 the nonce letters chose the checks, and the result went with the step-two claim ([P58](02-contracts-and-done/p58-the-checker-is-a-spec.md)). |
+| keyed render | A list refresh that knows rows by id: rows already on screen stay in the DOM, only new ones are added, and only what changed is changed. The opposite of rebuilding the whole list through `innerHTML`, which makes it blink ([P58](02-contracts-and-done/p58-the-checker-is-a-spec.md)). |
+| `evidence` block | A JSON block at the end of a report that carries the proof in fields: the flow, the `mm:ss` moment, `expected` (what should happen), `got` (what happened), the build sha, the recording link and a receipt ([P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md)). |
+| build stamp (build sha) | A short commit hash written into the page (`<meta name="build">`, the footer), so a recording and a proof say which build they show. In S03E04 it is the last commit that changed `app/` ([P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md)). |
+| system diff | A summary for a person: what changed in behaviour, UX and data against the plan, which decisions were made and which are waiting. In S03E04 a required section of the step-two report ([P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md)). |
 
 ---
 

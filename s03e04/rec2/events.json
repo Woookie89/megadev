@@ -1,0 +1,65 @@
+{
+  "url": "https://sched-prod-board.woookie89.workers.dev",
+  "build": "60bbdea",
+  "video": "C:\\projects\\megadev\\s03e04\\rec2\\page@0c7f1a7517c187b7ea9c5d2ae7d9d28f.webm",
+  "events": [
+    {
+      "at": "00:00",
+      "flow": "open-board",
+      "what": "open the board"
+    },
+    {
+      "at": "00:00",
+      "flow": "open-board",
+      "what": "incidents on screen (loader seen: true), build 60bbdea",
+      "rows": 8
+    },
+    {
+      "at": "00:08",
+      "flow": "watch-board",
+      "what": "new incident INC-1868 appeared at the top without a reload"
+    },
+    {
+      "at": "00:12",
+      "flow": "ack-incident",
+      "what": "pointer on the Ack of row 3, INC-6755; on-call means to take INC-6755",
+      "targetId": "INC-6755"
+    },
+    {
+      "at": "00:16",
+      "flow": "ack-incident",
+      "what": "a new incident arrived; the row under the pointer is now INC-3647",
+      "under": "INC-3647"
+    },
+    {
+      "at": "00:16",
+      "flow": "ack-incident",
+      "what": "the confirm names INC-3647",
+      "named": "INC-3647",
+      "targetId": "INC-6755"
+    },
+    {
+      "at": "00:19",
+      "flow": "ack-incident",
+      "what": "Cancel: no ack sent for INC-3647",
+      "acksSoFar": 0
+    },
+    {
+      "at": "00:23",
+      "flow": "ack-incident",
+      "what": "acked INC-6755 (meant INC-6755)",
+      "expected": "INC-6755",
+      "got": "INC-6755",
+      "receipt": "a1.qr2PXITMcB1hvvLh.-gvnHiANvOV3kV7PCMEgUOifuFP-ruLpQ99a6m6gEPJMT9m9bnyMeXpvL2RTxGbXLICh6KqoiC_FCP_1J0DrgdHChQ66yP9fy_iV1ZNWeX0FwMnBpFmbl2wt30ILWfwcN_y_wIcipf5MgWfeFDkLLVCTIpdDemRELCCqN5qMo16jESRlxhAFk8awz-Pq1r6A_61R",
+      "acksTotal": 1
+    }
+  ],
+  "acks": [
+    {
+      "id": "INC-6755",
+      "ackedAt": "2026-11-19T23:24:43.718Z",
+      "receipt": "a1.qr2PXITMcB1hvvLh.-gvnHiANvOV3kV7PCMEgUOifuFP-ruLpQ99a6m6gEPJMT9m9bnyMeXpvL2RTxGbXLICh6KqoiC_FCP_1J0DrgdHChQ66yP9fy_iV1ZNWeX0FwMnBpFmbl2wt30ILWfwcN_y_wIcipf5MgWfeFDkLLVCTIpdDemRELCCqN5qMo16jESRlxhAFk8awz-Pq1r6A_61R",
+      "at": "00:23"
+    }
+  ]
+}
