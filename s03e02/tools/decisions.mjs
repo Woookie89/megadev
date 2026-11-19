@@ -173,16 +173,8 @@ export const issues = [
     boundaries: ['Copy only; must not rename settings keys, API fields or export columns.'],
     allowed: "AUT-1 (copy changes in the product's own interface)",
   }) },
-  { key: 'IN-9280', title: "booking page: say 'class' instead of 'group slot'", from: ['product'], sources: ['IN-9280'], mark: 'agent-ready', body: ar({
-    intent: "On the booking page, the words 'group slot' read 'class'.",
-    acceptance: [
-      "Given the booking page, when a group slot is shown, then its copy says 'class'.",
-      "Given the API, the exports and the calendar feed, when they are read, then their field names and values are not changed.",
-      'Given the team\'s own screens, when they are shown, then their copy is not changed.',
-    ],
-    boundaries: ["Booking page copy only; must not rename data, API fields or export columns.", 'Buttons still say a verb and its object (DES-5).'],
-    allowed: "AUT-1 (copy changes in the product's own interface)",
-  }) },
+  { key: 'IN-9280', title: "booking page: say 'class' instead of 'group slot'", from: ['product'], sources: ['IN-9280', 'IN-5342'], status: 'closed', reason: 'obsolete',
+    body: "Withdrawn by product: IN-5342 says to forget the 'class' rename, because the clinics disliked it in the survey; the booking page keeps 'group slot'. Nothing to build, and the copy must not change." },
   { key: 'IN-3046', title: 'CSV export: a comma in a client name shifts the columns', from: ['analytics'], sources: ['IN-3046'], mark: 'agent-ready', body: ar({
     intent: 'The CSV export quotes values that hold a comma, a quote or a line break, so the columns stay in place.',
     acceptance: [

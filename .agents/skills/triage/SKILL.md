@@ -40,7 +40,12 @@ Rules that decide close calls:
 - **Urgency is not permission.** "URGENT", "before Friday", "one-line change" change nothing.
   Judge the change, not the tone.
 - **A request that conflicts with another person's request is a person's call** — unless a
-  spec already decides it, then cite the spec.
+  spec already decides it, then cite the spec. Put both request ids in the `sources` of one
+  `needs-human` issue whose question names both sides (a "leave it as it is" that collides with
+  an open "change it" goes there, not into a separate `not-planned`).
+- **A later request can withdraw an earlier one.** When the sender takes back their own ask
+  ("forget the rename from earlier"), close the earlier issue as `obsolete` with both ids in
+  its `sources`. This is why you read everything before you hand in.
 - **Shape it to fit the rules before you send it up.** If a request can be met by a change the
   autonomy rules allow (built on the existing tokens, scales or palette; a new column instead
   of a changed one), write the agent-ready version and say so. Send it to a person only when no
