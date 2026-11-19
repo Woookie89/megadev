@@ -1,0 +1,20 @@
+{
+  "issues": {
+    "1": {
+      "acked": true,
+      "handled": 1,
+      "worked": true
+    },
+    "2": {
+      "acked": true,
+      "handled": 4,
+      "worked": true
+    },
+    "3": {
+      "acked": true,
+      "handled": 1,
+      "worked": true
+    }
+  },
+  "feedSet": false
+}
