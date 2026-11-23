@@ -1,6 +1,6 @@
 # P34 · Zgoda ma zakres
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04
+> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04, S04E01
 
 > **Lekcje:**
 >
@@ -11,6 +11,13 @@ osobnej zgody.
 
 **Przypadek.** S01E04, KEEP: „Human's yes covers pushes, issues, branches and PRs inside
 Woookie89/s01e04-rig-handover only”.
+
+S04E01: człowiek wybrał, żeby nie ruszać `http.mjs` startera (opcja A: „skup się na zadaniu”).
+Po odmowie kursu `check-lane` kazał odpowiedzieć w kodzie, a harness zmienił `http.mjs` (lista
+hostów na sekret, bez przekierowań), uznając to za część zadania. README startera na to pozwala
+(„You and your harness may change anything here, code included.”), ale zgody człowieka na tę
+zmianę w logu nie ma, a w HANDOVER wisi jako otwarta. Gdy nowe wymaganie wykracza poza zakres
+wcześniejszego „tak” albo „zostaw”, wróć do człowieka przed zmianą.
 
 ---
 

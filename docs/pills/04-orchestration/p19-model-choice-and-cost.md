@@ -1,6 +1,6 @@
 # P19 · Match the model to the task, and treat cost as a requirement
 
-> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S01E05, S02E02
+> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S01E05, S02E02, S04E01
 
 > **Lessons:**
 >
@@ -15,6 +15,11 @@ well-described tasks get a cheaper one. An unattended agent gets a call limit an
 - S01E05: from free Gemini to OpenRouter, then to DeepSeek because of the bill. A daily
   limit of 15 model calls.
 - S02E02: a few cents per mail on Opus 5.5 and no spending limit (left open).
+- S04E01: `openrouter/deepseek/deepseek-v4.1-flash` through Pi and one model call per run,
+  because the work goes through a script
+  ([P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md)). The log
+  says the cost is cents, and the human gave the key's daily limit as 2 USD. The model-provider
+  account and the spending are the human's, so the harness asked before using them.
 
 ---
 

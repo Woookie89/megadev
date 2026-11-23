@@ -1,6 +1,6 @@
 # MEGA Challenges
 
-Indeks wyzwań z Week 1–3 (S01E01–S03E05). Każde wyzwanie ma osobny plik
+Indeks wyzwań z Week 1–4 (S01E01–S04E01). Każde wyzwanie ma osobny plik
 w [challenges/](challenges/) z opisem napisanym własnymi słowami: cel, role
 użytkownika i harnessu, wymagania, ograniczenia, kryterium ukończenia, status
 i materiały. Pełne instrukcje, materiały i aktualny status są na stronach
@@ -16,7 +16,7 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 > zmienić. „HQ” to status z listy wyzwań HQ, a „MCP” to flaga `solved` z serwera
 > MCP kursu. Przy S01E02 te źródła się różnią: szczegóły są w pliku wyzwania.
 > S02E01 i S02E02 zaktualizowano 15.11.2026, S02E03 i S02E04 16.11.2026, S02E05 17.11.2026,
-> S03E01, S03E02, S03E03 i S03E04 19.11.2026, a S03E05 24.11.2026, po rozwiązaniu (zapisy
+> S03E01, S03E02, S03E03 i S03E04 19.11.2026, a S03E05 i S04E01 24.11.2026, po rozwiązaniu (zapisy
 > przebiegu w `pl/`).
 
 ## Week 1 — Core
@@ -55,6 +55,15 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 | S03E04 | [show me when](challenges/S03E04_show-me-when.md) | 12.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/show-me-when) |
 | S03E05 | [what came back](challenges/S03E05_what-came-back.md) | 13.11 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/what-came-back) |
 
+## Week 4
+
+**Prowadzący:** nie znaleziono · **Terminy:** nie znaleziono. Z listy kursu wiadomo, że S04E02–S04E05
+istnieją i są jeszcze nierozwiązane, a ich plików tu nie ma.
+
+| Kod | Tytuł | Data | Status HQ / MCP | Strona HQ |
+| --- | --- | --- | --- | --- |
+| S04E01 | [twenty payouts](challenges/S04E01_twenty-payouts.md) | nie znaleziono | rozwiązane 23.11.2026 23:23Z / `true` | [link](https://hq.mega.dev/challenges/twenty-payouts) |
+
 ## Źródła
 
 - Notatki ze stron HQ z 13.11.2026: daty, prowadzący, statusy HQ, wymagania
@@ -64,3 +73,5 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
   `solved`.
 - Strony HQ (14.11.2026, zalogowana sesja, tylko odczyt): statusy State i wykazy
   załączników w plikach wyzwań.
+- S04E01 (24.11.2026): opis, sposób startu i flaga `solved` z serwera MCP kursu
+  (`list-challenges`) oraz log `s04e01/log.md`. Strony HQ nie odczytano.

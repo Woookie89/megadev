@@ -46,6 +46,10 @@
 | system diff | A summary for a person: what changed in behaviour, UX and data against the plan, which decisions were made and which are waiting. In S03E04 a required section of the step-two report ([P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md)). |
 | guardrail | A limit written in the release record that a secondary metric must not cross (for example, median TTR at most +5%). A crossed guardrail is a bug: the team fixes or rolls back, with no owner decision ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
 | verdict (verb) | One of the six S03E05 decisions for a group of signals: `expand`, `revise`, `simplify`, `revert`, `investigate`, `stop`. Written with signal ids and a `who` field (`agent` or `owner`) ([P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md)). |
+| secret egress | A secret (a key, a ticket) sent to a host it was not meant to reach. In S04E01 the first run sent the practice key to `verify-s04.mega.dev`, a host named in the manual, and the course refused the run ([P61](06-security/p61-a-secret-has-a-host-list-in-code.md)). |
+| wire log | A file where the script records every request: host, header names (not values), status and the redirect host. It lets you say where each secret went ([P61](06-security/p61-a-secret-has-a-host-list-in-code.md)). |
+| parked task (`needs-owner`) | A task the agent does not decide alone: it gets a `needs-owner` flag with a reason and waits for the owner's decision. In S04E01 the owner chooses on the Challenge page (`on-file`, `new`, `decline`), and the agent finishes the task in a separate step ([P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md)). |
+| account on file | The only account the S04E01 manual allows payouts to. It differs between attempts, so the script reads it from the manual each time ([P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md)). |
 
 ---
 

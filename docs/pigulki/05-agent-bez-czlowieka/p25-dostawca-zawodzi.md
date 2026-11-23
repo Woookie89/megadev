@@ -1,6 +1,6 @@
 # P25 · Dostawca modelu bywa zawodny: uwzględnij to w projekcie
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E02, S04E01
 
 > **Lekcje:**
 >
@@ -15,6 +15,10 @@ normalne zdarzenia, a nie wyjątki.
 - S01E05: jeden błąd 503 od Gemini i test writer się poddał, co kosztowało rundę.
 - S02E02: odmowa (`content_filter`) od Opus i serwerowe `web_fetch` Anthropic z odmową dla
   domeny kursu (`url_not_allowed`).
+- S04E01: ćwiczenie przez Pi dało 401 „API key expired”. Klucz OpenRouter skopiowany z `.env`
+  wcześniejszego wyzwania wygasł, a błąd wyglądał jak awaria modelu. Przebieg ruszył po wpisaniu
+  przez człowieka świeżego klucza. 401 to problem klucza, a nie modelu: zanim zmienisz model,
+  sprawdź uwierzytelnienie.
 
 **Stosuj.**
 

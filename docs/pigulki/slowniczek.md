@@ -48,6 +48,10 @@
 | system diff | Zestawienie dla człowieka: co zmieniło się w zachowaniu, UX i danych względem planu, jakie decyzje zapadły i jakie czekają. W S03E04 obowiązkowa sekcja raportu kroku 2 ([P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md)). |
 | bariera (guardrail) | Granica zapisana w rekordzie wydania, której metryka pomocnicza nie może przekroczyć (np. mediana TTR najwyżej +5%). Przekroczona bariera to błąd: zespół poprawia albo wycofuje, bez decyzji właściciela ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
 | werdykt (verb) | Jedna z sześciu decyzji S03E05 dla grupy sygnałów: `expand`, `revise`, `simplify`, `revert`, `investigate`, `stop`. Wpisana z id sygnałów i polem `who` (`agent` albo `owner`) ([P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md)). |
+| wyciek sekretu (secret egress) | Wysłanie sekretu (klucza, ticketu) do hosta, do którego nie miał trafić. W S04E01 pierwszy przebieg wysłał klucz ćwiczebny do `verify-s04.mega.dev`, hosta z podręcznika, i kurs odrzucił przebieg ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
+| dziennik sieci (wire log) | Plik, w którym skrypt zapisuje każde żądanie: host, nazwy nagłówków (nie wartości), status i host przekierowania. Pozwala powiedzieć, dokąd poszedł każdy sekret ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
+| zaparkowane zadanie (parked, `needs-owner`) | Zadanie, którego agent nie rozstrzyga sam: dostaje flagę `needs-owner` z powodem i czeka na decyzję właściciela. W S04E01 właściciel wybiera na stronie wyzwania (`on-file`, `new`, `decline`), a agent kończy zadanie osobnym krokiem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
+| konto z akt (account on file) | Jedyne konto, na które wolno wypłacać według podręcznika S04E01. Różni się między próbami, więc skrypt czyta je z podręcznika za każdym razem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
 
 ---
 

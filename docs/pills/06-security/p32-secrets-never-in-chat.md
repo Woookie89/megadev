@@ -1,6 +1,6 @@
 # P32 · Secrets never go through the chat
 
-> Chapter [6. Security: the trust boundary belongs to code](README.md) · episodes: S02E02, S02E04
+> Chapter [6. Security: the trust boundary belongs to code](README.md) · episodes: S02E02, S02E04, S04E01
 
 > **Lessons:**
 >
@@ -18,6 +18,13 @@ S02E04: the job's MCP link is a key. Locally `run.sh` generates the MCP config f
 lives only in the routine prompt, which only the owner sees, and in the `JOB_URL` variable,
 never in the repo. The routine's prompt and run log still keep it until it expires (about
 24 h).
+
+S04E01: the human pasted the practice key into the chat, although the course says to put it in
+the agent's variables, in an editor of their own, because a value the harness writes stays in
+its log. The harness noted in the log that the key had been in the chat and did not write it
+to any file. The human typed it into `vars.json` themselves, and that file is in `.gitignore`
+(`**/host-desk/vars.json`). In the same challenge the practice key also went to the manual's
+host in the refused run ([P61](p61-a-secret-has-a-host-list-in-code.md)).
 
 **Apply.** Commit only `.env.example`. Redact secrets on the agent's output, not just its
 input.

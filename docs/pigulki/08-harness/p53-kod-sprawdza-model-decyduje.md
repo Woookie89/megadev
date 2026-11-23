@@ -1,6 +1,6 @@
 # P53 · Kod pobiera, składa i sprawdza, a model decyduje: trzymaj każde po swojej stronie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S03E02
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S03E02, S04E01
 
 > **Lekcje:**
 >
@@ -34,6 +34,12 @@ tego, czego nie wolno zrobić: `acceptance has no "not" case`. Briefy wyglądał
 dopisał brakujące przypadki, a druga budowa przeszła. Kurs zapisał ten podział w toolboxie
 jako T3: „Code fetches and files; the model decides. Keep each on its own side and you know
 what to test where.”
+
+S04E01: ta sama granica przy partii wypłat z limitem 6000 ms. Kod robi całą partię (pobiera
+zadania, liczy kwoty, sprawdza konto z akt, płaci), a model uruchamia skrypt jednym wywołaniem
+i relacjonuje wynik. Przypadki spoza reguł (inne konto, przekierowany adres) kod oznacza dla
+właściciela. W toolboxie kursu to `routine-script`
+([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)).
 
 **Stosuj.**
 

@@ -45,4 +45,4 @@ wydania są wygrane, a w jednym bariera TTR wyszła +8,2% przy limicie +5% (patr
 
 ---
 
-← [P59](p59-liczba-w-podsumowaniu-to-twierdzenie.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P59](p59-liczba-w-podsumowaniu-to-twierdzenie.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) →

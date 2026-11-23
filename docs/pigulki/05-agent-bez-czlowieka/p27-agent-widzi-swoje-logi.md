@@ -1,6 +1,6 @@
 # P27 · Agent musi widzieć własne logi
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03, S02E05, S03E03
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S01E05, S02E03, S02E05, S03E03, S04E01
 
 > **Lekcje:**
 >
@@ -33,6 +33,13 @@ proces. Nie było błędu, tylko cisza. Harness zastąpił go pollerem samego tr
 zamknięcie, linię ship logu, podpis rekordu i restart runnera. Po tej zamianie harness
 zauważył błędne wdrożenie eksportu CSV 12 s po jego linii w ship logu i poprawił agenta, zanim
 runda się skończyła ([P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)).
+
+S04E01: skrypt obciął końcową odpowiedź kursu do 400 znaków (`.slice(0,400)`), więc podpowiedź
+(`hint`) z odmowy przyszła ucięta: „What did your agent do alone in that run: ...”. Kierunek
+wskazał `pointer` na `check-lane`. Po poprawce pełna końcowa odpowiedź trafia do
+`run-final.secrets.local.json`, a dziennik sieci `wire.secrets.local.json` pokazuje każde żądanie
+([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). Wniosek z HANDOVER: czytaj
+odmowę w całości.
 
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.
 Monitor agenta w tle czyta źródło prawdy (tracker, API), a nie plik logu innego procesu.

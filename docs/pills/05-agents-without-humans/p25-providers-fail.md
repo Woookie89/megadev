@@ -1,6 +1,6 @@
 # P25 · Model providers fail, so design for it
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E02, S04E01
 
 > **Lessons:**
 >
@@ -15,6 +15,10 @@ normal events, not exceptions.
 - S01E05: one 503 from Gemini and the test writer gave up, which cost a round.
 - S02E02: a refusal (`content_filter`) from Opus, and Anthropic's server-side `web_fetch`
   refusing the course domain (`url_not_allowed`).
+- S04E01: practice through Pi returned 401 "API key expired". The OpenRouter key copied from
+  the `.env` of an earlier challenge had expired, and the error looked like a model fault. The
+  run went ahead once the human typed a fresh key. A 401 is a key problem, not a model problem:
+  check the authentication before you change the model.
 
 **Apply.**
 

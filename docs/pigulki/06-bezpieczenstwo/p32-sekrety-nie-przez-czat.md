@@ -1,6 +1,6 @@
 # P32 · Sekrety nigdy przez czat
 
-> Rozdział [6. Bezpieczeństwo: granica zaufania należy do kodu](README.md) · epizody: S02E02, S02E04
+> Rozdział [6. Bezpieczeństwo: granica zaufania należy do kodu](README.md) · epizody: S02E02, S02E04, S04E01
 
 > **Lekcje:**
 >
@@ -17,6 +17,13 @@ S02E04: link MCP zadania to klucz. Lokalnie `run.sh` generuje z `secrets.local.j
 konfigurację MCP do pliku `mcp.secrets.local.json`, ignorowanego przez git. W chmurze link
 jest tylko w prompcie routine, widocznym dla właściciela, i w zmiennej `JOB_URL`, nigdy
 w repo. Prompt i log przebiegu routine przechowują go jednak do wygaśnięcia (około 24 h).
+
+S04E01: człowiek wkleił klucz ćwiczebny (practice key) do czatu, choć kurs każe wpisać go
+w zmiennych agenta, w osobnym edytorze, bo wartość zapisana przez harness zostaje w jego logu.
+Harness odnotował w logu, że klucz padł w czacie, i nie zapisał go w żadnym pliku. Człowiek
+wpisał go sam do `vars.json`, a plik jest w `.gitignore` (`**/host-desk/vars.json`). W tym samym
+wyzwaniu klucz ćwiczebny trafił jeszcze do hosta z podręcznika w odrzuconym przebiegu
+([P61](p61-sekret-ma-liste-hostow-w-kodzie.md)).
 
 **Stosuj.** Commituj tylko `.env.example`. Maskowanie sekretów na wyjściu agenta, nie tylko
 na wejściu.

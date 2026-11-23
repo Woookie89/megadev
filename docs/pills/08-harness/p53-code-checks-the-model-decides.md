@@ -1,6 +1,6 @@
 # P53 · Code fetches, files and checks; the model decides: keep each on its own side
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S03E02
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S03E02, S04E01
 
 > **Lessons:**
 >
@@ -34,6 +34,13 @@ happen: `acceptance has no "not" case`. The briefs looked finished. The model ad
 missing cases and the second build passed. The course put this split in the toolbox as T3:
 "Code fetches and files; the model decides. Keep each on its own side and you know what to
 test where."
+
+S04E01: the same split on a payout batch with a 6000 ms limit. Code does the whole batch (it
+fetches the tasks, computes the amounts, checks the account on file, pays), and the model starts
+the script with one call and reports the result. Cases outside the rules (another account, a
+redirected address) the code flags for the owner. In the course toolbox this is
+`routine-script`
+([P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md)).
 
 **Apply.**
 

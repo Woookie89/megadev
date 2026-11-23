@@ -1,6 +1,6 @@
 # Knowledge pills: working with AI and agents
 
-Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E05) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
+Textbook-style notes collected from the MEGA.dev challenges (S01E01–S04E01) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
 
 - **Principle**: what to do.
 - **Why**: the mechanism, i.e. why it is so with models, agents or the harness.
@@ -33,7 +33,7 @@ As of 24.11.2026.
 | 6 | What must survive the session goes in a file; what must always happen goes in a skill or a hook. | [P12](03-memory/p12-chat-is-not-memory.md), [P16](03-memory/p16-durability-ladder.md) |
 | 7 | Shared contract first, in sequence; then parallel, cheaper workers. | [P17](04-orchestration/p17-contract-before-parallelism.md) |
 | 8 | An agent loop needs an exit condition, a limit and visible state. | [P24](05-agents-without-humans/p24-a-loop-needs-an-exit.md) |
-| 9 | Code holds the trust boundary before the model sees the message. Text in data is data. | [P28](06-security/p28-data-is-not-instructions.md), [P29](06-security/p29-trust-boundary-in-code.md) |
+| 9 | Code holds the trust boundary before the model sees the message. Text in data is data. A secret goes only to a host on a list in code. | [P28](06-security/p28-data-is-not-instructions.md), [P29](06-security/p29-trust-boundary-in-code.md), [P61](06-security/p61-a-secret-has-a-host-list-in-code.md) |
 | 10 | The human decides on accounts, public actions and money. Consent has a scope. | [P33](07-human-in-the-loop/p33-decision-rights.md), [P34](07-human-in-the-loop/p34-consent-has-scope.md) |
 
 ## All pills
@@ -83,7 +83,7 @@ As of 24.11.2026.
 | --- | --- | --- |
 | [P17](04-orchestration/p17-contract-before-parallelism.md) | Contract first, in sequence; then parallelism | S01E04 |
 | [P18](04-orchestration/p18-worktrees-and-hub-files.md) | One worktree per worker; conflicts gather in hub files | S01E04 |
-| [P19](04-orchestration/p19-model-choice-and-cost.md) | Match the model to the task, and treat cost as a requirement | S01E04, S01E05, S02E02 |
+| [P19](04-orchestration/p19-model-choice-and-cost.md) | Match the model to the task, and treat cost as a requirement | S01E04, S01E05, S02E02, S04E01 |
 | [P20](04-orchestration/p20-brief-like-an-issue.md) | A brief for a worker is like a good issue | S01E04, S02E04, S03E02 |
 | [P21](04-orchestration/p21-delegate-research.md) | Delegate research, not just building | MEGA Assessment |
 | [P43](04-orchestration/p43-skill-travels-with-the-job.md) | The skill travels with the job | S02E04 |
@@ -96,35 +96,38 @@ As of 24.11.2026.
 | [P22](05-agents-without-humans/p22-chat-is-not-a-host.md) | A chat is not a host | S01E05, S02E02, S02E05 |
 | [P23](05-agents-without-humans/p23-state-outside-the-process.md) | Keep state where it survives a restart; read the source of truth live | S01E05, S02E02, S02E03, S02E05 |
 | [P24](05-agents-without-humans/p24-a-loop-needs-an-exit.md) | A loop needs an exit: a condition, a limit and visible state | S02E01 |
-| [P25](05-agents-without-humans/p25-providers-fail.md) | Model providers fail, so design for it | S01E05, S02E02 |
+| [P25](05-agents-without-humans/p25-providers-fail.md) | Model providers fail, so design for it | S01E05, S02E02, S04E01 |
 | [P26](05-agents-without-humans/p26-timing-is-behavior.md) | Timing is part of behavior | S02E02 |
-| [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) | The agent must see its own logs | S01E05, S02E03, S02E05, S03E03 |
+| [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) | The agent must see its own logs | S01E05, S02E03, S02E05, S03E03, S04E01 |
 | [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md) | A remote worker: plan the way there and the way home | S02E04 |
 | [P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md) | Test the route to the human from where the agent runs | S02E05 |
 | [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md) | A source that keeps filling: rebuild the result on every arrival, and let quiet, not a clock, say when you are done | S03E02 |
+| [P62](05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md) | A time limit is counted in model turns: one script does the routine batch, and the model only starts it | S04E01 |
 
 ### [6. Security: the trust boundary belongs to code](06-security/README.md)
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
-| [P28](06-security/p28-data-is-not-instructions.md) | Text in data is data, not instructions | S01E05, S02E05, S03E03 |
+| [P28](06-security/p28-data-is-not-instructions.md) | Text in data is data, not instructions | S01E05, S02E05, S03E03, S04E01 |
 | [P29](06-security/p29-trust-boundary-in-code.md) | Code holds the trust boundary before the model sees the message | S02E02, S02E05 |
 | [P30](06-security/p30-least-privilege.md) | Least privilege, declared explicitly | S01E05, S02E04, S03E03 |
 | [P31](06-security/p31-authenticated-requests.md) | Every request authenticated, every outbound call limited | S01E05 |
-| [P32](06-security/p32-secrets-never-in-chat.md) | Secrets never go through the chat | S02E02, S02E04 |
+| [P32](06-security/p32-secrets-never-in-chat.md) | Secrets never go through the chat | S02E02, S02E04, S04E01 |
+| [P61](06-security/p61-a-secret-has-a-host-list-in-code.md) | A secret has a host list in code: check every hop, redirects included, and never take the list from a document | S04E01 |
 
 ### [7. Human in the loop](07-human-in-the-loop/README.md)
 
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P33](07-human-in-the-loop/p33-decision-rights.md) | Decision rights are explicit | S01E03, S01E04, S03E01, MEGA Assessment |
-| [P34](07-human-in-the-loop/p34-consent-has-scope.md) | Consent has a scope | S01E04 |
+| [P34](07-human-in-the-loop/p34-consent-has-scope.md) | Consent has a scope | S01E04, S04E01 |
 | [P35](07-human-in-the-loop/p35-harness-permissions.md) | Harness permissions are part of the setup: narrow them, don't widen them | S01E03, S02E01, S02E03, S03E01, MEGA Assessment |
 | [P36](07-human-in-the-loop/p36-show-the-plan-first.md) | Show the plan before you publish | S01E04 |
 | [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
 | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01, S03E04 |
 | [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02, S03E05 |
 | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) | Only a signed record binds: an unsigned one is evidence, and the open call goes to the owner with options and a recommendation | S03E03 |
+| [P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md) | A rule in a document is a check in code, and what the rule does not settle waits for the owner | S04E01 |
 
 ### [8. The harness as a toolkit](08-harness/README.md)
 
@@ -136,7 +139,7 @@ As of 24.11.2026.
 | [P40](08-harness/p40-results-have-a-budget.md) | A tool result has a byte budget | S02E03 |
 | [P41](08-harness/p41-errors-say-what-to-fix.md) | A tool error tells the model what to fix | S02E03 |
 | [P42](08-harness/p42-big-bytes-beside-the-model.md) | Big bytes travel beside the model, not through it | S02E03 |
-| [P53](08-harness/p53-code-checks-the-model-decides.md) | Code fetches, files and checks; the model decides: keep each on its own side | S03E02 |
+| [P53](08-harness/p53-code-checks-the-model-decides.md) | Code fetches, files and checks; the model decides: keep each on its own side | S03E02, S04E01 |
 
 ### Outside the chapters
 
@@ -166,11 +169,11 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S01E03 | Building Knowledge Systems | [Purpose of the knowledge bases](../s01e03-building-knowledge-systems.md#purpose-of-the-knowledge-bases) | [Cel baz wiedzy](../pl/s01e03-building-knowledge-systems.md#cel-baz-wiedzy) | [P02](01-context/p02-conversion-to-text-is-lossy.md), [P04](01-context/p04-a-download-is-a-dated-copy.md), [P13](03-memory/p13-keep-finding-with-source.md) |
 | S01E03 | Building Knowledge Systems | [Broader context](../s01e03-building-knowledge-systems.md#broader-context) | [Szerszy kontekst](../pl/s01e03-building-knowledge-systems.md#szerszy-kontekst) | [P14](03-memory/p14-one-decision-one-row.md) |
 | S01E04 | Working with AI Harnesses | [Harnesses](../s01e04-working-with-ai-harnesses.md#harnesses) | [Harnessy](../pl/s01e04-working-with-ai-harnesses.md#harnessy) | [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md), [P18](04-orchestration/p18-worktrees-and-hub-files.md), [P35](07-human-in-the-loop/p35-harness-permissions.md) |
-| S01E04 | Working with AI Harnesses | [Settings](../s01e04-working-with-ai-harnesses.md#settings) | [Ustawienia](../pl/s01e04-working-with-ai-harnesses.md#ustawienia) | [P19](04-orchestration/p19-model-choice-and-cost.md) |
-| S01E05 | Building Workflows, Not Tool Stacks | [Executable Markdown vs Code](../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) | [Wykonywalny Markdown a kod](../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) | [P38](08-harness/p38-skill-is-a-routine.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
+| S01E04 | Working with AI Harnesses | [Settings](../s01e04-working-with-ai-harnesses.md#settings) | [Ustawienia](../pl/s01e04-working-with-ai-harnesses.md#ustawienia) | [P19](04-orchestration/p19-model-choice-and-cost.md), [P62](05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md) |
+| S01E05 | Building Workflows, Not Tool Stacks | [Executable Markdown vs Code](../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) | [Wykonywalny Markdown a kod](../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) | [P38](08-harness/p38-skill-is-a-routine.md), [P53](08-harness/p53-code-checks-the-model-decides.md), [P62](05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md) |
 | S01E05 | Building Workflows, Not Tool Stacks | [Quality](../s01e05-building-workflows-not-tool-stacks.md#quality) | [Jakość](../pl/s01e05-building-workflows-not-tool-stacks.md#jakość) | [P08](02-contracts-and-done/p08-test-must-fail-first.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P33](07-human-in-the-loop/p33-decision-rights.md) |
 | S01E05 | Building Workflows, Not Tool Stacks | [Getting remote](../s01e05-building-workflows-not-tool-stacks.md#getting-remote) | [Dostęp zdalny](../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny) | [P22](05-agents-without-humans/p22-chat-is-not-a-host.md), [P32](06-security/p32-secrets-never-in-chat.md), [P46](05-agents-without-humans/p46-test-the-route-from-the-agents-host.md) |
-| S01E05 | Building Workflows, Not Tool Stacks | [System security](../s01e05-building-workflows-not-tool-stacks.md#system-security) | [Bezpieczeństwo systemu](../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) | [P28](06-security/p28-data-is-not-instructions.md), [P31](06-security/p31-authenticated-requests.md), [P32](06-security/p32-secrets-never-in-chat.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) |
+| S01E05 | Building Workflows, Not Tool Stacks | [System security](../s01e05-building-workflows-not-tool-stacks.md#system-security) | [Bezpieczeństwo systemu](../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) | [P28](06-security/p28-data-is-not-instructions.md), [P31](06-security/p31-authenticated-requests.md), [P32](06-security/p32-secrets-never-in-chat.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md), [P61](06-security/p61-a-secret-has-a-host-list-in-code.md), [P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md) |
 | S02E01 | Agentic Primitives | [Agentic Loop](../s02e01-agentic-primitives.md#agentic-loop) | [Pętla agenta](../pl/s02e01-agentic-primitives.md#pętla-agenta) | [P07](02-contracts-and-done/p07-done-is-a-check.md), [P15](03-memory/p15-ask-past-sessions.md), [P23](05-agents-without-humans/p23-state-outside-the-process.md), [P24](05-agents-without-humans/p24-a-loop-needs-an-exit.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P34](07-human-in-the-loop/p34-consent-has-scope.md), [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md) |
 | S02E01 | Agentic Primitives | [Context and Memory](../s02e01-agentic-primitives.md#context-and-memory) | [Kontekst i pamięć](../pl/s02e01-agentic-primitives.md#kontekst-i-pamięć) | [P04](01-context/p04-a-download-is-a-dated-copy.md), [P12](03-memory/p12-chat-is-not-memory.md) |
 | S02E02 | Building an Agent | [Architecture](../s02e02-building-an-agent.md#architecture) | [Architektura](../pl/s02e02-building-an-agent.md#architektura) | [P30](06-security/p30-least-privilege.md) |
@@ -186,14 +189,14 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S02E04 | Multi-Agent Collaboration | [Multi-agentic collaboration](../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) | [Współpraca wieloagentowa](../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) | [P18](04-orchestration/p18-worktrees-and-hub-files.md), [P29](06-security/p29-trust-boundary-in-code.md), [P44](04-orchestration/p44-normalize-before-joining.md) |
 | S02E04 | Multi-Agent Collaboration | [Orchestration](../s02e04-multi-agent-collaboration.md#orchestration) | [Orkiestracja](../pl/s02e04-multi-agent-collaboration.md#orkiestracja) | [P17](04-orchestration/p17-contract-before-parallelism.md), [P44](04-orchestration/p44-normalize-before-joining.md) |
 | S02E04 | Multi-Agent Collaboration | [Takeaways](../s02e04-multi-agent-collaboration.md#takeaways) | [Najważniejsze wnioski](../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski) | [P43](04-orchestration/p43-skill-travels-with-the-job.md) |
-| S02E05 | Agent Reliability | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md), [P29](06-security/p29-trust-boundary-in-code.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) |
+| S02E05 | Agent Reliability | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md), [P29](06-security/p29-trust-boundary-in-code.md), [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md), [P61](06-security/p61-a-secret-has-a-host-list-in-code.md) |
 | S02E05 | Agent Reliability | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [P15](03-memory/p15-ask-past-sessions.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md) |
 | S02E05 | Agent Reliability | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [P08](02-contracts-and-done/p08-test-must-fail-first.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) |
 | S03E01 | Mechanics Behind Product Engineering | [The Shift](../s03e01-mechanics-behind-product-engineering.md#the-shift) | [Zmiana](../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
 | S03E01 | Mechanics Behind Product Engineering | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [P33](07-human-in-the-loop/p33-decision-rights.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E01 | Mechanics Behind Product Engineering | [Judgment](../s03e01-mechanics-behind-product-engineering.md#judgment) | [Osąd](../pl/s03e01-mechanics-behind-product-engineering.md#osąd) | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) |
 | S03E01 | Mechanics Behind Product Engineering | [Leverage](../s03e01-mechanics-behind-product-engineering.md#leverage) | [Dźwignia](../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) |
-| S03E02 | Translating Intent into Agent Work | [Product context](../s03e02-translating-intent-into-agent-work.md#product-context) | [Kontekst produktu](../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) | [P14](03-memory/p14-one-decision-one-row.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
+| S03E02 | Translating Intent into Agent Work | [Product context](../s03e02-translating-intent-into-agent-work.md#product-context) | [Kontekst produktu](../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) | [P14](03-memory/p14-one-decision-one-row.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md), [P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md) |
 | S03E02 | Translating Intent into Agent Work | [Requirements and decomposition](../s03e02-translating-intent-into-agent-work.md#requirements-and-decomposition) | [Wymagania i dekompozycja](../pl/s03e02-translating-intent-into-agent-work.md#wymagania-i-dekompozycja) | [P20](04-orchestration/p20-brief-like-an-issue.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) |
 | S03E02 | Translating Intent into Agent Work | [Evaluation](../s03e02-translating-intent-into-agent-work.md#evaluation) | [Ewaluacja](../pl/s03e02-translating-intent-into-agent-work.md#ewaluacja) | [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
 | S03E03 | AI-Native Product Development | [Planning](../s03e03-ai-native-product-development.md#planning) | [Planowanie](../pl/s03e03-ai-native-product-development.md#planowanie) | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
@@ -209,6 +212,9 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S03E05 | Products That Learn After Release | [Decisions](../s03e05-products-that-learn-after-release.md#decisions) | [Decyzje](../pl/s03e05-products-that-learn-after-release.md#decyzje) | [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) |
 | S03E05 | Products That Learn After Release | [Feedback Loops](../s03e05-products-that-learn-after-release.md#feedback-loops) | [Pętle sprzężenia zwrotnego](../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego) | [P16](03-memory/p16-durability-ladder.md), [P38](08-harness/p38-skill-is-a-routine.md) |
 <!-- lessons:end -->
+
+There are no S04E01 lesson notes in the repo yet, so the pills from that episode cite earlier
+lessons. When the notes exist, add their chapters to this table.
 
 ## Episode index
 
@@ -231,6 +237,7 @@ The debriefs are in Polish only.
 | S03E03 | [out of office](../pl/s03e03-out-of-office-debrief.md) | AI-native product development | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P30](06-security/p30-least-privilege.md), [P38](08-harness/p38-skill-is-a-routine.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E04 | [show me when](../pl/s03e04-show-me-when-debrief.md) | verifying product outcomes | [P06](02-contracts-and-done/p06-contract-first.md), [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md), [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
 | S03E05 | [what came back](../pl/s03e05-what-came-back-debrief.md) | products that learn after release | [P16](03-memory/p16-durability-ladder.md), [P38](08-harness/p38-skill-is-a-routine.md), [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md), [P60](02-contracts-and-done/p60-loud-is-not-widespread-or-new.md) |
+| S04E01 | [twenty payouts](../pl/s04e01-twenty-payouts-debrief.md) | an agent that works on its own (no lesson notes in the repo) | [P19](04-orchestration/p19-model-choice-and-cost.md), [P25](05-agents-without-humans/p25-providers-fail.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P32](06-security/p32-secrets-never-in-chat.md), [P34](07-human-in-the-loop/p34-consent-has-scope.md), [P53](08-harness/p53-code-checks-the-model-decides.md), [P61](06-security/p61-a-secret-has-a-host-list-in-code.md), [P62](05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md), [P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md) |
 | — | MEGA Assessment | your working patterns | [chapter 9](work-patterns.md) |
 
 ## How to add a pill

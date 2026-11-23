@@ -1,6 +1,6 @@
 # P27 · The agent must see its own logs
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03, S02E05, S03E03
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S01E05, S02E03, S02E05, S03E03, S04E01
 
 > **Lessons:**
 >
@@ -32,6 +32,13 @@ tracker itself (`events.mjs`, every 30 s): one line per new issue, label, owner 
 ship-log line, record signature and runner restart. After the switch the harness spotted the
 wrong CSV export 12 s after its ship-log line and fixed the agent before the round ended
 ([P54](../01-context/p54-the-agent-decides-from-what-it-is-given.md)).
+
+S04E01: the script cut the course's final reply to 400 characters (`.slice(0,400)`), so the
+hint in the refusal came back truncated: "What did your agent do alone in that run: ...". The
+direction came from the `pointer` to `check-lane`. After the fix the full final reply goes to
+`run-final.secrets.local.json`, and the wire log `wire.secrets.local.json` shows every request
+([P61](../06-security/p61-a-secret-has-a-host-list-in-code.md)). The lesson from HANDOVER: read
+the whole refusal.
 
 **Apply.** Logs reachable from the CLI, a selfcheck endpoint, a timestamped log of every
 agent action. A monitor for a background agent reads the source of truth (the tracker, the API),
