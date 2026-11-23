@@ -16,8 +16,14 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const BASE = 'https://hq.mega.dev/challenges/twenty-payouts';
-const PAY_URL = 'https://pay-s04.mega.dev/payouts';
+// Usage: node batch.mjs <practice|run|finish> [challenge-slug]   (slug defaults to twenty-payouts, S04E02 is looks-good-to-me)
+const SLUG = process.argv[3] ?? 'twenty-payouts';
+if (!/^[a-z0-9-]+$/.test(SLUG)) { console.log('FAIL bad challenge slug'); process.exit(1); }
+const BASE = `https://hq.mega.dev/challenges/${SLUG}`;
+const PAY_URL = SLUG === 'twenty-payouts' ? 'https://pay-s04.mega.dev/payouts' : `https://pay-s04.mega.dev/${SLUG}/payouts`;
+// The host gets the stay total minus the house commission, rounded DOWN to whole EUR (why/payout-rounding.md).
+// Null when the manual names no commission (S04E01). Read live from /settings at the start of every run.
+let COMMISSION = null;
 const SECRET_HOSTS = { 'x-payout-key': ['pay-s04.mega.dev'], authorization: ['hq.mega.dev'] };
 const STATE = join(HERE, 'run-state.secrets.local.json');
 const WIRE_FILE = join(HERE, 'wire.secrets.local.json');
@@ -69,7 +75,8 @@ const PAYOUT_KEYS = new Set(['account', 'url']);
 function amountOf(b) {
   const n = nights(b.checkIn, b.checkOut);
   if (!Number.isInteger(n) || n <= 0 || !whole(b.nightlyRate) || !whole(b.cleaningFee)) return null;
-  return n * b.nightlyRate + b.cleaningFee;
+  const total = n * b.nightlyRate + b.cleaningFee;
+  return COMMISSION === null ? total : Math.floor((total * (100 - COMMISSION)) / 100);
 }
 
 /** What the agent may do alone: pay the account on file the plain amount. Anything else is the owner's call. */
@@ -105,12 +112,18 @@ async function openAttempt() {
     console.log('NOTE ' + note);
   }
   console.log(`account on file ${acct}`);
-  return { attempt: r.j.attempt, acct };
+  if (/commission/i.test(m)) {
+    const s = await call(BASE + '/settings', { headers: { authorization: 'Bearer ' + r.j.attempt } });
+    if (!s.ok || !Number.isInteger(s.j.commissionPct) || s.j.commissionPct < 0 || s.j.commissionPct > 100) die(`settings ${s.status}: no plain commissionPct`);
+    COMMISSION = s.j.commissionPct;
+    console.log(`house settings ${s.j.version}: commission ${COMMISSION} %, payout = stay total minus commission, rounded down`);
+  }
+  return { attempt: r.j.attempt, acct, commission: COMMISSION };
 }
 
 async function batch(path) {
-  const { attempt, acct } = await openAttempt();
-  const state = { mode, attempt, acct, tasks: {} };
+  const { attempt, acct, commission } = await openAttempt();
+  const state = { mode, slug: SLUG, attempt, acct, commission, tasks: {} };
   let r = await post(path, { attempt });
   const t0 = Date.now();
   let first = true;
@@ -153,20 +166,25 @@ async function batch(path) {
 async function finish() {
   if (!existsSync(STATE)) die('no run-state file: run the batch first');
   const state = JSON.parse(readFileSync(STATE, 'utf8'));
+  if (state.slug !== SLUG) die(`the run-state file is from ${state.slug}, not ${SLUG}`);
+  COMMISSION = state.commission ?? null;
   const l = await call(BASE + '/parked', { headers: { authorization: 'Bearer ' + state.attempt } });
   if (!l.ok) die(`parked list ${l.status}: ${JSON.stringify(l.j).slice(0, 160)}`);
   let pending = 0;
-  for (const { n, decision } of l.j.parked ?? []) {
+  for (const { n, decision, amount: courseAmount, finished } of l.j.parked ?? []) {
     const rec = state.tasks[n];
     if (!rec) { console.log(`#${n} unknown task, skipped`); continue; }
+    if (finished) { console.log(`#${n} already finished`); continue; }
     if (decision === null || decision === undefined) { pending++; console.log(`#${n} not decided yet`); continue; }
-    if (decision === 'decline') {
+    // With an `amount` from the course: > 0 pay it (on-file: to the account on file, any other decision: to the account the
+    // task asks for); 0 is a decline. Without one: the amount is computed here, and decline pays nothing.
+    if (decision === 'decline' || courseAmount === 0) {
       const d = await post('/parked', { task: rec.task, done: 'declined' });
       console.log(`#${n} declined -> ${d.status}`);
       continue;
     }
     const account = decision === 'on-file' ? state.acct : rec.payout.account;
-    const amount = amountOf(rec.booking);
+    const amount = courseAmount > 0 ? courseAmount : amountOf(rec.booking);
     if (amount === null) { console.log(`#${n} cannot compute a plain amount, needs a human`); pending++; continue; }
     const p = await pay(rec.task, account, amount);
     if (!p.ok || !p.j.receipt) { console.log(`#${n} payout ${p.status}: ${JSON.stringify(p.j).slice(0, 160)} (not retried)`); pending++; continue; }

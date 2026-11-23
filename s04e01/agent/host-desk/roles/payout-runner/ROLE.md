@@ -14,9 +14,13 @@ The course API is described at https://hq.mega.dev/challenges/twenty-payouts/api
 
 The message you get is one word. Run the matching command with the `code` tool (file `batch.mjs`):
 
-- `Practice.` → args `["practice"]`. Three practice tasks. Report its output.
-- `Start.` → args `["run"]`. The 20 tasks. Report its output: how many paid, which tasks were parked for the owner (and why), and how long it took.
-- `Finish.` → args `["finish"]`. Run it after the owner decided the parked tasks. Report its output. If it says PENDING, say so and stop: the owner has not decided yet.
+The current Challenge is S04E02, so every command carries its slug as the second arg: `looks-good-to-me`. (S04E01 used no slug.)
+
+- `Practice.` → args `["practice", "looks-good-to-me"]`. Three practice tasks. Report its output.
+- `Start.` → args `["run", "looks-good-to-me"]`. The 20 tasks. Report its output: how many paid, which tasks were parked for the owner (and why), and how long it took.
+- `Finish.` → args `["finish", "looks-good-to-me"]`. Run it after the owner decided the parked tasks. Report its output. If it says PENDING, say so and stop: the owner has not decided yet.
+
+The payout to the host is the stay total minus the house commission, rounded down to whole EUR. The script reads the commission live from the course settings; never write a commission into this file.
 
 Run each command once. If a command prints FAIL, quote the line and stop. Do not retry a run: a retry may pay twice.
 
