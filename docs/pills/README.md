@@ -17,6 +17,7 @@ As of 24.11.2026.
 
 - **Quick:** read "Ten principles" below.
 - **Before a task of a given kind:** open the chapter (e.g. before building an agent, chapters 5 and 6).
+- **Before adding another agent role:** [P64](01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md), [P65](03-memory/p65-a-decision-has-its-why-next-to-the-code.md) and [P66](04-orchestration/p66-a-role-has-five-parts.md).
 - **Before handing work over:** [the checklist](templates/pre-handoff-checklist.md).
 - **About you:** [your working patterns](work-patterns.md) from the MEGA Assessment.
 - **Terms:** [glossary](glossary.md).
@@ -27,10 +28,10 @@ As of 24.11.2026.
 | --- | --- | --- |
 | 1 | Every context cut throws something away. Before you cut, write down what must survive. | [P01](01-context/p01-compaction-is-lossy.md) |
 | 2 | Raw source is for the AI; the rendered view is for whoever judges the work. Render it and look. | [P03](01-context/p03-source-is-not-the-view.md) |
-| 3 | Before "done", fetch the sources again: the world did not stand still. | [P04](01-context/p04-a-download-is-a-dated-copy.md) |
+| 3 | Before "done", fetch the sources again: the world did not stand still. A role does not copy facts: it reads them from the source at every start. | [P04](01-context/p04-a-download-is-a-dated-copy.md), [P64](01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md) |
 | 4 | Contract first (schema, answer shape), then send. | [P06](02-contracts-and-done/p06-contract-first.md) |
 | 5 | "Done" is a check that passes, not a feeling that the work is over. | [P07](02-contracts-and-done/p07-done-is-a-check.md) |
-| 6 | What must survive the session goes in a file; what must always happen goes in a skill or a hook. | [P12](03-memory/p12-chat-is-not-memory.md), [P16](03-memory/p16-durability-ladder.md) |
+| 6 | What must survive the session goes in a file; what must always happen goes in a skill or a hook. A decision gets its why written next to the code. | [P12](03-memory/p12-chat-is-not-memory.md), [P16](03-memory/p16-durability-ladder.md), [P65](03-memory/p65-a-decision-has-its-why-next-to-the-code.md) |
 | 7 | Shared contract first, in sequence; then parallel, cheaper workers. | [P17](04-orchestration/p17-contract-before-parallelism.md) |
 | 8 | An agent loop needs an exit condition, a limit and visible state. | [P24](05-agents-without-humans/p24-a-loop-needs-an-exit.md) |
 | 9 | Code holds the trust boundary before the model sees the message. Text in data is data. A secret goes only to a host on a list in code. | [P28](06-security/p28-data-is-not-instructions.md), [P29](06-security/p29-trust-boundary-in-code.md), [P61](06-security/p61-a-secret-has-a-host-list-in-code.md) |

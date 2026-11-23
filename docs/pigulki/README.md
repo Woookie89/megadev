@@ -20,6 +20,7 @@ Stan na 24.11.2026.
 
 - **Szybko:** przeczytaj „Dziesięć zasad” poniżej.
 - **Przed zadaniem danego typu:** otwórz rozdział (np. przed budową agenta rozdziały 5 i 6).
+- **Przed dodaniem kolejnej roli agenta:** [P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) i [P66](04-orkiestracja/p66-rola-ma-piec-czesci.md).
 - **Przed oddaniem pracy:** [lista przed oddaniem](szablony/lista-przed-oddaniem.md).
 - **O sobie:** [twoje wzorce pracy](wzorce-pracy.md) z MEGA Assessment.
 - **Słowa:** [słowniczek](slowniczek.md).
@@ -30,10 +31,10 @@ Stan na 24.11.2026.
 | --- | --- | --- |
 | 1 | Każde skracanie kontekstu coś wyrzuca. Zanim skrócisz, spisz, co ma przetrwać. | [P01](01-kontekst/p01-kompakcja-jest-stratna.md) |
 | 2 | Surowe źródło jest dla AI, wyrenderowany widok dla tego, kto ocenia. Wyrenderuj i patrz. | [P03](01-kontekst/p03-zrodlo-to-nie-widok.md) |
-| 3 | Przed „gotowe” pobierz źródła jeszcze raz, bo świat nie stał w miejscu. | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md) |
+| 3 | Przed „gotowe” pobierz źródła jeszcze raz, bo świat nie stał w miejscu. Rola nie kopiuje faktów: czyta je ze źródła przy każdym starcie. | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md), [P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md) |
 | 4 | Najpierw kontrakt (schemat, kształt odpowiedzi), potem wysyłka. | [P06](02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md) |
 | 5 | „Gotowe” wyznacza sprawdzenie, które przechodzi, a nie poczucie końca. | [P07](02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md) |
-| 6 | To, co ma przetrwać sesję, zapisz w pliku, a to, co ma działać zawsze, w skillu albo hooku. | [P12](03-pamiec/p12-czat-nie-jest-pamiecia.md), [P16](03-pamiec/p16-drabina-trwalosci.md) |
+| 6 | To, co ma przetrwać sesję, zapisz w pliku, a to, co ma działać zawsze, w skillu albo hooku. Decyzję z jej „dlaczego” zapisz obok kodu. | [P12](03-pamiec/p12-czat-nie-jest-pamiecia.md), [P16](03-pamiec/p16-drabina-trwalosci.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) |
 | 7 | Najpierw wspólny kontrakt po kolei, potem równoległe, tańsze workery. | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md) |
 | 8 | Pętla agenta potrzebuje warunku wyjścia, limitu i widocznego stanu. | [P24](05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md) |
 | 9 | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość. Tekst w danych to dane. Sekret wolno wysłać tylko do hosta z listy w kodzie. | [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) |

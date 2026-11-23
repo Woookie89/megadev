@@ -10,12 +10,12 @@
 > There are no S04 lesson notes in the repo yet, so the lessons cited are earlier ones: S02E01 splits an agent's prompt into five blocks (personality, environment, context, discovery, boundaries) and notes that boundaries in text are only a recommendation, and S03E04 says reviewers need principles, sources and boundaries.
 
 **Principle.** When you add a second role to a system (a reviewer beside the author, a second
-agent beside the first), describe it in fixed parts, always in the same order:
+agent beside the first), describe it in fixed parts:
 
 - **Purpose**: what the role does, in one sentence, with a named result.
-- **Startup reads**: what it reads at start, and from where (live settings, `why/` notes).
 - **Tools**: exactly which tools it uses.
 - **Limits**: what it must not do; whatever can be enforced is enforced by code (a host list, read-only mode).
+- **Startup reads**: what it reads at start, and from where (live settings, `why/` notes).
 - **Output**: the shape of the result and where it goes.
 
 When a role fails, find which part the error belongs to and fix that part. Do not rewrite the

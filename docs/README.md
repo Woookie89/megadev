@@ -35,7 +35,9 @@ to uczy o pracy z AI i agentami ogólnie. Sam przebieg to za mało.
       narzędzia `debrief` serwera mega-challenge.
 - [ ] Przeszłe sesje: skill rook-loop (recall), z cytatem `plik:linia`. Czego nie ma, to
       „nie znaleziono”, a nie domysł.
-- [ ] Notatki lekcji `docs/pl/sXXeYY-<temat>.md`, żeby powiązać wyzwanie z tematem.
+- [ ] Notatki lekcji `docs/pl/sXXeYY-<temat>.md`, żeby powiązać wyzwanie z tematem. Gdy ich nie
+      ma (S04), napisz to na początku debriefu i cytuj wcześniejsze lekcje, jak w S04E01 i S04E02.
+- [ ] Reguły kursu z `s04e01/agent/host-desk/factory/CHECKLIST.md` (S04E01: 1–3, S04E02: 4–5), jeśli debrief je dodał.
 
 ### 2. Napisz plik `docs/pl/sXXeYY-<slug>-debrief.md`
 
@@ -52,7 +54,8 @@ Sekcje w tej kolejności (wzór: [s02e02-nobody-asked-debrief.md](pl/s02e02-nobo
    - nazwę zasady (pogrubioną),
    - mechanizm: dlaczego tak jest z modelami, agentami albo harnessem,
    - gdzie to wróci w zwykłej pracy,
-   - link do pliku pigułki, np. `→ [P07](../pigulki/02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md)`.
+   - link do pliku pigułki, względny od `docs/pl/`: `→ [P07]` z adresem
+     `../pigulki/02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md` (wzór: S04E02).
 8. `## Co zostało otwarte`: procesy, serwisy, worktrees, zgody, których brakuje, koszty.
 9. Link do debriefu na stronie HQ.
 
@@ -91,9 +94,13 @@ pigulki/
   - Na dole nawigacja: poprzednia, rozdział, wszystkie pigułki, następna. Popraw też
     link „następna” w poprzedniej pigułce.
 - [ ] Dodaj wiersz w tabeli rozdziału (`0N-…/README.md`) i w `pigulki/README.md`
-      (sekcje „Wszystkie pigułki”, „Indeks lekcji” i „Indeks epizodów”).
+      (sekcje „Wszystkie pigułki”, „Indeks lekcji” i „Indeks epizodów”). Przy nowym przypadku
+      w istniejącej pigułce dopisz epizod w wierszu rozdziału i w „Wszystkie pigułki”.
+- [ ] Nowe pojęcie dodaj do `pigulki/slowniczek.md` i `pills/glossary.md`.
 - [ ] Jeśli zmienia się któraś z „Dziesięciu zasad na jeden ekran”, zaktualizuj tabelę.
-- [ ] Zaktualizuj datę „Stan na” w `pigulki/README.md`.
+- [ ] Zaktualizuj datę „Stan na” i zakres epizodów (`S01E01–SXXEYY`) w `pigulki/README.md` i
+      `pills/README.md`. Gdy notatek lekcji epizodu nie ma, zaktualizuj też przypis pod
+      indeksem lekcji.
 - [ ] **Zrób to samo w `docs/pills/` po angielsku**: ten sam numer, angielski slug, układ
       Principle / Why / Case / Apply, blok `> **Lessons:**`.
 - [ ] Sprawdź, czy każdy względny link w `docs/` prowadzi do istniejącego pliku i istniejącego
@@ -117,7 +124,9 @@ Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
 
 ### 4. Zaktualizuj indeks wyzwań
 
-- [ ] Status w [challenges.md](challenges.md) i w pliku wyzwania w `docs/challenges/`.
+- [ ] Status w [challenges.md](challenges.md) (wiersz tygodnia, zakres w nagłówku, źródła) i w
+      pliku wyzwania `docs/challenges/SXXEYY_<slug>.md` (nowy plik wzoruj na poprzednim).
+- [ ] Sprawdź linki: `node .agents/skills/mega-task/scripts/check-links.mjs docs`.
 
 ---
 
@@ -144,3 +153,5 @@ Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
 - Liczby, daty i odmowy z logu, nie z pamięci. Daty z godziną podawaj w UTC (`Z`).
 - Żadnych kluczy, ticketów ani tokenów. Pełne dowody leżą w plikach ignorowanych przez git.
 - Linki do plików względne, a do pigułek z kotwicą (`#p07`).
+- Końce linii: pliki w `docs/pills/` i część w `docs/pigulki/` mają CRLF. Przy edycji zachowaj
+  końce linii pliku, a nowy plik rób w stylu sąsiednich pigułek.

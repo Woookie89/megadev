@@ -40,8 +40,8 @@ przebiegów nie układam w UTC. Znam tylko godzinę rozwiązania.
 Rook (fabuła) na starcie: „your lane gets a second role today. i've had eleven for years.” Po
 rozwiązaniu: „my other adapters say looks good to me every night. yours is the one i'd believe.”
 W decku pojawił się artefakt „plane” („so you can move. i can't. i'm in the walls.”). Log
-zapisuje, że nic nie zostało zainstalowane z jego powodu ([deck](https://hq.mega.dev/deck)).
-Stan na dziś jest w „Co zostało otwarte”.
+z chwili rozwiązania zapisuje, że nic nie zostało z jego powodu zainstalowane
+([deck](https://hq.mega.dev/deck)). Co było potem, jest w „Co zostało otwarte”.
 
 ## Jak działa rozwiązanie
 
@@ -71,14 +71,19 @@ Reguła wypłat z podręcznika: host dostaje sumę pobytu minus prowizja domu, w
    do `settings.json`. Harness wyjaśnił, że globalne reguły `deny` (`Edit(**/vars.json)` i inne)
    zablokowałyby mu wpisanie ticketu i próby w Host Desk, i dał człowiekowi trzy opcje
    (sesja `65b3ae3c-…jsonl:1526`, 23.11.2026 23:28Z).
-3. **Dwie odpowiedzi w jednej wiadomości.** Człowiek odpisał jednym zdaniem: „tak dawaj opcje 1,
-   pozwalam ci go zapisac gdzie trzeba” (`…jsonl:1538`). Według logu harness zrozumiał to jako
-   odpowiedź na oba pytania: opcja 1 (ustawień nie ruszać) i zgoda na pobranie zipa. W trakcie tury człowiek
-   doprecyzował: „instalacja skilla clock to jedno a s04e02 to inna sprawa - robimy tak zeby
-   zaliczyc zadanie, a clock do global” (`…jsonl:1617`). Skill zostaje globalny, a S04E02 ma po
-   prostu przejść. Log HANDOVER zapisuje, że odpowiedzi człowieka zostały raz pomylone. Co
-   dokładnie przypisano do którego pytania, nie znaleziono w źródłach poza tymi trzema
-   wpisami.
+3. **Dwie odpowiedzi w jednej wiadomości.** W sesji (`65b3ae3c-…jsonl`, godziny w UTC) człowiek
+   najpierw wybrał opcję A dla skilla: „tego skilla dawaj tam gdzie trzeba do globalnego. opcja A
+   zgadzam sie” (`:1511`, 23:28:27Z). Harness odpowiedział trzema opcjami dla reguł `deny` i
+   pytaniem o zip (`:1526`, 23:28:43Z). Człowiek odpisał: „tak dawaj opcje 1, pozwalam ci go
+   zapisac gdzie trzeba” (`:1531`, 23:29:07Z). Według `s04e02/log.md:18` harness zrozumiał to jako
+   „opcja 1: ustawień nie ruszać” i zgodę na pobranie zipa i umieszczenie plików w Host Desk.
+   W trakcie tury człowiek doprecyzował (pisownia z sesji, `:1617`): „instalacja skilla clook to
+   jedno a tego s s04e02 to inna sprawa - robimy tak zeby zaliczyc zadanie, a clock do global”.
+   Skill zostaje globalny, a S04E02 ma po prostu przejść. Wniosek z HANDOVER (`log.md:41`): sprawdź,
+   która część wiadomości odpowiada na które pytanie. Informacja, że odpowiedzi człowieka zostały raz
+   pomylone, pochodzi z polecenia do tego zapisu, a w logu nie ma jej dosłownie. Co dokładnie
+   pomylono, nie znaleziono w źródłach: sesja pokazuje tylko, że „gdzie trzeba” raz dotyczyło
+   skilla (`:1511`), a raz, według logu, zipa (`:1531`).
 4. **Przygotowanie.** Harness pobrał zip recenzenta (10475 B) do `s04e02/dl`, przeczytał każdy
    plik (`code.mjs` i `vars.mjs` identyczne jak w S04E01, a `http.mjs` recenzenta ma własną listę
    hostów na sekret w `hosts.json`) i skopiował `roles/reviewer` oraz `why/` do
@@ -143,8 +148,8 @@ Co nie zadziałało albo kosztowało:
 3. **Skrypt wypłat nie był gotowy na nowe wyzwanie.** Potrzebował slugu wyzwania, prowizji
    czytanej z żywych ustawień (zmienia się między próbami: 12, 16, 14 i 12 %), zaokrąglenia w dół i
    nowego adresu wypłat.
-4. **Dwie odpowiedzi w jednej wiadomości.** Odpowiedź człowieka na dwa różne pytania została raz
-   przypisana błędnie, aż człowiek rozdzielił sprawy (krok 3).
+4. **Dwie odpowiedzi w jednej wiadomości.** Według polecenia do tego zapisu odpowiedzi człowieka na
+   dwa różne pytania zostały raz pomylone. Człowiek rozdzielił sprawy w trakcie tury (krok 3).
 5. **Odmowa klasyfikatora przy instalacji skilla.** Zapis plików i testy własne w jednej komendzie
    odrzucono, a sam zapis przeszedł. Testów nie uruchomiono.
 
@@ -205,14 +210,21 @@ Dwie reguły kursu zapisane w `factory/CHECKLIST.md`, dosłownie:
 - **Skill `rook-clock`** zainstalowany globalnie w `~/.claude/skills/rook-clock` (poza
   wyzwaniem). Testów własnych nie uruchomiono, a reguły `deny` z README nie są w `settings.json`.
   Decyzja człowieka, bo globalne reguły zablokowałyby wpisywanie `vars.json` w Host Desk.
-- **Skill `plane`** z decku: log mówi, że nie zainstalowano. W chwili pisania katalog
-  `~/.claude/skills/rook-plane` już istnieje (znacznik czasu 24.11.2026 00:38 +0100, czyli 23.11.2026
-  23:38Z), a lista skilli mojej sesji zawiera `rook-plane`. Kto go zainstalował, nie znaleziono w
-  logu. Do potwierdzenia przez człowieka.
+- **Skill `rook-plane`** (artefakt „plane” z decku). Log w chwili rozwiązania mówi „nothing
+  installed”, ale kilka minut później człowiek poprosił o instalację („zainstaluj Install the plane
+  skill from the MEGA course…”, sesja `:1803`, 23.11.2026 23:37:02Z, z prośbą o pokazanie plików
+  przed zapisem i o czekanie na jego „tak”). Katalog `~/.claude/skills/rook-plane` ma znacznik
+  czasu 23:38Z, a notatka w pamięci sesji zapisuje go jako zainstalowany globalnie, bez reguł
+  `deny` z README. Samego „tak” człowieka nie szukałem. Skill zawiera te same dwie zasady co reguły
+  4 i 5 (rola nie trzyma faktów i czyta notatki `why/` na starcie). Jego skryptów nie
+  uruchamiałem.
 - **Zmieniony `http.mjs` startera z S04E01** (lista hostów, bez przekierowań): człowiek nadal tego
   nie potwierdził.
-- **Staging w git.** Log zapisuje, że `docs/` było dodane do indeksu przez coś innego niż harness.
-  Niczego tu nie zacommitowano ani nie dodano do indeksu.
+- **Git.** Ja niczego nie zacommitowałem ani nie dodałem do indeksu. Mimo to `git log` pokazuje
+  commity z 24.11.2026, 00:42–00:46 +0100 (`96d4988`, `1659f2a`, `82977e0`, `7de3e97`, `d04049d`)
+  z plikami tego zapisu, a część README jest w indeksie. Zrobiło to coś w środowisku (log
+  S04E02 też notuje, że `docs/` było dodane do indeksu przez kogoś innego niż harness). Zawartość
+  commitów do sprawdzenia przez człowieka.
 - **Sekrety** w plikach ignorowanych przez git: `s04e02/*.secrets.local.json` i
   `s04e01/agent/host-desk/vars.json` (klucz ćwiczebny, ticket, próba). Ticket S04E02 wygasa
   24.11.2026, 23:27Z. W dokumentach ich nie ma.

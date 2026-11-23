@@ -10,12 +10,12 @@
 > Notatek lekcji S04 w repo jeszcze nie ma, więc wskazane lekcje są wcześniejsze: S02E01 dzieli prompt agenta na pięć bloków (osobowość, środowisko, kontekst, odkrywanie, granice) i zaznacza, że granice w tekście to tylko rekomendacja, a S03E04 mówi, że recenzenci potrzebują zasad, źródeł i granic.
 
 **Zasada.** Gdy dodajesz do systemu drugą rolę (recenzenta obok autora, pierwszego agenta obok
-drugiego), opisz ją w stałych częściach, zawsze w tej samej kolejności:
+drugiego), opisz ją w stałych częściach:
 
 - **Purpose**: co rola robi, w jednym zdaniu, z nazwanym wynikiem.
-- **Startup reads**: co czyta na starcie i skąd (ustawienia na żywo, notatki `why/`).
 - **Tools**: dokładnie jakich narzędzi używa.
 - **Limits**: czego nie wolno, a to, co da się wymusić, wymusza kod (lista hostów, tryb tylko do odczytu).
+- **Startup reads**: co czyta na starcie i skąd (ustawienia na żywo, notatki `why/`).
 - **Output**: jaki kształt ma wynik i dokąd idzie.
 
 Gdy rola zawodzi, ustal, której części dotyczy błąd, i popraw tę część. Nie przepisuj całej roli.

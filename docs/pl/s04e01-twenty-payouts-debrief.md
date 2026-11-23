@@ -207,6 +207,7 @@ Trzy reguły kursu zapisane w `factory/CHECKLIST.md`, dosłownie:
 - **Które z czterech części zestawu narzędzi przenieść do własnego projektu**: HANDOVER
   zapisuje „T3, partly”. Decyzja człowieka.
 - **`.gitignore`** ma nową linię `**/host-desk/vars.json`. Nic nie jest zacommitowane.
-- Kolejne wyzwania (S04E02–S04E05) używają tego samego Host Desk i klucza modelu z S04E01.
+- Kolejne wyzwania używają tego samego Host Desk i klucza modelu z S04E01. S04E02 jest już
+  rozwiązane: [zapis przebiegu](s04e02-looks-good-to-me-debrief.md). S04E03–S04E05 nie sprawdzano.
 
 Debrief jest na [stronie wyzwania](https://hq.mega.dev/challenges/twenty-payouts#debrief).
