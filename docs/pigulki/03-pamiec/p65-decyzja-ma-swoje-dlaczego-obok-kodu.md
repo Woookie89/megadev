@@ -35,9 +35,10 @@ datą i zakresem opisuje [P14](p14-jedna-decyzja-jeden-wiersz.md).
   wyższą niż zarezerwowana, a zaokrąglenie do najbliższego euro w połowie przypadków idzie w górę.
 
 Dany recenzent (przebieg 1) nie czytał `why/`. W jego łatce hunk `h-e1d` zmieniał `payoutDate`
-z `checkOut` na `checkIn`, a poprawny werdykt to `flag` z odwołaniem do `why/payout-date.md`. Model
-doszedł do `flag` dopiero po odmowie kursu, własnym rozumowaniem o wypłacie przed końcem pobytu,
-bez cytatu notatki, a log nie mówi, jakie źródło zapisałby w uzasadnieniu. Przebieg 2: skrypt
+z `checkOut` na `checkIn`, a poprawny werdykt to `flag` z odwołaniem do `why/payout-date.md`.
+Pierwsze `POST` trafiło w ten hunk (kurs odrzucił tylko `h-be5`: „the other two are right”), więc
+rola nie miała reguły domu, na której mogłaby go oprzeć. Jak go uzasadniła, log nie zapisuje.
+Z logu nie wynika też, czy tak samo poradziłaby sobie z regułą o nocach. Przebieg 2: skrypt
 `context.mjs` drukuje notatki `why/` w tym samym wywołaniu co ustawienia i łatkę, a ulepszony
 recenzent przeczytał `why/nights.md` i oznaczył `+1` w liczbie nocy (hunk `h-25a`) jako błąd. Kurs:
 „Review accepted: every verdict is right.” To reguła 5 z `factory/CHECKLIST.md`: „Write down why
@@ -47,7 +48,7 @@ changes anything.” W toolboxie kursu to `house-notes`.
 **Stosuj.**
 
 - Przy każdej decyzji, którą ktoś mógłby „naprawić”, zapisz trzy linie obok kodu: decyzja,
-  dlaczego, co z tego wynika (i czego nie zmieniać). Szablon:
+  dlaczego, co z tego wynika (i czego nie zmieniać). Podobny zapis:
   [tabela decyzji](../szablony/tabela-decyzji.md).
 - Wpisz folder notatek do odczytów startowych każdej roli, która ocenia albo zmienia kod. Role bez
   tego odczytu nie spełniają reguły (w tym wyzwaniu `payout-runner` nadal go nie ma).

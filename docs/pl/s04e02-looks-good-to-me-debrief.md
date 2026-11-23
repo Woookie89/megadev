@@ -158,9 +158,10 @@ Co nie zadziałało albo kosztowało:
    każdej roli, skillu i `AGENTS.md`, w których stoi cena, limit, wersja albo stawka.
    → [P64](../pigulki/01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md),
    [P05](../pigulki/01-kontekst/p05-fakty-zmienne-u-zrodla.md)
-2. **Rola decyduje tylko z tego, co przeczytała na starcie.** Dany recenzent nie zajrzał do
-   `why/`, więc nie miał skąd wiedzieć, że dodatkowa noc to błąd, a wypłata w dniu wyjazdu to
-   decyzja. Ulepszony dostaje te notatki w tym samym wywołaniu co ustawienia, od pierwszej tury.
+2. **Rola decyduje tylko z tego, co przeczytała na starcie.** Dany recenzent nie czytał
+   `why/`. Jego werdykt dla `h-e1d` (wypłata w dniu przyjazdu) był poprawny, ale
+   rola nie miała reguły domu, na której mogłaby go oprzeć. Ulepszony dostaje te notatki w tym
+   samym wywołaniu co ustawienia, od pierwszej tury.
    Przyda się przy każdym recenzencie kodu i każdym agencie, który zmienia cudzy kod.
    → [P54](../pigulki/01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)
 3. **Decyzja, która wygląda na błąd, ma obok kodu zapisane, dlaczego.** Kod mówi, co robi, ale nie
@@ -171,8 +172,8 @@ Co nie zadziałało albo kosztowało:
    [P14](../pigulki/03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)
 4. **Rolę opisuje pięć części, a błąd naprawiasz w tej, której dotyczy.** Purpose, Tools, Limits,
    Startup reads i Output dają miejsce na każdą decyzję o roli. Odmowa wskazała hunk, ślad
-   prowadził do Startup reads, więc tam poszła poprawka, a Limits (tylko do odczytu, jedna
-   wysyłka) zostały bez zmian. Przyda się, gdy dodajesz kolejną rolę do tego samego systemu.
+   prowadził do Startup reads, więc tam poszła poprawka (plus reguły oceniania), a roli nie
+   przepisano od nowa. Przyda się, gdy dodajesz kolejną rolę do tego samego systemu.
    → [P66](../pigulki/04-orkiestracja/p66-rola-ma-piec-czesci.md)
 5. **Kod zbiera kontekst, model ocenia.** `context.mjs` pobiera ustawienia, łatkę i notatki, a
    model tylko waży werdykty. Pobranie w kodzie nie zależy od tego, czy model „pamięta”, żeby
