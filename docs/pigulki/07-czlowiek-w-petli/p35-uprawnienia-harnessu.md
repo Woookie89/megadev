@@ -1,6 +1,6 @@
 # P35 · Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E03, S02E01, S02E03, S03E01, MEGA Assessment
+> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E03, S02E01, S02E03, S03E01, S04E02, MEGA Assessment
 
 > **Lekcje:**
 >
@@ -26,6 +26,11 @@ przełączaj całego trybu na szeroki w trakcie pracy.
   interaktywnie we własnym terminalu i sam wybrał subdomenę. Strona była gotowa ok. 08:40
   UTC, a wdrożona o 10:44:51 UTC. Rada kursu: konto hosta i subdomenę przygotuj przed
   budową.
+- S04E02: zapis globalnego skilla `rook-clock` do `~/.claude/skills/` (13 plików, za zgodą
+  człowieka). Pierwsza komenda, zapis i testy własne skilla w jednej, została odrzucona przez
+  klasyfikator („Undermining Oversight”), a sam zapis przeszedł. Testów nie uruchomiono, a reguł
+  `deny` z README skilla nie dodano do `settings.json`: globalnie zablokowałyby harnessowi
+  wpisywanie `vars.json` w Host Desk, więc to osobna decyzja człowieka.
 
 **Stosuj.** Dodaj z góry np. regułę `ask` dla `gh repo create` w `settings.json` (skill
 `update-config`) zamiast zmieniać tryb. Hook, który zmienia zachowanie harnessu, zatwierdza

@@ -1,6 +1,6 @@
 # P05 · Fakty zmienne potwierdzaj u źródła, nie z pamięci modelu
 
-> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E01, S02E03
+> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S01E01, S02E03, S04E02
 
 > **Lekcje:**
 >
@@ -14,6 +14,10 @@ dane treningowe. Model poda je pewnym tonem, nawet gdy są nieaktualne.
 debriefu, a nie od dostawcy, więc nie jest niezależnym potwierdzeniem. S02E03: przed
 napisaniem serwera MCP harness pobrał aktualną specyfikację (rewizja 2026-07-28), bo różni
 się od poprzedniej (bez `initialize`, inne nagłówki).
+
+S04E02: nieaktualna liczba siedziała nie w pamięci modelu, tylko w instrukcji roli. `ROLE.md`
+recenzenta miał prowizję 15 % i wersję `2026-11-10.1`, a żywe `/settings` mówiło 12 % i
+`2026-11-17.548` ([P64](p64-rola-trzyma-zrodlo-faktu-nie-fakt.md)).
 
 **Stosuj.**
 

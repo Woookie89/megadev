@@ -1,6 +1,6 @@
 # P05 · Check changing facts at the source, not in the model's memory
 
-> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E01, S02E03
+> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S01E01, S02E03, S04E02
 
 > **Lessons:**
 >
@@ -14,6 +14,10 @@ data. A model states them with the same confidence even when they are stale.
 debrief, not from the vendor, so it is not an independent confirmation. S02E03: before
 writing the MCP server, the harness fetched the current spec (revision 2026-07-28), because
 it differs from the previous one (no `initialize`, different headers).
+
+S04E02: the stale number sat not in the model's memory but in a role's instructions. The
+reviewer's `ROLE.md` had a 15 % commission and version `2026-11-10.1`, while the live `/settings`
+said 12 % and `2026-11-17.548` ([P64](p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md)).
 
 **Apply.**
 

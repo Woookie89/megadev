@@ -56,4 +56,4 @@ EUR na konto z akt), a 11 odrzucone. Wypłata poszła dopiero po decyzji.
 
 ---
 
-← [P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P64](../01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md) →

@@ -59,4 +59,4 @@ and 11 was declined. Nothing was paid before the decision.
 
 ---
 
-← [P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md) · [chapter](README.md) · [all pills](../README.md)
+← [P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md) · [chapter](README.md) · [all pills](../README.md) · [P64](../01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md) →

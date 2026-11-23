@@ -1,6 +1,6 @@
 # P34 · Zgoda ma zakres
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04, S04E01
+> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04, S04E01, S04E02
 
 > **Lekcje:**
 >
@@ -18,6 +18,17 @@ hostów na sekret, bez przekierowań), uznając to za część zadania. README s
 („You and your harness may change anything here, code included.”), ale zgody człowieka na tę
 zmianę w logu nie ma, a w HANDOVER wisi jako otwarta. Gdy nowe wymaganie wykracza poza zakres
 wcześniejszego „tak” albo „zostaw”, wróć do człowieka przed zmianą.
+
+S04E02: jedna wiadomość człowieka („tak dawaj opcje 1, pozwalam ci go zapisac gdzie trzeba”)
+trafiła w moment, w którym harness zadał dwa różne pytania: o reguły `deny` dla globalnego skilla
+`rook-clock` (trzy opcje) i o pobranie zipa recenzenta do Host Desk. Według logu zrozumiał ją jako
+„opcja 1: ustawień nie ruszać” i „tak, pobierz zip i umieść pliki w Host Desk”, i zrobił dokładnie
+to: pobrał zip, przeczytał każdy plik i skopiował `roles/reviewer` oraz `why/`. W trakcie tury
+człowiek rozdzielił sprawy: „instalacja skilla clock to jedno a s04e02 to inna sprawa”
+(sesja `65b3ae3c-…jsonl:1538`, `:1617`). Log HANDOVER zapisuje, że odpowiedzi zostały raz pomylone,
+a co dokładnie przypisano do którego pytania, nie znaleziono w źródłach. Gdy jedna wiadomość
+odpowiada na kilka pytań, powtórz człowiekowi, co uznajesz za odpowiedź na które, zanim
+zadziałasz. Zgoda na pobranie zipa nie obejmowała zmiany ustawień ani niczego poza Host Desk.
 
 ---
 

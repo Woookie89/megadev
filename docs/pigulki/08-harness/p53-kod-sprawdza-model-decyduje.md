@@ -1,6 +1,6 @@
 # P53 · Kod pobiera, składa i sprawdza, a model decyduje: trzymaj każde po swojej stronie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S03E02, S04E01
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S03E02, S04E01, S04E02
 
 > **Lekcje:**
 >
@@ -40,6 +40,12 @@ zadania, liczy kwoty, sprawdza konto z akt, płaci), a model uruchamia skrypt je
 i relacjonuje wynik. Przypadki spoza reguł (inne konto, przekierowany adres) kod oznacza dla
 właściciela. W toolboxie kursu to `routine-script`
 ([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)).
+
+S04E02: ta sama granica w roli recenzenta. Skrypt `context.mjs` jednym wywołaniem pobiera żywe
+ustawienia domu, łatkę z plikami bazowymi i notatki `why/`, a model tylko waży werdykt dla każdego
+hunka i wysyła go raz. Pobranie nie zależy od tego, czy model „pamięta”, żeby zajrzeć do źródła
+([P64](../01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md),
+[P66](../04-orkiestracja/p66-rola-ma-piec-czesci.md)).
 
 **Stosuj.**
 

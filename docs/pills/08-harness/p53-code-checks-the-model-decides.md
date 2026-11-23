@@ -1,6 +1,6 @@
 # P53 · Code fetches, files and checks; the model decides: keep each on its own side
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S03E02, S04E01
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S03E02, S04E01, S04E02
 
 > **Lessons:**
 >
@@ -41,6 +41,13 @@ the script with one call and reports the result. Cases outside the rules (anothe
 redirected address) the code flags for the owner. In the course toolbox this is
 `routine-script`
 ([P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md)).
+
+S04E02: the same line in the reviewer role. The script `context.mjs` fetches the live house
+settings, the patch with its base files and the `why/` notes in one call, and the model only weighs
+a verdict for each hunk and sends it once. The fetch does not depend on the model "remembering" to
+look at the source
+([P64](../01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md),
+[P66](../04-orchestration/p66-a-role-has-five-parts.md)).
 
 **Apply.**
 

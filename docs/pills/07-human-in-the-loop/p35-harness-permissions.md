@@ -1,6 +1,6 @@
 # P35 · Harness permissions are part of the setup: narrow them, don't widen them
 
-> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, S02E03, S03E01, MEGA Assessment
+> Chapter [7. Human in the loop](README.md) · episodes: S01E03, S02E01, S02E03, S03E01, S04E02, MEGA Assessment
 
 > **Lessons:**
 >
@@ -26,6 +26,12 @@ switch the whole mode to a broad one in the middle of the work.
   ran `npx wrangler@4 deploy` interactively in their own terminal and chose the subdomain.
   The page was ready at about 08:40 UTC and deployed at 10:44:51 UTC. The course's advice:
   set up the host account and subdomain before the build.
+- S04E02: writing the global skill `rook-clock` to `~/.claude/skills/` (13 files, with the
+  human's consent). The first command, writing the files and running the skill's self-tests in
+  one, was refused by the classifier ("Undermining Oversight"), while the write alone ran. The
+  self-tests were not run, and the `deny` rules from the skill's README were not added to
+  `settings.json`: globally they would block the harness from writing `vars.json` in the Host
+  Desk, so that is a separate decision for the human.
 
 **Apply.** Add, for example, an `ask` rule for `gh repo create` in `settings.json` up front
 (the `update-config` skill) instead of changing the mode. A hook changes how the harness

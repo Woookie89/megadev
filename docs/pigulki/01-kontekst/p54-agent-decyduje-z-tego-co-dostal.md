@@ -1,6 +1,6 @@
 # P54 · Agent decyduje tylko z tego, co dostał: każde źródło reguł daj mu w kontekście od pierwszej tury
 
-> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S03E03
+> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S03E03, S04E02
 
 > **Lekcje:**
 >
@@ -45,6 +45,13 @@ z poziomu głównego. Kurs: „A value only your harness had reaches a lone agen
 code, a variable or an issue.” Próba na makiecie trackera (trzy issue, 0,42 USD) wyłapała przed
 rundą błąd hosta: `git commit` na Windowsie, ale nie miała issue sprzecznego z rekordem, więc
 błędu #3 nie pokazała.
+
+S04E02: to samo w roli recenzenta Host Desk. Dany recenzent nie czytał notatek `why/`
+(nights, payout-date, payout-rounding), więc jego werdykty nie miały jak oprzeć się na regułach
+domu. Ulepszony dostaje je w jednym wywołaniu `context.mjs` razem z żywymi ustawieniami i łatką,
+od pierwszej tury, i oznaczył `+1` w liczbie nocy na podstawie `why/nights.md`. Kurs: „Review
+accepted: every verdict is right.” Reguła 5 z `factory/CHECKLIST.md`: każda rola czyta te notatki,
+zanim oceni lub zmieni cokolwiek ([P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)).
 
 **Stosuj.**
 

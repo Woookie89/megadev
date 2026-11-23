@@ -1,6 +1,6 @@
 # P54 · An agent decides only from what it is given: put every rule source in its context from the first turn
 
-> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S03E03
+> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S03E03, S04E02
 
 > **Lessons:**
 >
@@ -45,6 +45,14 @@ top-level vars. The course: "A value only your harness had reaches a lone agent 
 code, a variable or an issue." The rehearsal on a mock tracker (three issues, $0.42) caught a
 host bug before the round, `git commit` on Windows, but it had no issue that clashed with a
 record, so it did not show the #3 mistake.
+
+S04E02: the same in the Host Desk reviewer role. The given reviewer did not read the `why/` notes
+(nights, payout-date, payout-rounding), so its verdicts had nothing to rest on in the house's rules.
+The improved one gets them in a single `context.mjs` call together with the live settings and the
+patch, from the first turn, and it flagged the `+1` in the number of nights on the strength of
+`why/nights.md`. The course: "Review accepted: every verdict is right." Rule 5 in
+`factory/CHECKLIST.md`: every role reads those notes before it judges or changes anything
+([P65](../03-memory/p65-a-decision-has-its-why-next-to-the-code.md)).
 
 **Apply.**
 
