@@ -1,11 +1,12 @@
 # P50 · A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S03E01
+> Chapter [2. Contracts and "done"](README.md) · episodes: S03E01, S03E05
 
 > **Lessons:**
 >
 > - S03E01 · Mechanics Behind Product Engineering → chapter "The Shift" — [original (EN)](../../s03e01-mechanics-behind-product-engineering.md#the-shift) · [Polish: „Zmiana”](../../pl/s03e01-mechanics-behind-product-engineering.md#zmiana)
 > - S03E01 · Mechanics Behind Product Engineering → chapter "Leverage" — [original (EN)](../../s03e01-mechanics-behind-product-engineering.md#leverage) · [Polish: „Dźwignia”](../../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia)
+> - S03E05 · Products That Learn After Release → chapter "Synthesis" — [original (EN)](../../s03e05-products-that-learn-after-release.md#synthesis) · [Polish: „Synteza”](../../pl/s03e05-products-that-learn-after-release.md#synteza)
 
 **Principle.** A requirements list is a contract. Every requirement has a tag, a file and a
 spot in that file: a second in a recording, a region of an image, a page and region of a PDF.
@@ -31,6 +32,19 @@ certificate and only then ran the checks: 15/15. The claim went out after that r
 the course accepted the page on the first try. The course question "Accepted is a contract":
 right the first time.
 
+The same mechanism in S03E05, this time for verdicts rather than requirements. The course
+refused claim 1 on the group "suggestions": "suggestions: not accepted. Check this group against
+the signals and cite what you saw: the signal id, where in it, and what it shows. check-lane has
+a need for this: screen-reading." `check-lane` for `screen-reading`: "Done = you can say what the
+screen showed, word for word (ids and numbers as written), and where: the file, the second, the
+region." The harness went back to the full-resolution frames and wrote down, for example:
+`replay-02`, 00:22, the board, `site-083`, `inc-24201` "Accepted", queue depth 1,333. The second
+version had descriptions with place and value in the `signals` field, and the course answered:
+"not in the shape asked for. Fix groups.0.signals.0". In the fix, `signals` holds bare ids
+(`replay-02`, `ev-019258`, `err-7741`), and the place, second and value go in `note`. The third
+version was accepted. In the second batch, a thumbnail from a contact sheet gave the ticket id
+`tk-4e41b2`, while the full-resolution frame said `tk-6e41b2`.
+
 **Apply.**
 
 - Name every check after its requirement tag (`R-K4M status.json ACAO *`). A tag without a
@@ -41,6 +55,9 @@ right the first time.
   recording tag has `at`, every region fits in 0–1.
 - A TLS error right after the first deploy on a new subdomain is usually the certificate
   still on its way. Wait for a 200 before you call the page broken, or done.
+- The same goes for signals and evidence (S03E05): the id, the place (file, second, region) and
+  what it shows, each in the field the recipient reads. Read ids and numbers from the
+  full-resolution frame or the raw file, not from a thumbnail.
 
 ---
 

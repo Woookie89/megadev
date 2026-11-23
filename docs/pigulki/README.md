@@ -1,6 +1,6 @@
 # Pigułki wiedzy: praca z AI i agentami
 
-Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S03E04)
+Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S03E05)
 oraz z lokalnego MEGA Assessment. Jedna pigułka to jeden plik i jedna zasada, ułożona tak:
 
 - **Zasada**: co robić.
@@ -14,7 +14,7 @@ Przebiegi wyzwań są w debriefach `docs/pl/*-debrief.md`, a teoria lekcji w not
 Każda pigułka wskazuje też lekcje (z rozdziałem), z których pochodzi: oryginał po angielsku
 i polskie tłumaczenie. Wersja angielska pigułek: [docs/pills/](../pills/README.md).
 
-Stan na 20.11.2026.
+Stan na 24.11.2026.
 
 ## Jak korzystać
 
@@ -63,10 +63,12 @@ Stan na 20.11.2026.
 | [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
 | [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
-| [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01 |
+| [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01, S03E05 |
 | [P56](02-kontrakty-i-gotowe/p56-gotowe-to-zaobserwowany-rezultat.md) | „Gotowe” to zaobserwowany rezultat: sprawdzaj produkt tak, jak używa go człowiek, w czasie i na nagraniu | S03E04 |
 | [P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md) | Dowód nazywa build i moment: co miało się stać, co się stało, na którym buildzie i w której sekundzie | S03E04 |
 | [P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md) | Sprawdzarka odbiorcy to specyfikacja: przeczytaj ją przed pierwszym buildem | S03E04 |
+| [P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md) | Liczba w podsumowaniu to twierdzenie: przelicz ją z surowych zdarzeń i sprawdź, czy akcja nie przeszła poza mierzoną ścieżkę | S03E05 |
+| [P60](02-kontrakty-i-gotowe/p60-glosne-nie-znaczy-powszechne.md) | Głośne nie znaczy powszechne ani nowe: zanim przypiszesz sygnał do wydania, sprawdź zasięg, wiek i czego dotyczy | S03E05 |
 
 ### [3. Pamięć poza czatem](03-pamiec/README.md)
 
@@ -76,7 +78,7 @@ Stan na 20.11.2026.
 | [P13](03-pamiec/p13-keep-ustalenie-ze-zrodlem.md) | KEEP: jedna linia, jedno ustalenie, ze źródłem i sposobem | S01E04 |
 | [P14](03-pamiec/p14-jedna-decyzja-jeden-wiersz.md) | Jedna decyzja to jeden wiersz, a późniejsza nadpisuje tylko swój zakres | S02E01, S03E02 |
 | [P15](03-pamiec/p15-pytaj-przeszle-sesje.md) | Pytaj przeszłe sesje zamiast zgadywać i czytaj je wszystkie | S01E02, S02E01 |
-| [P16](03-pamiec/p16-drabina-trwalosci.md) | Drabina trwałości: im ważniejsza reguła, tym wyżej ją zapisz | S01E04, MEGA Assessment |
+| [P16](03-pamiec/p16-drabina-trwalosci.md) | Drabina trwałości: im ważniejsza reguła, tym wyżej ją zapisz | S01E04, S03E05, MEGA Assessment |
 
 ### [4. Orkiestracja: wielu agentów, jeden wynik](04-orkiestracja/README.md)
 
@@ -124,7 +126,7 @@ Stan na 20.11.2026.
 | [P36](07-czlowiek-w-petli/p36-pokaz-plan-przed-publikacja.md) | Pokaż plan, zanim opublikujesz | S01E04 |
 | [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md) | Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi | S02E05 |
 | [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) | Sprzeczne źródła nie wygrywają rangą: rozstrzyga właściciel, a do jego odpowiedzi budujesz tylko to, co pewne | S03E01, S03E04 |
-| [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) | Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id | S03E02 |
+| [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) | Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id | S03E02, S03E05 |
 | [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md) | Wiąże tylko podpisany rekord: niepodpisany to dowód, a otwartą decyzję oddajesz właścicielowi z opcjami i rekomendacją | S03E03 |
 
 ### [8. Harness jako zestaw narzędzi](08-harness/README.md)
@@ -132,7 +134,7 @@ Stan na 20.11.2026.
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P37](08-harness/p37-brakujace-narzedzie.md) | Brakujące narzędzie: zbuduj most, potem go utrwal | S01E03 |
-| [P38](08-harness/p38-skill-to-rutyna.md) | Skill to rutyna, która przeżyła jedno użycie | S01E03, S02E03, S03E01, S03E02, S03E03 |
+| [P38](08-harness/p38-skill-to-rutyna.md) | Skill to rutyna, która przeżyła jedno użycie | S01E03, S02E03, S03E01, S03E02, S03E03, S03E05 |
 | [P39](08-harness/p39-mcp-kontrakt-dla-klienta.md) | Serwer MCP to kontrakt dla obcego klienta | S02E03 |
 | [P40](08-harness/p40-wynik-ma-budzet.md) | Wynik narzędzia ma budżet bajtów | S02E03 |
 | [P41](08-harness/p41-blad-mowi-co-poprawic.md) | Błąd narzędzia mówi modelowi, co poprawić | S02E03 |
@@ -204,6 +206,11 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S03E04 | Weryfikacja rezultatów produktu | [Weryfikacja](../pl/s03e04-verifying-product-outcomes.md#weryfikacja) | [Verification](../s03e04-verifying-product-outcomes.md#verification) | [P56](02-kontrakty-i-gotowe/p56-gotowe-to-zaobserwowany-rezultat.md) |
 | S03E04 | Weryfikacja rezultatów produktu | [System diff](../pl/s03e04-verifying-product-outcomes.md#system-diff) | [System Diff](../s03e04-verifying-product-outcomes.md#system-diff) | [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md) |
 | S03E04 | Weryfikacja rezultatów produktu | [Bramki jakości](../pl/s03e04-verifying-product-outcomes.md#bramki-jakości) | [Quality Gates](../s03e04-verifying-product-outcomes.md#quality-gates) | [P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md) |
+| S03E05 | Produkty, które uczą się po wydaniu | [Sygnały](../pl/s03e05-products-that-learn-after-release.md#sygnały) | [Signals](../s03e05-products-that-learn-after-release.md#signals) | [P60](02-kontrakty-i-gotowe/p60-glosne-nie-znaczy-powszechne.md) |
+| S03E05 | Produkty, które uczą się po wydaniu | [Obserwacja](../pl/s03e05-products-that-learn-after-release.md#obserwacja) | [Observation](../s03e05-products-that-learn-after-release.md#observation) | [P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md) |
+| S03E05 | Produkty, które uczą się po wydaniu | [Synteza](../pl/s03e05-products-that-learn-after-release.md#synteza) | [Synthesis](../s03e05-products-that-learn-after-release.md#synthesis) | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md), [P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md), [P60](02-kontrakty-i-gotowe/p60-glosne-nie-znaczy-powszechne.md) |
+| S03E05 | Produkty, które uczą się po wydaniu | [Decyzje](../pl/s03e05-products-that-learn-after-release.md#decyzje) | [Decisions](../s03e05-products-that-learn-after-release.md#decisions) | [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) |
+| S03E05 | Produkty, które uczą się po wydaniu | [Pętle sprzężenia zwrotnego](../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego) | [Feedback Loops](../s03e05-products-that-learn-after-release.md#feedback-loops) | [P16](03-pamiec/p16-drabina-trwalosci.md), [P38](08-harness/p38-skill-to-rutyna.md) |
 <!-- lessons:end -->
 
 ## Indeks epizodów
@@ -224,6 +231,7 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S03E02 | [nothing ships unmarked](../pl/s03e02-nothing-ships-unmarked-debrief.md) | przekładanie intencji na pracę agentów | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md), [P07](02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md), [P14](03-pamiec/p14-jedna-decyzja-jeden-wiersz.md), [P20](04-orkiestracja/p20-brief-jak-issue.md), [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P38](08-harness/p38-skill-to-rutyna.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md), [P52](05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md), [P53](08-harness/p53-kod-sprawdza-model-decyduje.md) |
 | S03E03 | [out of office](../pl/s03e03-out-of-office-debrief.md) | rozwój produktu w duchu AI-native | [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md), [P38](08-harness/p38-skill-to-rutyna.md), [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md), [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md) |
 | S03E04 | [show me when](../pl/s03e04-show-me-when-debrief.md) | weryfikacja rezultatów produktu | [P06](02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md), [P09](02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md), [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P56](02-kontrakty-i-gotowe/p56-gotowe-to-zaobserwowany-rezultat.md), [P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md), [P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md) |
+| S03E05 | [what came back](../pl/s03e05-what-came-back-debrief.md) | produkty, które uczą się po wydaniu | [P16](03-pamiec/p16-drabina-trwalosci.md), [P38](08-harness/p38-skill-to-rutyna.md), [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md), [P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md), [P60](02-kontrakty-i-gotowe/p60-glosne-nie-znaczy-powszechne.md) |
 | — | MEGA Assessment | twoje wzorce pracy | [rozdział 9](wzorce-pracy.md) |
 
 ## Jak dopisać pigułkę

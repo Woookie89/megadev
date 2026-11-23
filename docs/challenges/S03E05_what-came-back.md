@@ -44,6 +44,8 @@ Kurs przyjmuje oba zestawy, a jedna reguła zostaje zachowana.
 | Strona HQ (State) | 14.11.2026 | otwarte, jeszcze nierozwiązane (Open · not solved yet) |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | otwarte |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
+| Serwer MCP kursu (`claim-challenge`) | 23.11.2026 | rozwiązane 23:04Z; claim 1 przyjęty za trzecim razem (2 odmowy: bez cytatu sygnałów oraz opisy zamiast samych id w `signals`), claim 2 przy pierwszej próbie; werdykty: 0008 `investigate` (właściciel), 0009 `revise`, `ci-1222` `investigate`, 0010 `revert`, 0011 `expand`; [zapis przebiegu](../pl/s03e05-what-came-back-debrief.md) |
+| Serwer MCP kursu (`list-challenges`, `solved`) | 24.11.2026 | `true` |
 
 ## Materiały i załączniki
 
@@ -57,5 +59,8 @@ Stan ze strony HQ z 14.11.2026: strona nie ma załączników (0 plików).
   status z HQ i wymagania wzięto wtedy z notatek z HQ w poprzedniej wersji
   [indeksu](../challenges.md).
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (13.11.2026).
-- Ani notatki z HQ, ani strona HQ (14.11.2026) nie mówią, której reguły dotyczy kryterium
-  ukończenia („one rule is kept”). Wyjaśni to prawdopodobnie dopiero `start-challenge`.
+- Ani notatki z HQ, ani strona HQ (14.11.2026) nie mówiły, której reguły dotyczy kryterium
+  ukończenia („one rule is kept”). Wyjaśnił to `start-challenge`: reguła to pole `rule` w claimie.
+  Treść reguły napisał harness, kurs jej nie podał.
+- Stan strony HQ (State) po rozwiązaniu nie został odczytany. Status wyzwania pochodzi z serwera
+  MCP kursu (24.11.2026).

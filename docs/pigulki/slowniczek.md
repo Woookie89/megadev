@@ -46,6 +46,8 @@
 | blok `evidence` | Blok JSON na końcu raportu z dowodem w polach: przepływ, moment `mm:ss`, `expected` (co miało się stać), `got` (co się stało), sha buildu, link do nagrania i receipt ([P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md)). |
 | stempel buildu (build sha) | Skrót commitu wpisany w stronę (`<meta name="build">`, stopka), żeby nagranie i dowód mówiły, który build pokazują. W S03E04 to ostatni commit, który zmienił `app/` ([P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md)). |
 | system diff | Zestawienie dla człowieka: co zmieniło się w zachowaniu, UX i danych względem planu, jakie decyzje zapadły i jakie czekają. W S03E04 obowiązkowa sekcja raportu kroku 2 ([P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md)). |
+| bariera (guardrail) | Granica zapisana w rekordzie wydania, której metryka pomocnicza nie może przekroczyć (np. mediana TTR najwyżej +5%). Przekroczona bariera to błąd: zespół poprawia albo wycofuje, bez decyzji właściciela ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
+| werdykt (verb) | Jedna z sześciu decyzji S03E05 dla grupy sygnałów: `expand`, `revise`, `simplify`, `revert`, `investigate`, `stop`. Wpisana z id sygnałów i polem `who` (`agent` albo `owner`) ([P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md)). |
 
 ---
 

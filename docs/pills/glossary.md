@@ -44,6 +44,8 @@
 | `evidence` block | A JSON block at the end of a report that carries the proof in fields: the flow, the `mm:ss` moment, `expected` (what should happen), `got` (what happened), the build sha, the recording link and a receipt ([P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md)). |
 | build stamp (build sha) | A short commit hash written into the page (`<meta name="build">`, the footer), so a recording and a proof say which build they show. In S03E04 it is the last commit that changed `app/` ([P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md)). |
 | system diff | A summary for a person: what changed in behaviour, UX and data against the plan, which decisions were made and which are waiting. In S03E04 a required section of the step-two report ([P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md)). |
+| guardrail | A limit written in the release record that a secondary metric must not cross (for example, median TTR at most +5%). A crossed guardrail is a bug: the team fixes or rolls back, with no owner decision ([P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md)). |
+| verdict (verb) | One of the six S03E05 decisions for a group of signals: `expand`, `revise`, `simplify`, `revert`, `investigate`, `stop`. Written with signal ids and a `who` field (`agent` or `owner`) ([P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md)). |
 
 ---
 

@@ -1,11 +1,12 @@
 # P50 · Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz
 
-> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S03E01
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S03E01, S03E05
 
 > **Lekcje:**
 >
 > - S03E01 · Mechanika inżynierii produktu → rozdział „Zmiana” — [po polsku](../../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) · [oryginał EN: „The Shift”](../../s03e01-mechanics-behind-product-engineering.md#the-shift)
 > - S03E01 · Mechanika inżynierii produktu → rozdział „Dźwignia” — [po polsku](../../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) · [oryginał EN: „Leverage”](../../s03e01-mechanics-behind-product-engineering.md#leverage)
+> - S03E05 · Produkty, które uczą się po wydaniu → rozdział „Synteza” — [po polsku](../../pl/s03e05-products-that-learn-after-release.md#synteza) · [oryginał EN: „Synthesis”](../../s03e05-products-that-learn-after-release.md#synthesis)
 
 **Zasada.** Lista wymagań to kontrakt. Każde wymaganie ma tag, plik i miejsce w pliku:
 sekundę nagrania, obszar obrazu, stronę i obszar PDF-a. Każde przyjęte wymaganie dostaje
@@ -31,6 +32,19 @@ minuty na certyfikat i dopiero wtedy uruchomił sprawdzenia: 15/15. Claim poszed
 wyniku i kurs przyjął stronę przy pierwszej próbie. Pytanie kursu „Accepted is a contract”:
 dobrze od razu.
 
+Ten sam mechanizm w S03E05, tym razem dla werdyktów, a nie wymagań. Kurs odrzucił claim 1 na
+grupie „suggestions”: „suggestions: not accepted. Check this group against the signals and cite
+what you saw: the signal id, where in it, and what it shows. check-lane has a need for this:
+screen-reading.” `check-lane` dla `screen-reading`: „Done = you can say what the screen showed,
+word for word (ids and numbers as written), and where: the file, the second, the region.”
+Harness wrócił do pełnych klatek i zapisał na przykład: `replay-02`, 00:22, tablica,
+`site-083`, `inc-24201` „Accepted”, głębokość kolejki 1 333. Druga wersja miała w polu
+`signals` opisy z miejscem i wartością i kurs odpowiedział: „not in the shape asked for. Fix
+groups.0.signals.0”. W poprawce `signals` ma same id (`replay-02`, `ev-019258`, `err-7741`),
+a miejsce, sekunda i wartość idą do `note`. Trzecia wersja została przyjęta. W zestawie
+drugim miniatura z arkusza kontaktowego dała id zgłoszenia `tk-4e41b2`, a pełna klatka
+`tk-6e41b2`.
+
 **Stosuj.**
 
 - Każde sprawdzenie nazwij tagiem wymagania (`R-K4M status.json ACAO *`). Wtedy brak
@@ -41,6 +55,9 @@ dobrze od razu.
   tag z nagrania ma `at`, każdy obszar mieści się w 0–1.
 - Błąd TLS zaraz po pierwszym wdrożeniu na nowej subdomenie to zwykle certyfikat w drodze.
   Poczekaj na 200, zanim uznasz stronę za zepsutą albo gotową.
+- To samo dotyczy sygnałów i dowodów (S03E05): id, miejsce (plik, sekunda, obszar) i to, co
+  pokazuje, każde w polu, które odbiorca czyta. Id i liczby czytaj z pełnej klatki albo
+  z surowego pliku, nie z miniatury.
 
 ---
 

@@ -1,11 +1,12 @@
 # P38 · Skill to rutyna, która przeżyła jedno użycie
 
-> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01, S03E02, S03E03
+> Rozdział [8. Harness jako zestaw narzędzi](README.md) · epizody: S01E03, S02E03, S03E01, S03E02, S03E03, S03E05
 
 > **Lekcje:**
 >
 > - S01E02 · Sterowanie modelami za pomocą kontekstu → rozdział „Projektowanie i generowanie skilli” — [po polsku](../../pl/s01e02-steering-models-through-context.md#projektowanie-i-generowanie-skilli) · [oryginał EN: „Designing and generating skills”](../../s01e02-steering-models-through-context.md#designing-and-generating-skills)
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Wykonywalny Markdown a kod” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) · [oryginał EN: „Executable Markdown vs Code”](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code)
+> - S03E05 · Produkty, które uczą się po wydaniu → rozdział „Pętle sprzężenia zwrotnego” — [po polsku](../../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego) · [oryginał EN: „Feedback Loops”](../../s03e05-products-that-learn-after-release.md#feedback-loops)
 
 **Zasada.** Gdy coś robisz drugi raz, zapisz to jako skill: kroki, zasady zgody, przykłady.
 
@@ -43,6 +44,13 @@ build the answer, log it once it is live.” Lekcja z rundy (rekordy w każdej t
 razie tylko do kodu runnera, a nie do skilla. Kartę „bet” z talii kursu (skill do rekordów
 decyzji) harness zainstalował 20.11.2026, na prośbę użytkownika, w `~/.claude/skills/bet`
 (wersja 5597ebd80849, 6 plików, sumy SHA-256 zgodne z kursem, sprawdzenia skilla przechodzą).
+
+S03E05: harness przeszedł wyzwanie bez własnego skilla do decyzji po wydaniu. Kurs zapisał to
+w debriefie: T1 nie zdobyte, a w toolboxie brakowało skilla `decide`. Zasady wyszły z przebiegu:
+czytaj rekordy wydań przed liczbami, przeliczaj z surowych plików, oglądaj nagrania, licz
+zasięg i wiek błędów, a werdykt wpisuj jako id sygnałów w `signals`, z miejscem i wartością
+w `note`. Dzień po rozwiązaniu (24.11.2026) powstał skill `decide` w
+`.agents/skills/decide/SKILL.md` (widoczny przez junction `.claude/skills`).
 
 ---
 

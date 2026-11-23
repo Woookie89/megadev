@@ -1,11 +1,12 @@
 # P38 · A skill is a routine that survived its first use
 
-> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01, S03E02, S03E03
+> Chapter [8. The harness as a toolkit](README.md) · episodes: S01E03, S02E03, S03E01, S03E02, S03E03, S03E05
 
 > **Lessons:**
 >
 > - S01E02 · Steering Models Through Context → chapter "Designing and generating skills" — [original (EN)](../../s01e02-steering-models-through-context.md#designing-and-generating-skills) · [Polish: „Projektowanie i generowanie skilli”](../../pl/s01e02-steering-models-through-context.md#projektowanie-i-generowanie-skilli)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Executable Markdown vs Code" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) · [Polish: „Wykonywalny Markdown a kod”](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod)
+> - S03E05 · Products That Learn After Release → chapter "Feedback Loops" — [original (EN)](../../s03e05-products-that-learn-after-release.md#feedback-loops) · [Polish: „Pętle sprzężenia zwrotnego”](../../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego)
 
 **Principle.** When you do something a second time, write it down as a skill: the steps,
 the consent rules, examples.
@@ -45,6 +46,14 @@ it is live." The lesson of the round (records in every turn) so far lives only i
 code, not in the skill. On 20.11.2026, at the user's request, the harness installed the course
 deck's "bet" card (a skill for decision records) in `~/.claude/skills/bet` (version 5597ebd80849,
 6 files, SHA-256 matching the course, the skill's checks pass).
+
+S03E05: the harness got through the challenge without a skill of its own for deciding after a
+release. The course recorded it in the debrief: T1 not gained, and the toolbox was missing a
+`decide` skill. The rules came out of the run: read the release records before the numbers,
+recompute from raw files, watch the recordings, count the reach and age of errors, and write
+each verdict as signal ids in `signals`, with the place and value in `note`. The day after the
+solve (24.11.2026) the `decide` skill was written in `.agents/skills/decide/SKILL.md` (visible
+through the `.claude/skills` junction).
 
 ---
 

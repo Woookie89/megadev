@@ -52,4 +52,4 @@ front."
 
 ---
 
-← [P57](p57-a-proof-names-its-build-and-moment.md) · [chapter](README.md) · [all pills](../README.md)
+← [P57](p57-a-proof-names-its-build-and-moment.md) · [chapter](README.md) · [all pills](../README.md) · [P59](p59-a-summary-number-is-a-claim.md) →

@@ -356,3 +356,6 @@ s01e04/s01e04-rig-handover/
 s02e03/mcp-home/
 s02e04/remote-worker/
 s02e05/away-agent/
+
+# S04E01 Host Desk secrets (vars.json holds the practice key and the ticket)
+**/host-desk/vars.json

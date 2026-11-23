@@ -1,11 +1,12 @@
 # P51 · Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S03E02
+> Rozdział [7. Człowiek w pętli](README.md) · epizody: S03E02, S03E05
 
 > **Lekcje:**
 >
 > - S03E02 · Przekładanie intencji na pracę agentów → rozdział „Kontekst produktu” — [po polsku](../../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) · [oryginał EN: „Product context”](../../s03e02-translating-intent-into-agent-work.md#product-context)
 > - S03E02 · Przekładanie intencji na pracę agentów → rozdział „Wymagania i dekompozycja” — [po polsku](../../pl/s03e02-translating-intent-into-agent-work.md#wymagania-i-dekompozycja) · [oryginał EN: „Requirements and decomposition”](../../s03e02-translating-intent-into-agent-work.md#requirements-and-decomposition)
+> - S03E05 · Produkty, które uczą się po wydaniu → rozdział „Decyzje” — [po polsku](../../pl/s03e05-products-that-learn-after-release.md#decyzje) · [oryginał EN: „Decisions”](../../s03e05-products-that-learn-after-release.md#decisions)
 
 **Zasada.** Zgłoszenie to nie zadanie. Każde rozstrzygasz wobec tego, co już jest: zrobione
 issue, otwarte issue z tą samą prośbą, reguła produktu, prośba kogoś innego. Każde otwarte
@@ -46,6 +47,18 @@ it”, „Not everything is a question” i „Urgent is not first”: dobrze od
 never decides. A written rule beats the loudest voice: cite the rule.” oraz „Boundaries cut
 both ways: marking everything for a human is a non-decision too.”
 
+S03E05: ta sama granica, z regułami zapisanymi w rekordach wydań. Rekordy 0010 i 0011 mówiły:
+„jeśli cel spełniony i żadna bariera nie przekroczona, następny krok to `expand` do 100%”,
+a dokumenty wydań, że przekroczona bariera to błąd, który zespół poprawia albo wycofuje,
+bez decyzji właściciela. Do właściciela trafiła tylko jedna grupa: 0008 (smart suggestions v2),
+bo dotyczyła kierunku produktu, a sama metryka była w wątpliwości. Zgodnie z zadaniem harness
+przedstawił opcje numerowane, z nakładem pracy i rekomendacją, i czekał. Użytkownik wybrał „1”: zostaje 50%,
+restarty z `sched-admin` zaczynają być logowane, wynik liczy się od nowa przez 14 nocy. Resztę
+rozstrzygnął harness: 0009 `revise` (brak pola `impact` łamie barierę), `ci-1222`
+`investigate`, 0010 `revert` (bariera TTR +8,2%, a cofnięcie flagi `auto_close_quiet` jest
+odwracalne), 0011 `expand` (cel spełniony, bez przekroczeń). Claim 2 został przyjęty przy
+pierwszej próbie.
+
 **Stosuj.**
 
 - Przed triage'em przeczytaj reguły w całości i zanotuj ich id. Bez spisanej granicy
@@ -62,6 +75,9 @@ both ways: marking everything for a human is a non-decision too.”
 - Późniejsza prośba zmienia tylko swój zakres
   ([P14](../03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)).
 - Pilność zapisz w treści issue, ale kolejność ustaw przez `blocked-by`.
+- Rozdziel błąd od kierunku (S03E05): przekroczona bariera albo brakujące pole to błąd, który
+  naprawia zespół (`revise`, `revert`), a zmiana kierunku produktu albo wątpliwość co do samej
+  metryki to decyzja właściciela. Cofnięcie za flagą jest odwracalne, więc nie wymaga pytania.
 
 ---
 

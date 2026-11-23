@@ -1,6 +1,6 @@
 # Knowledge pills: working with AI and agents
 
-Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E04) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
+Textbook-style notes collected from the MEGA.dev challenges (S01E01–S03E05) and from the local MEGA Assessment. One pill is one file and one principle, laid out as:
 
 - **Principle**: what to do.
 - **Why**: the mechanism, i.e. why it is so with models, agents or the harness.
@@ -11,7 +11,7 @@ Every pill also names the course lessons (and their chapters) it comes from, wit
 original English notes and the Polish translation. Polish version of the pills:
 [docs/pigulki/](../pigulki/README.md). Challenge debriefs are in Polish, in `docs/pl/*-debrief.md`.
 
-As of 20.11.2026.
+As of 24.11.2026.
 
 ## How to use
 
@@ -60,10 +60,12 @@ As of 20.11.2026.
 | [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
 | [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
-| [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01 |
+| [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01, S03E05 |
 | [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md) | "Done" is an observed outcome: check the product the way a person uses it, in time and on a recording | S03E04 |
 | [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md) | A proof names its build and its moment: what should happen, what happened, on which build and at which second | S03E04 |
 | [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) | The recipient's checker is a spec: read it before the first build | S03E04 |
+| [P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md) | A summary number is a claim: recompute it from raw events and check whether the action moved off the measured path | S03E05 |
+| [P60](02-contracts-and-done/p60-loud-is-not-widespread-or-new.md) | Loud is not widespread or new: before you pin a signal on a release, check its reach, its age and what it is about | S03E05 |
 
 ### [3. Memory outside the chat](03-memory/README.md)
 
@@ -73,7 +75,7 @@ As of 20.11.2026.
 | [P13](03-memory/p13-keep-finding-with-source.md) | KEEP: one line, one finding, with its source and how it was found | S01E04 |
 | [P14](03-memory/p14-one-decision-one-row.md) | One decision per row; a later decision overrides only its own scope | S02E01, S03E02 |
 | [P15](03-memory/p15-ask-past-sessions.md) | Ask past sessions instead of guessing, and read all of them | S01E02, S02E01 |
-| [P16](03-memory/p16-durability-ladder.md) | The durability ladder: the more important the rule, the higher you write it | S01E04, MEGA Assessment |
+| [P16](03-memory/p16-durability-ladder.md) | The durability ladder: the more important the rule, the higher you write it | S01E04, S03E05, MEGA Assessment |
 
 ### [4. Orchestration: many agents, one result](04-orchestration/README.md)
 
@@ -121,7 +123,7 @@ As of 20.11.2026.
 | [P36](07-human-in-the-loop/p36-show-the-plan-first.md) | Show the plan before you publish | S01E04 |
 | [P47](07-human-in-the-loop/p47-approval-over-the-owners-channel.md) | Approval comes over the owner's channel, never from the message asking for it | S02E05 |
 | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md) | Conflicting sources don't win by rank: the owner decides, and until they answer you build only what is settled | S03E01, S03E04 |
-| [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02 |
+| [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02, S03E05 |
 | [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) | Only a signed record binds: an unsigned one is evidence, and the open call goes to the owner with options and a recommendation | S03E03 |
 
 ### [8. The harness as a toolkit](08-harness/README.md)
@@ -129,7 +131,7 @@ As of 20.11.2026.
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P37](08-harness/p37-missing-tool.md) | A missing tool: build a bridge, then make it permanent | S01E03 |
-| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03, S03E01, S03E02, S03E03 |
+| [P38](08-harness/p38-skill-is-a-routine.md) | A skill is a routine that survived its first use | S01E03, S02E03, S03E01, S03E02, S03E03, S03E05 |
 | [P39](08-harness/p39-mcp-contract-for-strangers.md) | An MCP server is a contract for a stranger client | S02E03 |
 | [P40](08-harness/p40-results-have-a-budget.md) | A tool result has a byte budget | S02E03 |
 | [P41](08-harness/p41-errors-say-what-to-fix.md) | A tool error tells the model what to fix | S02E03 |
@@ -201,6 +203,11 @@ Which lesson chapters stand behind which pills. The EN column links the original
 | S03E04 | Verifying Product Outcomes | [Verification](../s03e04-verifying-product-outcomes.md#verification) | [Weryfikacja](../pl/s03e04-verifying-product-outcomes.md#weryfikacja) | [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md) |
 | S03E04 | Verifying Product Outcomes | [System Diff](../s03e04-verifying-product-outcomes.md#system-diff) | [System diff](../pl/s03e04-verifying-product-outcomes.md#system-diff) | [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md) |
 | S03E04 | Verifying Product Outcomes | [Quality Gates](../s03e04-verifying-product-outcomes.md#quality-gates) | [Bramki jakości](../pl/s03e04-verifying-product-outcomes.md#bramki-jakości) | [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
+| S03E05 | Products That Learn After Release | [Signals](../s03e05-products-that-learn-after-release.md#signals) | [Sygnały](../pl/s03e05-products-that-learn-after-release.md#sygnały) | [P60](02-contracts-and-done/p60-loud-is-not-widespread-or-new.md) |
+| S03E05 | Products That Learn After Release | [Observation](../s03e05-products-that-learn-after-release.md#observation) | [Obserwacja](../pl/s03e05-products-that-learn-after-release.md#obserwacja) | [P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md) |
+| S03E05 | Products That Learn After Release | [Synthesis](../s03e05-products-that-learn-after-release.md#synthesis) | [Synteza](../pl/s03e05-products-that-learn-after-release.md#synteza) | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md), [P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md), [P60](02-contracts-and-done/p60-loud-is-not-widespread-or-new.md) |
+| S03E05 | Products That Learn After Release | [Decisions](../s03e05-products-that-learn-after-release.md#decisions) | [Decyzje](../pl/s03e05-products-that-learn-after-release.md#decyzje) | [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md) |
+| S03E05 | Products That Learn After Release | [Feedback Loops](../s03e05-products-that-learn-after-release.md#feedback-loops) | [Pętle sprzężenia zwrotnego](../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego) | [P16](03-memory/p16-durability-ladder.md), [P38](08-harness/p38-skill-is-a-routine.md) |
 <!-- lessons:end -->
 
 ## Episode index
@@ -223,6 +230,7 @@ The debriefs are in Polish only.
 | S03E02 | [nothing ships unmarked](../pl/s03e02-nothing-ships-unmarked-debrief.md) | translating intent into agent work | [P04](01-context/p04-a-download-is-a-dated-copy.md), [P07](02-contracts-and-done/p07-done-is-a-check.md), [P14](03-memory/p14-one-decision-one-row.md), [P20](04-orchestration/p20-brief-like-an-issue.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P38](08-harness/p38-skill-is-a-routine.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P52](05-agents-without-humans/p52-rebuild-on-every-arrival.md), [P53](08-harness/p53-code-checks-the-model-decides.md) |
 | S03E03 | [out of office](../pl/s03e03-out-of-office-debrief.md) | AI-native product development | [P10](02-contracts-and-done/p10-check-from-outside.md), [P27](05-agents-without-humans/p27-agent-sees-its-logs.md), [P28](06-security/p28-data-is-not-instructions.md), [P30](06-security/p30-least-privilege.md), [P38](08-harness/p38-skill-is-a-routine.md), [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md), [P55](07-human-in-the-loop/p55-only-a-signed-record-binds.md) |
 | S03E04 | [show me when](../pl/s03e04-show-me-when-debrief.md) | verifying product outcomes | [P06](02-contracts-and-done/p06-contract-first.md), [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md), [P10](02-contracts-and-done/p10-check-from-outside.md), [P26](05-agents-without-humans/p26-timing-is-behavior.md), [P33](07-human-in-the-loop/p33-decision-rights.md), [P45](05-agents-without-humans/p45-remote-worker-way-there-and-back.md), [P49](07-human-in-the-loop/p49-conflicting-sources-go-to-the-owner.md), [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md), [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md), [P58](02-contracts-and-done/p58-the-checker-is-a-spec.md) |
+| S03E05 | [what came back](../pl/s03e05-what-came-back-debrief.md) | products that learn after release | [P16](03-memory/p16-durability-ladder.md), [P38](08-harness/p38-skill-is-a-routine.md), [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md), [P51](07-human-in-the-loop/p51-a-written-rule-sets-the-autonomy-line.md), [P59](02-contracts-and-done/p59-a-summary-number-is-a-claim.md), [P60](02-contracts-and-done/p60-loud-is-not-widespread-or-new.md) |
 | — | MEGA Assessment | your working patterns | [chapter 9](work-patterns.md) |
 
 ## How to add a pill

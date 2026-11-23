@@ -51,4 +51,4 @@ the refused evidence and the blink both came from checks you could see up front.
 
 ---
 
-← [P57](p57-dowod-nazywa-build-i-moment.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P57](p57-dowod-nazywa-build-i-moment.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P59](p59-liczba-w-podsumowaniu-to-twierdzenie.md) →
