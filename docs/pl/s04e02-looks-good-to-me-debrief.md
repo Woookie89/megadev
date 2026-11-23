@@ -50,7 +50,7 @@ Rozwiązanie rozwija Host Desk z S04E01 o drugą rolę i poprawia skrypt partii 
 | Część | Co robi |
 | --- | --- |
 | `roles/reviewer/ROLE.md` | Rola recenzenta w pięciu częściach: **Purpose** (werdykt `flag` albo `pass` dla każdego hunka, z powodem i źródłem), **Startup reads** (jedno wywołanie `context.mjs`), **Tools** (`vars`, `http`, `code`), **Limits** (tylko do odczytu, te trzy narzędzia, jedna wysyłka), **Output** (jedno `POST /review`, po jednym ustaleniu na hunk). Dodatkowa sekcja mówi, jak oceniać hunk. |
-| `roles/reviewer/scripts/context.mjs` | Jednym wywołaniem drukuje: żywe ustawienia domu (`/settings`), łatkę hunk po hunku z plikami bazowymi i notatki `why/`. Ticket nie jest potrzebny, bo idzie tylko jedna próba, i to tylko do `hq.mega.dev`, bez przekierowań. |
+| `roles/reviewer/scripts/context.mjs` | Jednym wywołaniem drukuje: żywe ustawienia domu (`/settings`), łatkę hunk po hunku z plikami bazowymi i notatki `why/`. Próba (`ATTEMPT`) idzie tylko do `hq.mega.dev` i bez przekierowań. |
 | `roles/reviewer/hosts.json` | Lista hostów na sekret dla recenzenta, osobna od listy pierwszej roli. Zasada z [S04E01](s04e01-twenty-payouts-debrief.md). |
 | `why/` | Trzy notatki domu: `nights.md` (noce to wyjazd minus przyjazd, dzień wyjazdu się nie liczy), `payout-date.md` (wypłata w dniu wyjazdu, nie przyjazdu), `payout-rounding.md` (zaokrąglenie w dół, `Math.floor`). |
 | `payout-runner/scripts/batch.mjs` | Partia z S04E01, poprawiona pod to wyzwanie: bierze slug wyzwania jako argument, czyta prowizję z żywego `/settings`, zaokrągla w dół do pełnych euro, płaci na nowy adres `/looks-good-to-me/payouts`, a zadania zaparkowane mogą mieć kwotę. |
@@ -72,8 +72,8 @@ Reguła wypłat z podręcznika: host dostaje sumę pobytu minus prowizja domu, w
    zablokowałyby mu wpisanie ticketu i próby w Host Desk, i dał człowiekowi trzy opcje
    (sesja `65b3ae3c-…jsonl:1526`, 23.11.2026 23:28Z).
 3. **Dwie odpowiedzi w jednej wiadomości.** Człowiek odpisał jednym zdaniem: „tak dawaj opcje 1,
-   pozwalam ci go zapisac gdzie trzeba” (`…jsonl:1538`). Harness uznał to za odpowiedź na oba
-   pytania: opcja 1 (ustawień nie ruszać) i zgoda na pobranie zipa. W trakcie tury człowiek
+   pozwalam ci go zapisac gdzie trzeba” (`…jsonl:1538`). Według logu harness zrozumiał to jako
+   odpowiedź na oba pytania: opcja 1 (ustawień nie ruszać) i zgoda na pobranie zipa. W trakcie tury człowiek
    doprecyzował: „instalacja skilla clock to jedno a s04e02 to inna sprawa - robimy tak zeby
    zaliczyc zadanie, a clock do global” (`…jsonl:1617`). Skill zostaje globalny, a S04E02 ma po
    prostu przejść. Log HANDOVER zapisuje, że odpowiedzi człowieka zostały raz pomylone. Co
@@ -129,8 +129,8 @@ Co zadziałało:
    łatka z inną prowizją (16 % w drugiej próbie) nie jest już pułapką.
 2. **Jedno wywołanie kontekstu.** `context.mjs` składa ustawienia, łatkę i notatki w jednym kroku.
    Model nie musi pamiętać, żeby po nie sięgnąć, i nie robi wielu tur.
-3. **Hunk po hunku, ze źródłem.** Każde ustalenie niosło powód i nazwę źródła (żywe ustawienie albo
-   notatka `why/`), więc kurs mógł ocenić każde osobno.
+3. **Hunk po hunku, ze źródłem.** `ROLE.md` wymaga jednego ustalenia na hunk, z powodem i nazwą źródła
+   (żywe ustawienie albo notatka `why/`). Przyjęty przebieg 2 spełnił to dla trzech hunków.
 4. **Partia nadal w skrypcie.** Zmiana stałych (slug, prowizja, zaokrąglenie, adres) nie zmieniła
    podziału z S04E01: 20 zadań w 1978 ms, dwa hosty w dzienniku sieci.
 
@@ -206,7 +206,7 @@ Dwie reguły kursu zapisane w `factory/CHECKLIST.md`, dosłownie:
   Decyzja człowieka, bo globalne reguły zablokowałyby wpisywanie `vars.json` w Host Desk.
 - **Skill `plane`** z decku: log mówi, że nie zainstalowano. W chwili pisania katalog
   `~/.claude/skills/rook-plane` już istnieje (znacznik czasu 24.11.2026 00:38 +0100, czyli 23.11.2026
-  23:38Z), a harness widzi skill `rook-plane` na liście. Kto go zainstalował, nie znaleziono w
+  23:38Z), a lista skilli mojej sesji zawiera `rook-plane`. Kto go zainstalował, nie znaleziono w
   logu. Do potwierdzenia przez człowieka.
 - **Zmieniony `http.mjs` startera z S04E01** (lista hostów, bez przekierowań): człowiek nadal tego
   nie potwierdził.
@@ -215,7 +215,7 @@ Dwie reguły kursu zapisane w `factory/CHECKLIST.md`, dosłownie:
 - **Sekrety** w plikach ignorowanych przez git: `s04e02/*.secrets.local.json` i
   `s04e01/agent/host-desk/vars.json` (klucz ćwiczebny, ticket, próba). Ticket S04E02 wygasa
   24.11.2026, 23:27Z. W dokumentach ich nie ma.
-- Kolejne wyzwania (S04E03–S04E05) według opisów z serwera MCP kursu rozbudowują tego samego
-  agenta.
+- Kolejne wyzwania (S04E03–S04E05) według opisów z serwera MCP kursu (cytowanych w debriefie
+  S04E01) rozbudowują tego samego agenta. Ich treści tu nie sprawdzałem.
 
 Debrief jest na [stronie wyzwania](https://hq.mega.dev/challenges/looks-good-to-me#debrief).
