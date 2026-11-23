@@ -13,6 +13,7 @@ w tym, co dostają na wejściu.
 | [P21](p21-deleguj-research.md) | Deleguj research, nie tylko budowę | MEGA Assessment |
 | [P43](p43-przekaz-skill-z-zadaniem.md) | Przekaż skill razem z zadaniem | S02E04 |
 | [P44](p44-normalizuj-przed-zlaczeniem.md) | Normalizuj, zanim złączysz | S02E04 |
+| [P66](p66-rola-ma-piec-czesci.md) | Rolę opisuje pięć części: Purpose, Tools, Limits, Startup reads i Output, a błąd naprawiasz w tej części, której dotyczy | S04E02 |
 
 ---
 

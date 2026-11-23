@@ -11,7 +11,7 @@ permissions. The result depends on the kit as much as on the model.
 | [P40](p40-results-have-a-budget.md) | A tool result has a byte budget | S02E03 |
 | [P41](p41-errors-say-what-to-fix.md) | A tool error tells the model what to fix | S02E03 |
 | [P42](p42-big-bytes-beside-the-model.md) | Big bytes travel beside the model, not through it | S02E03 |
-| [P53](p53-code-checks-the-model-decides.md) | Code fetches, files and checks; the model decides: keep each on its own side | S03E02, S04E01 |
+| [P53](p53-code-checks-the-model-decides.md) | Code fetches, files and checks; the model decides: keep each on its own side | S03E02, S04E01, S04E02 |
 
 ---
 

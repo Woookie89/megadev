@@ -11,6 +11,7 @@ Wszystko, co ma przetrwać, musi trafić do pliku.
 | [P14](p14-jedna-decyzja-jeden-wiersz.md) | Jedna decyzja to jeden wiersz, a późniejsza nadpisuje tylko swój zakres | S02E01, S03E02 |
 | [P15](p15-pytaj-przeszle-sesje.md) | Pytaj przeszłe sesje zamiast zgadywać i czytaj je wszystkie | S01E02, S02E01 |
 | [P16](p16-drabina-trwalosci.md) | Drabina trwałości: im ważniejsza reguła, tym wyżej ją zapisz | S01E04, S03E05, MEGA Assessment |
+| [P65](p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) | Decyzja, która wygląda na błąd, ma obok kodu zapisane, dlaczego: rola czyta te notatki, zanim oceni lub zmieni | S04E02 |
 
 ---
 

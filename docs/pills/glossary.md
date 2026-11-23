@@ -50,6 +50,10 @@
 | wire log | A file where the script records every request: host, header names (not values), status and the redirect host. It lets you say where each secret went ([P61](06-security/p61-a-secret-has-a-host-list-in-code.md)). |
 | parked task (`needs-owner`) | A task the agent does not decide alone: it gets a `needs-owner` flag with a reason and waits for the owner's decision. In S04E01 the owner chooses on the Challenge page (`on-file`, `new`, `decline`), and the agent finishes the task in a separate step ([P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md)). |
 | account on file | The only account the S04E01 manual allows payouts to. It differs between attempts, so the script reads it from the manual each time ([P63](07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md)). |
+| hunk | One coherent piece of a change (a patch) in a file, with its own id, e.g. `h-be5`. In S04E02 the reviewer gives a `flag` or `pass` verdict for each hunk separately ([P66](04-orchestration/p66-a-role-has-five-parts.md)). |
+| the five parts of a role (Purpose, Tools, Limits, Startup reads, Output) | The steering vocabulary from S04E02: what the role does, which tools it uses, what it must not do, what it reads at start and what result it hands over ([P66](04-orchestration/p66-a-role-has-five-parts.md)). |
+| `why/` notes (house notes) | Short files next to the code: the decision, why, and so. In S04E02 there are three: `nights.md`, `payout-date.md`, `payout-rounding.md` ([P65](03-memory/p65-a-decision-has-its-why-next-to-the-code.md)). |
+| house settings (`/settings`) | A live read of the version and the commission in S04E02. It changes with every attempt, so the role reads it at start instead of copying it into `ROLE.md` ([P64](01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md)). |
 
 ---
 

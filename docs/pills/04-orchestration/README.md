@@ -13,6 +13,7 @@ in what they get as input.
 | [P21](p21-delegate-research.md) | Delegate research, not just building | MEGA Assessment |
 | [P43](p43-skill-travels-with-the-job.md) | The skill travels with the job | S02E04 |
 | [P44](p44-normalize-before-joining.md) | Normalize before you join | S02E04 |
+| [P66](p66-a-role-has-five-parts.md) | A role has five parts: Purpose, Tools, Limits, Startup reads and Output, and you fix an error in the part it belongs to | S04E02 |
 
 ---
 

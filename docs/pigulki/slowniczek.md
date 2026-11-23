@@ -52,6 +52,10 @@
 | dziennik sieci (wire log) | Plik, w którym skrypt zapisuje każde żądanie: host, nazwy nagłówków (nie wartości), status i host przekierowania. Pozwala powiedzieć, dokąd poszedł każdy sekret ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
 | zaparkowane zadanie (parked, `needs-owner`) | Zadanie, którego agent nie rozstrzyga sam: dostaje flagę `needs-owner` z powodem i czeka na decyzję właściciela. W S04E01 właściciel wybiera na stronie wyzwania (`on-file`, `new`, `decline`), a agent kończy zadanie osobnym krokiem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
 | konto z akt (account on file) | Jedyne konto, na które wolno wypłacać według podręcznika S04E01. Różni się między próbami, więc skrypt czyta je z podręcznika za każdym razem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
+| hunk | Jeden spójny fragment zmiany (łatki) w pliku, z własnym id, np. `h-be5`. W S04E02 recenzent wystawia werdykt `flag` albo `pass` dla każdego hunka osobno ([P66](04-orkiestracja/p66-rola-ma-piec-czesci.md)). |
+| pięć części roli (Purpose, Tools, Limits, Startup reads, Output) | Słownik sterowania z S04E02: co rola robi, jakich narzędzi używa, czego jej nie wolno, co czyta na starcie i jaki wynik oddaje ([P66](04-orkiestracja/p66-rola-ma-piec-czesci.md)). |
+| notatki `why/` (house notes) | Krótkie pliki obok kodu: decyzja, dlaczego, co z tego wynika. W S04E02 trzy: `nights.md`, `payout-date.md`, `payout-rounding.md` ([P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)). |
+| ustawienia domu (`/settings`) | Żywy odczyt wersji i prowizji w S04E02. Zmienia się z każdą próbą, więc rola czyta go na starcie, a nie kopiuje do `ROLE.md` ([P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md)). |
 
 ---
 
