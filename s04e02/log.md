@@ -39,3 +39,6 @@
 - nothing runs, no service. Files: s04e01/agent/host-desk (roles/reviewer with scripts/context.mjs, why/, payout-runner batch.mjs with slug arg), s04e02/ (log, secrets in *.secrets.local.json, dl/ = unzipped reviewer pack). vars.json holds PAYOUT_KEY, TICKET, ATTEMPT (git-ignored); the S04E02 ticket expires 2026-11-24T23:27Z.
 - open: payout-runner ROLE.md does not read why/ notes (debrief T3 partly); the `plane` skill is in the deck, not installed; staging in git (docs/ staged by something other than me, see S04E01 docs report); the human has not confirmed the http.mjs change from S04E01.
 - lessons: a number copied into a prompt goes stale (read /settings live); a reviewer must read the why notes; a course refusal that names one hunk points at one copied fact; check which part of the user's message answers which question.
+
+## 2026-11-24 plane skill install (artifact c0000000-0000-4000-8000-0000005e04e2)
+- human: "tak" after seeing the 14 files and the folder. Installed to ~/.claude/skills/rook-plane (did not exist before), version 0f2c5b084cfe, all 14 SHA-256 match. Self-tests NOT run; README deny rules NOT applied (human chose earlier to leave settings alone; Edit(roles/**) would also clash with Host Desk work). `rook-clock` untouched; `rook-loop` was already there.
