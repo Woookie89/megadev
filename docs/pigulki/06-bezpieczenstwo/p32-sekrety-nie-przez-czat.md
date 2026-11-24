@@ -25,8 +25,8 @@ wpisał go sam do `vars.json`, a plik jest w `.gitignore` (`**/host-desk/vars.js
 wyzwaniu klucz ćwiczebny trafił jeszcze do hosta z podręcznika w dwóch przebiegach (ćwiczenie i
 odrzucony pierwszy właściwy; [P61](p61-sekret-ma-liste-hostow-w-kodzie.md)). Kurs liczy klucz
 wklejony do czatu jako wyciekły („a key pasted into the chat is yours to count as leaked”) i mówi:
-„Rotate a leaked key.” Ten klucz jest ćwiczebny (symulacja) i nie został unieważniony. To otwarta
-sprawa człowieka.
+„Rotate a leaked key.” Ten klucz (`pk_practice_…`) jest ćwiczebny (symulacja z kursu), więc człowiek uznał rotację za zbędną
+(24.11.2026).
 
 **Stosuj.** Commituj tylko `.env.example`. Maskowanie sekretów na wyjściu agenta, nie tylko
 na wejściu.

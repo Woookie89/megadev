@@ -27,7 +27,7 @@ to any file. The human typed it into `vars.json` themselves, and that file is in
 host on two runs (the practice run and the refused first real run;
 [P61](p61-a-secret-has-a-host-list-in-code.md)). The course counts a key pasted into the chat as
 leaked ("a key pasted into the chat is yours to count as leaked") and says "Rotate a leaked key."
-This key is a practice key (a simulation) and it was not rotated. That is open for the human.
+This key (`pk_practice_…`) is a practice key (a course simulation), so the human decided rotation is not needed (24.11.2026).
 
 **Apply.** Commit only `.env.example`. Redact secrets on the agent's output, not just its
 input.

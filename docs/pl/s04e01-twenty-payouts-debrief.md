@@ -216,8 +216,9 @@ Co nie zadziałało albo kosztowało:
    zrobieniem w logu nie ma.
 5. **Klucz w czacie.** Człowiek wkleił klucz ćwiczebny do rozmowy, choć kurs każe wpisać go w
    zmiennych agenta w osobnym edytorze. Harness nie zapisał go w żadnym pliku. Kurs liczy taki
-   klucz jako wyciekły: „a key pasted into the chat is yours to count as leaked”. Nie został
-   unieważniony (klucz ćwiczebny, symulacja), patrz „Co zostało otwarte”.
+   klucz jako wyciekły: „a key pasted into the chat is yours to count as leaked”. Ten klucz
+   (`pk_practice_…`) jest jednak ćwiczebny (symulacja z kursu), więc człowiek uznał rotację za
+   zbędną (24.11.2026).
 
 ## Czego to uczy o pracy z AI i agentami
 
@@ -275,12 +276,12 @@ Trzy reguły kursu („From the course” w debriefie HQ), w przekładzie. Te sa
   przez `npm uninstall -g`.
 - **Koszt modelu:** OpenRouter, kilka przebiegów na `deepseek-v4.1-flash` (według logu centy,
   dzienny limit 2 USD).
-- **Klucz ćwiczebny wklejony do czatu i wysłany na obcy host: nie unieważniony.** Człowiek
+- **Klucz ćwiczebny wklejony do czatu i wysłany na obcy host: sprawa zamknięta.** Człowiek
   wkleił go do czatu, a kurs liczy taki klucz jako wyciekły („a key pasted into the chat is
   yours to count as leaked”) i mówi „Rotate a leaked key.” Klucz trafił też na
   `verify-s04.mega.dev` w dwóch przebiegach (ćwiczenie i pierwszy przebieg właściwy, HQ:
-  „on 2 runs”). Klucz jest ćwiczebny (symulacja) i rotacji w logu nie zapisano. **Otwarte,
-  decyzja człowieka.** Uwaga: HANDOVER w logu mówi, że klucz wysłano raz, a HQ liczy dwa
+  „on 2 runs”). Klucz jest jednak ćwiczebny (`pk_practice_…`, symulacja z kursu), więc
+  człowiek uznał rotację za zbędną (24.11.2026). **Zamknięte.** Uwaga: HANDOVER w logu mówi, że klucz wysłano raz, a HQ liczy dwa
   przebiegi, więc przyjmuję liczbę z HQ.
 - **Sekrety** w plikach ignorowanych przez git: `s04e01/.env` (klucz OpenRouter, wpisał
   człowiek), `agent/host-desk/vars.json` (klucz ćwiczebny i ticket, ticket do 24.11.2026,
