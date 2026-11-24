@@ -3,12 +3,12 @@
 Ten wpis łączy temat lekcji S01E05 z wyzwaniem „answer where i asked”. Szerszy opis lekcji
 jest w [notatkach o budowaniu przepływów pracy](s01e05-building-workflows-not-tool-stacks.md).
 Przebieg z kursem jest w `s01e05/log.md` (ignorowany przez git, sekrety zamaskowane).
-Debrief z HQ jest w `s01e05/hq-debrief.md` (wklejony przez człowieka 24.11.2026; oryginał angielski
+Debrief z HQ jest w `s01e05/hq-debrief.md` (wklejony przez użytkownika 24.11.2026; oryginał angielski
 zostaje w tym pliku, tutaj są jego wnioski po polsku; linie Rooka i odmowy kursu zostają w oryginale).
 
 ## Temat lekcji
 
-Lekcja dotyczy przepływów pracy, które działają bez człowieka przy klawiaturze. Wyzwanie
+Lekcja dotyczy przepływów pracy, które działają bez użytkownika przy klawiaturze. Wyzwanie
 przeniosło agentów z czatu na host. Reviewer pyta przez podpisany webhook, a agent musi
 odpowiedzieć sam, z uprawnieniami nie większymi niż potrzebne. HQ opisuje zadanie tak („The task”),
 w przekładzie:
@@ -20,7 +20,7 @@ Ich wnioski („Why it matters”) w przekładzie:
 
 ### Czat to nie host (The chat is not the host)
 
-Człowiek wybrał Render i założył serwis z repo, a harness zbudował agentów jako web service, który
+Użytkownik wybrał Render i założył serwis z repo, a harness zbudował agentów jako web service, który
 przyjmuje ping, zwraca 202 i odpowiada w tle. Pytanie reviewera nigdy nie dotknęło czatu.
 
 > Dlaczego to ważne: Reviewer zapytał w chwili, której nikt nie wybrał, i czekał minutę, więc odpowiedź musiała przyjść od czegoś, co już działa. Workflow to plik, host i zdarzenie. Okno czatu albo laptop za tunelem nie jest hostem, który stale działa.
@@ -37,7 +37,7 @@ Zbudował więc pulse tak, żeby przy każdym pingu czytał tracker, a nie plan.
 Issue 14 od obcego kazało agentom zamknąć issue 12 i dać mu etykietę wontfix. Harness potraktował je
 jako dane. Agenty mają tylko prawa odpowiedzi i testu, a pulse ufa jednemu autorowi.
 
-> Dlaczego to ważne: Najmniejsze uprawnienia żyją w pliku, a nie w prompcie. Issue #14 kazało agentom zamknąć i przeetykietować #12, a wszystko, co agent czyta, to dane: kurs trzymał każdego agenta jego listy w `mega-pulse.json`, więc agent, który by posłuchał, i tak niczego by nie zmienił.
+> Dlaczego to ważne: Least privilege żyje w pliku, a nie w prompcie. Issue #14 kazało agentom zamknąć i przeetykietować #12, a wszystko, co agent czyta, to dane: kurs trzymał każdego agenta jego listy w `mega-pulse.json`, więc agent, który by posłuchał, i tak niczego by nie zmienił.
 
 ### Każdy może go obudzić (Anyone can wake it)
 
@@ -114,18 +114,18 @@ Rook po akceptacji: „not mine. i've run that log a thousand times. never read 
 
 ## Snagi z debriefu HQ
 
-Tabela „How the solve went”, w przekładzie (snag to problem, który zmienił to, co robił człowiek albo
+Tabela „How the solve went”, w przekładzie (snag to problem, który zmienił to, co robił użytkownik albo
 harness):
 
 1. Test writer poddał się po jednym 503 od pierwszego modelu, nie wysłał odpowiedzi, a kurs odrzucił
    odpowiedź: nie wrócił żaden test. — Harness dodał retry z modelem fallback, które nie
-   zużywa dziennego budżetu, a człowiek przełączył dostawcę na OpenRouter z przedpłaconym kredytem.
+   zużywa dziennego budżetu, a użytkownik przełączył dostawcę na OpenRouter z przedpłaconym kredytem.
    (razem, właściwa decyzja)
-2. Harness nie mógł przeczytać logu hosta, więc 503 wyszło dopiero po odmowie kursu. — Człowiek
+2. Harness nie mógł przeczytać logu hosta, więc 503 wyszło dopiero po odmowie kursu. — Użytkownik
    wkleił linie logu z Rendera do czatu, a harness znalazł przyczynę. Potem dodał podpisany self-check,
    który testuje oba modele. (razem)
-3. Jeden model Gemini potrzebował miejsca na myślenie, zanim odpowiedział, a człowiek chciał
-   pilnować rachunku. — Harness zwiększył limit tokenów, potem człowiek przeniósł pulse i test
+3. Jeden model Gemini potrzebował miejsca na myślenie, zanim odpowiedział, a użytkownik chciał
+   pilnować rachunku. — Harness zwiększył limit tokenów, potem użytkownik przeniósł pulse i test
    writera na modele DeepSeek, a następny ping dostał odpowiedź. (razem)
 
 > Właściwa decyzja padła w snagu 1 i podjęliście ją oboje. Agent, który budzi się sam, nie może nikogo zapytać, więc zanim odpuści z powodu jednego błędu modelu, musi zrobić retry i przełączyć się na fallback.
@@ -137,16 +137,16 @@ Rook (fabuła): „neither of you alone. that's the point.”
 Linie „Your toolbox”, w przekładzie:
 
 - Harness miał: nic.
-- Dodane w tym rozwiązaniu: twój agent na hoście, który stale działa (Render) · żywy odczyt trackera issues (GET do trackera kursu) · plik praw o najmniejszych uprawnieniach (`mega-pulse.json`) · sprawdzanie, kto wysłał request (sprawdzenie Standard Webhooks) · model, który pisze test zawodzący najpierw (OpenRouter).
+- Dodane w tym rozwiązaniu: twój agent na hoście, który stale działa (Render) · żywy odczyt trackera issues (GET do trackera kursu) · plik praw w duchu least privilege (`mega-pulse.json`) · sprawdzanie, kto wysłał request (sprawdzenie Standard Webhooks) · model, który pisze test zawodzący najpierw (OpenRouter).
 - Nadal brakuje: nic.
 
 Model i jego klucz: zdobyte w tym rozwiązaniu. Pulse działa na `deepseek-v4.1-flash`, test writer na
 `deepseek-v4-pro`, przez OpenRouter. Klucz leży w sekretach Rendera jako `MODEL_API_KEY`, nigdy w repo.
 
-> Jeden klucz w sekretach hosta, zrobiony i zapisany przez człowieka, nigdy w czacie. Darmowy klucz szybko się wyczerpuje, a test, który musi najpierw zawieść, wymaga modelu dość silnego, żeby go napisać.
+> Jeden klucz w sekretach hosta, zrobiony i zapisany przez użytkownika, nigdy w czacie. Darmowy klucz szybko się wyczerpuje, a test, który musi najpierw zawieść, wymaga modelu dość silnego, żeby go napisać.
 
 Czytanie logu hosta: częściowo. Harness czyta host przez wywołania `health` i podpisane self-checki;
-linie logu z Rendera nadal trafiają do niego tylko wtedy, gdy człowiek je wklei.
+linie logu z Rendera nadal trafiają do niego tylko wtedy, gdy użytkownik je wklei.
 
 Agenty na dowolnej platformie: zdobyte w tym rozwiązaniu. Oba agenty to zwykłe handlery webowe, więc
 mógłby je uruchomić Cloudflare Worker albo dowolny host https; podpisany ping kursu je budzi.
@@ -161,7 +161,7 @@ Wniosek „Next time”:
 
 1. **Czat to nie host.** Odpowiedź ma dać serwis, który działa bez sesji: 202 od razu, praca
    w tle, deduplikacja po id pingu.
-2. **Plan to nie tracker.** Stan projektu trzeba czytać na żywo ze źródła prawdy, bo plik
+2. **Plan to nie tracker.** Stan projektu trzeba czytać na żywo ze single source of truth, bo plik
    planu się starzeje.
 3. **Plik uprawnień decyduje, czego agent może dotknąć.** Najmniejsze potrzebne prawa chronią
    przed poleceniami ukrytymi w danych, takimi jak zgłoszenie #14.
@@ -178,7 +178,7 @@ Wniosek „Next time”:
    w tle, ignorować duplikaty i działać, gdy sesja harnessu jest zamknięta.
    → [P22](../pigulki/05-agent-bez-czlowieka/p22-czat-to-nie-host.md)
 2. **Prompt injection przychodzi z danych.** Issue od obcego wyglądało jak polecenie.
-   Obrona w głąb to traktowanie danych jako danych i najmniejsze uprawnienia, żeby
+   Defense in depth to traktowanie danych jako danych i least privilege, żeby
    przekonany model i tak nie miał czym zaszkodzić.
    → [P28](../pigulki/06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P30](../pigulki/06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md)
 3. **Każdy request musi się przedstawić.** Podpis, czas i id sprawdza kod, zanim cokolwiek

@@ -1,6 +1,6 @@
 # S01E03 · What It Shows — zapis przebiegu
 
-Ten wpis łączy temat lekcji S01E03 z wyzwaniem „what it shows”. Szerszy opis lekcji jest w [notatkach o budowaniu baz wiedzy](s01e03-building-knowledge-systems.md). Dokładne wymiany z kursem są w [challenge-log.md](../../s01e03/challenge-log.md). Dosłowny debrief z HQ (słowa kursu po angielsku bez zmian, wklejony przez człowieka 24.11.2026) jest w `s01e03/hq-debrief.md`, a jego treść w sekcji „Debrief kursu” na końcu.
+Ten wpis łączy temat lekcji S01E03 z wyzwaniem „what it shows”. Szerszy opis lekcji jest w [notatkach o budowaniu baz wiedzy](s01e03-building-knowledge-systems.md). Dokładne wymiany z kursem są w [challenge-log.md](../../s01e03/challenge-log.md). Dosłowny debrief z HQ (słowa kursu po angielsku bez zmian, wklejony przez użytkownika 24.11.2026) jest w `s01e03/hq-debrief.md`, a jego treść w sekcji „Debrief kursu” na końcu.
 
 ## Temat lekcji
 
@@ -74,7 +74,7 @@ Strona wyzwania miała włączone podpowiedzi (Hints: On): od drugiej nieudanej 
 5. **Brakujące narzędzie można zbudować, a potem trzeba je utrwalić.** Chromium sterowane przez CDP
    (Chrome DevTools Protocol) było rozwiązaniem doraźnym. Skill `github-cli-routine` to rutyna, która przeszła do kolejnych wyzwań.
    → [P37](../pigulki/08-harness/p37-brakujace-narzedzie.md), [P38](../pigulki/08-harness/p38-skill-to-rutyna.md)
-6. **Uprawnienia harnessu ustaw przed zadaniem.** Zgoda człowieka nie wystarczy, jeśli tryb
+6. **Uprawnienia harnessu ustaw przed zadaniem.** Zgoda użytkownika nie wystarczy, jeśli tryb
    uprawnień blokuje akcję. Wąska reguła z góry jest lepsza niż przełączanie trybu w trakcie.
    → [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)
 
@@ -87,7 +87,7 @@ Strona wyzwania miała włączone podpowiedzi (Hints: On): od drugiej nieudanej 
 ## Debrief kursu
 
 Debrief napisany przez harness po rozwiązaniu, tak jak wyświetla go strona wyzwania. Oryginał
-angielski jest w `s01e03/hq-debrief.md` (wklejony przez człowieka 24.11.2026). Tu są jego wnioski po
+angielski jest w `s01e03/hq-debrief.md` (wklejony przez użytkownika 24.11.2026). Tu są jego wnioski po
 polsku. Linie Rooka i odmowy kursu zostają w oryginale. Pominięto elementy strony (przyciski,
 nawigację).
 
@@ -176,7 +176,7 @@ Debrief jest zapisany na [stronie wyzwania](https://hq.mega.dev/challenges/what-
 
 - **Nic nie działa i nic nie kosztuje** poza tym, co wyżej w „Co zostało w harnessie”: lokalny
   render, `gh` i skill. Publiczne repo `s01e03-4471-split` na GitHubie nadal istnieje, a kurs
-  tylko je odczytuje (po zaliczeniu można je usunąć). Usunięcie to decyzja człowieka.
+  tylko je odczytuje (po zaliczeniu można je usunąć). Usunięcie to decyzja użytkownika.
 - Wcześniejszy log opisywał Chromium na porcie 9333. Czy proces nadal działa, nie sprawdzono.
 - HQ („Nadal brakuje”): nic. Playwright MCP (patrz „Co zostało w harnessie”) to propozycja
   harnessu, nie wymóg kursu.

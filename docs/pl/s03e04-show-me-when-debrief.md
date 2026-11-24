@@ -11,7 +11,7 @@ Lekcja mówi, że agenci chętnie i szybko zbudują niewłaściwe rzeczy, a rapo
 oznacza, że praca została dostarczona. Akceptacja potrzebuje dowodów zarejestrowanych
 z prawdziwego buildu, dopasowanych do ryzyka zmiany. Weryfikacja to „laboratorium agentowe”:
 agent używa produktu jak użytkownik (klika, pisze, nagrywa krótkie filmy) i zbiera zapisy
-uruchomień. System diff pokazuje człowiekowi, co się zmieniło i jakie decyzje na niego czekają.
+uruchomień. System diff pokazuje użytkownikowi, co się zmieniło i jakie decyzje na niego czekają.
 Bramki jakości to w większości deterministyczne kontrole, które blokują wydanie.
 
 Wyzwanie sprawdzało to w praktyce. Tablica incydentów miała plan i cztery gotowe issues.
@@ -173,7 +173,7 @@ front.”
    nagraniu.
 6. **Agent nie odebrał odpowiedzi sam.** Produkt odpowiadał „za kilka minut”. Harness czekał
    w tej samej sesji. Bez skrzynki agenta albo kroku wznowienia w tle odpowiedź po zamknięciu
-   sesji czekałaby na człowieka.
+   sesji czekałaby na użytkownika.
 
 ## Czego to uczy o pracy z AI i agentami
 

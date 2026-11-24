@@ -1,7 +1,7 @@
 # docs — jak tu pracujemy
 
 Ten plik mówi, co jest w `docs/` i **co robić za każdym razem**, gdy padnie jedna z próśb
-poniżej. Czyta go człowiek i agent (Claude Code, Codex). Agent: przeczytaj właściwą sekcję
+poniżej. Czyta go użytkownik i agent (Claude Code, Codex). Agent: przeczytaj właściwą sekcję
 przed pracą i przejdź całą listę kontrolną.
 
 ## Co tu jest
@@ -72,7 +72,7 @@ Pytania pomocnicze do sekcji 7:
 - Co o **orkiestracji** (podział, delegowanie, dobór modelu)?
 - Co o **agentach bez człowieka** (host, pętla, awarie dostawcy)?
 - Co o **bezpieczeństwie** (zaufanie, uprawnienia, sekrety)?
-- Co o **roli człowieka** (zgody, decyzje, uprawnienia harnessu)?
+- Co o **human in the loop** (zgody, decyzje, uprawnienia harnessu)?
 
 ### 3. Zaktualizuj pigułki (`docs/pigulki/`)
 
@@ -148,7 +148,7 @@ Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
 - [ ] Przeczytaj wszystkie debriefy, `KEEP.md` / `HANDOVER.md` i `mega-assessment/raport-pl.md`.
 - [ ] Szukaj zasad, które wracają w kilku epizodach. To kandydaci do „Dziesięciu zasad”.
 - [ ] Sprawdź, czy każdy debrief ma sekcję „Czego to uczy o pracy z AI i agentami”.
-- [ ] Sprawdź „Co zostało otwarte” we wszystkich debriefach i powiedz człowiekowi, co nadal
+- [ ] Sprawdź „Co zostało otwarte” we wszystkich debriefach i powiedz użytkownikowi, co nadal
       działa albo kosztuje (serwisy, pętle, worktrees).
 
 ## Zasady pisania (wszędzie w `docs/pl/`)
@@ -162,9 +162,18 @@ Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
   nich), zostają po angielsku i lekko się odmieniają („request”, „w harnessie”, „zmergował”).
   Tłumacz zwykłe słowa, których programiści używają też po polsku („zasada”, „przebieg”).
   Test: czy kolega powiedziałby to słowo po angielsku? Gdy polska wersja brzmi jak kalka albo
-  podręcznik, albo masz wątpliwość, zostaw angielskie. Formy „polski termin (English)” używaj
-  tylko dla terminu, który wymaga jednorazowego wyjaśnienia po polsku
-  ([słowniczek](pigulki/slowniczek.md)). Nazwy plików, id i kod zostają bez zmian.
+  podręcznik, albo masz wątpliwość, zostaw angielskie. Nazwy plików, id i kod zostają bez zmian.
+- Nazwy technik, wzorców i zasad, które mają ustaloną angielską nazwę w literaturze AI i
+  programistycznej, zostają po angielsku i się ich nie tłumaczy: human in the loop,
+  least privilege, prompt injection, guardrails, fallback, compaction, context window,
+  single source of truth, idempotency. Krótkie polskie wyjaśnienie dodaj tylko przy pierwszym
+  użyciu w dokumencie, gdy czytelnik może go potrzebować. Nie używaj formy „polski termin
+  (English)” ([słowniczek](pigulki/slowniczek.md)). Wyjątek: tytuły i sformułowania pigułek
+  to polskie reguły tego repo, ich nie zmieniamy.
+- Osobę, która pracuje z agentem, nazywaj „użytkownik” (kurs: „your human”, logi: „the human”),
+  a nie „człowiek”. „Człowiek” zostaje tylko w znaczeniu ogólnym (np. „człowiek czytający
+  stronę”) i w tytule rozdziału „Agent bez człowieka”. Właściciela produktu lub konta nazywaj
+  „właściciel”.
 - Liczby, daty i odmowy z logu, nie z pamięci. Daty z godziną podawaj w UTC (`Z`).
 - Żadnych kluczy, ticketów ani tokenów. Pełne dowody leżą w plikach ignorowanych przez git.
 - Linki do plików względne, a do pigułek z kotwicą (`#p07`).

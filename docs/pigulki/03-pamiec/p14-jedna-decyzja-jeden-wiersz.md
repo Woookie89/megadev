@@ -23,7 +23,7 @@ zespołu produktu („forget the 'class' rename from earlier this week”) wycof
 prośbę IN-9280, oznaczoną już `agent-ready`. Harness nie skasował IN-9280, tylko zamknął je
 jako `obsolete` z oboma id w `sources`. Mail klienta IN-4203 („Please do not flip them”)
 nie unieważnił prośby IN-1210 o daty dd/mm, tylko zmienił jej status: z poprawki w pytanie do
-człowieka z oboma id. Każda późniejsza prośba zmieniła tylko to, czego dotyczyła. Kurs:
+użytkownika z oboma id. Każda późniejsza prośba zmieniła tylko to, czego dotyczyła. Kurs:
 „Triage is a process, not a one-off sort: later requests update or cancel earlier ones.”
 ([P52](../05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md)).
 

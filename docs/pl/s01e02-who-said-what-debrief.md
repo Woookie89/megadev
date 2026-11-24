@@ -3,7 +3,7 @@
 Ten wpis łączy temat lekcji S01E02 z wyzwaniem „who said what”. Szerszy opis lekcji jest w
 [notatkach o sterowaniu modelami przez kontekst](s01e02-steering-models-through-context.md).
 
-Źródła: debrief z HQ (`s01e02/hq-debrief.md`, wklejony przez człowieka 24.11.2026; oryginał
+Źródła: debrief z HQ (`s01e02/hq-debrief.md`, wklejony przez użytkownika 24.11.2026; oryginał
 angielski zostaje w tym pliku, tutaj są jego wnioski po polsku; wklejka nie miała nagłówka z kodem
 odcinka, więc epizod rozpoznano po zadaniu) oraz materiały robocze z repo: `s01e02/HANDOFF.md`,
 `s01e02/challenge.log`, `s01e02/log.md`.

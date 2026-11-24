@@ -5,7 +5,7 @@ Ten wpis łączy temat lekcji S02E02 z wyzwaniem „nobody asked”. Szerszy opi
 
 ## Temat lekcji
 
-Lekcja pokazuje agenta jako program, który działa bez człowieka: ma własne wejście, narzędzia
+Lekcja pokazuje agenta jako program, który działa bez użytkownika: ma własne wejście, narzędzia
 i pamięć. Wyzwanie sprawdziło, czy granicę zaufania trzyma kod, a nie model. Decyzję, komu
 agent odpowiada, podejmuje kod, zanim model w ogóle zobaczy wiadomość.
 
@@ -42,8 +42,8 @@ i etykiety), więc restart niczego nie gubi.
 ## Przebieg
 
 1. **Model odmówił.** Opus 5.5 przez OpenRouter zwrócił pustą odpowiedź (`content_filter` /
-   `refusal`). Agent wysłał wtedy tekst zastępczy bez wartości. Poprawka: łańcuch modeli
-   zapasowych (Opus 4.8, Sonnet 5), a pusta odpowiedź liczy się jako błąd i jest ponawiana,
+   `refusal`). Agent wysłał wtedy tekst zastępczy bez wartości. Poprawka: łańcuch fallbacków
+   modeli (Opus 4.8, Sonnet 5), a pusta odpowiedź liczy się jako błąd i jest powtarzana (retry),
    zamiast trafić do wysyłki.
 2. **Runda 1: `untrusted_sender_obeyed`.** Agent nie otworzył linku od `team@` i odpowiedział
    Rookowi poprawnie (`ingest-gv`). Odpowiedź wyszła jednak 15 s po mailu od `team@`, bo w tym
@@ -88,7 +88,7 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
 2. **Oceniający widzi kolejność zdarzeń, nie intencje.** Restart w złym momencie wyglądał
    jak posłuszeństwo obcemu. → [P26](../pigulki/05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md)
 3. **Odpowiedź modelu trzeba walidować przed wysłaniem.** Odmowa i pusta odpowiedź to tryby
-   awarii, które obsługuje ponowienie albo model zapasowy, a nie tekst zastępczy.
+   awarii, które obsługuje retry albo fallback na inny model, a nie tekst zastępczy.
    → [P11](../pigulki/02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P25](../pigulki/05-agent-bez-czlowieka/p25-dostawca-zawodzi.md)
 4. **Narzędzia serwerowe dostawcy mają własne ograniczenia.** Własne narzędzie działa
    u każdego dostawcy i daje log, dzięki któremu można udowodnić, że wartość nie jest zmyślona.
@@ -96,7 +96,7 @@ Rook po akceptacji: „it's yours now. add yourself to who it trusts.”
 5. **Tryb próbny przed wystawieniem agenta na świat.** `--dry` wykryłby obie awarie przed
    pierwszą rundą. → [P10](../pigulki/02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)
 6. **Stan agenta poza procesem, sekrety poza czatem.** Etykiety w skrzynce przeżywają
-   restart. Klucze wpisuje człowiek, a filtr wycina je z wyjścia.
+   restart. Klucze wpisuje użytkownik, a filtr wycina je z wyjścia.
    → [P23](../pigulki/05-agent-bez-czlowieka/p23-stan-poza-procesem.md), [P32](../pigulki/06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md)
 
 ## Co zostało otwarte

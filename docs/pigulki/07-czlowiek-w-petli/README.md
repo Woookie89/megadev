@@ -1,7 +1,7 @@
-# 7. Człowiek w pętli
+# 7. Human in the loop
 
 Dobry podział pracy nie polega na tym, że agent robi wszystko. Agent robi to, co odwracalne
-i lokalne, i przygotowuje decyzje. Człowiek podejmuje te, które są nieodwracalne, publiczne
+i lokalne, i przygotowuje decyzje. Użytkownik podejmuje te, które są nieodwracalne, publiczne
 albo kosztują.
 
 | Pigułka | Zasada | Epizody |

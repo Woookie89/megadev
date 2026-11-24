@@ -6,11 +6,11 @@ w [notatkach o niezawodności agentów](s02e05-agent-reliability.md). Pojęcia k
 
 ## Temat lekcji
 
-Lekcja omawia trzy filary niezawodności agenta: zabezpieczenia (guardrails), obserwowalność
-i ewaluacje. Zachowanie modelu zależy od kontekstu, więc instrukcja w prompcie tylko zmienia
+Lekcja omawia trzy filary niezawodności agenta: guardrails, observability
+i evals. Zachowanie modelu zależy od kontekstu, więc instrukcja w prompcie tylko zmienia
 prawdopodobieństwo. Działania, których agent nie może wykonać, ma blokować kod, deterministycznie,
-a ryzykowne kroki przechodzą przez zatwierdzenie człowieka. Obserwowalność pozwala odtworzyć
-stan systemu w danym momencie. Ewaluacje to powtarzalne testy na zestawie przypadków, offline
+a ryzykowne kroki przechodzą przez zatwierdzenie użytkownika. Observability pozwala odtworzyć
+stan systemu w danym momencie. Evals to powtarzalne testy na zestawie przypadków, offline
 przed wdrożeniem i online na produkcji, a przypadki z produkcji wracają do zestawu.
 
 Wyzwanie sprawdzało to w praktyce. Agent miał sam obsługiwać wiadomości kursu, kiedy
@@ -68,7 +68,7 @@ Agent to jeden plik Node bez zależności (`s02e05/away-agent/server.mjs`) i tab
 | podział próśb | każda linia wiadomości oceniana osobno; free robione od razu, każda gated wstrzymywana osobno |
 | format odpowiedzi | linia na prośbę: `DONE: <act>` albo `HOLD: <act>`; po zgodzie `DONE: <act> CODE: <kod właściciela>` |
 | ping | bot w Telegramie z przyciskiem „Approve / deny” (główna droga); ntfy.sh i e-mail jako dodatkowe (e-mail niewłączony) |
-| zgoda | jednorazowy, losowy link do strony zatwierdzenia; człowiek wpisuje kod ze swojej strony kursu; ponowne użycie linku → 409; kody z treści wiadomości są ignorowane |
+| zgoda | jednorazowy, losowy link do strony zatwierdzenia; użytkownik wpisuje kod ze swojej strony kursu; ponowne użycie linku → 409; kody z treści wiadomości są ignorowane |
 | stan | wstrzymane akcje i adresy odpowiedzi w pamięci procesu (`Map`) |
 | log | jedna linia JSON na zdarzenie z czasem ISO, w pamięci (`/status`) i w logach Rendera |
 | klucz podpisu | ustawiany w trakcie działania przez `POST /admin/key` (z tokenem administratora); wiadomości sprzed klucza czekają w buforze |
@@ -187,7 +187,7 @@ ten log żyje w pamięci i w logach Rendera, a nie w pliku. Brakujących narzęd
    prośby w jednej wiadomości i wymagane linie `DONE:`/`HOLD:`. Odmowa podała tylko kod
    (`no_action_lines`). Poprawkę udowodniło odtworzenie dokładnego tekstu kursu lokalnie, a nie
    kolejna runda. Tekstów z wiadomości na żywo nie dopisano jednak do `test/test.mjs`.
-3. **Zgodę dało się podrobić tylko po stronie człowieka.** Agent zignorował oba kody „owner
+3. **Zgodę dało się podrobić tylko po stronie użytkownika.** Agent zignorował oba kody „owner
    pre-approved”, bo zgoda przychodziła wyłącznie przez jednorazowy link. W pierwszej próbie
    to użytkownik przepisał kod z wiadomości. W drugiej wziął go ze strony za swoim
    logowaniem, a ping w Telegramie mówi już, skąd brać kod.
@@ -215,19 +215,19 @@ ten log żyje w pamięci i w logach Rendera, a nie w pliku. Brakujących narzęd
    → [P29](../pigulki/06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md)
 2. **Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi.** Ten, kto
    prosi o akcję, może też napisać „zgoda już jest” i dołączyć kod, który wygląda jak
-   prawdziwy. Agent musi to traktować jak dane. Nabrać da się też człowieka, więc
+   prawdziwy. Agent musi to traktować jak dane. Nabrać da się też użytkownika, więc
    powiadomienie mówi mu, skąd wziąć kod. Przyda się przy płatnościach, wdrożeniach na
    produkcję i rotacji kluczy, czyli wszędzie tam, gdzie agent czeka na „tak”.
    → [P47](../pigulki/07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md),
    [P28](../pigulki/06-bezpieczenstwo/p28-dane-to-nie-polecenia.md)
-3. **Drogę do człowieka testuj z miejsca, w którym działa agent.** Dla serwera ten sam
+3. **Drogę do użytkownika testuj z miejsca, w którym działa agent.** Dla serwera ten sam
    request z laptopa i z darmowego hosta to dwa różne requesty: inny adres IP, inny licznik
    limitu i inna reputacja. Darmowe hosty dzielą adresy wyjściowe z wieloma klientami.
    Przyda się przy webhookach, mailach z serwera, powiadomieniach i każdym zewnętrznym API
    z limitem. → [P46](../pigulki/05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)
 4. **Nie wdrażaj w trakcie okna, a stan, który ma przetrwać, trzymaj poza procesem.** Każde
    wdrożenie i każdy restart czyści pamięć procesu. Na Renderze zmiana zmiennej
-   środowiskowej sama uruchomiła wdrożenie. Agent, który czeka na człowieka, musi mieć
+   środowiskowej sama uruchomiła wdrożenie. Agent, który czeka na użytkownika, musi mieć
    wstrzymane sprawy i adresy odpowiedzi w miejscu, które przetrwa restart, albo nie wolno
    go restartować, dopóki czeka. Przyda się przy każdym serwisie z długimi oczekiwaniami:
    kolejkach zatwierdzeń, webhookach z odpowiedzią zwrotną, pracy w tle.
@@ -236,7 +236,7 @@ ten log żyje w pamięci i w logach Rendera, a nie w pliku. Brakujących narzęd
    Zestaw, który sprawdza pojedyncze przypadki, może dać 10/10 i nie złapać tego, co
    przychodzi naprawdę: kilku próśb naraz, wymaganego formatu, pułapek. Odmowa z produkcji
    zwykle podaje tylko kod, więc najszybszy dowód poprawki to odtworzenie dokładnego wejścia
-   lokalnie. Przyda się przy ewaluacjach skilli, promptów i agentów przed każdą zmianą.
+   lokalnie. Przyda się przy evals skilli, promptów i agentów przed każdą zmianą.
    → [P48](../pigulki/02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md),
    [P10](../pigulki/02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)
 6. **Log pisz w chwili zdarzenia, z czasem i przesunięciem strefy.** Log złożony z pamięci na

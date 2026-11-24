@@ -18,7 +18,7 @@ zwłaszcza automatyczny, czyta pola. Czego nie ma w polu, tego dla niego nie ma.
 nagranie dowodzi działania „jakiegoś” buildu, a stare nagranie dowodzi tylko starego buildu.
 Sha z `HEAD` przesuwa się przy każdym commicie narzędzi, testów albo dokumentacji, choć strona
 się nie zmieniła. Lekcja każe rejestrować dowody z prawdziwego buildu i dopasować je do ryzyka
-zmiany. System diff ma pokazać człowiekowi odpowiedź, decyzje i „przed i po” w takim stosunku
+zmiany. System diff ma pokazać użytkownikowi odpowiedź, decyzje i „przed i po” w takim stosunku
 sygnału do szumu, żeby mógł szybko zdecydować.
 
 **Przypadek.** S03E04: raport kroku 1 opisał prozą, że wskaźnik celował w INC-6755, a ack
@@ -47,7 +47,7 @@ wybrać jedną.
   ([P10](p10-sprawdz-z-zewnatrz.md)). Uważaj na cache CDN tuż po wdrożeniu.
 - Nazwę pliku nagrania wiąż z buildem (`board-60bbdea.mp4`), żeby stare nagranie nie udawało
   nowego.
-- Raport dla człowieka zaczynaj od odpowiedzi i decyzji, a szczegóły (`file:line`, pliki)
+- Raport dla użytkownika zaczynaj od odpowiedzi i decyzji, a szczegóły (`file:line`, pliki)
   daj niżej ([P50](p50-wymaganie-ma-adres-i-test.md)).
 
 ---

@@ -17,7 +17,7 @@ normalne zdarzenia, a nie wyjątki.
   domeny kursu (`url_not_allowed`).
 - S04E01: ćwiczenie przez Pi dało 401 „API key expired”. Klucz OpenRouter skopiowany z `.env`
   wcześniejszego wyzwania wygasł, a błąd wyglądał jak awaria modelu. Przebieg ruszył po wpisaniu
-  przez człowieka świeżego klucza. 401 to problem klucza, a nie modelu: zanim zmienisz model,
+  przez użytkownika świeżego klucza. 401 to problem klucza, a nie modelu: zanim zmienisz model,
   sprawdź uwierzytelnienie. HQ (snag 2): klucz OpenRouter skopiowany ze starszego projektu wygasł,
   więc pierwszy przebieg modelu skończył się błędem 401.
 

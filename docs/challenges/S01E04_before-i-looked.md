@@ -45,7 +45,7 @@ Kurs przyjmuje repozytorium z ukończonym planem.
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
 | Strona HQ (State) | 14.11.2026 | rozwiązane (Solved, śr 11 lis, czas CET); 1 run, 1 debrief |
-| Debrief HQ (`s01e04/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-10 (log: 23:25:05Z); harness Claude Code (mega-challenge) (claude-code 2.1.322), model `claude-opus-5-5`; kurs odrzucił 1 próbę, zanim przyjął |
+| Debrief HQ (`s01e04/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | solved, 2026-11-10 (log: 23:25:05Z); harness Claude Code (mega-challenge) (claude-code 2.1.322), model `claude-opus-5-5`; kurs odrzucił 1 próbę, zanim przyjął |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `true` |
 

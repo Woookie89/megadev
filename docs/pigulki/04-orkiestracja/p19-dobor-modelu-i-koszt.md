@@ -19,8 +19,8 @@ opisane zadania dostają tańszy. Agent bez nadzoru dostaje limit wywołań i bu
 - S04E01: `openrouter/deepseek/deepseek-v4.1-flash` przez Pi i jedno wywołanie modelu na
   przebieg, bo praca idzie skryptem
   ([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)). Według logu
-  koszt to centy, a człowiek podał dzienny limit klucza 2 USD. Konto u dostawcy modelu i wydatki
-  są człowieka, więc harness pytał przed ich użyciem.
+  koszt to centy, a użytkownik podał dzienny limit klucza 2 USD. Konto u dostawcy modelu i wydatki
+  są użytkownika, więc harness pytał przed ich użyciem.
 
 ---
 

@@ -17,6 +17,10 @@ z oprogramowaniem (to, co się wysyła, uruchamia, zapisuje, recenzuje, wdraża,
 po angielsku i lekko się odmieniają („request”, „run”, „patch”). Tłumacz zwykłe słowa, których
 programiści używają po polsku. Gdy polska wersja brzmi jak kalka albo masz wątpliwość, zostaw
 angielskie. Oryginał zostaje w `sXXeYY/hq-debrief.md` i w dokumentach EN.
+Osobę pracującą z agentem nazywaj „użytkownik” (kurs: „your human”, logi: „the human”), a właściciela
+produktu lub konta „właściciel”. Nazwy technik i wzorców (human in the loop, least privilege, prompt
+injection, guardrails, fallback, compaction) zostają po angielsku, bez tłumaczenia; krótkie wyjaśnienie
+po polsku dodaj tylko przy pierwszym użyciu w debriefie.
 
 ---
 

@@ -1,6 +1,6 @@
 # P49 · Sprzeczne źródła nie wygrywają rangą: rozstrzyga właściciel, a do jego odpowiedzi budujesz tylko to, co pewne
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S03E01, S03E04
+> Rozdział [7. Human in the loop](README.md) · epizody: S03E01, S03E04
 
 > **Lekcje:**
 >
@@ -18,7 +18,7 @@ i bez przesądzania za właściciela.
 wygląda na ważniejsze (specyfikacja przed dopiskiem na zrzucie ekranu), a puste pole wypełni
 wiarygodnie wyglądającą wartością. Ranga dokumentu nie mówi jednak, czego chce właściciel.
 Lekcja umieszcza zakres, założenia i kompromisy na styku product managera i inżyniera
-produktu, czyli tam, gdzie decyduje człowiek. Przypomina też, że ani bazowa wiedza modelu,
+produktu, czyli tam, gdzie decyduje właściciel. Przypomina też, że ani bazowa wiedza modelu,
 ani sam kod nie niosą kontekstu takich decyzji. Wymyślona wartość na publicznej stronie
 wygląda jak fakt, a cofnięcie czegoś, co już trafiło do użytkowników, kosztuje ich zaufanie.
 

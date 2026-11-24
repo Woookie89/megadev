@@ -143,7 +143,7 @@ Sprzeczności oddane właścicielowi:
     auto odmówił: „Permission for this action was denied by the Claude Code auto mode
     classifier. Reason: [Destructive or Unwanted Actions].” (sesja `…:612`). Harness nie szukał
     obejścia: „Nie obchodzę blokady. To ustawienie musisz zrobić Ty w panelu” (sesja `…:642`).
-11. **Krok człowieka.** Link do panelu, który podał wrangler (`/workers/onboarding`), w nowym
+11. **Krok użytkownika.** Link do panelu, który podał wrangler (`/workers/onboarding`), w nowym
     panelu Cloudflare prowadził do strony 404. Użytkownik uruchomił więc `npx wrangler@4
     deploy` we własnym terminalu, interaktywnie, i zarejestrował subdomenę `woookie89`.
     Wdrożenie: 10:44:51 UTC.
@@ -197,7 +197,7 @@ incident closed   what: schedule rebuild   author: —”.
 5. **Konto hosta nie było gotowe przed budową.** Strona była gotowa i przetestowana ok. 08:40
    UTC, a wdrożona dopiero o 10:44:51 UTC. Brakowało jednorazowego ustawienia konta
    (subdomeny), którego harness nie mógł i nie powinien zrobić sam, więc gotowa strona czekała
-   na człowieka. Link z wranglera do panelu
+   na użytkownika. Link z wranglera do panelu
    nie działał, a skutecznym krokiem okazała się jedna komenda w terminalu użytkownika.
 6. **Nowa subdomena potrzebuje kilku minut.** Błąd TLS zaraz po pierwszym wdrożeniu na nowej
    subdomenie to nie błąd strony. Harness czekał na odpowiedź 200 i dopiero wtedy uruchomił
@@ -244,9 +244,9 @@ incident closed   what: schedule rebuild   author: —”.
 6. **Zmiana na koncie należy do właściciela: przy odmowie podaj jeden dokładny krok.**
    Klasyfikator uprawnień zablokował rejestrację subdomeny, bo to trwała zmiana na cudzym
    koncie. Obejście (inny token, inne API) zrobiłoby z odmowy formalność. Lepiej przekazać
-   człowiekowi jedną komendę, która działa, niż link, którego nikt nie sprawdził. Jeszcze
+   użytkownikowi jedną komendę, która działa, niż link, którego nikt nie sprawdził. Jeszcze
    lepiej przygotować konto przed budową. Przyda się przy chmurze, DNS-ie, płatnościach
-   i każdym koncie, którego właścicielem jest człowiek.
+   i każdym koncie, którego właścicielem jest użytkownik.
    → [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md),
    [P33](../pigulki/07-czlowiek-w-petli/p33-prawa-decyzyjne.md)
 

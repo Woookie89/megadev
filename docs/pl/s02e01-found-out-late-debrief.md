@@ -53,7 +53,7 @@ part. i found out late.”
    Claude Code, Codex i podagentów, więc żadna sesja nie umknęła.
 5. **Pętlę zamykaj sprawdzeniem, nie poczuciem końca.** Hook `Stop` albo `./verify` (skill
    `rook-loop`, część done-check) wymusza ponowny odczyt przed zakończeniem. Instalację hooka
-   zatwierdza człowiek.
+   zatwierdza użytkownik.
 
 ## Czego to uczy o pracy z AI i agentami
 
@@ -71,7 +71,7 @@ part. i found out late.”
 5. **Archeologia sesji to umiejętność.** Wiedza zespołu pracującego z agentami jest zapisana
    w transkryptach różnych harnessów i podagentów. Trzeba umieć je przeszukać.
    → [P15](../pigulki/03-pamiec/p15-pytaj-przeszle-sesje.md)
-6. **Hook zmienia zachowanie harnessu, więc instaluje go człowiek.** Blokada uprawnień
+6. **Hook zmienia zachowanie harnessu, więc instaluje go użytkownik.** Blokada uprawnień
    przy hooku to zabezpieczenie, a nie przeszkoda.
    → [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)
 
@@ -82,6 +82,6 @@ part. i found out late.”
   „It runs” w debriefie zostało więc bez odpowiedzi.
 - Hook `Stop` ze `stop_gate.py` nie jest wpięty w ustawienia. Czeka na zgodę użytkownika.
 
-Kurs dodał do talii użytkownika artefakt „loop” (pętla agenta z widocznym plikiem stanu
+Kurs dodał do talii użytkownika artefakt „loop” (agent loop z widocznym plikiem stanu
 i trzema wyjściami). Nie został zainstalowany. Debrief jest na
 [stronie wyzwania](https://hq.mega.dev/challenges/found-out-late#debrief).

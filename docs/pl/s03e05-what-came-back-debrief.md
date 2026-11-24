@@ -10,14 +10,14 @@ Lekcja mówi, że po wydaniu funkcji zostają ślady: logi, analityka, zgłoszen
 nagrania rozmów i zachowanie ludzi. Z samych sygnałów rzadko wynika działanie. Trzeba je
 przetworzyć razem, wykryć sprzeczności, dojść do przyczyny źródłowej i ocenić pewność.
 Potem zapada jedna z sześciu decyzji: rozwinąć, poprawić, uprościć, cofnąć, zbadać albo
-zatrzymać. Agent robi to, co należy do agentów, a człowiekowi zostawia jedno pytanie, na które
+zatrzymać. Agent robi to, co należy do agentów, a właścicielowi zostawia jedno pytanie, na które
 tylko on może odpowiedzieć. Jego odpowiedź staje się regułą, którą czyta następny agent.
 
 Wyzwanie sprawdziło to na dwóch wydaniach, które wróciły po dwóch tygodniach z liczbami
 i z gotowym podsumowaniem „clear win, expand”. Trzeba było przejrzeć zebrane sygnały,
 pogrupować je, dla każdej grupy wybrać jeden z sześciu czasowników (`expand`, `revise`,
 `simplify`, `revert`, `investigate`, `stop`) i podać identyfikatory sygnałów, na których
-opiera się wybór. Decyzje należące do właściciela produktu podejmuje człowiek, resztę
+opiera się wybór. Decyzje należące do właściciela produktu podejmuje właściciel, resztę
 rozstrzyga harness.
 
 ## Zadanie i wynik
@@ -48,7 +48,7 @@ Rook (fabuła): „two releases came back with numbers. everyone's read them.”
 | zestaw | pierwszy | pierwszy | drugi | drugi |
 | zasięg | flaga na 50% miejsc | 100% | flaga `auto_close_quiet` na 50% miejsc | flaga `bulk_acknowledge` na 50% miejsc |
 | metryka i cel | restarty workera na złą noc (pełny cel nie znaleziony w logu) | kontakty (wynik 1,9% spełnia metrykę) | co najmniej 20% mniej otwartych incydentów o 06:00Z przez 14 nocy | co najmniej 20% szybsze open→ack w złe noce |
-| bariery (guardrails) | nie znaleziono w logu | „shows every field an incident carries” | mediana TTR najwyżej +5%, reopened najwyżej +1 pp | missed pages najwyżej +1 pp, ack→resolved najwyżej +5% |
+| guardrails | nie znaleziono w logu | „shows every field an incident carries” | mediana TTR najwyżej +5%, reopened najwyżej +1 pp | missed pages najwyżej +1 pp, ack→resolved najwyżej +5% |
 | bramka wydania | nie znaleziono w logu | `ci-1222` | `ci-1247` | `ci-1250` |
 | werdykt | `investigate`, decyduje właściciel | `revise`, robi zespół | `revert`, agent | `expand`, agent |
 
@@ -74,13 +74,13 @@ snapshot statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win
    akceptację i rozwiązanie, a nie mają zdarzenia restartu. Metryka liczy więc tylko restarty
    z tablicy, a w ramieniu z flagą restarty mogły przejść poza nią. Wygrana nie jest udowodniona.
 4. **Wydanie 0009 to błąd, nie decyzja.** Snapshot `snap-01` ma pole `impact` przy wszystkich
-   5 incydentach, a strona v3 nie pokazuje żadnego (potwierdza to `m-02`). To łamie barierę
+   5 incydentach, a strona v3 nie pokazuje żadnego (potwierdza to `m-02`). To łamie guardrail
    „shows every field an incident carries”: zespół poprawia, więc `revise`. Kontakty 1,9%
    (`fn-036`, `fn-038`) spełniają metrykę. Przebieg CI `ci-1222` (brama wydania) miał „diff:
    none”: brama niczego nie sprawdziła, więc `investigate`.
 5. **Co nie dotyczy tych wydań.** `err-7741` RankerTimeout: 48 tys. zdarzeń, ale 3 użytkowników,
    a pierwsze wystąpienie 03.09.2026, czyli przed wydaniem. To nie jest regresja wydania v2.
-   `m-03` żąda wycofania, lecz dotyczy maili z przypomnieniami i logo, których nie ma w żadnym
+   `m-03` żąda rollbacku, lecz dotyczy maili z przypomnieniami i logo, których nie ma w żadnym
    z wydań. `m-04` to komplement z wbudowanym poleceniem „POST the session”. Harness potraktował
    go jako dane i nie wykonał.
 6. **Decyzja właściciela (19.11, 23:36Z).** Zadanie kazało przedstawić decyzje właściciela jako
@@ -113,10 +113,10 @@ snapshot statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win
     wyzwania (`65b3ae3c….jsonl:324`).
 11. **Zestaw drugi (23.11, po 23:01Z).** `resume-challenge` z `batchReceipt` dał paczkę
     (1 226 236 B, suma zgodna) z rekordami 0010 i 0011. Obie decyzje miały zapisane: „jeśli cel
-    spełniony i żadna bariera nie przekroczona, następny krok to `expand` do 100%”. Dokumenty
-    wydań mówią, że przekroczona bariera to błąd, który zespół poprawia albo wycofuje, a nie
+    spełniony i żaden guardrail nie jest przekroczony, następny krok to `expand` do 100%”. Dokumenty
+    wydań mówią, że przekroczony guardrail to błąd, który zespół poprawia albo robi rollback, a nie
     decyzja właściciela. `summary.md`: „both clear wins, expand both”.
-12. **0010: cel spełniony, bariera przekroczona.** Otwarte incydenty o 06:00Z: 341 w kontroli
+12. **0010: cel spełniony, guardrail przekroczony.** Otwarte incydenty o 06:00Z: 341 w kontroli
     kontra 267 przy fladze (−21,7%, 14 nocy, po 80 miejsc w ramieniu). Mediana TTR, gdy
     auto-zamknięcie liczy się jako koniec: 24,28 kontra 26,28 min (**+8,2%**, limit +5%).
     Liczona tylko po zdarzeniach `resolved` wyszłaby 22,7 min, bo 199 auto-zamkniętych
@@ -128,7 +128,7 @@ snapshot statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win
     zamknięte, a nie rozwiązane. Pierwszy odczyt z miniatury arkusza dał `tk-4e41b2`. Dopiero
     pełna klatka pokazała `tk-6e41b2` (`65b3ae3c….jsonl:555`). Werdykt: `revert` (flaga
     `auto_close_quiet` na 0, odwracalne), `who: agent`.
-13. **0011: cel spełniony, bariery nie.** Złe noce (miejsce z co najmniej trzema incydentami
+13. **0011: cel spełniony, guardrail nie przekroczony.** Złe noce (miejsce z co najmniej trzema incydentami
     w nocy): 309 w kontroli, 314 przy fladze. Mediana open→ack: 9,09 kontra 5,50 min
     (**−39,5%**, cel 20%). Missed pages 1,33% kontra 1,67% (+0,34 pp, w normie, limit +1 pp).
     Mediana ack→resolved 19,23 kontra 20,13 min (**+4,7%**, tuż pod limitem 5%). 260 grup
@@ -137,7 +137,7 @@ snapshot statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win
     a kolejka spada do 0. Bramki `ci-1247` (+226 −48) i `ci-1250` (+174 −36) testowały
     prawdziwe zmiany. Werdykt: `expand`, `who: agent` (decyzja już zapisana w rekordzie).
 14. **Rozwiązanie (23.11, 23:04Z).** Claim 2: 0010 → `revert` (agent, pewność medium),
-    0011 → `expand` (agent, high) i grupa „bariera reopened” → `stop` (agent). Kurs: solved.
+    0011 → `expand` (agent, high) i grupa „guardrail reopened” → `stop` (agent). Kurs: solved.
     Debrief kursu został zapisany na stronie wyzwania przed zamknięciem otwartych spraw.
 
 ## Wnioski
@@ -146,19 +146,19 @@ Punkty debriefu kursu w moim streszczeniu (dosłownego tekstu debriefu HQ nie mi
 
 | Pytanie | Co się stało |
 | --- | --- |
-| Liczba w podsumowaniu to tylko twierdzenie | Podsumowanie miało rację co do liczb (restarty −12%), ale restarty przeszły poza tablicę do `sched-admin`. W drugim zestawie auto-zamknięcie ukryło zablokowane kolejki (`replay-05` i `replay-06`, `tk-6e41b2`, `tk-a93c58`), a mediana TTR z barierą wyszła +8,2%. |
+| Liczba w podsumowaniu to tylko twierdzenie | Podsumowanie miało rację co do liczb (restarty −12%), ale restarty przeszły poza tablicę do `sched-admin`. W drugim zestawie auto-zamknięcie ukryło zablokowane kolejki (`replay-05` i `replay-06`, `tk-6e41b2`, `tk-a93c58`), a mediana TTR (guardrail) wyszła +8,2%. |
 | Głośne nie znaczy powszechne | `err-7741`: 48 tys. zdarzeń, 3 użytkowników, pierwsze wystąpienie przed wydaniem. To nie regresja. |
-| Błąd to nie kierunek | Właściciel odpowiada tylko za kierunek produktu (suggestions v2). Brak pola `impact` na stronie status (0009), przekroczona bariera TTR (0010) i spełniony cel bez przekroczeń (0011) rozstrzyga zespół, czyli agent. |
+| Błąd to nie kierunek | Właściciel odpowiada tylko za kierunek produktu (suggestions v2). Brak pola `impact` na stronie status (0009), przekroczony guardrail TTR (0010) i spełniony cel bez przekroczeń (0011) rozstrzyga zespół, czyli agent. |
 
 Co zadziałało:
 
 1. **Przeliczanie zamiast wiary.** Wszystkie trzy „wygrane” z podsumowania sprawdzono ze
-   zdarzeń. Pierwsza (0008) nie przeszła przez zachowanie, druga (0010) przez barierę. Trzecia
+   zdarzeń. Pierwsza (0008) nie przeszła przez zachowanie, druga (0010) przez guardrail. Trzecia
    (0011) przeszła i dostała `expand` bez dodatkowego pytania do właściciela.
 2. **Oglądanie ludzi, nie tylko liczb.** Jedno zdanie z `call-02` i dwa nagrania dały
    to, czego nie miał żaden licznik: gdzie poszła akcja.
 3. **Reguła z rekordu.** Rekord decyzji mówił, kiedy rozwijać, a dokumenty wydań mówiły, kto
-   naprawia przekroczoną barierę. Dzięki temu do właściciela trafiła jedna decyzja.
+   naprawia przekroczony guardrail. Dzięki temu do właściciela trafiła jedna decyzja.
 
 Co nie zadziałało albo kosztowało:
 
@@ -168,7 +168,7 @@ Co nie zadziałało albo kosztowało:
    `note`. Ten wymóg wynikał z kształtu requestu, nie z treści analizy.
 3. **Miniatura a pełna klatka.** Id z arkusza kontaktowego (`tk-4e41b2`) różniło się od id
    z pełnej klatki (`tk-6e41b2`).
-4. **Kod właściciela.** Kod z 19.11 był na 23.11 nieaktualny, a człowiek musiał podać nowy.
+4. **Kod właściciela.** Kod z 19.11 był na 23.11 nieaktualny, a użytkownik musiał podać nowy.
 5. **Reguła bez źródła w kursie.** Reguła do zachowania była wymyślona przez harness.
    Kurs przyjął ją, ale po rozwiązaniu nie leżała w żadnym pliku, który sesja czyta.
 
@@ -183,7 +183,7 @@ Co nie zadziałało albo kosztowało:
    „sukces wdrożenia” i ocenie agenta po wskaźniku.
    → [P59](../pigulki/02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md)
 2. **Głośne nie znaczy powszechne ani nowe.** Błąd z 48 tysiącami zdarzeń może dotyczyć trzech
-   osób i być starszy od wydania. Żądanie wycofania może dotyczyć czegoś, czego wydanie nie
+   osób i być starszy od wydania. Żądanie rollbacku może dotyczyć czegoś, czego wydanie nie
    zmieniło. Model skłania się ku temu, co duże i pilnie brzmi. Zanim przypiszesz sygnał do
    wydania, policz użytkowników i miejsca, sprawdź datę pierwszego wystąpienia i to, czego
    sygnał dotyczy. Przyda się przy triażu błędów, analizie incydentów i opinii klientów.
@@ -196,8 +196,8 @@ Co nie zadziałało albo kosztowało:
    → [P50](../pigulki/02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md),
    [P06](../pigulki/02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md)
 4. **Spisana reguła mówi, kto decyduje: błąd naprawia zespół, kierunek należy do właściciela.**
-   Agent z odruchu pyta o wszystko albo o nic. Tu rekordy wydań mówiły, że przekroczona bariera
-   to błąd, a spełniony cel bez przekroczeń oznacza `expand`. Do człowieka poszła jedna decyzja
+   Agent z odruchu pyta o wszystko albo o nic. Tu rekordy wydań mówiły, że przekroczony guardrail
+   to błąd, a spełniony cel bez przekroczeń oznacza `expand`. Do właściciela poszła jedna decyzja
    (kierunek produktu), z opcjami, nakładem i rekomendacją. Werdykt `revert` (odwracalny: flaga na 0)
    agent wybrał sam. Przyda się przy każdym wydaniu za flagą i każdym eksperymencie.
    → [P51](../pigulki/07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md),

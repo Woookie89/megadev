@@ -41,7 +41,7 @@ Kurs przyjmuje odpowiedzi dla obu nagrań, wysłane z nowej sesji.
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
 | Strona HQ (State) | 14.11.2026 | rozwiązane 27 paź (run 1); run 2 w toku |
-| Debrief HQ (`s01e02/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | 1 run rozwiązany, run 2 w toku. Run 1: 2026-10-27, harness Claude Code (mega-challenge), model nie podany („Not reported by your harness”), 1 odrzucona próba, 1 snag |
+| Debrief HQ (`s01e02/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | 1 run rozwiązany, run 2 w toku. Run 1: 2026-10-27, harness Claude Code (mega-challenge), model nie podany („Not reported by your harness”), 1 odrzucona próba, 1 snag |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Strona wyzwania HQ (notatki z HQ) | 13.11.2026 | trwa druga próba |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |

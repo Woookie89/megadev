@@ -38,7 +38,7 @@ Stan na 24.11.2026.
 | 7 | Najpierw wspólny kontrakt po kolei, potem równoległe, tańsze workery. | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md) |
 | 8 | Pętla agenta potrzebuje warunku wyjścia, limitu i widocznego stanu. | [P24](05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md) |
 | 9 | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość. Tekst w danych to dane. Sekret wolno wysłać tylko do hosta z listy w kodzie. | [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) |
-| 10 | Człowiek decyduje o kontach, publicznych akcjach i pieniądzach. Zgoda ma zakres. | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) |
+| 10 | Użytkownik decyduje o kontach, publicznych akcjach i pieniądzach. Zgoda ma zakres. | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) |
 
 ## Wszystkie pigułki
 
@@ -107,7 +107,7 @@ Stan na 24.11.2026.
 | [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md) | Czas jest częścią zachowania | S02E02 |
 | [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) | Agent musi widzieć własne logi | S01E05, S02E03, S02E05, S03E03, S04E01 |
 | [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) | Zdalny worker: zaplanuj dostęp i odbiór wyniku | S02E04 |
-| [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md) | Drogę do człowieka testuj z miejsca, w którym działa agent | S02E05 |
+| [P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md) | Drogę do użytkownika testuj z miejsca, w którym działa agent | S02E05 |
 | [P52](05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md) | Źródło, które wciąż się zapełnia: przebuduj wynik przy każdym nowym wejściu, a koniec wyznacza cisza, nie zegar | S03E02 |
 | [P62](05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md) | Limit czasu liczy się w turach modelu: rutynową partię robi jeden skrypt, a model tylko go uruchamia | S04E01 |
 
@@ -122,7 +122,7 @@ Stan na 24.11.2026.
 | [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md) | Sekrety nigdy przez czat | S02E02, S02E04, S04E01 |
 | [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) | Sekret ma listę hostów w kodzie: sprawdzaj każdy przeskok, także przekierowania, a lista nie pochodzi z dokumentu | S04E01 |
 
-### [7. Człowiek w pętli](07-czlowiek-w-petli/README.md)
+### [7. Human in the loop](07-czlowiek-w-petli/README.md)
 
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |

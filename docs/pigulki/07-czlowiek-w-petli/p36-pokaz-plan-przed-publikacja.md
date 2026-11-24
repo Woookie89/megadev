@@ -1,6 +1,6 @@
 # P36 · Pokaż plan, zanim opublikujesz
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E04
+> Rozdział [7. Human in the loop](README.md) · epizody: S01E04
 
 > **Lekcje:**
 >

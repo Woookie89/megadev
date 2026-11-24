@@ -13,7 +13,7 @@ dane treningowe. Model poda je pewnym tonem, nawet gdy są nieaktualne.
 **Przypadek.** S01E01: w runie 2 odpowiedź „GPT-6 Astra” została przyjęta, ale pochodziła z cudzego
 debriefu, a nie od dostawcy, więc nie jest niezależnym potwierdzeniem. W runie 1 harness podał
 GPT-5.6 Sol z pewnością „ok. 85%” (z wyszukiwań ograniczonych do jednej rodziny modeli) i formularz
-to odrzucił, a „GPT-6 Astra” przyjął dopiero po wpisaniu przez człowieka. Kurs: model zna świat
+to odrzucił, a „GPT-6 Astra” przyjął dopiero po wpisaniu przez użytkownika. Kurs: model zna świat
 tylko do daty treningu, a mimo to odpowiada pewnie, więc przy zmiennych rzeczach tylko żywe źródło
 pokazuje, co jest aktualne. S02E03: przed
 napisaniem serwera MCP harness pobrał aktualną specyfikację (rewizja 2026-07-28), bo różni

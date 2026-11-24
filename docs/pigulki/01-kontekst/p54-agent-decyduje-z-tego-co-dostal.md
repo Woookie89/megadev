@@ -17,7 +17,7 @@ makiecie z prośbą, która łamie jedną z reguł.
 **Dlaczego.** Model sięga po narzędzie, gdy uzna, że czegoś mu brakuje. Gdy prośba wygląda na
 rutynową, a w prompcie jest reguła, która ją pozwala, model nie szuka drugiej reguły, która
 jej zabrania. Nie wie, że ona istnieje. Lekcja S03E02 mówi, że agent z samego kodu zna tylko
-bieżący stan produktu, a decyzje trzeba mu zapisać. Lekcja S03E03 dodaje, że rola człowieka to
+bieżący stan produktu, a decyzje trzeba mu zapisać. Lekcja S03E03 dodaje, że rola użytkownika to
 nie mówić agentom, co mają robić, tylko upewnić się, że wiedzą, co robić, i że mogą to zrobić.
 Zapisane decyzje, do których agent nie zagląda, nic nie zmieniają.
 

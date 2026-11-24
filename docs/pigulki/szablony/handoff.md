@@ -5,7 +5,7 @@
 Stan na: <data, godzina, strefa>
 
 ## Zrobione
-1. <krok> — źródło: <plik:linia | komenda | człowiek>
+1. <krok> — źródło: <plik:linia | komenda | użytkownik>
 
 ## Terminy
 - <ticket/receipt/token> ważny do <data UTC>; po wygaśnięciu: <co zrobić>
@@ -19,7 +19,7 @@ Stan na: <data, godzina, strefa>
 ## Pułapki
 - <co nie działa i obejście>
 
-## Otwarte pytania do człowieka
+## Otwarte pytania do użytkownika
 1. <pytanie> — rekomendacja: <...>
 
 ## Prompt do nowej sesji

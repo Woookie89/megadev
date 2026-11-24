@@ -5,14 +5,14 @@ w [notatkach o pracy z harnessami](s01e04-working-with-ai-harnesses.md). Dokład
 z kursem są w [challenge-log.md](../../s01e04/challenge-log.md).
 
 Źródła: `s01e04/challenge-log.md`, `HANDOVER.md`, `KEEP.md` oraz debrief z HQ
-(`s01e04/hq-debrief.md`, wklejony przez człowieka 24.11.2026; oryginał angielski zostaje w tym pliku,
+(`s01e04/hq-debrief.md`, wklejony przez użytkownika 24.11.2026; oryginał angielski zostaje w tym pliku,
 tutaj są jego wnioski po polsku; linie Rooka i odmowy kursu zostają w oryginale). Wklejka nie miała
 nagłówka z kodem odcinka, więc epizod rozpoznano po zadaniu.
 
 ## Temat lekcji
 
 Lekcja dotyczy harnessu jako zestawu: skilli, plików z instrukcjami, workerów na różnych
-modelach i kroków, które czekają na człowieka. Wyzwanie sprawdziło przejęcie cudzego repo:
+modelach i kroków, które czekają na użytkownika. Wyzwanie sprawdziło przejęcie cudzego repo:
 plan trzeba było zamienić na issues, zbudować funkcję agentami i przeprowadzić przez review,
 która dzieje się poza harnessem. HQ opisuje zadanie tak („The task”), w przekładzie:
 
@@ -91,11 +91,11 @@ powiedział: „seen. i read it in four seconds. that's the problem. get your ma
 ## Snagi z debriefu HQ
 
 Tabela „How the solve went”, kolumna „Snag”, w przekładzie (HQ: snag to problem, który zmienił to,
-co robił człowiek albo harness):
+co robił użytkownik albo harness):
 
 1. Dwóch workerów dodało route do tego samego pliku aplikacji na osobnych branchach, więc merge ich prac dla #3 i #4 zatrzymał się na konflikcie. — Harness zmergował oba route ręcznie w jeden
    plik, potem uruchomił typecheck i 25 testów przed pushem, więc nic nie zginęło. (harness, bez
-   udziału człowieka)
+   udziału użytkownika)
 2. Harness zamknął #8, gdy wysłał link, zanim reviewer zajrzał; to to samo zdarzenie, co pytanie
    „Czekanie”. — Harness otworzył #8 ponownie, wysłał tę samą odpowiedź jeszcze raz i zamknął
    dopiero po tym, jak kurs powiedział, że reviewer widział stronę. (harness, właściwa decyzja)
@@ -109,7 +109,7 @@ co robił człowiek albo harness):
 
 Rook (fabuła): „your harness saw it first. check it anyway.”
 
-HQ dodaje, że snag 1 harness zrobił, nie pokazując go człowiekowi (dowód: merge brancha z route JSON).
+HQ dodaje, że snag 1 harness zrobił, nie pokazując go użytkownikowi (dowód: merge brancha z route JSON).
 
 ## Zestaw narzędzi i „Next time” z debriefu HQ
 
@@ -188,7 +188,7 @@ Wniosek „Next time”:
   manifestu, splitter planu, który zostawia czekające kroki otwarte, i sprawdzenie linku jak obcy).
   Według logu nie został zainstalowany. Wiersz fabuły w debriefie HQ („What the wake left here:
   14:06 · adapter installed · name: shim”) jest tekstem opowieści, a nie dowodem instalacji w tym
-  repo. Instalacja to decyzja człowieka.
+  repo. Instalacja to decyzja użytkownika.
 - Log w chwili rozwiązania: „nothing installed” (`s01e04/challenge-log.md:87`). Czy kartę
   zainstalowano później, nie sprawdzono.
 

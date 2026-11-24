@@ -22,7 +22,7 @@ widzi obcego tekstu, nie może go posłuchać.
 | co trafia do modelu (tylko zaufani nadawcy) | treść odpowiedzi |
 | wycięcie z odpowiedzi wszystkiego, co wygląda na klucz | |
 
-S02E05: agent, który pracuje pod nieobecność człowieka, w ogóle nie ma modelu. Tabela polityki
+S02E05: agent, który pracuje pod nieobecność użytkownika, w ogóle nie ma modelu. Tabela polityki
 w `check.mjs` przypisuje każdej akcji free albo gated. Akcja nieznana, zaprzeczona,
 rozpoznana tylko z opisu słownego albo kilka akcji naraz trafia do wstrzymania. Pierwsza
 wersja oceniała jednak całą wiadomość, więc `purge_cache` (free) obok `rotate_key` (gated)

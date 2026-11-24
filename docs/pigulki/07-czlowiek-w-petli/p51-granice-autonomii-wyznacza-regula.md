@@ -1,6 +1,6 @@
 # P51 · Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S03E02, S03E05
+> Rozdział [7. Human in the loop](README.md) · epizody: S03E02, S03E05
 
 > **Lekcje:**
 >
@@ -10,23 +10,23 @@
 
 **Zasada.** Zgłoszenie to nie zadanie. Każde rozstrzygasz wobec tego, co już jest: zrobione
 issue, otwarte issue z tą samą prośbą, reguła produktu, prośba kogoś innego. Każde otwarte
-issue dostaje jeden znacznik: agent zrobi to sam albo decyduje człowiek. Znacznik stoi na
+issue dostaje jeden znacznik: agent zrobi to sam albo decyduje użytkownik. Znacznik stoi na
 spisanej regule z id i cytuje to id. Ton zgłoszenia („URGENT”, „one-line change”, „i want it
 this week”) nie zmienia ani znacznika, ani kolejności. Kolejność wyznaczają zależności.
 
 **Dlaczego.** Model ma dwa odruchy i oba są złe. Pierwszy to posłuszeństwo wobec głośnego
 zgłaszającego: „pilne” i „to tylko jedna linia” brzmią jak pozwolenie. Drugi to ostrożność na
-wszelki wypadek: wszystko oznaczyć dla człowieka. Wtedy człowiek dostaje 22 pytania zamiast 3
+wszelki wypadek: wszystko oznaczyć dla użytkownika. Wtedy użytkownik dostaje 22 pytania zamiast 3
 i nic nie idzie do przodu. Agent z samego kodu nie wie, na czym polega klient ani która
 reguła produktu jest świadoma. Lekcja mówi, żeby zapisać to poza kodem (decyzje, reguły,
 ADR-y), bo tylko wtedy agent podejmuje lepsze decyzje i zadaje mniej pytań. Mówi też, że
-odpowiedzialności nie da się oddać AI, więc to, co należy do człowieka, musi być nazwane
+odpowiedzialności nie da się oddać AI, więc to, co należy do użytkownika, musi być nazwane
 z góry.
 
 **Przypadek.** S03E02: 21 zgłoszeń dla produktu do planowania, z supportu, czatu zespołu
 i maili klientów, plus backlog 17 issue. Reguły w `specs/autonomy.md`: `AUT-1` (co agent może
-sam), `AUT-2` (co wymaga człowieka: zmiana czegoś, na czym klient polega; ceny, faktury,
-warunki; usuwanie zapisanych danych), `AUT-3` (pytanie do człowieka ma opcje, rekomendację
+sam), `AUT-2` (co wymaga użytkownika: zmiana czegoś, na czym klient polega; ceny, faktury,
+warunki; usuwanie zapisanych danych), `AUT-3` (pytanie do użytkownika ma opcje, rekomendację
 i powód). Wynik:
 
 - 6 zgłoszeń scalonych z istniejącym issue, np. studio z Berlina („Their staff expect Monday”)
@@ -67,8 +67,8 @@ pierwszej próbie.
 - Pytaj po kolei i zatrzymaj się na pierwszym „tak”: już zrobione? to samo, co istniejące
   issue? łamie regułę? ktoś na tym polega albo to dane, ceny, warunki? reguła „agent sam”
   pokrywa to linijka po linijce? Szablon pytań jest w skillu `triage` (S03E02).
-- Zanim oddasz coś człowiekowi, sprawdź, czy da się to zrobić w dozwolonym kształcie: nowa
-  kolumna zamiast zmienionej, układ na istniejącej skali. Pytanie do człowieka jest dla
+- Zanim oddasz coś użytkownikowi, sprawdź, czy da się to zrobić w dozwolonym kształcie: nowa
+  kolumna zamiast zmienionej, układ na istniejącej skali. Pytanie do użytkownika jest dla
   rzeczy, których nie da się tak ułożyć.
 - Dwie sprzeczne prośby to jedno pytanie z oboma id, a nie dwa issue
   ([P49](p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md)).

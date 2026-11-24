@@ -43,7 +43,7 @@ Formularz przyjmuje odpowiedź, a kurs zalicza wyzwanie.
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
 | Strona HQ (State) | 14.11.2026 | rozwiązane (Solved, nd 8 lis); 2 runy rozwiązane, 2 debriefy |
-| Debrief HQ (`s01e01/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | 2 runy rozwiązane. Run 1: 2026-10-27, harness Claude Code (mega-challenge), model nie podany, 5 odrzuconych prób, 4 snagi. Run 2: 2026-11-08, Visual Studio Code, model nie podany, 1 odrzucona próba, 1 snag. Wklejono tylko run 1 i tabelę porównawczą obu runów |
+| Debrief HQ (`s01e01/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | 2 runy rozwiązane. Run 1: 2026-10-27, harness Claude Code (mega-challenge), model nie podany, 5 odrzuconych prób, 4 snagi. Run 2: 2026-11-08, Visual Studio Code, model nie podany, 1 odrzucona próba, 1 snag. Wklejono tylko run 1 i tabelę porównawczą obu runów |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `true` |
 
@@ -66,5 +66,5 @@ Stan ze strony HQ z 14.11.2026. Załączników nie pobierano.
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (13.11.2026).
 - 24.11.2026: debrief HQ (`s01e01/hq-debrief.md`) daje daty rozwiązania, harness i liczby
   odrzuconych prób. Nie znaleziono modelu harnessu ani godziny rozwiązania. Tekstu debriefu runu 2
-  człowiek nie wkleił.
+  użytkownik nie wkleił.
 - Pełna treść zadania i wiadomość są na [stronie HQ](https://hq.mega.dev/challenges/somebody-slow).

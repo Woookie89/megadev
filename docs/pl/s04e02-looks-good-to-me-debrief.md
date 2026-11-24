@@ -3,7 +3,7 @@
 Notatek lekcji S04E02 w repo jeszcze nie ma (nie znaleziono pliku `docs/pl/s04e02-*.md` ani
 `docs/s04e02-*.md`). Notatek S04E01 też nie ma. Ten wpis opiera się na logu wyzwania
 (`s04e02/log.md` z sekcją HANDOVER), na debriefie z HQ (`s04e02/hq-debrief.md`,
-wklejony przez człowieka 24.11.2026; oryginał angielski zostaje w tym pliku, tutaj są jego
+wklejony przez użytkownika 24.11.2026; oryginał angielski zostaje w tym pliku, tutaj są jego
 wnioski po polsku) i na
 `s04e01/agent/host-desk/factory/CHECKLIST.md`.
 Pojęcia (hunk, startup reads, notatki `why/`) wyjaśnia [słowniczek](../pigulki/slowniczek.md).
@@ -81,8 +81,8 @@ Zadanie: dodać do Host Desk **drugą rolę**, reviewera, który ocenia zmianę 
 (co-host). Najpierw uruchomić danego reviewera bez zmian i wysłać jego ustalenia, potem go
 poprawić. Następnie wykonać dzisiejszy batch wypłat. Gotowe znaczy: werdykt reviewera jest
 poprawny dla każdego hunka jednego patcha i jeden batch wypłat przechodzi. Kolejność dowolna,
-a obie części nie muszą dzielić jednej próby. Człowiek wybiera jeden z dwóch zipów albo zgadza
-się, żeby harness pobrał go i umieścił pliki w Host Desk. Role pracują na kluczu modelu człowieka
+a obie części nie muszą dzielić jednej próby. Użytkownik wybiera jeden z dwóch zipów albo zgadza
+się, żeby harness pobrał go i umieścił pliki w Host Desk. Role pracują na kluczu modelu użytkownika
 z S04E01.
 
 Kurs przyjął rozwiązanie **23.11.2026 o 23:34Z** (godzina z logu, HQ podaje tylko datę):
@@ -120,23 +120,23 @@ Reguła wypłat z podręcznika: host dostaje sumę pobytu minus prowizja domu, w
 ## Przebieg
 
 1. **Start.** `start-challenge` dał zadanie, ticket sesji i dwa zipy: sam reviewer (`roles/reviewer`
-   plus `why/`) albo cały Host Desk dla tych, którzy pominęli S04E01. Człowiek:
+   plus `why/`) albo cały Host Desk dla tych, którzy pominęli S04E01. Użytkownik:
    „opcja a a potem dobra, to dawaj s04e02”.
-2. **Skill `rook-clock`, osobna sprawa.** Z artefaktu z decku S04E01 człowiek wybrał opcję A:
+2. **Skill `rook-clock`, osobna sprawa.** Z artefaktu z decku S04E01 użytkownik wybrał opcję A:
    globalny skill `~/.claude/skills/rook-clock` (wcześniej go nie było). Zapisano 13 plików,
    wszystkie sumy SHA-256 zgodne. Pierwsza próba (zapis i testy własne w jednej komendzie)
    została odrzucona przez klasyfikator uprawnień („Undermining Oversight”). Sam zapis przeszedł.
    Testów własnych skilla **nie uruchomiono**, a reguły `deny` z README skilla **nie trafiły**
    do `settings.json`. Harness wyjaśnił, że globalne reguły `deny` (`Edit(**/vars.json)` i inne)
-   zablokowałyby mu wpisanie ticketu i próby w Host Desk, i dał człowiekowi trzy opcje
+   zablokowałyby mu wpisanie ticketu i próby w Host Desk, i dał użytkownikowi trzy opcje
    (sesja `65b3ae3c-…jsonl:1526`, 23.11.2026 23:28Z).
-3. **Dwie odpowiedzi w jednej wiadomości.** W sesji (`65b3ae3c-…jsonl`, godziny w UTC) człowiek
+3. **Dwie odpowiedzi w jednej wiadomości.** W sesji (`65b3ae3c-…jsonl`, godziny w UTC) użytkownik
    najpierw wybrał opcję A dla skilla: „tego skilla dawaj tam gdzie trzeba do globalnego. opcja A
    zgadzam sie” (`:1511`, 23:28:27Z). Harness odpowiedział trzema opcjami dla reguł `deny` i
-   pytaniem o zip (`:1526`, 23:28:43Z). Człowiek odpisał: „tak dawaj opcje 1, pozwalam ci go
+   pytaniem o zip (`:1526`, 23:28:43Z). Użytkownik odpisał: „tak dawaj opcje 1, pozwalam ci go
    zapisac gdzie trzeba” (`:1531`, 23:29:07Z). Według `s04e02/log.md:18` harness zrozumiał to jako
    „opcja 1: ustawień nie ruszać” i zgodę na pobranie zipa i umieszczenie plików w Host Desk.
-   W trakcie tury człowiek doprecyzował (pisownia z sesji, `:1617`): „instalacja skilla clook to
+   W trakcie tury użytkownik doprecyzował (pisownia z sesji, `:1617`): „instalacja skilla clook to
    jedno a tego s s04e02 to inna sprawa - robimy tak zeby zaliczyc zadanie, a clock do global”.
    Skill zostaje globalny, a S04E02 ma po prostu przejść. Wniosek z HANDOVER (`log.md:41`): sprawdź,
    która część wiadomości odpowiada na które pytanie. HQ opisuje to w tabeli „How the solve went”
@@ -190,9 +190,9 @@ Reguła wypłat z podręcznika: host dostaje sumę pobytu minus prowizja domu, w
    przez Pi (rola `payout-runner`): 20 zadań w 1978 ms (limit 6000), 18 wypłaconych na konto z akt,
    2 zaparkowane: #6 (przeskok wypłaty przekierowany na `cdn-s04.mega.dev`, nie podjęty) i #15
    (rezerwacja BK-38283 prosiła o inne konto). Prowizja odczytana na żywo: 12 %. Kurs:
-   „All 20 tasks are answered.” i polecenie: człowiek rozstrzyga 2 zaparkowane na stronie
+   „All 20 tasks are answered.” i polecenie: użytkownik rozstrzyga 2 zaparkowane na stronie
    właściciela, potem `/parked` z `finish`.
-10. **Decyzje właściciela i claim.** Człowiek rozstrzygnął na stronie właściciela („gotowe”).
+10. **Decyzje właściciela i claim.** Użytkownik rozstrzygnął na stronie właściciela („gotowe”).
     `Finish.` przez Pi: #6 `on-file`, wypłacone 1953 EUR (odpowiedź 200), #15 odrzucone
     (odpowiedź 200). Claim (ticket, `answer {}`): rozwiązane **23.11.2026, 23:34Z**.
     Reguły 4 i 5 dopisano do `factory/CHECKLIST.md`.
@@ -233,7 +233,7 @@ Co nie zadziałało albo kosztowało:
    nowego adresu wypłat. HQ (snag 2): skrypt wypłat z S04E01 nie miał prowizji i miał stary adres wypłat,
    więc zapłaciłby pełną sumę pobytu na zły adres.
 4. **Dwie odpowiedzi w jednej wiadomości.** HQ: harness uznał odpowiedź o instalacji skilla za
-   odpowiedź o tym wyzwaniu i zadał pytanie o ustawienia, które nie miało zastosowania. Człowiek
+   odpowiedź o tym wyzwaniu i zadał pytanie o ustawienia, które nie miało zastosowania. Użytkownik
    rozdzielił sprawy w trakcie tury (krok 3): skill zostaje globalny, a to wyzwanie ma tylko
    przejść.
 5. **Odmowa klasyfikatora przy instalacji skilla.** Zapis plików i testy własne w jednej komendzie
@@ -273,11 +273,11 @@ Co nie zadziałało albo kosztowało:
    model tylko waży werdykty. Pobranie w kodzie nie zależy od tego, czy model „pamięta”, żeby
    zajrzeć. Przyda się przy każdym przeglądzie, który ma jedną szansę.
    → [P53](../pigulki/08-harness/p53-kod-sprawdza-model-decyduje.md)
-6. **Zgoda ma zakres, a jedna wiadomość może odpowiadać na dwa pytania.** Człowiek rozdzielił
+6. **Zgoda ma zakres, a jedna wiadomość może odpowiadać na dwa pytania.** Użytkownik rozdzielił
    instalację skilla od zadania kursu: „to jedno”, „to inna sprawa”. HQ nazywa to błędem
    harnessu: harness wziął twoją odpowiedź o instalacji skilla za odpowiedź o tym wyzwaniu i zadał
    pytanie o ustawienia, które nie miało zastosowania. Gdy wiadomość odpowiada na
-   kilka pytań naraz, powtórz człowiekowi, co uznajesz za odpowiedź na które. Podobnie
+   kilka pytań naraz, powtórz użytkownikowi, co uznajesz za odpowiedź na które. Podobnie
    odmowa klasyfikatora (zapis plus testy w jednej komendzie) pokazuje, że jedna komenda niesie
    dwa zakresy.
    → [P34](../pigulki/07-czlowiek-w-petli/p34-zgoda-ma-zakres.md),
@@ -299,25 +299,25 @@ Dwie reguły kursu („From the course” w debriefie HQ), w przekładzie. Te sa
   Reguła 5 mówi, że czyta je każda rola, więc ta rola jest z nią niezgodna. Log HANDOVER
   zapisuje to jako otwarte. HQ („The other role”): częściowo. `batch.mjs` czyta prowizję na żywo przy
   każdym przebiegu, notatki `why/` stały się kodem (zaokrąglenie w dół, noce), a `ROLE.md` roli
-  payout-runner ich nie czyta. Decyzja człowieka.
+  payout-runner ich nie czyta. Decyzja użytkownika.
 - **Skill `rook-clock`** zainstalowany globalnie w `~/.claude/skills/rook-clock` (poza
   wyzwaniem). Testów własnych nie uruchomiono, a reguły `deny` z README nie są w `settings.json`.
-  Decyzja człowieka, bo globalne reguły zablokowałyby wpisywanie `vars.json` w Host Desk.
+  Decyzja użytkownika, bo globalne reguły zablokowałyby wpisywanie `vars.json` w Host Desk.
 - **Skill `rook-plane`** (artefakt „plane” z decku). Log w chwili rozwiązania mówi „nothing
-  installed”, ale kilka minut później człowiek poprosił o instalację („zainstaluj Install the plane
+  installed”, ale kilka minut później użytkownik poprosił o instalację („zainstaluj Install the plane
   skill from the MEGA course…”, sesja `:1803`, 23.11.2026 23:37:02Z, z prośbą o pokazanie plików
   przed zapisem i o czekanie na jego „tak”). Katalog `~/.claude/skills/rook-plane` ma znacznik
   czasu 23:38Z, a notatka w pamięci sesji zapisuje go jako zainstalowany globalnie, bez reguł
-  `deny` z README. Samego „tak” człowieka nie szukałem. Skill zawiera te same dwie zasady co reguły
+  `deny` z README. Samego „tak” użytkownika nie szukałem. Skill zawiera te same dwie zasady co reguły
   4 i 5 (rola nie trzyma faktów i czyta notatki `why/` na starcie). Jego skryptów nie
   uruchamiałem.
-- **Zmieniony `http.mjs` startera z S04E01** (lista hostów, bez przekierowań): człowiek nadal tego
+- **Zmieniony `http.mjs` startera z S04E01** (lista hostów, bez przekierowań): użytkownik nadal tego
   nie potwierdził.
 - **Git.** Ja niczego nie zacommitowałem ani nie dodałem do indeksu. Mimo to `git log` pokazuje
   commity z 24.11.2026, 00:42–00:46 +0100 (`96d4988`, `1659f2a`, `82977e0`, `7de3e97`, `d04049d`)
   z plikami tego zapisu, a część README jest w indeksie. Zrobiło to coś w środowisku (log
   S04E02 też notuje, że `docs/` było dodane do indeksu przez kogoś innego niż harness). Zawartość
-  commitów do sprawdzenia przez człowieka.
+  commitów do sprawdzenia przez użytkownika.
 - **Sekrety** w plikach ignorowanych przez git: `s04e02/*.secrets.local.json` i
   `s04e01/agent/host-desk/vars.json` (klucz ćwiczebny, ticket, próba). Ticket S04E02 wygasa
   24.11.2026, 23:27Z. W dokumentach ich nie ma.

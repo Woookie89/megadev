@@ -74,7 +74,7 @@ istnieją i są jeszcze nierozwiązane, a ich plików tu nie ma.
   `solved`.
 - Strony HQ (14.11.2026, zalogowana sesja, tylko odczyt): statusy State i wykazy
   załączników w plikach wyzwań.
-- S01E01–S01E05 (24.11.2026): debriefy HQ wklejone przez człowieka (`s01e01/hq-debrief.md` …
+- S01E01–S01E05 (24.11.2026): debriefy HQ wklejone przez użytkownika (`s01e01/hq-debrief.md` …
   `s01e05/hq-debrief.md`; oryginały angielskie bez zmian, bez elementów strony). Z nich daty
   rozwiązania, harness i model, liczby odrzuconych prób. S01E01: tylko run 1 i tabela porównawcza
   obu runów. S01E02: run 1 rozwiązany, run 2 w toku; flaga `solved: false` z MCP (z 9 i 13.11.2026)

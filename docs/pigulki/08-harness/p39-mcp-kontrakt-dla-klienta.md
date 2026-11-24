@@ -25,7 +25,7 @@ i sesje), więc kontrakt trzeba pisać pod aktualną specyfikację, a nie pod pa
 1. Dostał `401` z `WWW-Authenticate`.
 2. Przeczytał metadane chronionego zasobu (RFC 9728) i metadane serwera autoryzacji.
 3. Zarejestrował się przez Client ID Metadata Document.
-4. Zaczekał, aż człowiek wpuści go hasłem właściciela.
+4. Zaczekał, aż użytkownik wpuści go hasłem właściciela.
 5. Wywołał `server/discover`, `tools/list` i narzędzia według ich schematów.
 
 Żadne pytanie nie było potrzebne. Serwer obsługiwał obie wersje protokołu (sprzed rewizji 2026-07-28 i nową), a każdy wynik
@@ -39,7 +39,7 @@ sprawdzał względem `outputSchema` przed wysłaniem.
   - metadane zasobu z `authorization_servers` i `resource_documentation`,
   - metadane serwera autoryzacji z PKCE `S256`,
   - Client ID Metadata Document jako zalecaną rejestrację, a DCR jako awaryjną.
-- Wpuszczenie obcego klienta to decyzja człowieka: strona zgody z jego własnym logowaniem.
+- Wpuszczenie obcego klienta to decyzja użytkownika: strona zgody z jego własnym logowaniem.
 - Przejdź całą ścieżkę z zewnątrz, jako obcy klient, zanim podasz adres
   ([P10](../02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)).
 - Wynik i błąd każdego narzędzia projektuj dla modelu: [P40](p40-wynik-ma-budzet.md),

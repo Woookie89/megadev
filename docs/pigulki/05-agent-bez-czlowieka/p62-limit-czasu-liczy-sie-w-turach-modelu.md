@@ -52,7 +52,7 @@ W zestawie narzędzi kursu: rutynowa praca idzie skryptem, a nie turami modelu (
 - Skrypt wypisuje to, co model ma zgłosić: ile zrobiono, co zaparkowano i dlaczego, ile
   trwało. Model nie musi niczego liczyć.
 - Przy operacjach, których nie wolno powtórzyć (wypłata, wysyłka), `FAIL` kończy przebieg, a
-  decyzję o ponowieniu podejmuje człowiek ([P09](../02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md)).
+  decyzję o ponowieniu podejmuje użytkownik ([P09](../02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md)).
 - Podział kodu i modelu opisuje [P53](../08-harness/p53-kod-sprawdza-model-decyduje.md), a
   czas jako część zachowania [P26](p26-czas-jest-czescia-zachowania.md).
 - Koszt modelu: jedno wywołanie na przebieg i tani model wystarczają ([P19](../04-orkiestracja/p19-dobor-modelu-i-koszt.md)).

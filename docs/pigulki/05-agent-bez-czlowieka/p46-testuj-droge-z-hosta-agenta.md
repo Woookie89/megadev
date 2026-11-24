@@ -1,4 +1,4 @@
-# P46 · Drogę do człowieka testuj z miejsca, w którym działa agent
+# P46 · Drogę do użytkownika testuj z miejsca, w którym działa agent
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S02E05
 
@@ -6,7 +6,7 @@
 >
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Dostęp zdalny” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#dostęp-zdalny) · [oryginał EN: „Getting remote”](../../s01e05-building-workflows-not-tool-stacks.md#getting-remote)
 
-**Zasada.** Każdą drogę, którą agent ma dotrzeć do człowieka albo do innej usługi (push na
+**Zasada.** Każdą drogę, którą agent ma dotrzeć do użytkownika albo do innej usługi (push na
 telefon, mail, webhook, API), sprawdź z hosta agenta, a nie z własnego komputera. Zrób to,
 zanim zostawisz agenta samego.
 

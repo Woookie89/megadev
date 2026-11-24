@@ -253,7 +253,7 @@ Ostatnio rozpowszechniło się przekonanie, że nie tylko nie potrzebujemy dodat
 
 - **Agenci działający w tle i długotrwale**: Znamy już bezpośrednią pracę z agentami. Nadal jest wiele do poprawienia, ale szybko przechodzimy od agentów lokalnych do zdalnych, uruchamianych według harmonogramu i reagujących na zdarzenia. Projektuje się ich przede wszystkim z myślą o autonomicznej pracy, więc ich kontakt z ludźmi jest ograniczony. Musimy zapewnić im zarówno **dostęp do potrzebnych informacji**, jak i **narzędzia do bezpiecznego i niezawodnego wchodzenia w interakcje ze środowiskiem**. Często oznacza to uruchamianie agentów w sandboxach, na własnym VPS-ie lub komputerze, z dedykowanymi kontami.
 
-![Diagram przepływu. Harmonogram i zdarzenie uruchamiają agenta. Agent działa w sandboxie na własnym VPS-ie, zaznaczonym czerwoną ramką. Wewnątrz ramki agent uzyskuje dostęp do informacji i wykonuje działania za pomocą narzędzi korzystających z dedykowanych kont. Linia przerywana oznacza ograniczony kontakt z człowiekiem.](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-24/frame.png)
+![Diagram przepływu. Harmonogram i zdarzenie uruchamiają agenta. Agent działa w sandboxie na własnym VPS-ie, zaznaczonym czerwoną ramką. Wewnątrz ramki agent uzyskuje dostęp do informacji i wykonuje działania za pomocą narzędzi korzystających z dedykowanych kont. Linia przerywana oznacza ograniczony kontakt z użytkownikiem.](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-24/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e01/artifacts/lesson/figure-24/frame.html)
 

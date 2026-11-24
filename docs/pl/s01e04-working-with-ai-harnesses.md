@@ -70,7 +70,7 @@ Załóżmy, że wybieramy **Pi** jako nasz główny harness. Dzięki temu zobacz
 
 Kolejnym potrzebnym komponentem jest [Herdr](https://herdr.dev/), który pozwala nam **łatwo zarządzać instancjami Pi** i **utrzymywać je przy życiu nawet po zamknięciu terminala**. To ważny krok w kierunku trwałych agentów gotowych do podejmowania zadań wymagających długotrwałej pracy. Połączenie Pi z Herdr ma jeszcze jedną zaletę: oba narzędzia mogą **niemal całkowicie zarządzać sobą same**. Zamiast konfigurować je sami, możemy więc **porozmawiać z agentami** o dostępnych ustawieniach i wspólnie ustalić najlepszą konfigurację dla naszych potrzeb.
 
-![Zagnieżdżone pola, każde na całą szerokość pola nadrzędnego. Zewnętrzne pole to Serwer Herdr, zaznaczony na czerwono: zarządza procesami i działa nawet wtedy, gdy żadne okno nie jest otwarte. Wewnątrz znajduje się Obszar roboczy (jeden projekt) z etykietą „wymaga udziału człowieka”. Obszar roboczy zawiera Kartę, będącą układem paneli, a nie procesem. Karta zawiera trzy Panele. Każdy Panel to prawdziwy terminal z jednym agentem. Pierwszy agent pracuje (działa), drugi jest zablokowany (czeka na człowieka), a trzeci zakończył pracę (ale jego wynik nie został jeszcze sprawdzony). Pod polami tekst: zamknięcie okna pozostawia agentów działających, zatrzymanie serwera kończy ich pracę.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.png)
+![Zagnieżdżone pola, każde na całą szerokość pola nadrzędnego. Zewnętrzne pole to Serwer Herdr, zaznaczony na czerwono: zarządza procesami i działa nawet wtedy, gdy żadne okno nie jest otwarte. Wewnątrz znajduje się Obszar roboczy (jeden projekt) z etykietą „wymaga udziału użytkownika”. Obszar roboczy zawiera Kartę, będącą układem paneli, a nie procesem. Karta zawiera trzy Panele. Każdy Panel to prawdziwy terminal z jednym agentem. Pierwszy agent pracuje (działa), drugi jest zablokowany (czeka na użytkownika), a trzeci zakończył pracę (ale jego wynik nie został jeszcze sprawdzony). Pod polami tekst: zamknięcie okna pozostawia agentów działających, zatrzymanie serwera kończy ich pracę.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.html)
 
@@ -106,7 +106,7 @@ Jest tu jednak pewien haczyk: samo uruchamianie workerów nie wystarczy. Potrzeb
 - Powiadomień o pracy agentów dla agentów koordynujących ich działania
 - Bazy wiedzy do śledzenia wykonanych i planowanych zadań
 - Zrozumienia przez agentów szerszej wizji projektu i przestrzegania ogólnych zasad
-- Uwzględnienia udziału człowieka, a zarazem jego ograniczenia na wiele sposobów
+- Uwzględnienia udziału użytkownika, a zarazem jego ograniczenia na wiele sposobów
 - Sandboxów i mechanizmów zapobiegających niepożądanym działaniom agentów
 - Własnego VPS-a lub fizycznego urządzenia dla agentów, gdy zajdzie taka potrzeba
 - Własnych kont agentów i wszystkiego, co jest potrzebne do interakcji z aplikacją
@@ -231,7 +231,7 @@ Na koniec mamy zautomatyzowane przepływy pracy, które działają niemal całko
 - zbierania danych z systemów zewnętrznych, a nawet od ludzi
 - wykonywania rutynowych zadań, takich jak usuwanie nieużywanego kodu
 
-![Diagram czytany od lewej do prawej. Agenta uruchamiają trzy rodzaje zdarzeń: @claude w komentarzu, nowy PR, push lub zgłoszenie oraz codzienny albo cotygodniowy harmonogram. Agent znajduje się w ramce Uprawnienia. Odczytuje kod, historię i zasady zespołu, a jego cykl działania to uruchomienie, jedno zadanie i zatrzymanie. Tworzy odpowiedzi na pytania, zmiany kodu i poprawki błędów, pull requesty na podstawie zgłoszeń, komentarze z przeglądu, aktualizacje dokumentacji oraz raporty i podsumowania. Wszystkie wyniki trafiają do człowieka, zaznaczonego na czerwono. Człowiek sprawdza wynik i scala go albo prosi o poprawki. Przerywana linia prowadzi z powrotem do agenta, by wprowadził zmiany.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.png)
+![Diagram czytany od lewej do prawej. Agenta uruchamiają trzy rodzaje zdarzeń: @claude w komentarzu, nowy PR, push lub zgłoszenie oraz codzienny albo cotygodniowy harmonogram. Agent znajduje się w ramce Uprawnienia. Odczytuje kod, historię i zasady zespołu, a jego cykl działania to uruchomienie, jedno zadanie i zatrzymanie. Tworzy odpowiedzi na pytania, zmiany kodu i poprawki błędów, pull requesty na podstawie zgłoszeń, komentarze z przeglądu, aktualizacje dokumentacji oraz raporty i podsumowania. Wszystkie wyniki trafiają do użytkownika, zaznaczonego na czerwono. Użytkownik sprawdza wynik i scala go albo prosi o poprawki. Przerywana linia prowadzi z powrotem do agenta, by wprowadził zmiany.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.html)
 

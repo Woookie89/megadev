@@ -48,7 +48,7 @@ Użytkownik:
 | kto wchodzi | Klienta wpuszcza strona zgody, która wymaga hasła właściciela. Błędne hasła mają limit na adres IP i limit globalny. |
 | narzędzia | Każde narzędzie ma `inputSchema` i `outputSchema`, a wynik przechodzi walidację (ajv) przed wysłaniem. |
 | pliki | Pliki są publiczne pod `/f/<id>/<nazwa>` z nagłówkiem `Content-Security-Policy: sandbox`. HTML, SVG i JS idą jako załącznik. |
-| transkrypcja | Whisper przez OpenRouter, z ponowieniem przy 429 i 5xx, modelem zapasowym i dziennym limitem. |
+| transkrypcja | Whisper przez OpenRouter, z retry przy 429 i 5xx, fallbackiem na inny model i dziennym limitem. |
 | stan | Postgres na Renderze, bo darmowy host nie ma dysku. |
 | testy | 25 testów `node:test` na PGlite oraz `./verify` z kontrolami na żywym adresie. |
 
@@ -143,7 +143,7 @@ i touch, i touch with these. schema first.”). Użytkownik zainstalował ją w
    → [P42](../pigulki/08-harness/p42-duze-bajty-obok-modelu.md)
 5. **Sprawdzaj na danych odbiorcy.** Pomiar na klipie kursu przed deployem zamienił
    zgadywanie w liczbę. → [P10](../pigulki/02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)
-6. **Host bez człowieka: stan w bazie, logi w zasięgu harnessu, uprawnienia u człowieka.**
+6. **Host bez użytkownika: stan w bazie, logi w zasięgu harnessu, uprawnienia u użytkownika.**
    → [P23](../pigulki/05-agent-bez-czlowieka/p23-stan-poza-procesem.md),
    [P27](../pigulki/05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md),
    [P35](../pigulki/07-czlowiek-w-petli/p35-uprawnienia-harnessu.md)

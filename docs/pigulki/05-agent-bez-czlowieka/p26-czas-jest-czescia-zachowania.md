@@ -6,7 +6,7 @@
 >
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
 
-**Zasada.** Oceniający (człowiek, kurs, monitoring) widzi kolejność zdarzeń, nie intencje
+**Zasada.** Oceniający (użytkownik, kurs, monitoring) widzi kolejność zdarzeń, nie intencje
 agenta.
 
 **Przypadek.** S02E02: poprawna odpowiedź wyszła 15 s po mailu od obcego nadawcy, bo w tym

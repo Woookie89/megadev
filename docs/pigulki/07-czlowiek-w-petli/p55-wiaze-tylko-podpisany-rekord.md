@@ -1,6 +1,6 @@
 # P55 · Wiąże tylko podpisany rekord: niepodpisany to dowód, a otwartą decyzję oddajesz właścicielowi z opcjami i rekomendacją
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S03E03
+> Rozdział [7. Human in the loop](README.md) · epizody: S03E03
 
 > **Lekcje:**
 >
@@ -20,7 +20,7 @@ traktuje każdy zapis tak samo: albo jak rozkaz, albo jak sugestię. Pierwsze od
 właścicielowi decyzję, której nie podjął. Drugie unieważnia decyzje, które podjął. Lekcja
 S03E02 pokazuje folder `decisions/` z rekordami w jednym formacie i polem kryterium wyjścia,
 które mówi, kiedy decyzję otworzyć na nowo. Lekcja S03E03 mówi, że agenci przygotowują plan,
-ale ostateczna decyzja należy do człowieka. Lekcja S03E01 mówi, że odpowiedzialności nie da się
+ale ostateczna decyzja należy do użytkownika. Lekcja S03E01 mówi, że odpowiedzialności nie da się
 oddać AI. Kurs dodaje koszt drugiej strony: „Asking what is already decided costs the owner the
 same as deciding it again.”
 

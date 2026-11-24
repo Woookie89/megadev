@@ -7,14 +7,14 @@
 > - S02E05 · Niezawodność agentów → rozdział „Obserwowalność w systemach agentowych” — [po polsku](../../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) · [oryginał EN: „Observability in agentic systems”](../../s02e05-agent-reliability.md#observability-in-agentic-systems)
 > - S03E03 · Rozwój produktu w duchu AI-native → rozdział „Informacja zwrotna” — [po polsku](../../pl/s03e03-ai-native-product-development.md#informacja-zwrotna) · [oryginał EN: „Feedback”](../../s03e03-ai-native-product-development.md#feedback)
 
-**Zasada.** Jeśli harness nie widzi logów serwisu, nie zdiagnozuje go. Człowiek staje się
+**Zasada.** Jeśli harness nie widzi logów serwisu, nie zdiagnozuje go. Użytkownik staje się
 wtedy kurierem logów.
 
 **Przypadek.** S01E05: przyczynę (test writer poddał się po 503) harness znalazł dopiero
 w logach Rendera wklejonych przez użytkownika. S02E02: lokalny `log.md` zapisywał każde
 `received`, `replied`, `ignored` i `fetch_url`. To pozwoliło potwierdzić, że wartość nie
 jest zmyślona, i odtworzyć oś czasu porażki. S02E03: harness zainstalował Render CLI
-(człowiek zalogował je w przeglądarce) i sam przeczytał logi `mcp-home`. Zobaczył w nich,
+(użytkownik zalogował je w przeglądarce) i sam przeczytał logi `mcp-home`. Zobaczył w nich,
 że kurs zarejestrował się przez Client ID Metadata Document (jeden ze sposobów rejestracji
 klienta OAuth) i które narzędzia wołał. Nikt nie musiał
 wklejać logów.

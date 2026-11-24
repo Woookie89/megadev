@@ -49,7 +49,7 @@ Oczywiście to tylko hipotetyczny scenariusz, ale jego celem jest pokazanie, jak
 Jak zawsze, dobrze jest zacząć od małej rzeczy, na przykład od **przechwycenia zgłoszenia błędu** i przekazania go agentowi w chmurze, który naprawi błąd i przygotuje pull request. Po zmergowaniu pull requesta informacja wraca do zespołu, a użytkownik, który zgłosił problem, dostaje powiadomienie. Żeby to zadziałało, potrzebujemy:
 
 - **Sygnał:** webhook z narzędzia supportu lub **wewnętrznego** kanału komunikacji otwiera zgłoszenie ze słowami samego użytkownika, metadanymi pomagającymi zidentyfikować użytkownika i identyfikatorem żądania. Ważna uwaga: **źródło musi być tu zaufane, aby uniknąć prompt injection.**
-- **Triaż:** zgłoszenie musi zostać zidentyfikowane i opisane przez agenta, który także je kategoryzuje, wzbogaca, usuwa duplikaty itd. W niektórych przypadkach agent może poprosić człowieka o pomoc.
+- **Triaż:** zgłoszenie musi zostać zidentyfikowane i opisane przez agenta, który także je kategoryzuje, wzbogaca, usuwa duplikaty itd. W niektórych przypadkach agent może poprosić użytkownika o pomoc.
 - **Ustalenie:** agent przygotowuje ustalenie, które może zawierać kroki odtworzenia, kryteria akceptacji itp. Może też zawierać dowody, że problem istnieje.
 - **Agent w chmurze:** gdy ustalenie zostanie zaakceptowane, rutyna je przejmuje, wdraża poprawkę i zbiera dowody.
 - **Dowód:** końcowy raport pokazujący różnice w systemie oraz dowody, że problem zniknął.
@@ -151,7 +151,7 @@ To, dokąd trafi rezultat, zależy od tego, czego agent się nauczył, a każdy 
 - **Zgłoszenia:** nowa praca, której nie można wykonać od razu, na przykład problem znaleziony przez przepływ triażu supportu (**S01E05**) lub drobna uciążliwość, na którą agent natknął się podczas pracy.
 - **Specyfikacje:** zmiana tego, co robi produkt, trafia do mapy funkcji (**S03E03**), a jeśli wpływa na kierunek produktu, do wizji produktu (**S01E04**).
 - **Ewaluacje:** błąd, który może się powtórzyć, staje się przypadkiem ewaluacyjnym (**S02E05**), dzięki czemu następna zmiana jest sprawdzana pod kątem tego, czego nauczyła nas produkcja.
-- **Pamięć produktu:** decyzja podjęta przez człowieka trafia do rekordów decyzji (**S03E02**) lub bazy wiedzy (**S01E03**).
+- **Pamięć produktu:** decyzja podjęta przez użytkownika trafia do rekordów decyzji (**S03E02**) lub bazy wiedzy (**S01E03**).
 - **Kontekst agenta:** lekcja o tym, jak agenci powinni pracować, trafia do AGENTS.md, zasad lub skilli (**S01E02**, **S03E02**).
 
 ![Diagram. Cztery przykładowe działania (naprawa błędu, przegląd, zaplanowana obserwacja, rozmowa z klientem) trafiają do jednego pudełka, „Agent ocenia działanie”, które pyta: „Czy wyniknęło z tego coś użytecznego? Dokąd to powinno trafić?”. Cienka linia z „Kontekstu produktu” (mapa funkcji, decyzje, wizja) także wchodzi do pudełka, ponieważ agent potrzebuje go, by odpowiedzieć. Z pudełka linie prowadzą do pięciu miejsc docelowych: Zgłoszenia dla nowej pracy (S01E05), Specyfikacje dla tego, co robi produkt (S03E03, S01E04), Ewaluacje dla błędów, które mogą wrócić (S02E05), Pamięć produktu dla decyzji podjętych przez ludzi (S03E02, S01E03) oraz Kontekst agenta dla tego, jak agenci powinni pracować (S01E02, S03E02). Przerywana linia podpisana „Nic użytecznego” prowadzi do małego znacznika „Pomiń”.](https://hq.mega.dev/figures/s03e05/artifacts/lesson/figure-9/frame.png)
@@ -160,7 +160,7 @@ To, dokąd trafi rezultat, zależy od tego, czego agent się nauczył, a każdy 
 
 W projekcie Kenta ten proces jest opisany jako **[pętla ciągłego doskonalenia](https://github.com/kody-hq/kody/blob/main/docs/contributing/harness-engineering.md)**: **zdefiniuj intencję → zbuduj → sprawdź → zapisz, czego się nauczono → przekształć powtarzające się wskazówki w egzekwowanie.** Ostatni krok jest najciekawszy: gdy ten sam błąd zdarza się ponownie, zostaje zakodowany jako zabezpieczenie, takie jak reguła lintera, sprawdzenie typów czy test.
 
-Jednym z przykładów **pętli sprzężenia zwrotnego** jest **[dziennik tarć](https://github.com/kody-hq/kody/blob/main/docs/contributing/friction-log.md)** (friction log). Ilekroć repozytorium przeszkadza agentowi (lub człowiekowi) i zdarza się to więcej niż raz, zgłasza on issue z etykietą `friction`, które opisuje, co się stało, co chciał osiągnąć, jak to odtworzyć i ile to kosztowało.
+Jednym z przykładów **pętli sprzężenia zwrotnego** jest **[dziennik tarć](https://github.com/kody-hq/kody/blob/main/docs/contributing/friction-log.md)** (friction log). Ilekroć repozytorium przeszkadza agentowi (lub użytkownikowi) i zdarza się to więcej niż raz, zgłasza on issue z etykietą `friction`, które opisuje, co się stało, co chciał osiągnąć, jak to odtworzyć i ile to kosztowało.
 
 Następnie, raz dziennie, zaplanowane zadanie zbiera otwarte zgłoszenia tarć i uruchamia agenta w chmurze, który albo naprawia je w pull requeście, albo odkłada je dla Kenta z krótkim podsumowaniem i rekomendowaną poprawką.
 

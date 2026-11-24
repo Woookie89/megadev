@@ -9,7 +9,7 @@ Systemy wieloagentowe są przydatne zarówno dla pojedynczego użytkownika pracu
 - **Wieloagentowość:** odpowiedzialności, izolowanie konfliktów, współdzielone zasoby, wzorce architektoniczne
 - **Agent2Agent:** niezależni agenci, połączenia, granice, wiadomości, zadania, wykrywanie
 - **Delegowanie:** kompletowanie kontekstu, kontrakty przekazania zadania, odpowiedzialność, śledzenie postępów, raportowanie, błędy
-- **Orkiestracja:** zależności, praca równoległa, konflikty, praca w tle, przepływy pracy człowiek–agent
+- **Orkiestracja:** zależności, praca równoległa, konflikty, praca w tle, przepływy pracy użytkownik–agent
 
 ## Architektury wieloagentowe
 
@@ -220,7 +220,7 @@ Drugi wniosek brzmi: **nie każde działanie w procesie biznesowym wymaga pewno�
 
 - montaż wideo można wykonać za pomocą [DaVinci MCP](https://x.com/The_Alex/status/2097847043796725924?s=20) i agenta,
 - miniaturki można wygenerować za pośrednictwem [Replicate](http://replicate.com/) lub własnego narzędzia AI do generowania obrazów,
-- agent może iteracyjnie poprawiać tytuł, opis itp., a zaakceptować je może dopiero człowiek,
+- agent może iteracyjnie poprawiać tytuł, opis itp., a zaakceptować je może dopiero użytkownik,
 - śledzenie aktywności i statystyk może odbywać się autonomicznie, a powiadomienia dla ludzi mogą być wysyłane tylko w razie potrzeby.
 
 Poziom autonomii zależy tu od firmy, ale wyraźnie widać, że niektóre etapy mogą być realizowane przez agentów w całości lub częściowo. Niektóre etapy zależą od siebie nawzajem, inne nie, a zależności często wynikają z decyzji biznesowych, w tym z potrzeby **fizycznego zablokowania agentowi dostępu do określonych działań**. Wreszcie niektóre działania muszą być wykonywane całkowicie w tle, bez bezpośredniego nadzoru.
@@ -237,7 +237,7 @@ Zbierzmy to teraz w całość, łącząc z dotychczasową wiedzą:
 - **Prymitywy:** dobrze dobrane, uogólnione elementy składowe zapewniają elastyczność zarówno w kodzie, jak i w czasie działania. Dzięki nim można łatwo rozszerzać możliwości całego systemu przy minimalnych zmianach w kodzie.
 - **Code Mode:** agenci mogą automatyzować część pracy za pomocą kodu, ponieważ niektóre działania są powtarzalne i nie wymagają AI, chyba że trzeba zmienić ich logikę.
 - **Kontekst:** uruchamiani agenci mogą otrzymywać zarówno dynamiczny kontekst od swojego rodzica, jak i zdefiniowane wcześniej instrukcje zależne od ich roli **lub bieżącego stanu systemu**.
-- **Zależności:** agenci lub kod mogą kontrolować proces, określając, które kroki można wykonywać równolegle, a które są od siebie zależne. Niektóre działania można też **blokować** do czasu spełnienia określonych warunków. Na przykład publikacja komentarza może być zablokowana do czasu zatwierdzenia przez człowieka, a po zatwierdzeniu komentarza nie można edytować bez dodatkowej zgody. Jednym ze sposobów realizacji takiej logiki jest skierowany graf acykliczny (DAG).
+- **Zależności:** agenci lub kod mogą kontrolować proces, określając, które kroki można wykonywać równolegle, a które są od siebie zależne. Niektóre działania można też **blokować** do czasu spełnienia określonych warunków. Na przykład publikacja komentarza może być zablokowana do czasu zatwierdzenia przez użytkownika, a po zatwierdzeniu komentarza nie można edytować bez dodatkowej zgody. Jednym ze sposobów realizacji takiej logiki jest skierowany graf acykliczny (DAG).
 - **Trwałość:** na koniec, ponieważ mamy do czynienia z długotrwałym procesem częściowo obsługiwanym w tle, konieczne jest użycie pi-durable lub agentów, którzy potrafią odzyskać sprawność po awarii.
 
 Powyższa lista pokazuje, że nasza podróż z MEGA coraz wyraźniej prowadzi nas ku systemom agentowym. Możemy patrzeć na nie z perspektywy **tworzenia oprogramowania** oraz przez pryzmat **systemów wieloagentowych**, które potrafią zarządzać całymi procesami biznesowymi lub obsługiwać je autonomicznie.

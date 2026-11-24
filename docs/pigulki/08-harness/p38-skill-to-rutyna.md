@@ -12,10 +12,10 @@
 
 **Przypadek.** `github-cli-routine` (S01E03): utwórz, podlinkuj, zamknij z powodem. Karty
 z talii kursu: `read` (S01E01), `rig` (S01E04), `loop` (S02E01), `hands` (S02E03). Żadna
-nie została zainstalowana automatycznie, bo instalacja to decyzja człowieka. `hands`
+nie została zainstalowana automatycznie, bo instalacja to decyzja użytkownika. `hands`
 harness najpierw rozpakował do katalogu tymczasowego i sprawdził sumy SHA-256 wszystkich
 6 plików. Skrypt przejrzał pod kątem miejsc, które uruchamiają procesy. Folder do `~/.claude/skills/`
-skopiował człowiek.
+skopiował użytkownik.
 
 S03E01: kurs wymagał własnego skilla w zasięgu użytkownika, wysłanego razem z listą
 wymagań. Harness, za zgodą użytkownika, zapisał `capture` w
@@ -35,7 +35,7 @@ each decision citing the fact behind it.” Kartę „ask” z talii kursu harne
 rozwiązaniu, na prośbę użytkownika, w `~/.claude/skills/ask/` (9 plików, sumy SHA-256 zgodne z kursem).
 
 S03E03: ten sam skill `triage` dostał sekcję 5 „Running alone”, bo teraz czytał go agent bez
-człowieka. Sekcja mówi, co czytać przed każdą decyzją (`AGENTS.md` i kontrakt, cały wątek
+użytkownika. Sekcja mówi, co czytać przed każdą decyzją (`AGENTS.md` i kontrakt, cały wątek
 issue, rekordy decyzji i research, kod i testy), że komentarz odbioru pisze kod, a nie model,
 kiedy budować, odmówić i pytać właściciela (tabela), jak wygląda linia ship logu i czego nie
 robić nigdy. Runner wkładał cały skill do promptu. Kurs zapisał to jako zdobyte T1: „Your triage

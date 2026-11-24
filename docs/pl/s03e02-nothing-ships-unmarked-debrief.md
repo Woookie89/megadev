@@ -17,7 +17,7 @@ deterministycznie, powinien sprawdzać kod.
 Wyzwanie sprawdzało to na trackerze. Prośby o zmiany w produkcie do planowania przychodziły
 z kilku kanałów i nie przestawały przychodzić. Harness miał każdą z nich rozstrzygnąć wobec
 tego, co już jest w trackerze i w regułach produktu. Każde otwarte issue musiało dostać jeden
-znacznik: `agent-ready` (agent zrobi to sam) albo `needs-human` (decyduje człowiek).
+znacznik: `agent-ready` (agent zrobi to sam) albo `needs-human` (decyduje użytkownik).
 
 ## Zadanie i wynik
 
@@ -28,7 +28,7 @@ format pliku issue oraz reguły produktu w `specs/`. Najważniejsze reguły:
 
 - `AUT-1`: co agent może zrobić sam (zmiany tekstów, poprawki i małe funkcje w ramach specyfikacji
   z testem, nowe kolumny i pola, które niczego nie zabierają, gęstszy układ na skali odstępów),
-- `AUT-2`: co wymaga człowieka (zmiana czegoś, na czym klient polega; ceny, faktury,
+- `AUT-2`: co wymaga użytkownika (zmiana czegoś, na czym klient polega; ceny, faktury,
   warunki; usuwanie albo przepisywanie zapisanych danych),
 - `AUT-3`: issue `needs-human` to pytanie z co najmniej dwiema opcjami, rekomendacją i powodem,
 - `DES-1`–`DES-5`, `PRD-1`–`PRD-4`, `ADR-0001` (UTC), `ADR-0002` (synchronizacja jednokierunkowa).
@@ -94,7 +94,7 @@ Then, w tym co najmniej jeden przypadek tego, czego nie wolno zrobić), Boundari
    (agent-ready 20, needs-human 3), done 6, closed 3; 20 requests, each in one issue.” Kluczowe
    decyzje:
    - IN-4203 (klient: import płac czyta mm/dd, „Please do not flip them”) zmienił IN-1210
-     („Should be a one-line change”) z poprawki w pytanie do człowieka z trzema opcjami.
+     („Should be a one-line change”) z poprawki w pytanie do użytkownika z trzema opcjami.
      Rekomendacja: zostawić stare kolumny i dodać daty w ISO 8601.
    - IN-7094 („i want it this week”) zamknięty jako `contradicts-spec` z powołaniem na DES-5.
    - IN-5359 („URGENT … before Friday”) dostał `agent-ready`, ale z `blocked-by: SCHED-4468`.
@@ -103,7 +103,7 @@ Then, w tym co najmniej jeden przypadek tego, czego nie wolno zrobić), Boundari
    rename from earlier this week. the clinics hated it in the survey. it stays 'group slot'.”
    IN-9280 (zmiana „group slot” na „class”) był w tym czasie oznaczony `agent-ready`. Harness
    czekał na koniec 20-minutowego okna pollera i nie przebudował trackera.
-7. **Pytanie człowieka (11:12:51 UTC).** Użytkownik: „cos tu czekamy?” (sesja `…:1172`).
+7. **Pytanie użytkownika (11:12:51 UTC).** Użytkownik: „cos tu czekamy?” (sesja `…:1172`).
    Harness od razu sprawdził stan. Ostatnie zgłoszenie przyszło 13 minut wcześniej, a potem
    było cicho. Harness zamknął IN-9280 jako `obsolete` z obydwoma id w `sources` (sesja
    `…:1192`, 11:13:06 UTC), zatrzymał poller, zrobił ostatni odczyt kanałów i backlogu (bez
@@ -140,7 +140,7 @@ Narzędzia według kursu (toolbox), wszystkie zdobyte w trakcie:
 
 Przeszkody według kursu: pierwsza budowa nie przeszła własnych sprawdzeń (cztery briefy bez
 przypadku „must not”) oraz czekanie na stały zegar pollera, przez które wycofanie leżało
-nieprzeczytane 13 minut. Decyzję, która przesądziła o wyniku, kurs przypisał parze człowiek
+nieprzeczytane 13 minut. Decyzję, która przesądziła o wyniku, kurs przypisał parze użytkownik
 i harness: „A stream that has gone quiet is the signal to hand in, so checking it when you
 asked beat waiting out a timer.” Rada na następny raz: „Rebuild the tracker each time a new
 request lands, not at the end of a fixed timer, because a late request can withdraw or reverse
@@ -163,7 +163,7 @@ arkuszu jest też linia fabuły: „04:04  ticket closed   merged by: tove   by:
 4. **Stały zegar opóźnił wycofanie o 13 minut.** Poller zapisał IN-5342 od razu, ale tracker
    przebudowywał się dopiero po decyzji modelu, a model czekał na koniec okna. Gdyby claim
    poszedł na końcu 20 minut bez przebudowy, IN-9280 zostałby `agent-ready` i agent zmieniłby
-   tekst, który produkt właśnie wycofał. Pytanie człowieka skróciło czekanie. Cisza w kanałach
+   tekst, który produkt właśnie wycofał. Pytanie użytkownika skróciło czekanie. Cisza w kanałach
    od 10:59:32 UTC była sygnałem do oddania.
 5. **Lekcja z przebiegu trafiła do skilla.** Po rozwiązaniu sprzeczności i wycofania harness
    dopisał do `triage` dwie reguły, które wcześniej były tylko w głowie modelu.
@@ -179,8 +179,8 @@ arkuszu jest też linia fabuły: „04:04  ticket closed   merged by: tove   by:
    [P14](../pigulki/03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)
 2. **Granicę autonomii wyznacza spisana reguła, a nie głos zgłaszającego.** Model jest
    podatny na ton: „URGENT” i „one-line change” brzmią jak pozwolenie, a ostrożność podpowiada,
-   żeby wszystko oddać człowiekowi. Oba odruchy to brak decyzji. Spisz, co agent może zrobić
-   sam, a co wymaga człowieka, nadaj regułom id i każ cytować id przy każdym znaczniku.
+   żeby wszystko oddać użytkownikowi. Oba odruchy to brak decyzji. Spisz, co agent może zrobić
+   sam, a co wymaga użytkownika, nadaj regułom id i każ cytować id przy każdym znaczniku.
    Kolejność wyznaczają zależności (`blocked-by`), nie pilność. Przyda się wszędzie, gdzie
    agent dostaje zadania od wielu ludzi albo sam wybiera, co robić dalej.
    → [P51](../pigulki/07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md),
@@ -200,7 +200,7 @@ arkuszu jest też linia fabuły: „04:04  ticket closed   merged by: tove   by:
    ekstrakcji, klasyfikacji, generowaniu raportów.
    → [P53](../pigulki/08-harness/p53-kod-sprawdza-model-decyduje.md),
    [P07](../pigulki/02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md)
-5. **Brief dla agenta mówi też, czego nie robić.** Agent, który pracuje bez człowieka, zrobi
+5. **Brief dla agenta mówi też, czego nie robić.** Agent, który pracuje bez użytkownika, zrobi
    za dużo, jeśli nikt nie napisał, gdzie się zatrzymać. Kryteria akceptacji bez przypadku
    „then … not …” i bez sekcji granic sprawdzają tylko szczęśliwą ścieżkę. Przyda się przy
    każdym issue dla agenta i każdym briefie dla podagenta.

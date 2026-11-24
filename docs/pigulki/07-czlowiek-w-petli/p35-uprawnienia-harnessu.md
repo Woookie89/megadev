@@ -1,6 +1,6 @@
 # P35 · Uprawnienia harnessu to część konfiguracji: zawężaj, nie poszerzaj
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S01E03, S02E01, S02E03, S03E01, S04E02, MEGA Assessment
+> Rozdział [7. Human in the loop](README.md) · epizody: S01E03, S02E01, S02E03, S03E01, S04E02, MEGA Assessment
 
 > **Lekcje:**
 >
@@ -12,13 +12,13 @@ przełączaj całego trybu na szeroki w trakcie pracy.
 
 **Przypadek.**
 
-- S01E03: tryb auto dwa razy zablokował utworzenie publicznego repo mimo zgody człowieka.
+- S01E03: tryb auto dwa razy zablokował utworzenie publicznego repo mimo zgody użytkownika.
 - S02E01: kontrola uprawnień zablokowała dodanie hooka `Stop`.
 - MEGA Assessment (T14, słaba strona): w trakcie zadania poszerzono cały tryb
   uprawnień, zamiast dodać jedną regułę.
 - S02E03: klasyfikator trybu auto zablokował `claude mcp add --scope user` i zapis skilla
-  do `~/.claude/skills/`, mimo zgody człowieka. Harness nie szukał obejścia. Podał komendę,
-  a człowiek wykonał ją sam.
+  do `~/.claude/skills/`, mimo zgody użytkownika. Harness nie szukał obejścia. Podał komendę,
+  a użytkownik wykonał ją sam.
 - S03E01: `wrangler deploy` nie przeszedł, bo konto Cloudflare nie miało subdomeny
   `workers.dev`. Harness chciał ją zarejestrować przez API tokenem wranglera, a klasyfikator
   odmówił („[Destructive or Unwanted Actions]”). Harness nie szukał obejścia. Link do panelu
@@ -27,14 +27,14 @@ przełączaj całego trybu na szeroki w trakcie pracy.
   UTC, a wdrożona o 10:44:51 UTC. Rada kursu: konto hosta i subdomenę przygotuj przed
   budową.
 - S04E02: zapis globalnego skilla `rook-clock` do `~/.claude/skills/` (13 plików, za zgodą
-  człowieka). Pierwsza komenda, zapis i testy własne skilla w jednej, została odrzucona przez
+  użytkownika). Pierwsza komenda, zapis i testy własne skilla w jednej, została odrzucona przez
   klasyfikator („Undermining Oversight”), a sam zapis przeszedł. Testów nie uruchomiono, a reguł
   `deny` z README skilla nie dodano do `settings.json`: globalnie zablokowałyby harnessowi
-  wpisywanie `vars.json` w Host Desk, więc to osobna decyzja człowieka.
+  wpisywanie `vars.json` w Host Desk, więc to osobna decyzja użytkownika.
 
 **Stosuj.** Dodaj z góry np. regułę `ask` dla `gh repo create` w `settings.json` (skill
 `update-config`) zamiast zmieniać tryb. Hook, który zmienia zachowanie harnessu, zatwierdza
-człowiek. Gdy klasyfikator odmówi zmiany na koncie, podaj człowiekowi jedną dokładną,
+użytkownik. Gdy klasyfikator odmówi zmiany na koncie, podaj użytkownikowi jedną dokładną,
 sprawdzoną komendę zamiast linku albo innej drogi do tego samego.
 
 ---

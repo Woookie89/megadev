@@ -30,7 +30,7 @@ była już oznaczona `agent-ready`. Harness czekał na koniec okna. Po 13 minuta
 zapytał: „cos tu czekamy?”. Harness od razu sprawdził stan, zobaczył ciszę od 10:59:32,
 zamknął IN-9280 jako `obsolete` z oboma id w `sources`, zrobił ostatni odczyt i zgłosił
 rozwiązanie. Wcześniej, w ten sam sposób, mail klienta (IN-4203: import płac czyta mm/dd)
-zmienił prośbę o daty dd/mm (IN-1210) z poprawki w pytanie do człowieka.
+zmienił prośbę o daty dd/mm (IN-1210) z poprawki w pytanie do użytkownika.
 
 Kurs: „Triage is a process, not a one-off sort: later requests update or cancel earlier
 ones.” Przeszkoda według kursu: stały zegar. Decyzja, którą kurs przypisał parze: „A stream
@@ -47,7 +47,7 @@ timer, because a late request can withdraw or reverse an issue you already marke
 - Pierwsze pytanie przy nowym wejściu: czy ono zmienia albo wycofuje coś, co już jest?
   Wycofanie zamyka wcześniejsze issue z oboma id
   ([P14](../03-pamiec/p14-jedna-decyzja-jeden-wiersz.md)).
-- Gdy człowiek pyta „na co czekamy?”, sprawdź stan od razu, zamiast tłumaczyć zegar.
+- Gdy użytkownik pyta „na co czekamy?”, sprawdź stan od razu, zamiast tłumaczyć zegar.
 - Pobrany stan to kopia z danej chwili. Przed „gotowe” pobierz jeszcze raz
   ([P04](../01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md)).
 

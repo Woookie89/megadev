@@ -14,7 +14,7 @@ Ostatnia rzecz, którą warto wiedzieć przed startem: wiele działań, które m
 - Weryfikacja: testy regresji, testy w przeglądarce, syntetyczne scenariusze, agenci-recenzenci, kontrole deterministyczne
 - System diff: zmiany w zachowaniu, doświadczeniu użytkownika, danych, architekturze, złożoności, operacjach
 - Przegląd: kod, architektura, UX, dostępność, bezpieczeństwo, wydajność, utrzymywalność
-- Bramki jakości: progi pewności, blokery wydania, znane ryzyka, gotowość do wycofania, zatwierdzenie przez człowieka
+- Bramki jakości: progi pewności, blokery wydania, znane ryzyka, gotowość do wycofania, zatwierdzenie przez użytkownika
 
 ## Akceptacja
 

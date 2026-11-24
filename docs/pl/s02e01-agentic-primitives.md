@@ -144,7 +144,7 @@ Poniżej przedstawiono **strukturę** [promptu systemowego Claude'a dla Haiku 5.
 Dobra wiadomość jest taka, że nie musimy pisać promptu ręcznie. Prompty, których będziemy używać, często będą znacznie prostsze niż te w Claude czy ChatGPT, chyba że stworzymy agentów ogólnego przeznaczenia. Nadal musimy jednak wiedzieć, czego oczekiwać od promptu i jakie są najważniejsze zasady Prompt Engineering.
 
 **Osobowość:** podstawowe informacje o roli agenta i osobach, z którymi wchodzi w interakcję. Taki kontekst wpływa na zachowanie modelu.
-**Środowisko:** istotne informacje o celu agenta i środowisku, na przykład o tym, że agent działa bez łatwego dostępu do człowieka.
+**Środowisko:** istotne informacje o celu agenta i środowisku, na przykład o tym, że agent działa bez łatwego dostępu do użytkownika.
 **Kontekst:** agentowi trzeba przedstawić mapę dostępnych zasobów lub przynajmniej informacje, gdzie ich szukać; inaczej nie ukończy zadania albo błędnie stwierdzi, że nie potrafi zrobić czegoś, do czego został przeznaczony.
 **Odkrywanie:** podobnie jak w przypadku kontekstu agent musi wiedzieć, jak poznawać możliwości harnessu, by właściwie z nich korzystać. Na przykład może wykonać jakiś proces, pomijając część kroków z powodu kiepskiej organizacji dokumentów opisujących ten proces.
 **Granice:** agent musi znać swoje ograniczenia i wiedzieć, czego nie wolno mu robić. Wiemy już, że to tylko **zalecenie**, ponieważ model może technicznie zignorować te instrukcje.

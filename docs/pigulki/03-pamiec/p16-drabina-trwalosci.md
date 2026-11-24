@@ -14,7 +14,7 @@ pamięci modelu:
 | Szczebel | Przykład | Kto pilnuje |
 | --- | --- | --- |
 | czat | „pamiętaj, żeby…” | nikt, przepada przy kompakcji |
-| log, debrief | `challenge-log.md`, `*-debrief.md` | człowiek, gdy przeczyta |
+| log, debrief | `challenge-log.md`, `*-debrief.md` | użytkownik, gdy przeczyta |
 | KEEP / HANDOVER | `s01e04/KEEP.md` | następna sesja, jeśli przeczyta na starcie |
 | skill / `AGENTS.md` / `CLAUDE.md` | `github-cli-routine`, kształt issue | harness ładuje automatycznie |
 | ustawienia / hook | reguła `ask` w `settings.json`, hook `Stop` | harness wymusza, model nie może pominąć |

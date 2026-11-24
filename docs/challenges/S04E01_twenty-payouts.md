@@ -53,7 +53,7 @@ właściciela rozstrzygnięte na stronie wyzwania i dokończone.
 | --- | --- | --- |
 | Serwer MCP kursu (`claim-challenge`) | 23.11.2026 | rozwiązane 23:23Z; kurs odrzucił 2 próby i dał podpowiedź na 1 (klucz ćwiczebny trafił na host z podręcznika na 2 przebiegach), kolejny przebieg przyjęty, 2 zadania zaparkowane i rozstrzygnięte przez właściciela; [zapis przebiegu](../pl/s04e01-twenty-payouts-debrief.md) |
 | Serwer MCP kursu (`list-challenges`, `solved`) | 24.11.2026 | `true` |
-| Debrief HQ (`s04e01/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-23; harness Claude Code (claude-code 2.1.331), model `claude-sonnet-5-5`; „The course turned down 2 tries before it accepted, and gave a hint on 1 of them.” |
+| Debrief HQ (`s04e01/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | solved, 2026-11-23; harness Claude Code (claude-code 2.1.331), model `claude-sonnet-5-5`; „The course turned down 2 tries before it accepted, and gave a hint on 1 of them.” |
 
 ## Materiały i załączniki
 
@@ -67,7 +67,7 @@ właściciela rozstrzygnięte na stronie wyzwania i dokończone.
 ## Źródła i braki
 
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (24.11.2026) i z logu
-  `s04e01/log.md`. Dosłowny debrief HQ jest w `s04e01/hq-debrief.md` (wklejony przez człowieka 24.11.2026). Przebieg jest w
+  `s04e01/log.md`. Dosłowny debrief HQ jest w `s04e01/hq-debrief.md` (wklejony przez użytkownika 24.11.2026). Przebieg jest w
   [zapisie przebiegu](../pl/s04e01-twenty-payouts-debrief.md).
 - Nie znaleziono: daty otwarcia, prowadzącego, nazwy tygodnia, dosłownego tekstu opisu wyzwania ze strony HQ
   (poza debriefem; strona i oryginał EN nie są w `challenges-original/`) i notatek lekcji S04E01.

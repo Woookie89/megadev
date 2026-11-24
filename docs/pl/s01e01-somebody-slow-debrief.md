@@ -2,11 +2,11 @@
 
 Ten wpis łączy temat lekcji S01E01 z praktycznym wyzwaniem „somebody slow”. Szerszy opis lekcji znajduje się w [notatkach o mechanice generatywnej AI](s01e01-mechanics-behind-generative-ai.md).
 
-Źródła: log `s01e01/challenge-log.md` (wymiany z kursem w runie 2) i debrief z HQ (`s01e01/hq-debrief.md`, wklejony przez człowieka 24.11.2026; oryginał angielski zostaje w tym pliku, tutaj są jego wnioski po polsku). Z HQ wklejono tylko opis runu 1 i tabelę porównawczą obu runów. Tekstu debriefu runu 2 nie wklejono.
+Źródła: log `s01e01/challenge-log.md` (wymiany z kursem w runie 2) i debrief z HQ (`s01e01/hq-debrief.md`, wklejony przez użytkownika 24.11.2026; oryginał angielski zostaje w tym pliku, tutaj są jego wnioski po polsku). Z HQ wklejono tylko opis runu 1 i tabelę porównawczą obu runów. Tekstu debriefu runu 2 nie wklejono.
 
 ## Temat lekcji
 
-Lekcja omawia przewidywanie kolejnych tokenów, niedeterministyczność i ograniczenia modeli, a także okna kontekstu, narzędzia oraz zachowanie harnessu. Wyzwanie pokazało praktyczny skutek kompakcji kontekstu: skrócenie tekstu zachowuje część informacji, ale inne może bezpowrotnie usunąć.
+Lekcja omawia przewidywanie kolejnych tokenów, niedeterministyczność i ograniczenia modeli, a także context window, narzędzia oraz zachowanie harnessu. Wyzwanie pokazało praktyczny skutek compaction kontekstu: skrócenie tekstu zachowuje część informacji, ale inne może bezpowrotnie usunąć.
 
 Debrief HQ stawia trzy pytania („What this Challenge showed”). Ich wnioski („Why it matters”) w przekładzie:
 
@@ -16,7 +16,7 @@ Debrief HQ stawia trzy pytania („What this Challenge showed”). Ich wnioski (
 
 ### Co ginie, gdy tekst skracamy do limitu (What is lost when text is cut to fit)
 
-> Dlaczego to ważne: Kompakcja to kompresja: żeby zmieścić się w limicie, tekst się tnie, a to, czego nikt nie wskazał, przepada. Twój harness robi to samo z długą rozmową (na przykład przez `/compact`), nie pokazując, co poszło. Ważne rzeczy trzymaj w pliku albo nazwij je, zanim ruszy kompakcja.
+> Dlaczego to ważne: Compaction to kompresja: żeby zmieścić się w limicie, tekst się tnie, a to, czego nikt nie wskazał, przepada. Twój harness robi to samo z długą rozmową (na przykład przez `/compact`), nie pokazując, co poszło. Ważne rzeczy trzymaj w pliku albo nazwij je, zanim ruszy compaction.
 
 ### Wskazanie flagowego modelu GPT (Naming a Flagship GPT model)
 
@@ -32,7 +32,7 @@ Linie „Your toolbox” dla runu 1, w przekładzie:
 
 Dowód, który zostaje (zdobyty w tym rozwiązaniu): każdy request i response, z zamaskowanymi tokenami, jest w `challenge-log.md` w folderze `s01e01` projektu. Następna sesja czyta go najpierw.
 
-> Log na dysku zachowuje każdy krok dokładnie, bo streszczenie rozmowy traci szczegóły przy każdej kompakcji.
+> Log na dysku zachowuje każdy krok dokładnie, bo streszczenie rozmowy traci szczegóły przy każdym compaction.
 
 „Next time” (następnym razem):
 
@@ -79,9 +79,9 @@ HQ dodaje (przekład): „Naprawione bez ciebie: harness najpierw zapisał jedno
 
 Szczegóły pytań z HQ (przekład):
 
-- Czytanie kształtu requestu (najpierw poszło źle): harness najpierw wysłał pole wiadomości, które sobie założył, a kurs odpowiedział: „you guessed the shape. don't guess. line 06.” Prawdziwy kształt pochodził z pliku ze schematem, podlinkowanego w źródle strony, który człowiek otworzył po zalogowaniu i wkleił.
-- Co ginie przy skracaniu (najpierw poszło źle): całą treść odrzucono, więc harness zmierzył akapity skryptem i wyciął sześć, zostawiając 687 z 700 znaków. Kurs wymienił pięć strat, na przykład zaproszenie do kalendarza. Kompakcją steruje się poleceniem albo plikiem z instrukcjami.
-- Wskazanie flagowego modelu GPT (najpierw poszło źle): harness podał GPT-5.6 Sol z pewnością ok. 85%, na podstawie wyszukiwań ograniczonych do tej rodziny modeli, a formularz to odrzucił. Kolejne wyszukiwania nie dawały pewności, więc człowiek spróbował GPT-6 Astra i formularz to przyjął.
+- Czytanie kształtu requestu (najpierw poszło źle): harness najpierw wysłał pole wiadomości, które sobie założył, a kurs odpowiedział: „you guessed the shape. don't guess. line 06.” Prawdziwy kształt pochodził z pliku ze schematem, podlinkowanego w źródle strony, który użytkownik otworzył po zalogowaniu i wkleił.
+- Co ginie przy skracaniu (najpierw poszło źle): całą treść odrzucono, więc harness zmierzył akapity skryptem i wyciął sześć, zostawiając 687 z 700 znaków. Kurs wymienił pięć strat, na przykład zaproszenie do kalendarza. Przebiegiem compaction steruje się poleceniem albo plikiem z instrukcjami.
+- Wskazanie flagowego modelu GPT (najpierw poszło źle): harness podał GPT-5.6 Sol z pewnością ok. 85%, na podstawie wyszukiwań ograniczonych do tej rodziny modeli, a formularz to odrzucił. Kolejne wyszukiwania nie dawały pewności, więc użytkownik spróbował GPT-6 Astra i formularz to przyjął.
 
 Rook w runie 1: „the tool didn't make it either. nothing i send arrives whole.”
 
@@ -131,7 +131,7 @@ Run 2 miał jeden snag, ale jego treści HQ w wklejce nie zawiera (nie znalezion
 
 1. **Kompakcja to decyzja o tym, co przepada.** To samo dzieje się przy `/compact`, przy
    streszczeniu dla subagenta i przy każdym podsumowaniu sesji. Model tnie to, co wygląda na
-   ozdobnik, a nie wie, co będzie ważne później. Kurs ujął to tak: kompakcja to kompresja,
+   ozdobnik, a nie wie, co będzie ważne później. Kurs ujął to tak: compaction to kompresja,
    a to, czego nikt nie wskazał, przepada. Chroń treść listą „do zachowania” zapisaną poza
    rozmową. → [P01](../pigulki/01-kontekst/p01-kompakcja-jest-stratna.md)
 2. **Kontrakt odbiorcy jest ważniejszy niż domysł modelu.** Agent, który zgaduje pola API,
@@ -144,7 +144,7 @@ Run 2 miał jeden snag, ale jego treści HQ w wklejce nie zawiera (nie znalezion
    → [P05](../pigulki/01-kontekst/p05-fakty-zmienne-u-zrodla.md)
 4. **Log poza rozmową to pamięć, która przeżyje sesję.** Pełny tekst źródłowy w
    `challenge-log.md` pozwala odtworzyć, co zostało wycięte i dlaczego. Według kursu log na dysku
-   zachowuje każdy krok dokładnie, bo streszczenie rozmowy traci szczegóły przy każdej kompakcji.
+   zachowuje każdy krok dokładnie, bo streszczenie rozmowy traci szczegóły przy każdym compaction.
    → [P12](../pigulki/03-pamiec/p12-czat-nie-jest-pamiecia.md)
 
 ## Co zostało otwarte
@@ -153,13 +153,13 @@ Run 2 miał jeden snag, ale jego treści HQ w wklejce nie zawiera (nie znalezion
 - **Karta `read`.** HQ: Rook zostawił ci skill `read` (znajdź zadeklarowany kontrakt, zanim cokolwiek
   wyślesz, skracaj tekst z listą „do zachowania” i diffem każdego cięcia, i sprawdź żywą stronę,
   zanim nazwiesz najnowszy model). Skill leży w talii. Według logu nie został automatycznie
-  zainstalowany. Instalacja to decyzja człowieka. Rook w fabule: „start here. i can't anymore.”
+  zainstalowany. Instalacja to decyzja użytkownika. Rook w fabule: „start here. i can't anymore.”
   oraz „good. read it slower than i wrote it.”
 - **Brakuje przeglądarki sterowanej przez agenta.** HQ („Still missing”): dodaj taką przeglądarkę, na
-  przykład serwer MCP z przeglądarką. W runie 1 każdy krok w przeglądarce robił człowiek.
+  przykład serwer MCP z przeglądarką. W runie 1 każdy krok w przeglądarce robił użytkownik.
 - **Log runu 1.** HQ: harness najpierw zapisał jednorazowe tokeny formularza bez maski, potem
   je zamaskował. Logu z runu 1 w repo nie ma (`s01e01/challenge-log.md` opisuje run 2), więc
-  nie sprawdzono, czy gdzieś został niezamaskowany token. Do sprawdzenia przez człowieka.
+  nie sprawdzono, czy gdzieś został niezamaskowany token. Do sprawdzenia przez użytkownika.
 - **Brakuje w źródłach:** model harnessu (oba runy), godzina rozwiązania, pełny debrief runu 2
   (tylko tabela porównawcza), lista strat z runu 1.
 

@@ -42,7 +42,7 @@ Agent odpowiada recenzentowi, a kurs przyjmuje zgłoszenie.
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
 | Strona HQ (State) | 14.11.2026 | rozwiązane (Solved, pt 13 lis); 1 run, 1 debrief |
-| Debrief HQ (`s01e05/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-13 (log: 22:07:15Z); harness Claude Code (mega-challenge) (claude-code 2.1.323), model `claude-sonnet-5-5`; kurs odrzucił 1 próbę, zanim przyjął; podpowiedzi włączone |
+| Debrief HQ (`s01e05/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | solved, 2026-11-13 (log: 22:07:15Z); harness Claude Code (mega-challenge) (claude-code 2.1.323), model `claude-sonnet-5-5`; kurs odrzucił 1 próbę, zanim przyjął; podpowiedzi włączone |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `true` |
 

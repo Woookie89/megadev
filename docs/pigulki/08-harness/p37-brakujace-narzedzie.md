@@ -13,7 +13,7 @@ Potem zamień je na trwałe narzędzie, a pułapki środowiska zapisz.
 **Przypadek.**
 
 - S01E03: brak przeglądarki. Harness uruchomił zainstalowane Chromium z portem debugowania
-  i sterował nim przez puppeteer-core, a człowiek zalogował się w tym oknie. Na stałe:
+  i sterował nim przez puppeteer-core, a użytkownik zalogował się w tym oknie. Na stałe:
   Playwright MCP.
 - S01E02: ffmpeg i faster-whisper. Pułapki: PyAV nie działał z biblioteką, a ffmpeg ze
   skryptu bez `-nostdin` się zawieszał.

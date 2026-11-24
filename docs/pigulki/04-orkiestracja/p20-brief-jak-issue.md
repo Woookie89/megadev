@@ -25,7 +25,7 @@ o nic nie dopytywał ([P43](p43-przekaz-skill-z-zadaniem.md),
 [P45](../05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md)).
 
 S03E02: issue `agent-ready` w trackerze to brief, z którego agent zrobi zmianę bez pytania
-człowieka. Format: Intent, Acceptance (Given / When / Then, w tym co najmniej jeden przypadek
+użytkownika. Format: Intent, Acceptance (Given / When / Then, w tym co najmniej jeden przypadek
 „then … not …”), Boundaries („Must not touch …”, z każdym „zostaw, jak jest” od klienta)
 i linia `Allowed by AUT-1 (…)`. Pierwsza budowa trackera zatrzymała cztery briefy bez
 przypadku „not” (`acceptance has no "not" case`), np. SCHED-4465 (nagłówek Retry-After).

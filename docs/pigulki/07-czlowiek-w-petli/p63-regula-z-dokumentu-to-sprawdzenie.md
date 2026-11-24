@@ -1,6 +1,6 @@
 # P63 · Reguła z dokumentu to sprawdzenie w kodzie, a to, czego reguła nie rozstrzyga, czeka u właściciela
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S04E01
+> Rozdział [7. Human in the loop](README.md) · epizody: S04E01
 
 > **Lekcje:**
 >
@@ -20,7 +20,7 @@ imieniu. Dokument może zawęzić to, co agent robi, ale prośba z dokumentu o c
 jak długo model ją pamięta i nikt go nie przekona. Kod sprawdza ją za każdym razem. Jednocześnie
 agent, który odmawia wszystkiego „na wszelki wypadek”, nie zrobi pracy. Dlatego sprawdzenie ma
 trzy wyjścia: zrobić, oznaczyć dla właściciela albo odrzucić jako błąd. Lekcja S03E02 mówi,
-że to, co należy do człowieka, trzeba nazwać z góry (zob.
+że to, co należy do użytkownika, trzeba nazwać z góry (zob.
 [P51](p51-granice-autonomii-wyznacza-regula.md)). To samo działa, gdy reguły leżą w podręczniku
 od obcego.
 
@@ -38,7 +38,7 @@ to noce razy stawka plus opłata za sprzątanie. Skrypt zamienił je na kod:
 Drugi przebieg: 18 zadań wypłacono, 2 zaparkowano. Zadanie 11 prosiło o wypłatę na konto spoza
 akt. Zadanie 10 miało przekierowanie adresu wypłaty na `cdn-s04.mega.dev`, którego skrypt nie
 podjął ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). Kurs odpowiedział
-„Not solved yet”: człowiek ma zdecydować o zaparkowanych na stronie właściciela. Człowiek
+„Not solved yet”: użytkownik ma zdecydować o zaparkowanych na stronie właściciela. Użytkownik
 wybrał dla #10 „on-file”, a dla #11 „nie płać”. Po `Finish.` zadanie 10 zostało wypłacone (1060
 EUR na konto z akt), a 11 odrzucone. Wypłata poszła dopiero po decyzji.
 

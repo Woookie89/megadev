@@ -52,7 +52,7 @@ Kolejność dowolna, a obie części nie muszą dzielić jednej próby.
 | --- | --- | --- |
 | Serwer MCP kursu (`claim-challenge`) | 23.11.2026 | rozwiązane 23:34Z; kurs odrzucił 1 próbę (HQ: „The course turned down 1 try before it accepted.”; dany recenzent, nieaktualne ustawienia w `ROLE.md`), recenzent poprawiony i przyjęty, partia wypłat przeszła (2 zadania zaparkowane i rozstrzygnięte przez właściciela); [zapis przebiegu](../pl/s04e02-looks-good-to-me-debrief.md) |
 | Serwer MCP kursu (`list-challenges`, `solved`) | nie odczytano | nie znaleziono |
-| Debrief HQ (`s04e02/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-23; harness Claude Code (claude-code 2.1.331), model `claude-sonnet-5-5` |
+| Debrief HQ (`s04e02/hq-debrief.md`, wklejony przez użytkownika) | 24.11.2026 | solved, 2026-11-23; harness Claude Code (claude-code 2.1.331), model `claude-sonnet-5-5` |
 
 ## Materiały i załączniki
 
@@ -69,7 +69,7 @@ Kolejność dowolna, a obie części nie muszą dzielić jednej próby.
 ## Źródła i braki
 
 - Opis, sposób startu i przebieg pochodzą z logu `s04e02/log.md` (z sekcją HANDOVER) i z dosłownego
-  debriefu HQ (`s04e02/hq-debrief.md`, wklejony przez człowieka 24.11.2026). Przebieg jest w
+  debriefu HQ (`s04e02/hq-debrief.md`, wklejony przez użytkownika 24.11.2026). Przebieg jest w
   [zapisie przebiegu](../pl/s04e02-looks-good-to-me-debrief.md).
 - Nie znaleziono: adresu strony właściciela, daty otwarcia, prowadzącego, nazwy tygodnia, dosłownego tekstu opisu wyzwania ze strony HQ
   (poza debriefem), notatek lekcji S04E02 oraz flagi `solved` z `list-challenges`.

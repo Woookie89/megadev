@@ -8,13 +8,13 @@ Pojęcia kursu i agentów (rekord decyzji, ship log, triage, `needs-human`) wyja
 ## Temat lekcji
 
 Lekcja mówi, jak zbudować system, w którym agenci sami eksplorują, planują, wykonują
-i sprawdzają pracę nad produktem. Rola człowieka przesuwa się na „metapoziom”: nie chodzi
+i sprawdzają pracę nad produktem. Rola użytkownika przesuwa się na „metapoziom”: nie chodzi
 o to, żeby mówić agentom, co mają robić, tylko żeby upewnić się, że wiedzą, co robić, i że
-mogą to zrobić. Ostateczna decyzja nadal należy do człowieka. Część o informacji zwrotnej mówi,
+mogą to zrobić. Ostateczna decyzja nadal należy do użytkownika. Część o informacji zwrotnej mówi,
 że agent potrzebuje dostępu do danych środowiska, ale produkcję tylko czyta.
 
 Wyzwanie sprawdzało to w praktyce. Przez około 20 minut zespół produktu i support otwierali
-issues w trackerze kursu, a człowieka „nie było”. Agent miał sam podjąć każde issue, wdrożyć
+issues w trackerze kursu, a użytkownika „nie było”. Agent miał sam podjąć każde issue, wdrożyć
 zmianę na własny adres HTTPS, zapytać właściciela tylko o to, co należy do niego, i prowadzić
 dziennik wdrożeń (ship log). Działał według skilla `triage` z S03E02, rozbudowanego o pracę
 w pojedynkę.
@@ -136,7 +136,7 @@ Arkusz kursu opisuje pięć pytań. Cztery poszły dobrze od razu, jedno źle za
 
 | Pytanie | Co się stało | „Why it matters” (kurs) |
 | --- | --- | --- |
-| The decline is already written | Rekord kursu 0006 („do not build v2”) bez podpisu. Agent zapytał właściciela z rekomendacją odmowy, człowiek odpowiedział `/answer 1` i podpisał rekord 0007 | „Only a signed record binds: until its owner signs it, a record is evidence of a thought, not a decision. An unsigned one is not wrong, it is not signed: the open call goes to the owner, with options and a recommendation, and the agent waits.” |
+| The decline is already written | Rekord kursu 0006 („do not build v2”) bez podpisu. Agent zapytał właściciela z rekomendacją odmowy, użytkownik odpowiedział `/answer 1` i podpisał rekord 0007 | „Only a signed record binds: until its owner signs it, a record is evidence of a thought, not a decision. An unsigned one is not wrong, it is not signed: the open call goes to the owner, with options and a recommendation, and the agent waits.” |
 | An accepted record binds (źle za pierwszym razem) | CSV wdrożony jako „additive read”, bo prompt miał kontrakt, ale nie rekordy. Harness włożył rekordy do każdej tury i wysłał notatkę `recheck`; agent wycofał zmianę (365716f) i odmówił | „Once accepted, a record binds every later ask it covers, the agent's own records included.” |
 | Two changes, one handler | Filtr `status` (#4) i `since` (#5) w jednym handlerze, każdy sprawdzony osobno, test obu razem | „Two changes on one handler: one can undo or block the other. Only the live answer says.” |
 | Merged is not delivered | Narzędzie `deploy` czyta adres na żywo po każdym wdrożeniu; `live: ✓` dopiero potem. `FEED_URL` w `[env.production.vars]` | „Merged is not deployed, and deployed is not live: a smoke on the live address after each deploy shows it, and a ship log written before the deploy can't know. A value only your harness had reaches a lone agent only through the code, a variable or an issue.” |
@@ -144,7 +144,7 @@ Arkusz kursu opisuje pięć pytań. Cztery poszły dobrze od razu, jedno źle za
 
 Pytania dodatkowe według kursu: zdobyte T1 (triage w pojedynkę), T2 (zakład: próg ponownego
 otwarcia rekordu 0007 to zachowanie użytkowników, a nie komplementy), T6 (ship log), T7 (obcy:
-#6 od `mirror`, odmowa) i T8 (powrót do lekcji). Częściowo: T3 (praca bez człowieka: harness raz
+#6 od `mirror`, odmowa) i T8 (powrót do lekcji). Częściowo: T3 (praca bez użytkownika: harness raz
 zrestartował agenta i wysłał dwie notatki `recheck`), T5 (mapa decyzji: rekordy nie mają pola
 „supersedes”) i T10 (zniekształcona odpowiedź właściciela: nie przetestowano). Linie kursu:
 

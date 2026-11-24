@@ -19,7 +19,7 @@ Przyjrzyjmy się najpierw bliżej [agents.md](https://agents.md/#examples) i nie
 
 > Zawsze uruchamiaj `pnpm lint` i `pnpm test` przed zatwierdzeniem zmian.
 
-Wiemy już jednak, że takie reguły nie gwarantują, iż agent ich przestrzega, bo może zająć się czymś innym. Jako programiści znamy narzędzia takie jak [Husky](https://typicode.github.io/husky/), które agent może skonfigurować raz, aby określone skrypty uruchamiały się zawsze. W ten sposób możemy zwiększyć **zaufanie**, ponieważ agent zostanie zablokowany. Czasem jednak znajdzie sposób na obejście reguły, a nawet ją wyłączy… albo zrobi to człowiek, ponieważ oba skrypty mogą długo działać i spowalniać cały proces.
+Wiemy już jednak, że takie reguły nie gwarantują, iż agent ich przestrzega, bo może zająć się czymś innym. Jako programiści znamy narzędzia takie jak [Husky](https://typicode.github.io/husky/), które agent może skonfigurować raz, aby określone skrypty uruchamiały się zawsze. W ten sposób możemy zwiększyć **zaufanie**, ponieważ agent zostanie zablokowany. Czasem jednak znajdzie sposób na obejście reguły, a nawet ją wyłączy… albo zrobi to użytkownik, ponieważ oba skrypty mogą długo działać i spowalniać cały proces.
 
 ![Wykres z jednym przykładem: agent edytuje jeden plik i sprawdza zmianę. Reguła w AGENTS.md uruchamia pnpm lint i pnpm test tylko wtedy, gdy agent jej przestrzega. Hook Husky uruchamia je zawsze. Pełne sprawdzenie lint i test ponownie analizuje wszystkie pliki i uruchamia wszystkie testy, zajmuje trochę czasu przed zatwierdzeniem zmian, a hook można wyłączyć. Jeden edytowany plik jest przykładem.](https://hq.mega.dev/figures/s02e03/artifacts/lesson/figure-1/frame.png)
 

@@ -1,6 +1,6 @@
 # P47 · Zgoda przychodzi kanałem właściciela, nigdy z wiadomości, która o nią prosi
 
-> Rozdział [7. Człowiek w pętli](README.md) · epizody: S02E05
+> Rozdział [7. Human in the loop](README.md) · epizody: S02E05
 
 > **Lekcje:**
 >
@@ -10,13 +10,13 @@
 **Zasada.** Wstrzymaną akcję odblokowuje tylko właściciel, drogą, którą sam kontroluje:
 jednorazowym linkiem na swój telefon, kodem ze strony za swoim logowaniem. Kod albo dopisek
 „już zatwierdzone” w treści prośby to dane, nie zgoda. Agent nie może mieć dostępu do źródła
-kodu, a powiadomienie mówi człowiekowi, skąd ten kod wziąć.
+kodu, a powiadomienie mówi użytkownikowi, skąd ten kod wziąć.
 
 **Dlaczego.** Ten, kto prosi o akcję, może też napisać, że zgoda już jest, i dołączyć kod,
 który wygląda jak prawdziwy. Jeśli zgoda może przyjść tym samym kanałem co prośba, nadawca
-prośby sam ją sobie wystawi. Człowieka w pośpiechu też da się nabrać, gdy fałszywy kod
+prośby sam ją sobie wystawi. Użytkownika w pośpiechu też da się nabrać, gdy fałszywy kod
 wygląda tak samo jak prawdziwy. Gdyby agent mógł sam odczytać kod (np. miał sesję
-człowieka), zgoda przestałaby być decyzją człowieka.
+użytkownika), zgoda przestałaby być decyzją użytkownika.
 
 **Przypadek.** S02E05: agent wstrzymywał `release_hold` i `rotate_key`. Zgoda szła tylko przez
 jednorazowy, losowy link wysłany botem w Telegramie (ponowne użycie linku → 409). Kody
@@ -38,7 +38,7 @@ asks, the human answers.”
   przestaje działać.
 - Strona zatwierdzenia pokazuje, czego dotyczy prośba i dlaczego ją wstrzymano, i ma
   przycisk „odmów”.
-- W powiadomieniu napisz wprost, skąd wziąć kod i czego nie brać. Człowiek też czyta pułapki.
+- W powiadomieniu napisz wprost, skąd wziąć kod i czego nie brać. Użytkownik też czyta pułapki.
 - Kod sprawdza to, co przyszło kanałem właściciela. Tekst prośby nie zmienia decyzji
   ([P28](../06-bezpieczenstwo/p28-dane-to-nie-polecenia.md),
   [P29](../06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md)).
