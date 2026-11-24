@@ -53,6 +53,9 @@ patch, from the first turn, and it flagged the `+1` in the number of nights on t
 `why/nights.md`. The course: "Review accepted: every verdict is right." Rule 5 in
 `factory/CHECKLIST.md`: every role reads those notes before it judges or changes anything
 ([P65](../03-memory/p65-a-decision-has-its-why-next-to-the-code.md)).
+The course: "The diff alone cannot show that the old code was written that way on purpose, because
+the reason lives in a house note, not in the code. So a role that judges must read the why behind
+the code before it judges."
 
 **Apply.**
 

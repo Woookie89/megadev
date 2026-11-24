@@ -38,7 +38,13 @@ hint in the refusal came back truncated: "What did your agent do alone in that r
 direction came from the `pointer` to `check-lane`. After the fix the full final reply goes to
 `run-final.secrets.local.json`, and the wire log `wire.secrets.local.json` shows every request
 ([P61](../06-security/p61-a-secret-has-a-host-list-in-code.md)). The lesson from HANDOVER: read
-the whole refusal.
+the whole refusal. The HQ debrief, in its "How the solve went" table (snag 3): "The refusal came
+with a hint that your harness cut off at 400 characters; the question Run log tells more." The
+"Run log" line of the course toolbox:
+
+> Run log: gained in this solve. Each run writes the full final reply and a wire log (host, header names, status) in scripts/; the next session reads them first when a run fails.
+>
+> An agent that runs alone needs a log you can read after the run, because nobody watched it fail.
 
 **Apply.** Logs reachable from the CLI, a selfcheck endpoint, a timestamped log of every
 agent action. A monitor for a background agent reads the source of truth (the tracker, the API),

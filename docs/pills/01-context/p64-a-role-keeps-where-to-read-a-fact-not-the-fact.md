@@ -41,7 +41,13 @@ in the log the commission was 12 % (attempt 1), 16 % (attempt 2, a second patch)
 practice) and 12 % (the payout run). `batch.mjs` likewise reads the commission live. The course
 wrote it down as rule 4 in `factory/CHECKLIST.md`: "Have every role read its facts (settings,
 prices, limits) from their source at every start; never copy them into its files." In the course's
-toolbox this is `fresh-facts`.
+toolbox: "Your roles read their facts at every start (context.mjs and live settings read)".
+
+The HQ debrief, verbatim:
+
+> Failed until you made your reviewer read `/settings` at every start.
+
+> Why it matters: The settings pasted into the reviewer's file were a snapshot, and the house's settings changed with every attempt, so a role that trusted its own file judged against old numbers. A role reads its facts from their source at every start.
 
 **Apply.**
 

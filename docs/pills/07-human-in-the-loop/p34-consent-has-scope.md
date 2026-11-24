@@ -16,7 +16,10 @@ S04E01: the human chose to leave the starter's `http.mjs` alone (option A: "focu
 task"). After the course's refusal, `check-lane` said to answer in code, and the harness changed
 `http.mjs` (a host list per secret, no redirects), treating it as part of the task. The
 starter's README allows it ("You and your harness may change anything here, code included."),
-but the log holds no consent from the human for that change, and HANDOVER lists it as open.
+but the HQ debrief words the human's request with a condition: "You asked to leave the starter's
+http tool alone unless it was part of the task; the course's pointer made it part of the task." It
+adds that the harness told the human "in the next message". The log holds no consent from the
+human for the change itself, before it was made, and HANDOVER lists it as open.
 When a new requirement goes beyond the scope of an earlier "yes" or "leave it", go back to the
 human before the change.
 
@@ -28,9 +31,10 @@ gdzie trzeba do globalnego. opcja A zgadzam sie"). By `s04e02/log.md:18`, the ha
 message as "option 1: leave the settings alone" and "yes, fetch the zip and place the files in the
 Host Desk", and did exactly that: it fetched the zip, read every file and copied `roles/reviewer`
 and `why/`. Mid-turn the human separated the two matters: "instalacja skilla clook to jedno a tego
-s s04e02 to inna sprawa" (`:1617`, spelling as in the session). The brief for this write-up says the
-human's answers were mixed up once, and the sources do not say which answer was assigned to which
-question. When one message answers several questions, repeat to the human what you take as the
+s s04e02 to inna sprawa" (`:1617`, spelling as in the session). The HQ debrief calls this a harness error: "Your harness took your answer about installing the
+skill as an answer about this Challenge and asked a settings question that did not apply." Its
+solution: "You said the skill stays global and this Challenge is only about passing, and your
+harness worked on that." When one message answers several questions, repeat to the human what you take as the
 answer to which before you act. Consent to fetch the zip did not cover changing settings or
 anything outside the Host Desk.
 

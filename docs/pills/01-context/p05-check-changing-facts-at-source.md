@@ -17,7 +17,9 @@ it differs from the previous one (no `initialize`, different headers).
 
 S04E02: the stale number sat not in the model's memory but in a role's instructions. The
 reviewer's `ROLE.md` had a 15 % commission and version `2026-11-10.1`, while the live `/settings`
-said 12 % and `2026-11-17.548` ([P64](p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md)).
+said 12 % and `2026-11-17.548` ([P64](p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md)). The course: "The settings pasted into the reviewer's file were a snapshot, and the
+house's settings changed with every attempt, so a role that trusted its own file judged against old
+numbers. A role reads its facts from their source at every start."
 
 **Apply.**
 

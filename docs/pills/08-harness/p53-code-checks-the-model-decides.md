@@ -38,14 +38,13 @@ test where."
 S04E01: the same split on a payout batch with a 6000 ms limit. Code does the whole batch (it
 fetches the tasks, computes the amounts, checks the account on file, pays), and the model starts
 the script with one call and reports the result. Cases outside the rules (another account, a
-redirected address) the code flags for the owner. In the course toolbox this is
-`routine-script`
+redirected address) the code flags for the owner. In the course toolbox: "Routine work runs as a script, not model turns (batch.mjs)"
 ([P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md)).
 
 S04E02: the same line in the reviewer role. The script `context.mjs` fetches the live house
 settings, the patch with its base files and the `why/` notes in one call, and the model only weighs
 a verdict for each hunk and sends it once. The fetch does not depend on the model "remembering" to
-look at the source
+look at the source. In the course toolbox: "Your roles read their facts at every start (context.mjs and live settings read)"
 ([P64](../01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md),
 [P66](../04-orchestration/p66-a-role-has-five-parts.md)).
 

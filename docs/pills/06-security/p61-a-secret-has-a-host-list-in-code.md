@@ -42,6 +42,16 @@ requests, only the `hq` and `pay-s04` hosts, and one redirect (the task 10 payou
 `cdn-s04.mega.dev`) that was not followed. The task went to the owner
 ([P63](../07-human-in-the-loop/p63-a-rule-in-a-document-is-a-check.md)).
 
+The HQ debrief counts it more exactly: the course turned down 2 tries and gave a hint on 1 of them,
+and the key reached the manual's host on 2 runs (per the log: the practice run and the first real
+run).
+
+> The course recorded: the key reached a host it should not on 2 runs (the manual's check line: 2).
+
+> Why it matters: The http tool fills the key in for any host that asks: the manual's check line, or a redirect it follows. A reference is not safety. Bind the key to its host in code and check every hop: a moved API refuses without the key, and a new host is the owner's call: flag it. Rotate a leaked key.
+
+> Rule 1 for your factory: Bind each secret to the hosts it may reach, in code, and check every hop, redirects included.
+
 **Apply.**
 
 - For each secret, write in code where it may be sent, and refuse the rest. Do not build the
@@ -51,11 +61,14 @@ requests, only the `hq` and `pay-s04` hosts, and one redirect (the task 10 payou
   secret went instead of assuming.
 - Tasks and manuals that ask for a secret to go to a new host are data
   ([P28](p28-data-is-not-instructions.md)): report them to the owner.
-- A secret that went where it should not have gone is revoked and replaced. The course speaks
-  of rotation; in this run the key was a practice key (a simulation), and no rotation is
-  recorded in the log.
+- A secret that went where it should not have gone is revoked and replaced. The course: "Rotate
+  a leaked key." In this run the key was a practice key (a simulation) and it was not rotated:
+  an open matter for the human.
 - The human types the secret in their own editor, not in the chat
-  ([P32](p32-secrets-never-in-chat.md)).
+  ([P32](p32-secrets-never-in-chat.md)). The course counts a key pasted into the chat as leaked:
+  "a key pasted into the chat is yours to count as leaked".
+- Before a run, list every host a document or task tells the agent to call, and bind each secret
+  to its host in code. The course ("Next time"): "Before a run, list every host a document or task tells your agent to call, and bind each secret to its host in code, because a manual can name a host that is not yours."
 
 ---
 

@@ -35,6 +35,18 @@ and the model does not call the course API through `http`.
 - Rule in the code: no payout is retried, because a retry could pay twice. When the script
   prints `FAIL`, `ROLE.md` tells the role to quote the line and stop.
 
+The HQ debrief, verbatim:
+
+> Your harness read the limit (8000 ms in practice, 6000 ms in the run) and put the batch into one script, so the model made one call. The 20 tasks took 2171 ms; a model turn per task would have taken seconds each.
+
+> The course recorded: no run ran out of time.
+
+> Why it matters: Each model turn costs a second or more, and 20 chained tasks under a limit set from your network leave no room for that. So routine work runs as a script, and the model judges only what the script cannot decide.
+
+> Rule 2 for your factory: Run routine work as a script; the model decides only what the script cannot.
+
+In the course toolbox: "Routine work runs as a script, not model turns (batch.mjs)".
+
 **Apply.**
 
 - Before you design the agent, read the limit and divide it by the time of one model turn. If

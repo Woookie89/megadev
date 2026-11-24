@@ -24,7 +24,10 @@ the agent's variables, in an editor of their own, because a value the harness wr
 its log. The harness noted in the log that the key had been in the chat and did not write it
 to any file. The human typed it into `vars.json` themselves, and that file is in `.gitignore`
 (`**/host-desk/vars.json`). In the same challenge the practice key also went to the manual's
-host in the refused run ([P61](p61-a-secret-has-a-host-list-in-code.md)).
+host on two runs (the practice run and the refused first real run;
+[P61](p61-a-secret-has-a-host-list-in-code.md)). The course counts a key pasted into the chat as
+leaked ("a key pasted into the chat is yours to count as leaked") and says "Rotate a leaked key."
+This key is a practice key (a simulation) and it was not rotated. That is open for the human.
 
 **Apply.** Commit only `.env.example`. Redact secrets on the agent's output, not just its
 input.

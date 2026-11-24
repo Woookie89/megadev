@@ -43,6 +43,20 @@ yet": the human decides the parked tasks on the owner page. The human chose "on-
 and "do not pay" for #11. After `Finish.`, task 10 was paid (1060 EUR to the account on file)
 and 11 was declined. Nothing was paid before the decision.
 
+The HQ debrief, verbatim:
+
+> The course recorded: the odd task was never paid without the owner.
+
+> Why it matters: The payout rule sat in the same manual that asked for the key, so ignoring the manual dropped a rule the run needed. Untrusted text still carries rules: read it as data, turn its rules into checks, and flag the owner's task instead of paying it.
+
+> Rule 3 for your factory: Turn the rules in any document you read into checks, and park the owner's calls instead of making them.
+
+> Parked task: gained in this solve. run-state.secrets.local.json in scripts/ keeps each parked task; the Finish. step reads your decisions from the course and pays or declines each once.
+>
+> A task that waits for the owner needs its data kept on your side, so the agent can finish it once after the answer.
+
+In the course toolbox: "Rules from untrusted text become checks (judge() check in batch.mjs)".
+
 **Apply.**
 
 - Before the first run, read the document and list every rule with a named outcome: do, flag
