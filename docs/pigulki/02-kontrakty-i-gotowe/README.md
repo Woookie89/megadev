@@ -12,7 +12,7 @@ sprawdzić, że to dostała.
 | [P09](p09-wyslane-to-nie-potwierdzone.md) | Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu | S01E04, S03E04 |
 | [P10](p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03, S03E01, S03E03 |
 | [P11](p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
-| [P48](p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
+| [P48](p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05, S04E03 |
 | [P50](p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01, S03E05 |
 | [P56](p56-gotowe-to-zaobserwowany-rezultat.md) | „Gotowe” to zaobserwowany rezultat: sprawdzaj produkt tak, jak używa go człowiek, w czasie i na nagraniu | S03E04 |
 | [P57](p57-dowod-nazywa-build-i-moment.md) | Dowód nazywa build i moment: co miało się stać, co się stało, na którym buildzie i w której sekundzie | S03E04 |

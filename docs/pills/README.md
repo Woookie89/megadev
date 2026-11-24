@@ -48,7 +48,7 @@ As of 24.11.2026.
 | [P03](01-context/p03-source-is-not-the-view.md) | The source is not the view | S01E03, S03E01 |
 | [P04](01-context/p04-a-download-is-a-dated-copy.md) | A download is a dated copy | S01E03, S02E01 |
 | [P05](01-context/p05-check-changing-facts-at-source.md) | Check changing facts at the source, not in the model's memory | S01E01, S02E03, S04E02 |
-| [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md) | An agent decides only from what it is given: put every rule source in its context from the first turn | S03E03, S04E02 |
+| [P54](01-context/p54-the-agent-decides-from-what-it-is-given.md) | An agent decides only from what it is given: put every rule source in its context from the first turn | S03E03, S04E02, S04E03 |
 | [P64](01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md) | A role keeps where to read a fact, not the fact: read settings, prices and limits from their source at every start | S04E02 |
 
 ### [2. Contracts and "done"](02-contracts-and-done/README.md)
@@ -61,7 +61,7 @@ As of 24.11.2026.
 | [P09](02-contracts-and-done/p09-sent-is-not-confirmed.md) | A step that waits on the other side closes when they confirm | S01E04, S03E04 |
 | [P10](02-contracts-and-done/p10-check-from-outside.md) | Check the result from outside, the way the recipient will see it | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-contracts-and-done/p11-empty-answer-is-an-error.md) | An empty answer or placeholder text is an error, not a result | S02E02 |
-| [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05 |
+| [P48](02-contracts-and-done/p48-test-on-the-real-input-shape.md) | Test on the shape of real input, and add every live failure to the set | S02E05, S04E03 |
 | [P50](02-contracts-and-done/p50-a-requirement-has-an-address-and-a-test.md) | A requirement has an address and a test: cite the spot in the source, and check every accepted requirement from outside | S03E01, S03E05 |
 | [P56](02-contracts-and-done/p56-done-is-an-observed-outcome.md) | "Done" is an observed outcome: check the product the way a person uses it, in time and on a recording | S03E04 |
 | [P57](02-contracts-and-done/p57-a-proof-names-its-build-and-moment.md) | A proof names its build and its moment: what should happen, what happened, on which build and at which second | S03E04 |
@@ -85,8 +85,8 @@ As of 24.11.2026.
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P17](04-orchestration/p17-contract-before-parallelism.md) | Contract first, in sequence; then parallelism | S01E04 |
-| [P18](04-orchestration/p18-worktrees-and-hub-files.md) | One worktree per worker; conflicts gather in hub files | S01E04 |
-| [P19](04-orchestration/p19-model-choice-and-cost.md) | Match the model to the task, and treat cost as a requirement | S01E04, S01E05, S02E02, S04E01 |
+| [P18](04-orchestration/p18-worktrees-and-hub-files.md) | One worktree per worker; conflicts gather in hub files | S01E04, S04E03 |
+| [P19](04-orchestration/p19-model-choice-and-cost.md) | Match the model to the task, and treat cost as a requirement | S01E04, S01E05, S02E02, S04E01, S04E03 |
 | [P20](04-orchestration/p20-brief-like-an-issue.md) | A brief for a worker is like a good issue | S01E04, S02E04, S03E02 |
 | [P21](04-orchestration/p21-delegate-research.md) | Delegate research, not just building | MEGA Assessment |
 | [P43](04-orchestration/p43-skill-travels-with-the-job.md) | The skill travels with the job | S02E04 |

@@ -1,6 +1,6 @@
 # P18 · One worktree per worker; conflicts gather in hub files
 
-> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04
+> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S04E03
 
 > **Lessons:**
 >

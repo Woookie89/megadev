@@ -1,6 +1,6 @@
 # P19 · Model dobieraj do zadania, a koszt traktuj jak wymaganie
 
-> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S01E05, S02E02, S04E01
+> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S01E05, S02E02, S04E01, S04E03
 
 > **Lekcje:**
 >

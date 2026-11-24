@@ -1,6 +1,6 @@
 # P54 · Agent decyduje tylko z tego, co dostał: każde źródło reguł daj mu w kontekście od pierwszej tury
 
-> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S03E03, S04E02
+> Rozdział [1. Kontekst: model wie tylko to, co do niego trafi](README.md) · epizody: S03E03, S04E02, S04E03
 
 > **Lekcje:**
 >

@@ -51,7 +51,7 @@ Stan na 24.11.2026.
 | [P03](01-kontekst/p03-zrodlo-to-nie-widok.md) | Źródło to nie widok | S01E03, S03E01 |
 | [P04](01-kontekst/p04-pobrany-plik-to-kopia-z-dnia.md) | Pobrany plik to kopia z danego dnia | S01E03, S02E01 |
 | [P05](01-kontekst/p05-fakty-zmienne-u-zrodla.md) | Fakty zmienne potwierdzaj u źródła, nie z pamięci modelu | S01E01, S02E03, S04E02 |
-| [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) | Agent decyduje tylko z tego, co dostał: każde źródło reguł daj mu w kontekście od pierwszej tury | S03E03, S04E02 |
+| [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) | Agent decyduje tylko z tego, co dostał: każde źródło reguł daj mu w kontekście od pierwszej tury | S03E03, S04E02, S04E03 |
 | [P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md) | Rola trzyma, skąd czytać fakt, a nie sam fakt: ustawienia, ceny i limity czytaj ze źródła przy każdym starcie | S04E02 |
 
 ### [2. Kontrakty i „gotowe”](02-kontrakty-i-gotowe/README.md)
@@ -64,7 +64,7 @@ Stan na 24.11.2026.
 | [P09](02-kontrakty-i-gotowe/p09-wyslane-to-nie-potwierdzone.md) | Krok, który czeka na drugą stronę, zamykasz po jej potwierdzeniu | S01E04, S03E04 |
 | [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md) | Sprawdź wynik z zewnątrz, tak jak zobaczy go odbiorca | S02E02, S02E03, S03E01, S03E03 |
 | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md) | Pusta odpowiedź i tekst zastępczy to błąd, nie wynik | S02E02 |
-| [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05 |
+| [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) | Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu | S02E05, S04E03 |
 | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01, S03E05 |
 | [P56](02-kontrakty-i-gotowe/p56-gotowe-to-zaobserwowany-rezultat.md) | „Gotowe” to zaobserwowany rezultat: sprawdzaj produkt tak, jak używa go człowiek, w czasie i na nagraniu | S03E04 |
 | [P57](02-kontrakty-i-gotowe/p57-dowod-nazywa-build-i-moment.md) | Dowód nazywa build i moment: co miało się stać, co się stało, na którym buildzie i w której sekundzie | S03E04 |
@@ -88,8 +88,8 @@ Stan na 24.11.2026.
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md) | Najpierw kontrakt po kolei, potem równoległość | S01E04 |
-| [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md) | Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach | S01E04 |
-| [P19](04-orkiestracja/p19-dobor-modelu-i-koszt.md) | Model dobieraj do zadania, a koszt traktuj jak wymaganie | S01E04, S01E05, S02E02, S04E01 |
+| [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md) | Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach | S01E04, S04E03 |
+| [P19](04-orkiestracja/p19-dobor-modelu-i-koszt.md) | Model dobieraj do zadania, a koszt traktuj jak wymaganie | S01E04, S01E05, S02E02, S04E01, S04E03 |
 | [P20](04-orkiestracja/p20-brief-jak-issue.md) | Brief dla workera jest jak dobre issue | S01E04, S02E04, S03E02 |
 | [P21](04-orkiestracja/p21-deleguj-research.md) | Deleguj research, nie tylko budowę | MEGA Assessment |
 | [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md) | Przekaż skill razem z zadaniem | S02E04 |

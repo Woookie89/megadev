@@ -1,6 +1,6 @@
 # P48 · Test on the shape of real input, and add every live failure to the set
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S02E05
+> Chapter [2. Contracts and "done"](README.md) · episodes: S02E05, S04E03
 
 > **Lessons:**
 >

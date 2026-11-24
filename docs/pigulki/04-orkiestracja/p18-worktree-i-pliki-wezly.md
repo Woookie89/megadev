@@ -1,6 +1,6 @@
 # P18 · Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach
 
-> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04
+> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S04E03
 
 > **Lekcje:**
 >

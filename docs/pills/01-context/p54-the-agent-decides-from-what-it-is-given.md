@@ -1,6 +1,6 @@
 # P54 · An agent decides only from what it is given: put every rule source in its context from the first turn
 
-> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S03E03, S04E02
+> Chapter [1. Context: the model knows only what reaches it](README.md) · episodes: S03E03, S04E02, S04E03
 
 > **Lessons:**
 >

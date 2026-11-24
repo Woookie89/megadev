@@ -1,6 +1,6 @@
 # P19 · Match the model to the task, and treat cost as a requirement
 
-> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S01E05, S02E02, S04E01
+> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S01E05, S02E02, S04E01, S04E03
 
 > **Lessons:**
 >

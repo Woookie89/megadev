@@ -1,6 +1,6 @@
 # P48 · Testuj na kształcie prawdziwego wejścia, a każdą porażkę na żywo dopisz do zestawu
 
-> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E05
+> Rozdział [2. Kontrakty i „gotowe”](README.md) · epizody: S02E05, S04E03
 
 > **Lekcje:**
 >
