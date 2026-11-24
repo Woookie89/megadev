@@ -17,7 +17,7 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 > MCP kursu. Przy S01E02 te źródła się różnią: szczegóły są w pliku wyzwania.
 > S02E01 i S02E02 zaktualizowano 15.11.2026, S02E03 i S02E04 16.11.2026, S02E05 17.11.2026,
 > S03E01, S03E02, S03E03 i S03E04 19.11.2026, a S03E05, S04E01 i S04E02 24.11.2026, po rozwiązaniu (zapisy
-> przebiegu w `pl/`).
+> przebiegu w `pl/`). S01E01–S01E05 uzupełniono 24.11.2026 o debriefy HQ (`s01e0X/hq-debrief.md`).
 
 ## Week 1 — Core
 
@@ -25,11 +25,11 @@ Każde wyzwanie otwierało się w swoim dniu o 05:00 CET.
 
 | Kod | Tytuł | Data | Status HQ / MCP | Strona HQ |
 | --- | --- | --- | --- | --- |
-| S01E01 | [somebody slow](challenges/S01E01_somebody-slow.md) | 26.10 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/somebody-slow) |
-| S01E02 | [who said what](challenges/S01E02_who-said-what.md) | 27.10 | rozwiązane, trwa druga próba / `false` | [link](https://hq.mega.dev/challenges/who-said-what) |
-| S01E03 | [what it shows](challenges/S01E03_what-it-shows.md) | 28.10 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/what-it-shows) |
-| S01E04 | [before i looked](challenges/S01E04_before-i-looked.md) | 29.10 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/before-i-looked) |
-| S01E05 | [answer where i asked](challenges/S01E05_answer-where-i-asked.md) | 30.10 | rozwiązane / `true` | [link](https://hq.mega.dev/challenges/answer-where-i-asked) |
+| S01E01 | [somebody slow](challenges/S01E01_somebody-slow.md) | 26.10 | rozwiązane dwa razy (27.10 i 8.11.2026) / `true` | [link](https://hq.mega.dev/challenges/somebody-slow) |
+| S01E02 | [who said what](challenges/S01E02_who-said-what.md) | 27.10 | run 1 rozwiązany 27.10.2026, run 2 w toku / `false` (rozbieżność, otwarta) | [link](https://hq.mega.dev/challenges/who-said-what) |
+| S01E03 | [what it shows](challenges/S01E03_what-it-shows.md) | 28.10 | rozwiązane 8.11.2026 23:40Z / `true` | [link](https://hq.mega.dev/challenges/what-it-shows) |
+| S01E04 | [before i looked](challenges/S01E04_before-i-looked.md) | 29.10 | rozwiązane 10.11.2026 23:25Z / `true` | [link](https://hq.mega.dev/challenges/before-i-looked) |
+| S01E05 | [answer where i asked](challenges/S01E05_answer-where-i-asked.md) | 30.10 | rozwiązane 13.11.2026 22:07Z / `true` | [link](https://hq.mega.dev/challenges/answer-where-i-asked) |
 
 ## Week 2 — Agents
 
@@ -63,7 +63,7 @@ istnieją i są jeszcze nierozwiązane, a ich plików tu nie ma.
 | Kod | Tytuł | Data | Status HQ / MCP | Strona HQ |
 | --- | --- | --- | --- | --- |
 | S04E01 | [twenty payouts](challenges/S04E01_twenty-payouts.md) | nie znaleziono | rozwiązane 23.11.2026 23:23Z / `true` | [link](https://hq.mega.dev/challenges/twenty-payouts) |
-| S04E02 | [looks good to me](challenges/S04E02_looks-good-to-me.md) | nie znaleziono | rozwiązane 23.11.2026 23:34Z / flagi `solved` nie odczytano | [link](https://hq.mega.dev/challenges/looks-good-to-me) |
+| S04E02 | [looks good to me](challenges/S04E02_looks-good-to-me.md) | nie znaleziono | rozwiązane 23.11.2026 23:34Z / flagi `solved` z MCP nie odczytano (debrief HQ: solved) | [link](https://hq.mega.dev/challenges/looks-good-to-me) |
 
 ## Źródła
 
@@ -74,7 +74,13 @@ istnieją i są jeszcze nierozwiązane, a ich plików tu nie ma.
   `solved`.
 - Strony HQ (14.11.2026, zalogowana sesja, tylko odczyt): statusy State i wykazy
   załączników w plikach wyzwań.
+- S01E01–S01E05 (24.11.2026): debriefy HQ wklejone przez człowieka (`s01e01/hq-debrief.md` …
+  `s01e05/hq-debrief.md`; oryginały angielskie bez zmian, bez elementów strony). Z nich daty
+  rozwiązania, harness i model, liczby odrzuconych prób. S01E01: tylko run 1 i tabela porównawcza
+  obu runów. S01E02: run 1 rozwiązany, run 2 w toku; flaga `solved: false` z MCP (z 9 i 13.11.2026)
+  nie została sprawdzona ponownie, więc rozbieżność jest otwarta.
 - S04E01 (24.11.2026): opis, sposób startu i flaga `solved` z serwera MCP kursu
-  (`list-challenges`) oraz log `s04e01/log.md`. Strony HQ nie odczytano.
-- S04E02 (24.11.2026): status i przebieg z logu `s04e02/log.md` oraz z punktów debriefu kursu;
-  strony HQ i `list-challenges` nie odczytano.
+  (`list-challenges`) oraz log `s04e01/log.md`, a także dosłowny debrief HQ
+  (`s04e01/hq-debrief.md`, 24.11.2026). Reszty strony HQ nie odczytano.
+- S04E02 (24.11.2026): status i przebieg z logu `s04e02/log.md` oraz z dosłownego debriefu HQ
+  (`s04e02/hq-debrief.md`); reszty strony HQ i `list-challenges` nie odczytano.

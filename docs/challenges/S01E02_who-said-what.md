@@ -41,12 +41,17 @@ Kurs przyjmuje odpowiedzi dla obu nagrań, wysłane z nowej sesji.
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
 | Strona HQ (State) | 14.11.2026 | rozwiązane 27 paź (run 1); run 2 w toku |
+| Debrief HQ (`s01e02/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | 1 run rozwiązany, run 2 w toku. Run 1: 2026-10-27, harness Claude Code (mega-challenge), model nie podany („Not reported by your harness”), 1 odrzucona próba, 1 snag |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Strona wyzwania HQ (notatki z HQ) | 13.11.2026 | trwa druga próba |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `false` |
 
-Strona HQ z 14.11.2026 godzi wcześniejsze statusy: wyzwanie zaliczono w runie 1, a run 2
-jest otwarty. Flaga `solved: false` z MCP prawdopodobnie odnosi się do otwartego runu 2.
+Strona HQ z 14.11.2026 i debrief HQ z 24.11.2026 godzą statusy z listy HQ i ze strony wyzwania:
+wyzwanie zaliczono w runie 1 (27.10.2026), a run 2 jest w toku. **Rozbieżność z flagą `solved: false`
+z MCP jest otwarta.** Wcześniej zakładano, że flaga odnosi się do otwartego runu 2, ale to
+przypuszczenie: odczyty MCP (9.11 i 13.11.2026) przypadają po rozwiązaniu runu 1, a po 13.11 flagi
+nie odczytano ponownie. Do sprawdzenia nowym `list-challenges`. Nie znaleziono też, jak próby z
+logu repo (8–9 i 19.11.2026) odpowiadają dwóm runom z HQ.
 
 ## Materiały i załączniki
 
@@ -60,3 +65,6 @@ narzędzie `start-challenge`.
 - Wcześniej (13.11.2026) strony HQ nie odczytano, bo wymaga logowania. Datę, prowadzącego
   i status z HQ wzięto wtedy z notatek z HQ w poprzedniej wersji [indeksu](../challenges.md).
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (13.11.2026).
+- 24.11.2026: debrief HQ (`s01e02/hq-debrief.md`; wklejka bez nagłówka z kodem odcinka, więc
+  epizod rozpoznano po zadaniu). Pytanie w runie 1 dotyczyło godziny startu nocnego batcha, a w
+  próbach z logu repo brzmiało „How many invites moved?”. Powodu różnicy nie znaleziono.

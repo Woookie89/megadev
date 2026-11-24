@@ -24,9 +24,9 @@ zawartości, i tylko ono nie starzeje się razem ze źródłem. Zasada jest blis
 [P23](../05-agent-bez-czlowieka/p23-stan-poza-procesem.md) (źródło prawdy czytaj na żywo).
 Różnica: tu kopia leży w instrukcji roli, a nie w pamięci modelu ani w pobranym pliku.
 
-**Przypadek.** S04E02, druga rola Host Desk: recenzent zmiany współgospodarza. `ROLE.md` danego
-recenzenta miał na stałe „House settings”: wersja `2026-11-10.1`, prowizja 15 %. Żywe `GET /settings`
-mówiło wtedy: wersja `2026-11-17.548`, `commissionPct` 12. Łatka podnosiła prowizję w hunku `h-be5`
+**Przypadek.** S04E02, druga rola Host Desk: reviewer zmiany współgospodarza. `ROLE.md` danego
+reviewera miał na stałe „House settings”: wersja `2026-11-10.1`, prowizja 15 %. Żywe `GET /settings`
+mówiło wtedy: wersja `2026-11-17.548`, `commissionPct` 12. Patch podnosiła prowizję w hunku `h-be5`
 z 12 na 15. Model zaufał 15 % z `ROLE.md` i wystawił zły werdykt dla tego hunka, a kurs odrzucił przebieg:
 „hunk h-be5 has the wrong verdict; the other two are right.” Odmowa wskazała jeden hunk, a ślad
 prowadził do jednej skopiowanej liczby. Po odmowie model sam pobrał `/settings` i ułożył poprawną
@@ -34,16 +34,17 @@ tabelę, ale werdykt wysyła się raz na próbę, więc było za późno.
 
 Poprawka: `ROLE.md` nie ma ustawień. Skrypt `context.mjs` czyta żywe `/settings` przy każdym
 starcie i drukuje je pierwsze. Kurs podkreślał, że ustawienia domu zmieniają się z każdą próbą:
-w logu prowizja miała wartość 12 % (próba 1), 16 % (próba 2, druga łatka), 14 % (ćwiczenie
+w logu prowizja miała wartość 12 % (próba 1), 16 % (próba 2, drugi patch), 14 % (ćwiczenie
 wypłat) i 12 % (przebieg wypłat). Podobnie `batch.mjs` czyta prowizję na żywo. Kurs zapisał
-to jako regułę 4 w `factory/CHECKLIST.md`: „Have every role read its facts (settings, prices,
-limits) from their source at every start; never copy them into its files.” W toolboxie kursu: „Your roles read their facts at every start (context.mjs and live settings read)”.
+to jako regułę 4 w `factory/CHECKLIST.md`: każda rola czyta swoje fakty (ustawienia, ceny, limity)
+ze źródła przy każdym starcie i nigdy nie kopiuje ich do swoich plików. W zestawie narzędzi kursu:
+role czytają swoje fakty przy każdym starcie (`context.mjs` i odczyt żywych ustawień).
 
-Debrief HQ, dosłownie:
+Debrief HQ, w przekładzie:
 
-> Failed until you made your reviewer read `/settings` at every start.
+> Nie przechodziło, dopóki reviewer nie zaczął czytać `/settings` przy każdym starcie.
 
-> Why it matters: The settings pasted into the reviewer's file were a snapshot, and the house's settings changed with every attempt, so a role that trusted its own file judged against old numbers. A role reads its facts from their source at every start.
+> Dlaczego to ważne: Ustawienia wklejone do pliku reviewera były snapshotem, a ustawienia domu zmieniały się z każdą próbą, więc rola ufająca własnemu plikowi oceniała według starych liczb. Rola czyta swoje fakty ze źródła przy każdym starcie.
 
 **Stosuj.**
 

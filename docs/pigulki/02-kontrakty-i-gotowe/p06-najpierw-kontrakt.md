@@ -13,7 +13,9 @@ kontrakt: schemat, przykład odpowiedzi, opis pól. Zgadywanie kosztuje próby.
 **Przypadek.**
 
 - S01E01: `schema.json` był ukryty w źródle strony i podał pola `from`, `compactedMessage`
-  oraz limit 700 znaków.
+  oraz limit 700 znaków. W runie 1 harness dwa razy zgadł kształt żądania, a kurs odpowiedział:
+  „you guessed the shape. don't guess. line 06.” Kurs: kształt, który tylko wygląda dobrze, i tak
+  zawiedzie, bo serwis sprawdza format, który sam zadeklarował.
 - S01E04: kształt claimu `{repo, preview}` zapisany w KEEP, zanim powstał kod.
 - S01E03 (odwrotnie): README mówiło „your signature”. Harness podpisał stronę nazwą
   z GitHuba, a kurs przyjmował tylko `ticket` ze `start-challenge`. Jedna odmowa.

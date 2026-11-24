@@ -32,7 +32,9 @@ to uczy o pracy z AI i agentami ogólnie. Sam przebieg to za mało.
 - [ ] Log wyzwania: `sXXeYY/log.md` albo `sXXeYY/challenge-log.md`.
 - [ ] `KEEP.md`, `HANDOVER.md` / `HANDOFF.md`, jeśli są.
 - [ ] Debrief kursu ze strony HQ (`https://hq.mega.dev/challenges/<slug>#debrief`) albo z
-      narzędzia `debrief` serwera mega-challenge.
+      narzędzia `debrief` serwera mega-challenge. Oryginał angielski zapisz bez zmian
+      w `sXXeYY/hq-debrief.md` (bez elementów strony, jak przyciski i nawigacja). To źródło dla
+      wniosków kursu w debriefie po polsku.
 - [ ] Przeszłe sesje: skill rook-loop (recall), z cytatem `plik:linia`. Czego nie ma, to
       „nie znaleziono”, a nie domysł.
 - [ ] Notatki lekcji `docs/pl/sXXeYY-<temat>.md`, żeby powiązać wyzwanie z tematem. Gdy ich nie
@@ -47,8 +49,11 @@ Sekcje w tej kolejności (wzór: [s02e02-nobody-asked-debrief.md](pl/s02e02-nobo
 2. `## Temat lekcji`: o czym lekcja i co wyzwanie sprawdziło.
 3. `## Zadanie i wynik`: zadanie, data rozwiązania, liczba odmów, linki (repo, host).
 4. `## Jak działa …` (opcjonalnie): tabela rozwiązania, gdy powstał system lub agent.
-5. `## Przebieg`: numerowane kroki z odmowami kursu cytowanymi dosłownie.
-6. `## Wnioski`: co zadziałało i co nie, **w tym wyzwaniu**.
+5. `## Przebieg`: numerowane kroki z odmowami kursu cytowanymi dosłownie (w oryginale).
+6. `## Wnioski`: co zadziałało i co nie, **w tym wyzwaniu**. Wnioski kursu z debriefu HQ
+   („Why it matters”, „The course recorded”, „Next time”, reguły „for your factory”, linie zestawu
+   narzędzi z jednozdaniowymi lekcjami, kolumny tabeli „How the solve went”, werdykty) podaj
+   **po polsku, w przekładzie**. Oryginał angielski zostaje w `sXXeYY/hq-debrief.md`.
 7. `## Czego to uczy o pracy z AI i agentami`: **obowiązkowe**. 3–6 zasad przenośnych
    poza kurs. Każda ma:
    - nazwę zasady (pogrubioną),
@@ -149,7 +154,17 @@ Gdzie leżą notatki lekcji: polskie w `docs/pl/sXXeYY-<temat>.md`, angielskie w
 ## Zasady pisania (wszędzie w `docs/pl/`)
 
 - Po polsku, krótkie zdania, prosty język. Terminy techniczne zostają (`harness`, `worktree`).
-- Cytaty kursu (Rook, odmowy, debrief HQ) zostają w oryginale po angielsku.
+- Po angielsku, w cudzysłowie, zostają tylko krótkie cytaty kursu: linie Rooka i dosłowne odmowy.
+  Wnioski z debriefu HQ piszemy po polsku, w przekładzie. Oryginał jest w `sXXeYY/hq-debrief.md`
+  i w angielskich dokumentach (`docs/pills/`, `docs/sXXeYY-*.md`), których nie tłumaczymy.
+- Pisz tak, jak programista mówi do kolegów. Słowa, które nazywają rzeczy w pracy z oprogramowaniem
+  (to, co się wysyła, uruchamia, zapisuje, recenzuje, wdraża albo konfiguruje, i czasowniki wokół
+  nich), zostają po angielsku i lekko się odmieniają („request”, „w harnessie”, „zmergował”).
+  Tłumacz zwykłe słowa, których programiści używają też po polsku („zasada”, „przebieg”).
+  Test: czy kolega powiedziałby to słowo po angielsku? Gdy polska wersja brzmi jak kalka albo
+  podręcznik, albo masz wątpliwość, zostaw angielskie. Formy „polski termin (English)” używaj
+  tylko dla terminu, który wymaga jednorazowego wyjaśnienia po polsku
+  ([słowniczek](pigulki/slowniczek.md)). Nazwy plików, id i kod zostają bez zmian.
 - Liczby, daty i odmowy z logu, nie z pamięci. Daty z godziną podawaj w UTC (`Z`).
 - Żadnych kluczy, ticketów ani tokenów. Pełne dowody leżą w plikach ignorowanych przez git.
 - Linki do plików względne, a do pigułek z kotwicą (`#p07`).

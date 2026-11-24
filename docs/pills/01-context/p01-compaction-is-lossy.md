@@ -15,9 +15,12 @@ a subagent) throws content away. Before you cut, write down what must survive.
 looks like decoration, and decoration is sometimes the point. Rook, after accepting the
 shortened message: "you kept it. most don't. the rest you decided for me."
 
-**Case.** S01E01: the message had 1288 characters and the field allowed 700. The protected
-paragraph survived word for word (622 characters), but the course listed 10 lost
-fragments, among them "somebody slow" (the challenge title) and "ask me anything".
+**Case.** S01E01: the message had 1288 characters and the field allowed 700. In run 2 the protected
+paragraph survived word for word in a 622-character version, but the course listed 10 lost
+fragments, among them "somebody slow" (the challenge title) and "ask me anything". In run 1 the
+harness kept 687 of 700 characters, but only after five refusals. The course: "Compaction is
+compression: to fit a limit, text is cut, and what nobody named is lost. Your harness does the
+same to a long conversation (for example /compact) without showing you what went."
 
 **Apply.**
 

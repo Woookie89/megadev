@@ -16,9 +16,12 @@ ozdobnik, a ozdobnik bywa sednem. Rook (postać z fabuły kursu, zob.
 [słowniczek](../slowniczek.md)) po akceptacji skrótu: „you kept it. most don't. the
 rest you decided for me.”
 
-**Przypadek.** S01E01: wiadomość miała 1288 znaków, a limit pola 700. Chroniony akapit
-przetrwał dosłownie (622 znaki), ale kurs wskazał 10 utraconych fragmentów, m.in. „somebody
-slow” (tytuł wyzwania) i „ask me anything”.
+**Przypadek.** S01E01: wiadomość miała 1288 znaków, a limit pola 700. W runie 2 chroniony akapit
+przetrwał dosłownie w wersji 622-znakowej, ale kurs wskazał 10 utraconych fragmentów, m.in.
+„somebody slow” (tytuł wyzwania) i „ask me anything”. W runie 1 harness zostawił 687 z 700 znaków,
+ale dopiero po pięciu odmowach. Kurs: kompakcja to kompresja, więc żeby zmieścić się w limicie,
+tekst się tnie, a to, czego nikt nie wskazał, przepada. Twój harness robi to samo z długą rozmową
+(na przykład przez `/compact`), nie pokazując, co poszło.
 
 **Stosuj.**
 

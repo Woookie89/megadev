@@ -18,13 +18,13 @@ normalne zdarzenia, a nie wyjątki.
 - S04E01: ćwiczenie przez Pi dało 401 „API key expired”. Klucz OpenRouter skopiowany z `.env`
   wcześniejszego wyzwania wygasł, a błąd wyglądał jak awaria modelu. Przebieg ruszył po wpisaniu
   przez człowieka świeżego klucza. 401 to problem klucza, a nie modelu: zanim zmienisz model,
-  sprawdź uwierzytelnienie. HQ (snag 2): „The OpenRouter key copied from an older project had
-  expired, so the first model run failed with a 401.”
+  sprawdź uwierzytelnienie. HQ (snag 2): klucz OpenRouter skopiowany ze starszego projektu wygasł,
+  więc pierwszy przebieg modelu skończył się błędem 401.
 
 **Stosuj.**
 
-- Ponawianie przy 429 i 5xx.
-- Łańcuch modeli zapasowych.
+- Retry przy 429 i 5xx.
+- Łańcuch modeli fallback.
 - Walidacja odpowiedzi ([P11](../02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md)).
 - Własne narzędzia zamiast serwerowych tam, gdzie liczy się zasięg i log. Własne `fetch_url`
   działa u każdego dostawcy i zapisuje, co otwarto.

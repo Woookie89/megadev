@@ -19,6 +19,10 @@ what was settled, often walking down dead ends that were already ruled out.
 - S01E02, `HANDOFF.md`: a transcription process left running in the background, with how
   to tell whether it finished and what to do if not; the list of known Whisper errors; the
   expiry dates of the ticket and receipts.
+- S01E02, run 1 (per HQ): the record made for a word-for-word check held every word and no source
+  labels, so the new session guessed which recording was which and the course refused. The course:
+  "A record made for one job can lack what the next job needs." When one session hands a record to
+  another, write which part came from which source into the hand-off.
 - S01E04, `HANDOVER.md` + `KEEP.md`: the work was finished in a new session two days later.
 - MEGA Assessment (T12, T24): conclusions from long debugging stayed only in the chat, so
   the next attempt had to work everything out again.

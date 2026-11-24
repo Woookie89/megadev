@@ -1,4 +1,4 @@
-# P62 · Limit czasu liczy się w turach modelu: rutynową partię robi jeden skrypt, a model tylko go uruchamia
+# P62 · Limit czasu liczy się w turach modelu: rutynowy batch robi jeden skrypt, a model tylko go uruchamia
 
 > Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S04E01
 
@@ -10,8 +10,7 @@
 > Notatek lekcji S04 w repo jeszcze nie ma, więc wskazane lekcje są wcześniejsze: S01E05 wymienia szybkość i koszt jako słabości pracy wykonywanej tylko przez model i proponuje zapisany skrypt, a S01E04 mówi o ustawieniach modelu.
 
 **Zasada.** Gdy zadanie ma limit czasu, policz go w turach modelu. Jedna tura to sekundy, więc
-praca rutynowa (ta sama dla każdego elementu partii) idzie do jednego skryptu, który robi całą
-partię. Model uruchamia skrypt jednym wywołaniem narzędzia i decyduje tylko o tym, czego skrypt
+praca rutynowa (ta sama dla każdego elementu batcha) idzie do jednego skryptu, który robi cały batch. Model uruchamia skrypt jednym wywołaniem narzędzia i decyduje tylko o tym, czego skrypt
 nie rozstrzyga: dziwne przypadki oznacza, nie rozwiązuje. Operacji z pieniędzmi nie ponawiasz.
 
 **Dlaczego.** Model, który ma obsłużyć 20 zadań „po jednym”, potrzebuje co najmniej 20 tur:
@@ -20,9 +19,9 @@ Skrypt robi to samo za każdym razem i szybko. Lekcja S01E05 nazywa słabości m
 rutynę sam: niezawodność, koszt, szybkość i debugowanie, i wskazuje zapisany skrypt jako
 wyjście. Tu limit dodaje twardą granicę: nie „drożej”, tylko „nie zdążysz”.
 
-**Przypadek.** S04E01, partia wypłat dla pretend hosta. Kurs podał limit na starcie: 8000 ms
+**Przypadek.** S04E01, batch wypłat dla pretend hosta. Kurs podał limit na starcie: 8000 ms
 w ćwiczeniu (3 zadania) i 6000 ms w przebiegu właściwym (20 zadań). Harness uznał w dniu
-startu, że model nie przejdzie zadań po kolei, więc całą partię robi `scripts/batch.mjs`.
+startu, że model nie przejdzie zadań po kolei, więc cały batch robi `scripts/batch.mjs`.
 `ROLE.md` mapuje jednowyrazowe polecenia (`Practice.`, `Start.`, `Finish.`) na jedno wywołanie
 narzędzia `code`. Skrypt sam czyta API i podręcznik, a model nie woła API kursu przez `http`.
 
@@ -31,25 +30,25 @@ narzędzia `code`. Skrypt sam czyta API i podręcznik, a model nie woła API kur
   Kurs go odrzucił z innego powodu ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)).
 - Drugi przebieg: 20 zadań w 2171 ms przy limicie 6000 ms, jeden skrypt i jedno wywołanie
   modelu. 18 wypłacono, 2 zaparkowano.
-- Zasada kodu: żadnego ponawiania wypłaty, bo ponowienie mogłoby zapłacić dwa razy. Gdy
+- Zasada kodu: żadnego retry wypłaty, bo retry mógłby zapłacić dwa razy. Gdy
   skrypt wypisze `FAIL`, `ROLE.md` każe zacytować linię i się zatrzymać.
 
-Debrief HQ, dosłownie:
+Debrief HQ, w przekładzie:
 
-> Your harness read the limit (8000 ms in practice, 6000 ms in the run) and put the batch into one script, so the model made one call. The 20 tasks took 2171 ms; a model turn per task would have taken seconds each.
+> Twój harness odczytał limit (8000 ms w ćwiczeniu, 6000 ms w przebiegu) i włożył batch do jednego skryptu, więc model zrobił jedno wywołanie. 20 zadań zajęło 2171 ms; tura modelu na każde zadanie zajęłaby po kilka sekund.
 
-> The course recorded: no run ran out of time.
+> Kurs zapisał: żaden przebieg nie wyczerpał czasu.
 
-> Why it matters: Each model turn costs a second or more, and 20 chained tasks under a limit set from your network leave no room for that. So routine work runs as a script, and the model judges only what the script cannot decide.
+> Dlaczego to ważne: Każda tura modelu kosztuje sekundę lub więcej, a 20 zadań połączonych łańcuchem pod limitem ustawionym z twojej sieci nie zostawia na to miejsca. Dlatego rutynowa praca idzie skryptem, a model ocenia tylko to, czego skrypt nie potrafi rozstrzygnąć.
 
-> Rule 2 for your factory: Run routine work as a script; the model decides only what the script cannot.
+> Reguła 2 dla twojej fabryki: Rutynową pracę wykonuj skryptem; model decyduje tylko o tym, czego skrypt nie rozstrzygnie.
 
-W zestawie narzędzi kursu: „Routine work runs as a script, not model turns (batch.mjs)”.
+W zestawie narzędzi kursu: rutynowa praca idzie skryptem, a nie turami modelu (`batch.mjs`).
 
 **Stosuj.**
 
 - Zanim zaprojektujesz agenta, odczytaj limit i podziel go przez czas jednej tury modelu. Jeśli
-  wychodzi mniej niż liczba elementów, partię robi skrypt.
+  wychodzi mniej niż liczba elementów, batch robi skrypt.
 - Skrypt wypisuje to, co model ma zgłosić: ile zrobiono, co zaparkowano i dlaczego, ile
   trwało. Model nie musi niczego liczyć.
 - Przy operacjach, których nie wolno powtórzyć (wypłata, wysyłka), `FAIL` kończy przebieg, a

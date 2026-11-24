@@ -18,6 +18,10 @@ ustalono. Często też wchodzi w ślepe uliczki, które już wykluczono.
 - S01E02, `HANDOFF.md`: proces transkrypcji zostawiony w tle, z opisem, jak sprawdzić, czy
   skończył, i co zrobić, jeśli nie. Lista znanych błędów Whispera. Daty wygaśnięcia ticketu
   i receiptów.
+- S01E02, run 1 (według HQ): rekord zrobiony do sprawdzenia słowo w słowo miał wszystkie słowa i żadnych
+  etykiet źródła, więc nowa sesja zgadła, które nagranie jest które, i kurs odmówił. Kurs: rekord
+  zrobiony do jednego zadania może nie mieć tego, czego potrzebuje następne, więc w przekazaniu
+  zapisz, która część skąd pochodzi.
 - S01E04, `HANDOVER.md` + `KEEP.md`: praca dokończona w nowej sesji po dwóch dniach.
 - MEGA Assessment (T12, T24): wnioski z długiego debugowania zostawały tylko w czacie,
   więc kolejna próba ustalała wszystko od nowa.

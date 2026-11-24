@@ -6,14 +6,14 @@
 | okno kontekstu | Wszystko, co model widzi w jednym wywołaniu. Poza nim model nic nie wie. |
 | kompakcja | Skrócenie rozmowy, gdy kontekst się zapełnia. Stratna ([P01](01-kontekst/p01-kompakcja-jest-stratna.md)). |
 | pętla agenta | Model woła narzędzie, dostaje wynik, decyduje dalej, aż przestanie wołać narzędzia. |
-| podagent | Osobna instancja modelu z własnym kontekstem i briefem. Nie widzi rozmowy rodzica. |
+| subagent | Osobna instancja modelu z własnym kontekstem i briefem. Nie widzi rozmowy rodzica. |
 | worktree | Osobny checkout tego samego repo w innym folderze, dzięki któremu równoległe zapisy się nie mieszają. |
 | skill | Plik z instrukcją rutyny, którą harness ładuje, gdy zadanie jej dotyczy. |
 | hook | Skrypt, który harness uruchamia przy zdarzeniu (np. `Stop`) i który może zablokować akcję. |
 | MCP | Model Context Protocol: standard, którym serwer wystawia narzędzia dla dowolnego klienta AI. |
 | prompt injection | Tekst w danych udający polecenie dla modelu ([P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md)). |
 | najmniejsze uprawnienia | Agent ma tylko te prawa, których potrzebuje ([P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md)). |
-| idempotencja | Powtórzenie tego samego żądania nie zmienia wyniku (deduplikacja po id). |
+| idempotencja | Powtórzenie tego samego requestu nie zmienia wyniku (deduplikacja po id). |
 | ticket / receipt | Dowody kursu: ticket ze startu wyzwania, receipt za przyjęty krok. Mają terminy ważności. |
 | claim | Zgłoszenie rozwiązania do kursu. Przy odmowie kurs zwykle nie podaje powodu. |
 | debrief | Omówienie wyzwania po rozwiązaniu: przebieg, decyzje i wnioski. Kurs publikuje swój na stronie wyzwania, a repo ma własne w `docs/pl/*-debrief.md`. |
@@ -38,7 +38,7 @@
 | IP wyjściowe (egress IP) | Adres, z którego serwer łączy się z internetem. Darmowe hosty dzielą go z wieloma klientami, więc limit liczony per IP mogą wyczerpać inni ([P46](05-agent-bez-czlowieka/p46-testuj-droge-z-hosta-agenta.md)). |
 | rekord decyzji (decision record) | Krótki zapis jednej decyzji produktu w stałym formacie (jak ADR): prośba, opcje, rekomendacja, koszt pomyłki, próg ponownego otwarcia, decyzja. Ma status (`proposed`, `accepted`) i podpis właściciela. Wiąże dopiero przyjęty i podpisany ([P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md)). |
 | próg ponownego otwarcia (reopen threshold) | Pole rekordu decyzji: dowód, który pozwala wrócić do decyzji, np. zachowanie użytkowników albo pisemna potrzeba prawna. Bez niego agent nie otwiera decyzji na nowo ([P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md)). |
-| ship log / ship line | Dziennik wdrożeń w trackerze S03E03: jedna linia na issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` wolno wpisać dopiero po odczycie zmiany z adresu na żywo ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
+| ship log / ship line | Log wdrożeń w trackerze S03E03: jedna linia na issue, `#<issue> · <verb> · live: ✓\|✗ · open risks: …`. `live: ✓` wolno wpisać dopiero po odczycie zmiany z adresu na żywo ([P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md)). |
 | próba na makiecie (rehearsal, mock tracker) | Przebieg agenta na lokalnej atrapie trackera i feedu, z wdrożeniem na sucho, przed prawdziwą rundą. W S03E03 wykryła błąd hosta, ale nie błąd z rekordem, bo nie miała takiego issue ([P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md)). |
 | supervisor | Osobny proces, który pilnuje agenta w tle: uruchamia go ponownie po każdym wyjściu i kończy pracę, gdy zniknie plik-flaga ([P23](05-agent-bez-czlowieka/p23-stan-poza-procesem.md)). |
 | replay (sprawdzarka kursu) | Skrypt kursu, który używa wdrożonej strony jak człowiek (patrzy, celuje, klika po chwili) i drukuje wynik jako JSON. W S03E04 litery nonce wybierały sprawdzenia, a wynik szedł do claimu kroku 2 ([P58](02-kontrakty-i-gotowe/p58-sprawdzarka-to-specyfikacja.md)). |
@@ -49,10 +49,10 @@
 | bariera (guardrail) | Granica zapisana w rekordzie wydania, której metryka pomocnicza nie może przekroczyć (np. mediana TTR najwyżej +5%). Przekroczona bariera to błąd: zespół poprawia albo wycofuje, bez decyzji właściciela ([P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md)). |
 | werdykt (verb) | Jedna z sześciu decyzji S03E05 dla grupy sygnałów: `expand`, `revise`, `simplify`, `revert`, `investigate`, `stop`. Wpisana z id sygnałów i polem `who` (`agent` albo `owner`) ([P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md)). |
 | wyciek sekretu (secret egress) | Wysłanie sekretu (klucza, ticketu) do hosta, do którego nie miał trafić. W S04E01 pierwszy przebieg wysłał klucz ćwiczebny do `verify-s04.mega.dev`, hosta z podręcznika, i kurs odrzucił przebieg ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
-| dziennik sieci (wire log) | Plik, w którym skrypt zapisuje każde żądanie: host, nazwy nagłówków (nie wartości), status i host przekierowania. Pozwala powiedzieć, dokąd poszedł każdy sekret ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
+| wire log | Plik, w którym skrypt zapisuje każdy request: host, nazwy headerów (nie wartości), status i host przekierowania. Pozwala powiedzieć, dokąd poszedł każdy sekret ([P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). |
 | zaparkowane zadanie (parked, `needs-owner`) | Zadanie, którego agent nie rozstrzyga sam: dostaje flagę `needs-owner` z powodem i czeka na decyzję właściciela. W S04E01 właściciel wybiera na stronie wyzwania (`on-file`, `new`, `decline`), a agent kończy zadanie osobnym krokiem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
 | konto z akt (account on file) | Jedyne konto, na które wolno wypłacać według podręcznika S04E01. Różni się między próbami, więc skrypt czyta je z podręcznika za każdym razem ([P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)). |
-| hunk | Jeden spójny fragment zmiany (łatki) w pliku, z własnym id, np. `h-be5`. W S04E02 recenzent wystawia werdykt `flag` albo `pass` dla każdego hunka osobno ([P66](04-orkiestracja/p66-rola-ma-piec-czesci.md)). |
+| hunk | Jeden spójny fragment zmiany (patcha) w pliku, z własnym id, np. `h-be5`. W S04E02 reviewer wystawia werdykt `flag` albo `pass` dla każdego hunka osobno ([P66](04-orkiestracja/p66-rola-ma-piec-czesci.md)). |
 | pięć części roli (Purpose, Tools, Limits, Startup reads, Output) | Słownik sterowania z S04E02: co rola robi, jakich narzędzi używa, czego jej nie wolno, co czyta na starcie i jaki wynik oddaje ([P66](04-orkiestracja/p66-rola-ma-piec-czesci.md)). |
 | notatki `why/` (house notes) | Krótkie pliki obok kodu: decyzja, dlaczego, co z tego wynika. W S04E02 trzy: `nights.md`, `payout-date.md`, `payout-rounding.md` ([P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)). |
 | ustawienia domu (`/settings`) | Żywy odczyt wersji i prowizji w S04E02. Zmienia się z każdą próbą, więc rola czyta go na starcie, a nie kopiuje do `ROLE.md` ([P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md)). |

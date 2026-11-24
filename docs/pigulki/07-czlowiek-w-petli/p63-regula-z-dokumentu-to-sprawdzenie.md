@@ -24,7 +24,7 @@ trzy wyjścia: zrobić, oznaczyć dla właściciela albo odrzucić jako błąd. 
 [P51](p51-granice-autonomii-wyznacza-regula.md)). To samo działa, gdy reguły leżą w podręczniku
 od obcego.
 
-**Przypadek.** S04E01, partia wypłat. Podręcznik zawierał reguły: wypłata tylko na konto
+**Przypadek.** S04E01, batch wypłat. Podręcznik zawierał reguły: wypłata tylko na konto
 z akt (`account on file`), inne konto to decyzja właściciela, kwoty w pełnych euro, suma pobytu
 to noce razy stawka plus opłata za sprzątanie. Skrypt zamienił je na kod:
 
@@ -42,19 +42,19 @@ podjął ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). K
 wybrał dla #10 „on-file”, a dla #11 „nie płać”. Po `Finish.` zadanie 10 zostało wypłacone (1060
 EUR na konto z akt), a 11 odrzucone. Wypłata poszła dopiero po decyzji.
 
-Debrief HQ, dosłownie:
+Debrief HQ, w przekładzie:
 
-> The course recorded: the odd task was never paid without the owner.
+> Kurs zapisał: dziwnego zadania nigdy nie zapłacono bez właściciela.
 
-> Why it matters: The payout rule sat in the same manual that asked for the key, so ignoring the manual dropped a rule the run needed. Untrusted text still carries rules: read it as data, turn its rules into checks, and flag the owner's task instead of paying it.
+> Dlaczego to ważne: Reguła wypłat leżała w tym samym podręczniku, który prosił o klucz, więc zignorowanie podręcznika porzuciłoby regułę potrzebną w przebiegu. Niezaufany tekst nadal niesie reguły: czytaj go jako dane, zamieniaj jego reguły w sprawdzenia i oznacz zadanie właściciela zamiast je opłacać.
 
-> Rule 3 for your factory: Turn the rules in any document you read into checks, and park the owner's calls instead of making them.
+> Reguła 3 dla twojej fabryki: Zamieniaj reguły z każdego dokumentu, który czytasz, w sprawdzenia, a decyzje właściciela parkuj, zamiast podejmować je za niego.
 
-> Parked task: gained in this solve. run-state.secrets.local.json in scripts/ keeps each parked task; the Finish. step reads your decisions from the course and pays or declines each once.
+> Zaparkowane zadanie: zdobyte w tym rozwiązaniu. `run-state.secrets.local.json` w `scripts/` trzyma każde zaparkowane zadanie; krok `Finish.` czyta twoje decyzje z kursu i płaci albo odrzuca każde zadanie raz.
 >
-> A task that waits for the owner needs its data kept on your side, so the agent can finish it once after the answer.
+> Zadanie, które czeka na właściciela, potrzebuje swoich danych po twojej stronie, żeby agent mógł je dokończyć jednorazowo po odpowiedzi.
 
-W zestawie narzędzi kursu: „Rules from untrusted text become checks (judge() check in batch.mjs)”.
+W zestawie narzędzi kursu: reguły z niezaufanego tekstu stają się sprawdzeniami (sprawdzenie `judge()` w `batch.mjs`).
 
 **Stosuj.**
 

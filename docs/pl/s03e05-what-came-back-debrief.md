@@ -54,7 +54,7 @@ Rook (fabuła): „two releases came back with numbers. everyone's read them.”
 
 Sygnały zestawu pierwszego: `events.csv` (16 813 wierszy), lejek, błędy, przebiegi CI, maile
 supportu `m-01`…`m-05`, rozmowy `call-01`/`call-02`, nagrania ekranu `replay-01`…`replay-04`,
-migawka statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win, expand”).
+snapshot statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win, expand”).
 
 ## Przebieg
 
@@ -73,7 +73,7 @@ migawka statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win,
    akceptacji kolejka się opróżnia. W `events.csv` incydenty `inc-24201` i `inc-26406` mają
    akceptację i rozwiązanie, a nie mają zdarzenia restartu. Metryka liczy więc tylko restarty
    z tablicy, a w ramieniu z flagą restarty mogły przejść poza nią. Wygrana nie jest udowodniona.
-4. **Wydanie 0009 to błąd, nie decyzja.** Migawka `snap-01` ma pole `impact` przy wszystkich
+4. **Wydanie 0009 to błąd, nie decyzja.** Snapshot `snap-01` ma pole `impact` przy wszystkich
    5 incydentach, a strona v3 nie pokazuje żadnego (potwierdza to `m-02`). To łamie barierę
    „shows every field an incident carries”: zespół poprawia, więc `revise`. Kontakty 1,9%
    (`fn-036`, `fn-038`) spełniają metrykę. Przebieg CI `ci-1222` (brama wydania) miał „diff:
@@ -91,9 +91,9 @@ migawka statusu `snap-01` i `summary.md` (generowane podsumowanie: „clear win,
    Check this group against the signals and cite what you saw: the signal id, where in it, and
    what it shows. check-lane has a need for this: screen-reading.” (`65b3ae3c….jsonl:163`).
    Pozostałych grup odmowa nie nazwała, a ich treści pierwszego claimu nie zapisano w logu
-   (nie znaleziono). `check-lane` dla `screen-reading`: „Done = you can say what the screen
-   showed, word for word (ids and numbers as written), and where: the file, the second, the
-   region.” Harness wrócił do pełnych klatek i zapisał, co widać: `replay-02`, 00:22, tablica,
+   (nie znaleziono). `check-lane` dla `screen-reading` (w przekładzie): gotowe znaczy, że
+   potrafisz powiedzieć, co pokazywał ekran, słowo w słowo (id i liczby tak, jak napisano),
+   i gdzie: plik, sekunda, obszar. Harness wrócił do pełnych klatek i zapisał, co widać: `replay-02`, 00:22, tablica,
    `site-083`, `op-44`, `inc-24201` „Accepted”, głębokość kolejki 1 333, aktywność kończy się
    linią „23:38:28 queue retry started”. O 00:23 karta `sched-admin` 4.2, `booking-worker-2` ze
    stanem „stuck” i okno „restart booking-worker-2 now?”. O 00:40 incydent rozwiązany, a w
@@ -165,7 +165,7 @@ Co nie zadziałało albo kosztowało:
 1. **Odmowa 1: brak adresu dowodu.** Grupa miała werdykt, a nie miała „co widać i gdzie”.
    Kurs wymaga id sygnału, miejsca w nim i tego, co pokazuje.
 2. **Odmowa 2: kształt pola.** `signals` ma być listą samych id, a miejsca i wartości idą do
-   `note`. Ten wymóg wynikał z kształtu żądania, nie z treści analizy.
+   `note`. Ten wymóg wynikał z kształtu requestu, nie z treści analizy.
 3. **Miniatura a pełna klatka.** Id z arkusza kontaktowego (`tk-4e41b2`) różniło się od id
    z pełnej klatki (`tk-6e41b2`).
 4. **Kod właściciela.** Kod z 19.11 był na 23.11 nieaktualny, a człowiek musiał podać nowy.

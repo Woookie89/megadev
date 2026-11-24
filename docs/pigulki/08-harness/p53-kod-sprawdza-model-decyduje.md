@@ -31,19 +31,20 @@ testować kodem, a co oceniać, i błąd od razu wskazuje stronę.
 Pierwsza budowa (10:58:25 UTC) dała FAIL: sześć nowych zgłoszeń nie było w żadnym issue,
 a cztery briefy `agent-ready` (SCHED-4465, IN-4988, IN-7623, IN-2631) nie miały przypadku
 tego, czego nie wolno zrobić: `acceptance has no "not" case`. Briefy wyglądały na gotowe. Model
-dopisał brakujące przypadki, a druga budowa przeszła. Kurs zapisał ten podział w toolboxie
-jako T3: „Code fetches and files; the model decides. Keep each on its own side and you know
-what to test where.”
+dopisał brakujące przypadki, a druga budowa przeszła. Kurs zapisał ten podział w zestawie
+narzędzi jako T3: kod pobiera i składa pliki, a decyduje model. Trzymaj każde po swojej stronie,
+a będziesz wiedzieć, co testować gdzie.
 
-S04E01: ta sama granica przy partii wypłat z limitem 6000 ms. Kod robi całą partię (pobiera
+S04E01: ta sama granica przy batchu wypłat z limitem 6000 ms. Kod robi cały batch (pobiera
 zadania, liczy kwoty, sprawdza konto z akt, płaci), a model uruchamia skrypt jednym wywołaniem
 i relacjonuje wynik. Przypadki spoza reguł (inne konto, przekierowany adres) kod oznacza dla
-właściciela. W toolboxie kursu: „Routine work runs as a script, not model turns (batch.mjs)”
+właściciela. W zestawie narzędzi kursu: rutynowa praca idzie skryptem, a nie turami modelu (`batch.mjs`)
 ([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)).
 
-S04E02: ta sama granica w roli recenzenta. Skrypt `context.mjs` jednym wywołaniem pobiera żywe
-ustawienia domu, łatkę z plikami bazowymi i notatki `why/`, a model tylko waży werdykt dla każdego
-hunka i wysyła go raz. Pobranie nie zależy od tego, czy model „pamięta”, żeby zajrzeć do źródła. W toolboxie kursu: „Your roles read their facts at every start (context.mjs and live settings read)”
+S04E02: ta sama granica w roli reviewera. Skrypt `context.mjs` jednym wywołaniem pobiera żywe
+ustawienia domu, patch z plikami bazowymi i notatki `why/`, a model tylko waży werdykt dla każdego
+hunka i wysyła go raz. Pobranie nie zależy od tego, czy model „pamięta”, żeby zajrzeć do źródła. W zestawie narzędzi kursu: role czytają swoje fakty przy każdym starcie (`context.mjs` i odczyt
+żywych ustawień)
 ([P64](../01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md),
 [P66](../04-orkiestracja/p66-rola-ma-piec-czesci.md)).
 

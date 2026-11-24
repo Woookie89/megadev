@@ -13,7 +13,9 @@ the schema, an example response, the field descriptions. Guessing costs attempts
 **Case.**
 
 - S01E01: a `schema.json` hidden in the page source gave the fields `from` and
-  `compactedMessage` and the 700-character limit.
+  `compactedMessage` and the 700-character limit. In run 1 the harness guessed the request shape
+  twice, and the course answered: "you guessed the shape. don't guess. line 06." The course: "A
+  shape that only looks right still fails, because the service checks the format it declared."
 - S01E04: the claim shape `{repo, preview}` went into KEEP before any code was written.
 - S01E03 (the other way round): the README said "your signature". The harness signed the
   page with the GitHub name, but the course accepted only the `ticket` from

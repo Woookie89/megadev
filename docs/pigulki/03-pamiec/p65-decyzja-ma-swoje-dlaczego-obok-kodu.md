@@ -14,7 +14,7 @@ płatność dopiero po wyjeździe, dzień wyjazdu niezaliczany do nocy), ma kró
 **decyzja**, **dlaczego**, **co z tego wynika**. Każda rola, która ocenia albo zmienia kod, czyta
 te notatki na starcie, zanim cokolwiek rozstrzygnie, i cytuje je nazwą pliku w uzasadnieniu.
 
-**Dlaczego.** Kod mówi, co robi, ale nie mówi, że to było celowe. Recenzent albo agent poprawiający
+**Dlaczego.** Kod mówi, co robi, ale nie mówi, że to było celowe. Reviewer albo agent poprawiający
 kod nie odróżni błędu od decyzji i zrobi jedno z dwóch: „naprawi” celowe zachowanie albo przepuści
 zmianę, która je cofa. Lekcja S03E02 opisuje to wprost: bez zapisanych decyzji agenci często
 zmieniają albo usuwają funkcje wprowadzone z intencją, której nie da się wywnioskować z kodu.
@@ -34,30 +34,31 @@ datą i zakresem opisuje [P14](p14-jedna-decyzja-jeden-wiersz.md).
 - `payout-rounding.md`: wypłata zaokrągla się w dół (`Math.floor`). Powód: bank odrzuca wypłatę
   wyższą niż zarezerwowana, a zaokrąglenie do najbliższego euro w połowie przypadków idzie w górę.
 
-Dany recenzent (przebieg 1) nie czytał `why/`. W jego łatce hunk `h-e1d` zmieniał `payoutDate`
+Dany reviewer (przebieg 1) nie czytał `why/`. W jego łatce hunk `h-e1d` zmieniał `payoutDate`
 z `checkOut` na `checkIn`, a poprawny werdykt to `flag` z odwołaniem do `why/payout-date.md`.
 Pierwsze `POST` trafiło w ten hunk (kurs odrzucił tylko `h-be5`: „the other two are right”), więc
 rola nie miała reguły domu, na której mogłaby go oprzeć. Jak go uzasadniła, log nie zapisuje.
 Z logu nie wynika też, czy tak samo poradziłaby sobie z regułą o nocach. Przebieg 2: skrypt
-`context.mjs` drukuje notatki `why/` w tym samym wywołaniu co ustawienia i łatkę, a ulepszony
-recenzent przeczytał `why/nights.md` i oznaczył `+1` w liczbie nocy (hunk `h-25a`) jako błąd. Kurs:
-„Review accepted: every verdict is right.” To reguła 5 z `factory/CHECKLIST.md`: „Write down why
-each decision exists, next to the code, and have every role read those notes before it judges or
-changes anything.” W toolboxie kursu: „Your roles read the why behind the code (context.mjs prints the why notes)”.
+`context.mjs` drukuje notatki `why/` w tym samym wywołaniu co ustawienia i patch, a ulepszony
+reviewer przeczytał `why/nights.md` i oznaczył `+1` w liczbie nocy (hunk `h-25a`) jako błąd. Kurs:
+„Review accepted: every verdict is right.” To reguła 5 z `factory/CHECKLIST.md`: zapisuj,
+dlaczego istnieje każda decyzja, obok kodu, i niech każda rola czyta te notatki, zanim coś oceni albo
+zmieni. W zestawie narzędzi kursu: role czytają, dlaczego kod jest taki, jaki jest (`context.mjs`
+drukuje notatki `why/`).
 
-Debrief HQ, dosłownie:
+Debrief HQ, w przekładzie:
 
-> Passed because it read `why/nights.md` before judging the change.
+> Przeszło, bo przeczytał `why/nights.md`, zanim ocenił zmianę.
 
-> Why it matters: The diff alone cannot show that the old code was written that way on purpose, because the reason lives in a house note, not in the code. So a role that judges must read the why behind the code before it judges.
+> Dlaczego to ważne: Sam diff nie pokaże, że stary kod napisano tak celowo, bo powód leży w notatce domu, a nie w kodzie. Rola, która ocenia, musi więc przeczytać, dlaczego kod jest taki, jaki jest, zanim oceni.
 
-Werdykt recenzenta, który to pokazuje:
+Werdykt reviewera, który to pokazuje (w przekładzie):
 
-> Your reviewer on hunk h-25a (flag): Adds +1 to nights, so the check-out day is counted. why/nights.md says a stay's nights are check-out minus check-in in whole days, the check-out day is never counted, and 'Do not add one' — the reason given: the bank pays only what was booked, so the batch would be refused.
+> Twój reviewer dla hunka h-25a (flag): Dodaje +1 do nocy, więc dzień wyjazdu byłby liczony. `why/nights.md` mówi, że noce pobytu to wyjazd minus przyjazd w pełnych dniach, dzień wyjazdu nie jest nigdy liczony i „Do not add one”. Podany powód: bank płaci tylko za to, co zarezerwowano, więc batch zostałby odrzucony.
 
-O drugiej roli, która tego odczytu jeszcze nie ma:
+O drugiej roli, która tego odczytu jeszcze nie ma (HQ, w przekładzie):
 
-> The other role: partly. batch.mjs reads the commission live at every run. The why notes became code (round down, nights); payout-runner's ROLE.md does not read them.
+> Druga rola: częściowo. `batch.mjs` czyta prowizję na żywo przy każdym przebiegu. Notatki `why/` stały się kodem (zaokrąglenie w dół, noce), a `ROLE.md` roli payout-runner ich nie czyta.
 
 **Stosuj.**
 
@@ -69,7 +70,7 @@ O drugiej roli, która tego odczytu jeszcze nie ma:
 - W uzasadnieniu werdyktu cytuj plik notatki. Werdykt bez źródła nie da się sprawdzić.
 - Notatka mówi, co jest celowe. Nie rozstrzyga, czy decyzja jest nadal dobra: tę zmianę zgłoś
   właścicielowi ([P33](../07-czlowiek-w-petli/p33-prawa-decyzyjne.md)).
-- Opis commita traktuj jak twierdzenie, a nie fakt: oceniaj różnicę w kodzie.
+- Opis commita traktuj jak twierdzenie, a nie fakt: oceniaj diff.
 
 ---
 

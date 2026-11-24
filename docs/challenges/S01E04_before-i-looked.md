@@ -44,7 +44,8 @@ Kurs przyjmuje repozytorium z ukończonym planem.
 
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
-| Strona HQ (State) | 14.11.2026 | rozwiązane (Solved, śr 11 lis); 1 run, 1 debrief |
+| Strona HQ (State) | 14.11.2026 | rozwiązane (Solved, śr 11 lis, czas CET); 1 run, 1 debrief |
+| Debrief HQ (`s01e04/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-10 (log: 23:25:05Z); harness Claude Code (mega-challenge) (claude-code 2.1.322), model `claude-opus-5-5`; kurs odrzucił 1 próbę, zanim przyjął |
 | Lista wyzwań HQ (notatki z HQ) | 13.11.2026 | rozwiązane |
 | Serwer MCP kursu (`solved`) | 13.11.2026 | `true` |
 
@@ -61,3 +62,5 @@ i skill przekazuje narzędzie `start-challenge`.
   status z HQ i wymagania wzięto wtedy z notatek z HQ w poprzedniej wersji
   [indeksu](../challenges.md).
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (13.11.2026).
+- 24.11.2026: debrief HQ (`s01e04/hq-debrief.md`; wklejka bez nagłówka z kodem odcinka, więc
+  epizod rozpoznano po zadaniu).

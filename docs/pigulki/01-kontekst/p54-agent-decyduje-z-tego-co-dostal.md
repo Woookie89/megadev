@@ -34,27 +34,26 @@ Harness nie poprawił API sam. Zmienił agenta: każda tura dostaje pełną tre�
 rekordów i regułę „DECISION RECORDS BIND YOU”, a notatka `recheck` kazała sprawdzić #3 jeszcze
 raz. O 11:55:33 UTC, około półtorej minuty po wdrożeniu eksportu, agent wycofał zmianę (commit 365716f), sprawdził na żywo 404 i napisał:
 „The contract says what needs a record, but it doesn't say what the product decided.” Kurs:
-„An agent decides only from what it is given, so the records went into every turn instead of
-hoping it would look them up.” Rada kursu: „Give the agent every rule source, contract, records
-and research, from its first turn, and rehearse it on a mock tracker, because it decides only
-from what it is given.”
+agent decyduje tylko z tego, co dostał, więc rekordy poszły do każdej tury, zamiast liczyć na to,
+że sam je wyszuka. Rada kursu: daj agentowi każde źródło reguł (kontrakt, rekordy, research) od
+pierwszej tury i przećwicz go na makiecie trackera, bo decyduje tylko z tego, co dostał.
 
 W tym samym wyzwaniu adres feedu produkcji znał tylko harness. Trafił do
 `[env.production.vars]` w `wrangler.toml`, bo środowisko Cloudflare nie dziedziczy zmiennych
-z poziomu głównego. Kurs: „A value only your harness had reaches a lone agent only through the
-code, a variable or an issue.” Próba na makiecie trackera (trzy issue, 0,42 USD) wyłapała przed
+z poziomu głównego. Kurs: wartość, którą znał tylko twój harness, dociera do samotnego agenta tylko przez kod,
+zmienną albo issue. Próba na makiecie trackera (trzy issue, 0,42 USD) wyłapała przed
 rundą błąd hosta: `git commit` na Windowsie, ale nie miała issue sprzecznego z rekordem, więc
 błędu #3 nie pokazała.
 
-S04E02: to samo w roli recenzenta Host Desk. Dany recenzent nie czytał notatek `why/`
+S04E02: to samo w roli reviewera Host Desk. Dany reviewer nie czytał notatek `why/`
 (nights, payout-date, payout-rounding), więc jego werdykty nie miały jak oprzeć się na regułach
-domu. Ulepszony dostaje je w jednym wywołaniu `context.mjs` razem z żywymi ustawieniami i łatką,
+domu. Ulepszony dostaje je w jednym wywołaniu `context.mjs` razem z żywymi ustawieniami i patchem,
 od pierwszej tury, i oznaczył `+1` w liczbie nocy na podstawie `why/nights.md`. Kurs: „Review
 accepted: every verdict is right.” Reguła 5 z `factory/CHECKLIST.md`: każda rola czyta te notatki,
 zanim oceni lub zmieni cokolwiek ([P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)).
-Kurs: „The diff alone cannot show that the old code was written that way on purpose, because the
-reason lives in a house note, not in the code. So a role that judges must read the why behind the
-code before it judges.”
+Kurs: sam diff nie pokaże, że stary kod napisano tak celowo, bo powód leży w notatce domu,
+a nie w kodzie, więc rola, która ocenia, musi przeczytać, dlaczego kod jest taki, jaki jest,
+zanim oceni.
 
 **Stosuj.**
 

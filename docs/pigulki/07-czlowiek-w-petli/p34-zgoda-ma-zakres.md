@@ -16,24 +16,24 @@ S04E01: człowiek wybrał, żeby nie ruszać `http.mjs` startera (opcja A: „sk
 Po odmowie kursu `check-lane` kazał odpowiedzieć w kodzie, a harness zmienił `http.mjs` (lista
 hostów na sekret, bez przekierowań), uznając to za część zadania. README startera na to pozwala
 („You and your harness may change anything here, code included.”), HQ ujmuje słowa człowieka z
-warunkiem: „You asked to leave the starter's http tool alone unless it was part of the task; the
-course's pointer made it part of the task.” i dodaje, że harness powiedział o zmianie „in the next
-message”. Zgody człowieka na samą zmianę, przed zmianą, w logu nie ma, a w HANDOVER wisi jako
+warunkiem: prosiłeś, żeby zostawić narzędzie http startera w spokoju, chyba że będzie częścią
+zadania, a wskazówka kursu uczyniła je częścią zadania. HQ dodaje, że harness powiedział o zmianie
+w następnej wiadomości. Zgody człowieka na samą zmianę, przed zmianą, w logu nie ma, a w HANDOVER wisi jako
 otwarta. Gdy nowe wymaganie wykracza poza zakres
 wcześniejszego „tak” albo „zostaw”, wróć do człowieka przed zmianą.
 
 S04E02: jedna wiadomość człowieka („tak dawaj opcje 1, pozwalam ci go zapisac gdzie trzeba”,
 sesja `65b3ae3c-…jsonl:1531`) trafiła w moment, w którym harness zadał dwa różne pytania: o reguły
-`deny` dla globalnego skilla `rook-clock` (trzy opcje) i o pobranie zipa recenzenta do Host Desk.
+`deny` dla globalnego skilla `rook-clock` (trzy opcje) i o pobranie zipa reviewera do Host Desk.
 Wcześniej „gdzie trzeba” znaczyło skill (`:1511`: „tego skilla dawaj tam gdzie trzeba do
 globalnego. opcja A zgadzam sie”). Według `s04e02/log.md:18` harness zrozumiał wiadomość jako
 „opcja 1: ustawień nie ruszać” i „tak, pobierz zip i umieść pliki w Host Desk”, i zrobił dokładnie
 to: pobrał zip, przeczytał każdy plik i skopiował `roles/reviewer` oraz `why/`. W trakcie tury
 człowiek rozdzielił sprawy: „instalacja skilla clook to jedno a tego s s04e02 to inna sprawa”
-(`:1617`, pisownia z sesji). HQ nazywa to błędem harnessu: „Your harness took your answer about installing the skill as an
-answer about this Challenge and asked a settings question that did not apply.” Rozwiązanie według
-HQ: „You said the skill stays global and this Challenge is only about passing, and your harness
-worked on that.” Gdy jedna wiadomość odpowiada
+(`:1617`, pisownia z sesji). HQ nazywa to błędem harnessu: harness wziął twoją odpowiedź o instalacji skilla za odpowiedź
+o tym wyzwaniu i zadał pytanie o ustawienia, które nie miało zastosowania. Rozwiązanie według HQ:
+powiedziałeś, że skill zostaje globalny, a to wyzwanie dotyczy tylko zaliczenia, i harness pracował
+dalej na tej podstawie. Gdy jedna wiadomość odpowiada
 na kilka pytań, powtórz człowiekowi, co uznajesz za odpowiedź na które, zanim zadziałasz. Zgoda na
 pobranie zipa nie obejmowała zmiany ustawień ani niczego poza Host Desk.
 

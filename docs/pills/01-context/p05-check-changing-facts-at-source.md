@@ -10,8 +10,13 @@
 **Principle.** Model names, library versions, prices and specs change faster than training
 data. A model states them with the same confidence even when they are stale.
 
-**Case.** S01E01: the answer "GPT-6 Astra" was accepted, but it came from someone else's
-debrief, not from the vendor, so it is not an independent confirmation. S02E03: before
+**Case.** S01E01: in run 2 the answer "GPT-6 Astra" was accepted, but it came from someone else's
+debrief, not from the vendor, so it is not an independent confirmation. In run 1 the harness gave
+GPT-5.6 Sol at about 85% sure (from web searches limited to that model family) and the form refused
+it; "GPT-6 Astra" was accepted only after the human tried it. The course: "A model knows the world
+only up to its training date, and it still answers recent questions with confidence. So for
+anything that changes, such as models, versions and prices, an answer from memory can be out of
+date, and only a live source shows what is current." S02E03: before
 writing the MCP server, the harness fetched the current spec (revision 2026-07-28), because
 it differs from the previous one (no `initialize`, different headers).
 

@@ -23,8 +23,7 @@ S02E05: log statusów dla kursu powstał z linii JSON, które agent zapisywał p
 zdarzeniu (`received`, `notified`, `owner_answered`, `replied`), z czasem ISO
 i przesunięciem strefy. 12 linii zgodziło się z czasami kursu i kurs przyjął je za pierwszym
 razem. Te linie żyły jednak tylko w pamięci procesu i w logach Rendera, a nie w pliku. Kurs:
-„A log is believable only when it is written per event, with offsets, and agrees with times
-someone else kept.”
+log jest wiarygodny tylko wtedy, gdy powstaje osobno dla każdego zdarzenia, z offsetami strefy, i zgadza się z czasami, które zapisał ktoś inny.
 
 S03E03: harness śledził agenta, który sam dostarczał issues. Pierwszy monitor, `tail -F` na
 `run.log`, niczego nie pokazał, bo na Windowsie nie widział dopisków robionych przez inny
@@ -37,15 +36,14 @@ runda się skończyła ([P54](../01-kontekst/p54-agent-decyduje-z-tego-co-dostal
 S04E01: skrypt obciął końcową odpowiedź kursu do 400 znaków (`.slice(0,400)`), więc podpowiedź
 (`hint`) z odmowy przyszła ucięta: „What did your agent do alone in that run: ...”. Kierunek
 wskazał `pointer` na `check-lane`. Po poprawce pełna końcowa odpowiedź trafia do
-`run-final.secrets.local.json`, a dziennik sieci `wire.secrets.local.json` pokazuje każde żądanie
+`run-final.secrets.local.json`, a wire log `wire.secrets.local.json` pokazuje każdy request
 ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). Wniosek z HANDOVER: czytaj
-odmowę w całości. HQ w tabeli „How the solve went” (snag 3): „The refusal came with a hint that
-your harness cut off at 400 characters; the question Run log tells more.” Linia „Run log” z
-zestawu narzędzi kursu:
+odmowę w całości. HQ w tabeli „How the solve went” (snag 3): odmowa przyszła z podpowiedzią, którą harness uciął
+na 400 znakach; więcej mówi pytanie „Run log”. Linia „Run log” z zestawu narzędzi kursu, w przekładzie:
 
-> Run log: gained in this solve. Each run writes the full final reply and a wire log (host, header names, status) in scripts/; the next session reads them first when a run fails.
+> Log przebiegu (Run log): zdobyte w tym rozwiązaniu. Każdy przebieg zapisuje pełną końcową odpowiedź i wire log (host, nazwy headerów, status) w `scripts/`; następna sesja czyta je najpierw, gdy przebieg zawodzi.
 >
-> An agent that runs alone needs a log you can read after the run, because nobody watched it fail.
+> Agent, który działa sam, potrzebuje logu do przeczytania po przebiegu, bo nikt nie patrzył, jak zawodzi.
 
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.
 Monitor agenta w tle czyta źródło prawdy (tracker, API), a nie plik logu innego procesu.
