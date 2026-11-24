@@ -6,7 +6,7 @@
 >
 > - S02E01 · Prymitywy agentowe → rozdział „Pętla agenta” — [po polsku](../../pl/s02e01-agentic-primitives.md#pętla-agenta) · [oryginał EN: „Agentic Loop”](../../s02e01-agentic-primitives.md#agentic-loop)
 > - S02E02 · Budowanie agenta → rozdział „Przepływy pracy i zadania długookresowe” — [po polsku](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długookresowe) · [oryginał EN: „Workflows and long-horizon tasks”](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks)
-> - S04E01 · {{pl-s04e01-lesson}} → rozdział „{{pl-state-title}}” — [po polsku](../../pl/s04e01-mechanics-behind-autonomous-systems.md#{{pl-state-anchor}}) · [oryginał EN: „State”](../../s04e01-mechanics-behind-autonomous-systems.md#state)
+> - S04E01 · Mechanika systemów autonomicznych → rozdział „Stan” — [po polsku](../../pl/s04e01-mechanics-behind-autonomous-systems.md#stan) · [oryginał EN: „State”](../../s04e01-mechanics-behind-autonomous-systems.md#state)
 
 **Zasada.** Stan agenta ma żyć w systemie zewnętrznym, a nie w pamięci procesu. Stan
 projektu czytaj ze źródła prawdy, a nie z kopii w pliku.

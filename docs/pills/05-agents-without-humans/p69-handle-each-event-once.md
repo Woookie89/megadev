@@ -4,8 +4,8 @@
 
 > **Lessons:**
 >
-> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „{{pl-events-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}})
-> - S04E01 · Mechanics Behind Autonomous Systems → chapter "Runtime" — [original (EN)](../../s04e01-mechanics-behind-autonomous-systems.md#runtime) · [Polish: „{{pl-runtime-title}}”](../../pl/s04e01-mechanics-behind-autonomous-systems.md#{{pl-runtime-anchor}})
+> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „Eventy”](../../pl/s04e04-automating-work-beyond-code.md#eventy)
+> - S04E01 · Mechanics Behind Autonomous Systems → chapter "Runtime" — [original (EN)](../../s04e01-mechanics-behind-autonomous-systems.md#runtime) · [Polish: „Runtime”](../../pl/s04e01-mechanics-behind-autonomous-systems.md#runtime)
 > - S02E02 · Building an Agent → chapter "Workflows and long-horizon tasks" — [original (EN)](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks) · [Polish: „Przepływy pracy i zadania długookresowe”](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długookresowe)
 >
 > S04E04, in its "Identify" step, says the same event delivered twice must stay one piece of work, while the same event with different content is a change, not a retry. S04E01 describes an outbox that keeps one email per send key, so a crash never delivers the same email twice. S02E02 warns that parallel updates may even lose data, so we need queues or versioning.

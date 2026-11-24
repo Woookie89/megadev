@@ -4,7 +4,7 @@
 
 > **Lekcje:**
 >
-> - S04E04 · {{pl-s04e04-lesson}} → rozdział „{{pl-pipelines-title}}” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#{{pl-pipelines-anchor}}) · [oryginał EN: „Pipelines”](../../s04e04-automating-work-beyond-code.md#pipelines) (niejasny przypadek idzie do ręcznego przeglądu)
+> - S04E04 · Automatyzacja pracy poza kodem → rozdział „Pipeline'y” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#pipeliney) · [oryginał EN: „Pipelines”](../../s04e04-automating-work-beyond-code.md#pipelines) (niejasny przypadek idzie do ręcznego przeglądu)
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Bezpieczeństwo systemu” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) · [oryginał EN: „System security”](../../s01e05-building-workflows-not-tool-stacks.md#system-security)
 > - S03E02 · Przekładanie intencji na pracę agentów → rozdział „Kontekst produktu” — [po polsku](../../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) · [oryginał EN: „Product context”](../../s03e02-translating-intent-into-agent-work.md#product-context)
 >

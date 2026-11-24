@@ -57,6 +57,9 @@
 | board | The shared state of one attempt on the course's side in S04E03: the host's requests, the critic's questions, the plan, the claims and each job's result. Every role reads and writes the same board ([P67](04-orchestration/p67-a-team-shares-one-board.md)). |
 | attempt | One S04 challenge attempt, its id saved in `vars.json` as `ATTEMPT`. Fetching the manual creates a new attempt with an empty board, so a team does it once ([P67](04-orchestration/p67-a-team-shares-one-board.md)). |
 | planner, critic, worker, integrator | The roles of the S04E03 Host Desk team. The planner posts one plan of jobs with each job's files, the critic asks the owner about the gaps in a request, a worker does one job in its own worktree, and the integrator merges the changes and posts its result last ([P18](04-orchestration/p18-worktrees-and-hub-files.md), [P68](07-human-in-the-loop/p68-an-unclear-request-goes-to-a-critic-first.md)). |
+| role factory (`factory/make-a-role`) | The S04E05 part of the Host Desk that makes a new role from the owner's one line: it copies the template, works out from the API description where each secret may go, and ends with a fixed check. Fixes go into the factory, not into the made role ([P71](08-harness/p71-fix-the-factory-not-the-role.md)). |
+| fixed check, sealed cases | A check and a case set the candidate (a new version of a role, a prompt, an agent) cannot change. In S04E05: `check.mjs` and 15 cases in `cases.json`, run after every make ([P72](02-contracts-and-done/p72-only-a-trial-on-unseen-cases-proves-a-change.md)). |
+| practice, run | In S04, practice is an open task set, the same every time, and the course's run is a held-out set the role has not seen before. Only the run tells you a change works ([P72](02-contracts-and-done/p72-only-a-trial-on-unseen-cases-proves-a-change.md)). |
 
 ---
 

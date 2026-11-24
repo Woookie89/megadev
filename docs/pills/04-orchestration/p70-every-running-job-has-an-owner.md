@@ -4,7 +4,7 @@
 
 > **Lessons:**
 >
-> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „{{pl-events-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}})
+> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „Eventy”](../../pl/s04e04-automating-work-beyond-code.md#eventy)
 > - S02E04 · Multi-Agent Collaboration → chapter "Multi-agentic collaboration" — [original (EN)](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) · [Polish: „Współpraca wieloagentowa”](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa)
 >
 > S04E04 advises that every event arrives through one entry point and turns into one task with an owner, and that the system asks when the owner is unclear. S02E04 says that in a team of agents even the simplest activities easily overlap and conflict, and advises that agents go to the agent that manages a resource instead of reaching it directly.
@@ -69,4 +69,4 @@ another reader."
 
 ---
 
-← [P69](../05-agents-without-humans/p69-handle-each-event-once.md) · [chapter](README.md) · [all pills](../README.md)
+← [P69](../05-agents-without-humans/p69-handle-each-event-once.md) · [chapter](README.md) · [all pills](../README.md) · [P71](../08-harness/p71-fix-the-factory-not-the-role.md) →

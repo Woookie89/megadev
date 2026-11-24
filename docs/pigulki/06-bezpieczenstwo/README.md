@@ -11,7 +11,7 @@ granicę musi trzymać coś, czego nie da się przekonać.
 | [P30](p30-najmniejsze-uprawnienia.md) | Najmniejsze uprawnienia, zadeklarowane jawnie | S01E05, S02E04, S03E03 |
 | [P31](p31-uwierzytelnione-zadania.md) | Każde żądanie uwierzytelnione, każde wyjście ograniczone | S01E05 |
 | [P32](p32-sekrety-nie-przez-czat.md) | Sekrety nigdy przez czat | S02E02, S02E04, S04E01 |
-| [P61](p61-sekret-ma-liste-hostow-w-kodzie.md) | Sekret ma listę hostów w kodzie: sprawdzaj każdy przeskok, także przekierowania, a lista nie pochodzi z dokumentu | S04E01 |
+| [P61](p61-sekret-ma-liste-hostow-w-kodzie.md) | Sekret ma listę hostów w kodzie: sprawdzaj każdy przeskok, także przekierowania, a lista nie pochodzi z dokumentu | S04E01, S04E05 |
 
 ---
 

@@ -4,7 +4,7 @@
 
 > **Lekcje:**
 >
-> - S04E04 · {{pl-s04e04-lesson}} → rozdział „{{pl-events-title}}” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}}) · [oryginał EN: „Events”](../../s04e04-automating-work-beyond-code.md#events)
+> - S04E04 · Automatyzacja pracy poza kodem → rozdział „Eventy” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#eventy) · [oryginał EN: „Events”](../../s04e04-automating-work-beyond-code.md#events)
 > - S02E04 · Współpraca wielu agentów → rozdział „Współpraca wieloagentowa” — [po polsku](../../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) · [oryginał EN: „Multi-agentic collaboration”](../../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration)
 >
 > S04E04 radzi, żeby każde zdarzenie przychodziło jednym wejściem i stawało się jednym zadaniem z właścicielem, a gdy właściciel jest niejasny, żeby system pytał. S02E04 mówi, że w zespole agentów nawet najprostsze działania łatwo na siebie zachodzą i ze sobą kolidują, i radzi, żeby agenci zamiast sięgać do zasobów bezpośrednio szli do agenta, który nimi zarządza.
@@ -69,4 +69,4 @@ innego czytelnika.
 
 ---
 
-← [P69](../05-agent-bez-czlowieka/p69-kazde-zdarzenie-obsluz-raz.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P69](../05-agent-bez-czlowieka/p69-kazde-zdarzenie-obsluz-raz.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P71](../08-harness/p71-popraw-fabryke-nie-role.md) →

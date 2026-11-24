@@ -4,7 +4,7 @@
 
 > **Lessons:**
 >
-> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „{{pl-events-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}}) (the "Filter" step: simple rules first, a small model only where the rules fail)
+> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „Eventy”](../../pl/s04e04-automating-work-beyond-code.md#eventy) (the "Filter" step: simple rules first, a small model only where the rules fail)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Executable Markdown vs Code" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) · [Polish: „Wykonywalny Markdown a kod”](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod)
 > - S01E04 · Working with AI Harnesses → chapter "Settings" — [original (EN)](../../s01e04-working-with-ai-harnesses.md#settings) · [Polish: „Ustawienia”](../../pl/s01e04-working-with-ai-harnesses.md#ustawienia)
 >

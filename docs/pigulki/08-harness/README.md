@@ -12,6 +12,7 @@ i uprawnienia. Wynik zależy od zestawu tak samo jak od modelu.
 | [P41](p41-blad-mowi-co-poprawic.md) | Błąd narzędzia mówi modelowi, co poprawić | S02E03 |
 | [P42](p42-duze-bajty-obok-modelu.md) | Duże bajty idą obok modelu, nie przez niego | S02E03 |
 | [P53](p53-kod-sprawdza-model-decyduje.md) | Kod pobiera, składa i sprawdza, a model decyduje: trzymaj każde po swojej stronie | S03E02, S04E01, S04E02 |
+| [P71](p71-popraw-fabryke-nie-role.md) | Popraw fabrykę, nie rolę: poprawka, która wraca, staje się krokiem, który każda rola wykonuje | S04E05 |
 
 ---
 

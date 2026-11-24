@@ -1,6 +1,6 @@
 # P65 · Decyzja, która wygląda na błąd, ma obok kodu zapisane, dlaczego: rola czyta te notatki, zanim oceni lub zmieni
 
-> Rozdział [3. Pamięć poza czatem](README.md) · epizody: S04E02
+> Rozdział [3. Pamięć poza czatem](README.md) · epizody: S04E02, S04E05
 
 > **Lekcje:**
 >
@@ -60,6 +60,15 @@ O drugiej roli, która tego odczytu jeszcze nie ma (HQ, w przekładzie):
 
 > Druga rola: częściowo. `batch.mjs` czyta prowizję na żywo przy każdym przebiegu. Notatki `why/` stały się kodem (zaokrąglenie w dół, noce), a `ROLE.md` roli payout-runner ich nie czyta.
 
+S04E05: notatki, których rola nie mogła przeczytać. Fabryka ról Host Desk kopiowała notatki `why/` do
+każdej zrobionej roli, a `ROLE.md` kazał je czytać na starcie. Zrobiona rola refund-runner zgłosiła
+jednak, że jej narzędzia nie sięgają tych notatek: narzędzie `code` uruchamia tylko pliki z `scripts/`.
+Poprawka poszła do fabryki, a nie do roli ([P71](../08-harness/p71-popraw-fabryke-nie-role.md)):
+szablon dostał `scripts/why.mjs`, który drukuje notatki roli i domu, `ROLE.md` każe go uruchomić jako
+pierwszy odczyt startowy, a `check.mjs` sprawdza, że rola przeczyta notatki własnymi narzędziami. HQ,
+w przekładzie, uznał to za warte reguły: rola musi czytać swoje notatki why własnymi narzędziami, więc
+fabryka dodaje teraz `why.mjs`.
+
 **Stosuj.**
 
 - Przy każdej decyzji, którą ktoś mógłby „naprawić”, zapisz trzy linie obok kodu: decyzja,
@@ -67,6 +76,8 @@ O drugiej roli, która tego odczytu jeszcze nie ma (HQ, w przekładzie):
   [tabela decyzji](../szablony/tabela-decyzji.md).
 - Wpisz folder notatek do odczytów startowych każdej roli, która ocenia albo zmienia kod. Role bez
   tego odczytu nie spełniają reguły (w tym wyzwaniu `payout-runner` nadal go nie ma).
+- Sprawdź, że rola wykona ten odczyt swoimi narzędziami. Zdanie „przeczytaj `why/`” nic nie daje, gdy
+  narzędzia roli nie sięgają tego folderu: daj jej skrypt, który drukuje notatki, i punkt w sprawdzeniu.
 - W uzasadnieniu werdyktu cytuj plik notatki. Werdykt bez źródła nie da się sprawdzić.
 - Notatka mówi, co jest celowe. Nie rozstrzyga, czy decyzja jest nadal dobra: tę zmianę zgłoś
   właścicielowi ([P33](../07-czlowiek-w-petli/p33-prawa-decyzyjne.md)).

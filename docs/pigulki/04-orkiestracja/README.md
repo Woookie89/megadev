@@ -7,7 +7,7 @@ w tym, co dostają na wejściu.
 | Pigułka | Zasada | Epizody |
 | --- | --- | --- |
 | [P17](p17-kontrakt-przed-rownolegloscia.md) | Najpierw kontrakt po kolei, potem równoległość | S01E04 |
-| [P18](p18-worktree-i-pliki-wezly.md) | Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach | S01E04, S04E03 |
+| [P18](p18-worktree-i-pliki-wezly.md) | Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach | S01E04, S04E03, S04E05 |
 | [P19](p19-dobor-modelu-i-koszt.md) | Model dobieraj do zadania, a koszt traktuj jak wymaganie | S01E04, S01E05, S02E02, S04E01, S04E03 |
 | [P20](p20-brief-jak-issue.md) | Brief dla workera jest jak dobre issue | S01E04, S02E04, S03E02 |
 | [P21](p21-deleguj-research.md) | Deleguj research, nie tylko budowę | MEGA Assessment |
@@ -15,6 +15,7 @@ w tym, co dostają na wejściu.
 | [P44](p44-normalizuj-przed-zlaczeniem.md) | Normalizuj, zanim złączysz | S02E04 |
 | [P66](p66-rola-ma-piec-czesci.md) | Rolę opisuje pięć części: Purpose, Tools, Limits, Startup reads i Output, a błąd naprawiasz w tej części, której dotyczy | S04E02 |
 | [P67](p67-zespol-dzieli-jeden-board.md) | Zespół dzieli jeden board: wspólny stan zakłada się raz, a każda rola tylko go czyta | S04E03 |
+| [P70](p70-kazdy-job-ma-wlasciciela.md) | Każdy działający job ma właściciela wśród twoich ról: luka w numerach zdarzeń znaczy, że czyta ktoś jeszcze | S04E04 |
 
 ---
 

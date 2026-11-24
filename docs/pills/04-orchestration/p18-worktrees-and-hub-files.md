@@ -1,6 +1,6 @@
 # P18 · One worktree per worker; conflicts gather in hub files
 
-> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S04E03
+> Chapter [4. Orchestration: many agents, one result](README.md) · episodes: S01E04, S04E03, S04E05
 
 > **Lessons:**
 >
@@ -34,6 +34,17 @@ gave `roles/payout-runner/scripts/batch.mjs` to the integrator alone." Rule 6 fo
 "Plan by files before anyone works: one owner per file, and a file every change needs goes to one
 integrator."
 
+S04E05: two harnesses in one folder. While Claude Code rebuilt the role factory in
+`s04e05/host-desk`, Codex (the ChatGPT app) worked in the same folder. It moved the secrets to
+`vars.secrets.local.json`, added tests in `factory/make-a-role/test/` and changed the answer for a
+0 EUR refund to `{done:"declined"}`, a shape the API gives only to parked tasks. Neither saw the
+other's decisions, and Codex's test passed with its shape (the log). The human stopped Codex and
+allowed its edits to be overwritten ("nadpisz zmiany coddexa jak cos, smialo, ja go zastopowalem
+juz"), so the harness put back a plain 0 answer with no payout (commit `8ec055f`) and made the role
+again. The course's "How the solve went": "A Codex session edited the same factory at the same time
+and changed a 0 EUR refund to a decline, a shape the API gives only to parked tasks." (together)
+"Next time": "Keep one harness per folder, because two editors changed the same file."
+
 **Apply.**
 
 - Give hub files to one worker, or plan their merge.
@@ -41,6 +52,9 @@ integrator."
   to the integrator, and the workers write new files of their own that it wires in.
 - No file belongs to two jobs. The plan gives paths exactly as `git diff` prints them.
 - Run the tests after every merge.
+- One harness per folder. When a second agent (Codex, Cursor, another session) is to work in
+  parallel, give it its own worktree. If it already writes in your folder, stop it before you go on,
+  and settle whose edits stay.
 - Clean up worktrees when done (`git worktree remove`).
 
 ---

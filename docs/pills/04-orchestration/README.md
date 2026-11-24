@@ -7,7 +7,7 @@ in what they get as input.
 | Pill | Principle | Episodes |
 | --- | --- | --- |
 | [P17](p17-contract-before-parallelism.md) | Contract first, in sequence; then parallelism | S01E04 |
-| [P18](p18-worktrees-and-hub-files.md) | One worktree per worker; conflicts gather in hub files | S01E04, S04E03 |
+| [P18](p18-worktrees-and-hub-files.md) | One worktree per worker; conflicts gather in hub files | S01E04, S04E03, S04E05 |
 | [P19](p19-model-choice-and-cost.md) | Match the model to the task, and treat cost as a requirement | S01E04, S01E05, S02E02, S04E01, S04E03 |
 | [P20](p20-brief-like-an-issue.md) | A brief for a worker is like a good issue | S01E04, S02E04, S03E02 |
 | [P21](p21-delegate-research.md) | Delegate research, not just building | MEGA Assessment |
@@ -15,6 +15,7 @@ in what they get as input.
 | [P44](p44-normalize-before-joining.md) | Normalize before you join | S02E04 |
 | [P66](p66-a-role-has-five-parts.md) | A role has five parts: Purpose, Tools, Limits, Startup reads and Output, and you fix an error in the part it belongs to | S04E02 |
 | [P67](p67-a-team-shares-one-board.md) | A team shares one board: the shared state is created once, and every role only reads it | S04E03 |
+| [P70](p70-every-running-job-has-an-owner.md) | Every running job has an owner among your roles: a gap in the event numbers means someone else is reading | S04E04 |
 
 ---
 

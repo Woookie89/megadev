@@ -16,9 +16,10 @@ sprawdzić, że to dostała.
 | [P50](p50-wymaganie-ma-adres-i-test.md) | Wymaganie ma adres i test: cytuj miejsce w źródle, a każde przyjęte wymaganie sprawdź z zewnątrz | S03E01, S03E05 |
 | [P56](p56-gotowe-to-zaobserwowany-rezultat.md) | „Gotowe” to zaobserwowany rezultat: sprawdzaj produkt tak, jak używa go człowiek, w czasie i na nagraniu | S03E04 |
 | [P57](p57-dowod-nazywa-build-i-moment.md) | Dowód nazywa build i moment: co miało się stać, co się stało, na którym buildzie i w której sekundzie | S03E04 |
-| [P58](p58-sprawdzarka-to-specyfikacja.md) | Sprawdzarka odbiorcy to specyfikacja: przeczytaj ją przed pierwszym buildem | S03E04 |
+| [P58](p58-sprawdzarka-to-specyfikacja.md) | Sprawdzarka odbiorcy to specyfikacja: przeczytaj ją przed pierwszym buildem | S03E04, S04E04 |
 | [P59](p59-liczba-w-podsumowaniu-to-twierdzenie.md) | Liczba w podsumowaniu to twierdzenie: przelicz ją z surowych zdarzeń i sprawdź, czy akcja nie przeszła poza mierzoną ścieżkę | S03E05 |
 | [P60](p60-glosne-nie-znaczy-powszechne.md) | Głośne nie znaczy powszechne ani nowe: zanim przypiszesz sygnał do wydania, sprawdź zasięg, wiek i czego dotyczy | S03E05 |
+| [P72](p72-zmiane-dowodzi-proba-na-niewidzianych-przypadkach.md) | Zmianę dowodzi próba na przypadkach, których kandydat nie widział, a stałego sprawdzenia kandydat nie zmienia | S04E05 |
 
 ---
 

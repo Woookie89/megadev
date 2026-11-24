@@ -1,6 +1,6 @@
 # P65 · A decision that looks like a bug has its why written next to the code: a role reads those notes before it judges or changes anything
 
-> Chapter [3. Memory outside the chat](README.md) · episodes: S04E02
+> Chapter [3. Memory outside the chat](README.md) · episodes: S04E02, S04E05
 
 > **Lessons:**
 >
@@ -60,12 +60,22 @@ On the second role, which does not have this read yet:
 
 > The other role: partly. batch.mjs reads the commission live at every run. The why notes became code (round down, nights); payout-runner's ROLE.md does not read them.
 
+S04E05: notes the role could not read. The Host Desk role factory copied the `why/` notes into every
+role it made, and `ROLE.md` had the role read them at start. The made role refund-runner reported,
+though, that its tools could not reach those notes: the `code` tool runs only files in `scripts/`.
+The fix went into the factory, not the role ([P71](../08-harness/p71-fix-the-factory-not-the-role.md)):
+the template got `scripts/why.mjs`, which prints the role's and the house's notes, `ROLE.md` has it run
+as the first startup read, and `check.mjs` checks that the role can read the notes with its own tools.
+HQ: "Worth a rule: a role must read its why notes with its own tools, so the factory now adds why.mjs."
+
 **Apply.**
 
 - For every decision someone might "fix", write three lines next to the code: the decision, why,
   and so (and what not to change). A similar record: [the decision table](../templates/decision-table.md).
 - Put the notes folder into the startup reads of every role that judges or changes code. A role
   without that read does not meet the rule (in this challenge `payout-runner` still lacks it).
+- Check that the role can do that read with its own tools. "Read `why/`" does nothing when the role's
+  tools cannot reach that folder: give it a script that prints the notes, and an item in the check.
 - Cite the note's file in the reasoning for a verdict. A verdict without a source cannot be checked.
 - A note says what is deliberate. It does not settle whether the decision is still right: send that
   change to the owner ([P33](../07-human-in-the-loop/p33-decision-rights.md)).

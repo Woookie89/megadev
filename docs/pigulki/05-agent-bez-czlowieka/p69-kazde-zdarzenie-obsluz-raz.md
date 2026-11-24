@@ -4,8 +4,8 @@
 
 > **Lekcje:**
 >
-> - S04E04 · {{pl-s04e04-lesson}} → rozdział „{{pl-events-title}}” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}}) · [oryginał EN: „Events”](../../s04e04-automating-work-beyond-code.md#events)
-> - S04E01 · {{pl-s04e01-lesson}} → rozdział „{{pl-runtime-title}}” — [po polsku](../../pl/s04e01-mechanics-behind-autonomous-systems.md#{{pl-runtime-anchor}}) · [oryginał EN: „Runtime”](../../s04e01-mechanics-behind-autonomous-systems.md#runtime)
+> - S04E04 · Automatyzacja pracy poza kodem → rozdział „Eventy” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#eventy) · [oryginał EN: „Events”](../../s04e04-automating-work-beyond-code.md#events)
+> - S04E01 · Mechanika systemów autonomicznych → rozdział „Runtime” — [po polsku](../../pl/s04e01-mechanics-behind-autonomous-systems.md#runtime) · [oryginał EN: „Runtime”](../../s04e01-mechanics-behind-autonomous-systems.md#runtime)
 > - S02E02 · Budowanie agenta → rozdział „Przepływy pracy i zadania długookresowe” — [po polsku](../../pl/s02e02-building-an-agent.md#przepływy-pracy-i-zadania-długookresowe) · [oryginał EN: „Workflows and long-horizon tasks”](../../s02e02-building-an-agent.md#workflows-and-long-horizon-tasks)
 >
 > S04E04 w kroku „Identify” mówi, że to samo zdarzenie dostarczone dwa razy ma zostać jedną pracą, a to samo zdarzenie z inną treścią to zmiana, nie retry. S04E01 opisuje outbox, który trzyma jeden mail na klucz wysyłki, więc awaria nigdy nie dostarczy tego samego maila dwa razy. S02E02 ostrzega, że równoległe aktualizacje mogą nawet zgubić dane, więc potrzebne są kolejki albo wersjonowanie.

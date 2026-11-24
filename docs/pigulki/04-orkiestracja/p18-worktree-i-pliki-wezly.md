@@ -1,6 +1,6 @@
 # P18 · Każdy worker w swoim worktree, a konflikty zbiegają się w plikach-węzłach
 
-> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S04E03
+> Rozdział [4. Orkiestracja: wielu agentów, jeden wynik](README.md) · epizody: S01E04, S04E03, S04E05
 
 > **Lekcje:**
 >
@@ -35,6 +35,17 @@ Trzy merge'e przeszły bez konfliktu. Kurs, w przekładzie: przeszło, bo planne
 integratorowi. Reguła 6 dla twojej fabryki: zaplanuj po plikach, zanim ktokolwiek zacznie pracę,
 z jednym właścicielem na plik, a plik, którego potrzebuje każda zmiana, oddaj jednemu integratorowi.
 
+S04E05: dwa harnessy w jednym folderze. Gdy Claude Code przebudowywał fabrykę ról w
+`s04e05/host-desk`, w tym samym folderze pracował Codex (aplikacja ChatGPT). Przeniósł sekrety do
+`vars.secrets.local.json`, dodał testy w `factory/make-a-role/test/` i zmienił odpowiedź na zwrot
+0 EUR na `{done:"declined"}`, czyli kształt, który API daje tylko zaparkowanym zadaniom. Żaden nie
+widział decyzji drugiego, a test Codexa przechodził z jego kształtem (log). Użytkownik zatrzymał Codexa
+i pozwolił nadpisać jego zmiany („nadpisz zmiany coddexa jak cos, smialo, ja go zastopowalem juz”),
+więc harness przywrócił zwykłą odpowiedź 0 bez wypłaty (commit `8ec055f`) i zrobił rolę od nowa. Kurs,
+w przekładzie, w tabeli przebiegu: sesja Codexa w tym samym czasie edytowała tę samą fabrykę i zmieniła
+zwrot 0 EUR na odmowę, kształt, który API daje tylko zaparkowanym zadaniom (rozwiązane razem). Rada
+„Next time”: trzymaj jeden harness na folder, bo dwóch edytujących zmieniało ten sam plik.
+
 **Stosuj.**
 
 - Pliki-węzły przypisz jednemu workerowi albo zaplanuj ich scalenie.
@@ -42,6 +53,9 @@ z jednym właścicielem na plik, a plik, którego potrzebuje każda zmiana, odda
   zadaniu dostaje integrator, a workery piszą nowe, własne pliki, które on wpina.
 - Żaden plik nie należy do dwóch jobów. Plan podaje ścieżki tak, jak drukuje je `git diff`.
 - Po każdym merge'u uruchom testy.
+- Jeden harness na folder. Gdy drugi agent (Codex, Cursor, druga sesja) ma pracować równolegle, daj mu
+  osobny worktree. Jeśli już pisze w twoim folderze, zatrzymaj go, zanim ruszysz dalej, i ustal, czyje
+  zmiany zostają.
 - Po zakończeniu sprzątnij worktrees (`git worktree remove`).
 
 ---

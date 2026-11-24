@@ -4,7 +4,7 @@
 
 > **Lessons:**
 >
-> - S04E04 · Automating Work Beyond Code → chapter "Pipelines" — [original (EN)](../../s04e04-automating-work-beyond-code.md#pipelines) · [Polish: „{{pl-pipelines-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-pipelines-anchor}}) (an unclear case goes to manual review)
+> - S04E04 · Automating Work Beyond Code → chapter "Pipelines" — [original (EN)](../../s04e04-automating-work-beyond-code.md#pipelines) · [Polish: „Pipeline'y”](../../pl/s04e04-automating-work-beyond-code.md#pipeliney) (an unclear case goes to manual review)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "System security" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#system-security) · [Polish: „Bezpieczeństwo systemu”](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu)
 > - S03E02 · Translating Intent into Agent Work → chapter "Product context" — [original (EN)](../../s03e02-translating-intent-into-agent-work.md#product-context) · [Polish: „Kontekst produktu”](../../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu)
 >
