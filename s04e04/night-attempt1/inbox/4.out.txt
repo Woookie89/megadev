@@ -1,0 +1,3 @@
+(node:9212) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+parked — the guest asks for a change to the stay (one more night on BK-93013), which is the owner's call, not the desk's.

@@ -1,0 +1,28 @@
+2026-11-24T21:58:04.408Z · legacy/export · none · stopped · a running job no role of ours owns could take events from our outbox
+2026-11-24T21:58:04.781Z · rook/lint · rook · stopped · a running job no role of ours owns could take events from our outbox
+2026-11-24T21:58:06.032Z · 2026-11-24T21:59:00.000Z -> 2026-11-24T22:09:00.000Z · night-desk/1
+2026-11-24T21:59:23.265Z · 1 · evt_d68fe6bacf28 · 1 · booking.changed · 1795557560000 · {"booking":"BK-51136","change":{"nights":1}} · applied · 1 night(s) added to BK-51136
+2026-11-24T21:59:23.681Z · 1 · evt_d68fe6bacf28 · 1 · booking.changed · applied · 200 · applied
+2026-11-24T22:00:04.195Z · 2 · evt_d5f8dfba6e57 · 1 · booking.cancelled · 1795557600000 · {"booking":"BK-40752","refund":170} · applied · BK-40752 cancelled, refund 170 EUR
+2026-11-24T22:00:04.651Z · 2 · evt_d5f8dfba6e57 · 1 · booking.cancelled · applied · 200 · applied
+2026-11-24T22:00:28.168Z · 3 · evt_d68fe6bacf28 · 2 · booking.changed · 1795557625000 · {"booking":"BK-51136","change":{"nights":1}} · applied · a retry of an event already handled (same id, same data): acked, no second result, no new change
+2026-11-24T22:00:41.850Z · 4 · evt_394c3f046689 · 1 · guest.message · 1795557640000 · {"booking":"BK-53453","text":"Please add one night to my stay."} · model · a guest message: the night-desk model reads it
+2026-11-24T22:00:46.147Z · 4 · evt_394c3f046689 · parked · model · 
+2026-11-24T22:00:46.638Z · 4 · evt_394c3f046689 · 1 · guest.message · parked · 200 · parked
+2026-11-24T22:01:02.211Z · 5 · evt_96a48d459229 · 1 · booking.changed · 1795557660000 · {"booking":"BK-10747","change":{"nights":1}} · applied · 1 night(s) added to BK-10747
+2026-11-24T22:01:02.625Z · 5 · evt_96a48d459229 · 1 · booking.changed · applied · 200 · applied
+2026-11-24T22:05:42.527Z · 6 · evt_6cda56016dbb · 1 · booking.changed · 1795557940000 · {"booking":"BK-91479","change":{"nights":2}} · applied · 2 night(s) added to BK-91479
+2026-11-24T22:05:43.061Z · 6 · evt_6cda56016dbb · 1 · booking.changed · applied · 200 · applied
+2026-11-24T22:06:13.311Z · 7 · evt_d5f8dfba6e57 · 2 · booking.cancelled · 1795557970000 · {"booking":"BK-40752","refund":170} · applied · a retry of an event already handled (same id, same data): acked, no second result, no new change
+2026-11-24T22:06:43.651Z · 8 · evt_3981551c625c · 1 · guest.message · 1795558000000 · {"booking":"BK-38928","text":"Please add one night to my stay."} · model · a guest message: the night-desk model reads it
+2026-11-24T22:06:48.077Z · 8 · evt_3981551c625c · parked · model · 
+2026-11-24T22:06:48.510Z · 8 · evt_3981551c625c · 1 · guest.message · parked · 200 · parked
+2026-11-24T22:07:13.937Z · 9 · evt_6cda56016dbb · 2 · booking.changed · 1795558030000 · {"booking":"BK-91479","change":{"nights":3}} · conflict · same id evt_6cda56016dbb with new data (first {"booking":"BK-91479","change":{"nights":2}}, now {"booking":"BK-91479","change":{"nights":3}}): not a retry; nothing changed, the owner decides
+2026-11-24T22:07:14.371Z · 9 · evt_6cda56016dbb · 2 · booking.changed · conflict · 200 · conflict
+2026-11-24T22:07:44.899Z · 10 · evt_dd5ecb8d3af6 · 1 · booking.cancelled · 1795558060000 · {"booking":"BK-49077","refund":70} · applied · BK-49077 cancelled, refund 70 EUR
+2026-11-24T22:07:45.383Z · 10 · evt_dd5ecb8d3af6 · 1 · booking.cancelled · applied · 200 · applied
+2026-11-24T22:08:09.032Z · 11 · evt_7d46f5c15515 · 1 · guest.message · 1795558085000 · {"text":"Please add one more night to my stay."} · parked · no plain booking id in the event
+2026-11-24T22:08:09.486Z · 11 · evt_7d46f5c15515 · 1 · guest.message · parked · 200 · parked
+2026-11-24T22:08:23.169Z · 12 · evt_a459295cf31b · 1 · booking.cancelled · 1795558100000 · {"booking":"BK-13406","refund":210} · applied · BK-13406 cancelled, refund 210 EUR
+2026-11-24T22:08:23.579Z · 12 · evt_a459295cf31b · 1 · booking.cancelled · applied · 200 · applied
+2026-11-24T22:13:54.883Z · the poller stops · 6 · 4

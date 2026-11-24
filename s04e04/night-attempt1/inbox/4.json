@@ -1,0 +1,11 @@
+{
+  "id": "evt_81cd32c5265d",
+  "seq": 4,
+  "type": "guest.message",
+  "at": 1795555330000,
+  "delivery": 1,
+  "data": {
+    "booking": "BK-93013",
+    "text": "Please add one night to my stay."
+  }
+}

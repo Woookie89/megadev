@@ -1,0 +1,20 @@
+[
+  {
+    "booking": "BK-93013",
+    "event": "evt_81cd32c5265d",
+    "kind": "guest.message",
+    "text": "Please add one night to my stay."
+  },
+  {
+    "booking": "BK-67970",
+    "event": "evt_aeec6e156c95",
+    "kind": "guest.message",
+    "text": "Please add one night to my stay."
+  },
+  {
+    "booking": null,
+    "event": "evt_db8c9aeae1ac",
+    "kind": "guest.message",
+    "text": "no plain booking id in the event"
+  }
+]

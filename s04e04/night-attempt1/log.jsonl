@@ -1,0 +1,28 @@
+{"t":"2026-11-24T21:19:43.129Z","night":"2026-11-24T21:20:30.000Z -> 2026-11-24T21:30:30.000Z","job":"night-desk/1"}
+{"t":"2026-11-24T21:20:53.856Z","seq":1,"id":"evt_3012cab7a50b","delivery":1,"type":"booking.changed","at":1795555250000,"data":"{\"booking\":\"BK-25271\",\"change\":{\"nights\":1}}","decision":"applied","why":"1 night(s) added to BK-25271"}
+{"t":"2026-11-24T21:20:54.336Z","seq":1,"id":"evt_3012cab7a50b","delivery":1,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:21:34.712Z","seq":2,"id":"evt_87fe3cdc5d97","delivery":1,"type":"booking.cancelled","at":1795555290000,"data":"{\"booking\":\"BK-79604\",\"refund\":232}","decision":"applied","why":"BK-79604 cancelled, refund 232 EUR"}
+{"t":"2026-11-24T21:21:35.150Z","seq":2,"id":"evt_87fe3cdc5d97","delivery":1,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:21:58.943Z","seq":3,"id":"evt_3012cab7a50b","delivery":2,"type":"booking.changed","at":1795555315000,"data":"{\"booking\":\"BK-25271\",\"change\":{\"nights\":1}}","decision":"applied","why":"a repeated delivery of an event already handled: same result, no new change"}
+{"t":"2026-11-24T21:21:59.450Z","seq":3,"id":"evt_3012cab7a50b","delivery":2,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:22:13.207Z","seq":4,"id":"evt_81cd32c5265d","delivery":1,"type":"guest.message","at":1795555330000,"data":"{\"booking\":\"BK-93013\",\"text\":\"Please add one night to my stay.\"}","decision":"model","why":"a guest message: the night-desk model reads it"}
+{"t":"2026-11-24T21:22:15.942Z","seq":4,"id":"evt_81cd32c5265d","model":"parked","by":"model","why":""}
+{"t":"2026-11-24T21:22:16.432Z","seq":4,"id":"evt_81cd32c5265d","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:27:13.678Z","seq":6,"id":"evt_cdb77737eb5b","delivery":1,"type":"booking.changed","at":1795555630000,"data":"{\"booking\":\"BK-74595\",\"change\":{\"nights\":2}}","decision":"applied","why":"2 night(s) added to BK-74595"}
+{"t":"2026-11-24T21:27:14.106Z","seq":6,"id":"evt_cdb77737eb5b","delivery":1,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:27:50.464Z","night":"2026-11-24T21:20:30.000Z -> 2026-11-24T21:30:30.000Z","job":"night-desk/1"}
+{"t":"2026-11-24T21:27:51.068Z","seq":7,"id":"evt_87fe3cdc5d97","delivery":2,"type":"booking.cancelled","at":1795555660000,"data":"{\"booking\":\"BK-79604\",\"refund\":232}","decision":"applied","why":"a repeated delivery of an event already handled: same result, no new change"}
+{"t":"2026-11-24T21:27:51.464Z","seq":7,"id":"evt_87fe3cdc5d97","delivery":2,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:28:11.906Z","seq":8,"id":"evt_aeec6e156c95","delivery":1,"type":"guest.message","at":1795555690000,"data":"{\"booking\":\"BK-67970\",\"text\":\"Please add one night to my stay.\"}","decision":"model","why":"a guest message: the night-desk model reads it"}
+{"t":"2026-11-24T21:28:14.975Z","seq":8,"id":"evt_aeec6e156c95","model":"parked","by":"model","why":""}
+{"t":"2026-11-24T21:28:15.443Z","seq":8,"id":"evt_aeec6e156c95","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:28:42.202Z","seq":9,"id":"evt_cdb77737eb5b","delivery":2,"type":"booking.changed","at":1795555720000,"data":"{\"booking\":\"BK-74595\",\"change\":{\"nights\":3}}","decision":"applied","why":"a repeated delivery of an event already handled: same result, no new change"}
+{"t":"2026-11-24T21:28:42.601Z","seq":9,"id":"evt_cdb77737eb5b","delivery":2,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:29:12.978Z","seq":10,"id":"evt_ac96b605d8df","delivery":1,"type":"booking.cancelled","at":1795555750000,"data":"{\"booking\":\"BK-77953\",\"refund\":240}","decision":"applied","why":"BK-77953 cancelled, refund 240 EUR"}
+{"t":"2026-11-24T21:29:13.436Z","seq":10,"id":"evt_ac96b605d8df","delivery":1,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:29:37.286Z","seq":11,"id":"evt_db8c9aeae1ac","delivery":1,"type":"guest.message","at":1795555775000,"data":"{\"text\":\"Please add one more night to my stay.\"}","decision":"parked","why":"no plain booking id in the event"}
+{"t":"2026-11-24T21:29:37.780Z","seq":11,"id":"evt_db8c9aeae1ac","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:41:41.497Z","seq":13,"id":"evt_59eacae30100","delivery":2,"type":"booking.changed","at":1795556497449,"data":"{\"booking\":\"BK-45688\",\"change\":{\"nights\":1}}","decision":"applied","why":"1 night(s) added to BK-45688"}
+{"t":"2026-11-24T21:41:41.935Z","seq":13,"id":"evt_59eacae30100","delivery":2,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:44:05.155Z","seq":14,"id":"evt_dec2502bb398","delivery":2,"type":"booking.cancelled","at":1795556641790,"data":"{\"booking\":\"BK-24642\",\"refund\":90}","decision":"applied","why":"BK-24642 cancelled, refund 90 EUR"}
+{"t":"2026-11-24T21:44:05.560Z","seq":14,"id":"evt_dec2502bb398","delivery":2,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}

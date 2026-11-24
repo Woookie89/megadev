@@ -1,0 +1,26 @@
+[
+  {
+    "booking": "BK-39911",
+    "event": "evt_e01fb1bb0d0c",
+    "kind": "guest.message",
+    "text": "Please add one night to my stay."
+  },
+  {
+    "booking": "BK-25276",
+    "event": "evt_5c56c19c1391",
+    "kind": "guest.message",
+    "text": "Please add one night to my stay."
+  },
+  {
+    "booking": "BK-18714",
+    "event": "evt_6372e4a7d348",
+    "kind": "conflict",
+    "text": "same id, new data: first {\"booking\":\"BK-18714\",\"change\":{\"nights\":2}}, now {\"booking\":\"BK-18714\",\"change\":{\"nights\":3}}"
+  },
+  {
+    "booking": null,
+    "event": "evt_4321dc881539",
+    "kind": "guest.message",
+    "text": "no plain booking id in the event"
+  }
+]

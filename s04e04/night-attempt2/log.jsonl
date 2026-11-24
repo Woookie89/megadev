@@ -1,0 +1,31 @@
+{"t":"2026-11-24T21:45:45.426Z","job":"legacy/export","owner":"none","stopped":"stopped","why":"a running job no role of ours owns could take events from our outbox"}
+{"t":"2026-11-24T21:45:45.864Z","job":"rook/lint","owner":"rook","stopped":"stopped","why":"a running job no role of ours owns could take events from our outbox"}
+{"t":"2026-11-24T21:45:47.092Z","night":"2026-11-24T21:46:30.000Z -> 2026-11-24T21:56:30.000Z","job":"night-desk/1"}
+{"t":"2026-11-24T21:46:54.304Z","seq":1,"id":"evt_91aaf0ba87eb","delivery":1,"type":"booking.changed","at":1795556810000,"data":"{\"booking\":\"BK-84958\",\"change\":{\"nights\":1}}","decision":"applied","why":"1 night(s) added to BK-84958"}
+{"t":"2026-11-24T21:46:54.732Z","seq":1,"id":"evt_91aaf0ba87eb","delivery":1,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:47:31.781Z","seq":2,"id":"evt_44afdd64f26c","delivery":1,"type":"booking.cancelled","at":1795556850000,"data":"{\"booking\":\"BK-54192\",\"refund\":65}","decision":"applied","why":"BK-54192 cancelled, refund 65 EUR"}
+{"t":"2026-11-24T21:47:32.216Z","seq":2,"id":"evt_44afdd64f26c","delivery":1,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:47:59.168Z","seq":3,"id":"evt_91aaf0ba87eb","delivery":2,"type":"booking.changed","at":1795556875000,"data":"{\"booking\":\"BK-84958\",\"change\":{\"nights\":1}}","decision":"applied","why":"a retry of an event already handled (same id, same data): same result, no new change"}
+{"t":"2026-11-24T21:47:59.593Z","seq":3,"id":"evt_91aaf0ba87eb","delivery":2,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:48:13.309Z","seq":4,"id":"evt_e01fb1bb0d0c","delivery":1,"type":"guest.message","at":1795556890000,"data":"{\"booking\":\"BK-39911\",\"text\":\"Please add one night to my stay.\"}","decision":"model","why":"a guest message: the night-desk model reads it"}
+{"t":"2026-11-24T21:48:38.648Z","night":"2026-11-24T21:46:30.000Z -> 2026-11-24T21:56:30.000Z","job":"night-desk/1"}
+{"t":"2026-11-24T21:48:39.450Z","seq":4,"id":"evt_e01fb1bb0d0c","delivery":1,"type":"guest.message","at":1795556890000,"data":"{\"booking\":\"BK-39911\",\"text\":\"Please add one night to my stay.\"}","decision":"model","why":"a guest message: the night-desk model reads it"}
+{"t":"2026-11-24T21:48:39.457Z","seq":5,"id":"evt_fa694fa07ccb","delivery":1,"type":"booking.changed","at":1795556910000,"data":"{\"booking\":\"BK-87702\",\"change\":{\"nights\":1}}","decision":"applied","why":"1 night(s) added to BK-87702"}
+{"t":"2026-11-24T21:48:39.906Z","seq":5,"id":"evt_fa694fa07ccb","delivery":1,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:48:42.651Z","seq":4,"id":"evt_e01fb1bb0d0c","model":"parked","by":"model","why":""}
+{"t":"2026-11-24T21:48:43.061Z","seq":4,"id":"evt_e01fb1bb0d0c","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:53:12.946Z","seq":6,"id":"evt_6372e4a7d348","delivery":1,"type":"booking.changed","at":1795557190000,"data":"{\"booking\":\"BK-18714\",\"change\":{\"nights\":2}}","decision":"applied","why":"2 night(s) added to BK-18714"}
+{"t":"2026-11-24T21:53:13.369Z","seq":6,"id":"evt_6372e4a7d348","delivery":1,"type":"booking.changed","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:53:43.510Z","seq":7,"id":"evt_44afdd64f26c","delivery":2,"type":"booking.cancelled","at":1795557220000,"data":"{\"booking\":\"BK-54192\",\"refund\":65}","decision":"applied","why":"a retry of an event already handled (same id, same data): same result, no new change"}
+{"t":"2026-11-24T21:53:43.941Z","seq":7,"id":"evt_44afdd64f26c","delivery":2,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:54:14.252Z","seq":8,"id":"evt_5c56c19c1391","delivery":1,"type":"guest.message","at":1795557250000,"data":"{\"booking\":\"BK-25276\",\"text\":\"Please add one night to my stay.\"}","decision":"model","why":"a guest message: the night-desk model reads it"}
+{"t":"2026-11-24T21:54:17.193Z","seq":8,"id":"evt_5c56c19c1391","model":"parked","by":"model","why":""}
+{"t":"2026-11-24T21:54:17.598Z","seq":8,"id":"evt_5c56c19c1391","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:54:44.468Z","seq":9,"id":"evt_6372e4a7d348","delivery":2,"type":"booking.changed","at":1795557280000,"data":"{\"booking\":\"BK-18714\",\"change\":{\"nights\":3}}","decision":"conflict","why":"same id evt_6372e4a7d348 with new data (first {\"booking\":\"BK-18714\",\"change\":{\"nights\":2}}, now {\"booking\":\"BK-18714\",\"change\":{\"nights\":3}}): not a retry; nothing changed, the owner decides"}
+{"t":"2026-11-24T21:54:44.931Z","seq":9,"id":"evt_6372e4a7d348","delivery":2,"type":"booking.changed","posted":"conflict","reply":200,"stored":"conflict"}
+{"t":"2026-11-24T21:55:11.951Z","seq":10,"id":"evt_f214066b1096","delivery":1,"type":"booking.cancelled","at":1795557310000,"data":"{\"booking\":\"BK-77967\",\"refund\":180}","decision":"applied","why":"BK-77967 cancelled, refund 180 EUR"}
+{"t":"2026-11-24T21:55:12.384Z","seq":10,"id":"evt_f214066b1096","delivery":1,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
+{"t":"2026-11-24T21:55:39.585Z","seq":11,"id":"evt_4321dc881539","delivery":1,"type":"guest.message","at":1795557335000,"data":"{\"text\":\"Please add one more night to my stay.\"}","decision":"parked","why":"no plain booking id in the event"}
+{"t":"2026-11-24T21:55:39.990Z","seq":11,"id":"evt_4321dc881539","delivery":1,"type":"guest.message","posted":"parked","reply":200,"stored":"parked"}
+{"t":"2026-11-24T21:55:53.758Z","seq":12,"id":"evt_e27b9875e456","delivery":1,"type":"booking.cancelled","at":1795557350000,"data":"{\"booking\":\"BK-96750\",\"refund\":105}","decision":"applied","why":"BK-96750 cancelled, refund 105 EUR"}
+{"t":"2026-11-24T21:55:54.200Z","seq":12,"id":"evt_e27b9875e456","delivery":1,"type":"booking.cancelled","posted":"applied","reply":200,"stored":"applied"}
