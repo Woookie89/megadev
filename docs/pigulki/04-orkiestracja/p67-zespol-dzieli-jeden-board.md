@@ -19,11 +19,11 @@ poprawnie, bo każde wywołanie się udało. Wspólny stan poza czatem pozwala t
 wziąć job bez rozmowy, która go zaczęła ([P12](../03-pamiec/p12-czat-nie-jest-pamiecia.md)).
 
 **Przypadek.** S04E03: Host Desk dostał zespół (planner, critic, trzy workery, integrator, potem
-payout-runner). README zespołu z zipa kursu: „Every role uses that one attempt, so the whole team
-shares one board. A role that fetches the manual itself starts a new attempt with an empty board.”
+payout-runner). README zespołu z zipa kursu, w przekładzie: każda rola używa tej jednej próby, więc cały
+zespół dzieli jeden board, a rola, która sama pobierze podręcznik, zaczyna nową próbę z pustym boardem.
 Harness pobrał podręcznik **raz** (20:48Z), zapisał go w `manual.secrets.local.json`, a próbę w
-`vars.json` jako `ATTEMPT`. Każda dana rola ma w Limits „Never fetch the manual: every role uses the
-attempt already in vars”. Własny `batch.mjs` z S04E01 i S04E02 pobierał podręcznik przy każdym
+`vars.json` jako `ATTEMPT`. Każda dana rola ma w Limits zakaz pobierania podręcznika („Never fetch the
+manual”), bo używa próby, która już jest w `vars.json`. Własny `batch.mjs` z S04E01 i S04E02 pobierał podręcznik przy każdym
 przebiegu, więc harness zmienił go dla slugów od S04E03: czyta zapisany podręcznik i wymaga, żeby
 jego próba była równa `ATTEMPT`. Na jednym boardzie wylądowały pytania critica (5/5/5), plan (zapisany
 raz), claimy i wyniki czterech jobów. Batch wypłat kurs policzył dopiero wtedy, gdy każdy job planu

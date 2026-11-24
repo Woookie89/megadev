@@ -57,8 +57,9 @@ zanim oceni.
 
 S04E03: ten sam reviewer, tym razem w zespole. Jego `context.mjs` drukuje ustawienia, patch i `why/`,
 ale nie `requests/answers.md` z odpowiedziami hosta. Oznaczył więc dwa hunki joba `w-r2` (limit 4 nocy,
-data 17 listopada 2026): „Neither limit is in the request, the live settings, or a house note outside
-this change — only in the co-host's own note citing requests/answers.md, which I cannot read.” Kurs:
+data 17 listopada 2026). Jego powód, w przekładzie: żadnego z tych limitów nie ma w requeście, w żywych
+ustawieniach ani w notatce domu poza tą zmianą, są tylko we własnej notatce współgospodarza, która
+cytuje `requests/answers.md`, a tego pliku reviewer nie może przeczytać. Kurs:
 „Findings received: 2 of 6 hunks flagged”. Oba to decyzje hosta, więc zostały, bo rola integratora
 mówi, że zmiana, o którą prosi request, zostaje. HQ na przyszłość, w przekładzie: daj reviewerowi także
 plik z odpowiedziami hosta, bo oznaczał zmiany, o które proszono, a których nie mógł zobaczyć

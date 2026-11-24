@@ -180,9 +180,10 @@ Plan na boardzie (wysłany przez planner, przyjęty raz):
     885 EUR) w 304 ms, tylko do hostów `hq` i `pay-s04`. Zadanie 1 policzone ręcznie: 8 nocy × 95 =
     760, po zniżce 684, po prowizji (× 0,84) 574,56, plus 80 za sprzątanie i 12 podatku, w dół do 666.
 12. **Reviewer.** Rola z S04E02 z nowym adresem. Ocenił 6 hunków i oznaczył `w-r2-1` i `w-r2-2` (limit
-    4 nocy, data 17 listopada), bo nie mógł przeczytać `requests/answers.md`. Jego powód: „Neither
-    limit is in the request, the live settings, or a house note outside this change — only in the
-    co-host's own note citing requests/answers.md, which I cannot read.” Kurs: „Findings received: 2 of
+    4 nocy, data 17 listopada), bo nie mógł przeczytać `requests/answers.md`. Jego powód, w przekładzie:
+    żadnego z tych limitów nie ma w requeście, w żywych ustawieniach ani w notatce domu poza tą zmianą,
+    są tylko we własnej notatce współgospodarza, która cytuje `requests/answers.md`, a tego pliku
+    reviewer nie może przeczytać. Kurs: „Findings received: 2 of
     6 hunks flagged”. Oba hunki to odpowiedzi hosta do `r2`, więc zostały. Rola integratora mówi, że
     zmiana, o którą prosi request, zostaje.
 13. **Integrator, przebieg 2.** Wysłał `m-1` jako ostatni. Kurs: „Every job has its result. Run the
