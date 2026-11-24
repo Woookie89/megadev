@@ -30,7 +30,7 @@ We already know that what's needed is a set of **principles** the agent will fol
 
 [Open figure](https://hq.mega.dev/figures/s03e04/artifacts/lesson/figure-1/frame.html)
 
-I mentioned that acceptance depends heavily **on the agreement** (from S03E02) we make before the work starts. By the time the agent finishes the task, it should already know what to do about verification and evidence. **But agents need some degree of flexibility**, because in the meantime the scope may change a little.
+I mentioned that acceptance depends heavily **on the agreement** (from S03E02) we make before the work starts. By the time the agent finishes the task, it should already know what to do about verification and evidence. **But agents need some degree of flexibility**, because in the meantime the scope may change a little. 
 
 Once we shape an agreement, most of the missing tools and verification knowledge should surface. But this won't always happen, and we need to catch the cases when it doesn't. We can do that in two ways: **either the agents will tell us**, or **it will be discovered during scheduled checks**. We can also use both.
 
@@ -42,11 +42,11 @@ As a result, the agent may add a summary for us in the pull request, like this:
 
 ## Verification
 
-In previous lessons, we mentioned most kinds of verification strategies and tools that let agents collect evidence and confirmations, and actually see the results of their work, not only through code. If needed, go back to **S03E03** and its "Feedback" section, which discusses **how our system needs to be adjusted for agents**.
+In previous lessons, we mentioned most kinds of verification strategies and tools that let agents collect evidence and confirmations, and actually see the results of their work, not only through code. If needed, go back to **S03E03** and its "Feedback" section, which discusses **how our system needs to be adjusted for agents**. 
 
 What exactly this means depends on the product, the technology stack, the level of autonomy we want to achieve, and even business needs. The good news is that **agents can build everything for us.** The tricky part is that **we need to tell them what to build**, or rather, **we need to help them figure it out**. Since there's no universal way to think about this, we'll use one of my projects as an example.
 
-For context: **the app is a shared runtime with two thin clients, desktop and web**, that share almost all their code. Its runtime can work either entirely on the user's device or in the cloud. The architecture looks as follows:
+For context: **the app is a shared runtime with two thin clients, desktop and web**, that share almost all their code. Its runtime can work either entirely on the user's device or in the cloud. The architecture looks as follows: 
 
 ![Diagram. On the left is a box named Agent. A gray line labeled "Task" goes from the Agent to "Lab tools" (Start, drive, score). Lab tools is in a dashed frame named "Lab, for agents only". In that frame, a line labelled "Saves" goes down from Lab tools to "Run records" (Screenshots, logs, scores). A thick red line labelled "Uses it like a user" goes from Lab tools to "Interface" (Desktop and web). Interface is in a solid frame named "The app users get". In that frame, a line goes down from Interface to "Runtime" (On the device or in the cloud). A dashed line labelled "Evidence" goes from Run records back to the Agent.](https://hq.mega.dev/figures/s03e04/artifacts/lesson/figure-3/frame.png)
 
@@ -57,15 +57,15 @@ As the diagram shows, the agent has an **"agentic lab"**. This is mainly a set o
 That sounds easy, but it's all about the details:
 
 - There's a limit on how many browsers or instances I can have open for debugging at any given moment, because CPU and RAM get exhausted, especially during tests, linting, and compilation (Rust, in my case).
-- Every instance gets its own account and workspace, so agents don't interrupt each other. They can pick seeds for profiles to test various configurations. There's also a special mode for testing the [Clerk](https://clerk.com/) authorization process and features related to cloud synchronization.
+- Every instance gets its own account and workspace, so agents don't interrupt each other. They can pick seeds for profiles to test various configurations. There's also a special mode for testing the [Clerk](https://clerk.com/) authorization process and features related to cloud synchronization. 
 - There's a unified interface for logging, so agents can measure anything about data flow, user interface and performance.
 - The desktop app can't be tested on a VPS. It also can't run directly on my laptop, because it would steal window focus, interrupt my writing, and so on. So it runs inside [VMPal](https://vmpal.com/?lang=en).
 - The lab uses browser clips and Mac clips to record short videos.
 - Some actions, especially those that make LLM API calls, are "faked" to avoid spending money on UI-focused tests that would otherwise make real requests. There is also a live mode that uses an actual API key, but with spending limits and a limited number of actions.
 - Agents can write **scripts** to automate repetitive checks, including reports on those checks. Important note: these scripts need to be reviewed and cleaned up from time to time.
 - Some actions depend on the platform, and the reviewer agent is told about this, so it does not report them as issues.
-- There are also hard limits: agents can't touch my development environment, my workspace, or anything related to the instances I work with. At the same time, I have access to the debug mode available for my manual tests and interactions.
-- Wherever possible, agents are **blocked** from taking actions that cannot be reversed, such as sending emails.
+- There are also hard limits: agents can't touch my development environment, my workspace, or anything related to the instances I work with. At the same time, I have access to the debug mode available for my manual tests and interactions. 
+- Wherever possible, agents are **blocked** from taking actions that cannot be reversed, such as sending emails. 
 
 The list above applies, roughly, to any app, since most projects share similar challenges and needs. What differs from app to app is the architectural changes we need to make within the app itself, so that the lab is **directly connected to the modules** and faithfully reflects the actual interactions. In any case, creating **an agentic lab** isn't always easy, and it's not a one-time job, because the lab needs to evolve and its features have to be maintained. This is where **background routines** that scan the job history come in.
 
@@ -97,7 +97,7 @@ Now, with this in mind, we can ask agents to scan our latest PRs and our history
 
 [Open figure](https://hq.mega.dev/figures/s03e04/artifacts/lesson/figure-5/frame.html)
 
-Looking at the diagram above, we may recall the **feature maps** discussed in **S03E03**, which helped agents navigate the system and make better decisions. Now they are also useful for creating system diffs.
+Looking at the diagram above, we may recall the **feature maps** discussed in **S03E03**, which helped agents navigate the system and make better decisions. Now they are also useful for creating system diffs. 
 
 Now, just to give an example, my system diffs often come as .html or .svx files. You can see one [here](https://cloud.overment.com/skills-96b61c0-3e0cbc9-v030-1793120375.html) (it's just a demo). It was created with the [/system-diff](https://github.com/overment/skills/tree/main/skills/system-diff) skill, which I keep iterating on. As soon as a system diff arrives, agents are sometimes allowed to **open it in my browser**. Then I use [Superwhisper](https://superwhisper.com/) (any alternative works too) to record a freeform voice note with my comments on the document.
 
@@ -133,7 +133,7 @@ We can brainstorm similar ideas with agents and as a team. But the main idea her
 
 While the changes may be blocked at the **acceptance** or **review** stage, it's also worth considering some strict rules or principles. I stress **rules** here, not principles, because we need to decide how much freedom to give the agent. In fact, many (if not all) of our quality gates should be deterministic.
 
-An example of a quality gate is [the validate workflow](https://github.com/kody-hq/kody/blob/main/.github/workflows/validate.yml) Kent built for his project. When we open [an example run](https://github.com/kody-hq/kody/actions/runs/40680588304) there will be about 30 checks specific to his project, covering:
+An example of a quality gate is [the validate workflow](https://github.com/kody-hq/kody/blob/main/.github/workflows/validate.yml) Kent built for his project. When we open [an example run](https://github.com/kody-hq/kody/actions/runs/40680588304) there will be about 30 checks specific to his project, covering: 
 
 - formatting with [oxfmt](https://oxc.rs/docs/guide/usage/formatter.html)
 - linting with [oxlint](https://oxc.rs/docs/guide/usage/linter)
@@ -145,7 +145,7 @@ An example of a quality gate is [the validate workflow](https://github.com/kody-
 - e2e browser tests with Playwright
 - tsx --test for CLI tests
 
-But that's not all, as there are plenty of **[custom scripts](https://github.com/kody-hq/kody/tree/main/tools)** for checking primitives, feature maps, documentation drift, and more. All this runs on GitHub Actions and [WarpBuild](https://www.warpbuild.com/), which speeds up the process. The entire quality gate looks as follows:
+But that's not all, as there are plenty of **[custom scripts](https://github.com/kody-hq/kody/tree/main/tools)** for checking primitives, feature maps, documentation drift, and more. All this runs on GitHub Actions and [WarpBuild](https://www.warpbuild.com/), which speeds up the process. The entire quality gate looks as follows: 
 
 ![A quality gate. Every pull request starts six groups of checks side by side: unit tests, server runtime tests, browser tests, agent tool tests, command line tool and static checks. A final check waits for every check: if all pass, the change can merge; if one fails, it is blocked. Below, the static checks hold six common tools and six house rules. A second frame shows what keeps the gate useful: a comment that a reviewer says twice becomes a new house rule, and every night an agent removes weak tests, so the tests stay fast.](https://hq.mega.dev/figures/s03e04/artifacts/lesson/figure-8/frame.png)
 
