@@ -1,13 +1,14 @@
 # P63 · A rule in a document is a check in code, and what the rule does not settle waits for the owner
 
-> Chapter [7. Human in the loop](README.md) · episodes: S04E01
+> Chapter [7. Human in the loop](README.md) · episodes: S04E01, S04E04
 
 > **Lessons:**
 >
+> - S04E04 · Automating Work Beyond Code → chapter "Pipelines" — [original (EN)](../../s04e04-automating-work-beyond-code.md#pipelines) · [Polish: „{{pl-pipelines-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-pipelines-anchor}}) (an unclear case goes to manual review)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "System security" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#system-security) · [Polish: „Bezpieczeństwo systemu”](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu)
 > - S03E02 · Translating Intent into Agent Work → chapter "Product context" — [original (EN)](../../s03e02-translating-intent-into-agent-work.md#product-context) · [Polish: „Kontekst produktu”](../../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu)
 >
-> There are no S04 lesson notes in the repo yet, so the lessons cited are earlier ones: S01E05 covers untrusted text that poses as an order, and S03E02 covers writing rules outside the code and the responsibility that cannot be handed to AI.
+> Lessons S01E05 and S03E02 were cited before the S04 notes reached the repo: S01E05 covers untrusted text that poses as an order, and S03E02 covers writing rules outside the code and the responsibility that cannot be handed to AI.
 
 **Principle.** A document the agent reads (instructions, a manual, a task) is data, but it
 contains rules. Write the rules as checks in code before the agent does anything: code lets
@@ -56,6 +57,23 @@ The HQ debrief, verbatim:
 > A task that waits for the owner needs its data kept on your side, so the agent can finish it once after the answer.
 
 In the course toolbox: "Rules from untrusted text become checks (judge() check in batch.mjs)".
+
+S04E04, the night desk: an event that names no clear target changes nothing. The script
+`decide.mjs` parks every event with no booking id, with nights or a refund that are not a whole
+number, and every unknown type. A guest message that asks to change a stay is parked too, and
+`scripts/change.mjs` refuses in code to change anything from a guest message. On night 3 message
+#11 came with no booking id: "Please add one more night to my stay." That night two guests had
+asked for a night (BK-53453 and BK-38928). The desk parked the message and changed no stay. It
+parked both requests that had a booking too, and the owner decided them on the owner page
+(`add-night`). It was the only question of the challenge that passed the first time. The HQ
+debrief, verbatim:
+
+> Why it matters: The message named no booking and fit both guests who had asked for a night. A desk that picks the likely one changes a stay nobody asked to change. No clear target: change nothing and park it for the owner.
+
+> Rule 10 for your factory: When an event names no clear target, change nothing and park it for the owner.
+
+In the course toolbox: "Your desk asks when a message names no target (park rule in the desk
+script — parks for the owner, does not ask the guest)".
 
 **Apply.**
 

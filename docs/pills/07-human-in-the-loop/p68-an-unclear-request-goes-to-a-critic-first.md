@@ -62,4 +62,4 @@ The answers must reach every role, the judging one too. The S04E02 reviewer did 
 
 ---
 
-← [P67](../04-orchestration/p67-a-team-shares-one-board.md) · [chapter](README.md) · [all pills](../README.md)
+← [P67](../04-orchestration/p67-a-team-shares-one-board.md) · [chapter](README.md) · [all pills](../README.md) · [P69](../05-agents-without-humans/p69-handle-each-event-once.md) →

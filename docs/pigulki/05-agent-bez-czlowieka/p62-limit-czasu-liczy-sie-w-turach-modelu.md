@@ -1,13 +1,14 @@
 # P62 · Limit czasu liczy się w turach modelu: rutynowy batch robi jeden skrypt, a model tylko go uruchamia
 
-> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S04E01
+> Rozdział [5. Agent bez człowieka: host, pętla, wyjścia](README.md) · epizody: S04E01, S04E04
 
 > **Lekcje:**
 >
+> - S04E04 · {{pl-s04e04-lesson}} → rozdział „{{pl-events-title}}” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}}) · [oryginał EN: „Events”](../../s04e04-automating-work-beyond-code.md#events) (krok „Filter”: najpierw proste reguły, mały model tylko tam, gdzie reguły zawodzą)
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Wykonywalny Markdown a kod” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod) · [oryginał EN: „Executable Markdown vs Code”](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code)
 > - S01E04 · Praca z harnessami AI → rozdział „Ustawienia” — [po polsku](../../pl/s01e04-working-with-ai-harnesses.md#ustawienia) · [oryginał EN: „Settings”](../../s01e04-working-with-ai-harnesses.md#settings)
 >
-> Notatek lekcji S04 w repo jeszcze nie ma, więc wskazane lekcje są wcześniejsze: S01E05 wymienia szybkość i koszt jako słabości pracy wykonywanej tylko przez model i proponuje zapisany skrypt, a S01E04 mówi o ustawieniach modelu.
+> Lekcje S01E05 i S01E04 wskazano, zanim notatki S04 trafiły do repo: S01E05 wymienia szybkość i koszt jako słabości pracy wykonywanej tylko przez model i proponuje zapisany skrypt, a S01E04 mówi o ustawieniach modelu.
 
 **Zasada.** Gdy zadanie ma limit czasu, policz go w turach modelu. Jedna tura to sekundy, więc
 praca rutynowa (ta sama dla każdego elementu batcha) idzie do jednego skryptu, który robi cały batch. Model uruchamia skrypt jednym wywołaniem narzędzia i decyduje tylko o tym, czego skrypt
@@ -44,6 +45,17 @@ Debrief HQ, w przekładzie:
 > Reguła 2 dla twojej fabryki: Rutynową pracę wykonuj skryptem; model decyduje tylko o tym, czego skrypt nie rozstrzygnie.
 
 W zestawie narzędzi kursu: rutynowa praca idzie skryptem, a nie turami modelu (`batch.mjs`).
+
+S04E04, night desk: każde zdarzenie nocy potrzebuje wyniku w ciągu 2 minut, a start modelu trwa 10–60 s
+(`why/night-desk.md`), więc kolejka wywołań modelu mogłaby przekroczyć limit. Zmiany i anulacje
+rezerwacji to zwykłe liczby, więc rozstrzyga je skrypt `decide.mjs`. Retry i konflikty też. Model (Pi,
+`deepseek-v4.1-flash`) budzi się tylko dla `guest.message`, w tle, a gdy zawiedzie albo nie zdąży,
+wiadomość jest parkowana. Batch wypłat nadal robi jeden skrypt (2520 ms w przyjętym przebiegu). Debrief
+HQ, w przekładzie:
+
+> Model czy kod: zdobyte w tym rozwiązaniu. Tylko wiadomości gości budziły model (3–7 s każda). Zmiany, anulacje, retry, konflikty i batch wypłat to zwykły kod w folderze night-desk.
+>
+> Deduplikacja, acki i board to zwykły kod bez kosztu tokenów; model czyta to, co napisał gość.
 
 **Stosuj.**
 

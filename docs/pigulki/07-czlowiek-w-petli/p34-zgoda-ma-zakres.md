@@ -1,6 +1,6 @@
 # P34 · Zgoda ma zakres
 
-> Rozdział [7. Human in the loop](README.md) · epizody: S01E04, S04E01, S04E02
+> Rozdział [7. Human in the loop](README.md) · epizody: S01E04, S04E01, S04E02, S04E04
 
 > **Lekcje:**
 >
@@ -36,6 +36,18 @@ powiedziałeś, że skill zostaje globalny, a to wyzwanie dotyczy tylko zaliczen
 dalej na tej podstawie. Gdy jedna wiadomość odpowiada
 na kilka pytań, powtórz użytkownikowi, co uznajesz za odpowiedź na które, zanim zadziałasz. Zgoda na
 pobranie zipa nie obejmowała zmiany ustawień ani niczego poza Host Desk.
+
+S04E04: dwa joby z kursu na boardzie (`legacy/export` bez właściciela i `rook/lint` z właścicielem
+`rook`) brały zdarzenia z outboxa night desku ([P70](../04-orkiestracja/p70-kazdy-job-ma-wlasciciela.md)).
+Pierwszy `POST /board/stop` zablokował klasyfikator uprawnień harnessu, więc harness zapytał
+użytkownika, zamiast obchodzić blokadę. Użytkownik: „1 zgoda” (sesja `3152bc38-….jsonl:712`), czyli
+stop `legacy/export` na tej i na nowej próbie. Ta zgoda nie obejmowała `rook/lint`. Gdy podpowiedź
+kursu wskazała drugi job, harness zapytał jeszcze raz, a użytkownik odpowiedział: „zgoda na stop
+rook/lint” (`:743`), czyli stop każdego działającego joba, którego nie ma rola night-desk, na tej i
+na nowej próbie. HANDOVER zapisuje zakres: zgoda tylko dla tego wyzwania, na `legacy/export` i
+`rook/lint`. HQ nazywa tę decyzję właściwą i wspólną („together (right call)”). Kod pollera
+zatrzymuje jednak każdy obcy job, więc przy innym wyzwaniu wykona akcję szerszą niż udzielona zgoda.
+Kod, który utrwala zgodę, powinien nieść jej zakres.
 
 ---
 

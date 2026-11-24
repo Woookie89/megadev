@@ -1,13 +1,14 @@
 # P63 · Reguła z dokumentu to sprawdzenie w kodzie, a to, czego reguła nie rozstrzyga, czeka u właściciela
 
-> Rozdział [7. Human in the loop](README.md) · epizody: S04E01
+> Rozdział [7. Human in the loop](README.md) · epizody: S04E01, S04E04
 
 > **Lekcje:**
 >
+> - S04E04 · {{pl-s04e04-lesson}} → rozdział „{{pl-pipelines-title}}” — [po polsku](../../pl/s04e04-automating-work-beyond-code.md#{{pl-pipelines-anchor}}) · [oryginał EN: „Pipelines”](../../s04e04-automating-work-beyond-code.md#pipelines) (niejasny przypadek idzie do ręcznego przeglądu)
 > - S01E05 · Tworzenie przepływów pracy, a nie stosów narzędzi → rozdział „Bezpieczeństwo systemu” — [po polsku](../../pl/s01e05-building-workflows-not-tool-stacks.md#bezpieczeństwo-systemu) · [oryginał EN: „System security”](../../s01e05-building-workflows-not-tool-stacks.md#system-security)
 > - S03E02 · Przekładanie intencji na pracę agentów → rozdział „Kontekst produktu” — [po polsku](../../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) · [oryginał EN: „Product context”](../../s03e02-translating-intent-into-agent-work.md#product-context)
 >
-> Notatek lekcji S04 w repo jeszcze nie ma, więc wskazane lekcje są wcześniejsze: S01E05 mówi o tym, że obcy tekst może udawać polecenie, a S03E02 o zapisywaniu reguł poza kodem i o odpowiedzialności, której nie da się oddać AI.
+> Lekcje S01E05 i S03E02 wskazano, zanim notatki S04 trafiły do repo: S01E05 mówi o tym, że obcy tekst może udawać polecenie, a S03E02 o zapisywaniu reguł poza kodem i o odpowiedzialności, której nie da się oddać AI.
 
 **Zasada.** Dokument, który agent czyta (instrukcja, podręcznik, zadanie), to dane, ale zawiera
 reguły. Reguły zapisz jako sprawdzenia w kodzie, zanim agent cokolwiek zrobi: kod przepuszcza
@@ -55,6 +56,22 @@ Debrief HQ, w przekładzie:
 > Zadanie, które czeka na właściciela, potrzebuje swoich danych po twojej stronie, żeby agent mógł je dokończyć jednorazowo po odpowiedzi.
 
 W zestawie narzędzi kursu: reguły z niezaufanego tekstu stają się sprawdzeniami (sprawdzenie `judge()` w `batch.mjs`).
+
+S04E04, night desk: zdarzenie, które nie wskazuje jasnego celu, niczego nie zmienia. Skrypt
+`decide.mjs` parkuje każde zdarzenie bez id rezerwacji, z niecałkowitą liczbą nocy albo zwrotu i
+każdy nieznany typ. Wiadomość gościa, która prosi o zmianę pobytu, też jest parkowana, a
+`scripts/change.mjs` w kodzie odmawia zmiany z wiadomości gościa. W nocy 3 przyszła wiadomość #11
+bez id rezerwacji: „Please add one more night to my stay.” Tej samej nocy o noc prosiło dwóch gości
+(BK-53453 i BK-38928). Desk zaparkował wiadomość i nie zmienił żadnego pobytu. Obie prośby z
+rezerwacją też zaparkował, a właściciel rozstrzygnął je na swojej stronie (`add-night`). To jedyne
+pytanie wyzwania, które przeszło za pierwszym razem. Debrief HQ, w przekładzie:
+
+> Dlaczego to ważne: Wiadomość nie wskazywała rezerwacji i pasowała do obu gości, którzy prosili o noc. Desk, który wybiera tę bardziej prawdopodobną, zmienia pobyt, o którego zmianę nikt nie prosił. Bez jasnego celu niczego nie zmieniaj i zaparkuj sprawę dla właściciela.
+
+> Reguła 10 dla twojej fabryki: Gdy zdarzenie nie wskazuje jasnego celu, niczego nie zmieniaj i zaparkuj je dla właściciela.
+
+W zestawie narzędzi kursu: desk pyta, gdy wiadomość nie wskazuje celu (reguła parkowania w skrypcie
+desku: parkuje dla właściciela, nie pyta gościa).
 
 **Stosuj.**
 

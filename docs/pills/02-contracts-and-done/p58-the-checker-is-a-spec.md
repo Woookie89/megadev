@@ -1,6 +1,6 @@
 # P58 · The recipient's checker is a spec: read it before the first build
 
-> Chapter [2. Contracts and "done"](README.md) · episodes: S03E04
+> Chapter [2. Contracts and "done"](README.md) · episodes: S03E04, S04E04
 
 > **Lessons:**
 >
@@ -36,6 +36,22 @@ that names the chosen incident, and three acks with an aim delay. The course's a
 time: "Read the course's checker before the first build, and record the plan's tensions as
 scenarios, because the refused evidence and the blink both came from checks you could see up
 front."
+
+S04E04: the checker was hidden. The refusals said "Task 1: wrong answer. Start a new run." or "The
+run was not accepted. The course will not say why.", and every new fetch of the manual started a new
+attempt and a new 10-minute night. Two things made the way shorter. First, the hint mechanics on the
+HQ page: "From your 2nd failed try at the same spot, a refusal can carry a short hint. A Solve after
+a hint counts as solved with help." (session `3152bc38-….jsonl:1070`). `POST /run` on the same
+attempt dealt a new run with the same task 1, so the second answer brought the hint without a new
+night. Two test runs on the already refused attempt (`node batch.mjs run`) brought two more. Second,
+a refusal pointed at `check-lane night-run`, and that need said what the course reads: the desk's
+records (what the course sent, delivery by delivery, and what the desk did), whether each result
+says what the desk really did, and which events were the owner's. Hence the HQ advice for next
+time: "Send one result per event id, because the course reads every result as a claim."
+([P69](../05-agents-without-humans/p69-handle-each-event-once.md)). The challenge still took three
+nights, and the course counts 9 refusals, 7 with a hint. When the checker cannot be read, read what
+the recipient says about it (a need's description, a hint), and look for the cheapest way to its
+answer before you pay the full price of a new attempt.
 
 **Apply.**
 

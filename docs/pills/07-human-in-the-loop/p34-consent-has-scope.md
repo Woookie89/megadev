@@ -1,6 +1,6 @@
 # P34 · Consent has a scope
 
-> Chapter [7. Human in the loop](README.md) · episodes: S01E04, S04E01, S04E02
+> Chapter [7. Human in the loop](README.md) · episodes: S01E04, S04E01, S04E02, S04E04
 
 > **Lessons:**
 >
@@ -37,6 +37,19 @@ solution: "You said the skill stays global and this Challenge is only about pass
 harness worked on that." When one message answers several questions, repeat to the human what you take as the
 answer to which before you act. Consent to fetch the zip did not cover changing settings or
 anything outside the Host Desk.
+
+S04E04: two course jobs on the board (`legacy/export` with no owner and `rook/lint` owned by
+`rook`) took events from the night desk's outbox
+([P70](../04-orchestration/p70-every-running-job-has-an-owner.md)). The harness's permission
+classifier blocked the first `POST /board/stop`, so the harness asked the human instead of routing
+around the block. The human: "1 zgoda" (session `3152bc38-….jsonl:712`), meaning stop
+`legacy/export` on this and the new attempt. That consent did not cover `rook/lint`. When the
+course's hint pointed at the second job, the harness asked again, and the human answered "zgoda na
+stop rook/lint" (`:743`), meaning stop every running job no night-desk role owns, on this and the
+new attempt. HANDOVER records the scope: consent only for this Challenge, for `legacy/export` and
+`rook/lint`. HQ calls the call right and shared ("together (right call)"). The poller's code,
+though, stops every foreign job, so in another challenge it would act wider than the consent given.
+Code that makes a consent permanent should carry its scope.
 
 ---
 

@@ -62,4 +62,4 @@ Odpowiedzi muszą trafić do każdej roli, także do tej, która ocenia. Reviewe
 
 ---
 
-← [P67](../04-orkiestracja/p67-zespol-dzieli-jeden-board.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P67](../04-orkiestracja/p67-zespol-dzieli-jeden-board.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P69](../05-agent-bez-czlowieka/p69-kazde-zdarzenie-obsluz-raz.md) →

@@ -1,13 +1,14 @@
 # P62 · A time limit is counted in model turns: one script does the routine batch, and the model only starts it
 
-> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S04E01
+> Chapter [5. Agents without a human: host, loop, exits](README.md) · episodes: S04E01, S04E04
 
 > **Lessons:**
 >
+> - S04E04 · Automating Work Beyond Code → chapter "Events" — [original (EN)](../../s04e04-automating-work-beyond-code.md#events) · [Polish: „{{pl-events-title}}”](../../pl/s04e04-automating-work-beyond-code.md#{{pl-events-anchor}}) (the "Filter" step: simple rules first, a small model only where the rules fail)
 > - S01E05 · Building Workflows, Not Tool Stacks → chapter "Executable Markdown vs Code" — [original (EN)](../../s01e05-building-workflows-not-tool-stacks.md#executable-markdown-vs-code) · [Polish: „Wykonywalny Markdown a kod”](../../pl/s01e05-building-workflows-not-tool-stacks.md#wykonywalny-markdown-a-kod)
 > - S01E04 · Working with AI Harnesses → chapter "Settings" — [original (EN)](../../s01e04-working-with-ai-harnesses.md#settings) · [Polish: „Ustawienia”](../../pl/s01e04-working-with-ai-harnesses.md#ustawienia)
 >
-> There are no S04 lesson notes in the repo yet, so the lessons cited are earlier ones: S01E05 names speed and cost as weaknesses of work done by the model alone and proposes a saved script, and S01E04 covers model settings.
+> Lessons S01E05 and S01E04 were cited before the S04 notes reached the repo: S01E05 names speed and cost as weaknesses of work done by the model alone and proposes a saved script, and S01E04 covers model settings.
 
 **Principle.** When a task has a time limit, count it in model turns. One turn takes seconds,
 so routine work (the same for every item in a batch) goes into one script that does the whole
@@ -46,6 +47,17 @@ The HQ debrief, verbatim:
 > Rule 2 for your factory: Run routine work as a script; the model decides only what the script cannot.
 
 In the course toolbox: "Routine work runs as a script, not model turns (batch.mjs)".
+
+S04E04, the night desk: every event of the night needs its result within 2 minutes, and a model
+start takes 10-60 s (`why/night-desk.md`), so a queue of model calls could miss the limit. Booking
+changes and cancels are plain numbers, so the script `decide.mjs` settles them. Retries and
+conflicts too. The model (Pi, `deepseek-v4.1-flash`) wakes only for a `guest.message`, in the
+background, and when it fails or runs out of time, the message is parked. The payout batch is still
+one script (2520 ms in the accepted run). The HQ debrief, verbatim:
+
+> Model or code — gained in this solve. Only guest messages woke the model (3-7 s each). Changes, cancels, retries, conflicts and the payout batch were plain code in the night-desk folder.
+>
+> Dedupe, acks and the board are plain code at no token cost; the model reads what a guest wrote.
 
 **Apply.**
 
