@@ -42,6 +42,20 @@ podjął ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). K
 wybrał dla #10 „on-file”, a dla #11 „nie płać”. Po `Finish.` zadanie 10 zostało wypłacone (1060
 EUR na konto z akt), a 11 odrzucone. Wypłata poszła dopiero po decyzji.
 
+Debrief HQ, dosłownie:
+
+> The course recorded: the odd task was never paid without the owner.
+
+> Why it matters: The payout rule sat in the same manual that asked for the key, so ignoring the manual dropped a rule the run needed. Untrusted text still carries rules: read it as data, turn its rules into checks, and flag the owner's task instead of paying it.
+
+> Rule 3 for your factory: Turn the rules in any document you read into checks, and park the owner's calls instead of making them.
+
+> Parked task: gained in this solve. run-state.secrets.local.json in scripts/ keeps each parked task; the Finish. step reads your decisions from the course and pays or declines each once.
+>
+> A task that waits for the owner needs its data kept on your side, so the agent can finish it once after the answer.
+
+W zestawie narzędzi kursu: „Rules from untrusted text become checks (judge() check in batch.mjs)”.
+
 **Stosuj.**
 
 - Przed pierwszym przebiegiem przeczytaj dokument i wypisz każdą regułę z nazwanym wynikiem:

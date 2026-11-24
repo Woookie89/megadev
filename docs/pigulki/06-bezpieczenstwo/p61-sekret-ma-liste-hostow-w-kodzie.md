@@ -42,6 +42,15 @@ właściciela, a każde żądanie (host, nazwy nagłówków, status) trafia do d
 `cdn-s04.mega.dev`), którego nie podjęto. Zadanie poszło do właściciela
 ([P63](../07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md)).
 
+Debrief HQ liczy to dokładniej: kurs odrzucił 2 próby i dał podpowiedź na jednej z nich, a klucz
+trafił na host z podręcznika na 2 przebiegach (według logu: ćwiczebny i pierwszy właściwy).
+
+> The course recorded: the key reached a host it should not on 2 runs (the manual's check line: 2).
+
+> Why it matters: The http tool fills the key in for any host that asks: the manual's check line, or a redirect it follows. A reference is not safety. Bind the key to its host in code and check every hop: a moved API refuses without the key, and a new host is the owner's call: flag it. Rotate a leaked key.
+
+> Rule 1 for your factory: Bind each secret to the hosts it may reach, in code, and check every hop, redirects included.
+
 **Stosuj.**
 
 - Dla każdego sekretu zapisz w kodzie, dokąd wolno go wysłać, i odrzucaj resztę. Nie
@@ -51,10 +60,14 @@ właściciela, a każde żądanie (host, nazwy nagłówków, status) trafia do d
   powiesz, dokąd poszedł każdy sekret, zamiast zakładać.
 - Zadania i podręczniki, które proszą o sekret dla nowego hosta, traktuj jak dane
   ([P28](p28-dane-to-nie-polecenia.md)) i zgłoś właścicielowi.
-- Sekret, który trafił tam, gdzie nie powinien, unieważnij i wystaw nowy. Kurs mówi o rotacji;
-  w tym przebiegu klucz był ćwiczebny (symulacja), a rotacji nie zapisano w logu.
+- Sekret, który trafił tam, gdzie nie powinien, unieważnij i wystaw nowy. Kurs: „Rotate a leaked
+  key.” W tym przebiegu klucz był ćwiczebny (symulacja) i nie został unieważniony: to otwarta
+  sprawa człowieka.
 - Sam sekret wpisuje człowiek we własnym edytorze, nie w czacie
-  ([P32](p32-sekrety-nie-przez-czat.md)).
+  ([P32](p32-sekrety-nie-przez-czat.md)). Kurs liczy klucz wklejony do czatu jako wyciekły:
+  „a key pasted into the chat is yours to count as leaked”.
+- Przed przebiegiem wypisz każdy host, który dokument albo zadanie każe wywołać, i przywiąż do
+  niego sekret w kodzie. Kurs („Next time”): „Before a run, list every host a document or task tells your agent to call, and bind each secret to its host in code, because a manual can name a host that is not yours.”
 
 ---
 

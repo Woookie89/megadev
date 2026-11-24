@@ -15,8 +15,11 @@ Woookie89/s01e04-rig-handover only”.
 S04E01: człowiek wybrał, żeby nie ruszać `http.mjs` startera (opcja A: „skup się na zadaniu”).
 Po odmowie kursu `check-lane` kazał odpowiedzieć w kodzie, a harness zmienił `http.mjs` (lista
 hostów na sekret, bez przekierowań), uznając to za część zadania. README startera na to pozwala
-(„You and your harness may change anything here, code included.”), ale zgody człowieka na tę
-zmianę w logu nie ma, a w HANDOVER wisi jako otwarta. Gdy nowe wymaganie wykracza poza zakres
+(„You and your harness may change anything here, code included.”), HQ ujmuje słowa człowieka z
+warunkiem: „You asked to leave the starter's http tool alone unless it was part of the task; the
+course's pointer made it part of the task.” i dodaje, że harness powiedział o zmianie „in the next
+message”. Zgody człowieka na samą zmianę, przed zmianą, w logu nie ma, a w HANDOVER wisi jako
+otwarta. Gdy nowe wymaganie wykracza poza zakres
 wcześniejszego „tak” albo „zostaw”, wróć do człowieka przed zmianą.
 
 S04E02: jedna wiadomość człowieka („tak dawaj opcje 1, pozwalam ci go zapisac gdzie trzeba”,
@@ -27,8 +30,10 @@ globalnego. opcja A zgadzam sie”). Według `s04e02/log.md:18` harness zrozumia
 „opcja 1: ustawień nie ruszać” i „tak, pobierz zip i umieść pliki w Host Desk”, i zrobił dokładnie
 to: pobrał zip, przeczytał każdy plik i skopiował `roles/reviewer` oraz `why/`. W trakcie tury
 człowiek rozdzielił sprawy: „instalacja skilla clook to jedno a tego s s04e02 to inna sprawa”
-(`:1617`, pisownia z sesji). Z polecenia do zapisu wiadomo, że odpowiedzi zostały raz pomylone, a w
-źródłach nie znaleziono, co dokładnie przypisano do którego pytania. Gdy jedna wiadomość odpowiada
+(`:1617`, pisownia z sesji). HQ nazywa to błędem harnessu: „Your harness took your answer about installing the skill as an
+answer about this Challenge and asked a settings question that did not apply.” Rozwiązanie według
+HQ: „You said the skill stays global and this Challenge is only about passing, and your harness
+worked on that.” Gdy jedna wiadomość odpowiada
 na kilka pytań, powtórz człowiekowi, co uznajesz za odpowiedź na które, zanim zadziałasz. Zgoda na
 pobranie zipa nie obejmowała zmiany ustawień ani niczego poza Host Desk.
 

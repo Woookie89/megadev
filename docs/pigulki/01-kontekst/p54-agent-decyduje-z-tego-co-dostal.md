@@ -52,6 +52,9 @@ domu. Ulepszony dostaje je w jednym wywołaniu `context.mjs` razem z żywymi ust
 od pierwszej tury, i oznaczył `+1` w liczbie nocy na podstawie `why/nights.md`. Kurs: „Review
 accepted: every verdict is right.” Reguła 5 z `factory/CHECKLIST.md`: każda rola czyta te notatki,
 zanim oceni lub zmieni cokolwiek ([P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)).
+Kurs: „The diff alone cannot show that the old code was written that way on purpose, because the
+reason lives in a house note, not in the code. So a role that judges must read the why behind the
+code before it judges.”
 
 **Stosuj.**
 

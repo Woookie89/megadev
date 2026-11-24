@@ -34,6 +34,18 @@ narzędzia `code`. Skrypt sam czyta API i podręcznik, a model nie woła API kur
 - Zasada kodu: żadnego ponawiania wypłaty, bo ponowienie mogłoby zapłacić dwa razy. Gdy
   skrypt wypisze `FAIL`, `ROLE.md` każe zacytować linię i się zatrzymać.
 
+Debrief HQ, dosłownie:
+
+> Your harness read the limit (8000 ms in practice, 6000 ms in the run) and put the batch into one script, so the model made one call. The 20 tasks took 2171 ms; a model turn per task would have taken seconds each.
+
+> The course recorded: no run ran out of time.
+
+> Why it matters: Each model turn costs a second or more, and 20 chained tasks under a limit set from your network leave no room for that. So routine work runs as a script, and the model judges only what the script cannot decide.
+
+> Rule 2 for your factory: Run routine work as a script; the model decides only what the script cannot.
+
+W zestawie narzędzi kursu: „Routine work runs as a script, not model turns (batch.mjs)”.
+
 **Stosuj.**
 
 - Zanim zaprojektujesz agenta, odczytaj limit i podziel go przez czas jednej tury modelu. Jeśli

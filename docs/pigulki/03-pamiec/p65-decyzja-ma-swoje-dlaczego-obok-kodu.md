@@ -43,7 +43,21 @@ Z logu nie wynika też, czy tak samo poradziłaby sobie z regułą o nocach. Prz
 recenzent przeczytał `why/nights.md` i oznaczył `+1` w liczbie nocy (hunk `h-25a`) jako błąd. Kurs:
 „Review accepted: every verdict is right.” To reguła 5 z `factory/CHECKLIST.md`: „Write down why
 each decision exists, next to the code, and have every role read those notes before it judges or
-changes anything.” W toolboxie kursu to `house-notes`.
+changes anything.” W toolboxie kursu: „Your roles read the why behind the code (context.mjs prints the why notes)”.
+
+Debrief HQ, dosłownie:
+
+> Passed because it read `why/nights.md` before judging the change.
+
+> Why it matters: The diff alone cannot show that the old code was written that way on purpose, because the reason lives in a house note, not in the code. So a role that judges must read the why behind the code before it judges.
+
+Werdykt recenzenta, który to pokazuje:
+
+> Your reviewer on hunk h-25a (flag): Adds +1 to nights, so the check-out day is counted. why/nights.md says a stay's nights are check-out minus check-in in whole days, the check-out day is never counted, and 'Do not add one' — the reason given: the bank pays only what was booked, so the batch would be refused.
+
+O drugiej roli, która tego odczytu jeszcze nie ma:
+
+> The other role: partly. batch.mjs reads the commission live at every run. The why notes became code (round down, nights); payout-runner's ROLE.md does not read them.
 
 **Stosuj.**
 

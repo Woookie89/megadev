@@ -17,7 +17,9 @@ się od poprzedniej (bez `initialize`, inne nagłówki).
 
 S04E02: nieaktualna liczba siedziała nie w pamięci modelu, tylko w instrukcji roli. `ROLE.md`
 recenzenta miał prowizję 15 % i wersję `2026-11-10.1`, a żywe `/settings` mówiło 12 % i
-`2026-11-17.548` ([P64](p64-rola-trzyma-zrodlo-faktu-nie-fakt.md)).
+`2026-11-17.548` ([P64](p64-rola-trzyma-zrodlo-faktu-nie-fakt.md)). Kurs: „The settings pasted into the reviewer's file were a snapshot, and the
+house's settings changed with every attempt, so a role that trusted its own file judged against old
+numbers. A role reads its facts from their source at every start.”
 
 **Stosuj.**
 

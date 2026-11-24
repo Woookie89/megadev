@@ -37,8 +37,13 @@ starcie i drukuje je pierwsze. Kurs podkreślał, że ustawienia domu zmieniają
 w logu prowizja miała wartość 12 % (próba 1), 16 % (próba 2, druga łatka), 14 % (ćwiczenie
 wypłat) i 12 % (przebieg wypłat). Podobnie `batch.mjs` czyta prowizję na żywo. Kurs zapisał
 to jako regułę 4 w `factory/CHECKLIST.md`: „Have every role read its facts (settings, prices,
-limits) from their source at every start; never copy them into its files.” W toolboxie kursu to
-`fresh-facts`.
+limits) from their source at every start; never copy them into its files.” W toolboxie kursu: „Your roles read their facts at every start (context.mjs and live settings read)”.
+
+Debrief HQ, dosłownie:
+
+> Failed until you made your reviewer read `/settings` at every start.
+
+> Why it matters: The settings pasted into the reviewer's file were a snapshot, and the house's settings changed with every attempt, so a role that trusted its own file judged against old numbers. A role reads its facts from their source at every start.
 
 **Stosuj.**
 

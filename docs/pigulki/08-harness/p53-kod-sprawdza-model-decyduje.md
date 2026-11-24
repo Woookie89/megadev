@@ -38,12 +38,12 @@ what to test where.”
 S04E01: ta sama granica przy partii wypłat z limitem 6000 ms. Kod robi całą partię (pobiera
 zadania, liczy kwoty, sprawdza konto z akt, płaci), a model uruchamia skrypt jednym wywołaniem
 i relacjonuje wynik. Przypadki spoza reguł (inne konto, przekierowany adres) kod oznacza dla
-właściciela. W toolboxie kursu to `routine-script`
+właściciela. W toolboxie kursu: „Routine work runs as a script, not model turns (batch.mjs)”
 ([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)).
 
 S04E02: ta sama granica w roli recenzenta. Skrypt `context.mjs` jednym wywołaniem pobiera żywe
 ustawienia domu, łatkę z plikami bazowymi i notatki `why/`, a model tylko waży werdykt dla każdego
-hunka i wysyła go raz. Pobranie nie zależy od tego, czy model „pamięta”, żeby zajrzeć do źródła
+hunka i wysyła go raz. Pobranie nie zależy od tego, czy model „pamięta”, żeby zajrzeć do źródła. W toolboxie kursu: „Your roles read their facts at every start (context.mjs and live settings read)”
 ([P64](../01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md),
 [P66](../04-orkiestracja/p66-rola-ma-piec-czesci.md)).
 

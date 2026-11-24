@@ -22,8 +22,11 @@ S04E01: człowiek wkleił klucz ćwiczebny (practice key) do czatu, choć kurs k
 w zmiennych agenta, w osobnym edytorze, bo wartość zapisana przez harness zostaje w jego logu.
 Harness odnotował w logu, że klucz padł w czacie, i nie zapisał go w żadnym pliku. Człowiek
 wpisał go sam do `vars.json`, a plik jest w `.gitignore` (`**/host-desk/vars.json`). W tym samym
-wyzwaniu klucz ćwiczebny trafił jeszcze do hosta z podręcznika w odrzuconym przebiegu
-([P61](p61-sekret-ma-liste-hostow-w-kodzie.md)).
+wyzwaniu klucz ćwiczebny trafił jeszcze do hosta z podręcznika w dwóch przebiegach (ćwiczenie i
+odrzucony pierwszy właściwy; [P61](p61-sekret-ma-liste-hostow-w-kodzie.md)). Kurs liczy klucz
+wklejony do czatu jako wyciekły („a key pasted into the chat is yours to count as leaked”) i mówi:
+„Rotate a leaked key.” Ten klucz jest ćwiczebny (symulacja) i nie został unieważniony. To otwarta
+sprawa człowieka.
 
 **Stosuj.** Commituj tylko `.env.example`. Maskowanie sekretów na wyjściu agenta, nie tylko
 na wejściu.

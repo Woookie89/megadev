@@ -39,7 +39,13 @@ S04E01: skrypt obciął końcową odpowiedź kursu do 400 znaków (`.slice(0,400
 wskazał `pointer` na `check-lane`. Po poprawce pełna końcowa odpowiedź trafia do
 `run-final.secrets.local.json`, a dziennik sieci `wire.secrets.local.json` pokazuje każde żądanie
 ([P61](../06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md)). Wniosek z HANDOVER: czytaj
-odmowę w całości.
+odmowę w całości. HQ w tabeli „How the solve went” (snag 3): „The refusal came with a hint that
+your harness cut off at 400 characters; the question Run log tells more.” Linia „Run log” z
+zestawu narzędzi kursu:
+
+> Run log: gained in this solve. Each run writes the full final reply and a wire log (host, header names, status) in scripts/; the next session reads them first when a run fails.
+>
+> An agent that runs alone needs a log you can read after the run, because nobody watched it fail.
 
 **Stosuj.** Logi dostępne z CLI, endpoint selfcheck, log każdej akcji agenta z czasem.
 Monitor agenta w tle czyta źródło prawdy (tracker, API), a nie plik logu innego procesu.

@@ -46,6 +46,22 @@ części (odczyt na żywo, notatki) i reguł oceniania, a roli nie przepisano od
 Startup reads ([P64](../01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md),
 [P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md)).
 
+Słownik sterowania z debriefu HQ („How you steer a role”), dosłownie:
+
+- How you steer a role · Purpose: What the role is for. One job per role, so its output is easy to judge.
+- How you steer a role · Tools: What it can do. A tool that is not there cannot be used.
+- How you steer a role · Limits: What it must not do: in words in `ROLE.md`, or in code by leaving the tool out. Words can be ignored; a missing tool cannot.
+- How you steer a role · Startup reads: What it reads at every start: `/settings`, `why/`, `factory/CHECKLIST.md`. Facts change and a role starts fresh, so it reads them each time and keeps no copies.
+- How you steer a role · Output: What it hands back. A reviewer hands back findings, never a changed file.
+
+> What this aims at: Roles you can run again tomorrow, on a new change, without you, and trust the result. S04E03 adds more roles; S04E05 lets your factory write them.
+
+Z zestawu narzędzi kursu:
+
+> Read-only: gained in this solve. The reviewer stayed read-only: its tools only read, its one POST is the review, and it changed no file and no setting.
+>
+> A reviewer that edits fixes problems quietly: nobody sees them and the writer never learns. Findings only keep the jobs apart.
+
 **Stosuj.**
 
 - Zacznij nową rolę od pięciu nagłówków. Pusta część to decyzja, którą jeszcze trzeba podjąć.
