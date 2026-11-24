@@ -14,6 +14,7 @@ w tym, co dostają na wejściu.
 | [P43](p43-przekaz-skill-z-zadaniem.md) | Przekaż skill razem z zadaniem | S02E04 |
 | [P44](p44-normalizuj-przed-zlaczeniem.md) | Normalizuj, zanim złączysz | S02E04 |
 | [P66](p66-rola-ma-piec-czesci.md) | Rolę opisuje pięć części: Purpose, Tools, Limits, Startup reads i Output, a błąd naprawiasz w tej części, której dotyczy | S04E02 |
+| [P67](p67-zespol-dzieli-jeden-board.md) | Zespół dzieli jeden board: wspólny stan zakłada się raz, a każda rola tylko go czyta | S04E03 |
 
 ---
 

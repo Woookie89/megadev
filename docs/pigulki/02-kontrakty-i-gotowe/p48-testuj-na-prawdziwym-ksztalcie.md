@@ -32,6 +32,19 @@ was spent.” Na przyszłość kurs zalecił: „An offline set you run again be
 with every live failure added to it.” Tego ostatniego kroku nie zrobiono: testy z wiadomości
 na żywo zostały w plikach tymczasowych, a nie w `test/test.mjs`.
 
+S04E03 pokazało, że test napisany przez tego samego agenta co kod sprawdza jego założenie. Worker
+`w-r3` (opłata za sprzątanie bez prowizji) napisał funkcję, która wymagała całkowitej kwoty za noce,
+i jego sprawdzenie to przepuściło. Po 10 % zniżce z innego requestu kwota za noce ma grosze (7 nocy
+po 95 EUR to 598,5), więc każdy pobyt od 7 nocy zostałby zaparkowany. Wyłapał to harness, który
+przed merge'em przeczytał wysłaną zmianę na prawdziwych liczbach, i uruchomił workera jeszcze raz z
+poprawką. Sprawdzenie integratora (`check.secrets.local.mjs`) miało z kolei dwie błędne wartości
+oczekiwane przy dobrym kodzie: 7 × 95 daje 520, a 9 × 100 daje 762. Rozstrzygnęło zadanie ćwiczebne:
+3 z 3 wypłacone, pierwsze przeliczone ręcznie (760, po zniżce 684, po prowizji 574,56, plus 80 i 12,
+w dół 666). Kurs, w przekładzie: własne sprawdzenie workera przepuściło jego własną zgadywankę, więc
+harness przeczytał każdą wysłaną zmianę na prawdziwych liczbach przed merge'em, a nie po odrzuconym
+przebiegu. Na przyszłość: testuj ceny na prawdziwych danych z zadania ćwiczebnego, bo wymyślone
+wartości oczekiwane były błędne dwa razy.
+
 **Stosuj.**
 
 - Zanim wystawisz agenta, przepuść przez niego pełną, przykładową wiadomość od drugiej
@@ -42,6 +55,8 @@ na żywo zostały w plikach tymczasowych, a nie w `test/test.mjs`.
   ([P10](p10-sprawdz-z-zewnatrz.md)). Test musi najpierw nie przejść na starym kodzie
   ([P08](p08-test-najpierw-czerwony.md)).
 - Uruchamiaj cały zestaw przed każdą zmianą, nie tylko nowy przypadek.
+- Zmianę workera czytaj przed merge'em na prawdziwych danych. Wartości oczekiwane bierz z
+  prawdziwego wejścia albo z ręcznego przeliczenia, nie z głowy agenta, który pisał kod.
 
 ---
 

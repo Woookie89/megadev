@@ -15,6 +15,7 @@ irreversible, public or cost money.
 | [P51](p51-a-written-rule-sets-the-autonomy-line.md) | A written rule sets the line of autonomy, not the voice of whoever asks: every mark cites its id | S03E02, S03E05 |
 | [P55](p55-only-a-signed-record-binds.md) | Only a signed record binds: an unsigned one is evidence, and the open call goes to the owner with options and a recommendation | S03E03 |
 | [P63](p63-a-rule-in-a-document-is-a-check.md) | A rule in a document is a check in code, and what the rule does not settle waits for the owner | S04E01 |
+| [P68](p68-an-unclear-request-goes-to-a-critic-first.md) | An unclear request goes to a critic first, and the owner answers before any code changes | S04E03 |
 
 ---
 

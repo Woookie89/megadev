@@ -54,6 +54,9 @@
 | the five parts of a role (Purpose, Tools, Limits, Startup reads, Output) | The steering vocabulary from S04E02: what the role does, which tools it uses, what it must not do, what it reads at start and what result it hands over ([P66](04-orchestration/p66-a-role-has-five-parts.md)). |
 | `why/` notes (house notes) | Short files next to the code: the decision, why, and so. In S04E02 there are three: `nights.md`, `payout-date.md`, `payout-rounding.md` ([P65](03-memory/p65-a-decision-has-its-why-next-to-the-code.md)). |
 | house settings (`/settings`) | A live read of the version and the commission in S04E02. It changes with every attempt, so the role reads it at start instead of copying it into `ROLE.md` ([P64](01-context/p64-a-role-keeps-where-to-read-a-fact-not-the-fact.md)). |
+| board | The shared state of one attempt on the course's side in S04E03: the host's requests, the critic's questions, the plan, the claims and each job's result. Every role reads and writes the same board ([P67](04-orchestration/p67-a-team-shares-one-board.md)). |
+| attempt | One S04 challenge attempt, its id saved in `vars.json` as `ATTEMPT`. Fetching the manual creates a new attempt with an empty board, so a team does it once ([P67](04-orchestration/p67-a-team-shares-one-board.md)). |
+| planner, critic, worker, integrator | The roles of the S04E03 Host Desk team. The planner posts one plan of jobs with each job's files, the critic asks the owner about the gaps in a request, a worker does one job in its own worktree, and the integrator merges the changes and posts its result last ([P18](04-orchestration/p18-worktrees-and-hub-files.md), [P68](07-human-in-the-loop/p68-an-unclear-request-goes-to-a-critic-first.md)). |
 
 ---
 

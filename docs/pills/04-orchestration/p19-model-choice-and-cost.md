@@ -20,6 +20,11 @@ well-described tasks get a cheaper one. An unattended agent gets a call limit an
   ([P62](../05-agents-without-humans/p62-a-time-limit-is-counted-in-model-turns.md)). The log
   says the cost is cents, and the human gave the key's daily limit as 2 USD. The model-provider
   account and the spending are the human's, so the harness asked before using them.
+- S04E03: the team's plan names a model per job (the `model` field), and every role prints the
+  model it really ran on at the end (`model: …`). All four jobs had
+  `openrouter/deepseek/deepseek-v4.1-flash` in the plan and ran on it. The course: "A plan that names
+  a model per job routes cheap jobs to cheap models; the agent’s own output tells you what it really
+  ran on."
 
 ---
 

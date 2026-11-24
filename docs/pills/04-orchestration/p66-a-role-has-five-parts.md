@@ -79,4 +79,4 @@ From the course toolbox:
 
 ---
 
-← [P65](../03-memory/p65-a-decision-has-its-why-next-to-the-code.md) · [chapter](README.md) · [all pills](../README.md)
+← [P65](../03-memory/p65-a-decision-has-its-why-next-to-the-code.md) · [chapter](README.md) · [all pills](../README.md) · [P67](p67-a-team-shares-one-board.md) →

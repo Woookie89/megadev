@@ -11,3 +11,4 @@
 - headless? no (the night itself runs unattended).
 - rook: "night's yours. i'm off at eleven and up at seven. i'd like to sleep through it."
 - next (course): ask before download; TICKET into vars, fetch manual once, ATTEMPT into vars; then GET /board. A refusal may name a need -> call check-lane.
+- human: "ok" (consent to start + download night zip)

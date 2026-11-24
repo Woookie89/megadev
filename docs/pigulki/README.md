@@ -1,6 +1,6 @@
 # Pigułki wiedzy: praca z AI i agentami
 
-Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S04E02)
+Notatki w formie podręcznika, zebrane z wyzwań MEGA.dev (S01E01–S04E03)
 oraz z lokalnego MEGA Assessment. Jedna pigułka to jeden plik i jedna zasada, ułożona tak:
 
 - **Zasada**: co robić.
@@ -21,6 +21,7 @@ Stan na 24.11.2026.
 - **Szybko:** przeczytaj „Dziesięć zasad” poniżej.
 - **Przed zadaniem danego typu:** otwórz rozdział (np. przed budową agenta rozdziały 5 i 6).
 - **Przed dodaniem kolejnej roli agenta:** [P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) i [P66](04-orkiestracja/p66-rola-ma-piec-czesci.md).
+- **Przed uruchomieniem zespołu agentów:** [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md), [P67](04-orkiestracja/p67-zespol-dzieli-jeden-board.md) i [P68](07-czlowiek-w-petli/p68-niejasne-zlecenie-najpierw-do-krytyka.md).
 - **Przed oddaniem pracy:** [lista przed oddaniem](szablony/lista-przed-oddaniem.md).
 - **O sobie:** [twoje wzorce pracy](wzorce-pracy.md) z MEGA Assessment.
 - **Słowa:** [słowniczek](slowniczek.md).
@@ -35,7 +36,7 @@ Stan na 24.11.2026.
 | 4 | Najpierw kontrakt (schemat, kształt odpowiedzi), potem wysyłka. | [P06](02-kontrakty-i-gotowe/p06-najpierw-kontrakt.md) |
 | 5 | „Gotowe” wyznacza sprawdzenie, które przechodzi, a nie poczucie końca. | [P07](02-kontrakty-i-gotowe/p07-gotowe-to-sprawdzenie.md) |
 | 6 | To, co ma przetrwać sesję, zapisz w pliku, a to, co ma działać zawsze, w skillu albo hooku. Decyzję z jej „dlaczego” zapisz obok kodu. | [P12](03-pamiec/p12-czat-nie-jest-pamiecia.md), [P16](03-pamiec/p16-drabina-trwalosci.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) |
-| 7 | Najpierw wspólny kontrakt po kolei, potem równoległe, tańsze workery. | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md) |
+| 7 | Najpierw wspólny kontrakt po kolei, potem równoległe, tańsze workery. Planuj po plikach: jeden właściciel na plik, a plik wspólny dostaje integrator. | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md), [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md) |
 | 8 | Pętla agenta potrzebuje warunku wyjścia, limitu i widocznego stanu. | [P24](05-agent-bez-czlowieka/p24-petla-potrzebuje-wyjscia.md) |
 | 9 | Granicę zaufania trzyma kod, zanim model zobaczy wiadomość. Tekst w danych to dane. Sekret wolno wysłać tylko do hosta z listy w kodzie. | [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) |
 | 10 | Użytkownik decyduje o kontach, publicznych akcjach i pieniądzach. Zgoda ma zakres. | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md) |
@@ -95,6 +96,7 @@ Stan na 24.11.2026.
 | [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md) | Przekaż skill razem z zadaniem | S02E04 |
 | [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) | Normalizuj, zanim złączysz | S02E04 |
 | [P66](04-orkiestracja/p66-rola-ma-piec-czesci.md) | Rolę opisuje pięć części: Purpose, Tools, Limits, Startup reads i Output, a błąd naprawiasz w tej części, której dotyczy | S04E02 |
+| [P67](04-orkiestracja/p67-zespol-dzieli-jeden-board.md) | Zespół dzieli jeden board: wspólny stan zakłada się raz, a każda rola tylko go czyta | S04E03 |
 
 ### [5. Agent bez człowieka: host, pętla, wyjścia](05-agent-bez-czlowieka/README.md)
 
@@ -135,6 +137,7 @@ Stan na 24.11.2026.
 | [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) | Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id | S03E02, S03E05 |
 | [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md) | Wiąże tylko podpisany rekord: niepodpisany to dowód, a otwartą decyzję oddajesz właścicielowi z opcjami i rekomendacją | S03E03 |
 | [P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md) | Reguła z dokumentu to sprawdzenie w kodzie, a to, czego reguła nie rozstrzyga, czeka u właściciela | S04E01 |
+| [P68](07-czlowiek-w-petli/p68-niejasne-zlecenie-najpierw-do-krytyka.md) | Niejasne zlecenie idzie najpierw do critica, a właściciel odpowiada, zanim zmieni się kod | S04E03 |
 
 ### [8. Harness jako zestaw narzędzi](08-harness/README.md)
 
@@ -194,18 +197,18 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S02E03 | Możliwości agentów | [Skille i narzędzia](../pl/s02e03-agentic-capabilities.md#skille-i-narzędzia) | [Skills & Tools](../s02e03-agentic-capabilities.md#skills--tools) | [P37](08-harness/p37-brakujace-narzedzie.md) |
 | S02E04 | Współpraca wielu agentów | [Architektury wieloagentowe](../pl/s02e04-multi-agent-collaboration.md#architektury-wieloagentowe) | [Multi-agent architectures](../s02e04-multi-agent-collaboration.md#multi-agent-architectures) | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md), [P20](04-orkiestracja/p20-brief-jak-issue.md), [P30](06-bezpieczenstwo/p30-najmniejsze-uprawnienia.md), [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) |
 | S02E04 | Współpraca wielu agentów | [Agent2Agent](../pl/s02e04-multi-agent-collaboration.md#agent2agent) | [Agent2Agent](../s02e04-multi-agent-collaboration.md#agent2agent) | [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md), [P45](05-agent-bez-czlowieka/p45-zdalny-worker-dostep-i-odbior-wyniku.md) |
-| S02E04 | Współpraca wielu agentów | [Współpraca wieloagentowa](../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) | [Multi-agentic collaboration](../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) | [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) |
+| S02E04 | Współpraca wielu agentów | [Współpraca wieloagentowa](../pl/s02e04-multi-agent-collaboration.md#współpraca-wieloagentowa) | [Multi-agentic collaboration](../s02e04-multi-agent-collaboration.md#multi-agentic-collaboration) | [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md), [P67](04-orkiestracja/p67-zespol-dzieli-jeden-board.md) |
 | S02E04 | Współpraca wielu agentów | [Orkiestracja](../pl/s02e04-multi-agent-collaboration.md#orkiestracja) | [Orchestration](../s02e04-multi-agent-collaboration.md#orchestration) | [P17](04-orkiestracja/p17-kontrakt-przed-rownolegloscia.md), [P44](04-orkiestracja/p44-normalizuj-przed-zlaczeniem.md) |
 | S02E04 | Współpraca wielu agentów | [Najważniejsze wnioski](../pl/s02e04-multi-agent-collaboration.md#najważniejsze-wnioski) | [Takeaways](../s02e04-multi-agent-collaboration.md#takeaways) | [P43](04-orkiestracja/p43-przekaz-skill-z-zadaniem.md) |
 | S02E05 | Niezawodność agentów | [Zabezpieczenia: zapobieganie temu, czemu nie da się zapobiec](../pl/s02e05-agent-reliability.md#zabezpieczenia-zapobieganie-temu-czemu-nie-da-się-zapobiec) | [Guardrails: preventing the unpreventable](../s02e05-agent-reliability.md#guardrails-preventing-the-unpreventable) | [P11](02-kontrakty-i-gotowe/p11-pusta-odpowiedz-to-blad.md), [P29](06-bezpieczenstwo/p29-granica-zaufania-w-kodzie.md), [P47](07-czlowiek-w-petli/p47-zgoda-kanalem-wlasciciela.md), [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md) |
 | S02E05 | Niezawodność agentów | [Obserwowalność w systemach agentowych](../pl/s02e05-agent-reliability.md#obserwowalność-w-systemach-agentowych) | [Observability in agentic systems](../s02e05-agent-reliability.md#observability-in-agentic-systems) | [P15](03-pamiec/p15-pytaj-przeszle-sesje.md), [P26](05-agent-bez-czlowieka/p26-czas-jest-czescia-zachowania.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md) |
 | S02E05 | Niezawodność agentów | [Ewaluacja](../pl/s02e05-agent-reliability.md#ewaluacja) | [Evaluation](../s02e05-agent-reliability.md#evaluation) | [P08](02-kontrakty-i-gotowe/p08-test-najpierw-czerwony.md), [P10](02-kontrakty-i-gotowe/p10-sprawdz-z-zewnatrz.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md) |
 | S03E01 | Mechanika inżynierii produktu | [Zmiana](../pl/s03e01-mechanics-behind-product-engineering.md#zmiana) | [The Shift](../s03e01-mechanics-behind-product-engineering.md#the-shift) | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) |
-| S03E01 | Mechanika inżynierii produktu | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md) |
+| S03E01 | Mechanika inżynierii produktu | [Odpowiedzialność](../pl/s03e01-mechanics-behind-product-engineering.md#odpowiedzialność) | [Ownership](../s03e01-mechanics-behind-product-engineering.md#ownership) | [P33](07-czlowiek-w-petli/p33-prawa-decyzyjne.md), [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md), [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md), [P68](07-czlowiek-w-petli/p68-niejasne-zlecenie-najpierw-do-krytyka.md) |
 | S03E01 | Mechanika inżynierii produktu | [Osąd](../pl/s03e01-mechanics-behind-product-engineering.md#osąd) | [Judgment](../s03e01-mechanics-behind-product-engineering.md#judgment) | [P49](07-czlowiek-w-petli/p49-sprzeczne-zrodla-rozstrzyga-wlasciciel.md) |
 | S03E01 | Mechanika inżynierii produktu | [Dźwignia](../pl/s03e01-mechanics-behind-product-engineering.md#dźwignia) | [Leverage](../s03e01-mechanics-behind-product-engineering.md#leverage) | [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md) |
 | S03E02 | Przekładanie intencji na pracę agentów | [Kontekst produktu](../pl/s03e02-translating-intent-into-agent-work.md#kontekst-produktu) | [Product context](../s03e02-translating-intent-into-agent-work.md#product-context) | [P14](03-pamiec/p14-jedna-decyzja-jeden-wiersz.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md), [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md), [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md), [P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) |
-| S03E02 | Przekładanie intencji na pracę agentów | [Wymagania i dekompozycja](../pl/s03e02-translating-intent-into-agent-work.md#wymagania-i-dekompozycja) | [Requirements and decomposition](../s03e02-translating-intent-into-agent-work.md#requirements-and-decomposition) | [P20](04-orkiestracja/p20-brief-jak-issue.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md) |
+| S03E02 | Przekładanie intencji na pracę agentów | [Wymagania i dekompozycja](../pl/s03e02-translating-intent-into-agent-work.md#wymagania-i-dekompozycja) | [Requirements and decomposition](../s03e02-translating-intent-into-agent-work.md#requirements-and-decomposition) | [P20](04-orkiestracja/p20-brief-jak-issue.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md), [P68](07-czlowiek-w-petli/p68-niejasne-zlecenie-najpierw-do-krytyka.md) |
 | S03E02 | Przekładanie intencji na pracę agentów | [Ewaluacja](../pl/s03e02-translating-intent-into-agent-work.md#ewaluacja) | [Evaluation](../s03e02-translating-intent-into-agent-work.md#evaluation) | [P52](05-agent-bez-czlowieka/p52-strumien-przebuduj-przy-kazdym-zdarzeniu.md), [P53](08-harness/p53-kod-sprawdza-model-decyduje.md) |
 | S03E03 | Rozwój produktu w duchu AI-native | [Planowanie](../pl/s03e03-ai-native-product-development.md#planowanie) | [Planning](../s03e03-ai-native-product-development.md#planning) | [P55](07-czlowiek-w-petli/p55-wiaze-tylko-podpisany-rekord.md) |
 | S03E03 | Rozwój produktu w duchu AI-native | [Wykonanie](../pl/s03e03-ai-native-product-development.md#wykonanie) | [Execution](../s03e03-ai-native-product-development.md#execution) | [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md) |
@@ -222,7 +225,7 @@ Które rozdziały lekcji stoją za którymi pigułkami. Kolumna PL prowadzi do p
 | S03E05 | Produkty, które uczą się po wydaniu | [Pętle sprzężenia zwrotnego](../pl/s03e05-products-that-learn-after-release.md#pętle-sprzężenia-zwrotnego) | [Feedback Loops](../s03e05-products-that-learn-after-release.md#feedback-loops) | [P16](03-pamiec/p16-drabina-trwalosci.md), [P38](08-harness/p38-skill-to-rutyna.md) |
 <!-- lessons:end -->
 
-Notatek lekcji S04E01 i S04E02 w repo jeszcze nie ma, więc pigułki z tych epizodów wskazują
+Notatek lekcji S04E01, S04E02 i S04E03 w repo jeszcze nie ma, więc pigułki z tych epizodów wskazują
 wcześniejsze lekcje. Gdy notatki powstaną, dopisz ich rozdziały do tej tabeli.
 
 ## Indeks epizodów
@@ -246,6 +249,7 @@ wcześniejsze lekcje. Gdy notatki powstaną, dopisz ich rozdziały do tej tabeli
 | S03E05 | [what came back](../pl/s03e05-what-came-back-debrief.md) | produkty, które uczą się po wydaniu | [P16](03-pamiec/p16-drabina-trwalosci.md), [P38](08-harness/p38-skill-to-rutyna.md), [P50](02-kontrakty-i-gotowe/p50-wymaganie-ma-adres-i-test.md), [P51](07-czlowiek-w-petli/p51-granice-autonomii-wyznacza-regula.md), [P59](02-kontrakty-i-gotowe/p59-liczba-w-podsumowaniu-to-twierdzenie.md), [P60](02-kontrakty-i-gotowe/p60-glosne-nie-znaczy-powszechne.md) |
 | S04E01 | [twenty payouts](../pl/s04e01-twenty-payouts-debrief.md) | agent pracujący sam z limitem czasu (notatek lekcji brak w repo) | [P19](04-orkiestracja/p19-dobor-modelu-i-koszt.md), [P25](05-agent-bez-czlowieka/p25-dostawca-zawodzi.md), [P27](05-agent-bez-czlowieka/p27-agent-widzi-swoje-logi.md), [P28](06-bezpieczenstwo/p28-dane-to-nie-polecenia.md), [P32](06-bezpieczenstwo/p32-sekrety-nie-przez-czat.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md), [P53](08-harness/p53-kod-sprawdza-model-decyduje.md), [P61](06-bezpieczenstwo/p61-sekret-ma-liste-hostow-w-kodzie.md), [P62](05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md), [P63](07-czlowiek-w-petli/p63-regula-z-dokumentu-to-sprawdzenie.md) |
 | S04E02 | [looks good to me](../pl/s04e02-looks-good-to-me-debrief.md) | druga rola i sterowanie rolami: recenzent (notatek lekcji brak w repo) | [P05](01-kontekst/p05-fakty-zmienne-u-zrodla.md), [P34](07-czlowiek-w-petli/p34-zgoda-ma-zakres.md), [P35](07-czlowiek-w-petli/p35-uprawnienia-harnessu.md), [P53](08-harness/p53-kod-sprawdza-model-decyduje.md), [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md), [P64](01-kontekst/p64-rola-trzyma-zrodlo-faktu-nie-fakt.md), [P65](03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md), [P66](04-orkiestracja/p66-rola-ma-piec-czesci.md) |
+| S04E03 | [three small changes](../pl/s04e03-three-small-changes-debrief.md) | zespół ról na jednym boardzie: planner, critic, workery, integrator (notatek lekcji brak w repo) | [P18](04-orkiestracja/p18-worktree-i-pliki-wezly.md), [P19](04-orkiestracja/p19-dobor-modelu-i-koszt.md), [P48](02-kontrakty-i-gotowe/p48-testuj-na-prawdziwym-ksztalcie.md), [P54](01-kontekst/p54-agent-decyduje-z-tego-co-dostal.md), [P67](04-orkiestracja/p67-zespol-dzieli-jeden-board.md), [P68](07-czlowiek-w-petli/p68-niejasne-zlecenie-najpierw-do-krytyka.md) |
 | — | MEGA Assessment | twoje wzorce pracy | [rozdział 9](wzorce-pracy.md) |
 
 ## Jak dopisać pigułkę

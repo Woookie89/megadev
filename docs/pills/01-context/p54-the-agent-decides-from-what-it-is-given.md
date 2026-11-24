@@ -57,6 +57,15 @@ The course: "The diff alone cannot show that the old code was written that way o
 the reason lives in a house note, not in the code. So a role that judges must read the why behind
 the code before it judges."
 
+S04E03: the same reviewer, this time in a team. Its `context.mjs` prints the settings, the patch and
+`why/`, but not `requests/answers.md` with the host's answers. So it flagged two hunks of job `w-r2`
+(the 4-night cap, the 17 November 2026 date): "Neither limit is in the request, the live settings,
+or a house note outside this change — only in the co-host's own note citing requests/answers.md,
+which I cannot read." The course: "Findings received: 2 of 6 hunks flagged". Both were the host's
+decisions, so they stayed, because the integrator role says a change a request asks for stays. HQ,
+next time: "Give the reviewer the host's answers file too, because it flagged requested changes it
+could not see." ([P68](../07-human-in-the-loop/p68-an-unclear-request-goes-to-a-critic-first.md)).
+
 **Apply.**
 
 - List every rule source the agent must decide from. Every one that fits in the context goes into
@@ -71,6 +80,8 @@ the code before it judges."
 - The mock rehearsal gets one issue for each rule the agent must not break.
 - A worker brief is the same problem at a smaller scale
   ([P20](../04-orchestration/p20-brief-like-an-issue.md)).
+- A role that judges gets the same decision sources as the change's author (the owner's answers,
+  the records). Without them it flags the owner's decisions as unverified.
 
 ---
 

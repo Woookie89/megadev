@@ -78,4 +78,4 @@ Z zestawu narzędzi kursu, w przekładzie:
 
 ---
 
-← [P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md)
+← [P65](../03-pamiec/p65-decyzja-ma-swoje-dlaczego-obok-kodu.md) · [rozdział](README.md) · [wszystkie pigułki](../README.md) · [P67](p67-zespol-dzieli-jeden-board.md) →

@@ -15,6 +15,7 @@ albo kosztują.
 | [P51](p51-granice-autonomii-wyznacza-regula.md) | Granicę autonomii wyznacza spisana reguła, nie głos zgłaszającego: każdy znacznik cytuje jej id | S03E02, S03E05 |
 | [P55](p55-wiaze-tylko-podpisany-rekord.md) | Wiąże tylko podpisany rekord: niepodpisany to dowód, a otwartą decyzję oddajesz właścicielowi z opcjami i rekomendacją | S03E03 |
 | [P63](p63-regula-z-dokumentu-to-sprawdzenie.md) | Reguła z dokumentu to sprawdzenie w kodzie, a to, czego reguła nie rozstrzyga, czeka u właściciela | S04E01 |
+| [P68](p68-niejasne-zlecenie-najpierw-do-krytyka.md) | Niejasne zlecenie idzie najpierw do critica, a właściciel odpowiada, zanim zmieni się kod | S04E03 |
 
 ---
 

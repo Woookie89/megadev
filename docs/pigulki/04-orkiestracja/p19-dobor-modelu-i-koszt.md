@@ -21,6 +21,11 @@ opisane zadania dostają tańszy. Agent bez nadzoru dostaje limit wywołań i bu
   ([P62](../05-agent-bez-czlowieka/p62-limit-czasu-liczy-sie-w-turach-modelu.md)). Według logu
   koszt to centy, a użytkownik podał dzienny limit klucza 2 USD. Konto u dostawcy modelu i wydatki
   są użytkownika, więc harness pytał przed ich użyciem.
+- S04E03: plan zespołu nazywa model dla każdego joba (pole `model`), a każda rola drukuje na końcu
+  model, na którym naprawdę działała (`model: …`). Wszystkie cztery joby miały w planie
+  `openrouter/deepseek/deepseek-v4.1-flash` i na nim działały. Kurs, w przekładzie: plan, który nazywa
+  model dla każdego joba, kieruje tanie joby do tanich modeli, a własny wynik agenta mówi, na czym
+  naprawdę działał.
 
 ---
 

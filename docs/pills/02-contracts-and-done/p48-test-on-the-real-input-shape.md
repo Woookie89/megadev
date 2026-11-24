@@ -31,6 +31,19 @@ round was spent." For next time it advised: "An offline set you run again before
 change, with every live failure added to it." That last step was not done: the live-message
 tests stayed in scratch files, not in `test/test.mjs`.
 
+S04E03 showed that a test written by the same agent as the code checks its assumption. Worker
+`w-r3` (a cleaning fee without commission) wrote a function that required a whole nights amount,
+and its own check let that through. After another request's 10 % discount the nights amount has
+cents (7 nights at 95 EUR is 598.5), so every stay of 7 nights or more would have been parked. The
+harness caught it by reading the posted change against real numbers before the merge, and ran the
+worker again with the fix. The integrator's own check (`check.secrets.local.mjs`) in turn had two
+wrong expected values with correct code: 7 × 95 gives 520 and 9 × 100 gives 762. The practice task
+settled it: 3 of 3 paid, the first one recomputed by hand (760, after the discount 684, after
+commission 574.56, plus 80 and 12, floored to 666). The course: "A worker's own check passed its own
+guess, so the harness read each posted change against real numbers before the merge, not after a
+refused run." Next time: "Test pricing against a practice task's real data, because made-up
+expected values were wrong twice."
+
 **Apply.**
 
 - Before you put the agent out, run a full sample message from the other side through it,
@@ -41,6 +54,8 @@ tests stayed in scratch files, not in `test/test.mjs`.
   ([P10](p10-check-from-outside.md)). The test must fail on the old code first
   ([P08](p08-test-must-fail-first.md)).
 - Run the whole set before every change, not only the new case.
+- Read a worker's change against real data before the merge. Take expected values from real input
+  or a hand recomputation, not from the head of the agent that wrote the code.
 
 ---
 
