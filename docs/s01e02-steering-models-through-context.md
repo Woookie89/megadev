@@ -5,10 +5,10 @@ We already know that the quality of an LLM’s output depends heavily on the con
 ## Outline
 
 - Harness: what the agent sees, AGENTS.md, memory, configuration, extensions, hooks, self-improvement
- - Context: context management, context limits, harness optimizations, attention, instruction following, missing context, short threads, smart zone
- - Skills: name and description, selection, scope, length, router skills, principles, dynamic resources, semantic anchors, self-steering, generation
- - Tools: native and custom, discovery, requests, prompt injection, results, large results, hints, errors
- - Subagents: tools, forks, settings, templates, skills vs. subagents, workers, orchestration
+- Context: context management, context limits, harness optimizations, attention, instruction following, missing context, short threads, smart zone
+- Skills: name and description, selection, scope, length, router skills, principles, dynamic resources, semantic anchors, self-steering, generation
+- Tools: native and custom, discovery, requests, prompt injection, results, large results, hints, errors
+- Subagents: tools, forks, settings, templates, skills vs. subagents, workers, orchestration
 
 An agent needs time to finish its task. So we spin up another one, and another. Suddenly we're constantly switching between agents, making lots of decisions, trying to stay up to date with what's happening. This quickly drains all our energy, so we start accepting whatever the agents suggest. And since they lack context and a good understanding of what we're building, we quickly end up with slop. We then spend even more time trying to fix it, but that rarely works. So we get frustrated and often go back to our old ways of building software.
 
@@ -22,9 +22,9 @@ Thinking about autonomous development and delivering quality software with it so
 
 Since LLMs know nothing about us and our project when a session starts, we want them to automatically get at least a general understanding of our context. Most harnesses currently support an `AGENTS.md` file that is **loaded at the beginning of each conversation**. More broadly, we can think of the filesystem and text files as **primitives** for context management. Text files are often used to manage sessions and store most harness settings. Because agents can edit these files, they can also change their own settings.
 
-It's good to know that a harness often does much more than inject a single file. The model needs some way to learn about everything up front so it can navigate the available features and understand its environment. 
+It's good to know that a harness often does much more than inject a single file. The model needs some way to learn about everything up front so it can navigate the available features and understand its environment.
 
-Below is a simplified visualization of **what Claude Code** sees: a system prompt, environment details, MEMORY.md, loaded and deferred tools, skills, agents, and dynamic reminders injected during the interaction. 
+Below is a simplified visualization of **what Claude Code** sees: a system prompt, environment details, MEMORY.md, loaded and deferred tools, skills, agents, and dynamic reminders injected during the interaction.
 
 ![A simplified, illustrative example of the Claude Code context, read from top to bottom in four sections: System prompt, Capabilities, Conversation and Context limit. Each row is in one of two columns: "Harness adds" or "You and the model". A third column gives the trust level: Rules, Requests, Guidance or Data only. The system prompt and capabilities come from the harness before the first message. During the conversation, harness items such as system-reminders, tool results, hook output, skill bodies and agent reports appear between your messages and the assistant's calls. A system-reminder that arrives in the middle of a turn is red. At the context limit, a summary of older turns goes into the next window. The order of the conversation rows is an example turn.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-2/frame.png)
 
@@ -83,7 +83,7 @@ The illustration below shows that the issues may be related to:
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-5/frame.html)
 
-It's now clear there are many potential reasons why an agent may not understand what we say. But the biggest issue here is that **most of those things are out of our control**, but not all of them. 
+It's now clear there are many potential reasons why an agent may not understand what we say. But the biggest issue here is that **most of those things are out of our control**, but not all of them.
 
 A rule of thumb for now is **to keep the conversation as short as possible**. This may sound a bit irritating today, since it means passing the same context over and over, but soon it will become much easier to do.
 
@@ -95,7 +95,7 @@ It may often seem counterintuitive to start new conversations, especially when w
 
 ## Designing and generating skills
 
-We already know that a skill is just a Markdown file loaded into context by a user or an agent, and that it may include additional scripts. We can find many examples on [skills.sh](https://skills.sh) and some great tips at [agentskills.io](https://agentskills.io/home), but when choosing them or creating our own from scratch, we should keep in mind what we know about language models and harnesses. 
+We already know that a skill is just a Markdown file loaded into context by a user or an agent, and that it may include additional scripts. We can find many examples on [skills.sh](https://skills.sh) and some great tips at [agentskills.io](https://agentskills.io/home), but when choosing them or creating our own from scratch, we should keep in mind what we know about language models and harnesses.
 
 > WARNING: Check skills before you install them. See [How Some Malicious AI Skills Hide Instructions from Reviewers](https://blog.virustotal.com/2026/10/how-some-malicious-ai-skills-hide.html).
 
@@ -111,7 +111,7 @@ Many harnesses can now configure themselves, so whenever we see that a skill isn
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-8/frame.html)
 
-**Length:** Many skills we find online are long and complex. The chance that any model will follow all their instructions is close to zero. Some of the best skills are short and extremely clear about their purpose. And if there's a need to cover something more complex, we may use **router skills** that refer to other skills. A good example of this is [ask-matt](https://www.skills.sh/mattpocock/skills/ask-matt). 
+**Length:** Many skills we find online are long and complex. The chance that any model will follow all their instructions is close to zero. Some of the best skills are short and extremely clear about their purpose. And if there's a need to cover something more complex, we may use **router skills** that refer to other skills. A good example of this is [ask-matt](https://www.skills.sh/mattpocock/skills/ask-matt).
 
 ![A flow diagram. The model reads a short router skill. The router skill maps three other skills: debug, test and review. Each skill is a separate SKILL.md file that the model loads only when the task needs it. The skill names and the router text are examples.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-10/frame.png)
 
@@ -136,11 +136,11 @@ On the other hand, we may want to:
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-11/frame.html)
 
-LLMs are getting good at crafting skills, but they still struggle with **compression**, **generalization** and **simplification**. At the same time, they're super useful for **phrasing**. Beyond that, creating a good skill requires understanding its purpose and context. 
+LLMs are getting good at crafting skills, but they still struggle with **compression**, **generalization** and **simplification**. At the same time, they're super useful for **phrasing**. Beyond that, creating a good skill requires understanding its purpose and context.
 
 It's clear, then, that shaping a good skill requires an iterative approach that has to involve us, although at some point we may shape a process where **the model will find** the best form of a skill.
 
-One example is a skill I created for myself, [skill-shaper](https://github.com/overment/skills/blob/main/skills/skill-shaper/SKILL.md), which can be considered a **meta-skill** for iteratively shaping new skills. It may not be perfectly suited to your needs, but it may still be good inspiration, or even a starting point, for shaping your own. In this case, the process looks like this: 
+One example is a skill I created for myself, [skill-shaper](https://github.com/overment/skills/blob/main/skills/skill-shaper/SKILL.md), which can be considered a **meta-skill** for iteratively shaping new skills. It may not be perfectly suited to your needs, but it may still be good inspiration, or even a starting point, for shaping your own. In this case, the process looks like this:
 
 ![A flow diagram of the skill-shaper meta-skill. A request goes down through four stages. First, decide if it should be a skill at all or a script or rule instead. Next, fit it among existing skills without overlap. Then imagine how it could fail. Last, choose how to steer it, which branches to concepts and questions for judgment work or exact steps for fragile work. The flow ends with a test in a fresh session, highlighted, that sorts requests into hits and near misses.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-22/frame.png)
 
@@ -170,7 +170,7 @@ The first scenario lets the agent use the tools right away, but their schemas ar
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-12/frame.html)
 
-**Request:** The LLM's role is to **specify which tool to use** and **generate a payload** for it. The model may request calls to **multiple tools**, even in parallel. While the shape of the request is defined by schemas and is often very strict and programmatically verified, the values are generated based on the context and the model's base knowledge. 
+**Request:** The LLM's role is to **specify which tool to use** and **generate a payload** for it. The model may request calls to **multiple tools**, even in parallel. While the shape of the request is defined by schemas and is often very strict and programmatically verified, the values are generated based on the context and the model's base knowledge.
 
 WARNING: **models can make mistakes** or **be tricked** into extracting data from one tool and exposing it through another. This is related to **prompt injection**, which remains an open problem. All models are still vulnerable, as [Pliny the Liberator](https://x.com/elder_plinius) shows on his profile.
 
@@ -190,7 +190,7 @@ Looking at the request and response flow above, we may notice many similarities 
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-16/frame.html)
 
-**Errors:** If something goes wrong, the harness shouldn't always throw an exception. Instead, it should feed the error details back to a model. This way, the agent can **recover from the error** or ask the user for help. 
+**Errors:** If something goes wrong, the harness shouldn't always throw an exception. Instead, it should feed the error details back to a model. This way, the agent can **recover from the error** or ask the user for help.
 
 ![A vertical flow of one agent interaction. The context holds a system prompt, tool definitions and a user message. The agent calls a tool, and the tool returns an error. The error goes back to the agent, shown in red. The agent sends a corrected call and gives the final answer to the user. At the side, a system error, such as an LLM connection issue, is the only error that goes to the user. The tool names, paths and error text are examples.](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-17/frame.png)
 
@@ -207,7 +207,7 @@ To summarize, all we need to know for now is:
 
 Despite growing context windows, for many reasons, we may prefer keeping the interactions short and, above all, focused on a task. Both may be achieved in many ways, and the most important ones are:
 
-**Subagents**: many harnesses let an agent to **spawn** another agent on the fly or **call an existing one**. Such an agent may [**fork** the existing thread, or receive a new one](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/fork-or-fresh-subagent). A subagent may also get different settings (such as reasoning level, or a model). 
+**Subagents**: many harnesses let an agent to **spawn** another agent on the fly or **call an existing one**. Such an agent may [**fork** the existing thread, or receive a new one](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/fork-or-fresh-subagent). A subagent may also get different settings (such as reasoning level, or a model).
 
 From a technical point of view, a subagent is one of the native tools: it can be called, and its response is injected into the context.
 
@@ -221,7 +221,7 @@ From a technical point of view, a subagent is one of the native tools: it can be
 
 [Open figure](https://hq.mega.dev/figures/s01e02/artifacts/lesson/figure-19/frame.html)
 
-Both subagents and workers can be called based on existing templates - but this depends on the harness we're using. For example, Claude Code / Codex / Pi support such an option either out of the box or through extensions. 
+Both subagents and workers can be called based on existing templates - but this depends on the harness we're using. For example, Claude Code / Codex / Pi support such an option either out of the box or through extensions.
 
 Now, we could say that **skills** and **agents** are technically similar, since both are usually plain text files (md or toml), and both are often presented to a model as a list of **names and descriptions**. Additionally, agent files include settings such as available tools, permissions, or the model.
 

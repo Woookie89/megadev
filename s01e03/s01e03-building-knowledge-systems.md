@@ -12,7 +12,7 @@ Let's begin!
 - Reaching context: global context, project context, metadata, structure the agent chooses
 - Self-management: single inbox, boards, templates, schedules, events
 
-Back in the day, tools like Google Drive or Notion were totally fine because their editors and collaboration features were great, and **in many cases they still are.** But now that more and more people work mainly with their agents, tools that weren't designed with AI in mind struggle to give those agents easy access for both **reading** and **writing**. For example, even something as simple as **accessing an image** is often impossible. 
+Back in the day, tools like Google Drive or Notion were totally fine because their editors and collaboration features were great, and **in many cases they still are.** But now that more and more people work mainly with their agents, tools that weren't designed with AI in mind struggle to give those agents easy access for both **reading** and **writing**. For example, even something as simple as **accessing an image** is often impossible.
 
 ![An AI agent connects to documents in Google Drive and Notion. Below the documents, the figure has two separate columns. The Reading column shows that the agent often cannot access images and other details. This part is marked red. The Writing column shows that the agent struggles to edit documents.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-1/frame.png)
 
@@ -28,7 +28,7 @@ Since LLMs' native "language" is text, Markdown and HTML got incredibly popular,
 
 Obviously, there are some tools that aim to give us both. Some are existing tools **converting themselves into AI-native** ones, although agents still can't access all their features. Others are new **AI-native** tools that lack important features. The decision isn't easy.
 
-Let's consider the following: 
+Let's consider the following:
 
 - Agents are getting more popular even among non-technical people
 - The knowledge reaches humans through an agent, rather than directly
@@ -36,7 +36,7 @@ Let's consider the following:
 - Agents can process a large number of documents quickly
 - In many cases, we don't need documents, only the outcome
 
-These points **are not true for most organizations today**, but that's changing quite fast, which means we may want **a knowledge base built for agents, not humans**. For now, some bridges may be useful, but not as the core of the entire system. 
+These points **are not true for most organizations today**, but that's changing quite fast, which means we may want **a knowledge base built for agents, not humans**. For now, some bridges may be useful, but not as the core of the entire system.
 
 ![A flow diagram. On the left is a frame named Core. It holds an Agent that reads and writes a Knowledge base of Markdown and HTML files. The knowledge base is marked red. On the right is a frame named Bridges for humans. It holds Google Drive and Notion, which the knowledge base connects to through integrations. The file names in the click details are examples.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-3/frame.png)
 
@@ -56,21 +56,21 @@ A few months ago, Andrej Karpathy [wrote about his personal knowledge base](http
 
 ## Beyond Markdown
 
-Markdown and HTML are not the only formats we can use for knowledge bases. There are also `mdx` and `svx`, which let us use components within markdown files. This way, we balance **file readability** with **interactivity** and, depending on our needs, even **state**! 
+Markdown and HTML are not the only formats we can use for knowledge bases. There are also `mdx` and `svx`, which let us use components within markdown files. This way, we balance **file readability** with **interactivity** and, depending on our needs, even **state**!
 
-Below is an example of an `.svx` file whose source stays simple, while its rendered version includes a functional checklist. And since [components come into play](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/guided-components) here, they can be reused across many files. 
+Below is an example of an `.svx` file whose source stays simple, while its rendered version includes a functional checklist. And since [components come into play](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/guided-components) here, they can be reused across many files.
 
 ![Two panels side by side. Left, "The file": the plain source of an example note, deploy-checklist.svx, with frontmatter (a title and four steps), a heading, one sentence and the component line \<Checklist items={steps} />, which is outlined in red. Small text under the panel says "mdx or svx". A red arrow labelled "renders as" goes from the component line to the right panel, "What you see": the same note rendered, with the heading, the sentence and a live checklist outlined in red. Build and Run tests are ticked, Deploy and Verify are not, and the readout says "2 of 4 done".](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-5/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-5/frame.html)
 
-This becomes especially useful for complex ideas that need to be presented from a broad perspective first, with the option to dig into the details without having to scroll through a wall of text. 
+This becomes especially useful for complex ideas that need to be presented from a broad perspective first, with the option to dig into the details without having to scroll through a wall of text.
 
 ![An interactive schema explainer for an LLM-written knowledge base. At the top is a strip with four steps: sources, documents, chunks and links. Below it are four equal table columns that list their fields and types. A "decide" tag marks each open decision. A full-width card at the bottom explains the selected table or field. At the start, documents.updated\_by is selected. The example values in the card, such as URLs, uuids, timestamps and row counts, are illustrative examples.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-6/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-6/frame.html)
 
-Agents can use `.svx` quite easily these days, but it's worth spending some time on a setup that makes it even easier for them. You can find an example in the [skills repository](https://github.com/overment/skills/tree/main/skills/explainer), where the `explainer` skill isn't just a prompt. It also includes templates and logic that make it easier for the agent to prepare **consistent** visualizations. A skill like this works best with **state-of-the-art (SOTA) models**. 
+Agents can use `.svx` quite easily these days, but it's worth spending some time on a setup that makes it even easier for them. You can find an example in the [skills repository](https://github.com/overment/skills/tree/main/skills/explainer), where the `explainer` skill isn't just a prompt. It also includes templates and logic that make it easier for the agent to prepare **consistent** visualizations. A skill like this works best with **state-of-the-art (SOTA) models**.
 
 The `explainer` skill may serve as **inspiration** for generating skills in different specialized areas: issue explainers, activity reports, high-level architectural decisions, etc., all personalized to the projects we're working on. The conclusion here is that **artifacts and skills may become part of your knowledge base** and they should **guide a model** toward results that meet our needs without limiting its options.
 
@@ -82,7 +82,7 @@ The `explainer` skill may serve as **inspiration** for generating skills in diff
 
 Knowledge systems such as internal wikis were built for many reasons: **document organization**, **employee onboarding**, or **improving communication** and **processes**. Their main users were humans, so we could assume they had at least a general understanding of the wider context, which helped them use the system.
 
-For agents, this works slightly differently: models can read and understand documents faster than humans, but the way they access and perceive them can easily lead to mistakes, despite their intelligence. Let's consider the following example: 
+For agents, this works slightly differently: models can read and understand documents faster than humans, but the way they access and perceive them can easily lead to mistakes, despite their intelligence. Let's consider the following example:
 
 1. The agent is asked about the **deployment process**
 2. It searches the knowledge base and reaches a few notes that **look complete**
@@ -103,7 +103,7 @@ First, we need to understand how the agent **reaches** the context. It does this
 
 [Open figure](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-9/frame.html)
 
-**Semantic Search:** there are **embedding models** specialized in **describing the meaning** of the content using a list of numbers (a vector). This way we can index existing documents to get their embeddings. Then, whenever we want to search for something, we send the query to the embedding model to **get its meaning** and then **compare the vectors** to determine **which documents are similar to the query in terms of meaning**. 
+**Semantic Search:** there are **embedding models** specialized in **describing the meaning** of the content using a list of numbers (a vector). This way we can index existing documents to get their embeddings. Then, whenever we want to search for something, we send the query to the embedding model to **get its meaning** and then **compare the vectors** to determine **which documents are similar to the query in terms of meaning**.
 
 ![A flow diagram. Documents and a query both go to the same embedding model. The model turns the documents into document vectors and the query into a query vector. A compare step, marked red, compares the vectors to find the documents that are similar in meaning to the query. The document titles, the query, the vector numbers and the similarity scores are example values.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-10/frame.png)
 
@@ -113,7 +113,7 @@ While semantic search increases the chance of finding documents that pattern-bas
 
 Moreover, embedding models have **context limits**, so long documents have to be split into fragments. They also have a **knowledge cutoff**, so they may have a **different understanding of some concepts** or simply not be aware of them. On the other hand, multimodal embeddings can handle **image search**.
 
-But first and foremost, we need to understand that embeddings let us find content that is 'similar in meaning', which isn't necessarily the same as 'relevant'. 
+But first and foremost, we need to understand that embeddings let us find content that is 'similar in meaning', which isn't necessarily the same as 'relevant'.
 
 ![An example query, "How do I deploy to production?", and four example documents ranked by similarity in meaning. Dithered bars show how similar each document is to the query. The bar lengths are illustrative, not measured scores. The most similar document, "Deployment: a history of our tools", is marked red because it is not relevant. The production deploy runbook is relevant and ranks second. A deploy dashboard redesign note is similar but not relevant. A note that says production servers need VPN access is relevant but has the lowest similarity.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-11/frame.png)
 
@@ -137,9 +137,9 @@ Besides search tools, we should consider additional kinds of context that **[hel
 
 [Open figure](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-13/frame.html)
 
-Now we might start thinking about **the structure** for folders, categories, tags, and templates, and instinctively try to build it ourselves to "stay in control". But the truth is that **agents will be responsible for managing documents**, so it's a good idea to **let them** figure out the structure on their own and, if needed, steer the process to take our specific needs into account. We may even decide to use the tools we don't know yet, as AI may easily onboard us. A good example may be [neo4j](https://neo4j.com/). 
+Now we might start thinking about **the structure** for folders, categories, tags, and templates, and instinctively try to build it ourselves to "stay in control". But the truth is that **agents will be responsible for managing documents**, so it's a good idea to **let them** figure out the structure on their own and, if needed, steer the process to take our specific needs into account. We may even decide to use the tools we don't know yet, as AI may easily onboard us. A good example may be [neo4j](https://neo4j.com/).
 
-There is no single answer to the question of **how to make a perfect knowledge base**. But this is a very well-known problem and there are many approaches **models are familiar with** - even a simple question about popular strategies gives us this: 
+There is no single answer to the question of **how to make a perfect knowledge base**. But this is a very well-known problem and there are many approaches **models are familiar with** - even a simple question about popular strategies gives us this:
 
 ![A transcript with two frames. The User frame holds the question: "What are the well-known, opinionated techniques for building and maintaining a knowledge base?" The AI frame is red. It holds the answer, a list of 36 techniques in three columns: Zettelkasten, Folgezettel, Evergreen notes, Maps of Content (LYT), Digital garden, PARA, CODE (Building a Second Brain), Progressive summarization, Johnny.Decimal, GTD reference filing and weekly review, Daily notes first, Commonplace book, Spaced repetition, Incremental reading, Diátaxis, Every Page Is Page One, Topic-based authoring (DITA), BLUF (inverted pyramid), Card sorting, Tree testing, Controlled vocabularies, SKOS taxonomies, Docs-as-code, Handbook-first, KCS (Knowledge-Centered Service), ADRs (Architecture Decision Records), RFCs (design docs), Single source of truth, Page owners with review dates, ROT audits, Archive don't delete, Boy Scout rule (wiki gardening), Search analytics, Automated link and staleness checks, Inbox processing, AI-readiness (llms.txt).](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-14/frame.png)
 
@@ -189,7 +189,7 @@ While the mechanics that unlock **ambient, durable agents** will be covered in t
 - **PRs:** any merged change is a potential reason to update the knowledge base, and agents may be responsible for deciding what's worth keeping and what's not.
 - **Repositories:** a new repository on our account likely means we have a new project our agent needs to know about. It should be added to the global context automatically, so the information is already there the moment the agent is asked about it.
 - **Support Tickets:** while the knowledge base isn't necessarily the right place for the issues themselves, it can be updated with the overall state of the product and the most important things users talk about.
-- **Issues:** as with support tickets, issue trackers contain knowledge that **shouldn't be copied to the knowledge base** but can be distilled to enrich the broader context of a project and its features.  
+- **Issues:** as with support tickets, issue trackers contain knowledge that **shouldn't be copied to the knowledge base** but can be distilled to enrich the broader context of a project and its features.
 - **Labeled e-mails and messages:** we don't need agents to read all our messages, but the ones that are automatically labeled can be forwarded to the agent, and their contents can land in the knowledge base as documents.
 - **Read Later:** new bookmarks or highlights can automatically land in the knowledge base **and be linked** to existing information.
 
@@ -199,7 +199,7 @@ While the mechanics that unlock **ambient, durable agents** will be covered in t
 
 ## Broader context
 
-Agents' understanding is limited to what's already in their context. And even if we have a knowledge base, they can see **only what's currently in it**, which means they lose track of **what came before and what's coming next**. 
+Agents' understanding is limited to what's already in their context. And even if we have a knowledge base, they can see **only what's currently in it**, which means they lose track of **what came before and what's coming next**.
 
 And while a git repository may come to mind, we're talking more about a **list of implemented, active, planned and archived features**. This way, an agent walking into the **"tasks"** folder immediately knows not only the **narrow context** of their task, but also the **broader context** that helps them make good decisions.
 
@@ -218,11 +218,11 @@ A Kanban board doesn't sound like much of a discovery, but [in practice it's ext
 Let's say we want a personal knowledge base, strictly for us and our "personal AGI agent" that has broad context about us, our work, and our personal life. It aims to become our "second brain", a concept that's been widely known for years, but now managed entirely by an agent. To make it useful, we need to set a couple of rules:
 
 - **Availability:** the agent has to reach it easily, whether it runs in the cloud, on our Mac or PC, or on a mobile device (phone, watch or any other wearable). Because of this, the knowledge base has to live remotely, and if it's filesystem-based, it can be synced with our computer using tools like `mutagen sync`.
-- **Source of truth:** the knowledge base should be the source of truth for its own notes, without two-way synchronization; information already well maintained in external services should stay there, but [the agent should be aware of what can be found there.](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/pointer-notes) 
+- **Source of truth:** the knowledge base should be the source of truth for its own notes, without two-way synchronization; information already well maintained in external services should stay there, but [the agent should be aware of what can be found there.](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/pointer-notes)
 - **Self-evolving:** it has to grow nearly autonomously, without us needing to verify or change anything by looking at the files. Any interaction with us has to be proxied through the agent(s).
 - **Simplicity:** a knowledge base can easily become a separate system, but so far the best path has been to **keep it simple** and rely solely on **growing agents' and harnesses' capabilities** instead of fighting their flaws.
 
-There may be more rules, depending on our needs. And then we may want to use the `knowledge skill` mentioned above to give an initial shape to the knowledge base and to the skill for managing it. The generated skill is presented below. 
+There may be more rules, depending on our needs. And then we may want to use the `knowledge skill` mentioned above to give an initial shape to the knowledge base and to the skill for managing it. The generated skill is presented below.
 
 ![A card titled "personal-agi-kb skill" with three tiers. At the top, the SKILL.md box lists what the base is for, rules with their reasons, and which note to open for which task. Thin lines run from it down to six reference notes: map, flow, intake, search, upkeep and structure log, each with a short role. At the bottom are two scripts: check.ts checks links and fields, and kb.ts handles IDs, queries and rebuilt pages. A vertical scale on the right marks the tiers as always read, opened when needed, and run, not read. Under the card: judgment in notes, mechanics in scripts.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-21/frame.png)
 

@@ -149,13 +149,13 @@ Your harness had to split support ticket #4471, 412 date reports, into one GitHu
 
 Your harness first counted parser as 374 from its own run of the kb's rules plus the desk notes, so the course refused it. The desk's hint pointed at its own view, and the rendered page's desk table showed 379, so ticket #1 took that number.
 
-*Why it matters:* Raw content is for the AI, the rendered view is for you: render it and look.
+_Why it matters:_ Raw content is for the AI, the rendered view is for you: render it and look.
 
 **2. The desk's update** — went right the first time
 
 After step one passed, your harness re-read the Challenge page by itself, because the reply said the desk was not done. It found the update: parser fixed, hint won't fix, nothing on one-day moves.
 
-*Why it matters:* A download is a dated copy: re-fetch before claiming done.
+_Why it matters:_ A download is a dated copy: re-fetch before claiming done.
 
 #### How the solve went
 
@@ -226,13 +226,13 @@ Twój harness miał rozbić ticket wsparcia #4471, 412 zgłoszeń o datach, na o
 
 Twój harness najpierw policzył `parser` jako 374, z własnego uruchomienia reguł kb plus notatek desku, więc kurs to odrzucił. Wskazówka desku wskazała jego własny widok, a tabela desku na zrenderowanej stronie pokazała 379, więc ticket #1 dostał tę liczbę.
 
-*Dlaczego to ważne:* surowa treść jest dla AI, zrenderowany widok jest dla ciebie: wyrenderuj i popatrz.
+_Dlaczego to ważne:_ surowa treść jest dla AI, zrenderowany widok jest dla ciebie: wyrenderuj i popatrz.
 
 **2. Aktualizacja desku (The desk's update)** — poszło dobrze za pierwszym razem
 
 Po zaliczeniu kroku pierwszego twój harness sam ponownie wczytał stronę wyzwania, bo odpowiedź mówiła, że desk jeszcze nie skończył. Znalazł aktualizację: parser naprawiony, hint nie będzie naprawiany, nic o przesunięciach o dzień.
 
-*Dlaczego to ważne:* pobrany plik to kopia z danego dnia: pobierz ponownie, zanim ogłosisz „gotowe”.
+_Dlaczego to ważne:_ pobrany plik to kopia z danego dnia: pobierz ponownie, zanim ogłosisz „gotowe”.
 
 #### Jak przebiegło rozwiązanie
 

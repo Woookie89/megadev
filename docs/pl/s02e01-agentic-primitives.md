@@ -42,7 +42,7 @@ Poniżej pokazano naiwną implementację. [Pi agent](https://github.com/earendil
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-3/frame.html)
 
-Powyższa logika jest niezwykle elastyczna, zwłaszcza jeśli agent otrzyma **narzędzie do pisania i wykonywania kodu** oraz **system plików**. W praktyce wiele rzeczy uniemożliwia agentowi niezawodną pracę, szczególnie przy zadaniach rozciągniętych w czasie. Nawet pojedynczy problem z API może zatrzymać takiego agenta. W praktyce czyha też znacznie więcej pułapek związanych z **pamięcią**, **obsługą długiego kontekstu**, **autoryzowanymi działaniami** czy **błędami wewnętrznymi i zewnętrznymi, limitami czasu itd.** Codziennie mierzymy się z wieloma takimi problemami podczas pracy z agentami programistycznymi: widzimy, jak się blokują, nie potrafią czegoś zrobić albo zbaczają z kursu z powodu brakujących informacji i tym podobnych.
+Powyższa logika jest niezwykle elastyczna, zwłaszcza jeśli agent otrzyma **narzędzie do pisania i wykonywania kodu** oraz **system plików**. W praktyce wiele rzeczy uniemożliwia agentowi niezawodną pracę, szczególnie przy zadaniach rozciągniętych w czasie. Nawet pojedynczy problem z API może zatrzymać takiego agenta. W praktyce czyha też znacznie więcej pułapek związanych z **pamięcią**, **obsługą długiego kontekstu**, **autoryzowanymi działaniami** czy **błędami wewnętrznymi i zewnętrznymi, limitami czasu itd.** Codziennie mierzymy się z wieloma takimi problemami podczas pracy z agentami programistycznymi: widzimy, jak się blokują, nie potrafią czegoś zrobić albo zbaczają z kursu z powodu brakujących informacji itp.
 
 ![Pionowy diagram przepływu. Przykładowe wieloetapowe zapytanie rozpoczyna pętlę agenta. Wywołanie modelu 1 zwraca wywołanie narzędzia, a narzędzie zwraca wynik. Wywołanie modelu 2 napotyka błąd API oznaczony na czerwono. W pętli nie ma obsługi tego błędu, więc zadanie zatrzymuje się w połowie tury. Zapytanie, wywołanie narzędzia i tekst błędu są przykładami.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-5/frame.png)
 
@@ -65,9 +65,9 @@ Interakcje z agentem zapisują się w wątku, który może obejmować wiele sesj
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-7/frame.html)
 
 **Trwałość danych:**
-Wątek to nie jedyna rzecz, którą harness musi przechowywać. Są też załączniki, wygenerowane artefakty, skrypty, umiejętności, uprawnienia, połączenia, integracje, niestandardowe narzędzia i wiele więcej. Z perspektywy programisty nie ma w tym nic ciekawego, dopóki nie uwzględnimy, że **agenci muszą mieć możliwość zarządzania tym wszystkim**.
+Wątek to nie jedyna rzecz, którą harness musi przechowywać. Są też załączniki, wygenerowane artefakty, skrypty, skille, uprawnienia, połączenia, integracje, niestandardowe narzędzia i wiele więcej. Z perspektywy programisty nie ma w tym nic ciekawego, dopóki nie uwzględnimy, że **agenci muszą mieć możliwość zarządzania tym wszystkim**.
 
-Na przykład wygenerowane obrazy lub artefakty powinny być dostępne agentowi, aby mógł wykonać dotyczące ich zadania uzupełniające. Jeśli dana integracja wymaga dodatkowego uprawnienia, agent powinien móc pokazać nam ustawienia, w których możemy je przyznać.
+Na przykład wygenerowane obrazy lub artefakty powinny być dostępne agentowi, aby mógł do nich wrócić przy kolejnych zadaniach. Jeśli dana integracja wymaga dodatkowego uprawnienia, agent powinien móc pokazać nam ustawienia, w których możemy je przyznać.
 
 ![Diagram przepływu trwałości danych w harnessie agenta. Agent łączy się z trzema przechowywanymi elementami w ramce „Pamięć harnessu”: wątkami, artefaktami i uprawnieniami. Czerwona linia od agenta do artefaktów pokazuje, jak agent odnajduje wcześniej wygenerowany obraz na potrzeby zadania uzupełniającego. Linia od uprawnień do użytkownika wskazuje ustawienia, w których użytkownik musi je przyznać. Obraz i integracja są przykładowymi wartościami.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-10/frame.png)
 
@@ -75,7 +75,7 @@ Na przykład wygenerowane obrazy lub artefakty powinny być dostępne agentowi, 
 
 Jest tu pewien haczyk, związany z **wyjściem poza kontekst pojedynczego użytkownika**. Przyzwyczailiśmy się do tego, że agenci mogą swobodnie korzystać z systemu plików na naszym Macu lub PC. Gdy jednak wyjdziemy poza ten zakres i pozwolimy agentom pracować dla zespołu lub użytkowników na produkcji, bez sandboxów i odpowiedniego zarządzania uprawnieniami sytuacja znacznie się komplikuje.
 
-![Agent po lewej łączy się z trzema ramkami trwałych elementów. Ramki pokazują trzy poziomy dostępu. „Agent odczytuje” zawiera wątki i załączniki. „Agent tworzy i edytuje” zawiera artefakty, skrypty, umiejętności i niestandardowe narzędzia; ta ramka jest czerwona. „Agent prosi, użytkownik przyznaje” zawiera uprawnienia, połączenia i integracje. Grupowanie elementów na poziomy jest przykładowe.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.png)
+![Agent po lewej łączy się z trzema ramkami trwałych elementów. Ramki pokazują trzy poziomy dostępu. „Agent odczytuje” zawiera wątki i załączniki. „Agent tworzy i edytuje” zawiera artefakty, skrypty, skille i niestandardowe narzędzia; ta ramka jest czerwona. „Agent prosi, użytkownik przyznaje” zawiera uprawnienia, połączenia i integracje. Grupowanie elementów na poziomy jest przykładowe.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-8/frame.html)
 
@@ -94,7 +94,7 @@ Harnessy na różne sposoby zarządzają oknem kontekstu. Obejmuje to jasny opis
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-11/frame.html)
 
 **Narzędzia:**
-W zeszłym tygodniu dowiedzieliśmy się, że model może korzystać z narzędzi przez Function Calling lub Code Mode. Pierwsze podejście wymaga **załadowania schematu** do kontekstu, a wywołania są osobne (choć mogą być wykonywane równolegle). Ich wyniki dołączane są do wątku, by model mógł zdecydować o kolejnym kroku. Sprawdza się to przy prostych interakcjach, ale jest bardzo nieefektywne w złożonych przepływach pracy. Dlatego nowoczesne agenty **piszą kod**, który może **łączyć narzędzia w łańcuchy** i przechowywać wyniki w zmiennych zamiast dodawać każdy wynik do kontekstu.
+W zeszłym tygodniu dowiedzieliśmy się, że model może korzystać z narzędzi przez Function Calling lub Code Mode. Pierwsze podejście wymaga **załadowania schematu** do kontekstu, a wywołania są osobne (choć mogą być wykonywane równolegle). Ich wyniki dołączane są do wątku, by model mógł zdecydować o kolejnym kroku. Sprawdza się to przy prostych interakcjach, ale jest bardzo nieefektywne w złożonych przepływach pracy. Dlatego nowocześni agenci **piszą kod**, który może **łączyć narzędzia w łańcuchy** i przechowywać wyniki w zmiennych zamiast dodawać każdy wynik do kontekstu.
 
 ![Diagram przepływu w Code Mode. Model pisze jeden skrypt wywołujący kolejno trzy narzędzia: calendar.list, mail.search i files.write. Każdy wynik pozostaje w zmiennej: events, mails i file. Do wątku trafia tylko wynik końcowy, który model odczytuje w następnym wywołaniu. Nazwy narzędzi, kod i wartości są przykładami.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-12/frame.png)
 
@@ -117,7 +117,7 @@ Wszystkie te elementy można uznać za rdzeń logiki harnessu. Razem dobrze poka
 Jeśli ta wiedza wydaje się zbędna osobom, które nie będą budować własnego agenta, rozważmy następujące kwestie:
 
 - nie możemy mieć bardzo długiego pliku AGENTS.md, bo model zignoruje jego większość, a opóźnienie i koszt wzrosną, dopóki zawartość nie zostanie zbuforowana
-- umiejętności również muszą być krótkie, a czasem trzeba je **aktywować ponownie** wiele razy z powodu kompakcji kontekstu
+- skille również muszą być krótkie, a czasem trzeba je **aktywować ponownie** wiele razy z powodu kompakcji kontekstu
 - jeśli to możliwe, powinniśmy zadbać, by wątek był **jak najkrótszy**, albo przynajmniej utrzymać agenta **wyspecjalizowanego** w określonych zadaniach
 - możemy oczekiwać, że agent znajdzie informacje potrzebne do wykonania zadania, ale powinniśmy mu to ułatwić i pamiętać, że informacje te mogą zniknąć wskutek kompresji albo po prostu zostać zignorowane przez model
 
@@ -144,7 +144,7 @@ Poniżej przedstawiono **strukturę** [promptu systemowego Claude'a dla Haiku 5.
 Dobra wiadomość jest taka, że nie musimy pisać promptu ręcznie. Prompty, których będziemy używać, często będą znacznie prostsze niż te w Claude czy ChatGPT, chyba że stworzymy agentów ogólnego przeznaczenia. Nadal musimy jednak wiedzieć, czego oczekiwać od promptu i jakie są najważniejsze zasady Prompt Engineering.
 
 **Osobowość:** podstawowe informacje o roli agenta i osobach, z którymi wchodzi w interakcję. Taki kontekst wpływa na zachowanie modelu.
-**Środowisko:** istotne informacje o celu agenta i środowisku, na przykład o tym, że agent działa bez łatwego dostępu do człowieka.
+**Środowisko:** istotne informacje o celu agenta i środowisku, na przykład o tym, że agent działa bez łatwego dostępu do użytkownika.
 **Kontekst:** agentowi trzeba przedstawić mapę dostępnych zasobów lub przynajmniej informacje, gdzie ich szukać; inaczej nie ukończy zadania albo błędnie stwierdzi, że nie potrafi zrobić czegoś, do czego został przeznaczony.
 **Odkrywanie:** podobnie jak w przypadku kontekstu agent musi wiedzieć, jak poznawać możliwości harnessu, by właściwie z nich korzystać. Na przykład może wykonać jakiś proces, pomijając część kroków z powodu kiepskiej organizacji dokumentów opisujących ten proces.
 **Granice:** agent musi znać swoje ograniczenia i wiedzieć, czego nie wolno mu robić. Wiemy już, że to tylko **zalecenie**, ponieważ model może technicznie zignorować te instrukcje.
@@ -159,7 +159,7 @@ Tworzenie dobrego promptu systemowego możemy zacząć **od prostego rozwiązani
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-17/frame.html)
 
-Prawdopodobnie **najlepszą pojedynczą radę** dotyczącą promptów znajdziemy w repozytorium **[Latent Space Activation](https://github.com/daveshap/latent_space_activation)**. Ma ono prawie cztery lata, ale nadal jest aktualne. Według niego promptowanie polega mniej więcej na **skłonieniu modelu do przypomnienia sobie istotnej wiedzy i metod rozwiązywania problemów oraz przywołaniu ich w rozmowie, zanim odpowie**. Musimy zawsze o tym pamiętać, nawet jeśli rozumowanie dużych modeli rozumujących ma rozwiązywać właśnie ten problem.
+Prawdopodobnie **najlepszą pojedynczą radę** dotyczącą promptów znajdziemy w repozytorium **[Latent Space Activation](https://github.com/daveshap/latent_space_activation)**. Ma ono prawie cztery lata, ale nadal jest aktualne. Według niego promptowanie polega mniej więcej na **skłonieniu modelu do przypomnienia sobie istotnej wiedzy i metod rozwiązywania problemów oraz przywołania ich w rozmowie, zanim odpowie**. Musimy zawsze o tym pamiętać, nawet jeśli rozumowanie dużych modeli rozumujących ma rozwiązywać właśnie ten problem.
 
 ## Kontekst i pamięć
 
@@ -206,7 +206,7 @@ Poniżej znajduje się krótki przegląd mechanizmów wyszukiwania używanych pr
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-22/frame.html)
 
-Możemy w końcu oczekiwać, że czołowe narzędzia AI opracują pamięć agentową znacznie dokładniejszą niż dostępna dziś. Nadal mogą się jednak zdarzać sytuacje, w których potrzebna będzie pamięć w pełni spersonalizowana do naszego przypadku użycia.
+Z czasem możemy oczekiwać, że czołowe narzędzia AI opracują pamięć agentową znacznie dokładniejszą niż dostępna dziś. Nadal mogą się jednak zdarzać sytuacje, w których potrzebna będzie pamięć w pełni spersonalizowana do naszego przypadku użycia.
 
 ## Narzędzia
 
@@ -230,7 +230,7 @@ Interakcje agenta ze światem zewnętrznym można zaimplementować na wiele spos
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-26/frame.html)
 
-- **Możliwość ponownego użycia:** wiemy, że umiejętności mogą zawierać skrypty, które agent **wykorzystuje ponownie**, by nie wykonywać ręcznie tego samego zadania. To samo dotyczy narzędzi, jeśli pozwolimy agentowi nimi zarządzać. Nie chodzi jednak tylko o to, by agent **tworzył narzędzia**, ale także o połączenie ich z innymi możliwościami, takimi jak **dostępne integracje**, **magazyny wartości** lub **inne pakiety**.
+- **Możliwość ponownego użycia:** wiemy, że skille mogą zawierać skrypty, które agent **wykorzystuje ponownie**, by nie wykonywać ręcznie tego samego zadania. To samo dotyczy narzędzi, jeśli pozwolimy agentowi nimi zarządzać. Nie chodzi jednak tylko o to, by agent **tworzył narzędzia**, ale także o połączenie ich z innymi możliwościami, takimi jak **dostępne integracje**, **magazyny wartości** lub **inne pakiety**.
 
 ![Pionowy diagram. Agent u góry tworzy pakiet. Pakiet zawiera logikę. Linie prowadzą od logiki do trzech możliwości: integracji, magazynów wartości i innych pakietów. Linie importu w logice są przykładem.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-27/frame.png)
 
@@ -248,4 +248,4 @@ W praktyce wszystkie te elementy mogą być **ograniczone** lub **rozszerzone** 
 
 Codziennie pracujemy z agentami, czasem nawet nie zdając sobie sprawy, jak wiele dzieje się pod maską. Po tej lekcji — niezależnie od tego, czy będziemy budować własnych agentów, czy korzystać z istniejących — lepiej rozumiemy, **czego możemy od nich oczekiwać** i co sprawia, że zawodzą, na przykład gdy prosimy ich o przywołanie czegoś, a oni twierdzą, że tego nie mają.
 
-Ostatnia lekcja jest taka, że zbudowanie nawet prostego agenta, by nauczyć się, jak działa, może sprawić, że znacznie lepiej poradzimy sobie z Claude, Pi lub dowolnym innym harnessem.
+Na koniec warto zrozumieć, że zbudowanie nawet prostego agenta, by nauczyć się, jak działa, może sprawić, że znacznie lepiej poradzimy sobie z Claude, Pi lub dowolnym innym harnessem.

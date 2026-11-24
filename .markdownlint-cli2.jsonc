@@ -1,0 +1,63 @@
+// markdownlint for the whole project.
+//   check: npx markdownlint-cli2
+//   fix:   npx markdownlint-cli2 --fix
+// The VS Code markdownlint extension reads this file too.
+{
+  "globs": ["**/*.md"],
+  "gitignore": true,
+  "ignores": [
+    "**/node_modules/**",
+    // Verbatim course text: keep it exactly as the course wrote it.
+    "docs/challenges-original/**",
+    "docs/*-transcript.md",
+    "docs/s0*-*.md",
+    "**/hq-debrief.md"
+  ],
+  "config": {
+    "default": true,
+
+    // --- headings ---
+    "MD003": { "style": "atx" },                         // # Heading, never underlined
+    "MD024": { "siblings_only": true },                  // same heading allowed under different parents
+    "MD025": true,                                       // one H1 per file
+    "MD026": { "punctuation": ".,;:!" },                 // no trailing punctuation (a ? is fine)
+    "MD036": false,                                      // bold labels ("**Why:**") are on purpose
+    "MD041": false,                                      // logs and notes may start with a table or a note
+
+    // --- lists ---
+    "MD004": { "style": "dash" },                        // - item
+    "MD007": { "indent": 2 },                            // nested list: 2 spaces
+    "MD029": { "style": "ordered" },                     // 1. 2. 3.
+    "MD030": { "ul_single": 1, "ol_single": 1, "ul_multi": 1, "ol_multi": 1 },
+
+    // --- emphasis, rules, code ---
+    "MD035": { "style": "---" },
+    "MD046": { "style": "fenced" },
+    "MD048": { "style": "backtick" },
+    "MD049": { "style": "underscore" },                  // _italic_
+    "MD050": { "style": "asterisk" },                    // **bold**
+    "MD040": true,                                       // every code fence names its language
+
+    // --- whitespace ---
+    "MD009": { "br_spaces": 0, "strict": true },         // no trailing spaces; use \ for a hard break
+    "MD010": { "code_blocks": false },
+    "MD012": { "maximum": 1 },
+
+    // --- tables ---
+    "MD055": { "style": "leading_and_trailing" },        // | a | b |
+    "MD056": true,
+    "MD058": true,                                       // blank line around tables
+    "MD060": { "style": "compact", "aligned_delimiter": false },
+
+    // --- links ---
+    "MD034": true,                                       // no bare URLs: <https://...> or [text](url)
+    "MD051": true,                                       // #fragments must exist
+    "MD059": { "prohibited_texts": ["tutaj", "tu", "link", "kliknij", "here", "click here", "link", "more"] },
+
+    // --- off on purpose ---
+    "MD044": false,                                      // proper names: hits env names (TELEGRAM_TOKEN), skill names and quotes
+    "MD028": false,                                      // pills open with two separate > quotes on purpose
+    "MD013": false,                                      // paragraphs are wrapped by hand, tables are long
+    "MD033": false                                       // <br>, <details> and comments are used on purpose
+  }
+}

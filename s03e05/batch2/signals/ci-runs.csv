@@ -1,0 +1,5 @@
+run_id,finished_at,branch,sha,checks
+ci-1246,2026-10-28T09:12:44Z,main,63e3ca0,41/41 · diff: +38 -11
+ci-1247,2026-10-29T10:41:03Z,release/auto-close,eddda7d,41/41 · diff: +226 -48
+ci-1250,2026-10-29T13:18:52Z,release/bulk-acknowledge,2d18fb1,41/41 · diff: +174 -36
+ci-1251,2026-11-02T09:30:21Z,main,d66ecd4,41/41 · diff: +12 -5

@@ -1,0 +1,56 @@
+mock tracker on :8787
+GET /issues 
+POST /issues/1/comments {"body":"Picked up #1 by the delivery agent. Working it from the owner's triage skill; status follows here and in the sh
+GET /issues 
+GET /issues/1 
+GET /records 
+GET /feed 
+POST /shiplog {"line":"#1 · waiting · live: ✗ · open risks: #1 deploy was a dry rehearsal (git error), and live /incidents answers 500
+POST /issues/1/comments {"body":"#1: built, not live yet.\n- Decision: additive read. contract/api.md says a new query parameter whose answers k
+GET /issues 
+POST /issues/2/comments {"body":"Picked up #2 by the delivery agent. Working it from the owner's triage skill; status follows here and in the sh
+POST /issues/3/comments {"body":"Picked up #3 by the delivery agent. Working it from the owner's triage skill; status follows here and in the sh
+GET /issues 
+GET /issues/2 
+GET /records 
+GET /feed 
+PUT /records/0007-incident-cause-field {"text":"---\nid: 0007\ntitle: Add a cause field to incidents\nissue: 2\nstatus: proposed\nsigned-by:\n---\n\n## Ask\nIs
+POST /issues/2/labels {"label":"needs-human"}
+POST /issues/2/comments {"body":"This changes what GET /incidents carries (a field added to every incident). contract/api.md says that needs a d
+POST /shiplog {"line":"#2 · asked · live: ✗ · open risks: #2 needs the owner's answer (owner reads it); status page reads /incidents (
+POST /shiplog {"line":"#3 · declined · live: ✗ · open risks: #3 INC-1002 duplicate stays in the feed until ops removes it (ops, suppor
+POST /issues/3/comments {"body":"Declined, no change made. Deleting INC-1002 is a write to production data. That needs the production admin toke
+POST /issues/3/close 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /records/0007-incident-cause-field 
+GET /feed 
+PUT /records/0007-incident-cause-field {"text":"---\nid: 0007\ntitle: Add a cause field to incidents\nissue: 2\nstatus: accepted\nsigned-by:\n---\n\n## Ask\nIs
+POST /shiplog {"line":"#2 · waiting · live: ✗ · open risks: #2 deploy was a dry run, so GET /incident-causes is not live (404); live G
+POST /issues/2/comments {"body":"Built option 2 only, per your `/answer 2` and record 0007-incident-cause-field. The record is now `accepted` wi
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 
+GET /issues 

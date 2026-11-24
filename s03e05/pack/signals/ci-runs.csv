@@ -1,0 +1,22 @@
+run_id,finished_at,branch,sha,checks
+ci-1204,2026-10-12T09:21:07Z,main,7ba8845,38/38 · diff: +84 -12
+ci-1206,2026-10-12T14:02:33Z,suggestions-v2,d3b2dce,38/38 · diff: +312 -41
+ci-1209,2026-10-13T08:47:15Z,suggestions-v2,fcd7fd8,39/40 · diff: +46 -9
+ci-1210,2026-10-13T10:12:51Z,suggestions-v2,b83ebc3,40/40 · diff: +12 -3
+ci-1211,2026-10-13T16:30:02Z,status-page-v3,c46fb08,40/40 · diff: +188 -127
+ci-1213,2026-10-14T09:05:44Z,status-page-v3,586fafd,40/40 · diff: +31 -18
+ci-1215,2026-10-14T11:41:29Z,main,2ba195b,41/41 · diff: +9 -2
+ci-1218,2026-10-14T15:18:10Z,suggestions-v2,ad87404,41/41 · diff: +67 -22
+ci-1219,2026-10-15T09:33:58Z,release/suggestions-v2,e7b1176,41/41 · diff: +418 -63
+ci-1222,2026-10-15T13:06:17Z,release/status-page-v3,b665fc6,41/41 · diff: none
+ci-1223,2026-10-16T10:22:40Z,main,04fa781,41/41 · diff: +5 -1
+ci-1224,2026-10-19T09:58:03Z,main,7419300,41/41 · diff: +22 -7
+ci-1226,2026-10-20T11:14:36Z,fix-export-quota,89405d3,41/41 · diff: +14 -6
+ci-1228,2026-10-20T15:40:12Z,main,4a50fe7,40/41 · diff: +3 -3
+ci-1231,2026-10-20T16:02:47Z,main,c2d1b3d,41/41 · diff: +4 -3
+ci-1232,2026-10-22T08:50:19Z,notify-backoff,21ae559,41/41 · diff: +57 -20
+ci-1234,2026-10-23T13:27:55Z,main,a3aee22,41/41 · diff: +57 -20
+ci-1237,2026-10-26T09:12:01Z,deps-weekly,5b5cddd,41/41 · diff: +132 -129
+ci-1239,2026-10-26T14:35:48Z,main,a0cb386,41/41 · diff: +132 -129
+ci-1241,2026-10-27T10:49:26Z,rota-copy,14f1c18,41/41 · diff: +6 -6
+ci-1243,2026-10-28T09:08:32Z,main,802ad80,41/41 · diff: +6 -6

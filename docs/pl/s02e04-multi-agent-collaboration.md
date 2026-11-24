@@ -1,15 +1,15 @@
 # S02E04 · Współpraca wielu agentów
 
-W **S01E02** wspomnieliśmy o podagentach i workerach (oddzielnych instancjach) jako świetnym sposobie na odciążenie głównego wątku od wymagających zadań, dzięki czemu model może skupić się na głównym celu. Teraz czas pójść o krok dalej i przyjrzeć się temu, jak agenci mogą współpracować w zespołach, komunikować się ze sobą, wymieniać zasoby i korzystać ze swoich możliwości.
+W **S01E02** wspomnieliśmy o podagentach i workerach (oddzielnych instancjach) jako świetnym sposobie na odciążenie głównego wątku od wymagających zadań, dzięki czemu model może skupić się na głównym celu. Teraz czas pójść o krok dalej i przyjrzeć się temu, jak agenci mogą współpracować w zespołach, komunikować się ze sobą, wymieniać zasoby i korzystać nawzajem ze swoich możliwości.
 
-Systemy wieloagentowe są przydatne zarówno dla pojedynczego użytkownika pracującego z całym zespołem agentów, jak i dla całych produktów oraz organizacji, które chcą wymieniać informacje i korzystać ze swoich usług. Zespoły agentów mogą też wspólnie pracować nad złożonymi problemami, takimi jak zaawansowana analiza produktu, refaktoryzacja czy wdrażanie i testowanie całych funkcji. Systemy wieloagentowe mogą również poprawiać wyniki, gdy zadania zyskują na specjalizacji lub odizolowaniu kontekstu.
+Systemy wieloagentowe są przydatne zarówno dla pojedynczego użytkownika pracującego z całym zespołem agentów, jak i dla całych produktów oraz organizacji, które chcą wymieniać informacje i korzystać nawzajem ze swoich usług. Zespoły agentów mogą też wspólnie pracować nad złożonymi problemami, takimi jak zaawansowana analiza produktu, refaktoryzacja czy wdrażanie i testowanie całych funkcji. Systemy wieloagentowe mogą również poprawiać wyniki, gdy zadania zyskują na specjalizacji lub odizolowaniu kontekstu.
 
 ## Plan
 
 - **Wieloagentowość:** odpowiedzialności, izolowanie konfliktów, współdzielone zasoby, wzorce architektoniczne
 - **Agent2Agent:** niezależni agenci, połączenia, granice, wiadomości, zadania, wykrywanie
 - **Delegowanie:** kompletowanie kontekstu, kontrakty przekazania zadania, odpowiedzialność, śledzenie postępów, raportowanie, błędy
-- **Orkiestracja:** zależności, praca równoległa, konflikty, praca w tle, przepływy pracy człowiek–agent
+- **Orkiestracja:** zależności, praca równoległa, konflikty, praca w tle, przepływy pracy użytkownik–agent
 
 ## Architektury wieloagentowe
 
@@ -117,10 +117,10 @@ Interakcję można obsłużyć na kilka sposobów: przez odpytywanie, zdarzenia 
 Załóżmy, że agent badawczy potrzebuje informacji od drugiego agenta. Interakcja przebiega następująco:
 
 1. Agent A odnajduje kartę agenta B i poznaje jego możliwości.
-   2. Agent A wysyła do agenta B wiadomość zawierającą wszystkie posiadane informacje.
-   3. Agent B potrzebuje jeszcze jednego szczegółu. Wstrzymuje zadanie w stanie wymagającym danych wejściowych i zadaje pytanie.
-   4. Agent A wysyła odpowiedź z tym samym identyfikatorem zadania.
-   5. Agent B kończy zadanie i zwraca wyniki.
+2. Agent A wysyła do agenta B wiadomość zawierającą wszystkie posiadane informacje.
+3. Agent B potrzebuje jeszcze jednego szczegółu. Wstrzymuje zadanie w stanie wymagającym danych wejściowych i zadaje pytanie.
+4. Agent A wysyła odpowiedź z tym samym identyfikatorem zadania.
+5. Agent B kończy zadanie i zwraca wyniki.
 
 Poniżej przedstawiono możliwy sposób reprezentacji tej wymiany. Warto też sklonować [to repozytorium](https://github.com/a2aproject/a2a-samples/tree/main/samples) i porozmawiać z agentem o dołączonych przykładach, aby poznać dostępne wzorce.
 
@@ -220,7 +220,7 @@ Drugi wniosek brzmi: **nie każde działanie w procesie biznesowym wymaga pewno�
 
 - montaż wideo można wykonać za pomocą [DaVinci MCP](https://x.com/The_Alex/status/2097847043796725924?s=20) i agenta,
 - miniaturki można wygenerować za pośrednictwem [Replicate](http://replicate.com/) lub własnego narzędzia AI do generowania obrazów,
-- agent może iteracyjnie poprawiać tytuł, opis itp., a zaakceptować je może dopiero człowiek,
+- agent może iteracyjnie poprawiać tytuł, opis itp., a zaakceptować je może dopiero użytkownik,
 - śledzenie aktywności i statystyk może odbywać się autonomicznie, a powiadomienia dla ludzi mogą być wysyłane tylko w razie potrzeby.
 
 Poziom autonomii zależy tu od firmy, ale wyraźnie widać, że niektóre etapy mogą być realizowane przez agentów w całości lub częściowo. Niektóre etapy zależą od siebie nawzajem, inne nie, a zależności często wynikają z decyzji biznesowych, w tym z potrzeby **fizycznego zablokowania agentowi dostępu do określonych działań**. Wreszcie niektóre działania muszą być wykonywane całkowicie w tle, bez bezpośredniego nadzoru.
@@ -231,13 +231,13 @@ Poziom autonomii zależy tu od firmy, ale wyraźnie widać, że niektóre etapy 
 
 ## Najważniejsze wnioski
 
-Zbierzmy teraz to w całość, łącząc z dotychczasową wiedzą:
+Zbierzmy to teraz w całość, łącząc z dotychczasową wiedzą:
 
 - **Agenci:** nawet jeśli pojedynczy agent mógłby obsłużyć cały proces, podział obowiązków między agentów daje nam kontrolę nad **ich kontekstem, możliwościami i uprawnieniami**, a także nad **współbieżnością, konfliktami i strukturą**.
 - **Prymitywy:** dobrze dobrane, uogólnione elementy składowe zapewniają elastyczność zarówno w kodzie, jak i w czasie działania. Dzięki nim można łatwo rozszerzać możliwości całego systemu przy minimalnych zmianach w kodzie.
 - **Code Mode:** agenci mogą automatyzować część pracy za pomocą kodu, ponieważ niektóre działania są powtarzalne i nie wymagają AI, chyba że trzeba zmienić ich logikę.
 - **Kontekst:** uruchamiani agenci mogą otrzymywać zarówno dynamiczny kontekst od swojego rodzica, jak i zdefiniowane wcześniej instrukcje zależne od ich roli **lub bieżącego stanu systemu**.
-- **Zależności:** agenci lub kod mogą kontrolować proces, określając, które kroki można wykonywać równolegle, a które są od siebie zależne. Niektóre działania można też **blokować** do czasu spełnienia określonych warunków. Na przykład publikacja komentarza może być zablokowana do czasu zatwierdzenia przez człowieka, a po zatwierdzeniu komentarza nie można edytować bez dodatkowej zgody. Jednym ze sposobów realizacji takiej logiki jest skierowany graf acykliczny (DAG).
+- **Zależności:** agenci lub kod mogą kontrolować proces, określając, które kroki można wykonywać równolegle, a które są od siebie zależne. Niektóre działania można też **blokować** do czasu spełnienia określonych warunków. Na przykład publikacja komentarza może być zablokowana do czasu zatwierdzenia przez użytkownika, a po zatwierdzeniu komentarza nie można edytować bez dodatkowej zgody. Jednym ze sposobów realizacji takiej logiki jest skierowany graf acykliczny (DAG).
 - **Trwałość:** na koniec, ponieważ mamy do czynienia z długotrwałym procesem częściowo obsługiwanym w tle, konieczne jest użycie pi-durable lub agentów, którzy potrafią odzyskać sprawność po awarii.
 
 Powyższa lista pokazuje, że nasza podróż z MEGA coraz wyraźniej prowadzi nas ku systemom agentowym. Możemy patrzeć na nie z perspektywy **tworzenia oprogramowania** oraz przez pryzmat **systemów wieloagentowych**, które potrafią zarządzać całymi procesami biznesowymi lub obsługiwać je autonomicznie.

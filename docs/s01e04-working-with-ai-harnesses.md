@@ -9,7 +9,7 @@ Each of us works with AI harnesses in a different way. Some of us prefer zero-co
 - Teamwork: shared skills, internal knowledge base, AI-friendly tool stack
 - Automation: repository agents, enriched issues, automatic reviews, small fixes, up-to-date docs
 
-It’s quite tricky to find the right setup because there are so many options available. New features, workflows, and tools also appear every week, making it feel impossible to keep up. The secret is that **we don’t really have to chase every shiny object in sight**, although that doesn’t mean we should ignore what’s new entirely. We just need **a good system.** That means making a few good decisions about our environment, not just in a programming context, creating a harness-agnostic setup, and working on **our mindset.** 
+It’s quite tricky to find the right setup because there are so many options available. New features, workflows, and tools also appear every week, making it feel impossible to keep up. The secret is that **we don’t really have to chase every shiny object in sight**, although that doesn’t mean we should ignore what’s new entirely. We just need **a good system.** That means making a few good decisions about our environment, not just in a programming context, creating a harness-agnostic setup, and working on **our mindset.**
 
 Let's see what that system involves.
 
@@ -19,15 +19,15 @@ Looking at the available options, we can find many CLI harnesses, such as [Codex
 
 Besides the harness, we need to choose a terminal, such as [iTerm](https://iterm2.com/), [Warp](https://www.warp.dev/), or [cmux](https://cmux.com/), and models from OpenAI, Anthropic, xAI, or other providers. We also need to consider using skills and integrations, including CLI and MCP tools, and finally take care of the harness configuration.
 
-That’s a lot, right? 
+That’s a lot, right?
 
-And it gets even more complicated when we consider that every couple of weeks, there’s a new trend, groundbreaking tool, API feature, or model. 
+And it gets even more complicated when we consider that every couple of weeks, there’s a new trend, groundbreaking tool, API feature, or model.
 
 ![A stack of seven layers inside one red frame named "Something new every couple of weeks": harness (Claude Code, Codex, Open Code, Pi, Cursor, Zed, Devin), terminal (iTerm, Warp, cmux), models and providers (OpenAI, Anthropic, xAI, Gemini), skills, integrations (CLI tools, MCP servers), extensions, and configuration (AGENTS.md, harness settings).](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-1/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-1/frame.html)
 
-Now, the good news is, when we understand some general principles, this will get much easier. Those principles are: 
+Now, the good news is, when we understand some general principles, this will get much easier. Those principles are:
 
 - **Source:** set up your social media feeds (especially X and YouTube) so you get news from the **big labs**, the official accounts of the tools mentioned above, and the people behind them. At the same time, try to avoid accounts that fuel the hype, as they cover topics that are hot right now but will be forgotten in a week or two. In fact, being a bit behind is a good thing. Only when something sticks around for more than a month (or a bit longer) is it a sign that it may be worth a look.
 
@@ -45,24 +45,24 @@ Now, the good news is, when we understand some general principles, this will get
 
 [Open figure](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-3/frame.html)
 
-- **Harness-Agnostic Setup:** Wherever possible, we should prefer configurations that are easy to move between harnesses. Things like **agents, skills, CLI tools, or MCPs** are good examples, although reauthorizing multiple services can be annoying. [Kody](https://github.com/kentcdodds/kody), an open-source project built by Kent, is a good example of how a setup can move between harnesses with almost no configuration needed. 
+- **Harness-Agnostic Setup:** Wherever possible, we should prefer configurations that are easy to move between harnesses. Things like **agents, skills, CLI tools, or MCPs** are good examples, although reauthorizing multiple services can be annoying. [Kody](https://github.com/kentcdodds/kody), an open-source project built by Kent, is a good example of how a setup can move between harnesses with almost no configuration needed.
 
 - **Native Capabilities:** The trickiest part about working with agents and building them is the fact that **models' capabilities get better fast**, and if we build logic around an agent (it may even be a skill with [heavy guidance](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/heavy-guidance)), we may end up with a setup that **degrades the model's performance** without a clear sign of who's to blame. A good example here is a publication titled [Context Language Models](https://arxiv.org/abs/2609.37725) suggesting that LLMs are better at context management than the best strategies we have so far.
 
 Knowing all this, we can get to the point where **we stay up to date easily without needing to rush** after everything that appears on the horizon. And with time we'll notice that the fundamentals of generative AI and AI agents don't change every week, and understanding them makes it easier for us to determine **what's potentially important and what's not**. If the value of those fundamentals isn't clear yet, it will be before MEGA ends.
 
-Until then, let's take a look at this: 
+Until then, let's take a look at this:
 
 - Harnesses such as **OpenCode, Pi, DeepSeek Agent** are the best choice for those who want to **customize their setup at the deepest level**.
 - Harnesses such as **Cursor, Devin, Dots** are the best choice for those who want as much as possible out of the box, including cloud agents and orchestration.
-- UI 
+- UI
 - Tools like **T3 Code** let you **manage multiple harnesses from a single interface** and add features none of them offer alone, such as starting Codex subagents from a Claude Code thread.
 
 ![A choice diagram. "Choose a harness" splits into two paths. The "deepest customization" path leads to a custom harness: OpenCode, Pi, DeepSeek Agent. The "most out of the box" path leads to an out-of-the-box harness: Cursor, Devin, Dots, with cloud agents and orchestration. Both paths lead to an optional layer that manages coding agents. This layer is a control plane (T3 Code, Superset) or a general harness (Grok Bot, Dots).](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-4/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-4/frame.html)
 
-Now, let's say we pick **Pi** as our main harness, as this will show us how things work under the hood and also unlock the most advanced workflows, as Pi can be used **not only as a coding agent** (that can manage itself and its instances) but also **as the core of a custom agent**. 
+Now, let's say we pick **Pi** as our main harness, as this will show us how things work under the hood and also unlock the most advanced workflows, as Pi can be used **not only as a coding agent** (that can manage itself and its instances) but also **as the core of a custom agent**.
 
 ![A flow diagram with a red frame named Pi that holds two parts. In the top row, you chat with Pi as a coding agent in the CLI, and Pi manages its own settings and instances. In the bottom row, your app uses Pi as the core of a custom agent.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-5/frame.png)
 
@@ -114,7 +114,7 @@ There's a catch, though: spawning workers isn't all we need. We also need the fo
 - The system has to be useful within a team, where each member has their own agents
 - In some cases, the system has to be monitored and evaluated so it can improve itself
 
-That's a lot. But we'll cover nearly every aspect of it in the upcoming lessons. Meanwhile, let's take a broad look at what we can do with Pi and Herdr to make the agents manage themselves. 
+That's a lot. But we'll cover nearly every aspect of it in the upcoming lessons. Meanwhile, let's take a broad look at what we can do with Pi and Herdr to make the agents manage themselves.
 
 First, we need to understand that the **Pi** harness can help us create **its [extensions](https://pi.dev/docs/latest/extensions)** that can modify its behavior at a low level, including lifecycle modifications, custom tools, commands, shortcuts, event handlers, prompt manipulation and many, many more.
 
@@ -122,7 +122,7 @@ Second, **Herdr** takes care of everything around the agent. Each Worker gets **
 
 Together, they give us an extremely powerful tool we can modify to fit our needs, although it's worth keeping the setup **as simple as possible** and well generalized.
 
-How a harness is configured still largely depends on the project, the way we work, and what we expect from the agents. Because of this, we'll look at a project that a couple of teams have already adopted, so there's a chance anyone can find some value in it. 
+How a harness is configured still largely depends on the project, the way we work, and what we expect from the agents. Because of this, we'll look at a project that a couple of teams have already adopted, so there's a chance anyone can find some value in it.
 
 Below is a visualization of a structure where **Pi instances** (Coordinator / Worker) don't talk to each other directly. Instead, everything goes through files (everyone can read), and simple Supervisor logic watches each Worker and records how its job ended (even after a crash). The Coordinator is subscribed to its Workers, gets notified when they finish, and can steer them along the way. Each run is tracked in the job folder, while the task itself lives in the features folder.
 
@@ -156,9 +156,9 @@ Note: this project works on macOS and Linux, but some features, such as one part
 
 ## Settings
 
-Once we have good control over the harness and agents, so that we don't have to manage each of them separately, things like switching between providers or model routing become much easier, because all we need to do is set a few recommendations for the agent that manages the others. 
+Once we have good control over the harness and agents, so that we don't have to manage each of them separately, things like switching between providers or model routing become much easier, because all we need to do is set a few recommendations for the agent that manages the others.
 
-Choosing a model largely depends on our preferences and budget. When possible, it's best to work with state-of-the-art (SOTA) models, meaning the best ones available at any given moment. To reduce costs, we can use **lower reasoning effort** for easier tasks, or switch to a separate, smaller and cheaper model. 
+Choosing a model largely depends on our preferences and budget. When possible, it's best to work with state-of-the-art (SOTA) models, meaning the best ones available at any given moment. To reduce costs, we can use **lower reasoning effort** for easier tasks, or switch to a separate, smaller and cheaper model.
 
 ![A two-by-two grid. The rows are a SOTA model and a smaller model, and the columns are high effort and low effort. The SOTA model with high effort is marked red as best. The SOTA model with low effort is for easier tasks. The smaller model is cheaper, and the smaller model with low effort is the cheapest. Denser shading shows a higher cost.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-13/frame.png)
 
@@ -178,7 +178,7 @@ It's worth noting that many workflows, such as multi-agent collaboration, have b
 
 [Open figure](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-10/frame.html)
 
-In some cases, we may need to use **open-source models** for certain projects, or even for specific features of the projects we're working on. Although open-source models are outside the scope of MEGA (there's a useful introduction in [LLMs 101: A Practical Guide](https://x.com/TheAhmadOsman/status/2057590224729911346)), it's worth keeping in mind that when privacy is critical, **[no LLM can reliably select a model](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/privacy-boundary)**. We need **a clear, deterministic separation**, because current models are very clever at getting around even strong boundaries. 
+In some cases, we may need to use **open-source models** for certain projects, or even for specific features of the projects we're working on. Although open-source models are outside the scope of MEGA (there's a useful introduction in [LLMs 101: A Practical Guide](https://x.com/TheAhmadOsman/status/2057590224729911346)), it's worth keeping in mind that when privacy is critical, **[no LLM can reliably select a model](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/privacy-boundary)**. We need **a clear, deterministic separation**, because current models are very clever at getting around even strong boundaries.
 
 ![Two setups for a private project. In the top one, an LLM selects the model and can find a workaround to a cloud model. In the bottom one, a deterministic separation connects the private project only to an open-source model, with no path to the cloud model.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-12/frame.png)
 
@@ -190,15 +190,15 @@ Working with agents in a team of people isn't obvious, and right now there are n
 
 There are a few things we can look at:
 
-**Shared resources:** 
-AGENTS.md and the skills we discussed in S01E02 are the first things we need to have in place. Then we need an easy way to share them with the team, either through a **git repository**, [npx skills](https://github.com/vercel-labs/skills) or an [internal MCP server](https://modelcontextprotocol.io/community/working-groups/skills-over-mcp), which we'll discuss in upcoming lessons. In any case, we need to ensure the skills are **shared** and are easy to keep **up to date**. 
+**Shared resources:**
+AGENTS.md and the skills we discussed in S01E02 are the first things we need to have in place. Then we need an easy way to share them with the team, either through a **git repository**, [npx skills](https://github.com/vercel-labs/skills) or an [internal MCP server](https://modelcontextprotocol.io/community/working-groups/skills-over-mcp), which we'll discuss in upcoming lessons. In any case, we need to ensure the skills are **shared** and are easy to keep **up to date**.
 
 ![A flow diagram. One skill, a SKILL.md file with optional support files, reaches the agent in three ways. With a Git repository and with npx skills, the skill goes onto disk. With Skills over MCP, the agent loads the skill from an MCP server and does not install it.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-14/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-14/frame.html)
 
 **Internal knowledge base:**
-Like skills, a knowledge base can have its own API and be available to agents through a CLI or MCP. The documents can live on **a remote server** and be managed by an agent that organizes incoming information and makes changes requested by team members or an administrator. This setup also opens a clear path to scheduled workflows that keep the documents well organized and up to date. 
+Like skills, a knowledge base can have its own API and be available to agents through a CLI or MCP. The documents can live on **a remote server** and be managed by an agent that organizes incoming information and makes changes requested by team members or an administrator. This setup also opens a clear path to scheduled workflows that keep the documents well organized and up to date.
 
 ![A flow diagram. A frame named Remote server holds a schedule, an inbox and an event at the top, the agents (Pi / CLI) below them, and the knowledge base, marked red, below the agents. The schedule and the event start the agents. The agents read the inbox and organize the knowledge base. A second frame named Team devices holds three synced clones. The knowledge base syncs to each clone. The number of devices is an example.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-15/frame.png)
 

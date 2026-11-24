@@ -1,0 +1,33 @@
+{
+  "status": 200,
+  "headers": [
+    "access-control-allow-credentials: true",
+    "access-control-allow-origin: *",
+    "alt-svc: h3=\":443\"; ma=86400",
+    "cache-control: public, max-age=60",
+    "cf-ray: a5ca39418d6fc405-WAW",
+    "content-encoding: zstd",
+    "content-security-policy: default-src 'self';base-uri 'self';font-src 'self';form-action 'self';frame-ancestors 'none';img-src 'self' data: blob: https://res.cloudinary.com;object-src 'none';script-src 'self' 'sha256-+rLcF463ATXwuF6+SufVojE0v+FGEFhD8xNspydZbos=' 'sha256-CcLzd5sWeF9aLUG3aSlU+3oUSgKxGx+rSt9uw57sg2w=' 'sha256-Qm7+oZxohhdo6tCPtrFFkGn3/ZZmSxGdB009aWteUTI=';script-src-attr 'none';style-src 'self';upgrade-insecure-requests;media-src 'self';connect-src 'self';frame-src 'self' https://player.vimeo.com https://www.youtube-nocookie.com",
+    "content-type: application/json; charset=utf-8",
+    "cross-origin-opener-policy: same-origin",
+    "cross-origin-resource-policy: same-origin",
+    "date: Wed, 18 Nov 2026 21:56:11 GMT",
+    "etag: W/\"40c-IqOgD9hGxJgEY5ZfmtOF/Jax25U\"",
+    "nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "origin-agent-cluster: ?1",
+    "priority: u=1,i",
+    "referrer-policy: no-referrer",
+    "report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rDTQdKom9KEWyFjDvGT%2F%2B3%2B0b4rhGDtVaF394U21svkinT6cXkIxez1abTBiE4UgdLkrQA7kz4vE67kwR9CMmjODXn0z2WpD%2BrN%2FSLaPA1vk9XNtK4kE3DgBehBHJXD%2BTyMWL5uO5EXgTA%3D%3D\"}]}",
+    "server: cloudflare",
+    "server-timing: cfExtPri",
+    "strict-transport-security: max-age=31536000; includeSubDomains",
+    "vary: Origin",
+    "x-content-type-options: nosniff",
+    "x-dns-prefetch-control: off",
+    "x-download-options: noopen",
+    "x-frame-options: SAMEORIGIN",
+    "x-permitted-cross-domain-policies: none",
+    "x-xss-protection: 0"
+  ],
+  "body": "{\"updatedAt\":\"2026-11-18T21:56:00Z\",\"incidents\":[{\"id\":\"4465\",\"line\":\"tram 3\",\"opened\":\"2026-10-03T22:40:00Z\",\"closed\":\"2026-10-03T22:58:00Z\",\"what\":\"late timetable push\",\"author\":\"on-call\"},{\"id\":\"4466\",\"line\":\"tram 3\",\"opened\":\"2026-10-04T23:12:00Z\",\"closed\":\"2026-10-04T23:31:00Z\",\"what\":\"platform display lag\",\"author\":\"on-call\"},{\"id\":\"4467\",\"line\":\"bus 14\",\"opened\":\"2026-10-05T00:20:00Z\",\"closed\":\"2026-10-05T00:41:00Z\",\"what\":\"feed timeout\",\"author\":\"on-call\"},{\"id\":\"4468\",\"line\":\"night bus N2\",\"opened\":\"2026-10-05T01:05:00Z\",\"closed\":\"2026-10-05T01:12:00Z\",\"what\":\"rota sync retries\",\"author\":\"night shift\"},{\"id\":\"4469\",\"line\":\"tram 3\",\"opened\":\"2026-10-05T02:20:00Z\",\"closed\":\"2026-10-05T02:31:00Z\",\"what\":\"board refresh stuck\",\"author\":\"on-call\"},{\"id\":\"4470\",\"line\":\"bus 14\",\"opened\":\"2026-10-05T03:40:00Z\",\"closed\":\"2026-10-05T03:58:00Z\",\"what\":\"gps gaps\",\"author\":\"night shift\"},{\"id\":\"4471\",\"line\":\"sched-prod\",\"opened\":\"2026-10-05T03:51:00Z\",\"closed\":\"2026-10-05T04:04:00Z\",\"what\":\"schedule rebuild\",\"author\":\"—\"}]}"
+}

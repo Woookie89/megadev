@@ -6,13 +6,13 @@ Zaczynajmy!
 
 ## Plan
 
-- Formaty: Markdown, HTML, mdx i svx, komponenty, poziomy szczegółowości, artefakty i umiejętności
+- Formaty: Markdown, HTML, mdx i svx, komponenty, poziomy szczegółowości, artefakty i skille
 - Bazy stawiające agentów na pierwszym miejscu: agenci a ludzie, pomosty do istniejących narzędzi, LLM tworzy i utrzymuje bazę
 - Wyszukiwanie: grep i ripgrep, wyszukiwanie semantyczne, trafność a podobieństwo, modele decyzyjne, wyszukiwanie hybrydowe
 - Docieranie do kontekstu: kontekst globalny, kontekst projektu, metadane, struktura wybierana przez agenta
 - Samodzielne zarządzanie: jedna skrzynka odbiorcza, tablice, szablony, harmonogramy, zdarzenia
 
-Kiedyś narzędzia takie jak Google Drive czy Notion w zupełności wystarczały, bo miały świetne edytory i funkcje współpracy — i **w wielu przypadkach nadal tak jest**. Jednak coraz więcej osób pracuje głównie z agentami, a narzędzia, których nie projektowano z myślą o AI, utrudniają agentom łatwy dostęp zarówno do **odczytu**, jak i **zapisu**. Często niemożliwe jest nawet coś tak prostego jak **dostęp do obrazu**.
+Kiedyś narzędzia takie jak Google Drive czy Notion w zupełności wystarczały, bo miały świetne edytory i funkcje współpracy — i **w wielu przypadkach nadal tak jest**. Jednak coraz więcej osób pracuje głównie z agentami, a narzędzia, których nie projektowano z myślą o AI, rzadko dają agentom łatwy dostęp zarówno do **odczytu**, jak i do **zapisu**. Często niemożliwe jest nawet coś tak prostego jak **dostęp do obrazu**.
 
 ![Agent AI łączy się z dokumentami w Google Drive i Notion. Pod dokumentami znajdują się dwie osobne kolumny. Kolumna Odczyt pokazuje, że agent często nie może uzyskać dostępu do obrazów i innych szczegółów. Ta część jest zaznaczona na czerwono. Kolumna Zapis pokazuje, że agent ma trudności z edytowaniem dokumentów.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-1/frame.png)
 
@@ -58,7 +58,7 @@ Kilka miesięcy temu Andrej Karpathy [opisał swoją osobistą bazę wiedzy](htt
 
 Markdown i HTML to nie jedyne formaty, których możemy używać w bazach wiedzy. Są też `mdx` i `svx`, które pozwalają umieszczać komponenty w plikach Markdown. Dzięki temu łączymy **czytelność plików** z **interaktywnością**, a w zależności od potrzeb także ze **stanem**!
 
-Poniżej przykład pliku `.svx`, którego źródło pozostaje proste, a wyrenderowana wersja zawiera działającą listę kontrolną. Ponieważ można tu używać [komponentów](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/guided-components), można je ponownie wykorzystywać w wielu plikach.
+Poniżej przykład pliku `.svx`, którego źródło pozostaje proste, a wyrenderowana wersja zawiera działającą listę kontrolną. Ponieważ korzystamy tu z [komponentów](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/guided-components), można je ponownie wykorzystywać w wielu plikach.
 
 ![Dwa panele obok siebie. Po lewej „Plik”: zwykły kod źródłowy przykładowej notatki deploy-checklist.svx z frontmatter (tytuł i cztery kroki), nagłówkiem, jednym zdaniem i wierszem komponentu \<Checklist items={steps} />, obramowanym na czerwono. Mały tekst pod panelem głosi „mdx lub svx”. Czerwona strzałka z etykietą „renderuje się jako” prowadzi od wiersza komponentu do prawego panelu „To, co widzisz”: ta sama wyrenderowana notatka z nagłówkiem, zdaniem i działającą listą kontrolną obramowaną na czerwono. Kompilacja i Uruchom testy są zaznaczone, Wdróż i Zweryfikuj — nie, a licznik pokazuje „2 z 4 ukończone”.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-5/frame.png)
 
@@ -70,11 +70,11 @@ Jest to szczególnie przydatne w przypadku złożonych zagadnień, które najpie
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-6/frame.html)
 
-Agenci potrafią dziś całkiem sprawnie korzystać z `.svx`, ale warto poświęcić trochę czasu na przygotowanie konfiguracji, która jeszcze bardziej im to ułatwi. Przykład znajdziesz w [repozytorium skills](https://github.com/overment/skills/tree/main/skills/explainer), gdzie umiejętność `explainer` to nie tylko prompt. Zawiera również szablony i logikę ułatwiające agentowi przygotowywanie **spójnych** wizualizacji. Taka umiejętność działa najlepiej z **najnowocześniejszymi modelami (SOTA)**.
+Agenci potrafią dziś całkiem sprawnie korzystać z `.svx`, ale warto poświęcić trochę czasu na przygotowanie konfiguracji, która jeszcze bardziej im to ułatwi. Przykład znajdziesz w [repozytorium skills](https://github.com/overment/skills/tree/main/skills/explainer), gdzie skill `explainer` to nie tylko prompt. Zawiera również szablony i logikę ułatwiające agentowi przygotowywanie **spójnych** wizualizacji. Taki skill działa najlepiej z **najnowocześniejszymi modelami (SOTA)**.
 
-Umiejętność `explainer` może być **inspiracją** do tworzenia umiejętności w różnych wyspecjalizowanych obszarach: objaśniania zgłoszeń, raportów aktywności, ogólnych decyzji architektonicznych i innych — dostosowanych do projektów, nad którymi pracujemy. Wniosek jest taki, że **artefakty i umiejętności mogą stać się częścią naszej bazy wiedzy** i powinny **ukierunkowywać model** na wyniki zgodne z naszymi potrzebami, nie ograniczając jego możliwości.
+Skill `explainer` może być **inspiracją** do tworzenia skilli w różnych wyspecjalizowanych obszarach: objaśniania zgłoszeń, raportów aktywności, ogólnych decyzji architektonicznych i innych — dostosowanych do projektów, nad którymi pracujemy. Wniosek jest taki, że **artefakty i skille mogą stać się częścią naszej bazy wiedzy** i powinny **ukierunkowywać model** na wyniki zgodne z naszymi potrzebami, nie ograniczając jego możliwości.
 
-![Diagram przepływu. Ramka Baza wiedzy zawiera dwa pola: Struktura, treść (Markdown, HTML, .svx) oraz Szablony, wskazówki (umiejętności, artefakty). Struktura i treść dostarczają modelowi treści. Szablony i wskazówki ukierunkowują model — ten element zaznaczono na czerwono. Model jest ukierunkowany, ale nieograniczony, i dostarcza spersonalizowane, pożądane i spójne wyniki.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.png)
+![Diagram przepływu. Ramka Baza wiedzy zawiera dwa pola: Struktura, treść (Markdown, HTML, .svx) oraz Szablony, wskazówki (skille, artefakty). Struktura i treść dostarczają modelowi treści. Szablony i wskazówki ukierunkowują model — ten element zaznaczono na czerwono. Model jest ukierunkowany, ale nieograniczony, i dostarcza spersonalizowane, pożądane i spójne wyniki.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-7/frame.html)
 
@@ -97,7 +97,7 @@ Takie sytuacje zdarzają się bardzo często i nie ma rozwiązania, które **gwa
 
 Najpierw musimy zrozumieć, jak agent **dociera** do kontekstu. Korzysta w tym celu z narzędzi wyszukiwania używanych w **logice agentowej**, więc proces wyszukiwania może obejmować wiele tur. Przyjrzyjmy się temu:
 
-**bash / grep / ripgrep:** agenci poruszają się po plikach, pisząc skrypty i/lub polecenia, które dopasowują słowa kluczowe do dostępnego kontekstu. Nawet jeśli za pierwszym razem nie znajdą wszystkich istotnych plików, mogą dalej **eksplorować**, aż model uzna, że ma dość informacji lub że żadnych nie ma. Ten rodzaj wyszukiwania jest bardzo skuteczny w przypadku samych plików tekstowych i baz kodu, ale [niemal bezużyteczny dla obrazów, dokumentów PDF](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/image-sidecar-notes) i podobnych materiałów.
+**bash / grep / ripgrep:** agenci poruszają się po plikach, pisząc skrypty i/lub polecenia, które próbują dopasować słowa kluczowe związane z dostępnym kontekstem. Nawet jeśli za pierwszym razem nie znajdą wszystkich istotnych plików, mogą dalej **eksplorować**, aż model uzna, że ma dość informacji lub że żadnych nie ma. Ten rodzaj wyszukiwania jest bardzo skuteczny w przypadku samych plików tekstowych i baz kodu, ale [niemal bezużyteczny dla obrazów, dokumentów PDF](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/image-sidecar-notes) i podobnych materiałów.
 
 ![Diagram przepływu. Agent uruchamia polecenia bash, grep lub ripgrep, by przeszukać bazę wiedzy. Polecenia dobrze sprawdzają się w przypadku plików tekstowych i kodu, a niemal bezużyteczne są dla obrazów i plików PDF. Przerywana czerwona strzałka prowadzi od poleceń z powrotem do agenta i zawiera tekst „kontynuuj eksplorację”. Polecenia i nazwy plików w szczegółach są przykładowe.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-9/frame.png)
 
@@ -111,7 +111,7 @@ Najpierw musimy zrozumieć, jak agent **dociera** do kontekstu. Korzysta w tym c
 
 Wyszukiwanie semantyczne zwiększa szansę znalezienia dokumentów, których wyszukiwanie oparte na wzorcach **nie dopasuje za pomocą wyrażeń regularnych**, ale dodaje też złożoność, ponieważ wymaga indeksowania.
 
-Ponadto modele embeddingowe mają **limity kontekstu**, więc długie dokumenty trzeba dzielić na fragmenty. Mają też **datę odcięcia wiedzy**, więc mogą **inaczej rozumieć niektóre pojęcia** albo po prostu ich nie znać. Z kolei embeddingi multimodalne obsługują **wyszukiwanie obrazów**.
+Ponadto modele embeddingowe mają **limity kontekstu**, więc długie dokumenty trzeba dzielić na fragmenty. Mają też **granicę wiedzy** (knowledge cutoff), więc mogą **inaczej rozumieć niektóre pojęcia** albo po prostu ich nie znać. Z kolei embeddingi multimodalne obsługują **wyszukiwanie obrazów**.
 
 Przede wszystkim musimy jednak zrozumieć, że embeddingi pozwalają znajdować treści „podobne znaczeniowo”, co niekoniecznie oznacza, że są „trafne”.
 
@@ -149,28 +149,28 @@ Ponieważ modele **myślą podczas generowania tokenów**, a **zawartość konte
 
 Omówienie tych technik baz wiedzy może pomóc nam lepiej je zrozumieć, ale naszym celem nie jest **samodzielne budowanie systemu**, tylko **kształtowanie środowiska, w którym agenci tworzą bazę wiedzy**.
 
-Przykładem może być [umiejętność knowledge](https://github.com/overment/skills/tree/main/skills/knowledge), która ma na celu uogólnione zbudowanie struktury bazy wiedzy:
+Przykładem może być [skill knowledge](https://github.com/overment/skills/tree/main/skills/knowledge), która w uogólniony sposób buduje strukturę bazy wiedzy:
 
 1. **Określenie celu:** kilka pytań, które musimy sobie zadać w związku z bazą wiedzy.
 2. **Zbudowanie kontekstu:** agent musi ustalić najbardziej użyteczne metody i ogólne zasady.
 3. **Zainicjowanie struktury:** agent musi iterować nad początkową strukturą i relacjami między dokumentami, wypróbowując kilka różnych podejść.
 4. **Zainicjowanie szablonów:** trzeba określić formę dokumentów — niekoniecznie jako listę sztywnych sekcji, lecz raczej jako ogólne wskazówki dotyczące wyboru najlepszej struktury dla danej notatki.
-5. **Napisanie instrukcji:** na tym etapie agent musi utworzyć umiejętność pracy z bazą wiedzy.
-6. **Przetestowanie:** korzystając z subagentów lub osobnych sesji, agent musi użyć umiejętności, sprawdzić, jak działa baza wiedzy, i wspólnie z nami ustalić, co można poprawić.
+5. **Napisanie instrukcji:** na tym etapie agent musi utworzyć skill do pracy z bazą wiedzy.
+6. **Przetestowanie:** korzystając z subagentów lub osobnych sesji, agent musi użyć skilla, sprawdzić, jak działa baza wiedzy, i wspólnie z nami ustalić, co można poprawić.
 
-Warto zrozumieć, że **przy początkowych wymaganiach** powyższy proces może przebiegać **automatycznie**, aż LLM uzna, że jest gotowy. Co jeszcze ważniejsze, **proces może uruchamiać się automatycznie** w miarę rozrastania się bazy wiedzy, aby ulepszać jej strukturę. Modyfikowanie bazy zawierającej tysiące notatek nie będzie łatwe nawet dla AI, ale i tak może ona zrobić znacznie więcej, niż potrafilibyśmy bez niej.
+Warto zrozumieć, że **po podaniu początkowych wymagań** powyższy proces może przebiegać **automatycznie**, aż LLM uzna, że jest gotowy. Co jeszcze ważniejsze, **proces może uruchamiać się automatycznie** w miarę rozrastania się bazy wiedzy, aby ulepszać jej strukturę. Modyfikowanie bazy zawierającej tysiące notatek nie będzie łatwe nawet dla AI, ale i tak może ona zrobić znacznie więcej, niż potrafilibyśmy bez niej.
 
 ![Sześć ponumerowanych etapów, od lewej do prawej: 1 Określ cel, 2 Zbuduj kontekst, 3 Zainicjuj strukturę, 4 Zainicjuj szablony, 5 Napisz instrukcje, 6 Przetestuj. Etapy łączą strzałki. Nad etapem 3 znajduje się czerwona, okrężna strzałka z napisem „wypróbuj kilka podejść”. Czerwona strzałka prowadzi od etapu 6 z powrotem do etapu 3 i ma napis „ulepszaj teraz i w miarę rozwoju bazy”. Przy etapach 1 i 6 widnieje „z nami”. Nawias nad etapami 2–6 ma opis „automatycznie, aż model uzna, że jest gotowy”.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-15/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-15/frame.html)
 
-Podobne podejście można zastosować do niemal **wszystkiego**, co da się **w jakiś sposób** zweryfikować, dzięki czemu pętla informacji zwrotnej pozwala agentom ulepszać ich pracę. W tym przypadku nie ma **ścisłej** weryfikacji, choć modele świetnie oceniają jakość struktur. Potrzebują jednak **jasnej definicji tego, co oznacza „wystarczająco dobrze”**.
+Podobne podejście można zastosować do niemal **wszystkiego**, co da się **w jakiś sposób** zweryfikować, dzięki czemu pętla informacji zwrotnej pozwala agentom ulepszać swoją pracę. W tym przypadku nie ma **ścisłej** weryfikacji, choć modele świetnie oceniają jakość struktur. Potrzebują jednak **jasnej definicji tego, co oznacza „wystarczająco dobrze”**.
 
 ## Samodzielne zarządzanie
 
 Przed ChatGPT bazy wiedzy mogły być częściowo utrzymywane przez **automatyzacje**, które pobierały dane z usług zewnętrznych lub archiwizowały stare notatki. Automatyzacje te mogły być dość zaawansowane, choć budowanie ich logiki było trudne. Teraz **nawet podłączenie bazy wiedzy do Claude Code** (lub dowolnego innego agenta) wydaje się magią. Problem polega na tym, że **działa to głównie reaktywnie**, więc musimy uczestniczyć w tych działaniach. Jako programiści wiemy jednak, że możemy sprawić, by rozwiązanie było **proaktywne**.
 
-Mechanizmy umożliwiające działanie **trwałych agentów działających w tle** omówimy w drugim tygodniu MEGA, ale już teraz możemy rozważyć następujące możliwości:
+Mechanizmy potrzebne **trwałym agentom działającym w tle** omówimy w drugim tygodniu MEGA, ale już teraz możemy rozważyć następujące możliwości:
 
 **Jeden punkt wejścia:** każda informacja, którą chcemy dodać do bazy wiedzy, powinna trafiać do jednego punktu wejścia, na przykład do **skrzynki odbiorczej**. Stamtąd agenci mogą ją pobrać, uporządkować i niezawodnie [powiązać z istniejącą wiedzą](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/inbox-filing).
 
@@ -189,7 +189,7 @@ Mechanizmy umożliwiające działanie **trwałych agentów działających w tle*
 - **PR-y:** każda scalona zmiana może być powodem do aktualizacji bazy wiedzy, a agenci mogą decydować, co warto zachować, a co nie.
 - **Repozytoria:** nowe repozytorium na naszym koncie prawdopodobnie oznacza nowy projekt, o którym agent powinien wiedzieć. Należy automatycznie dodać go do kontekstu globalnego, aby te informacje były już dostępne, gdy agent zostanie o niego zapytany.
 - **Zgłoszenia do pomocy technicznej:** baza wiedzy niekoniecznie jest właściwym miejscem na same zgłoszenia, ale można ją uzupełniać o ogólny stan produktu i najważniejsze tematy poruszane przez użytkowników.
-- **Zgłoszenia:** podobnie jak zgłoszenia do pomocy technicznej, systemy obsługi zgłoszeń zawierają wiedzę, której **nie należy kopiować do bazy wiedzy**, ale którą można podsumować, aby wzbogacić szerszy kontekst projektu i jego funkcji.
+- **Zgłoszenia (issues):** podobnie jak zgłoszenia do pomocy technicznej, systemy obsługi zgłoszeń zawierają wiedzę, której **nie należy kopiować do bazy wiedzy**, ale którą można podsumować, aby wzbogacić szerszy kontekst projektu i jego funkcji.
 - **Oznaczone e-maile i wiadomości:** agenci nie muszą czytać wszystkich naszych wiadomości, ale te automatycznie oznaczone można przekazywać agentowi, a ich treść może trafiać do bazy wiedzy jako dokumenty.
 - **Do przeczytania później:** nowe zakładki lub wyróżnienia mogą automatycznie trafiać do bazy wiedzy i być **powiązane** z istniejącymi informacjami.
 
@@ -217,12 +217,12 @@ Tablica Kanban może nie wydawać się odkryciem, ale [w praktyce jest niezwykle
 
 Załóżmy, że chcemy mieć osobistą bazę wiedzy przeznaczoną wyłącznie dla nas i naszego „osobistego agenta AGI”, który ma szeroki kontekst dotyczący nas, naszej pracy i życia prywatnego. Ma stać się naszym „drugim mózgiem” — koncepcją znaną od lat, ale teraz zarządzaną w całości przez agenta. Aby baza była użyteczna, musimy ustalić kilka zasad:
 
-- **Dostępność:** agent musi mieć do niej łatwy dostęp niezależnie od tego, czy działa w chmurze, na komputerze Mac lub PC, czy na urządzeniu mobilnym (telefonie, zegarku lub innym urządzeniu ubieralnym). Dlatego baza wiedzy musi znajdować się zdalnie, a jeśli jest oparta na systemie plików, można ją synchronizować z naszym komputerem za pomocą narzędzi takich jak `mutagen sync`.
+- **Dostępność:** agent musi mieć do niej łatwy dostęp niezależnie od tego, czy działa w chmurze, na komputerze Mac lub PC, czy na urządzeniu mobilnym (telefonie, zegarku lub innym urządzeniu ubieralnym). Dlatego baza wiedzy musi być przechowywana zdalnie, a jeśli jest oparta na systemie plików, można ją synchronizować z naszym komputerem za pomocą narzędzi takich jak `mutagen sync`.
 - **Źródło prawdy:** baza wiedzy powinna być źródłem prawdy dla własnych notatek, bez synchronizacji dwukierunkowej. Informacje dobrze utrzymywane w usługach zewnętrznych powinny w nich pozostać, ale [agent powinien wiedzieć, co można tam znaleźć](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/pointer-notes).
-- **Samodoskonalenie:** baza powinna rozwijać się niemal autonomicznie, bez konieczności weryfikowania lub zmieniania czegokolwiek przez nas poprzez przeglądanie plików. Każda interakcja z nami musi odbywać się za pośrednictwem agenta lub agentów.
+- **Samodoskonalenie:** baza powinna rozwijać się niemal autonomicznie, bez tego, żebyśmy musieli cokolwiek sprawdzać lub zmieniać, przeglądając pliki. Każda interakcja z nami musi odbywać się za pośrednictwem agenta lub agentów.
 - **Prostota:** baza wiedzy może łatwo stać się odrębnym systemem, ale jak dotąd najlepszym podejściem jest **zachowanie prostoty** i poleganie wyłącznie na **rozwijających się możliwościach agentów i harnessów**, zamiast walczyć z ich słabościami.
 
-W zależności od naszych potrzeb może pojawić się więcej zasad. Następnie możemy użyć wspomnianej wcześniej `knowledge skill`, by nadać bazie wiedzy początkową strukturę oraz utworzyć umiejętność zarządzania nią. Poniżej przedstawiono wygenerowaną umiejętność.
+W zależności od naszych potrzeb może pojawić się więcej zasad. Następnie możemy użyć wspomnianej wcześniej `knowledge skill`, by nadać bazie wiedzy początkową strukturę oraz utworzyć skill do zarządzania nią. Poniżej przedstawiono wygenerowany skill.
 
 ![Karta zatytułowana „personal-agi-kb skill” z trzema poziomami. U góry pole SKILL.md wymienia przeznaczenie bazy, zasady wraz z uzasadnieniem oraz wskazuje, którą notatkę otworzyć dla danego zadania. Cienkie linie prowadzą od niego do sześciu notatek referencyjnych: map, flow, intake, search, upkeep i structure log — każda z krótkim opisem roli. Na dole znajdują się dwa skrypty: check.ts sprawdza łącza i pola, a kb.ts obsługuje identyfikatory, zapytania i przebudowywane strony. Pionowa skala po prawej oznacza poziomy: zawsze czytane, otwierane w razie potrzeby oraz uruchamiane, a nie czytane. Pod kartą napis: osąd w notatkach, mechanika w skryptach.](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-21/frame.png)
 
@@ -234,6 +234,6 @@ Poniżej znajduje się **ogólna struktura** „osobistej bazy wiedzy AGI”, ob
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e03/artifacts/lesson/figure-22/frame.html)
 
-## Wnioski
+## Najważniejsze wnioski
 
 Nawet w dobie AI bazy wiedzy „łatwo zacząć, trudno opanować”, ale nie powinno nas to powstrzymywać. Osobista baza wiedzy to jedna z najlepszych rzeczy, których możemy spróbować, bo pomoże nam odkrywać wiele możliwości, ale też napotkać problemy — nie tylko po stronie AI, lecz także w otaczającym je środowisku, ponieważ wiele aplikacji i usług wciąż nie jest gotowych na erę AI.

@@ -10,13 +10,13 @@ When thinking about building agents, we may ask ourselves: **why would we want t
 - Context and Memory: context assembly, conversation history, working memory, persistent storage, retrieval, memory scope and lifecycle
 - Workflows and Controls: steps, branches, graphs, jobs, queues, state transitions, side effects, execution budgets, isolation, approval, pause and recovery
 
-Let's say we have an e-commerce platform where users sell their products. They may want to manage those products with the help of their agents, so they connect their accounts to Claude using MCP. But we want to offer our clients personalized recommendations for optimizing their campaigns, based on generalized insights from our entire platform. We need an agent here and **we can't use the user's harness for that**, so we need to build a custom one. 
+Let's say we have an e-commerce platform where users sell their products. They may want to manage those products with the help of their agents, so they connect their accounts to Claude using MCP. But we want to offer our clients personalized recommendations for optimizing their campaigns, based on generalized insights from our entire platform. We need an agent here and **we can't use the user's harness for that**, so we need to build a custom one.
 
 ![A flow diagram. The seller, a tenant of the app, manages products through Claude, the tenant's harness of choice, which connects to the seller's account in our app through MCP. Inside our app, a custom agent with our own harness uses generalized insights from the whole platform and recommends campaign optimizations to the seller. Two frames separate the tenant's harness from our app.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-1/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-1/frame.html)
 
-That's why today we cover what's needed to build our own agent. It is also worth watching Lee Robinson's lecture at Stanford CS146S "[How always-on agents work](https://x.com/leerob/status/2108650243365736855?s=20)". 
+That's why today we cover what's needed to build our own agent. It is also worth watching Lee Robinson's lecture at Stanford CS146S "[How always-on agents work](https://x.com/leerob/status/2108650243365736855?s=20)".
 
 ## Architecture
 
@@ -46,7 +46,7 @@ There are many decisions to make here, so we'll choose the path that's the most 
 
 ## Core features
 
-Designing agents is different from designing typical apps. As models get better, cheaper and faster, we can give them more freedom and space. That way, instead of building a narrow solution specialized in a single thing, we can let AI figure out how to handle cases we didn't think about. 
+Designing agents is different from designing typical apps. As models get better, cheaper and faster, we can give them more freedom and space. That way, instead of building a narrow solution specialized in a single thing, we can let AI figure out how to handle cases we didn't think about.
 
 For example, if we need to create a design tool for photo editing, it doesn't have to offer a predefined set of filters and options. Instead, it could give an agent a way to generate filters and options personalized for each user. Before AI, we had very limited ways to do things like this. Now, this brings a lot of flexibility to our app, but it also raises new challenges, such as: what happens to projects that used a filter the agent has since modified?
 
@@ -79,7 +79,7 @@ With this vision in mind, we can start thinking about the **primitives** that wi
 **Journal:** everything the agent did. Entries are only added, never edited.
 **Channel:** the agent's only way to reach the user.
 
-Now, such primitives can be combined together, so **Event** may trigger a particular **Skill** based on its type, **Schedule** may be associated with a given category of **Documents** and every action leaves an entry in the **Journal**. During reflection, the agent reads its **Journal** to decide when to wake up next, which work is worth saving as a new **Skill** and whether anything deserves our attention through a **Channel**. 
+Now, such primitives can be combined together, so **Event** may trigger a particular **Skill** based on its type, **Schedule** may be associated with a given category of **Documents** and every action leaves an entry in the **Journal**. During reflection, the agent reads its **Journal** to decide when to wake up next, which work is worth saving as a new **Skill** and whether anything deserves our attention through a **Channel**.
 
 That way, a few general blocks produce behavior we never had to design upfront, yet every step stays within the environment we shaped. And when something goes wrong, the **Journal** shows what happened and why.
 
@@ -91,23 +91,23 @@ At this point, we can see that some **primitives** may live in a filesystem, so 
 
 ## Providers and configuration
 
-When building agents, we shouldn't really commit to a specific provider, not only because of vendor lock-in but also because we may want to use **multiple models** at once, or models that are specific to a given provider. 
+When building agents, we shouldn't really commit to a specific provider, not only because of vendor lock-in but also because we may want to use **multiple models** at once, or models that are specific to a given provider.
 
-For example, we might use Gemini for image generation, a decision model from TypeSafe, or a mix of Anthropic and OpenAI models to get multiple perspectives or simply to access whichever model is currently the best. The easiest way to have all these is to use platforms such as [OpenRouter](https://openrouter.com/), although it's worth keeping in mind that some native API features of the given provider may not be available there. When building products for B2B customers we may consider [Amazon Bedrock](https://aws.amazon.com/bedrock/model-choice/) or [Microsoft Azure](https://azure.microsoft.com/en-us/products/ai-foundry/models). 
+For example, we might use Gemini for image generation, a decision model from TypeSafe, or a mix of Anthropic and OpenAI models to get multiple perspectives or simply to access whichever model is currently the best. The easiest way to have all these is to use platforms such as [OpenRouter](https://openrouter.com/), although it's worth keeping in mind that some native API features of the given provider may not be available there. When building products for B2B customers we may consider [Amazon Bedrock](https://aws.amazon.com/bedrock/model-choice/) or [Microsoft Azure](https://azure.microsoft.com/en-us/products/ai-foundry/models).
 
-The architecture of our agent should include a gateway and adapters for the providers we want to support. In other words, we need to make sure that all providers speak the same language in our app and that adding or removing a provider won't be an issue. 
+The architecture of our agent should include a gateway and adapters for the providers we want to support. In other words, we need to make sure that all providers speak the same language in our app and that adding or removing a provider won't be an issue.
 
 ![Architecture diagram of an agent that uses three models, as an example. The agent's weekly digest job has three tasks: sorting new notes is an easy task, writing the digest is everything else, and drawing a cover image needs image generation. All three tasks go to one gateway, which is marked in red. The gateway sends each task through its own provider adapter. The OpenAI adapter calls the small model, the Anthropic adapter calls the main model, and the Gemini adapter calls the image model. The tasks and the provider-to-model mapping are example values.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-7/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-7/frame.html)
 
-Having access to multiple models lets us think about **model routing**: handling easier tasks with a smaller, faster and cheaper model, or with lower reasoning settings. As a first step, configuring **primary / secondary** models for a given provider may make a noticeable difference in our agent's overall efficiency. There are also more sophisticated routers, such as [Max from Arena AI](https://arena.ai/blog/introducing-max), a model that routes each task to the best model to improve efficiency and accuracy, although this may be overkill for many cases. 
+Having access to multiple models lets us think about **model routing**: handling easier tasks with a smaller, faster and cheaper model, or with lower reasoning settings. As a first step, configuring **primary / secondary** models for a given provider may make a noticeable difference in our agent's overall efficiency. There are also more sophisticated routers, such as [Max from Arena AI](https://arena.ai/blog/introducing-max), a model that routes each task to the best model to improve efficiency and accuracy, although this may be overkill for many cases.
 
 ![A flow diagram of simple model routing. A task goes to a routing rule in code. The rule sends a lookup to the secondary model, which is small and fast, and sends planning to the primary model, which is powerful. The routing rule is marked as the focal part. The task types and the rule map are examples.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-8/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-8/frame.html)
 
-As LLMs and their APIs evolve, our apps should avoid layers that make migration to newer versions harder than necessary. For example, if someone built an app with OpenAI's Chat Completions API and has no easy way to migrate to the Responses API, [some models and features may not be available to them.](https://developers.openai.com/api/docs/guides/migrate-to-responses). 
+As LLMs and their APIs evolve, our apps should avoid layers that make migration to newer versions harder than necessary. For example, if someone built an app with OpenAI's Chat Completions API and has no easy way to migrate to the Responses API, [some models and features may not be available to them.](https://developers.openai.com/api/docs/guides/migrate-to-responses).
 
 ## Designing tools
 
@@ -129,7 +129,7 @@ Some actions also have to be chained in a specific way or simply can’t be perf
 
 [Open figure](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-10/frame.html)
 
-Now, with this in mind, we need to design **native tools** ourselves. And if the agent is going to create tools autonomously, we need to give it some guidance on our preferences, recommendations, and a way to evaluate these tools and test their **names, descriptions, schemas and output format**. 
+Now, with this in mind, we need to design **native tools** ourselves. And if the agent is going to create tools autonomously, we need to give it some guidance on our preferences, recommendations, and a way to evaluate these tools and test their **names, descriptions, schemas and output format**.
 
 So our agent may have four native tools:
 
@@ -138,7 +138,7 @@ So our agent may have four native tools:
 - **web.fetch:** to get the contents of a URL
 - **channel.send:** to send a message to the user
 
-Additionally, the harness will use **journal.append** and **events.add**, so the agent can clearly see what's happening, but will be physically prevented from modifying them. 
+Additionally, the harness will use **journal.append** and **events.add**, so the agent can clearly see what's happening, but will be physically prevented from modifying them.
 
 ![The workspace folder holds six entries in two groups. Read-write: documents/, skills/ and schedule.yaml. Read-only: events/ (harness writes), journal.jsonl (harness + journal.append) and config.yaml (user only). The read-only group is marked.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-11/frame.png)
 
@@ -187,7 +187,7 @@ This is not only about engineering and architecture, but also finding useful use
 
 [Open figure](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-15/frame.html)
 
-Another example could be a schedule that scans our activity on X, Raindrop, or any other app that may provide insight into our recent interests. In that case, we need to figure out how to make an agent **remember its past runs**, so it can actually observe and reflect on its findings. The most natural way here would be to ask the agent to filter out **Journal** entries and to save insights in some structured way. 
+Another example could be a schedule that scans our activity on X, Raindrop, or any other app that may provide insight into our recent interests. In that case, we need to figure out how to make an agent **remember its past runs**, so it can actually observe and reflect on its findings. The most natural way here would be to ask the agent to filter out **Journal** entries and to save insights in some structured way.
 
 ![A loop. A Schedule wakes the agent. The agent run scans activity on X and Raindrop. It logs its actions in the Journal and writes insights to Documents. Together, the Journal and Documents are the memory between runs. During reflection, the agent reads that memory and sets its next wake-up on the Schedule.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-14/frame.png)
 
@@ -197,6 +197,6 @@ When we play with similar scenarios, we'll learn a lot about how agents work, ho
 
 ## Takeaways
 
-The example from this lesson should clearly present why we may want to build our custom harness or learn how to build extensions for existing ones to make them specialized for specific tasks. 
+The example from this lesson should clearly present why we may want to build our custom harness or learn how to build extensions for existing ones to make them specialized for specific tasks.
 
 And even if this leads us to stop working on the agent, or new models or harnesses replace it right away, we'll gain experience that may help us build even more advanced systems with future models.

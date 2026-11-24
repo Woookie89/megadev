@@ -1,0 +1,157 @@
+{
+  "issues": [
+    {
+      "key": "SCHED-4412",
+      "title": "colours: move hard-coded colours to design tokens",
+      "status": "open",
+      "labels": [
+        "from:product"
+      ],
+      "body": "Components still carry raw hex values. Move every colour to the tokens in specs/design.md (DES-2). Nothing visible changes. Until this ships, a new colour scheme cannot be a token set: the raw values would not follow it."
+    },
+    {
+      "key": "SCHED-4418",
+      "title": "week view: first day of the week follows the account locale",
+      "status": "open",
+      "labels": [
+        "from:support"
+      ],
+      "body": "Week view always starts on Sunday. It should start on the day the account locale says."
+    },
+    {
+      "key": "SCHED-4423",
+      "title": "invite links expire after one hour",
+      "status": "done",
+      "labels": [
+        "from:support"
+      ],
+      "body": "Invite links now expire one hour after they are sent."
+    },
+    {
+      "key": "SCHED-4431",
+      "title": "booking page: show remaining seats",
+      "status": "open",
+      "labels": [
+        "from:client"
+      ],
+      "body": "Group slots should show how many seats are left."
+    },
+    {
+      "key": "SCHED-4434",
+      "title": "booking page: the list of times scrolls on small phones",
+      "status": "done",
+      "labels": [
+        "from:support"
+      ],
+      "body": "On small phones the list of times was cut off at the bottom. It now scrolls."
+    },
+    {
+      "key": "SCHED-4439",
+      "title": "reminder emails go out 24 h before the slot",
+      "status": "done",
+      "labels": [
+        "from:product"
+      ],
+      "body": "One reminder email, 24 hours before each booking."
+    },
+    {
+      "key": "SCHED-4442",
+      "title": "search: names match with or without accents",
+      "status": "done",
+      "labels": [
+        "from:support"
+      ],
+      "body": "Searching for \"Zoe\" now finds \"Zoë\", and the other way round."
+    },
+    {
+      "key": "SCHED-4446",
+      "title": "CSV export: times carry no UTC offset",
+      "status": "open",
+      "labels": [
+        "from:analytics"
+      ],
+      "body": "Start and end times in the CSV export have no offset, so every tool that reads them has to guess the zone. Add a UTC offset column next to them; the start and end columns stay as they are."
+    },
+    {
+      "key": "SCHED-4452",
+      "title": "calendar sync: Outlook events arrive twice",
+      "status": "open",
+      "labels": [
+        "from:support"
+      ],
+      "body": "Some Outlook calendars show each booking twice after a sync."
+    },
+    {
+      "key": "SCHED-4458",
+      "title": "invoice PDF shows net and gross",
+      "status": "done",
+      "labels": [
+        "from:finance"
+      ],
+      "body": "Invoice PDFs list net, tax and gross on separate lines."
+    },
+    {
+      "key": "SCHED-4463",
+      "title": "type: move hard-coded font sizes to the type scale",
+      "status": "open",
+      "labels": [
+        "from:product"
+      ],
+      "body": "Some components still set their own font sizes. Move every size to the type scale in the tokens (DES-1). Nothing visible changes. Until this ships, a text-size setting cannot follow the type scale."
+    },
+    {
+      "key": "SCHED-4465",
+      "title": "API: rate-limit replies carry no Retry-After header",
+      "status": "open",
+      "labels": [
+        "from:client"
+      ],
+      "body": "When the API rate-limits a caller, the 429 reply does not say when to try again. Add a Retry-After header."
+    },
+    {
+      "key": "SCHED-4468",
+      "title": "spacing: move hard-coded margins to the spacing scale",
+      "status": "open",
+      "labels": [
+        "from:product"
+      ],
+      "body": "Some components still set their own margins and padding. Move every one to the 4 px scale in the tokens (DES-3). Nothing visible changes. Until this ships, a denser layout cannot come from the spacing scale."
+    },
+    {
+      "key": "SCHED-4471",
+      "title": "dates parse mm/dd in eu locales",
+      "status": "done",
+      "labels": [
+        "from:support"
+      ],
+      "body": "412 reports · merged by tove · closed 04:04 · by —"
+    },
+    {
+      "key": "SCHED-4486",
+      "title": "audit log: keep 90 days",
+      "status": "open",
+      "labels": [
+        "from:finance"
+      ],
+      "body": "Keep audit log entries for 90 days, then delete them."
+    },
+    {
+      "key": "SCHED-4494",
+      "title": "week view: a booking across midnight shows on its first day only",
+      "status": "open",
+      "labels": [
+        "from:support"
+      ],
+      "body": "A booking from 23:00 to 01:00 shows on its first day and is missing from the second."
+    },
+    {
+      "key": "SCHED-4498",
+      "title": "confirmation email: the cancel link opens the login page",
+      "status": "open",
+      "labels": [
+        "from:support"
+      ],
+      "body": "The cancel link in the booking confirmation email asks for a login. People who booked have no account. The cancel link in the reminder email opens the booking without one, as it should."
+    }
+  ]
+}

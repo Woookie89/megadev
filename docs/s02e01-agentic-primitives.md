@@ -36,13 +36,13 @@ The components are:
 - **Tools:** a list of schemas the model uses, and callbacks the loop triggers when a tool is chosen
 - **Hooks:** a list of callbacks that handle observability or actions such as compaction or file processing
 
-A naive implementation of this is shown below. [Pi agent](https://github.com/earendil-works/pi/tree/main/packages/agent/src) fully implements the same mechanics and shows how powerful this logic is: we can use Pi for coding, but we can also connect it to any tools and **get a general-purpose agent** or at least its initial version. 
+A naive implementation of this is shown below. [Pi agent](https://github.com/earendil-works/pi/tree/main/packages/agent/src) fully implements the same mechanics and shows how powerful this logic is: we can use Pi for coding, but we can also connect it to any tools and **get a general-purpose agent** or at least its initial version.
 
 ![An example JavaScript code snippet of a naive agentic loop. A tools object maps tool names to functions. A hooks object holds beforeModel, beforeTool and afterTool. A while loop calls the hooks, calls the model with the messages and the tool schemas, and runs each tool call. The stop condition is highlighted: when the model returns no tool calls, the loop returns the text. The tool and hook names are examples.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-3/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-3/frame.html)
 
-The logic above is extremely flexible, especially if the agent gets **a tool to write and execute code** and **a filesystem**. In practice, many things prevent the agent from working reliably, especially on long-horizon tasks. Even a single API issue may break such an agent. And in practice, there are many more traps related to **memory**, **long context handling**, **authorized actions**, or **internal and external bugs, timeouts, etc.** We face many of these issues every day when working with coding agents: we see them get stuck, fail to do something, or drift because of missing information, and so on. 
+The logic above is extremely flexible, especially if the agent gets **a tool to write and execute code** and **a filesystem**. In practice, many things prevent the agent from working reliably, especially on long-horizon tasks. Even a single API issue may break such an agent. And in practice, there are many more traps related to **memory**, **long context handling**, **authorized actions**, or **internal and external bugs, timeouts, etc.** We face many of these issues every day when working with coding agents: we see them get stuck, fail to do something, or drift because of missing information, and so on.
 
 ![A vertical flow. An example multi-step query starts the agent loop. Model call 1 returns a tool call, and the tool returns a result. Model call 2 gets an API error, shown in red. The loop has no path for the error, so the task stops mid turn. The query, the tool call and the error text are examples.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-5/frame.png)
 
@@ -58,14 +58,14 @@ Agents need to connect to LLMs, often from more than one provider. This requires
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-6/frame.html)
 
 **Threads and sessions:**
-Interactions with an agent are recorded in a thread that can span multiple sessions and involve more than one agent (`subagents`). Such history is often stored in text files agents can easily read using **bash** or any other tool allowing them to interact with the filesystem. It's important to note that **not every harness** supports subagents and easy access to threads. 
+Interactions with an agent are recorded in a thread that can span multiple sessions and involve more than one agent (`subagents`). Such history is often stored in text files agents can easily read using **bash** or any other tool allowing them to interact with the filesystem. It's important to note that **not every harness** supports subagents and easy access to threads.
 
 ![A frame named Main Thread holds two session frames. In Session 1 the user asks and the agent answers. In Session 2 the user comes back to the same main thread, and the agent asks a subagent. The subagent is in a separate frame named Subagent Thread, and it answers the agent. Red lines show this connection.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-7/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-7/frame.html)
 
-**Persistence:** 
-Threads aren't the only thing a harness needs to store. There are also attachments, generated artifacts, scripts, skills, permissions, connections, integrations, custom tools and more. From a programmer's perspective, there's nothing interesting about that until we consider that **agents need a way to manage all of this**. 
+**Persistence:**
+Threads aren't the only thing a harness needs to store. There are also attachments, generated artifacts, scripts, skills, permissions, connections, integrations, custom tools and more. From a programmer's perspective, there's nothing interesting about that until we consider that **agents need a way to manage all of this**.
 
 For example, generated images or artifacts should be available to the agent so it can handle follow up tasks about them. Or if a given integration requires additional permission, the agent should be able to show us the settings where we can grant it permission.
 
@@ -93,8 +93,8 @@ Harnesses take care of the context window in many ways. This includes a clear ex
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-11/frame.html)
 
-**Tools:** 
-Last week we learned that tools can be used by the model either through Function Calling or Code Mode. The first one requires **a schema** to be loaded into the context and calls are separate (but can be performed in parallel). Their results are appended to the thread, so the model can decide about the next step. This works for simple interactions but is very inefficient for complex workflows. That's why modern agents **write code** that can **chain tools** and can keep results in variables rather than adding every result to the context. 
+**Tools:**
+Last week we learned that tools can be used by the model either through Function Calling or Code Mode. The first one requires **a schema** to be loaded into the context and calls are separate (but can be performed in parallel). Their results are appended to the thread, so the model can decide about the next step. This works for simple interactions but is very inefficient for complex workflows. That's why modern agents **write code** that can **chain tools** and can keep results in variables rather than adding every result to the context.
 
 ![Flow diagram of code mode. The model writes one script that calls three tools in a chain: calendar.list, mail.search and files.write. Each result stays in a variable, events, mails and file. Only the final result goes into the thread, and the model reads it in the next call. The tool names, code and values are examples.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-12/frame.png)
 
@@ -114,7 +114,7 @@ And lastly, the harness is responsible for getting **approvals** from the user b
 
 All these components can be considered the core of the harness logic. Together, they give a good picture of why **an agent is not just a loop**: it needs many mechanisms that make interaction with the environment possible.
 
-If this knowledge feels redundant for someone who won't build their own agent, let's consider this: 
+If this knowledge feels redundant for someone who won't build their own agent, let's consider this:
 
 - we can't have an extremely long AGENTS.md, because the model will ignore most of it, and latency and cost will increase until it gets cached.
 - skills also need to be short and sometimes needs to be **reactivated** many times due to context compaction
@@ -141,13 +141,13 @@ Below is **the structure** of Claude's [system prompt for Haiku 5.5](https://pla
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-16/frame.html)
 
-The good news is that there's no need to write the prompt by hand. The prompts we're going to use will often be much simpler than the ones in Claude or ChatGPT, unless we create general-purpose agents. That said, we still need to know what to expect from the prompt and what the most important principles of Prompt Engineering are. 
+The good news is that there's no need to write the prompt by hand. The prompts we're going to use will often be much simpler than the ones in Claude or ChatGPT, unless we create general-purpose agents. That said, we still need to know what to expect from the prompt and what the most important principles of Prompt Engineering are.
 
-**Personality:** that's the basic information about the agent’s role and whom it interacts with, as such context affects the model's behavior. 
+**Personality:** that's the basic information about the agent’s role and whom it interacts with, as such context affects the model's behavior.
 **Environment:** essential information about the agent's purpose and the environment, such as the fact that the agent is operating without easy access to a human.
 **Context:** a map of available resources, or at least information about where to find them, has to be presented to the agent; otherwise it will fail to finish the task or mistakenly claim it can't do things it was supposed to do.
-**Discovery:** similar to context, the agent needs to know how to explore harness capabilities to use them properly. For example, the agent may perform some process and skip part of its steps because of poor organization of the documents that describe it. 
-**Boundaries:** the agent has to know its own limitations and things it is not allowed to do. At this point we know this is only a **recommendation** because technically the model may ignore these instructions. 
+**Discovery:** similar to context, the agent needs to know how to explore harness capabilities to use them properly. For example, the agent may perform some process and skip part of its steps because of poor organization of the documents that describe it.
+**Boundaries:** the agent has to know its own limitations and things it is not allowed to do. At this point we know this is only a **recommendation** because technically the model may ignore these instructions.
 
 ![A frame named System prompt holds five blocks, top to bottom: Personality, Environment, Context, Discovery and Boundaries, each with a short description. The Personality block is red.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-18/frame.png)
 
@@ -178,19 +178,19 @@ Agentic memory can be boiled down to four things:
 
 Memory is one of the most requested features by users, but there are no established standards or patterns for implementing it. And if we dig down into the details, we may notice that most harnesses handle memory in a naive way, only to make an impression that the agent remembers something, but there are exceptions.
 
-Memorizing comes down to extracting data from the ongoing thread, either through an additional LLM request that runs in the background or through explicit tool calls. Memories are often extracted as **user / client profile updates**, where facts fight for attention, or as separate documents that are categorized and connected to existing memories. 
+Memorizing comes down to extracting data from the ongoing thread, either through an additional LLM request that runs in the background or through explicit tool calls. Memories are often extracted as **user / client profile updates**, where facts fight for attention, or as separate documents that are categorized and connected to existing memories.
 
 ![Flow figure with two frames. On the left, a Thread between a client and an agent: the client says "I prefer short answers.", the agent gives a short answer, the client asks for a summary by email every Friday, then says "Actually, give me detailed answers from now on.", and the agent confirms. On the right, a Client profile in Memory holds three fields: answer length, summary and source. A background LLM request extracts the first message and sets answer length to short. The memory.update tool call sets summary to email, every Friday, and later changes answer length to detailed. The answer length field is red: the later preference replaces the earlier value, and no separate document is created. All messages and values are examples.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-20/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-20/frame.html)
 
-The challenge here is **connecting existing memories** when some of them may contradict or override others. It's also quite tricky to properly connect ambiguous information, such as facts about two different people with the same name, because [the agent may struggle to tell which person we're talking about](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/memory-extraction). That's why people experiment with **confidence scores** or temporary notes until the ambiguity is resolved. Storing memories also comes with other problems: **duplication**, but also **updating** and keeping track of **what has changed over time**. 
+The challenge here is **connecting existing memories** when some of them may contradict or override others. It's also quite tricky to properly connect ambiguous information, such as facts about two different people with the same name, because [the agent may struggle to tell which person we're talking about](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/memory-extraction). That's why people experiment with **confidence scores** or temporary notes until the ambiguity is resolved. Storing memories also comes with other problems: **duplication**, but also **updating** and keeping track of **what has changed over time**.
 
 ![One example preference from a thread, "Give me detailed answers from now on.", points to a Client profile in Memory that has three problem rows. Contradicts (red): the profile already holds "answer length: short", and the new preference must override it. Duplicated: "summary: email, every Friday" is in the profile, and the same preference sits next to it in a separate note, "Friday summary by email". Ambiguous: "Adam: reports: weekly" is in the profile, and lines go from it to two clients who are both named Adam. Conclusion: storing a preference is easy. The hard part is to keep one current, single and clearly owned value over time. All messages and values are examples.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-21/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-21/frame.html)
 
-Most of these problems aren't solved yet, partly because of the cost of background processing, but also because the whole process is so complex. And that's just one side of the coin, because the agent also needs to somehow recall existing memories, which is even more complicated. 
+Most of these problems aren't solved yet, partly because of the cost of background processing, but also because the whole process is so complex. And that's just one side of the coin, because the agent also needs to somehow recall existing memories, which is even more complicated.
 
 Recalling done right is hard, because it has to be **fast**, **contextual** and **efficient**. A harness [has to consider the ongoing thread](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/contextual-recall) and quickly match documents the model will use to generate a personalized answer. This often cannot be done based on messages alone, so we need a global context in the form of a **user profile / client** or some kind of a map.
 
@@ -224,13 +224,13 @@ Letting an agent interact with the outside world can be implemented in many ways
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-25/frame.html)
 
-- **Discovery:** tools may be available as built-in catalog agent can explore using dedicated **search tool** we give them, or tools may have a form of **files** the agent explores using Bash. The first option gives us much more control while the second is extremely flexible as the agent can natively manage its capabilities (which can be good and bad). But if we need to get tools at scale, we need to figure out a gateway such as one [Uber made to manage 8000+ tools](https://www.uber.com/pl/en/blog/designing-mcp-gateway/), their authorization and permissions. Another example is [an open-sourced Treg](https://github.com/superdesigndev/treg). 
+- **Discovery:** tools may be available as built-in catalog agent can explore using dedicated **search tool** we give them, or tools may have a form of **files** the agent explores using Bash. The first option gives us much more control while the second is extremely flexible as the agent can natively manage its capabilities (which can be good and bad). But if we need to get tools at scale, we need to figure out a gateway such as one [Uber made to manage 8000+ tools](https://www.uber.com/pl/en/blog/designing-mcp-gateway/), their authorization and permissions. Another example is [an open-sourced Treg](https://github.com/superdesigndev/treg).
 
 ![A diagram of Uber's MCP Gateway. In the control plane, a crawler finds tools and adds them to the registry, where new tools are off. The registry sends config down to the proxy in the data plane. Agents speak MCP to a tool search front door: search server, list tools, get schema. The front door sends the call to the proxy, which authorizes, redacts and trims the reply. From the proxy, a red line translates calls to existing APIs (HTTP, gRPC, TChannel). Other lines proxy calls to native MCP servers and pass the token to third-party servers (Jira, Google).](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-26/frame.png)
 
 [Open figure](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-26/frame.html)
 
-- **Reusability:** we know that skills may contain scripts the agent can **reuse** to avoid repeating the same task manually. The same applies to tools if we let the agent manage them. But it's not only about making an agent **create tools**, but also connect this with its other capabilities, such as **available integrations**, **value stores** or **other packages**. 
+- **Reusability:** we know that skills may contain scripts the agent can **reuse** to avoid repeating the same task manually. The same applies to tools if we let the agent manage them. But it's not only about making an agent **create tools**, but also connect this with its other capabilities, such as **available integrations**, **value stores** or **other packages**.
 
 ![A vertical diagram. The agent at the top creates a package. The package holds logic. Lines go down from the logic to three capabilities: integrations, value stores and other packages. The import lines in the logic are an example.](https://hq.mega.dev/figures/s02e01/artifacts/lesson/figure-27/frame.png)
 
@@ -246,6 +246,6 @@ All this in practice may be **limited** or **extended** to the degree we need to
 
 ## Takeaways
 
-We work with agents every day, sometimes even without realizing how much happens under the hood. After this lesson, whether we build our own agents or keep using existing ones, we have a better understanding of **what we may expect from them** and what makes them fail, for example when we ask for something they should recall but they claim they don't have it. 
+We work with agents every day, sometimes even without realizing how much happens under the hood. After this lesson, whether we build our own agents or keep using existing ones, we have a better understanding of **what we may expect from them** and what makes them fail, for example when we ask for something they should recall but they claim they don't have it.
 
 The last lesson here is to understand that building even a simple agent to learn how it works can make us much better at working with Claude, Pi or any other harness.

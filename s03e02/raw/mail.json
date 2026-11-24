@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "id": "IN-9975",
+      "from": "client",
+      "text": "The screens outside our rooms read your calendar feed and expect all-day bookings as midnight to midnight. Please leave that as it is."
+    },
+    {
+      "id": "IN-5359",
+      "from": "client",
+      "text": "URGENT: our front desk needs a compact week view that fits a whole day on one screen, before Friday.",
+      "seenAt": "2026-11-19T10:55:30.780Z"
+    },
+    {
+      "id": "IN-4203",
+      "from": "client",
+      "text": "Our payroll import reads the dates in your CSV export as month first, mm/dd, the way they come today. Please do not flip them to day first under us.",
+      "reporter": "ilse · studio · auckland",
+      "seenAt": "2026-11-19T10:56:01.741Z"
+    },
+    {
+      "id": "IN-1725",
+      "from": "client",
+      "text": "Can clients book 15-minute slots? 30 minutes is too long for our quick check-in calls.",
+      "seenAt": "2026-11-19T10:58:02.351Z"
+    },
+    {
+      "id": "IN-5353",
+      "from": "client",
+      "text": "Could the day view get a print button? Our front desk prints the day's bookings every morning.",
+      "seenAt": "2026-11-19T10:58:32.488Z"
+    },
+    {
+      "id": "IN-5369",
+      "from": "client",
+      "text": "People who booked with us can't cancel: the link in their confirmation email sends them to a login page.",
+      "seenAt": "2026-11-19T10:59:02.632Z"
+    }
+  ],
+  "cursor": "JQcEG6J0A1ffLCp7.sq4pyTpINwU9zTZ95C17hYUaDMrGoawfFgwW-MKwhGA-x9UmVa6ZLPEooeFddkn9t0iyjhIshwYW3LDnQy-clVUo7IOAfx-FfQ.wXtE2rSexe9beEHJKfNj7w"
+}

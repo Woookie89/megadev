@@ -27,7 +27,7 @@ Projektując architekturę agenta, musimy odejść od niektórych typowych wzorc
 - **Autonomia:** jaki poziom autonomii jest potrzebny i jaką rolę będą pełnić ludzie?
 - **Interfejs użytkownika:** czy potrzebujemy pełnego interfejsu, samych [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview), a może **generatywnego interfejsu użytkownika**?
 - **Profile:** czy użytkownicy potrzebują własnych przestrzeni roboczych, czy możemy scentralizować środowisko?
-- **Możliwości:** czy agent potrzebuje własnego komputera, przeglądarki, systemu plików lub piaskownicy?
+- **Możliwości:** czy agent potrzebuje własnego komputera, przeglądarki, systemu plików lub sandboxa?
 - **Integracje:** jak agent ma obsługiwać integracje?
 - **Łączność:** czy agent musi łączyć się z systemami zewnętrznymi?
 - **Pamięć:** jakiej strategii ekstrakcji i wyszukiwania chcemy użyć?
@@ -44,7 +44,7 @@ Trzeba tu podjąć wiele decyzji, wybierzemy więc ścieżkę najtrudniejszą, a
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-2/frame.html)
 
-## Najważniejsze funkcje
+## Podstawowe funkcje
 
 Projektowanie agentów różni się od projektowania typowych aplikacji. Wraz z tym, jak modele stają się lepsze, tańsze i szybsze, możemy dawać im więcej swobody i przestrzeni. Zamiast budować wąskie rozwiązanie wyspecjalizowane w jednej rzeczy, możemy pozwolić AI znaleźć sposób obsługi przypadków, których nie przewidzieliśmy.
 
@@ -64,7 +64,7 @@ Takie środowisko kształtuje się za pomocą **prymitywów**: ogólnych element
 
 Załóżmy, że chcemy **rozwijającego się agenta działającego w tle**, który pomaga nam się uczyć. Porządkuje on naszą bazę wiedzy i wyszukuje informacje na tematy, które nas ciekawią, korzystając **wyłącznie z zaufanych przez nas źródeł**. **Nie ma własnego interfejsu**. Zamiast tego działa w bazie wiedzy i dociera do nas za pośrednictwem kanałów, z których już korzystamy, takich jak krótka notatka, wiadomość lub cotygodniowe podsumowanie. Po skonfigurowaniu **wymaga bardzo niewielkiej obsługi** i minimalnego nadzoru.
 
-Jest **proaktywny**, ale nie dlatego, że działa według harmonogramu ustalonego na początku. Zamiast tego **analizuje własną pracę**. Zauważa, jak bardzo jesteśmy aktywni, na czym się teraz skupiamy oraz z których jego działań skorzystaliśmy, a które zignorowaliśmy. Następnie dostosowuje to, co robi, jak często i jak intensywnie: zachowuje ciszę podczas pracowitych tygodni i prowadzi dokładniejsze badania, gdy coś odkrywamy. Każda zmiana, którą wprowadza, jest **rejestrowana w bazie wiedzy i można ją cofnąć**, więc działanie w tle nie oznacza utraty kontroli.
+Jest **proaktywny**, ale nie dlatego, że działa według harmonogramu ustalonego na początku. Zamiast tego **analizuje własną pracę**. Zauważa, jak bardzo jesteśmy aktywni, na czym się teraz skupiamy oraz z których jego działań skorzystaliśmy, a które zignorowaliśmy. Następnie dostosowuje to, co robi, jak często i jak intensywnie: zachowuje ciszę podczas pracowitych tygodni i prowadzi dokładniejsze badania, gdy zgłębiamy nowe tematy. Każda zmiana, którą wprowadza, jest **rejestrowana w bazie wiedzy i można ją cofnąć**, więc działanie w tle nie oznacza utraty kontroli.
 
 ![Po lewej znajduje się użytkownik, poza czerwoną ramką Prymitywy. Ramka zawiera sześć bloków składowych, każdy ze swoimi operacjami: Pamięć (baza wiedzy: notes.read, notes.write, notes.link), Zdarzenia (aktywność: events.watch, na przykład „edytowano notatkę”, „zapisano link”, „dodano plik”), Narzędzia (świat zewnętrzny: web.search, page.read), Wiadomości (jedyna droga dotarcia do użytkownika: message.send), Dziennik (wykonane działania i ich skuteczność: journal.read, journal.write) oraz Harmonogram (własne wybudzenia agenta, które sam zmienia: schedule.get, schedule.set). Użytkownik łączy się tylko z Pamięcią linią opisaną „edytuje notatki” oraz z Wiadomościami przerywaną linią „cotygodniowe podsumowanie”. Pod ramką pętla otacza agenta, który nie ma interfejsu: obserwuje (Zdarzenia, Pamięć), analizuje (Dziennik), działa (Narzędzia, Pamięć, Wiadomości) i ponownie planuje (Harmonogram, Dziennik). Obok pętli oś czasu aktywności porównuje dwa tygodnie. W pracowitym tygodniu agent budzi się często, a wysokość słupków pokazuje większą liczbę badań. W spokojnym tygodniu budzi się tylko dwa razy. Położenie i wysokości słupków są przykładami.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-5/frame.png)
 
@@ -75,23 +75,23 @@ Mając tę wizję na uwadze, możemy zacząć myśleć o **prymitywach**, które
 **Zdarzenie:** sygnał o aktywności, który może pochodzić z dowolnego źródła i wpływać na dokumenty.
 **Harmonogram:** wybudzenia, które agent ustawia samodzielnie.
 **Dokument:** wszystko, co agent napisał dla siebie i dla nas.
-**Umiejętność:** powtarzalna praca zapisana w formie, którą agent może ponownie wykorzystać, również w sposób deterministyczny.
+**Skill:** powtarzalna praca zapisana w formie, którą agent może ponownie wykorzystać, również w sposób deterministyczny.
 **Dziennik:** wszystko, co agent zrobił. Wpisy są tylko dodawane, nigdy edytowane.
 **Kanał:** jedyny sposób, w jaki agent może skontaktować się z użytkownikiem.
 
-Takie prymitywy można łączyć, więc **Zdarzenie** może na podstawie swojego typu wywołać określoną **Umiejętność**, **Harmonogram** może być powiązany z daną kategorią **Dokumentów**, a każda czynność pozostawia wpis w **Dzienniku**. Podczas analizy agent czyta **Dziennik**, aby zdecydować, kiedy obudzić się następnym razem, którą pracę warto zapisać jako nową **Umiejętność** i czy coś zasługuje na naszą uwagę oraz przekazanie przez **Kanał**.
+Takie prymitywy można łączyć, więc **Zdarzenie** może na podstawie swojego typu wywołać określony **Skill**, **Harmonogram** może być powiązany z daną kategorią **Dokumentów**, a każda czynność pozostawia wpis w **Dzienniku**. Podczas analizy agent czyta **Dziennik**, aby zdecydować, kiedy obudzić się następnym razem, którą pracę warto zapisać jako nowy **Skill** i czy coś zasługuje na naszą uwagę oraz przekazanie przez **Kanał**.
 
 W ten sposób kilka ogólnych elementów tworzy zachowanie, którego nie musieliśmy wcześniej projektować, a każdy krok nadal mieści się w ukształtowanym przez nas środowisku. Gdy coś pójdzie nie tak, **Dziennik** pokaże, co się stało i dlaczego.
 
-![Przykład agenta bazy wiedzy. Czerwona ramka „Środowisko, które kształtujemy” zawiera sześć bloków prymitywów. Wiersz 1: Umiejętność „podsumuj artykuł w notatce” ze strzałką „zapisuje notatkę” do Dokumentu „tematy badań”. Wiersz 2: Zdarzenie „zapisano link” ze strzałką „wyzwala” w górę do Umiejętności, szeroki Dziennik z wpisami „09:12 podsumowano artykuł” i „pon. 08:00 zaktualizowano 3 notatki badawcze” oraz Harmonogram „w każdy poniedziałek” ze strzałką „aktualizuje” w górę do Dokumentu. Cienkie linie z wszystkich trzech strzałek wchodzą do górnej części Dziennika. Wiersz 3: Agent analizuje. Strzałka „odczytuje” prowadzi z Dziennika do Agenta. Agent wysyła ukośną strzałkę „zapisz powtarzalną pracę jako Umiejętność” w lewo i w górę do Umiejętności oraz ukośną strzałkę „obudź się za 2 dni” w prawo i w górę do Harmonogramu. Wiersz 4: strzałka „wyślij krótkie podsumowanie” prowadzi od Agenta do Kanału. Tylko strzałka od Kanału przekracza ramkę i prowadzi do okręgu Użytkownika na zewnątrz. Pod nią panel Ślad pokazuje przygaszony wpis „pon. 08:00 zaktualizowano 3 notatki badawcze” i wyróżniony wpis „09:12 podsumowano artykuł”. Kropkowana strzałka „utworzono przez” prowadzi do Umiejętności „podsumuj artykuł w notatce”, a kropkowana strzałka „wyzwolono przez” prowadzi do Zdarzenia „zapisano link”. Podpis znajduje się po prawej stronie panelu. Wszystkie nazwy, zdarzenia i wpisy są przykładami.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-6/frame.png)
+![Przykład agenta bazy wiedzy. Czerwona ramka „Środowisko, które kształtujemy” zawiera sześć bloków prymitywów. Wiersz 1: Skill „podsumuj artykuł w notatce” ze strzałką „zapisuje notatkę” do Dokumentu „tematy badań”. Wiersz 2: Zdarzenie „zapisano link” ze strzałką „wyzwala” w górę do Skilla, szeroki Dziennik z wpisami „09:12 podsumowano artykuł” i „pon. 08:00 zaktualizowano 3 notatki badawcze” oraz Harmonogram „w każdy poniedziałek” ze strzałką „aktualizuje” w górę do Dokumentu. Cienkie linie z wszystkich trzech strzałek wchodzą do górnej części Dziennika. Wiersz 3: Agent analizuje. Strzałka „odczytuje” prowadzi z Dziennika do Agenta. Agent wysyła ukośną strzałkę „zapisz powtarzalną pracę jako Skill” w lewo i w górę do Skilla oraz ukośną strzałkę „obudź się za 2 dni” w prawo i w górę do Harmonogramu. Wiersz 4: strzałka „wyślij krótkie podsumowanie” prowadzi od Agenta do Kanału. Tylko strzałka od Kanału przekracza ramkę i prowadzi do okręgu Użytkownika na zewnątrz. Pod nią panel Ślad pokazuje przygaszony wpis „pon. 08:00 zaktualizowano 3 notatki badawcze” i wyróżniony wpis „09:12 podsumowano artykuł”. Kropkowana strzałka „utworzono przez” prowadzi do Skilla „podsumuj artykuł w notatce”, a kropkowana strzałka „wyzwolono przez” prowadzi do Zdarzenia „zapisano link”. Podpis znajduje się po prawej stronie panelu. Wszystkie nazwy, zdarzenia i wpisy są przykładami.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-6/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-6/frame.html)
 
-W tym momencie widzimy, że niektóre **prymitywy** mogą znajdować się w systemie plików, dzięki czemu agent może łatwo z nimi pracować. Harmonogramy, zdarzenia, skrypty, dokumenty i dziennik mogą być plikami. Aby agent mógł swobodnie z nich korzystać, musi umieć pisać kod, co oznacza, że potrzebuje piaskownicy. Nie oznacza to jednak, że **wszystkie prymitywy muszą znajdować się w systemie plików**, ponieważ niektóre mogą istnieć w bazie danych i być dostępne przez dedykowany interfejs. To od nas zależy również, czy rdzeń agentowy będzie oparty na wybranym przez nas frameworku, czy na całkowicie własnej logice.
+W tym momencie widzimy, że niektóre **prymitywy** mogą znajdować się w systemie plików, dzięki czemu agent może łatwo z nimi pracować. Harmonogramy, zdarzenia, skrypty, dokumenty i dziennik mogą być plikami. Aby agent mógł swobodnie z nich korzystać, musi umieć pisać kod, co oznacza, że potrzebuje sandboxa. Nie oznacza to jednak, że **wszystkie prymitywy muszą znajdować się w systemie plików**, ponieważ niektóre mogą istnieć w bazie danych i być dostępne przez dedykowany interfejs. To od nas zależy również, czy rdzeń agentowy będzie oparty na wybranym przez nas frameworku, czy na całkowicie własnej logice.
 
 ## Dostawcy i konfiguracja
 
-Budując agentów, nie powinniśmy uzależniać się od konkretnego dostawcy, nie tylko ze względu na uzależnienie od dostawcy, ale też dlatego, że możemy chcieć korzystać **jednocześnie z wielu modeli** albo z modeli dostępnych u konkretnego dostawcy.
+Budując agentów, nie powinniśmy wiązać się z konkretnym dostawcą, nie tylko z powodu ryzyka uzależnienia od niego (vendor lock-in), ale też dlatego, że możemy chcieć korzystać **jednocześnie z wielu modeli** albo z modeli dostępnych u konkretnego dostawcy.
 
 Możemy na przykład używać Gemini do generowania obrazów, modelu decyzyjnego od TypeSafe albo mieszaniny modeli Anthropic i OpenAI, aby uzyskać różne perspektywy lub po prostu korzystać z aktualnie najlepszego modelu. Najłatwiej uzyskać to wszystko za pośrednictwem platform takich jak [OpenRouter](https://openrouter.com/), choć warto pamiętać, że niektóre natywne funkcje API danego dostawcy mogą być tam niedostępne. Tworząc produkty dla klientów B2B, możemy rozważyć [Amazon Bedrock](https://aws.amazon.com/bedrock/model-choice/) lub [Microsoft Azure](https://azure.microsoft.com/en-us/products/ai-foundry/models).
 
@@ -107,7 +107,7 @@ Dostęp do wielu modeli pozwala nam myśleć o **routingu modeli**: obsługiwani
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-8/frame.html)
 
-W miarę rozwoju LLM-ów i ich API nasze aplikacje powinny unikać warstw, które niepotrzebnie utrudniają migrację do nowszych wersji. Na przykład, jeśli ktoś zbudował aplikację z użyciem API Chat Completions od OpenAI i nie ma łatwego sposobu na migrację do API Responses, [niektóre modele i funkcje mogą być dla niego niedostępne.](https://developers.openai.com/api/docs/guides/migrate-to-responses).
+W miarę rozwoju LLM-ów i ich API nasze aplikacje powinny unikać warstw, które niepotrzebnie utrudniają migrację do nowszych wersji. Na przykład, jeśli ktoś zbudował aplikację z użyciem API Chat Completions od OpenAI i nie ma łatwego sposobu na migrację do API Responses, [niektóre modele i funkcje mogą być dla niego niedostępne](https://developers.openai.com/api/docs/guides/migrate-to-responses).
 
 ## Projektowanie narzędzi
 
@@ -133,7 +133,7 @@ Mając to na uwadze, musimy samodzielnie projektować **natywne narzędzia**. Je
 
 Nasz agent może więc mieć cztery natywne narzędzia:
 
-- **core.exec:** wykonuje kod w piaskownicy w przestrzeni roboczej
+- **core.exec:** wykonuje kod w sandboxie w przestrzeni roboczej
 - **web.search:** przeszukuje sieć, ale tylko w zaufanych źródłach
 - **web.fetch:** pobiera treść spod adresu URL
 - **channel.send:** wysyła wiadomość do użytkownika
@@ -144,9 +144,9 @@ Dodatkowo środowisko agenta będzie korzystać z **journal.append** i **events.
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-11/frame.html)
 
-W przypadku tego agenta nie wystarczy zadbać o narzędzia, ponieważ agent musi też wiedzieć, jak poruszać się po przestrzeni roboczej, kształtować dokumenty, rozumieć zależności między nimi itd. Możemy więc rozważyć przygotowanie początkowego **przewodnika** w postaci **Dokumentów** i **Umiejętności** (natywnych prymitywów). Dzięki temu otrzymamy **rozszerzone narzędzia**, które nie są sztywne, ponieważ agent będzie mógł je modyfikować.
+W przypadku tego agenta nie wystarczy zadbać o narzędzia, ponieważ agent musi też wiedzieć, jak poruszać się po przestrzeni roboczej, kształtować dokumenty, rozumieć zależności między nimi itd. Możemy więc rozważyć przygotowanie początkowego **przewodnika** w postaci **Dokumentów** i **Skilli** (natywnych prymitywów). Dzięki temu otrzymamy **rozszerzone narzędzia**, które nie są sztywne, ponieważ agent będzie mógł je modyfikować.
 
-![Diagram przepływu z przykładową umiejętnością. Przewodnik udostępnia agentowi umiejętność „weekly-digest”, zaznaczoną na czerwono. Umiejętność korzysta z trzech natywnych narzędzi: web.search, core.exec i channel.send, aby przygotować cotygodniowy raport na podstawie szablonu użytkownika. Agent może modyfikować umiejętność i jej szablon. Nazwa umiejętności, szablon i ścieżki plików są przykładami.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-12/frame.png)
+![Diagram przepływu z przykładowym skillem. Przewodnik udostępnia agentowi skill „weekly-digest”, zaznaczony na czerwono. Skill korzysta z trzech natywnych narzędzi: web.search, core.exec i channel.send, aby przygotować cotygodniowy raport na podstawie szablonu użytkownika. Agent może modyfikować skill i jego szablon. Nazwa skilla, szablon i ścieżki plików są przykładami.](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-12/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-12/frame.html)
 
@@ -170,14 +170,14 @@ Nie ma uniwersalnych odpowiedzi na pytanie o zarządzanie kontekstem w agentach 
 - **Tools:** w trybie kodu agent otrzymuje schematy tylko najważniejszych narzędzi. W naszym przypadku są to **exec, search i fetch**, ponieważ wszystkie pozostałe możliwości są kontrolowane przez kod napisany przez agenta.
 - **Początkowa Developer Message:** tuż przed pierwszą wiadomością możemy dodać bieżący stan systemu, aby agent od razu wiedział, co się dzieje i czy przed rozpoczęciem zadania powinien coś uwzględnić.
 - **Wiadomości użytkownika:** ten agent będzie działał autonomicznie, więc wiadomość użytkownika często będzie zaplanowaną wiadomością wysyłaną mu przez środowisko. Agent musi o tym wiedzieć, ponieważ **nie będzie mógł zadawać pytań**. Jedynym sposobem kontaktu z użytkownikiem jest **channel.send** (chyba że skonfigurujemy to inaczej).
-- **Śród-turę Developer Message:** środowisko się zmienia, dlatego w trakcie tury agent powinien otrzymywać wyłącznie informacje o **tym, co się zmieniło**.
+- **Developer Message w trakcie tury:** środowisko się zmienia, dlatego w trakcie tury agent powinien otrzymywać wyłącznie informacje o **tym, co się zmieniło**.
 - **Tool Hooks:** ze względu na znaczenie prawidłowej organizacji i samodzielnego zarządzania agent może otrzymywać **dobrze uogólnione, ukierunkowujące jego działanie** wiadomości przed wywołaniem narzędzia i po nim.
 
-Zaleca się rozpocząć prosto i zbudować środowisko, w którym agenci będą mogli osiągnąć najlepszą postać przez samodzielną praktykę. Naszą rolą jest nadzorowanie tego procesu, ponieważ modele mogą skłaniać się ku złożonej logice, a my szukamy **najprostszego możliwego rozwiązania**.
+Zaleca się zacząć od czegoś prostego i zbudować środowisko, w którym agenci będą mogli osiągnąć najlepszą formę przez samodzielną praktykę. Naszą rolą jest nadzorowanie tego procesu, ponieważ modele mogą skłaniać się ku złożonej logice, a my szukamy **najprostszego możliwego rozwiązania**.
 
 W kolejnych lekcjach omówimy tworzenie własnych ewaluacji, aby agenci nie wprowadzali zmian na ślepo, bez wyraźnej informacji zwrotnej o wydajności systemu.
 
-## Przepływy pracy i zadania długoterminowe
+## Przepływy pracy i zadania długookresowe
 
 Budowa dobrego agenta działającego w tle to świetne ćwiczenie z tworzenia niezawodnych systemów obejmujących logikę niedeterministyczną. Dodatkowym wyzwaniem jest utrzymanie tych systemów w lekkiej postaci dzięki prymitywom, które AI może łączyć, wykraczając poza scenariusze, dla których zaprojektowano agenta.
 
@@ -193,9 +193,9 @@ Innym przykładem może być harmonogram skanujący naszą aktywność w X, Rain
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s02e02/artifacts/lesson/figure-14/frame.html)
 
-Eksperymentując z podobnymi scenariuszami, wiele się nauczymy o działaniu agentów, podejmowaniu decyzji przez modele, ich trudnościach oraz ograniczeniach naszego środowiska. Możemy na przykład napotkać problemy z równoległymi aktualizacjami, które mogą nawet prowadzić do utraty danych, dlatego trzeba wprowadzić kolejki lub wersjonowanie. Niektóre zadania mogą wymagać uwzględnienia logiki takiej jak w [pi-durable](https://github.com/earendil-works/pi/tree/main/packages/durable), aby agent mógł łatwo odzyskać działanie po niemal każdej awarii lub wstrzymać wykonanie na dowolnie długo, albo koncepcji z [pi-until](https://github.com/joelhooks/pi-until), aby skonfigurować obserwatory i cykliczne wybudzenia.
+Eksperymentując z podobnymi scenariuszami, wiele się nauczymy o działaniu agentów, podejmowaniu decyzji przez modele, ich trudnościach oraz ograniczeniach naszego środowiska. Możemy na przykład napotkać problemy z równoległymi aktualizacjami, które mogą nawet prowadzić do utraty danych, dlatego trzeba wprowadzić kolejki lub wersjonowanie. Niektóre zadania mogą wymagać uwzględnienia logiki takiej jak w [pi-durable](https://github.com/earendil-works/pi/tree/main/packages/durable), aby agent mógł łatwo wznowić pracę po niemal każdej awarii lub wstrzymać wykonanie na dowolnie długi czas, albo koncepcji z [pi-until](https://github.com/joelhooks/pi-until), aby skonfigurować obserwatory i cykliczne wybudzenia.
 
-## Wnioski
+## Najważniejsze wnioski
 
 Przykład z tej lekcji powinien jasno pokazać, dlaczego możemy chcieć budować własne środowisko agenta albo nauczyć się rozszerzać istniejące środowiska, by dostosować je do konkretnych zadań.
 

@@ -1,0 +1,21 @@
+{
+  "accepted": [
+    {"tag": "R-K4M", "source": {"file": "memo.m4a", "at": 5.6}},
+    {"tag": "R-H8X", "source": {"file": "memo.m4a", "at": 18.7}},
+    {"tag": "R-Z5L", "source": {"file": "memo.m4a", "at": 27.3}},
+    {"tag": "R-L5Z", "source": {"file": "memo.m4a", "at": 34.6}},
+    {"tag": "R-Z2K", "source": {"file": "recording.mp4", "at": 6.8}},
+    {"tag": "R-H4L", "source": {"file": "recording.mp4", "at": 16, "region": {"x": 0.675, "y": 0.265, "w": 0.292, "h": 0.072}}},
+    {"tag": "R-M9Z", "source": {"file": "screenshot.png", "region": {"x": 0.752, "y": 0.112, "w": 0.135, "h": 0.13}}},
+    {"tag": "R-M3H", "source": {"file": "spec.pdf", "region": {"page": 1, "x": 0.10, "y": 0.452, "w": 0.34, "h": 0.028}}},
+    {"tag": "R-K8L", "source": {"file": "whiteboard.jpg", "region": {"x": 0.178, "y": 0.305, "w": 0.36, "h": 0.125}}},
+    {"tag": "R-X2M", "source": {"file": "BOARD_LINK", "region": {"x": 0.054, "y": 0.585, "w": 0.405, "h": 0.14}}}
+  ],
+  "conflicts": [
+    {"tag": "R-L3K", "with": "R-X6H", "ownerQuestion": "Dates on the page: day first, 05/10, as the spec says (R-L3K, the night shift's notes), or month first, 10/05, as the screenshot note says (R-X6H, like the boards)?", "source": {"file": "spec.pdf", "region": {"page": 2, "x": 0.10, "y": 0.180, "w": 0.80, "h": 0.026}}},
+    {"tag": "R-X6H", "with": "R-L3K", "ownerQuestion": "Dates on the page: month first, 10/05, as the screenshot note says (R-X6H, like the boards), or day first, 05/10, as the spec says (R-L3K, the night shift's notes)?", "source": {"file": "screenshot.png", "region": {"x": 0.757, "y": 0.350, "w": 0.15, "h": 0.13}}},
+    {"tag": "R-H9K", "with": "R-Z6M", "ownerQuestion": "How far back does the page go: last night only, nothing older (spec R-H9K), or the whole week kept on it (whiteboard R-Z6M)?", "source": {"file": "spec.pdf", "region": {"page": 2, "x": 0.10, "y": 0.271, "w": 0.50, "h": 0.026}}},
+    {"tag": "R-Z6M", "with": "R-H9K", "ownerQuestion": "How far back does the page go: the whole week kept on it (whiteboard R-Z6M), or last night only, nothing older (spec R-H9K)?", "source": {"file": "whiteboard.jpg", "region": {"x": 0.178, "y": 0.44, "w": 0.32, "h": 0.066}}},
+    {"tag": "R-X5K", "with": "4471", "ownerQuestion": "R-X5K says each incident names who ran it, but feed record 4471 (sched-prod, schedule rebuild, 03:51-04:04Z) has author \"—\": who ran 4471, and what should the page show for it until we know?", "source": {"file": "spec.pdf", "region": {"page": 1, "x": 0.10, "y": 0.495, "w": 0.37, "h": 0.028}}}
+  ]
+}

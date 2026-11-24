@@ -6,7 +6,7 @@ Każdy z nas pracuje z harnessami AI na swój sposób. Niektórzy wolą przepły
 - Samodzielne zarządzanie: agenci konfigurujący się samodzielnie, rozszerzenia, uruchamianie workerów, sesje w tle
 - Konfiguracja wielu agentów: koordynator i workery, sterowanie, pliki jako wiadomości, worktrees, reguły globalne, wizja i przewodnik po stylu
 - Ustawienia: wybór i kierowanie do modeli, poziom wysiłku rozumowania, koszt zadania, granice prywatności
-- Praca zespołowa: współdzielone umiejętności, wewnętrzna baza wiedzy, stos narzędzi przyjazny AI
+- Praca zespołowa: współdzielone skille, wewnętrzna baza wiedzy, stos narzędzi przyjazny AI
 - Automatyzacja: agenci repozytorium, wzbogacone zgłoszenia, automatyczne przeglądy, drobne poprawki, aktualna dokumentacja
 
 Znalezienie odpowiedniej konfiguracji jest dość trudne, bo dostępnych opcji jest bardzo wiele. Co tydzień pojawiają się też nowe funkcje, przepływy pracy i narzędzia, przez co trudno za tym wszystkim nadążyć. Sekret polega na tym, że **nie musimy gonić za każdą nowinką**, ale nie oznacza to, że powinniśmy całkowicie ignorować nowe rozwiązania. Potrzebujemy po prostu **dobrego systemu**. Oznacza to podjęcie kilku dobrych decyzji dotyczących naszego środowiska — nie tylko w kontekście programowania — przygotowanie konfiguracji niezależnej od harnessu i pracę nad **naszym nastawieniem**.
@@ -17,13 +17,13 @@ Zobaczmy, co składa się na taki system.
 
 Wśród dostępnych opcji znajdziemy wiele harnessów CLI, takich jak [Codex](https://openai.com/codex/), [Claude Code](https://claude.com/product/claude-code), [OpenCode](https://opencode.ai/), [Pi](https://pi.dev/), [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), [Grok Build](https://x.ai/build); harnessy UI, takie jak [Cursor](https://cursor.com), [Zed](https://zed.dev/) i [Devin](https://devin.ai/); a także aplikacje takie jak [t3code](https://t3.codes/), [humanlayer](https://www.humanlayer.dev/) i [superset](https://superset.sh/) oraz agentów, takich jak [Hermes Agent](https://hermes-agent.nousresearch.com/), [Grok Bot](https://x.ai/bot) czy [Dots](https://openai.com/index/introducing-dots/).
 
-Oprócz harnessu musimy wybrać terminal, na przykład [iTerm](https://iterm2.com/), [Warp](https://www.warp.dev/) lub [cmux](https://cmux.com/), a także modele od OpenAI, Anthropic, xAI lub innych dostawców. Musimy też rozważyć korzystanie z umiejętności i integracji, w tym narzędzi CLI i MCP, a na koniec skonfigurować sam harness.
+Oprócz harnessu musimy wybrać terminal, na przykład [iTerm](https://iterm2.com/), [Warp](https://www.warp.dev/) lub [cmux](https://cmux.com/), a także modele od OpenAI, Anthropic, xAI lub innych dostawców. Musimy też rozważyć korzystanie ze skilli i integracji, w tym narzędzi CLI i MCP, a na koniec skonfigurować sam harness.
 
 Sporo tego, prawda?
 
 Sprawa komplikuje się jeszcze bardziej, gdy weźmiemy pod uwagę, że co kilka tygodni pojawia się nowy trend, przełomowe narzędzie, funkcja API albo model.
 
-![Stos siedmiu warstw w jednej czerwonej ramce zatytułowanej „Co kilka tygodni coś nowego”: harness (Claude Code, Codex, Open Code, Pi, Cursor, Zed, Devin), terminal (iTerm, Warp, cmux), modele i dostawcy (OpenAI, Anthropic, xAI, Gemini), umiejętności, integracje (narzędzia CLI, serwery MCP), rozszerzenia oraz konfiguracja (AGENTS.md, ustawienia harnessu).](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-1/frame.png)
+![Stos siedmiu warstw w jednej czerwonej ramce zatytułowanej „Co kilka tygodni coś nowego”: harness (Claude Code, Codex, Open Code, Pi, Cursor, Zed, Devin), terminal (iTerm, Warp, cmux), modele i dostawcy (OpenAI, Anthropic, xAI, Gemini), skille, integracje (narzędzia CLI, serwery MCP), rozszerzenia oraz konfiguracja (AGENTS.md, ustawienia harnessu).](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-1/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-1/frame.html)
 
@@ -37,7 +37,7 @@ Dobra wiadomość jest taka, że gdy zrozumiemy kilka ogólnych zasad, wszystko 
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-2/frame.html)
 
-- **Podstawowe funkcje:** wszystkie harnessy oferują [podobny zestaw funkcji](https://arxiv.org/pdf/2609.00006), takich jak MCP, umiejętności czy subagenci. Gdy nowa funkcja zyskuje popularność, szybko trafia do kolejnych narzędzi, więc nie trzeba zmieniać narzędzi tylko ze względu na jedną funkcję.
+- **Podstawowe funkcje:** wszystkie harnessy oferują [podobny zestaw funkcji](https://arxiv.org/pdf/2609.00006), takich jak MCP, skille czy subagenci. Gdy nowa funkcja zyskuje popularność, szybko trafia do kolejnych narzędzi, więc nie trzeba zmieniać narzędzi tylko ze względu na jedną funkcję.
 
 - **Kluczowe funkcje:** od czasu do czasu pojawiają się nowe narzędzia, które oferują tak wiele, że warto się na nie przesiąść. Dobrym przykładem są **samodzielne zarządzanie** (agenci konfigurujący się i zarządzający osobnymi instancjami) oraz **agenci chmurowi**. Takie rozwiązania otwierają ogromne możliwości, na które nie powinniśmy czekać; po MEGA cała zdobyta wiedza pomoże nam rozpoznawać takie funkcje. Gdy się pojawią, powinniśmy móc łatwo zmienić harness.
 
@@ -45,9 +45,9 @@ Dobra wiadomość jest taka, że gdy zrozumiemy kilka ogólnych zasad, wszystko 
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-3/frame.html)
 
-- **Konfiguracja niezależna od harnessu:** tam, gdzie to możliwe, warto wybierać konfiguracje, które łatwo przenosić między harnessami. Dobrymi przykładami są **agenci, umiejętności, narzędzia CLI i MCP**, choć ponowna autoryzacja wielu usług może być uciążliwa. [Kody](https://github.com/kentcdodds/kody), projekt open source stworzony przez Kenta, pokazuje, jak przenosić konfigurację między harnessami niemal bez dodatkowych ustawień.
+- **Konfiguracja niezależna od harnessu:** tam, gdzie to możliwe, warto wybierać konfiguracje, które łatwo przenosić między harnessami. Dobrymi przykładami są **agenci, skille, narzędzia CLI i MCP**, choć ponowna autoryzacja wielu usług może być uciążliwa. [Kody](https://github.com/kentcdodds/kody), projekt open source stworzony przez Kenta, pokazuje, jak przenosić konfigurację między harnessami niemal bez dodatkowych ustawień.
 
-- **Natywne możliwości:** najtrudniejszą kwestią w pracy z agentami i ich tworzeniu jest fakt, że **możliwości modeli szybko się poprawiają**. Jeśli zbudujemy wokół agenta jakąś logikę (może to być nawet umiejętność zawierająca [rozbudowane wskazówki](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/heavy-guidance)), możemy otrzymać konfigurację, która **pogarsza wydajność modelu**, i nie będzie jasne, co jest za to odpowiedzialne. Dobrym przykładem jest publikacja [Context Language Models](https://arxiv.org/abs/2609.37725), sugerująca, że LLM-y lepiej zarządzają kontekstem niż najlepsze znane nam dotąd strategie.
+- **Natywne możliwości:** najtrudniejszą kwestią w pracy z agentami i ich tworzeniu jest fakt, że **możliwości modeli szybko się poprawiają**. Jeśli zbudujemy wokół agenta jakąś logikę (może to być nawet skill zawierający [rozbudowane wskazówki](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/heavy-guidance)), możemy otrzymać konfigurację, która **pogarsza wydajność modelu**, i nie będzie jasne, co jest za to odpowiedzialne. Dobrym przykładem jest publikacja [Context Language Models](https://arxiv.org/abs/2609.37725), sugerująca, że LLM-y lepiej zarządzają kontekstem niż najlepsze znane nam dotąd strategie.
 
 Wiedząc to wszystko, możemy łatwo być na bieżąco, **nie musząc w pośpiechu gonić za każdą nowością**. Z czasem zauważymy, że podstawy generatywnej AI i agentów AI nie zmieniają się co tydzień, a ich zrozumienie ułatwia nam ocenę, **co może być ważne, a co nie**. Jeśli wartość tych podstaw nie jest jeszcze dla nas jasna, stanie się jasna przed końcem MEGA.
 
@@ -68,9 +68,9 @@ Załóżmy, że wybieramy **Pi** jako nasz główny harness. Dzięki temu zobacz
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-5/frame.html)
 
-Kolejnym potrzebnym komponentem jest [Herdr](https://herdr.dev/), który pozwala nam **łatwo zarządzać instancjami Pi** i **utrzymywać je przy życiu nawet po zamknięciu terminala**. To ważny krok w kierunku trwałych agentów gotowych do podejmowania zadań wymagających długotrwałej pracy. Połączenie Pi z Herdr ma jeszcze jedną zaletę: oba narzędzia mogą **niemal całkowicie zarządzać sobą samodzielnie**. Zamiast samodzielnie je konfigurować, możemy więc **porozmawiać z agentami** o dostępnych ustawieniach i wspólnie ustalić najlepszą konfigurację dla naszych potrzeb.
+Kolejnym potrzebnym komponentem jest [Herdr](https://herdr.dev/), który pozwala nam **łatwo zarządzać instancjami Pi** i **utrzymywać je przy życiu nawet po zamknięciu terminala**. To ważny krok w kierunku trwałych agentów gotowych do podejmowania zadań wymagających długotrwałej pracy. Połączenie Pi z Herdr ma jeszcze jedną zaletę: oba narzędzia mogą **niemal całkowicie zarządzać sobą same**. Zamiast konfigurować je sami, możemy więc **porozmawiać z agentami** o dostępnych ustawieniach i wspólnie ustalić najlepszą konfigurację dla naszych potrzeb.
 
-![Zagnieżdżone pola, każde na całą szerokość pola nadrzędnego. Zewnętrzne pole to Serwer Herdr, zaznaczony na czerwono: zarządza procesami i działa nawet wtedy, gdy żadne okno nie jest otwarte. Wewnątrz znajduje się Obszar roboczy (jeden projekt) z etykietą „wymaga udziału człowieka”. Obszar roboczy zawiera Kartę, będącą układem paneli, a nie procesem. Karta zawiera trzy Panele. Każdy Panel to prawdziwy terminal z jednym agentem. Pierwszy agent pracuje (działa), drugi jest zablokowany (czeka na człowieka), a trzeci zakończył pracę (ale jego wynik nie został jeszcze sprawdzony). Pod polami tekst: zamknięcie okna pozostawia agentów działających, zatrzymanie serwera kończy ich pracę.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.png)
+![Zagnieżdżone pola, każde na całą szerokość pola nadrzędnego. Zewnętrzne pole to Serwer Herdr, zaznaczony na czerwono: zarządza procesami i działa nawet wtedy, gdy żadne okno nie jest otwarte. Wewnątrz znajduje się Obszar roboczy (jeden projekt) z etykietą „wymaga udziału użytkownika”. Obszar roboczy zawiera Kartę, będącą układem paneli, a nie procesem. Karta zawiera trzy Panele. Każdy Panel to prawdziwy terminal z jednym agentem. Pierwszy agent pracuje (działa), drugi jest zablokowany (czeka na użytkownika), a trzeci zakończył pracę (ale jego wynik nie został jeszcze sprawdzony). Pod polami tekst: zamknięcie okna pozostawia agentów działających, zatrzymanie serwera kończy ich pracę.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-6/frame.html)
 
@@ -92,7 +92,7 @@ Warto też spróbować **uruchomić Herdr**, uruchomić w nim **Pi** i poprosić
 4. Wysyła do niej prompt
 5. Czeka na zakończenie pracy workera i odczytuje jego wynik
 
-Mówimy o **uruchomieniu workera**, który technicznie działa podobnie jak **subagent**, z tą różnicą, że worker jest w pełni interaktywny, można go dowolnie konfigurować, może mieć własne hooki i może być uruchamiany **w tle** w odpowiedzi na zdarzenie zewnętrzne. Dzięki temu **jeden agent może orkiestrwać pracę wielu workerów**, które działają nawet po zamknięciu terminala, bo uruchomione są w Herdr.
+Mówimy o **uruchomieniu workera**, który technicznie działa podobnie jak **subagent**, z tą różnicą, że worker jest w pełni interaktywny, można go dowolnie konfigurować, może mieć własne hooki i może być uruchamiany **w tle** w odpowiedzi na zdarzenie zewnętrzne. Dzięki temu **jeden agent może orkiestrować pracę wielu workerów**, które działają nawet po zamknięciu terminala, bo uruchomione są w Herdr.
 
 ![Diagram sekwencji z czterema uczestnikami: Użytkownik, Koordynator, Herdr i Worker. Użytkownik zleca zadanie Koordynatorowi. Koordynator wysyła do Herdr cztery polecenia: herdr tab create, herdr agent start, herdr agent prompt i herdr agent read. Herdr uruchamia Pi na nowej karcie, wpisuje zadanie Workerowi i odczytuje ekran Workera. Herdr przekazuje tekst z ekranu Koordynatorowi, a Koordynator przekazuje odpowiedź użytkownikowi. Nie ma strzałki od Workera do żadnego innego uczestnika. Polecenie „herdr agent read” jest zaznaczone na czerwono.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-7/frame.png)
 
@@ -106,11 +106,11 @@ Jest tu jednak pewien haczyk: samo uruchamianie workerów nie wystarczy. Potrzeb
 - Powiadomień o pracy agentów dla agentów koordynujących ich działania
 - Bazy wiedzy do śledzenia wykonanych i planowanych zadań
 - Zrozumienia przez agentów szerszej wizji projektu i przestrzegania ogólnych zasad
-- Uwzględnienia udziału człowieka, a zarazem jego ograniczenia na wiele sposobów
-- Piaskownic i mechanizmów zapobiegających niepożądanym działaniom agentów
+- Uwzględnienia udziału użytkownika, a zarazem jego ograniczenia na wiele sposobów
+- Sandboxów i mechanizmów zapobiegających niepożądanym działaniom agentów
 - Własnego VPS-a lub fizycznego urządzenia dla agentów, gdy zajdzie taka potrzeba
 - Własnych kont agentów i wszystkiego, co jest potrzebne do interakcji z aplikacją
-- Hooków obsługujących interakcje z systemem na różnych etapach
+- Hooków, które wspierają agentów na różnych etapach interakcji z systemem
 - Przydatności systemu w zespole, w którym każdy członek ma własnych agentów
 - Monitorowania i ewaluacji systemu, by w niektórych przypadkach mógł się doskonalić
 
@@ -191,14 +191,14 @@ Praca z agentami w zespole nie jest oczywista, a obecnie nie ma jasnych odpowied
 Warto przyjrzeć się kilku kwestiom:
 
 **Współdzielone zasoby:**
-AGENTS.md i umiejętności, które omawialiśmy w S01E02, to pierwsze elementy, które powinniśmy przygotować. Następnie potrzebujemy łatwego sposobu udostępniania ich zespołowi — przez **repozytorium git**, [npx skills](https://github.com/vercel-labs/skills) lub [wewnętrzny serwer MCP](https://modelcontextprotocol.io/community/working-groups/skills-over-mcp), który omówimy w kolejnych lekcjach. W każdym przypadku musimy zadbać o to, by umiejętności były **współdzielone** i łatwe do **aktualizowania**.
+AGENTS.md i skille, które omawialiśmy w S01E02, to pierwsze elementy, które powinniśmy przygotować. Następnie potrzebujemy łatwego sposobu udostępniania ich zespołowi — przez **repozytorium git**, [npx skills](https://github.com/vercel-labs/skills) lub [wewnętrzny serwer MCP](https://modelcontextprotocol.io/community/working-groups/skills-over-mcp), który omówimy w kolejnych lekcjach. W każdym przypadku musimy zadbać o to, by skille były **współdzielone** i łatwe do **aktualizowania**.
 
-![Diagram przepływu. Jedna umiejętność — plik SKILL.md wraz z opcjonalnymi plikami pomocniczymi — dociera do agenta na trzy sposoby. Dzięki repozytorium Git i npx skills umiejętność trafia na dysk. W przypadku Skills over MCP agent ładuje ją z serwera MCP i nie instaluje.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-14/frame.png)
+![Diagram przepływu. Jeden skill — plik SKILL.md wraz z opcjonalnymi plikami pomocniczymi — dociera do agenta na trzy sposoby. Dzięki repozytorium Git i npx skills skill trafia na dysk. W przypadku Skills over MCP agent ładuje go z serwera MCP i nie instaluje.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-14/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-14/frame.html)
 
 **Wewnętrzna baza wiedzy:**
-Podobnie jak umiejętności, baza wiedzy może mieć własne API i być dostępna dla agentów przez CLI lub MCP. Dokumenty mogą znajdować się **na zdalnym serwerze** i być zarządzane przez agenta, który porządkuje napływające informacje oraz wprowadza zmiany zgłaszane przez członków zespołu lub administratora. Taka konfiguracja otwiera też prostą drogę do zaplanowanych przepływów pracy, które utrzymują porządek i aktualność dokumentów.
+Podobnie jak skille, baza wiedzy może mieć własne API i być dostępna dla agentów przez CLI lub MCP. Dokumenty mogą znajdować się **na zdalnym serwerze** i być zarządzane przez agenta, który porządkuje napływające informacje oraz wprowadza zmiany zgłaszane przez członków zespołu lub administratora. Taka konfiguracja otwiera też prostą drogę do zaplanowanych przepływów pracy, które utrzymują porządek i aktualność dokumentów.
 
 ![Diagram przepływu. Ramka Serwer zdalny zawiera harmonogram, skrzynkę odbiorczą i zdarzenie u góry, poniżej agentów (Pi / CLI), a pod nimi bazę wiedzy zaznaczoną na czerwono. Harmonogram i zdarzenie uruchamiają agentów. Agenci odczytują skrzynkę odbiorczą i porządkują bazę wiedzy. Druga ramka, Urządzenia zespołu, zawiera trzy zsynchronizowane klony. Baza wiedzy synchronizuje się z każdym klonem. Liczba urządzeń jest przykładowa.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-15/frame.png)
 
@@ -231,7 +231,7 @@ Na koniec mamy zautomatyzowane przepływy pracy, które działają niemal całko
 - zbierania danych z systemów zewnętrznych, a nawet od ludzi
 - wykonywania rutynowych zadań, takich jak usuwanie nieużywanego kodu
 
-![Diagram czytany od lewej do prawej. Agenta uruchamiają trzy rodzaje zdarzeń: @claude w komentarzu, nowy PR, push lub zgłoszenie oraz codzienny albo cotygodniowy harmonogram. Agent znajduje się w ramce Uprawnienia. Odczytuje kod, historię i zasady zespołu, a jego cykl działania to uruchomienie, jedno zadanie i zatrzymanie. Tworzy odpowiedzi na pytania, zmiany kodu i poprawki błędów, pull requesty na podstawie zgłoszeń, komentarze z przeglądu, aktualizacje dokumentacji oraz raporty i podsumowania. Wszystkie wyniki trafiają do człowieka, zaznaczonego na czerwono. Człowiek sprawdza wynik i scala go albo prosi o poprawki. Przerywana linia prowadzi z powrotem do agenta, by wprowadził zmiany.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.png)
+![Diagram czytany od lewej do prawej. Agenta uruchamiają trzy rodzaje zdarzeń: @claude w komentarzu, nowy PR, push lub zgłoszenie oraz codzienny albo cotygodniowy harmonogram. Agent znajduje się w ramce Uprawnienia. Odczytuje kod, historię i zasady zespołu, a jego cykl działania to uruchomienie, jedno zadanie i zatrzymanie. Tworzy odpowiedzi na pytania, zmiany kodu i poprawki błędów, pull requesty na podstawie zgłoszeń, komentarze z przeglądu, aktualizacje dokumentacji oraz raporty i podsumowania. Wszystkie wyniki trafiają do użytkownika, zaznaczonego na czerwono. Użytkownik sprawdza wynik i scala go albo prosi o poprawki. Przerywana linia prowadzi z powrotem do agenta, by wprowadził zmiany.](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.png)
 
 [Otwórz ilustrację](https://hq.mega.dev/figures/s01e04/artifacts/lesson/figure-16/frame.html)
 
@@ -239,7 +239,7 @@ AI potrafi teraz generować i **monitorować** takie przepływy pracy oraz okres
 
 Zautomatyzowane przepływy pracy można rozwinąć jeszcze bardziej, przenosząc omówioną konfigurację Pi i Herdr na VPS i łącząc ją z GitHubem. Omówimy to jednak w kolejnych lekcjach.
 
-## Wnioski
+## Najważniejsze wnioski
 
 Najważniejsze w pracy z harnessami AI jest to, że możemy używać AI do tworzenia konfiguracji i zarządzania nią, **ale nadal powinniśmy utrzymywać ją tak prostą, jak to możliwe**, by szybko ją doskonalić. Omówiliśmy konfigurację z Pi i Herdr, ale nie oznacza to, że używanie Cursor, Claude Code lub innego harnessu jest złym pomysłem. Wszystko zależy od naszego kontekstu i musimy rozsądnie decydować, co jest **przydatne dla nas**, a co nie.
 

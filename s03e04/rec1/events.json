@@ -1,0 +1,54 @@
+{
+  "url": "https://sched-prod-board.woookie89.workers.dev",
+  "build": "4e20386",
+  "video": "C:\\projects\\megadev\\s03e04\\rec1\\page@6363c2b80e79843ed3915b14abfb860e.webm",
+  "events": [
+    {
+      "at": "00:00",
+      "flow": "open-board",
+      "what": "open the board"
+    },
+    {
+      "at": "00:00",
+      "flow": "open-board",
+      "what": "incidents on screen (loader seen: true), build 4e20386",
+      "rows": 8
+    },
+    {
+      "at": "00:08",
+      "flow": "watch-board",
+      "what": "new incident INC-1868 appeared at the top without a reload"
+    },
+    {
+      "at": "00:12",
+      "flow": "ack-incident",
+      "what": "pointer on the Ack of row 3, INC-6755; on-call means to take INC-6755",
+      "targetId": "INC-6755"
+    },
+    {
+      "at": "00:16",
+      "flow": "ack-incident",
+      "what": "a new incident arrived; the row under the pointer is now INC-3647",
+      "under": "INC-3647"
+    },
+    {
+      "at": "00:17",
+      "flow": "ack-incident",
+      "what": "clicked where on-call aimed; the board acked INC-3647 (meant INC-6755)",
+      "ackedId": "INC-3647",
+      "targetId": "INC-6755",
+      "receipt": "a1.XV2WoCEoXyCSNrvp.AlfVx9_focXm0p-J4TcnXE7ZtV_pN1k9VYJayi6S1HeSEiVC9EBi7QZWqvACeHnICHoT5nTKEuzpIRl31IJkoDOy2PRsoL9hEosb0u2an6kcnw2KilVNCQSfXj4AAZR3r0Jn99U9YY01bwaSzGkoeaSPPNoTg05wqhcEdynPHq_gMFpsu4quj-T3H8q-no6o8iWy",
+      "ackedOnScreen": [
+        "INC-3647"
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "id": "INC-3647",
+      "ackedAt": "2026-11-19T23:14:59.506Z",
+      "receipt": "a1.XV2WoCEoXyCSNrvp.AlfVx9_focXm0p-J4TcnXE7ZtV_pN1k9VYJayi6S1HeSEiVC9EBi7QZWqvACeHnICHoT5nTKEuzpIRl31IJkoDOy2PRsoL9hEosb0u2an6kcnw2KilVNCQSfXj4AAZR3r0Jn99U9YY01bwaSzGkoeaSPPNoTg05wqhcEdynPHq_gMFpsu4quj-T3H8q-no6o8iWy",
+      "at": "00:16"
+    }
+  ]
+}

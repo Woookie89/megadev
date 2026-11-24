@@ -5,12 +5,12 @@ Możemy dziś budować rzeczy w ułamku czasu i przy ułamku wysiłku, których 
 ## Plan
 
 - Złożoność: szybsze dostarczanie, szybszy przyrost długu technicznego, ludzie i procesy, wykorzystanie AI, by nadążyć
- - Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, umiejętności o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
- - Jakość: samodzielna weryfikacja, środowisko agenta, zasady, prymitywy, utrzymywanie systemu
- - Agenci zdalni: maszyna zdalna, harmonogramy i wyzwalacze, dostęp z urządzeń mobilnych, sekrety
- - Przepływy działające w tle: codzienne briefy, nocne kontrole, przeglądy, synchronizacja dokumentacji, monitorowanie, wnioski produktowe, samodoskonalenie
- - Bezpieczeństwo: prompt injection, jailbreaki, wielowarstwowe zabezpieczenia, nieodwracalne działania
- - Biznes: logika deterministyczna i niedeterministyczna, kierunek wyznaczany przez ludzi, upraszczanie, zaufanie zdobywane w działaniu
+- Przepływy pracy: wykonywalny Markdown, ograniczenia przepływów opartych wyłącznie na agentach, skille o jednym przeznaczeniu, skrypty wielokrotnego użytku, uogólnione narzędzia, ewaluacja syntetyczna
+- Jakość: samodzielna weryfikacja, środowisko agenta, zasady, prymitywy, utrzymywanie systemu
+- Agenci zdalni: maszyna zdalna, harmonogramy i wyzwalacze, dostęp z urządzeń mobilnych, sekrety
+- Przepływy działające w tle: codzienne briefy, nocne kontrole, przeglądy, synchronizacja dokumentacji, monitorowanie, wnioski produktowe, samodoskonalenie
+- Bezpieczeństwo: prompt injection, jailbreaki, wielowarstwowe zabezpieczenia, nieodwracalne działania
+- Biznes: logika deterministyczna i niedeterministyczna, kierunek wyznaczany przez ludzi, upraszczanie, zaufanie zdobywane w działaniu
 
 ## Tempo wzrostu złożoności
 
@@ -28,13 +28,13 @@ W życiu prywatnym szybki wzrost złożoności również utrudnia ogarnięcie ws
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-2/frame.html)
 
-Problemy, które tu widzimy, nie są nowe i mamy już na nie pewne odpowiedzi. Zmieniło się tempo oraz nowe możliwości, które odkrywamy, a które wcześniej nie były tak łatwo dostępne jak dziś. Innymi słowy: **musimy używać AI, żeby nadążyć za AI**.
+Problemy, które tu widzimy, nie są nowe i mamy już na nie pewne odpowiedzi. Nowe jest tempo, a także możliwości, które odkrywamy, a które wcześniej nie były tak łatwo dostępne jak dziś. Innymi słowy: **musimy używać AI, żeby nadążyć za AI**.
 
 ## Wykonywalny Markdown a kod
 
-Umiejętności można postrzegać jako pliki **wykonywalnego Markdowna**. Biorąc pod uwagę, co agenci potrafią zrobić nawet na podstawie prostego zestawu instrukcji, można śmiało powiedzieć, że **wiele produktów może składać się z jednego pliku .md**.
+Skille można postrzegać jako pliki **wykonywalnego Markdowna**. Biorąc pod uwagę, co agenci potrafią zrobić nawet na podstawie prostego zestawu instrukcji, można śmiało powiedzieć, że **wiele produktów może składać się z jednego pliku .md**.
 
-Wiedząc, jak działają modele językowe i że ich zachowanie jest **niedeterministyczne**, trudno sobie wyobrazić procesy biznesowe zbudowane w ten sposób. A jednak już się to dzieje: osoby nietechniczne używają umiejętności w codziennej pracy, a niektóre z nich zbudowały w ten sposób zautomatyzowane przepływy.
+Wiedząc, jak działają modele językowe i że ich zachowanie jest **niedeterministyczne**, trudno sobie wyobrazić procesy biznesowe zbudowane w ten sposób. A jednak już się to dzieje: osoby nietechniczne używają skilli w codziennej pracy, a niektóre z nich zbudowały w ten sposób zautomatyzowane przepływy.
 
 Na przykład agent połączony z internetem i potrafiący pisać kod może z łatwością:
 
@@ -58,26 +58,26 @@ A jednak jako programiści dostrzegamy wiele problemów związanych z tym podej�
 - **debugowanie:** gdy coś pójdzie nie tak, trudno ustalić, co dokładnie zawiodło, dlaczego i jak to naprawić
 - **utrzymanie:** zmiany w przepływie pracy trudno testować i kontrolować, a my nie potrafimy wiarygodnie stwierdzić, która modyfikacja poprawiła, a która pogorszyła wynik
 
-Mimo to **to działa** w wielu zastosowaniach... a w innych nie zadziała. Zamiast więc to ignorować lub wyśmiewać, możemy zastanowić się, jak rozwinąć to podejście i nauczyć się rozpoznawać sytuacje, w których wystarczą nam umiejętności i agent.
+Mimo to **to działa** w wielu zastosowaniach... a w innych nie zadziała. Zamiast więc to ignorować lub wyśmiewać, możemy zastanowić się, jak rozwinąć to podejście i nauczyć się rozpoznawać sytuacje, w których wystarczą nam skille i agent.
 
-![Umiejętność w Markdownie działa za pośrednictwem agenta. skill.md przekazuje instrukcje agentowi. Agent wysyła każdy krok do Model API i otrzymuje odpowiedź, a każdy przebieg przynosi wynik. Pokazano cztery przykładowe przebiegi; wynik przebiegu 3 jest błędny. Pod każdym elementem czerwonym tekstem wymieniono jego problemy: przy skill.md widnieje „rozwój (zmiany trudno testować)”. Przy agencie: „koszt (za każdym razem zaczyna od zera)” i „debugowanie (brak jasnego śladu tego, co zawiodło)”. Przy Model API: „szybkość (powolne, może w ogóle nie skończyć)”. Przy wynikach: „niezawodność (każdy przebieg daje inny wynik)”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.png)
+![Skill w Markdownie działa za pośrednictwem agenta. skill.md przekazuje instrukcje agentowi. Agent wysyła każdy krok do Model API i otrzymuje odpowiedź, a każdy przebieg przynosi wynik. Pokazano cztery przykładowe przebiegi; wynik przebiegu 3 jest błędny. Pod każdym elementem czerwonym tekstem wymieniono jego problemy: przy skill.md widnieje „rozwój (zmiany trudno testować)”. Przy agencie: „koszt (za każdym razem zaczyna od zera)” i „debugowanie (brak jasnego śladu tego, co zawiodło)”. Przy Model API: „szybkość (powolne, może w ogóle nie skończyć)”. Przy wynikach: „niezawodność (każdy przebieg daje inny wynik)”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-4/frame.html)
 
 Na chwilę **zapomnijmy o wszystkich ograniczeniach** i skupmy się na tym, co naprawdę jest dobre: jak możemy wykorzystać to podejście i rozwinąć je dzięki naszej wiedzy oraz temu, co potrafią dziś modele. A konkretnie:
 
-- **Elastyczność:** umiejętności można łatwo **łączyć** nie tylko z innymi umiejętnościami, ale też z narzędziami i jednorazowymi skryptami pisanymi przez agentów. Aby łatwo je łączyć, każda umiejętność musi jednak mieć jeden zakres odpowiedzialności.
-- **Tryb kodu:** najnowsze modele bez problemu piszą kod, zwłaszcza gdy mówimy o niewielkich aplikacjach o ograniczonym zakresie, które można łatwo uruchomić, ale także [**zapisać i ponownie wykorzystać!**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/skill-vs-saved-script) Skrypt można zapisać jako zależność umiejętności lub wdrożyć w Cloudflare, by można go było uruchamiać z dowolnego miejsca (jeśli ma odpowiednie uprawnienia), w reakcji na zdarzenia zewnętrzne, harmonogramy lub działania innych agentów.
+- **Elastyczność:** skille można łatwo **łączyć** nie tylko z innymi skillami, ale też z narzędziami i jednorazowymi skryptami pisanymi przez agentów. Aby łatwo je łączyć, każdy skill musi jednak mieć jeden zakres odpowiedzialności.
+- **Tryb kodu:** najnowsze modele bez problemu piszą kod, zwłaszcza gdy mówimy o niewielkich aplikacjach o ograniczonym zakresie, które można łatwo uruchomić, ale także [**zapisać i ponownie wykorzystać!**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/skill-vs-saved-script) Skrypt można zapisać jako zależność skilla lub wdrożyć w Cloudflare, by można go było uruchamiać z dowolnego miejsca (jeśli ma odpowiednie uprawnienia), w reakcji na zdarzenia zewnętrzne, harmonogramy lub działania innych agentów.
 - **Możliwości:** agenci mogą mieć dedykowane narzędzia do konkretnych zadań, ale możemy je też **uogólniać**, aby [agent mógł rozwiązywać problemy, do których nie został wcześniej przygotowany](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/primitives-vs-bespoke-tools). Uogólnione narzędzia można następnie wykorzystać do **personalizacji**. Innymi słowy, zamiast narzędzia „tworzącego reklamy na Facebooka” mamy narzędzie o nazwie **generate_creation**, które można wyspecjalizować na potrzeby reklam na Facebooku.
-- **Ewaluacja:** nie potrafimy wiarygodnie przewidzieć, jak zmiany w umiejętności wpłyną na wynik, ale możemy poprosić AI o wygenerowanie [**syntetycznych scenariuszy**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/synthetic-skill-eval) i użyć narzędzi takich jak [Promptfoo](https://www.promptfoo.dev/), by wychwycić trendy i ogólne zmiany w zachowaniu.
+- **Ewaluacja:** nie potrafimy wiarygodnie przewidzieć, jak zmiany w skillu wpłyną na wynik, ale możemy poprosić AI o wygenerowanie [**syntetycznych scenariuszy**](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/synthetic-skill-eval) i użyć narzędzi takich jak [Promptfoo](https://www.promptfoo.dev/), by wychwycić trendy i ogólne zmiany w zachowaniu.
 
-![Diagram przepływu przedstawiający przykład codziennego briefingu. Plik umiejętności daily-brief.md zawiera elastyczne instrukcje tekstowe i przekazuje je agentowi. Agent ponownie wykorzystuje zapisany skrypt i specjalizuje uogólnione narzędzie generate_creation. Oba znajdują się w ramce „Niezawodny kod”. Syntetyczne scenariusze testują zmiany w umiejętności. Nazwa pliku i briefing to przykładowe wartości.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.png)
+![Diagram przepływu przedstawiający przykład codziennego briefingu. Plik skilla daily-brief.md zawiera elastyczne instrukcje tekstowe i przekazuje je agentowi. Agent ponownie wykorzystuje zapisany skrypt i specjalizuje uogólnione narzędzie generate_creation. Oba znajdują się w ramce „Niezawodny kod”. Syntetyczne scenariusze testują zmiany w skillu. Nazwa pliku i briefing to przykładowe wartości.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.png)
 
 [Otwórz rysunek](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-5/frame.html)
 
 Dobra wiadomość jest taka, że projektowanie abstrakcji i uogólnionej logiki znamy już **z programowania**. Teraz dochodzi tylko jeden ważny element: agent, który przejmuje wiele zadań, które kiedyś musieliśmy budować ręcznie.
 
-Najlepszym ćwiczeniem byłoby stworzenie **zestawu możliwości** i **umiejętności**, które pomagają nam w codziennym życiu i pracy. Powinny być dla nas dostępne **zawsze**, ale działać również w tle. Zamiast jednak **budować każde narzędzie ręcznie**, stworzylibyśmy **system**, który pozwala agentom generować narzędzia i zarządzać nimi za nas. I właśnie tu zaczyna się zabawa.
+Najlepszym ćwiczeniem byłoby stworzenie **zestawu możliwości** i **skilli**, które pomagają nam w codziennym życiu i pracy. Powinny być dla nas dostępne **zawsze**, ale działać również w tle. Zamiast jednak **budować każde narzędzie ręcznie**, stworzylibyśmy **system**, który pozwala agentom generować narzędzia i zarządzać nimi za nas. I właśnie tu zaczyna się zabawa.
 
 ![Diagram z trzema kolumnami. Po lewej jest „Ty”, pośrodku „Agenci”. Po prawej ramka „Twoje narzędzia”, która zawiera „Codzienny briefing”, „Sortowanie skrzynki odbiorczej” i „Monitor wdrożeń”. Pod nimi znajduje się ramka „Twój system” z czterema polami: „Baza wiedzy (twoje notatki i fakty)”, „Kontekst globalny (cele, zasady, preferencje)”, „Prymitywy (wielokrotnego użytku elementy składowe)” i „Struktura pracy (pilnuje, by agenci trzymali się zadania)”. Czerwona strzałka z etykietą „buduj i udoskonalaj” prowadzi od „Ty” do „Twój system”. Nieopisane strzałki prowadzą z każdego pola systemu do agentów. Strzałki prowadzą od agentów do każdego narzędzia; jedna z nich ma etykietę „tworzy i utrzymuje”. Strzałka z etykietą „używaj” biegnie nad agentami od „Ty” do „Twoje narzędzia”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-6/frame.png)
 
@@ -106,12 +106,12 @@ Biorąc pod uwagę wszystko, czego dotąd się nauczyliśmy, musimy stale ulepsz
 Dotąd omawialiśmy takie elementy jak:
 
 - **Kontekst globalny i lokalny**, dostępny zarówno na naszej maszynie, jak i zdalnie, aby można go było łatwo udostępniać zespołowi
-- **Umiejętności i generatory**, tworzone i zarządzane dzięki **nawykom, które rozwijamy**, ale też dzięki **rutynom** [analizującym historię](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/session-mining) i różne źródła, takie jak systemy śledzenia zgłoszeń, logi CI/CD itd., by proponować nowe umiejętności i optymalizować istniejące, a także archiwizować te, które nie są już potrzebne
+- **Skille i generatory**, tworzone i zarządzane dzięki **nawykom, które rozwijamy**, ale też dzięki **rutynom** [analizującym historię](https://github.com/MEGA-DOT-DEV/examples/tree/main/examples/session-mining) i różne źródła, takie jak systemy śledzenia zgłoszeń, logi CI/CD itd., by proponować nowe skille i optymalizować istniejące, a także archiwizować te, które nie są już potrzebne
 - **Baza wiedzy**, dostępna **zdalnie** i łatwo osiągalna dla wszystkich agentów, przy czym — jak już omawialiśmy — jej zawartością mogą zarządzać tylko dedykowani agenci
 - **Śledzenie zadań** w dowolnej postaci — specyfikacje funkcji, opisy zgłoszeń, ADR-y czy cokolwiek, co pozwala agentowi wiedzieć, **co budujemy, co już zbudowaliśmy i co zamierzamy zbudować**
 - **Stos narzędzi**, który sam system rozwija jako własne narzędzia **MCP / CLI**, zgodnie z tymi samymi zasadami i z wykorzystaniem wspólnych prymitywów oraz bazy wiedzy
 
-Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **skonfigurowanie maszyny zdalnej, takiej jak VPS lub komputer PC/Mac**, albo przynajmniej udostępnienie agentów w GitHub Actions runnerze lub za pomocą rutyn Claude/Devin.
+Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **skonfigurowanie maszyny zdalnej, takiej jak VPS lub komputer PC/Mac**, albo przynajmniej udostępnienie agentów w runnerze GitHub Actions lub za pomocą rutyn Claude/Devin.
 
 ![Lokalny komputer stacjonarny łączy się z dużą ramką „Maszyna zdalna: VPS lub PC/Mac”. Znajdują się w niej dwie ramki. Czerwona ramka „Ty nadajesz kształt” zawiera „Prymitywy”, „Zasady” i „Środowisko” oraz etykietę „niewiele rzeczy, o których pamiętasz”. Strzałka z etykietą „wyznacza kierunek” prowadzi z niej do ramki „Agent buduje”. Ramka ta zawiera „Narzędzia”, „Zarządzaj”, „Wykonuj pracę” i „Weryfikuj” oraz etykietę „duże zaufanie, nie musisz o tym pamiętać”.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-9/frame.png)
 
@@ -121,7 +121,7 @@ Teraz musimy połączyć to wszystko, a ostatnim brakującym elementem jest **sk
 
 **UWAGA:** następna sekcja opisuje konfigurację VPS z Tailscale, Pi i Herdr. Jest **całkowicie opcjonalna**; możesz ją pominąć, ponieważ Cursor i Devin już oferują agentów zdalnych od razu. Niezależnie od wybranej opcji potrzebujesz **agentów zdalnych, których można uruchamiać według harmonogramu lub w reakcji na zdarzenie zewnętrzne**.
 
-Przewodnik jest dostępny tutaj: https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md
+Przewodnik jest dostępny tutaj: <https://github.com/overment/limen/blob/main/docs/seat/agent-setup.md>
 
 **[Limen](https://github.com/overment/limen)**, omawiany w poprzednich lekcjach, zawiera przewodnik konfiguracji VPS, dzięki której **Pi i Herdr** będą dostępne na naszym serwerze. Nasi agenci AI mogą przejść przez konfigurację maszyny **razem z nami**. Przewodnik opisuje również konfigurację **GitHub Apps**, dzięki którym agenci będą dostępni w Issues i Pull Requests wybranych repozytoriów.
 
@@ -129,7 +129,7 @@ Proces konfiguracji wygląda w przybliżeniu tak:
 
 - Kupno VPS-a
 - Przejście przez przewodnik razem z agentem
-- Wykonanie czynności, o które poprosi agent, takich jak autoryzacja Tailscale, logowanie do Pi (opcjonalne) parowanie Moshi i konfiguracja GitHub Apps
+- Wykonanie czynności, o które poprosi agent, takich jak autoryzacja Tailscale, logowanie do Pi, (opcjonalnie) parowanie Moshi i konfiguracja GitHub Apps
 
 Dzięki temu otrzymujemy **agenta Pi pracującego na repozytorium GitHub** oraz sposób, by agenci działający na naszym komputerze mogli kontrolować **agentów zdalnych**. Przy obecnym stanie AI konfiguracja powinna być prosta nawet dla osoby bez doświadczenia z VPS-ami, choć obejmuje kilka kroków i może zająć godzinę lub dwie.
 
@@ -154,8 +154,8 @@ A oto kroki, które wykonasz **wspólnie z agentami:**
 - **AI:** Zabezpiecz SSH i zaporę sieciową (publicznie dostępny tylko port 22). Zainstaluj Limen, Node, Herdr, Tailscale, GitHub CLI, acl i powiązane pakiety. Zainstaluj pi jako użytkownik worker (nie jako root).
 - **Ty:** Zatwierdź Tailscale, gdy AI poda link. Z laptopa połącz się z seat przez SSH i zaloguj do GitHub CLI (`gh`) oraz pi. Nie wykonuj tych logowań z innego VPS-a.
 - **AI:** Sklonuj projekt przez HTTPS i uruchom `limen init`.
-- **Ty:** Zdecyduj, co zatwierdzić w commicie. Ten krok zależy od projektu, nad którym chcesz pracować.
-- **Ty + AI:** Otwórz Herdr remote dla seat. AI uruchomi koordynator i małe zadanie smoke test. Na chwilę zamknij pokrywę laptopa, a potem sprawdź, czy zadanie się zakończyło i karta Herdr nadal jest otwarta.
+- **Ty:** Zdecyduj, co trafi do commita. Ten krok zależy od projektu, nad którym chcesz pracować.
+- **Ty + AI:** Otwórz Herdr remote dla seat. AI uruchomi koordynatora i małe zadanie typu smoke test. Na chwilę zamknij pokrywę laptopa, a potem sprawdź, czy zadanie się zakończyło i karta Herdr nadal jest otwarta.
 - **Ty + AI:** Sparuj Moshi Hooks na seat (Settings → Hooks, nie Easy Pair) albo skonfiguruj ntfy, aby telefon powiadamiał Cię, kiedy agent będzie Cię potrzebował. Webhooki Grok Bot nie są tu domyślną opcją.
 - **AI:** Włącz codzienny timer prune. Raz dziennie uruchamia on `limen prune` i usuwa worktree zakończonych zadań, by dysk VPS-a się nie zapełnił. To nie jest timer GitHub doorbell.
 - AI (opcjonalnie): Przetestuj Tailscale Serve przy użyciu krótkiego podglądu lokalnego.
@@ -205,7 +205,7 @@ To od nas zależy, które z tych przepływów pracy mają sens w naszym przypadk
 
 Agenci zdalni otwierają wiele możliwości, ale wiążą się też z wieloma zagrożeniami. Możemy zwiększać autonomię systemu, ale musimy pamiętać o ryzyku **błędów** i ataków z zewnątrz. Wiemy już, że **prompt injection** może nakłonić agentów do działań, których nie powinni podejmować; problem ten nadal nie został rozwiązany.
 
-Problem staje się poważniejszy, gdy system zyskuje więcej możliwości — gdy podłączamy kalendarz, konta Gmail, komunikatory, a w przyszłości także nasze urządzenia i karty kredytowe. Agent czytający złośliwy e-mail, stronę internetową lub inną wiadomość może pozyskać wszystkie te informacje.
+Problem staje się poważniejszy, gdy system zyskuje więcej możliwości — gdy podłączamy kalendarz, konta Gmail, komunikatory, a w przyszłości także nasze urządzenia i karty kredytowe. Wszystkie te informacje mogą wyciec przez agenta, który przeczyta złośliwy e-mail, stronę internetową lub inną wiadomość.
 
 ![Diagram przepływu. Po lewej ramka „Niezaufane dane wejściowe” zawiera złośliwy e-mail, stronę internetową i dowolną wiadomość. Czerwone linie prowadzą z tych źródeł do agenta. Agent łączy się z Gmail, Kalendarzem, komunikatorami oraz kartą kredytową i urządzeniami, znajdującymi się w ramce „Dostęp do usług”. Z Gmail prowadzi linia do wycieku danych. Z karty kredytowej i urządzeń prowadzi linia do wymuszonego działania. Ukryte instrukcje są przykładami.](https://hq.mega.dev/figures/s01e05/artifacts/lesson/figure-13/frame.png)
 
