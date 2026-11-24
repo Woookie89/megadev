@@ -39,6 +39,8 @@ Wszystko jest symulacją, z kluczem ćwiczebnym (practice key) wystawionym dla u
 - Sekret idzie tylko do hosta, do którego jest przywiązany, a przekierowania liczą się jako
   osobne przeskoki.
 - Ticket sesji ma datę wygaśnięcia (w tym przebiegu 24.11.2026, 23:08Z).
+- Klucz wklejony do czatu liczy się jako wyciekły, a wyciekły klucz się unieważnia („a key pasted
+  into the chat is yours to count as leaked”, „Rotate a leaked key.”).
 
 ## Kryterium ukończenia
 
@@ -49,8 +51,9 @@ właściciela rozstrzygnięte na stronie wyzwania i dokończone.
 
 | Źródło | Data odczytu | Status |
 | --- | --- | --- |
-| Serwer MCP kursu (`claim-challenge`) | 23.11.2026 | rozwiązane 23:23Z; 1 przebieg odrzucony (klucz ćwiczebny wysłany do hosta z podręcznika), drugi przyjęty, 2 zadania zaparkowane i rozstrzygnięte przez właściciela; [zapis przebiegu](../pl/s04e01-twenty-payouts-debrief.md) |
+| Serwer MCP kursu (`claim-challenge`) | 23.11.2026 | rozwiązane 23:23Z; kurs odrzucił 2 próby i dał podpowiedź na 1 (klucz ćwiczebny trafił na host z podręcznika na 2 przebiegach), kolejny przebieg przyjęty, 2 zadania zaparkowane i rozstrzygnięte przez właściciela; [zapis przebiegu](../pl/s04e01-twenty-payouts-debrief.md) |
 | Serwer MCP kursu (`list-challenges`, `solved`) | 24.11.2026 | `true` |
+| Debrief HQ (`s04e01/hq-debrief.md`, wklejony przez człowieka) | 24.11.2026 | solved, 2026-11-23; harness Claude Code (claude-code 2.1.331), model `claude-sonnet-5-5`; „The course turned down 2 tries before it accepted, and gave a hint on 1 of them.” |
 
 ## Materiały i załączniki
 
@@ -64,8 +67,8 @@ właściciela rozstrzygnięte na stronie wyzwania i dokończone.
 ## Źródła i braki
 
 - Opis, sposób startu i flaga `solved` pochodzą z serwera MCP kursu (24.11.2026) i z logu
-  `s04e01/log.md`. Przebieg i punkty debriefu kursu są w
+  `s04e01/log.md`. Dosłowny debrief HQ jest w `s04e01/hq-debrief.md` (wklejony przez człowieka 24.11.2026). Przebieg jest w
   [zapisie przebiegu](../pl/s04e01-twenty-payouts-debrief.md).
-- Nie znaleziono: daty otwarcia, prowadzącego, nazwy tygodnia, dosłownego tekstu strony HQ
-  (strona i oryginał EN nie są w `challenges-original/`) i notatek lekcji S04E01.
+- Nie znaleziono: daty otwarcia, prowadzącego, nazwy tygodnia, dosłownego tekstu opisu wyzwania ze strony HQ
+  (poza debriefem; strona i oryginał EN nie są w `challenges-original/`) i notatek lekcji S04E01.
 - Stan strony HQ (State) nie został odczytany. Status wyzwania pochodzi z serwera MCP kursu.
