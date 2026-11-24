@@ -1,0 +1,12 @@
+(node:14432) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Review sent (200, accepted). Verdicts, one per hunk:
+
+- **w-r1-1 — pass.** Implements r1 as written (10 % off the nights for stays of 7+ nights, 7 exactly included; 700 → 630), no floor (why/payout-rounding.md), and no settings value written in — the commission stays a live read (16 % today).
+- **w-r1-2 — pass.** The note matches the code it documents, and moves no rule in why/nights.md, why/payout-date.md or why/payout-rounding.md.
+- **w-r2-1 — flag.** The request is only "3 EUR per guest per night"; the code also caps the charge at the first 4 nights and returns 0 before 17 Nov 2026. Neither limit is in the request, the live settings, or a house note outside this change — only in the co-host's own note citing requests/answers.md, which I cannot read.
+- **w-r2-2 — flag.** The note records those same unverified limits as the host's rule; rest of the note matches the code.
+- **w-r3-1 — pass.** N × (100 − p)/100 + F: commission on the nights only, whole cleaning fee added untouched; percent is a parameter (live 16 % respected), no floor here.
+- **w-r3-2 — pass.** Note matches its hunk exactly (formula, checks, cents allowed, floor left to the end).
+
+Course reply: `status: accepted — "Findings received: 2 of 6 hunks flagged"`, and next: "Your integrator fixes what is flagged, then runs the payout batch."

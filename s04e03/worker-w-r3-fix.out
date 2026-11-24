@@ -1,0 +1,11 @@
+Done. Job w-r3 fix applied and posted.
+
+**Change** (`roles/payout-runner/scripts/pricing/cleaning-fee.mjs`):
+- Added `plainAmount = (n) => Number.isFinite(n) && n >= 0` and used it for `nightsAmount`, so 598.5 (7 nights at 95 EUR after r1's 10 % discount) is accepted instead of returning `null`.
+- Kept the whole-number check (`Number.isInteger(n) && n >= 0`) for `cleaningFee` and the whole-percent check for `commissionPct`.
+- No rounding added inside the function; the floor still happens once at the end.
+
+**Why note** (`why/cleaning-fee.md`): kept the decision/why/so lines true and added that the nights amount may hold cents after r1's discount, with the cleaning fee and percent still whole-number checks.
+
+Result accepted on the board (`w-r3`, both paths).
+model: deepseek/deepseek-v4.1-flash

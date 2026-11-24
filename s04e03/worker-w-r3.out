@@ -1,0 +1,19 @@
+Now I'll create the two files for job w-r3.
+Job w-r3 done.
+
+**Claimed** `w-r3` (worker) on the board before touching anything.
+
+**Change built — two new files, nothing else:**
+
+1. `roles/payout-runner/scripts/pricing/cleaning-fee.mjs` — one pure function `amountAfterCommission(nightsAmount, cleaningFee, commissionPct)`:
+   - returns `nightsAmount × (100 − p) / 100 + cleaningFee`: commission on the nights amount only, the cleaning fee added whole (100 % reaches the host, 0 % commissionable; a cleaning fee of 0 changes nothing).
+   - no network, no secret, no vars, no `/settings` read, no `Math.floor`, returns the exact number.
+   - the commission percent is an argument, never a literal; facts stay at their source (CHECKLIST 4).
+   - `null` for not-plain input (nights amount or cleaning fee not a whole number, or a percent that is not a plain whole percent), so the merge job parks the task instead of paying on a guess.
+
+2. `why/cleaning-fee.md` — decision / why / so in the style of `why/nights.md`, next to the code (CHECKLIST 5), plus the gap: the host's answers say nothing about a cleaning fee in another currency or missing, or about commission before/after r1's discount — not guessed; not-plain input parks.
+
+I did not touch `batch.mjs` or `ROLE.md` (m-1's files), and no commission percent value appears anywhere.
+
+**Posted:** `code post-result.mjs https://hq.mega.dev/challenges/three-small-changes w-r3` → `200 {"status":"accepted","message":"Result accepted.","job":"w-r3",...}`.
+model: deepseek/deepseek-v4.1-flash

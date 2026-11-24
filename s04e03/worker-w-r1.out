@@ -1,0 +1,19 @@
+Now I understand the structure. Let me create my two files.
+Now posting my change to the board.
+Done. Job **w-r1** is claimed, built, and posted.
+
+**Change posted** (result accepted, two paths, exactly my job's files):
+- `roles/payout-runner/scripts/pricing/long-stay-discount.mjs` (new)
+- `why/long-stay-discount.md` (new)
+
+**What it does**
+- One pure function `longStayDiscount(nights, nightsAmount)` — no network, no secret, no vars, no `/settings` read, no rounding.
+- `nights >= 7` → 10 % off the nights amount; `nights <= 6` → unchanged (host's boundary: 7 exactly gets it, 6 or fewer gets none).
+- Discounts the nights only — never the cleaning fee (r3), never the city tax (r2).
+- Returns the exact number (e.g. `7 @ 95 → 598.5`); the single `Math.floor` stays at the end in `batch.mjs` (why/payout-rounding.md).
+- Returns `null` for not-plain data (nights not a whole number ≥ 1, or nights amount not a whole EUR), so the merge job parks the task — the gap is written in `why/long-stay-discount.md` (which otherwise gives the decision, the why and the "so" line, in the style of `why/nights.md`).
+
+**Constraints honored**
+- Did not touch `roles/payout-runner/scripts/batch.mjs` or `roles/payout-runner/ROLE.md` (m-1's files).
+- No commission percent anywhere in my files; no guessing on the host's silence. Attempt used only against `hq.mega.dev`.
+model: deepseek/deepseek-v4.1-flash

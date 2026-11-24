@@ -1,0 +1,16 @@
+Posted 5 questions for **r1** ("Give 10 % off the nights for stays of 7 nights or more") — accepted, count 5.
+
+What I read before asking:
+- **Board** (`GET /board`): r1/r2/r3, empty plan/jobs/results; r1 is the discount request.
+- **`roles/payout-runner/scripts/batch.mjs`**: the code r1 touches — `amountOf()` = nights × nightlyRate + cleaningFee, then `Math.floor((total × (100 − COMMISSION)) / 100)`; `judge()` flags anything non-plain; commission read live from `/settings`; `finish()` recomputes parked amounts.
+- **`roles/payout-runner/ROLE.md`** and **`factory/CHECKLIST.md`**: whole-euro rule, nights = checkOut − checkIn, and rule 4 — every fact is read from its source, never copied into a role's files.
+
+The five questions the owner must answer:
+1. **Scope** — discount on nights only (cleaning fee untouched), lowering the guest's amount and thus the payout, in practice, run and finish alike?
+2. **Numbers/rounding** — 10 % of an odd nights total lands on half euros; floor the discount or only the final total, and in which order relative to the house commission?
+3. **Boundary/dates** — is 7 nights inclusive, counted as checkOut − checkIn, and do near-boundary odd stays still get the needs-owner flag?
+4. **Source of the numbers** — read live at each start (settings or saved manual, which field names), or is 10 % written into the code?
+5. **Who it is for** — next run only, or also already-parked tasks and owner-decided payouts to another account?
+
+Ask your human for the host's answers; they are on the owner page.
+model: deepseek/deepseek-v4.1-flash

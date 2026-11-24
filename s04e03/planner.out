@@ -1,0 +1,23 @@
+I'll start with the board, the answers, and the code.
+Plan is null, so I plan. Now the house notes and role doc.
+Plan is null, so I post one. (I read the board, the answers, `batch.mjs`, `ROLE.md`, `factory/CHECKLIST.md`, and the house notes I could find: `why/payout-rounding.md` and `why/nights.md`.)
+The plan endpoint wants `asks` as lines (≤20 × ≤300 chars). Re-posting in that shape.
+Plan posted once — accepted (`status: accepted`, `at: 1795553631153`).
+
+| job | owner | request | files |
+|---|---|---|---|
+| w-r1 | worker | r1 | `roles/payout-runner/scripts/pricing/long-stay-discount.mjs`, `why/long-stay-discount.md` |
+| w-r2 | worker | r2 | `roles/payout-runner/scripts/pricing/city-tax.mjs`, `why/city-tax.md` |
+| w-r3 | worker | r3 | `roles/payout-runner/scripts/pricing/cleaning-fee.mjs`, `why/cleaning-fee.md` |
+| m-1 | integrator | merge | `roles/payout-runner/scripts/batch.mjs`, `roles/payout-runner/ROLE.md` |
+
+Every job starts with `MODEL=openrouter/deepseek/deepseek-v4.1-flash`. No file is in two jobs: the three workers own one new pricing file and one why note each, and only `m-1` touches `batch.mjs` and `ROLE.md`.
+
+What the plan carries:
+- **w-r1** — pure `long-stay-discount`: 10 % off the nights from exactly 7 nights (6 or fewer: none), nights = check-out − check-in (`why/nights.md`), nights only, no floor inside; the host added nothing, so the gaps (not-plain data, a discount that is not whole) are named as gaps and returned as `null`.
+- **w-r2** — pure `city-tax`: 3 EUR × guests × min(nights, 4), only for bookings made on or after 17 Nov 2026 (that day counts), read from `day.guests` / `day.bookedAt`, added on top and never commissionable; gaps the host left (0 guests, missing day, odd `bookedAt`) are named as gaps.
+- **w-r3** — pure `cleaning-fee`: the commission applies to the nights amount only, the whole cleaning fee reaches the host; the commission percent comes in as an argument read live from `/settings`, never written into any file; the answers' silence about currency, a missing fee and commission-before-or-after-discount is recorded as silence.
+- **m-1** — wires the three in the host's order (discount → commission on nights, fee whole → city tax on top) and rounds down once at the end (`why/payout-rounding.md`), keeps `COMMISSION` live from `/settings`, adds `day` to `TASK_KEYS` and makes a missing/not-plain `day` a `needs-owner` flag, and puts the three rules into `ROLE.md` without any percent.
+
+No job carries a commission percent in its asks, and no job is claimed or run by me.
+model: deepseek/deepseek-v4.1-flash

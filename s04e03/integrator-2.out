@@ -1,0 +1,19 @@
+I'll post my result now.
+Posted. The board's reply:
+
+```
+200 {"status":"accepted","message":"Result accepted.","job":"m-1",
+     "paths":["roles/payout-runner/ROLE.md","roles/payout-runner/scripts/batch.mjs"],
+     "at":1795554280062,
+     "next":"Every job has its result. Run the payout batch on the merged Host Desk."}
+```
+
+Status: **accepted** — my result for `m-1` is on the board, posted last, covering `roles/payout-runner/ROLE.md` and `roles/payout-runner/scripts/batch.mjs`.
+
+Final state of the merge:
+- `w-r1`, `w-r2`, `w-r3` merged into the Host Desk; my change made on top, committed separately, so my result holds only my changes. No files touched after the check.
+- Harness check: practice paid 3 of 3, amounts match the rules.
+- Reviewer flags: only `w-r2-1` (4-night cap) and `w-r2-2` (17 Nov 2026 booking date), both the host's own answers to request `r2`, so they stay per the request-over-reviewer rule. Nothing else flagged.
+
+**The payout batch can run now** — the payout-runner on the merged Host Desk, started by the harness or the human. Every job of the plan, mine included, has a result, so the course will count the batch.
+model: deepseek/deepseek-v4.1-flash

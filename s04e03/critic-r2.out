@@ -1,0 +1,15 @@
+I'll start by reading the board and finding request r2.
+Posted 5 questions for **r2 — "Charge the city tax: 3 EUR per guest per night."**
+
+What I read first: the board request, then `roles/payout-runner/ROLE.md`, `scripts/batch.mjs` (the `amountOf` / `judge` logic) and `why/payout-rounding.md`.
+
+The five questions ask the owner about:
+
+1. **Data already there / scope** — booking records have no guest count and no city, and the script parks unexpected fields; where the guest count comes from, and whether every stay or only some cities are taxed.
+2. **Numbers** — whether the tax goes in before or after the commission, whether it is part of the floored amount, and whether 3 EUR is read live from `/settings` or fixed in the script.
+3. **Numbers vs. the bank cap** — the rounding note says the bank refuses any payout above the amount booked for the host; is the tax inside that amount or on top, and what to do if a payout would exceed it.
+4. **Dates** — from when the tax applies, and whether amounts already decided for parked tasks in the finish step are recomputed.
+5. **Who it is for / how we know it worked** — host keeps the tax or remits it, which figure the report shows, and which booking to check against the course's expected amount.
+
+The board accepted them; the host's answers appear on your owner page.
+model: deepseek/deepseek-v4.1-flash

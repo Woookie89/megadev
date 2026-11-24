@@ -1,0 +1,16 @@
+Now I'll write the two files for my job.
+Job **w-r2** is done: claimed, changed, and posted.
+
+**What I built** (two new files, nothing else touched):
+
+- `roles/payout-runner/scripts/pricing/city-tax.mjs` — one pure function `cityTax(day, nights)` (also the default export), no network, no vars, no `/settings`, no rounding:
+  - `guests * 3 * Math.min(nights, 4)` (a 9-night stay pays 4 nights).
+  - Only bookings made on or after `2026-11-17` (that day counts); earlier bookings return `0`.
+  - Returns an exact number to **add on top** of the payout — never through the commission.
+  - Returns `null` for not-plain data: no day, `guests` not a whole number ≥ 1, `nights` not a plain positive whole number, or `bookedAt` not a plain `YYYY-MM-DD` date — so the merge job parks the task.
+- `why/city-tax.md` — decision / why / so, in the style of `why/nights.md`, plus the stated gap: the host's answers say nothing about 0 guests, a missing day or an odd `bookedAt`, so those return `null` rather than a guess.
+
+**Posted:** `POST /board/results` accepted — `{"status":"accepted","job":"w-r2","paths":["roles/payout-runner/scripts/pricing/city-tax.mjs","why/city-tax.md"]}`.
+
+I did not touch `batch.mjs` or `ROLE.md` (owned by `m-1`), wrote no commission percent anywhere, and never fetched the manual.
+model: deepseek/deepseek-v4.1-flash

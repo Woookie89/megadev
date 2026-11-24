@@ -1,0 +1,16 @@
+I'll start by reading the board and the stored secrets.
+The commission is 16 % (`/settings` v2026-11-18.354), and `amountOf()` in `batch.mjs` currently applies it to the whole stay total (`nights × rate + cleaningFee`). Now I'll post my questions.
+The body may have been sent as a raw string. Let me resend as a proper JSON object with cleaner strings.
+Posted. My five questions for **r3** ("Hosts keep the whole cleaning fee: take no commission on it") are accepted.
+
+Context I read first: the board lists r3 as that one line; `roles/payout-runner/scripts/batch.mjs` computes the payout in `amountOf()` as `Math.floor((nights × nightlyRate + cleaningFee) × (100 − COMMISSION)/100)`, with `COMMISSION` read live from `/settings` (currently 16 %, v2026-11-18.354). The manual defines "stay total" as `nights × nightlyRate + cleaning fee` and says the host gets the stay total minus the house commission — so r3 changes that formula, and that is where my questions aim.
+
+The five questions ask about:
+1. The exact new formula and a worked example to verify against (16 % on the nights only, cleaning fee passed through whole).
+2. Rounding order (round down discounted nights then add the fee, vs. round the combined figure).
+3. Scope over time — future runs only, or recompute/re-pay bookings already paid.
+4. Whether the rule also applies on the `finish` step, where the course supplies its own `amount` for a parked booking.
+5. Scope of the field and who it is for (booking `cleaningFee`, host payout only; guest still charged it), and whether r3 overrides the manual's wording while the percentage keeps coming from `/settings`.
+
+Your human can read the owner's answers on their owner page.
+model: deepseek/deepseek-v4.1-flash

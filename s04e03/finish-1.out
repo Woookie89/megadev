@@ -1,0 +1,14 @@
+Finish run complete — `["finish", "three-small-changes"]`, exit 0, one run, no retry.
+
+Output:
+```
+#4 on-file: paid 1253 EUR to acct_5c75b89b54 -> 200
+#5 declined -> 200
+ALL PARKED TASKS FINISHED
+```
+
+- **#4** — on-file account: paid **1253 EUR**; transfer accepted (200).
+- **#5** — **declined** (the owner's decision on that parked task; request handled, 200). No payout made.
+- **ALL PARKED TASKS FINISHED** — no PENDING, so the owner's decisions were applied.
+
+No `FAIL` line, no `NOTE` line, no PENDING. No secrets, tickets or task tokens to report.
